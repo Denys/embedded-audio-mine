@@ -1,0 +1,7 @@
+repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
+GuitarML/FunBox,STRONG_PASS,2026-05-20,2026-05-20,2026-06-19,published,Practical flashable pedal firmware
+AdamFulford/Veno-Echo,PASS,2026-05-20,2026-05-20,2026-06-19,published,Daisy delay project
+O_C-Phazerville,STRONG_PASS,2026-05-20,2026-05-20,2026-06-19,published,Teensy O_C firmware
+Lytrix/Teensy4-i2s-TDM,PASS,2026-05-20,2026-05-20,2026-06-19,published,High-rate multichannel Teensy audio
+OpenAudio_ArduinoLibrary,PASS,2026-05-20,2026-05-20,2026-06-19,published,Floating-point Teensy DSP
+Campestria Versio,REF_PASS,2026-05-20,2026-05-20,2026-06-19,published,Plateau/Dattorro-style Versio reverb
