@@ -15,6 +15,16 @@ The goal is not to collect popular repos. The goal is to mine hidden, useful, ad
 - DSP architecture references
 - visual audio graph/codegen tools
 
+## Digest archive
+
+Full daily digest Markdown snapshots are stored in:
+
+```text
+digests/YYYY-MM-DD.md
+```
+
+The scheduled ChatGPT task should save each future daily digest there and update `data/published-repo-log.csv` with published items.
+
 ## Digest lanes
 
 | Lane | Meaning |
