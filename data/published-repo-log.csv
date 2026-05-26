@@ -5,3 +5,8 @@ O_C-Phazerville,STRONG_PASS,2026-05-20,2026-05-20,2026-06-19,published,Teensy O_
 Lytrix/Teensy4-i2s-TDM,PASS,2026-05-20,2026-05-20,2026-06-19,published,High-rate multichannel Teensy audio
 OpenAudio_ArduinoLibrary,PASS,2026-05-20,2026-05-20,2026-06-19,published,Floating-point Teensy DSP
 Campestria Versio,REF_PASS,2026-05-20,2026-05-20,2026-06-19,published,Plateau/Dattorro-style Versio reverb
+SloeComputers/picoX7,STRONG_PASS,2026-05-26,2026-05-26,2026-06-25,published,RP2040/RP2350 DX7-style FM synth; dual-core voices; PIO I2S; USB/UART MIDI and SYSEX
+risgk/digital-synth-pra32-u2,STRONG_PASS,2026-05-26,2026-05-26,2026-06-25,published,Pico 2/RP2350 4-voice MIDI sound module; prebuilt UF2; I2S; flash presets; Web MIDI editor
+polykit/pico-dco,PASS,2026-05-26,2026-05-26,2026-06-25,published,Raspberry Pi Pico digitally controlled analog oscillator; PIO timing; schematics PCB and MIDI control
+dwhinham/mt32-pi,PASS,2026-05-26,2026-05-26,2026-06-25,published,Bare-metal Raspberry Pi MIDI synth appliance using Munt FluidSynth Circle; I2S DAC and network MIDI
+habuenav/samplerSynth,PASS,2026-05-26,2026-05-26,2026-06-25,published,ESP32 I2S sample-synth library; WAV samples; polyphony; LittleFS and optional MIDI integration
