@@ -10,3 +10,28 @@ risgk/digital-synth-pra32-u2,STRONG_PASS,2026-05-26,2026-05-26,2026-06-25,publis
 polykit/pico-dco,PASS,2026-05-26,2026-05-26,2026-06-25,published,Raspberry Pi Pico digitally controlled analog oscillator; PIO timing; schematics PCB and MIDI control
 dwhinham/mt32-pi,PASS,2026-05-26,2026-05-26,2026-06-25,published,Bare-metal Raspberry Pi MIDI synth appliance using Munt FluidSynth Circle; I2S DAC and network MIDI
 habuenav/samplerSynth,PASS,2026-05-26,2026-05-26,2026-06-25,published,ESP32 I2S sample-synth library; WAV samples; polyphony; LittleFS and optional MIDI integration
+bkshepherd/DaisySeedProjects,PASS,2026-05-22,2026-05-22,2026-06-21,published,Daisy Seed collection with substantial looper SDRAM waveform OLED MIDI sync USB storage and MIDI DMA notes
+m0xpd/Daisy-Multiverse,PASS,2026-05-22,2026-05-22,2026-06-21,published,Daisy Trellis OLED multi-application platform with synths looper Karplus-Strong Plaits-derived apps and reusable UI architecture
+reese-wilson/DaisyBios,REF_PASS,2026-05-22,2026-05-22,2026-06-21,published,Daisy bootloader BIOS for loading programs from SD card and exploring multi-firmware workflows
+kerm1t/DaisySeed,PASS,2026-05-22,2026-05-22,2026-06-21,published,Large Daisy integration lab covering braids granular GuitarML OLEDs SDRAM WM8731 codec and gate sequencer hardware ideas
+tilmanlarndt/DaisyPlayground,REF_PASS,2026-05-22,2026-05-22,2026-06-21,published,Daisy algorithm and porting playground with stmlib ports CloudSeed oscillator effect experiments and extraction value
+clevelandmusicco/HothouseExamples,STRONG_PASS,2026-05-23,2026-05-23,2026-06-22,published,Hothouse examples drop with four new analog-pedal-style effects plus precompiled binaries and strong scaffolding docs
+bk40-home/Jteensy8000,PASS,2026-05-23,2026-05-23,2026-06-22,published,PJRC synth project with OB-Xa and VA filters supersaw-oriented mods USB host audio and browser editor
+windysynth/windy1,PASS,2026-05-23,2026-05-23,2026-06-22,published,Teensy 4.1 USB-host wind-controller synth with Vyzex patch compatibility and practical power PSRAM handling
+postcode-x/Daisy_SPC,REF_PASS,2026-05-23,2026-05-23,2026-06-22,published,Daisy Seed SNES SPC player using QSPI mode and embedded song asset pipeline
+ARM-software/CMSIS-DSP,FOUNDATION_UPDATE,2026-05-23,2026-05-23,2026-06-22,published,CMSIS-DSP v1.17.0 adds transform buffer-sizing APIs and fixes relevant to Cortex-M DSP correctness
+joulupukki/Flick,PASS,2026-05-24,2026-05-24,2026-06-23,published,Daisy reverb tremolo delay pedal with hidden-mode UI tap tempo parameter capture and dual-platform targeting
+Orastron/brickworks,REF_PASS,2026-05-24,2026-05-24,2026-06-23,published,Cross-platform DSP toolkit with Daisy Seed examples useful as portable architecture and algorithm source
+alex6679/teensy-4-usbAudio,REF_PASS,2026-05-24,2026-05-24,2026-06-23,published,Teensy 4.x multichannel UAC2 USB audio extension with 2/4/6/8 channel support and latency-oriented options
+carlvp/daisylab,PASS,2026-05-24,2026-05-24,2026-06-23,published,Daisy experiments repo anchored by op6 six-operator FM synth DX7 SysEx conversion and companion editor workflow
+rolfdegen/Jeannie-Open-source-Synthesizer,PASS,2026-05-24,2026-05-24,2026-06-23,published,Teensy-based 8-voice VA wavetable synth with sequencer SD patch storage TFT UI and substantial build completeness
+kooliha/Ouroboros_Loop_Station,STRONG_PASS,2026-05-25,2026-05-25,2026-06-24,published,Daisy 5-track stereo looper with firmware binaries gerbers BOM enclosure files and strong zero-menu control design
+craigyjp/Teensy-Hybrid-TDM-Synth,PASS,2026-05-25,2026-05-25,2026-06-24,published,Teensy hybrid poly synth using CS42448 TDM outs into analog filters plus FV-1 effects and reusable control ideas
+lucblender/lx-deciim,PASS,2026-05-25,2026-05-25,2026-06-24,published,Daisy-based dual-channel bit-level crusher with CV-replaced bits and strong modular audio-CV crossover ideas
+newdigate/teensy-variable-playback,REF_PASS,2026-05-25,2026-05-25,2026-06-24,published,Teensy Audio extension for variable-rate sample playback with interpolation and sampler looper foundation value
+eTextile/Synth,REF_PASS,2026-05-25,2026-05-25,2026-06-24,published,Teensy 4.0 textile multitouch instrument and browser-mapped control architecture with fresh 2026 MIDI-path updates
+balazsbencs/daisy-multifx-pedal,STRONG_PASS,2026-05-26,2026-05-26,2026-06-25,published,Daisy Seed stereo multi-FX pedal with 14 algorithms QSPI presets MIDI clock arbitration and 1 ms block architecture
+stone-voices/vasvas,PASS,2026-05-26,2026-05-26,2026-06-25,published,Daisy noisebox with dual piezo stereo input Dattorro-style reverb shimmer freeze plus schematic PCB and source
+joebmz98/Weasel-West-Coast-Synthesiser,PASS,2026-05-26,2026-05-26,2026-06-25,published,Buchla-inspired Daisy synth with virtual patch bay wavefolder LPGs random voltage and dense hardware UI
+hasanalpdoyduk/Teensy_Drum_Machine,PASS,2026-05-26,2026-05-26,2026-06-25,published,Teensy 4.1 drum machine with 16-step sequencer sampled voices USB MIDI clock output filter and EEPROM persistence
+Farmer2K5/daisy-reverb-playground,REF_PASS,2026-05-26,2026-05-26,2026-06-25,published,Daisy reverb research playground with FDN tanks diffusion blocks freeze behaviors and example topologies
