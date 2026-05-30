@@ -35,3 +35,8 @@ stone-voices/vasvas,PASS,2026-05-26,2026-05-26,2026-06-25,published,Daisy noiseb
 joebmz98/Weasel-West-Coast-Synthesiser,PASS,2026-05-26,2026-05-26,2026-06-25,published,Buchla-inspired Daisy synth with virtual patch bay wavefolder LPGs random voltage and dense hardware UI
 hasanalpdoyduk/Teensy_Drum_Machine,PASS,2026-05-26,2026-05-26,2026-06-25,published,Teensy 4.1 drum machine with 16-step sequencer sampled voices USB MIDI clock output filter and EEPROM persistence
 Farmer2K5/daisy-reverb-playground,REF_PASS,2026-05-26,2026-05-26,2026-06-25,published,Daisy reverb research playground with FDN tanks diffusion blocks freeze behaviors and example topologies
+rheslip/2HPico-Eurorack-Module-Hardware,STRONG_PASS,2026-05-29,2026-05-29,2026-06-28,published,RP2350 Eurorack DSP hardware with codec front end and 2026 sketches for delay reverb chorus flanger pitchshift granular ladderfilter sampler looper
+newdigate/teensy-polyphony,PASS,2026-05-29,2026-05-29,2026-06-28,published,Teensy Audio polyphonic sampler layer above variable playback with voice sample model abstractions and MIDI-triggered examples
+JordanAceto/micro-pico,PASS,2026-05-29,2026-05-29,2026-06-28,published,SSI2130 analog monosynth and swappable VCF card ecosystem including SSI2140-relevant hardware patterns
+raspy135/Qun-synthesizer,PASS,2026-05-29,2026-05-29,2026-06-28,published,ESP32-LyraT analog-modeling synth with granular sampler sequencer looper MIDI routing notes and catch-mode UI
+Farmer2K5/daisy-fast-stft,REF_PASS,2026-05-29,2026-05-29,2026-06-28,published,Daisy CMSIS-DSP STFT ISTFT spectral ops and feature extraction framework
