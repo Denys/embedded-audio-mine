@@ -40,3 +40,13 @@ newdigate/teensy-polyphony,PASS,2026-05-29,2026-05-29,2026-06-28,published,Teens
 JordanAceto/micro-pico,PASS,2026-05-29,2026-05-29,2026-06-28,published,SSI2130 analog monosynth and swappable VCF card ecosystem including SSI2140-relevant hardware patterns
 raspy135/Qun-synthesizer,PASS,2026-05-29,2026-05-29,2026-06-28,published,ESP32-LyraT analog-modeling synth with granular sampler sequencer looper MIDI routing notes and catch-mode UI
 Farmer2K5/daisy-fast-stft,REF_PASS,2026-05-29,2026-05-29,2026-06-28,published,Daisy CMSIS-DSP STFT ISTFT spectral ops and feature extraction framework
+ctag-fh-kiel/ctag-tbd,STRONG_PASS,2026-06-01,2026-06-01,2026-07-01,published,ESP32 Eurorack audio platform with 50plus plugins web UI REST API simulator cloud compiler sample ROM and v1.0.0 stability updates
+CarlosDerSeher/snapclient,STRONG_PASS,2026-06-01,2026-06-01,2026-07-01,published,ESP32 Snapcast client with FLAC OPUS PCM decoding I2S DAC support sync buffering DSP EQ HTTP UI OTA and ESP-IDF 5.x
+ohmtech-rdi/eurorack-blocks,REF_PASS,2026-06-01,2026-06-01,2026-07-01,published,Daisy Patch Submodule Eurorack framework generating firmware VCV simulator Gerbers BOM and panel files from Cpp Faust Max UI config
+h4yn0nnym0u5e/AudioPatcher,REF_PASS,2026-06-01,2026-06-01,2026-07-01,published,Teensy runtime configurable audio graph proof with dynamic audio objects patchcord editor SD patch loading MIDI and display control UI
+marcel-licence/ML_SynthTools,REF_PASS,2026-06-01,2026-06-01,2026-07-01,published,Cross-platform Arduino synth toolkit supporting ESP32 Teensy Daisy Pico RP2350 STM32 with MIDI arpeggiator effects organ oscillator MOD tracker and board defs
+Befaco/Oneiroi,STRONG_PASS,2026-06-02,2026-06-02,2026-07-02,published,OWL platform Eurorack ambient drone synth patch with stereo signal path oscillators effects looper WebMIDI update flow source and calibration notes
+willbearfruits/GlitchPedal,STRONG_PASS,2026-06-02,2026-06-02,2026-07-02,published,Daisy Seed multi-FX pedal with QSPI SDRAM phase-vocoder pitch shift spectral freeze drone ReverbSc delay chorus and real-time-safety notes
+Befaco/VCMC,PASS,2026-06-02,2026-06-02,2026-07-02,published,Teensy Eurorack CV-to-MIDI firmware for VCMC CV Thing with chord strum poly aftertouch 14-bit CC NRPN calibration and web configurer
+RebelTechnology/OpenWare+OwlProgram,REF_PASS,2026-06-02,2026-06-02,2026-07-02,published,OWL embedded audio firmware and patch build workflow for Pure Data FAUST Max Gen SOUL Maximilian and Cpp with sysex load store web native targets
+raybellis/PicoSynth,REF_PASS,2026-06-02,2026-06-02,2026-07-02,published,RP2040 wavetable synth WIP with 128 voices 16-part multitimbral 44.1kHz I2S interpolator DCOs USB serial MIDI and PicoADK support
