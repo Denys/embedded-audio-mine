@@ -36,6 +36,33 @@ Primary goal:
   - new supported hardware
   - major documentation/build improvements
 
+## Selected projects reference
+
+`data/selected-projects.csv` is a curated reference layer, not the canonical digest publication tracker.
+
+Goals:
+
+1. Save especially interesting projects for faster future access and personal-project inspiration.
+2. Preserve similarity anchors that define the kind of projects future searches should try to find.
+
+Selected-project entries may include:
+
+- projects from ranked digests
+- manually added projects discovered around a digest
+- related infrastructure and tooling
+- watch items that are explicitly marked as unverified or not yet promoted
+
+Selected-project entries do **not** automatically count as published digest items.
+
+Only these count as published for anti-repeat exclusion:
+
+1. `data/published-repo-log.csv`
+2. committed digest markdown ranked entries
+3. explicitly recorded failed-persistence fallback published entries
+4. temporary chat-only published records when no committed file exists
+
+Do not exclude a project from future ranked digests merely because it appears in `data/selected-projects.csv`, unless it is also present in the publication tracker or a ranked digest entry.
+
 ## Quality rules
 
 - Never force category symmetry.
