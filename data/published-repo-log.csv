@@ -50,3 +50,8 @@ willbearfruits/GlitchPedal,STRONG_PASS,2026-06-02,2026-06-02,2026-07-02,publishe
 Befaco/VCMC,PASS,2026-06-02,2026-06-02,2026-07-02,published,Teensy Eurorack CV-to-MIDI firmware for VCMC CV Thing with chord strum poly aftertouch 14-bit CC NRPN calibration and web configurer
 RebelTechnology/OpenWare+OwlProgram,REF_PASS,2026-06-02,2026-06-02,2026-07-02,published,OWL embedded audio firmware and patch build workflow for Pure Data FAUST Max Gen SOUL Maximilian and Cpp with sysex load store web native targets
 raybellis/PicoSynth,REF_PASS,2026-06-02,2026-06-02,2026-07-02,published,RP2040 wavetable synth WIP with 128 voices 16-part multitimbral 44.1kHz I2S interpolator DCOs USB serial MIDI and PicoADK support
+HolyBimBam/xiao-audio-midi-breakout-v1.0,STRONG_PASS,2026-06-03,2026-06-03,2026-07-03,published,RP2350 Xiao audio MIDI breakout with PCM5102A TRS MIDI USB MIDI AMY firmware and active Synth_Dexed DX7 bring-up
+ledlaux/vija-pico-synth,PASS,2026-06-03,2026-06-03,2026-07-03,published,RP2040 RP2350 Braids-derived Pico synth with 40plus engines OLED oscilloscope CV MIDI arpeggiator I2S and soft-takeover UI
+wgd-modular/loewenzahnhonig-firmware,PASS,2026-06-03,2026-06-03,2026-07-03,published,Daisy-based Eurorack firmware collection with precompiled bins libDaisy DaisySP submodules VCA compressor delay reverb and MI Rings stereo reverb
+alexiszbik/polyanalog,PASS,2026-06-03,2026-06-03,2026-07-03,published,Daisy Seed 4-voice polysynth with SuperSaw PWM MIDI CC OLED 16 presets QSPI preset manager soft-takeover schematic and BOM
+Electrotechnique/TSynth-Teensy4.1,PASS,2026-06-03,2026-06-03,2026-07-03,published,Teensy 4.1 hardware synth with PCB front-panel files SD presets 12-voice audio graph USB I2S output ensemble filter and patch architecture
