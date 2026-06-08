@@ -1,0 +1,135 @@
+{
+  "date": "2026-04-16",
+  "previous_digest_date": "2026-04-09",
+  "queries_successful": 16,
+  "evaluated_unique_nonfork_repos": 10,
+  "selection_method": "repair-pass-from-live-same-day-snapshot",
+  "notes": [
+    "Removed permanently excluded pyannote/pyannote-audio from the digest and history.",
+    "Actively researched SSI2130, SSI2131, SSI2140, SSI2144, SSI2164, and SSI2190 repos through GitHub search.",
+    "Promoted PaulStoffregen/Audio as a live-verified fallback when direct pushed_at transport was unavailable."
+  ],
+  "selected": [
+    {
+      "rank": 1,
+      "full_name": "korginc/logue-sdk",
+      "html_url": "https://github.com/korginc/logue-sdk",
+      "stars": 989,
+      "forks": 338,
+      "pushed_at": "2026-03-24",
+      "topic": "STM32 DSP",
+      "description": "This repository contains all the files and tools needed to build custom oscillators and effects for the prologue synthes",
+      "score": 4001,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 2,
+      "full_name": "DBraun/DawDreamer",
+      "html_url": "https://github.com/DBraun/DawDreamer",
+      "stars": 1200,
+      "forks": 95,
+      "pushed_at": "2026-02-07",
+      "topic": "JUCE effects",
+      "description": "Digital Audio Workstation with Python; VST instruments/effects, parameter automation, FAUST, JAX, Warp Markers, and JUCE",
+      "score": 3885,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 3,
+      "full_name": "PaulStoffregen/Audio",
+      "html_url": "https://github.com/PaulStoffregen/Audio",
+      "stars": 1200,
+      "forks": 430,
+      "pushed_at": null,
+      "topic": "Teensy audio",
+      "description": "Teensy Audio Library",
+      "score": 3710,
+      "status_tag": "NEW",
+      "source_note": "Stars and forks verified from the live GitHub repo page; pushed_at was unavailable through the sandbox transport during this run."
+    },
+    {
+      "rank": 4,
+      "full_name": "marcel-licence/ML_SynthTools",
+      "html_url": "https://github.com/marcel-licence/ML_SynthTools",
+      "stars": 232,
+      "forks": 37,
+      "pushed_at": "2026-03-19",
+      "topic": "Teensy audio",
+      "description": "ML_SynthTools",
+      "score": 827,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 5,
+      "full_name": "antoinevg/daisy_bsp",
+      "html_url": "https://github.com/antoinevg/daisy_bsp",
+      "stars": 80,
+      "forks": 14,
+      "pushed_at": "2025-06-02",
+      "topic": "Daisy Seed",
+      "description": "Board support package for the Electro-Smith Daisy Seed.",
+      "score": 282,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 6,
+      "full_name": "sourcebox/mi-plaits-dsp-rs",
+      "html_url": "https://github.com/sourcebox/mi-plaits-dsp-rs",
+      "stars": 57,
+      "forks": 6,
+      "pushed_at": "2026-03-06",
+      "topic": "Mutable Instruments",
+      "description": "Rust port of Mutable Instruments Plaits module DSP code.",
+      "score": 189,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 7,
+      "full_name": "zlosynth/kaseta",
+      "html_url": "https://github.com/zlosynth/kaseta",
+      "stars": 52,
+      "forks": 3,
+      "pushed_at": "2026-03-22",
+      "topic": "STM32 DSP",
+      "description": "Saturating tape delay and feedback sculptor.",
+      "score": 185,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 8,
+      "full_name": "kwarc93/audio-multieffect",
+      "html_url": "https://github.com/kwarc93/audio-multieffect",
+      "stars": 46,
+      "forks": 9,
+      "pushed_at": "2026-03-15",
+      "topic": "STM32 DSP",
+      "description": "Guitar multi effect running on STM32F746-DISCO board",
+      "score": 165,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 9,
+      "full_name": "alex6679/teensy-4-usbAudio",
+      "html_url": "https://github.com/alex6679/teensy-4-usbAudio",
+      "stars": 36,
+      "forks": 12,
+      "pushed_at": "2026-03-24",
+      "topic": "Teensy audio",
+      "description": "Extension of the Teensy 4 and 4.1 USB audio input and output.",
+      "score": 164,
+      "status_tag": "RE-ENTRY: updated"
+    },
+    {
+      "rank": 10,
+      "full_name": "hemmer/PlaitsPatchInit",
+      "html_url": "https://github.com/hemmer/PlaitsPatchInit",
+      "stars": 46,
+      "forks": 4,
+      "pushed_at": "2024-02-19",
+      "topic": "Mutable Instruments",
+      "description": "Trying to port some of Mutable Instruments Plaits to electrosmith daisy patch.init()",
+      "score": 150,
+      "status_tag": "NEW"
+    }
+  ]
+}

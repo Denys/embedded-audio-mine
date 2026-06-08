@@ -1,0 +1,28 @@
+{
+  "date": "2026-04-28",
+  "added": [
+    "GareBear99/SpaceMaid",
+    "Ohminecraft/esp32-dsp-core",
+    "bseverns/seedBox",
+    "eTextile/Synth",
+    "forrestrae/teensy-sound-sensor-pcb",
+    "hatchjaw/ananas-client",
+    "jakubthedeveloper/Samplotron",
+    "squeedee/daisy-studio",
+    "zisonzishen0415-stack/esp32-fdnreverb",
+    "zlosynth/arplus"
+  ],
+  "removed": [
+    "DADDesign-Projects/DaisySeedCubeTemplate",
+    "PoliTeK/PSP-PlantSignalProcessing",
+    "ariknel/ESP-EasyDSP",
+    "bossersimon/stm32-audio-DSP",
+    "craigyjp/AS2164-4P-filter",
+    "gmoican/GuitPreamp",
+    "mkfarrow/Eurorack_DualVCA",
+    "nalexopo/BasicDaisy",
+    "windysynth/windy1",
+    "yamamo2shun1/JUMBLEQ"
+  ],
+  "changed": []
+}

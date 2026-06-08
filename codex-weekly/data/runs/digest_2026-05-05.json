@@ -1,0 +1,217 @@
+{
+  "date": "2026-05-05",
+  "previous_digest_date": "2026-04-28",
+  "queries_successful": 16,
+  "evaluated_unique_nonfork_repos": 66,
+  "selected": [
+    {
+      "rank": 1,
+      "full_name": "agooddaytowork/dq-dsp-firmware",
+      "html_url": "https://github.com/agooddaytowork/dq-dsp-firmware",
+      "stars": 1,
+      "forks": 1,
+      "pushed_at": "2026-05-02",
+      "topic": "ESP32 audio",
+      "description": "ESP32-S3 firmware that turns a $20 dev-board into a 2-in / 4-out audio DSP. UAC-class audio + browser-controlled PEQ / crossover / room EQ. Active 2-way speakers, embarrassingly cheap.",
+      "matched_ic_query": false,
+      "score": 75,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "16 source files with 13 audio/DSP implementation files; files: main/i2s_audio.c, main/i2s_audio.h, main/main.c, main/serial_server.c",
+      "representative_files": [
+        "main/i2s_audio.c",
+        "main/i2s_audio.h",
+        "main/main.c",
+        "main/serial_server.c"
+      ]
+    },
+    {
+      "rank": 2,
+      "full_name": "clutchitggs/xiao-edge-audio",
+      "html_url": "https://github.com/clutchitggs/xiao-edge-audio",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2026-05-01",
+      "topic": "ESP32 audio",
+      "description": "Real-time audio spectrum analyzer for the XIAO ESP32-S3 Sense \u2014 on-device FFT, FreeRTOS, WebSocket dashboard with live waveform + spectrogram.",
+      "matched_ic_query": false,
+      "score": 72,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "9 source files with 4 audio/DSP implementation files; files: firmware/main/audio_capture.c, firmware/main/audio_capture.h, firmware/main/dsp_pipeline.c, firmware/main/dsp_pipeline.h",
+      "representative_files": [
+        "firmware/main/audio_capture.c",
+        "firmware/main/audio_capture.h",
+        "firmware/main/dsp_pipeline.c",
+        "firmware/main/dsp_pipeline.h"
+      ]
+    },
+    {
+      "rank": 3,
+      "full_name": "malaiwah/dsp408-esphome",
+      "html_url": "https://github.com/malaiwah/dsp408-esphome",
+      "stars": 4,
+      "forks": 4,
+      "pushed_at": "2026-04-28",
+      "topic": "ESP32 audio",
+      "description": "ESPHome external_component for the Dayton Audio DSP-408 over native USB host on ESP32-S3 \u2014 pairs with dsp408-py",
+      "matched_ic_query": false,
+      "score": 70,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "18 source files with 17 audio/DSP implementation files; files: components/dsp408/__init__.py, components/dsp408/dsp408.cpp, components/dsp408/dsp408.h, components/dsp408/number/__init__.py",
+      "representative_files": [
+        "components/dsp408/__init__.py",
+        "components/dsp408/dsp408.cpp",
+        "components/dsp408/dsp408.h",
+        "components/dsp408/number/__init__.py"
+      ]
+    },
+    {
+      "rank": 4,
+      "full_name": "RVX/LTC2DMX_Teensy_41_Audioshield",
+      "html_url": "https://github.com/RVX/LTC2DMX_Teensy_41_Audioshield",
+      "stars": 2,
+      "forks": 2,
+      "pushed_at": "2026-04-29",
+      "topic": "Teensy audio",
+      "description": "Read LTC signals to create DMX coreographies on a Tennsy 4.1 with the Audio Shield on Left Input channel and Max485 DMX Output",
+      "matched_ic_query": false,
+      "score": 60,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "17 source files with 4 audio/DSP implementation files; files: analyze_movie_luma.py, gen_backlight_cues.py, gen_saber_cues.py, gen_saber_ww2_cues.py",
+      "representative_files": [
+        "analyze_movie_luma.py",
+        "gen_backlight_cues.py",
+        "gen_saber_cues.py",
+        "gen_saber_ww2_cues.py"
+      ]
+    },
+    {
+      "rank": 5,
+      "full_name": "bluedrgn/usb-audio",
+      "html_url": "https://github.com/bluedrgn/usb-audio",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2026-05-05",
+      "topic": "STM32 DSP",
+      "description": "An example project with STM32F411 (aka. Blackpill) to create an USB AUDIO 1.0 device that recognised by the host as a USB Speaker and outputs received audio stream on I2S. Additionally there are some nice audio visualization widgets on a small 1BPP display. Drivers included for multiple display tipes.",
+      "matched_ic_query": false,
+      "score": 52,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "147 source files with 95 audio/DSP implementation files; files: Core/Inc/filter_helpers.h, Core/Inc/main.h, Core/Inc/ringbuf.h, Core/Inc/stm32f4xx_hal_conf.h",
+      "representative_files": [
+        "Core/Inc/filter_helpers.h",
+        "Core/Inc/main.h",
+        "Core/Inc/ringbuf.h",
+        "Core/Inc/stm32f4xx_hal_conf.h"
+      ]
+    },
+    {
+      "rank": 6,
+      "full_name": "GreerPage/teensy_audio_illusions",
+      "html_url": "https://github.com/GreerPage/teensy_audio_illusions",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-05-04",
+      "topic": "Teensy audio",
+      "description": "Some interesting auditory illusions demonstrated using a teensy4.0 and teensy audio library",
+      "matched_ic_query": false,
+      "score": 50,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "9 source files with 9 audio/DSP implementation files; files: audio_illusions/audio_illusions.ino, audio_illusions/audio_setup.cpp, audio_illusions/audio_setup.h, audio_illusions/binaural.cpp",
+      "representative_files": [
+        "audio_illusions/audio_illusions.ino",
+        "audio_illusions/audio_setup.cpp",
+        "audio_illusions/audio_setup.h",
+        "audio_illusions/binaural.cpp"
+      ]
+    },
+    {
+      "rank": 7,
+      "full_name": "agooddaytowork/dq-dsp-ui",
+      "html_url": "https://github.com/agooddaytowork/dq-dsp-ui",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-05-02",
+      "topic": "ESP32 audio",
+      "description": "Browser DSP cockpit for DQ-DSP \u2014 turns a $20 ESP32-S3 + 2\u00d7 PCM5102A into a 4-channel parametric crossover. Bi-amp your bookshelves without the SHARC tax.",
+      "matched_ic_query": false,
+      "score": 50,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "93 source files with 23 audio/DSP implementation files; files: eslint.config.js, src/App.tsx, src/ble/param-decoder.ts, src/ble/param-encoder.ts",
+      "representative_files": [
+        "eslint.config.js",
+        "src/App.tsx",
+        "src/ble/param-decoder.ts",
+        "src/ble/param-encoder.ts"
+      ]
+    },
+    {
+      "rank": 8,
+      "full_name": "SeanBonaventure01/stm32-audio-eq",
+      "html_url": "https://github.com/SeanBonaventure01/stm32-audio-eq",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-04-30",
+      "topic": "STM32 DSP",
+      "description": "DSP learning project using a STM32F407 Disco kit",
+      "matched_ic_query": false,
+      "score": 50,
+      "status_tag": "NEW",
+      "content_value": "medium",
+      "content_summary": "3 source files with concrete build and audio/DSP source evidence; files: config/FreeRTOSConfig.h, config/stm32f4xx_hal_conf.h, src/main.c",
+      "representative_files": [
+        "config/FreeRTOSConfig.h",
+        "config/stm32f4xx_hal_conf.h",
+        "src/main.c"
+      ]
+    },
+    {
+      "rank": 9,
+      "full_name": "TynanGuenther/teensy_audio_guestbook",
+      "html_url": "https://github.com/TynanGuenther/teensy_audio_guestbook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-04-28",
+      "topic": "Teensy audio",
+      "description": "An audio guestbook using a Teensy 4.0 with an Audio Shield and a rotary phone to take in messages and save them on a micro SD card",
+      "matched_ic_query": false,
+      "score": 50,
+      "status_tag": "NEW",
+      "content_value": "low",
+      "content_summary": "10 source files with limited but real implementation evidence; files: include/AudioManager.h, include/CommandHandler.h, include/DialReader.h, include/HookSwitch.h",
+      "representative_files": [
+        "include/AudioManager.h",
+        "include/CommandHandler.h",
+        "include/DialReader.h",
+        "include/HookSwitch.h"
+      ]
+    },
+    {
+      "rank": 10,
+      "full_name": "carlvp/daisylab",
+      "html_url": "https://github.com/carlvp/daisylab",
+      "stars": 10,
+      "forks": 2,
+      "pushed_at": "2025-06-17",
+      "topic": "Daisy Seed",
+      "description": "Experiments with the Daisy Seed audio dev board",
+      "matched_ic_query": false,
+      "score": 46,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "80 source files with 40 audio/DSP implementation files; files: daisychain/daisychain.cpp, latebloomer/AudioPath.cpp, latebloomer/AudioPath.h, latebloomer/Channel.cpp",
+      "representative_files": [
+        "daisychain/daisychain.cpp",
+        "latebloomer/AudioPath.cpp",
+        "latebloomer/AudioPath.h",
+        "latebloomer/Channel.cpp"
+      ]
+    }
+  ]
+}

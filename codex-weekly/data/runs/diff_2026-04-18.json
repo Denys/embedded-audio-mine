@@ -1,0 +1,28 @@
+{
+  "date": "2026-04-18",
+  "added": [
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "JordanAceto/SSI2140_12_stage_phase_shifter",
+    "bristol-communal-modular/dual-2164-vca",
+    "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
+    "ohmic-net/puca_dsp",
+    "palmerr23/Teensy8x8AudioBoard",
+    "spandit69/nest-audio-pcb",
+    "t-dsp/t-dsp_software",
+    "thi-ng/synstack",
+    "zlosynth/achordion"
+  ],
+  "removed": [
+    "DBraun/DawDreamer",
+    "PaulStoffregen/Audio",
+    "alex6679/teensy-4-usbAudio",
+    "antoinevg/daisy_bsp",
+    "hemmer/PlaitsPatchInit",
+    "korginc/logue-sdk",
+    "kwarc93/audio-multieffect",
+    "marcel-licence/ML_SynthTools",
+    "sourcebox/mi-plaits-dsp-rs",
+    "zlosynth/kaseta"
+  ],
+  "changed": []
+}

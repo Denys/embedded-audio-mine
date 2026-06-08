@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-29",
+  "added": [
+    "DADDesign-Projects/DaisySeedCubeTemplate",
+    "bristol-communal-modular/dual-2164-vca",
+    "eTextile/Synth",
+    "kratofl/kratomix",
+    "lluisestape-upc/Synth1.0",
+    "pierreportal/rust-dsp",
+    "squeedee/daisy-studio",
+    "src3453/3HSPlug",
+    "windysynth/windy1",
+    "yamamo2shun1/JUMBLEQ"
+  ],
+  "removed": [
+    "DIYSynthMNL/Eurorack-2164-Quad-Exponential-VCA",
+    "GullDSP/Circulate-VST",
+    "JordanAceto/SSI2140_12_stage_phase_shifter",
+    "JoshuaJRideout/PedalForge",
+    "PoliTeK/PSP-PlantSignalProcessing",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "alex6679/teensy-4-usbAudio",
+    "babeinlovexd/Insane-Soundbar",
+    "mkfarrow/Eurorack_DualVCA",
+    "spandit69/nest-audio-pcb"
+  ],
+  "changed": []
+}

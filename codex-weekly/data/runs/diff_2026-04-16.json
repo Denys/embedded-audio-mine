@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-16",
+  "added": [
+    "PaulStoffregen/Audio",
+    "hemmer/PlaitsPatchInit"
+  ],
+  "removed": [
+    "pyannote/pyannote-audio",
+    "rheslip/DaisySP_Teensy"
+  ],
+  "changed": [
+    "korginc/logue-sdk",
+    "DBraun/DawDreamer",
+    "marcel-licence/ML_SynthTools",
+    "antoinevg/daisy_bsp",
+    "sourcebox/mi-plaits-dsp-rs",
+    "zlosynth/kaseta",
+    "kwarc93/audio-multieffect",
+    "alex6679/teensy-4-usbAudio"
+  ]
+}

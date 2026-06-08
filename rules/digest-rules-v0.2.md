@@ -28,6 +28,9 @@ Primary goal:
 ## Anti-repeat logic
 
 - Do not repeat the same repo/resource for 30 days.
+- Apply the common anti-repeat policy in `rules/common-anti-repeat-policy.md` before publishing from either stream.
+- Check hard published evidence across both streams, not only the current stream.
+- Check soft selected/reference evidence across both streams, but do not treat it as an automatic publication block.
 - Exception:
   - new release
   - new firmware asset

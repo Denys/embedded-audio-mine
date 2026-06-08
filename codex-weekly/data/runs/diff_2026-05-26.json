@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-26",
+  "added": [
+    "DIYSynthMNL/Eurorack-2164-Quad-Exponential-VCA",
+    "GullDSP/Circulate-VST",
+    "JordanAceto/SSI2140_12_stage_phase_shifter",
+    "JoshuaJRideout/PedalForge",
+    "PoliTeK/PSP-PlantSignalProcessing",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "alex6679/teensy-4-usbAudio",
+    "babeinlovexd/Insane-Soundbar",
+    "mkfarrow/Eurorack_DualVCA",
+    "spandit69/nest-audio-pcb"
+  ],
+  "removed": [
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "Orastron/brickworks",
+    "PaulStoffregen/Audio",
+    "antoinevg/daisy_bsp",
+    "korginc/logue-sdk",
+    "marcel-licence/ML_SynthTools",
+    "ohmic-net/puca_dsp",
+    "sophiapoirier/destroyfx",
+    "zlosynth/achordion",
+    "zlosynth/kaseta"
+  ],
+  "changed": []
+}

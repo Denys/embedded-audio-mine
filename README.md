@@ -4,6 +4,18 @@ Digging for golden ideas in embedded audio firmware, DSP algorithms, UI architec
 
 This repository stores the working data for a recurring embedded audio discovery digest.
 
+## Repository shape
+
+This repository holds two parallel discovery streams:
+
+| Stream | Archive | State | Role |
+|---|---|---|---|
+| WebGPT daily | `digests/YYYY-MM-DD.md` | `data/published-repo-log.csv`, `data/selected-projects.csv` | Short daily discovery digests and curated selected/reference projects |
+| Codex weekly | `codex-weekly/digests/YYYY-MM-DD.md` | `codex-weekly/data/repo_feature_history.json`, `codex-weekly/data/runs/` | GitHub-heavy weekly Top 10 digests with stricter repeat history |
+| Shared cross-check | none | `data/common-anti-repeat-index.csv` | Derived index for checking both streams before publication |
+
+Do not combine the two streams into one digest format. Use them as parallel evidence sources that watch each other's published and selected projects.
+
 ## Purpose
 
 The goal is not to collect popular repos. The goal is to mine hidden, useful, adaptable projects from:
@@ -17,13 +29,21 @@ The goal is not to collect popular repos. The goal is to mine hidden, useful, ad
 
 ## Digest archive
 
-Full daily digest Markdown snapshots are stored in:
+Full WebGPT daily digest Markdown snapshots are stored in:
 
 ```text
 digests/YYYY-MM-DD.md
 ```
 
 The scheduled ChatGPT task should save each future daily digest there and update `data/published-repo-log.csv` with published items.
+
+Full Codex weekly digest Markdown snapshots are stored in:
+
+```text
+codex-weekly/digests/YYYY-MM-DD.md
+```
+
+The Codex weekly lane should update `codex-weekly/data/repo_feature_history.json`, `codex-weekly/data/latest_results.json`, `codex-weekly/data/run_state.json`, and the per-run JSON files under `codex-weekly/data/runs/`.
 
 ## Selected projects reference
 
@@ -64,6 +84,8 @@ Suggested selected-project statuses:
 - Main digest size: 3–5 items.
 - Prefer at least 2 lanes, but never force filler.
 - Do not repeat the same repo/resource for 30 days unless there is a meaningful update.
+- Before publishing in either stream, check `data/common-anti-repeat-index.csv` plus the other stream's canonical state.
+- Treat published records as hard anti-repeat evidence and selected-project records as soft watch/reference evidence.
 - Prefer independent/community projects and forum-hidden discoveries.
 - Binary firmware is not mandatory for PASS.
 - Algorithm/reference value is allowed when adaptation value is strong.

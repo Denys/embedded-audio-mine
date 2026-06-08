@@ -1,0 +1,230 @@
+{
+  "date": "2026-05-26",
+  "previous_digest_date": "2026-05-19",
+  "queries_successful": 21,
+  "evaluated_unique_nonfork_repos": 112,
+  "selected": [
+    {
+      "rank": 1,
+      "full_name": "alex6679/teensy-4-usbAudio",
+      "html_url": "https://github.com/alex6679/teensy-4-usbAudio",
+      "stars": 37,
+      "forks": 13,
+      "pushed_at": "2026-05-20",
+      "topic": "Teensy audio",
+      "description": "Extension of the Teensy 4 and 4.1 USB audio input and output.",
+      "matched_ic_query": false,
+      "score": 163,
+      "status_tag": "RETURNING",
+      "content_value": "strong",
+      "content_summary": "17 source files with 12 audio/DSP implementation files; files: changedCorefiles/AudioStream.h, changedCorefiles/usb.c, changedCorefiles/usb_audio.cpp, changedCorefiles/usb_audio.h",
+      "representative_files": [
+        "changedCorefiles/AudioStream.h",
+        "changedCorefiles/usb.c",
+        "changedCorefiles/usb_audio.cpp",
+        "changedCorefiles/usb_audio.h"
+      ],
+      "portability_value": "high",
+      "portability_summary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse"
+    },
+    {
+      "rank": 2,
+      "full_name": "ZorakAudio/ZorakAudio-Experimental-Plugins",
+      "html_url": "https://github.com/ZorakAudio/ZorakAudio-Experimental-Plugins",
+      "stars": 16,
+      "forks": 1,
+      "pushed_at": "2026-05-23",
+      "topic": "Computer-first effects",
+      "description": "A collection of experimental open-source audio plugins by ZorakAudio. Each plugin is a standalone exploration of perceptual and psychoacoustic DSP ideas, focused on safe behavior, minimal controls, and unconventional solutions to real-world audio problems.",
+      "matched_ic_query": false,
+      "score": 85,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "224 source files with 29 audio/DSP implementation files; files: plugins/Dynamics/RED/src/Reverb Expanding Downwards (RED).dsp, src/WDL/eel2/eel_fft.h, src/WDL/fft.c, src/WDL/fft.h",
+      "representative_files": [
+        "plugins/Dynamics/RED/src/Reverb Expanding Downwards (RED).dsp",
+        "src/WDL/eel2/eel_fft.h",
+        "src/WDL/fft.c",
+        "src/WDL/fft.h"
+      ],
+      "portability_value": "high",
+      "portability_summary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port"
+    },
+    {
+      "rank": 3,
+      "full_name": "DIYSynthMNL/Eurorack-2164-Quad-Exponential-VCA",
+      "html_url": "https://github.com/DIYSynthMNL/Eurorack-2164-Quad-Exponential-VCA",
+      "stars": 2,
+      "forks": 0,
+      "pushed_at": "2026-05-14",
+      "topic": "Audio IC hardware",
+      "description": "This is a Quad Exponential VCA based on the AS2164 Chip",
+      "matched_ic_query": true,
+      "score": 84,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "4 hardware design files plus repository implementation evidence; files: 3D printed front panel/2164_Quad_VCA.stl, kicad/AS2164-Quad-Exponential-VCA.kicad_pcb",
+      "representative_files": [
+        "3D printed front panel/2164_Quad_VCA.stl",
+        "kicad/AS2164-Quad-Exponential-VCA.kicad_pcb"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "hardware files are useful for audio I/O or analog-path decisions, but firmware portability depends on a separate DSP implementation"
+    },
+    {
+      "rank": 4,
+      "full_name": "PoliTeK/PSP-PlantSignalProcessing",
+      "html_url": "https://github.com/PoliTeK/PSP-PlantSignalProcessing",
+      "stars": 1,
+      "forks": 2,
+      "pushed_at": "2026-05-21",
+      "topic": "Daisy Seed",
+      "description": "Bare-metal C++ firmware for audio generation based on biorhythms and capacitive variations of plants. The project uses the Daisy Seed (STM32H7) development board to acquire data from a capacitive sensor, process it through custom DSP filters, and drive an internal audio synthesis engine, while simultaneously providing visual feedback via Display",
+      "matched_ic_query": false,
+      "score": 78,
+      "status_tag": "RETURNING",
+      "content_value": "strong",
+      "content_summary": "1 hardware design files plus repository implementation evidence; files: Software/src/FlashMemory/main_flashAndAudioTest.cpp, Software/src/PSP/AudioEngine.cpp, Software/src/PSP/AudioEngine.h, Software/src/PSP/AudioEngineConfig.h",
+      "representative_files": [
+        "Software/src/FlashMemory/main_flashAndAudioTest.cpp",
+        "Software/src/PSP/AudioEngine.cpp",
+        "Software/src/PSP/AudioEngine.h",
+        "Software/src/PSP/AudioEngineConfig.h"
+      ],
+      "portability_value": "high",
+      "portability_summary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping"
+    },
+    {
+      "rank": 5,
+      "full_name": "JordanAceto/SSI2140_12_stage_phase_shifter",
+      "html_url": "https://github.com/JordanAceto/SSI2140_12_stage_phase_shifter",
+      "stars": 7,
+      "forks": 1,
+      "pushed_at": "2022-12-29",
+      "topic": "Audio IC hardware",
+      "description": "SSI2140 based eurorack 12 stage phasor module",
+      "matched_ic_query": true,
+      "score": 77,
+      "status_tag": "AUDIO-IC hardware",
+      "content_value": "strong",
+      "content_summary": "62 hardware design files plus repository implementation evidence; files: front_panel/docs/CAD/SSI2140_Phase_Shifter_front_panel-3D.step, front_panel/docs/gerbers/SSI2140_Phase_Shifter_front_panel--NPTH_map.gbr",
+      "representative_files": [
+        "front_panel/docs/CAD/SSI2140_Phase_Shifter_front_panel-3D.step",
+        "front_panel/docs/gerbers/SSI2140_Phase_Shifter_front_panel--NPTH_map.gbr"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "hardware files are useful for audio I/O or analog-path decisions, but firmware portability depends on a separate DSP implementation"
+    },
+    {
+      "rank": 6,
+      "full_name": "babeinlovexd/Insane-Soundbar",
+      "html_url": "https://github.com/babeinlovexd/Insane-Soundbar",
+      "stars": 3,
+      "forks": 0,
+      "pushed_at": "2026-05-20",
+      "topic": "ESP32 audio",
+      "description": "An uncompromising DIY soundbar project: 4x ESP32, RP2354 hardware DSP, 4-layer custom PCB, and audiophile Dayton Audio drivers. 100% local, natively integrated into ESPHome & Home Assistant, including a custom Windows Control Center.",
+      "matched_ic_query": false,
+      "score": 76,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "9 hardware design files plus repository implementation evidence; files: Firmware/DSP/biquad.c, Firmware/DSP/biquad.h, Firmware/DSP/audio_routing.c, Firmware/DSP/audio_routing.h",
+      "representative_files": [
+        "Firmware/DSP/biquad.c",
+        "Firmware/DSP/biquad.h",
+        "Firmware/DSP/audio_routing.c",
+        "Firmware/DSP/audio_routing.h"
+      ],
+      "portability_value": "high",
+      "portability_summary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping"
+    },
+    {
+      "rank": 7,
+      "full_name": "GullDSP/Circulate-VST",
+      "html_url": "https://github.com/GullDSP/Circulate-VST",
+      "stars": 27,
+      "forks": 0,
+      "pushed_at": "2025-10-23",
+      "topic": "Computer-first effects",
+      "description": "An open source VST3 phase smearing audio effect based on a bank of 64 allpass filters. With sample accurate parameters / modulation",
+      "matched_ic_query": false,
+      "score": 74,
+      "status_tag": "NEW",
+      "content_value": "medium",
+      "content_summary": "15 source files with concrete build and audio/DSP source evidence; files: source/AllpassFilter.h, source/CirculateEffect.h, source/CirculateHelpers.cpp, source/CirculateHelpers.h",
+      "representative_files": [
+        "source/AllpassFilter.h",
+        "source/CirculateEffect.h",
+        "source/CirculateHelpers.cpp",
+        "source/CirculateHelpers.h"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "one concrete DSP block is visible, but the embedded port still needs algorithm isolation and block-size profiling"
+    },
+    {
+      "rank": 8,
+      "full_name": "spandit69/nest-audio-pcb",
+      "html_url": "https://github.com/spandit69/nest-audio-pcb",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-05-26",
+      "topic": "ESP32 audio",
+      "description": "\ud83d\udd0a Replace your Nest Audio PCB with an open-source, Home Assistant-friendly board featuring ESP32-S3 and XMOS DSP for advanced voice control.",
+      "matched_ic_query": false,
+      "score": 70,
+      "status_tag": "RETURNING",
+      "content_value": "strong",
+      "content_summary": "3 hardware design files plus repository implementation evidence; files: hardware/bom/bill-of-materials.csv, hardware/kicad/nest-audio-pcb.kicad_pro",
+      "representative_files": [
+        "hardware/bom/bill-of-materials.csv",
+        "hardware/kicad/nest-audio-pcb.kicad_pro"
+      ],
+      "portability_value": "high",
+      "portability_summary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping"
+    },
+    {
+      "rank": 9,
+      "full_name": "JoshuaJRideout/PedalForge",
+      "html_url": "https://github.com/JoshuaJRideout/PedalForge",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-05-25",
+      "topic": "Computer-first synth",
+      "description": "Open-source modular pedalboard & synthesizer platform (VST3/AU/Standalone) built with JUCE 8",
+      "matched_ic_query": false,
+      "score": 70,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "151 source files with 37 audio/DSP implementation files; files: faust/factory/compressor.dsp, faust/factory/delay.dsp, faust/factory/reverb.dsp, faust/factory/eq.dsp",
+      "representative_files": [
+        "faust/factory/compressor.dsp",
+        "faust/factory/delay.dsp",
+        "faust/factory/reverb.dsp",
+        "faust/factory/eq.dsp"
+      ],
+      "portability_value": "high",
+      "portability_summary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port"
+    },
+    {
+      "rank": 10,
+      "full_name": "mkfarrow/Eurorack_DualVCA",
+      "html_url": "https://github.com/mkfarrow/Eurorack_DualVCA",
+      "stars": 4,
+      "forks": 0,
+      "pushed_at": "2022-12-22",
+      "topic": "Audio IC hardware",
+      "description": "Dual VCA based on Electrosmith's SSI2164 submodule",
+      "matched_ic_query": true,
+      "score": 68,
+      "status_tag": "AUDIO-IC hardware",
+      "content_value": "strong",
+      "content_summary": "3 hardware design files plus repository implementation evidence; files: Dual-VCA.brd, Dual-VCA.sch",
+      "representative_files": [
+        "Dual-VCA.brd",
+        "Dual-VCA.sch"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "hardware files are useful for audio I/O or analog-path decisions, but firmware portability depends on a separate DSP implementation"
+    }
+  ]
+}

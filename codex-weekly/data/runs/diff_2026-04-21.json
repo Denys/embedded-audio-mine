@@ -1,0 +1,28 @@
+{
+  "date": "2026-04-21",
+  "added": [
+    "DADDesign-Projects/DaisySeedCubeTemplate",
+    "PoliTeK/PSP-PlantSignalProcessing",
+    "ariknel/ESP-EasyDSP",
+    "bossersimon/stm32-audio-DSP",
+    "craigyjp/AS2164-4P-filter",
+    "gmoican/GuitPreamp",
+    "mkfarrow/Eurorack_DualVCA",
+    "nalexopo/BasicDaisy",
+    "windysynth/windy1",
+    "yamamo2shun1/JUMBLEQ"
+  ],
+  "removed": [
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "JordanAceto/SSI2140_12_stage_phase_shifter",
+    "bristol-communal-modular/dual-2164-vca",
+    "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
+    "ohmic-net/puca_dsp",
+    "palmerr23/Teensy8x8AudioBoard",
+    "spandit69/nest-audio-pcb",
+    "t-dsp/t-dsp_software",
+    "thi-ng/synstack",
+    "zlosynth/achordion"
+  ],
+  "changed": []
+}

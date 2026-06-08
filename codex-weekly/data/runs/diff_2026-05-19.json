@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-19",
+  "added": [
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "Orastron/brickworks",
+    "PaulStoffregen/Audio",
+    "antoinevg/daisy_bsp",
+    "korginc/logue-sdk",
+    "marcel-licence/ML_SynthTools",
+    "ohmic-net/puca_dsp",
+    "sophiapoirier/destroyfx",
+    "zlosynth/achordion",
+    "zlosynth/kaseta"
+  ],
+  "removed": [
+    "amsynth/amsynth",
+    "animatek/Nomad2026",
+    "anushkadas-coder/DCO6_synthesizer",
+    "christofmuc/KnobKraft-orm",
+    "grame-cncm/faust",
+    "joeriben/T5ynth",
+    "kayrockscreenprinting/ultramaster_kr106",
+    "khiner/flowgrid",
+    "reales/retromulator",
+    "zones-convolution/zones_client"
+  ],
+  "changed": []
+}

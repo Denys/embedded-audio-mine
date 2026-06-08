@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-12",
+  "added": [
+    "amsynth/amsynth",
+    "animatek/Nomad2026",
+    "anushkadas-coder/DCO6_synthesizer",
+    "christofmuc/KnobKraft-orm",
+    "grame-cncm/faust",
+    "joeriben/T5ynth",
+    "kayrockscreenprinting/ultramaster_kr106",
+    "khiner/flowgrid",
+    "reales/retromulator",
+    "zones-convolution/zones_client"
+  ],
+  "removed": [
+    "GreerPage/teensy_audio_illusions",
+    "RVX/LTC2DMX_Teensy_41_Audioshield",
+    "SeanBonaventure01/stm32-audio-eq",
+    "TynanGuenther/teensy_audio_guestbook",
+    "agooddaytowork/dq-dsp-firmware",
+    "agooddaytowork/dq-dsp-ui",
+    "bluedrgn/usb-audio",
+    "carlvp/daisylab",
+    "clutchitggs/xiao-edge-audio",
+    "malaiwah/dsp408-esphome"
+  ],
+  "changed": []
+}
