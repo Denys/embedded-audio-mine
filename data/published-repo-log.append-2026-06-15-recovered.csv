@@ -1,5 +1,5 @@
 repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
-16n-faderbank/16n,STRONG_PASS,2026-06-15,2026-06-15,2026-07-15,recovered_published,Open 16-fader MIDI CV I2C control-surface hardware firmware ecosystem; verify maintained fork and hardware files before fabrication
-westlicht/performer+performer-hardware,STRONG_PASS,2026-06-15,2026-06-15,2026-07-15,recovered_published,Open sequencer controller firmware plus hardware reference for dense front-panel MIDI CV performance workflows
-jmamma/MegaCommand_Design+MCL,PASS,2026-06-15,2026-06-15,2026-07-15,recovered_published,MegaCommand MCL hardware firmware ecosystem useful for complex MIDI control appliance and embedded UI workflow reference
-zukaitis/midi-grid,REF_PASS,2026-06-15,2026-06-15,2026-07-15,recovered_published,Grid-oriented MIDI controller reference for button-matrix UI mapping and performance control concepts; hardware completeness needs re-check
+16n-faderbank/16n,STRONG_PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; open 16-fader MIDI CV I2C control-surface hardware firmware ecosystem; verify maintained fork before fabrication
+westlicht/performer+performer-hardware,PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; open sequencer controller firmware plus hardware reference for dense front-panel MIDI CV workflows
+jmamma/MegaCommand_Design+MCL,PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; MegaCommand MCL hardware firmware ecosystem useful for complex MIDI control appliance UI workflows
+zukaitis/midi-grid,REF_PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; grid-oriented MIDI controller reference for button-matrix UI mapping and performance control concepts
