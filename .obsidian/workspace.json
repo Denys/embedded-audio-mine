@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "caf28b6b106766e1",
+    "type": "split",
+    "children": [
+      {
+        "id": "109b49f08b7cbf81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91f7dc6596b741e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "digests/2026-06-10_extended_pro.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-10_extended_pro"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5bd176a844a38bc4",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1adb378f4effc47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "88dc1f4cdc3957eb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0bd05f2d12da9213",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "477fb6d5a7f502fa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ca495073b440827e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b73542c912dc4108",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62b87ef9f69925d8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "digests/2026-06-10_extended_pro.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2026-06-10_extended_pro"
+            }
+          },
+          {
+            "id": "8f38d6674ab2c6d2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "digests/2026-06-10_extended_pro.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2026-06-10_extended_pro"
+            }
+          },
+          {
+            "id": "e6147553e5c811ee",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "afa64664ac22b0cb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0878bcec0d5dc9cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "digests/2026-06-10_extended_pro.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2026-06-10_extended_pro"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "91f7dc6596b741e4",
+  "lastOpenFiles": [
+    "digests/2026-06-10_deck_embedded_audio_mine_projects.pptx"
+  ]
+}

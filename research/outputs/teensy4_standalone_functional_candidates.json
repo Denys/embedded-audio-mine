@@ -1,0 +1,7133 @@
+[
+  {
+    "id": "tympan-rev-e-hardware",
+    "name": "Tympan Rev E Hardware v2.0.0",
+    "primary_url": "https://github.com/Tympan/Tympan_Rev_E_Hardware",
+    "secondary_urls": [
+      "https://github.com/Tympan/Tympan_Rev_E_Hardware/tree/master/Tympan_Rev_E",
+      "https://forum.tympan.org/t/tympan-hardware/428",
+      "https://circuithub.com/projects/biomurph/Tympan_Rev_E"
+    ],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "Tympan / biomurph",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "selected",
+    "lane": "STRONG_PASS",
+    "function_class": "audio_io",
+    "standalone_confidence": 0.9,
+    "standalone_evidence": [
+      "Forum states Tympan is a Teensy board with integrated audio codec and does not need an additional audio board.",
+      "GitHub repository includes electronics and case designs."
+    ],
+    "teensy_4x_confidence": 1.0,
+    "teensy_versions": [
+      "Teensy 4.1"
+    ],
+    "custom_board_confidence": 0.95,
+    "custom_board_evidence": [
+      "GitHub README says Rev E v2 is based on Teensy 4.1 and incorporates Teensy 4.1 into Tympan's own design.",
+      "Board folder exposes KiCad PCB, schematic, project, netlist, STEP, XLSX, and library files."
+    ],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware/blob/master/Tympan_Rev_E_Schematic.pdf",
+        "notes": "Top-level schematic PDF."
+      },
+      "pcb_source": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware/tree/master/Tympan_Rev_E",
+        "notes": "KiCad project folder with .kicad_pcb and .kicad_sch.",
+        "format": "KiCad"
+      },
+      "gerbers": {
+        "present": true,
+        "url": "https://forum.tympan.org/t/tympan-hardware/428",
+        "notes": "Forum refers to open Gerber files / CircuitHub path; exact Gerber archive not separately downloaded."
+      },
+      "bom": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware/tree/master/Tympan_Rev_E",
+        "notes": "Folder includes Tympan_Rev_E.xlsx; forum says design files and BOM are on GitHub and CircuitHub."
+      },
+      "panel_enclosure": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware/tree/master/Enclosure",
+        "notes": "Repository includes enclosure and Blender folders."
+      },
+      "assembly_photos": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware",
+        "notes": "README/assets include board imagery such as program button image."
+      },
+      "pin_map": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware/blob/master/pjrc_schematic41.pdf",
+        "notes": "PJRC Teensy 4.1 schematic reference included."
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Library",
+        "notes": "Separate Tympan library examples referenced from forum."
+      },
+      "build_instructions": {
+        "present": true,
+        "url": "https://github.com/Tympan/Tympan_Library",
+        "notes": "Library/examples provide firmware starting points."
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": "No Rev E-specific binary release verified."
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [
+        "integrated Tympan audio codec"
+      ],
+      "input_types": [
+        "audio inputs",
+        "microphone/hearing-aid front-end use cases"
+      ],
+      "output_types": [
+        "audio outputs"
+      ],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": [
+        "Teensy audio path"
+      ]
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [
+        "Integrated board; forum discusses manufacturing/population and attaching Teensy 4.1."
+      ],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": [
+        "Integrated codec/audio front end; stronger mixed-signal reference than generic DAC breakout boards."
+      ]
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": "Audio processing examples through Tympan library"
+    },
+    "license": "MIT for hardware repository.",
+    "availability_status": "Open hardware repo available; forum says no current production run planned.",
+    "last_activity_or_date": "Repository scrape shows file cleanup commit in 2023; forum discussion continues into 2025/2026 scrape context.",
+    "scores": {
+      "utility": 8,
+      "novelty": 7,
+      "adaptability": 9,
+      "hardware_completeness": 9,
+      "build_credibility": 8,
+      "audio_electronics_value": 9,
+      "teensy4_relevance": 10,
+      "standalone_confidence": 9,
+      "hardware_boost": 0.3,
+      "overall": 86.0
+    },
+    "decision_reason": "Cleanest open-hardware audio I/O board match: custom Teensy 4.1 board, integrated codec, KiCad/schematic/BOM/case evidence, and credible forum manufacturing notes.",
+    "caveats": [
+      "Current production availability is weak; build may require self-fabrication or CircuitHub-style manufacturing.",
+      "Firmware is in the separate Tympan library, not the hardware repo."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware",
+        "quote_or_paraphrase": "README says Rev E v2 is based on Teensy 4.1 and incorporates the Teensy into Tympan's own design.",
+        "supports": "Teensy 4.1 custom board evidence."
+      },
+      {
+        "url": "https://forum.tympan.org/t/tympan-hardware/428",
+        "quote_or_paraphrase": "Forum states Rev E uses Teensy 4.1 and the Tympan board has an integrated audio codec.",
+        "supports": "Standalone audio I/O fit and not a generic PJRC audio shield."
+      }
+    ]
+  },
+  {
+    "id": "microdexed-touch",
+    "name": "MicroDexed Touch",
+    "primary_url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+    "secondary_urls": [
+      "https://codeberg.org/positionhigh/MicroDexed-touch",
+      "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+      "https://www.pcbway.com/project/shareproject/MicroDexed_Touch_current_version_with_PCM5102_d643a695.html",
+      "https://protosupplies.com/product/teensy-41-microdexed"
+    ],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "dcoredump / positionhigh",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "selected",
+    "lane": "STRONG_PASS",
+    "function_class": "synth_voice",
+    "standalone_confidence": 0.92,
+    "standalone_evidence": [
+      "PCBWay describes it as a DIY groovebox/synth/sequencer in a tiny box.",
+      "Repo README requires Teensy 4.1, display/touch, audio board, and storage parts for a complete build."
+    ],
+    "teensy_4x_confidence": 1.0,
+    "teensy_versions": [
+      "Teensy 4.1"
+    ],
+    "custom_board_confidence": 0.86,
+    "custom_board_evidence": [
+      "PCBWay shared board pages exist for MicroDexed Touch current/capacitive versions.",
+      "Project links build instructions, BOM, and manual; PCBWay records CAD/BOM update history."
+    ],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": true,
+        "url": "https://codeberg.org/positionhigh/MicroDexed-touch/raw/branch/main/doc/MicroDexed-touch-manual.pdf",
+        "notes": "Manual is cited by PCBWay as containing schematics; Firecrawl could not parse the PDF due size/type limit."
+      },
+      "pcb_source": {
+        "present": true,
+        "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+        "notes": "PCBWay shared project / manufacturing page; raw Gerbers not public in scrape.",
+        "format": "PCBWay shared project"
+      },
+      "gerbers": {
+        "present": false,
+        "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+        "notes": "PCBWay ordering/manufacturing path exists, but public Gerber download was not verified."
+      },
+      "bom": {
+        "present": true,
+        "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Touch_current_version_with_PCM5102_d643a695.html",
+        "notes": "PCBWay page exposes BOM download/update history."
+      },
+      "panel_enclosure": {
+        "present": true,
+        "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Touch_current_version_with_PCM5102_d643a695.html",
+        "notes": "PCBWay page links case/enclosure variants and photos."
+      },
+      "assembly_photos": {
+        "present": true,
+        "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+        "notes": "Shared project page includes build photos."
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": "Not separately verified beyond manual/build documentation."
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": true,
+        "url": "https://codeberg.org/dcoredump/MicroDexed-touch/src/branch/main/MicroDexed-touch",
+        "notes": "Firmware source tree scraped from Codeberg."
+      },
+      "build_instructions": {
+        "present": true,
+        "url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+        "notes": "Repository links build instructions and PlatformIO files."
+      },
+      "release_artifacts": {
+        "present": true,
+        "url": "https://codeberg.org/dcoredump/MicroDexed-touch/src/branch/main/release",
+        "notes": "Release folder exists in the repository tree."
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [
+        "PCM5102 audio board/module"
+      ],
+      "input_types": [
+        "USB MIDI",
+        "TRS/DIN MIDI via adapter"
+      ],
+      "output_types": [
+        "stereo audio DAC output"
+      ],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": [
+        "I2S to PCM5102",
+        "USB MIDI"
+      ]
+    },
+    "midi_cv_io": {
+      "midi": [
+        "USB MIDI",
+        "mini-jack/DIN MIDI adapter"
+      ],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [
+        "Teensy 4.1 plus display/touch/storage/audio modules; power details deferred to manual."
+      ],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": [
+        "Uses PCM5102 module rather than a deeply documented custom analog front end."
+      ]
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "320x240 ILI9341 touch display",
+      "preset_or_menu_model": "TFT touch UI, sequencer, voice/sample management"
+    },
+    "license": "Mixed: Apache-2.0 and GPL-3.0 license files in repository.",
+    "availability_status": "Firmware public; PCB available through PCBWay/shared-board path; ProtoSupplies sells a prepared Teensy option.",
+    "last_activity_or_date": "PCBWay current-page file update record includes 2025-01-13; scraped 2026-06-11.",
+    "scores": {
+      "utility": 9,
+      "novelty": 8,
+      "adaptability": 8,
+      "hardware_completeness": 7,
+      "build_credibility": 8,
+      "audio_electronics_value": 6,
+      "teensy4_relevance": 10,
+      "standalone_confidence": 9,
+      "hardware_boost": 0.2,
+      "overall": 84.0
+    },
+    "decision_reason": "Best functional standalone synth/groovebox fit: Teensy 4.1, custom PCB route, firmware source, build/BOM evidence, and real device photos.",
+    "caveats": [
+      "Raw PCB source/Gerbers were not independently downloaded; PCBWay path may be manufacturing-only.",
+      "Audio electronics value is moderate because it relies on a PCM5102 module."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+        "quote_or_paraphrase": "Repository states the build requires Teensy 4.1, PCM5102 audio board, touch display, and storage hardware.",
+        "supports": "Teensy 4.1 target and complete device bill of materials."
+      },
+      {
+        "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+        "quote_or_paraphrase": "PCBWay describes a DIY groovebox/synth/sequencer based on Teensy 4.1 in a small enclosure.",
+        "supports": "Standalone custom-board device evidence."
+      }
+    ]
+  },
+  {
+    "id": "teensy41-programmable-guitar-pedal",
+    "name": "Teensy 4.1 Programmable Guitar Pedal",
+    "primary_url": "https://hackaday.io/project/203208-teensy-41-programmable-guitar-pedal",
+    "secondary_urls": [
+      "https://cdn.hackaday.io/files/2032088694051072/any_pedal_design_files.zip"
+    ],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "pedal_dsp",
+    "standalone_confidence": 0.5,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.75,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.75,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "notes": "",
+        "format": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "Verified lead; not promoted for category 1.a.",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Strong hardware evidence: Hackaday page plus downloaded zip containing .kicad_pcb, .kicad_sch, Gerbers, footprints, and Teensy 4.1 footprint. Held because no explicit license or firmware source was verified.",
+    "caveats": [
+      "Strong hardware evidence: Hackaday page plus downloaded zip containing .kicad_pcb, .kicad_sch, Gerbers, footprints, and Teensy 4.1 footprint. Held because no explicit license or firmware source was verified."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/203208-teensy-41-programmable-guitar-pedal",
+        "quote_or_paraphrase": "Strong hardware evidence: Hackaday page plus downloaded zip containing .kicad_pcb, .kicad_sch, Gerbers, footprints, and Teensy 4.1 footprint. Held because no explicit license or firmware source was verified.",
+        "supports": "Hold decision."
+      }
+    ]
+  },
+  {
+    "id": "tdsp-teensy41-modular-audio-platform",
+    "name": "T-DSP open modular audio platform for Teensy 4.1",
+    "primary_url": "https://forum.pjrc.com/index.php?threads/t-dsp-open-source-modular-audio-platform-for-teensy-4-1-diy-audio-interface-digital-mixer-synthesizer.77722/",
+    "secondary_urls": [
+      "https://github.com/t-dsp"
+    ],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "audio_io",
+    "standalone_confidence": 0.5,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.75,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.75,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "notes": "",
+        "format": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "Verified lead; not promoted for category 1.a.",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Open KiCad Teensy 4.1 platform with audio interface/mixer/synth ambitions, but it is broad modular/multi-tool infrastructure and belongs in 1.b, not 1.a.",
+    "caveats": [
+      "Open KiCad Teensy 4.1 platform with audio interface/mixer/synth ambitions, but it is broad modular/multi-tool infrastructure and belongs in 1.b, not 1.a."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.pjrc.com/index.php?threads/t-dsp-open-source-modular-audio-platform-for-teensy-4-1-diy-audio-interface-digital-mixer-synthesizer.77722/",
+        "quote_or_paraphrase": "Open KiCad Teensy 4.1 platform with audio interface/mixer/synth ambitions, but it is broad modular/multi-tool infrastructure and belongs in 1.b, not 1.a.",
+        "supports": "Hold decision."
+      }
+    ]
+  },
+  {
+    "id": "teensy40-audio-toolkit-shield",
+    "name": "Teensy 4.0 Audio Toolkit and Shield",
+    "primary_url": "https://forum.pjrc.com/index.php?threads/teensy-4-0-audio-toolkit-and-shield-an-open-source-audio-io-project-in-kicad.60411/",
+    "secondary_urls": [
+      "https://github.com/JayShoe/TEENSY_4.0_AUDIO_TOOLKIT"
+    ],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "audio_io",
+    "standalone_confidence": 0.5,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.75,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.75,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "notes": "",
+        "format": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "Verified lead; not promoted for category 1.a.",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Open KiCad audio-I/O learning/prototyping shield, but not standalone: IO is primarily exposed as headers and it is a toolkit for daughterboards/custom panels.",
+    "caveats": [
+      "Open KiCad audio-I/O learning/prototyping shield, but not standalone: IO is primarily exposed as headers and it is a toolkit for daughterboards/custom panels."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.pjrc.com/index.php?threads/teensy-4-0-audio-toolkit-and-shield-an-open-source-audio-io-project-in-kicad.60411/",
+        "quote_or_paraphrase": "Open KiCad audio-I/O learning/prototyping shield, but not standalone: IO is primarily exposed as headers and it is a toolkit for daughterboards/custom panels.",
+        "supports": "Hold decision."
+      }
+    ]
+  },
+  {
+    "id": "teensymidiaudio",
+    "name": "TeensyMIDIAudio",
+    "primary_url": "https://codeberg.org/dcoredump/TeensyMIDIAudio",
+    "secondary_urls": [
+      "https://www.pcbway.com/project/shareproject/W159675ASQ2_TeensyMIDIAudio.html"
+    ],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "midi_interface",
+    "standalone_confidence": 0.5,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.75,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.75,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "notes": "",
+        "format": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "Verified lead; not promoted for category 1.a.",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Useful historical MicroDexed-related PCB, but search evidence points to a 2018 PT8211-era board and no verified Teensy 4.x revision in this run.",
+    "caveats": [
+      "Useful historical MicroDexed-related PCB, but search evidence points to a 2018 PT8211-era board and no verified Teensy 4.x revision in this run."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://codeberg.org/dcoredump/TeensyMIDIAudio",
+        "quote_or_paraphrase": "Useful historical MicroDexed-related PCB, but search evidence points to a 2018 PT8211-era board and no verified Teensy 4.x revision in this run.",
+        "supports": "Hold decision."
+      }
+    ]
+  },
+  {
+    "id": "jenschr-teensy41-example",
+    "name": "jenschr Teensy 4.1 KiCad example",
+    "primary_url": "https://github.com/jenschr/Teensy-4.1-example",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.5,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.75,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.75,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "notes": "",
+        "format": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "Verified lead; not promoted for category 1.a.",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Excellent custom Teensy 4.1 KiCad reference board, MIT licensed, but not an audio/MIDI/CV functional device.",
+    "caveats": [
+      "Excellent custom Teensy 4.1 KiCad reference board, MIT licensed, but not an audio/MIDI/CV functional device."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/jenschr/Teensy-4.1-example",
+        "quote_or_paraphrase": "Excellent custom Teensy 4.1 KiCad reference board, MIT licensed, but not an audio/MIDI/CV functional device.",
+        "supports": "Hold decision."
+      }
+    ]
+  },
+  {
+    "id": "question-about-powering-teensy-4-1-and-audio-shield-rev-d-in-pcb",
+    "name": "Question about powering Teensy 4.1 and Audio shield Rev D in PCB",
+    "primary_url": "https://forum.pjrc.com/index.php",
+    "secondary_urls": [],
+    "source_lane": "PJRC forum",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Official PJRC/SparkFun Audio Shield or generic official shield noise; hard exclusion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.pjrc.com/index.php?threads/question-about-powering-teensy-4-1-and-audio-shield-rev-d-in-pcb.76276/",
+        "quote_or_paraphrase": "Question about powering Teensy 4.1 and Audio shield Rev D in PCB ... Please read the bottom of Audio Adaptor pcb: Audio Adaptor The ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-boards-for-the-uninitiated-the-contextual-electronics-forums",
+    "name": "Teensy boards, for the uninitiated - The Contextual Electronics Forums",
+    "primary_url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+        "quote_or_paraphrase": "I used a Teensy 4.1 to convert my old Firewire audio interface to USB. I had to modify the teensy libraries to support 48k 24bit audio, but ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "manufacture-teensy-4-1-papilio-pro-and-arduino-due",
+    "name": "Manufacture teensy 4.1, papilio pro and arduino due",
+    "primary_url": "https://forum.kicad.info/t/manufacture-teensy-4-1-papilio-pro-and-arduino-due/40696",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.kicad.info/t/manufacture-teensy-4-1-papilio-pro-and-arduino-due/40696",
+        "quote_or_paraphrase": "I'm using kicad 6 and the easyeda sometimes. I'm want to manufacture and assemble an pcb with an teensy 4.1, an papilio pro and arduino due.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "newdigate-teensy-eurorack",
+    "name": "teensy-eurorack/README.md at master - GitHub",
+    "primary_url": "https://github.com/newdigate/teensy-eurorack/blob/master/README.md",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "newdigate",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "anti_repeat_blocked",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Anti-repeat and Eurorack-only block.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/newdigate/teensy-eurorack/blob/master/README.md",
+        "quote_or_paraphrase": "download kicad and freecad, clone this repo, make improvements ... youtube videos. Nic N · youtube: Assembling custom eurorack audio shield for teensy 4.1 ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "hi-i-lost-my-teensy-4-1-cad-files-anyone-as-a-link-for-the-facebook",
+    "name": "Hi, i lost my teensy 4.1 cad files, anyone as a link for the ... - Facebook",
+    "primary_url": "https://www.facebook.com/groups/1470129233297275/posts/4085114565132049",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "official_teensy_audio_shield",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1470129233297275/posts/4085114565132049/",
+        "quote_or_paraphrase": "... kiCad only. 27w. Other posts ... Hello, did anyone already tied the audio Board rev d and a TFT 320x240 touchDisplay to the teensy 4.1.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "newdigate-teensy-eurorack",
+    "name": "Eurorack shield for teensy 4.1 with 14 in / 16 out analog ... - GitHub",
+    "primary_url": "https://github.com/newdigate/teensy-eurorack",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "newdigate",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "anti_repeat_blocked",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Anti-repeat and Eurorack-only block.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/newdigate/teensy-eurorack",
+        "quote_or_paraphrase": "socket to connect teensy 4.0 board; cs42448 audio codec ... audio design microcontroller teensy hardware analog panel pcb synthesizer synth diy maker kicad ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-arcade-synth-pjrc",
+    "name": "Teensy Arcade Synth - PJRC",
+    "primary_url": "https://www.pjrc.com/2026/03",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.pjrc.com/2026/03/",
+        "quote_or_paraphrase": "A GitHub repo provides KiCad files and firmware for the sensor/controller set. Some optional register-level enhancements take advantage of the Teensy 4.0's ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "experimentando-con-teensy-4-0-y-oled-de-2-4-tiktok",
+    "name": "Experimentando con Teensy 4.0 y OLED de 2.4\" | TikTok",
+    "primary_url": "https://www.tiktok.com/@phazerville/video/7435817092147989790",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.tiktok.com/@phazerville/video/7435817092147989790",
+        "quote_or_paraphrase": "... synth DIY para adolescentes, experimentos con Teensy en audio ... kicad e eagle pra completar esse projeto! Qualquer duvida manda ai ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "paulstoffregen-o-c-t41",
+    "name": "O_C T4.1 - Ornament and Crime with Teensy 4.1 - GitHub",
+    "primary_url": "https://github.com/PaulStoffregen/O_C_T41",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "PaulStoffregen",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Eurorack Ornament-and-Crime family item; not standalone 1.a and similar Teensy/O_C material already appears in anti-repeat history.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/PaulStoffregen/O_C_T41",
+        "quote_or_paraphrase": "Gerber files o_c_3_analog_new_jlc.zip and o_c_3_cpu_new_jlc.zip have been ... Main input power for Teensy 4.1, the 1.3 inch display, and MIDI: This is ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "ornament-and-crime-hardware-overview-with-phazerville-on-teensy",
+    "name": "Ornament and Crime hardware overview with Phazerville on Teensy ...",
+    "primary_url": "https://www.facebook.com/groups/1040800816762898/posts/2052497625593207",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Eurorack Ornament-and-Crime family item; not standalone 1.a and similar Teensy/O_C material already appears in anti-repeat history.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1040800816762898/posts/2052497625593207/",
+        "quote_or_paraphrase": "like the gerber files for the pcb, and the panel will be a +1. ... Teensy 4.1 MIDI hardware sequencer development. Joe King ▻ Teensy ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-4-1-expansion-board-with-dc-dc-converter-electronics-lab",
+    "name": "Teensy 4.1 Expansion Board with DC-DC Converter - Electronics-Lab",
+    "primary_url": "https://www.electronics-lab.com/project/teensy-4-1-expansion-board-with-dc-dc-converter",
+    "secondary_urls": [],
+    "source_lane": "GitHub / GitLab / Codeberg",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.electronics-lab.com/project/teensy-4-1-expansion-board-with-dc-dc-converter/",
+        "quote_or_paraphrase": "Gerber View. ... MIDI musical instruments. A 5 pin header and a USB Host cable are needed to be able to plug in a. USB device. You can also ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "arduino-teensy-based-sbc-details-hackaday-io",
+    "name": "Arduino/Teensy based SBC | Details - Hackaday.io",
+    "primary_url": "https://hackaday.io/project/21201-arduino-desktop/log/229778-arduinoteensy-based-sbc",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/21201-arduino-desktop/log/229778-arduinoteensy-based-sbc",
+        "quote_or_paraphrase": "The Teensy 4.1 on its own provides Ethernet, a blazing fast processor, SDIO, I2S audio, a USB host, and 8 UARTs. ... PCB lines up so well ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "opl2-audio-board-for-arduino-raspberry-pi-hackaday-io",
+    "name": "OPL2 Audio Board for Arduino & Raspberry Pi - Hackaday.io",
+    "primary_url": "https://hackaday.io/project/18995-opl2-audio-board-for-arduino-raspberry-pi",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/18995-opl2-audio-board-for-arduino-raspberry-pi",
+        "quote_or_paraphrase": "I drew the schematic and PCB layout in Fritzing and sent it to them to have my PCB produced. ... Teensy 4.1 Programmable Guitar Pedal · dylan ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "prang-hackaday-io",
+    "name": "Prang | Hackaday.io",
+    "primary_url": "https://hackaday.io/project/187010-prang",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "pure_firmware_hint",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/187010-prang",
+        "quote_or_paraphrase": "I'm working on the PCB design for Teensy 4.1 rendition and will be publishing that once it is finished. ... audio/MIDI library htcw_sfx.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "project-teensymoog-hackaday-io",
+    "name": "Project | Teensymoog | Hackaday.io",
+    "primary_url": "https://hackaday.io/project/170474/logs",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/170474/logs",
+        "quote_or_paraphrase": "A re-creation of the minimoog using Teensy 4.0 ... But is was yet too high, so the brackets were cut, and the pcb finally mounted on a wooden support on the synth ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "project-polymod-modular-digital-synthesizer-hackaday-io",
+    "name": "Project | PolyMod: modular digital synthesizer | Hackaday.io",
+    "primary_url": "https://hackaday.io/project/160626/logs",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "eurorack_only",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/160626/logs",
+        "quote_or_paraphrase": "... Teensy 4.0 or a different processor in the future; It would be nice if the ... PCB layouts, I realised I wanted to push my synth to that level. I'm now ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "project-polymod-2-modular-digital-synthesizer-hackaday-io",
+    "name": "Project | PolyMod 2: modular digital synthesizer - Hackaday.io",
+    "primary_url": "https://hackaday.io/project/162812/logs",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "eurorack_only",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/162812/logs",
+        "quote_or_paraphrase": "The current plan is for the synth to use something like a Teensy LC to handle all the multiplexing etc, while a Teensy 4.0 handles the synthesis. ... with PCB ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "polymod-modular-digital-synthesizer-hackaday-io",
+    "name": "PolyMod: modular digital synthesizer - Hackaday.io",
+    "primary_url": "https://hackaday.io/project/160626-polymod-modular-digital-synthesizer",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "eurorack_only",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/160626-polymod-modular-digital-synthesizer",
+        "quote_or_paraphrase": "... Teensy 4.0 or a different processor in the future ... I've got a bunch of other commitments but I'm aiming to get a PCB version of my synth ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "polymod-2-modular-digital-synthesizer-hackaday-io",
+    "name": "PolyMod 2: modular digital synthesizer - Hackaday.io",
+    "primary_url": "https://hackaday.io/project/162812-polymod-2-modular-digital-synthesizer",
+    "secondary_urls": [],
+    "source_lane": "maker/project sites",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.0,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "eurorack_only",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/162812-polymod-2-modular-digital-synthesizer",
+        "quote_or_paraphrase": "Adjustable polyphony, perhaps up to 8 notes; MIDI input; CV in/out for interfacing with Eurorack modules; Stereo audio in/out; OLED display and ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "can-you-use-a-teensy-4-0-for-an-ornament-and-crime-mod",
+    "name": "Can you use a Teensy 4.0 for an Ornament and Crime? - MOD ...",
+    "primary_url": "https://modwiggler.com/forum/viewtopic.php",
+    "secondary_urls": [],
+    "source_lane": "synth/audio communities",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Eurorack Ornament-and-Crime family item; not standalone 1.a and similar Teensy/O_C material already appears in anti-repeat history.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://modwiggler.com/forum/viewtopic.php?t=247723",
+        "quote_or_paraphrase": "Probably would also need to rework the PCB to get the pins to work too. ... I seem to remember the talk around the time that Teensy 4 came out was ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-gnd-and-agnd-mod-wiggler",
+    "name": "Teensy GND and AGND - MOD WIGGLER",
+    "primary_url": "https://www.modwiggler.com/forum/viewtopic.php",
+    "secondary_urls": [],
+    "source_lane": "synth/audio communities",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.modwiggler.com/forum/viewtopic.php?t=223928",
+        "quote_or_paraphrase": "Thanks in advance! here is the teensy 4 schematic: Image. Top ... You will also want to use good analog/digital PCB techniques. Longer ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "thread-about-ornament-and-crime-teensy-4-x-page-4-mod",
+    "name": "Thread about Ornament and Crime Teensy 4.x - Page 4 - MOD ...",
+    "primary_url": "https://modwiggler.com/forum/viewtopic.php?p=4263480",
+    "secondary_urls": [],
+    "source_lane": "synth/audio communities",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Eurorack Ornament-and-Crime family item; not standalone 1.a and similar Teensy/O_C material already appears in anti-repeat history.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://modwiggler.com/forum/viewtopic.php?p=4263480",
+        "quote_or_paraphrase": "Thread about Ornament and Crime Teensy 4.x ... Re: Thread about Ornament and Crime Teensy 4.x ... PCB + Panel set for DIY builds of the thing? Lots ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "kosmo-teensy-module-look-mum-no-computer-thingies",
+    "name": "Kosmo Teensy Module - Look Mum No Computer Thingies",
+    "primary_url": "https://lookmumnocomputer.discourse.group/t/kosmo-teensy-module/2796",
+    "secondary_urls": [],
+    "source_lane": "synth/audio communities",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "generic_breakout",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://lookmumnocomputer.discourse.group/t/kosmo-teensy-module/2796",
+        "quote_or_paraphrase": "I too have a Teensy 4.x and the audio board but haven't ... I also decided that I will go with PCB because the module is quite complex.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "prototyping-a-midi-to-cv-module-with-more-functionality-than-existing",
+    "name": "Prototyping a Midi to CV module with more functionality than existing ...",
+    "primary_url": "https://lookmumnocomputer.discourse.group/t/prototyping-a-midi-to-cv-module-with-more-functionality-than-existing-offerings/3797",
+    "secondary_urls": [],
+    "source_lane": "synth/audio communities",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "generic_breakout",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://lookmumnocomputer.discourse.group/t/prototyping-a-midi-to-cv-module-with-more-functionality-than-existing-offerings/3797?page=3",
+        "quote_or_paraphrase": "I'm wondering if anyone else has encountered this issue on the teensy 4 platform. ... pull the midi input circuit off my pcb and rebuild it off ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "tympan-tympan-library",
+    "name": "Using the AIC CODEC Shield as Main sound processor · Issue #67 ...",
+    "primary_url": "https://github.com/Tympan/Tympan_Library/issues/67",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "Tympan",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/Tympan/Tympan_Library/issues/67",
+        "quote_or_paraphrase": "... Teensy 4.1 board, with no luck. The connections I ... Teensy 4.1 board, with no luck. ... I will make a branch of the Tympan Rev E hardware git to modify the board ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "updated-cs42448-pcb-for-teensy-4-x-details-hackaday-io",
+    "name": "Updated CS42448 PCB for Teensy 4.x | Details - Hackaday.io",
+    "primary_url": "https://hackaday.io/project/2984-teensy-audio-library/log/187557-updated-cs42448-pcb-for-teensy-4x",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "pure_firmware_hint",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://hackaday.io/project/2984-teensy-audio-library/log/187557-updated-cs42448-pcb-for-teensy-4x",
+        "quote_or_paraphrase": "works fine with Teensy 4.1 if you just plug in the same 28 pins ... I put my KiCad schematic files on github, as well as a PDF version ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "hello-a-teensy-4-1-groovebox-on-the-way-i-m-looking-for-advices",
+    "name": "Hello. A teensy 4.1 groovebox on the way. I m looking for advices ...",
+    "primary_url": "https://www.facebook.com/MidiBen39/videos/helloa-teensy-41-groovebox-on-the-wayi-m-looking-for-advices-about-a-dac-to-have/2019255591966499",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/MidiBen39/videos/helloa-teensy-41-groovebox-on-the-wayi-m-looking-for-advices-about-a-dac-to-have/2019255591966499/",
+        "quote_or_paraphrase": "A teensy 4.1 groovebox on the way. I m looking for ... I started an kicad project based on this board. ... php?threads/cs42448-board-6-audio- inputs-8 ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "blog-copperhill-technologies",
+    "name": "Blog - Copperhill Technologies",
+    "primary_url": "https://copperhilltech.com/blog/tag/Teensy+4.1+CAN+FD",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "official_teensy_audio_shield",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://copperhilltech.com/blog/tag/Teensy+4.1+CAN+FD?fullSite=1",
+        "quote_or_paraphrase": "... Teensy 4.1 uses the same 600 MHz i.MX RT1062 chip ... Both 4.0 and 4.1 support the PJRC audio shield and multichannel audio library features. ... PCB. These ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "how-to-design-input-conditioning-circuitry-for-teensy-4-1-facebook",
+    "name": "How to design input conditioning circuitry for Teensy 4.1 ... - Facebook",
+    "primary_url": "https://www.facebook.com/groups/1470129233297275/posts/3625943011049209",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1470129233297275/posts/3625943011049209/",
+        "quote_or_paraphrase": "As I already built two guitar pedal prototypes with a WM8731, I ... KiCad symbol or anywhere else I've been able to find..... I want to ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "gadget-reboot-creating-electronics-hobby-videos-patreon",
+    "name": "Gadget Reboot — creating electronics hobby videos | Patreon",
+    "primary_url": "https://www.patreon.com/gadgetreboot/sitemap",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.patreon.com/gadgetreboot/sitemap",
+        "quote_or_paraphrase": "Mailbag! Feb 20. PT2399 Lo-Fi Echo. Feb 16. MXR Distortion + Guitar Pedal Breadboarding ... Teensy 4.1 + Piezo Elements = Drums! Jan 26. Most ... KiCAD Fast Design ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "wow-teensy-4-1-page-3-all-about-circuits",
+    "name": "Wow. Teensy 4.1 | Page 3 | All About Circuits",
+    "primary_url": "https://forum.allaboutcircuits.com/threads/teensy-4-1-wow-teensy-4-1.177495/page-3",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.allaboutcircuits.com/threads/teensy-4-1-wow-teensy-4-1.177495/page-3",
+        "quote_or_paraphrase": "Teensy 4.1: Wow. Teensy 4.1. Thread starter Ya'akov; Start date ... Would appreciate a check of my Teensy 4.0 & Audio Board RevD Schematic.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "hello-a-teensy-4-1-groovebox-on-the-way-i-m-looking-for-advices",
+    "name": "Hello. A teensy 4.1 groovebox on the way. I m looking for advices ...",
+    "primary_url": "https://www.facebook.com/groups/1470129233297275/posts/4186402668336571",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1470129233297275/posts/4186402668336571/",
+        "quote_or_paraphrase": "If I wish to wire the audio board to speakers instead of using head phones is that possible? ... I've checked the Jensen site for a schematic but ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-audio-projects-sound-processing-and-playback-youtube",
+    "name": "Teensy Audio Projects - Sound Processing and Playback - YouTube",
+    "primary_url": "https://www.youtube.com/playlist",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.0,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.youtube.com/playlist?list=PLDnEejiR3mBwSYLSxqluI-c01M04JyP2c",
+        "quote_or_paraphrase": "Teensy Audio Part 1: How to Use the GUI Design Tool - Play wav Files from SD Card. Gadget Reboot · 17:44. Teensy Audio Part 2: Chorus and Flange Audio Effects.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "the-teensy-audio-station-part-2-circuit-cellar",
+    "name": "The Teensy Audio Station (Part 2) - Circuit Cellar",
+    "primary_url": "https://circuitcellar.com/research-design-hub/basics-of-design/the-teensy-audio-station",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.0,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://circuitcellar.com/research-design-hub/basics-of-design/the-teensy-audio-station/",
+        "quote_or_paraphrase": "A project that encompassed a two-in, two-out digital audio interface, which included control surface functionality.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "hello-i-have-a-teensy-4-1-and-i-want-to-add-the-audio-shield-rev",
+    "name": "Hello.. I have a teensy 4.1 and I want to add the audio shield. Rev ...",
+    "primary_url": "https://www.facebook.com/groups/1470129233297275/posts/4138825879760917",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Official PJRC/SparkFun Audio Shield or generic official shield noise; hard exclusion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1470129233297275/posts/4138825879760917/",
+        "quote_or_paraphrase": "Hello.. I have a teensy 4.1 and I want to add the audio shield. Rev D2 has been retired, could I use Rev D instead? Thanks.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "paulstoffregen-audio",
+    "name": "PaulStoffregen/Audio: Teensy Audio Library - GitHub",
+    "primary_url": "https://github.com/PaulStoffregen/Audio",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "PaulStoffregen",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "anti_repeat_blocked",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.0,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "anti_repeat_blocked",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/PaulStoffregen/Audio",
+        "quote_or_paraphrase": "Use this graphical tool to design your audio project. Easily browse the library's many features, connect objects, export to Arduino code, and quickly access ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and",
+    "name": "Best Practice for Integrating Teensy 4.1 in KiCAD Schematic and ...",
+    "primary_url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+        "quote_or_paraphrase": "I see two potential methods to integrate the Teensy 4.1 into my schematic and PCB layout, but each has its own set of issues.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "getting-started-with-the-teensy-sparkfun-learn",
+    "name": "Getting Started with the Teensy - SparkFun Learn",
+    "primary_url": "https://learn.sparkfun.com/tutorials/getting-started-with-the-teensy/resources-and-going-further",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.0,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Official PJRC/SparkFun Audio Shield or generic official shield noise; hard exclusion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://learn.sparkfun.com/tutorials/getting-started-with-the-teensy/resources-and-going-further",
+        "quote_or_paraphrase": "Building a pedal around the Teensy 3.2 and Teensy Audio shield. Changing the effect in the pedal is as easy as uploading a new sketch! LuMini Ring Hookup ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-4-audio-shield-rev-d-for-sale-at-sparkfun",
+    "name": "Teensy 4 Audio Shield (Rev D) | For Sale at SparkFun",
+    "primary_url": "https://www.sparkfun.com/teensy-4-audio-shield-rev-d.html",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Official PJRC/SparkFun Audio Shield or generic official shield noise; hard exclusion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.sparkfun.com/teensy-4-audio-shield-rev-d.html",
+        "quote_or_paraphrase": "The Teensy 4 Audio Shield is a codec board for the Teensy 4.0 that provides 16-bit, 44.1kHz stereo audio input/output, a headphone amp, and a microSD card ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "orgs-micropython",
+    "name": "Simultaneous input and output Teensy 4.1 -> Audio Shield #9939",
+    "primary_url": "https://github.com/orgs/micropython/discussions/9939",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "orgs",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Official PJRC/SparkFun Audio Shield or generic official shield noise; hard exclusion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/orgs/micropython/discussions/9939",
+        "quote_or_paraphrase": "If the signals line up you will be able to simultaneously receive and transmit audio samples from the codec on the Teensy audio shield. However, ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "pjrc-special-categories-sparkfun-electronics",
+    "name": "PJRC - Special Categories - SparkFun Electronics",
+    "primary_url": "https://www.sparkfun.com/special-categories/pjrc.html",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Official PJRC/SparkFun Audio Shield or generic official shield noise; hard exclusion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.sparkfun.com/special-categories/pjrc.html",
+        "quote_or_paraphrase": "Teensy 4 Audio Shield (Rev D2). $14.95. Discontinued. Compare Add to Wish List. Teensy 4 Audio Shield (Rev D) featured image on a white background. Backorder ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "review-request-teensy-4-1-hall-effect-mini-keyboard-reddit",
+    "name": "Review Request: Teensy 4.1 Hall effect mini-keyboard - Reddit",
+    "primary_url": "https://www.reddit.com/r/PrintedCircuitBoard/comments/1ifec3p/review_request_teensy_41_hall_effect_minikeyboard",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.reddit.com/r/PrintedCircuitBoard/comments/1ifec3p/review_request_teensy_41_hall_effect_minikeyboard/",
+        "quote_or_paraphrase": "This is my first schematic/PCB. It's a keyboard with 3 Hall effect sensor keys, read via a multiplexer by a Teensy 4.1.",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "pcb-design-review-request-kicad-project-teensy-4-1-midi",
+    "name": "PCB Design Review Request – KiCad Project (Teensy 4.1 + MIDI ...",
+    "primary_url": "https://www.eevblog.com/forum/beginners/pcb-design-review-request-kicad-project-(teensy-4-1-midi-controller)",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.eevblog.com/forum/beginners/pcb-design-review-request-kicad-project-(teensy-4-1-midi-controller)/",
+        "quote_or_paraphrase": "I've designed a custom PCB in KiCad for a MIDI controller based on a Teensy 4.1. I'm on my 3rd iteration and before changing the design if ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-4-1-symbol-footprint-3d-model-by-pjrc-snapmagic",
+    "name": "Teensy 4.1 Symbol, Footprint & 3D Model by PJRC - SnapMagic",
+    "primary_url": "https://www.snapeda.com/parts/Teensy%204.1/PJRC/view-part",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.snapeda.com/parts/Teensy%204.1/PJRC/view-part/",
+        "quote_or_paraphrase": "Download schematic symbols, PCB footprints, 3D Models, pinout & datasheet for the Teensy 4.1 by PJRC. . Exports to OrCAD, Allegro, Altium, PADS, Eagle, KiCad,",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "tttapa-control-surface-motor-fader",
+    "name": "Midi Controller and Motor Fader Controller on Teensy 4.1 #16 - GitHub",
+    "primary_url": "https://github.com/tttapa/Control-Surface-Motor-Fader/issues/16",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "tttapa",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "rejected",
+    "lane": "REJECT",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "eurorack_only",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://github.com/tttapa/Control-Surface-Motor-Fader/issues/16",
+        "quote_or_paraphrase": "I was thinking of a modular system whereby the banks are 8 channels and upto 8 banks. As the Teensy 4.1 is 600 MHz. Do you think it is possible ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "handmade-midi-controller-with-teensy-4-1-and-4-0-facebook",
+    "name": "Handmade Midi Controller with Teensy 4.1 and 4.0 - Facebook",
+    "primary_url": "https://www.facebook.com/groups/1470129233297275/posts/3781582808818561",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1470129233297275/posts/3781582808818561/",
+        "quote_or_paraphrase": "Commenters praise the handmade MIDI controller, with some discussing the benefits of using multiple Teensys for simplicity and reduced latency, ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-4-midi-controller-experiment-google-groups",
+    "name": "Teensy 4 MIDI controller experiment - Google Groups",
+    "primary_url": "https://groups.google.com/g/hermes-lite/c/69sNmReKnnY",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.2,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://groups.google.com/g/hermes-lite/c/69sNmReKnnY",
+        "quote_or_paraphrase": "I have never used KiCAD before so today I created a PCB layout 5\" x 2.5\" for the Teensy keyer files Steve posted up. I put all 4 pots and the ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "teensy-4-1-usb-midi-issue-github-gist",
+    "name": "Teensy 4.1 USB MIDI issue - GitHub Gist",
+    "primary_url": "https://gist.github.com/cowboy/f764ca1c6ce163f62f06fd0140c932c6",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://gist.github.com/cowboy/f764ca1c6ce163f62f06fd0140c932c6",
+        "quote_or_paraphrase": "Solder a USB A female connector to a Teensy 4.1 USB HOST port; Connect a USB MIDI controller to that port (I'm using an Arturia Minilab Mk2); Connect the micro ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  },
+  {
+    "id": "expensive-notes-john-replace-the-internals-of-a-midi-foot",
+    "name": "Expensive Notes (John) replace the internals of a MIDI Foot ...",
+    "primary_url": "https://www.facebook.com/groups/1470129233297275/posts/3554517981525046",
+    "secondary_urls": [],
+    "source_lane": "targeted follow-up",
+    "author_or_org": "",
+    "category": "1.a standalone functional",
+    "candidate_type": "custom_teensy4_board",
+    "decision": "hold",
+    "lane": "HOLD",
+    "function_class": "other",
+    "standalone_confidence": 0.0,
+    "standalone_evidence": [],
+    "teensy_4x_confidence": 0.4,
+    "teensy_versions": [],
+    "custom_board_confidence": 0.0,
+    "custom_board_evidence": [],
+    "hardware_artifacts": {
+      "schematic": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pcb_source": {
+        "present": false,
+        "url": "",
+        "format": "",
+        "notes": ""
+      },
+      "gerbers": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "bom": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "panel_enclosure": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "assembly_photos": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "pin_map": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "firmware_artifacts": {
+      "source": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "build_instructions": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      },
+      "release_artifacts": {
+        "present": false,
+        "url": "",
+        "notes": ""
+      }
+    },
+    "audio_io": {
+      "codec_adc_dac": [],
+      "input_types": [],
+      "output_types": [],
+      "sample_rate_bit_depth_claims": [],
+      "i2s_tdm_spdif_usb": []
+    },
+    "midi_cv_io": {
+      "midi": [],
+      "cv_gate": [],
+      "protection_level_shifting": []
+    },
+    "electronics_notes": {
+      "opamps": [],
+      "power": [],
+      "grounding_noise": [],
+      "protection": [],
+      "analog_front_end": []
+    },
+    "ui_control": {
+      "pots": null,
+      "encoders": null,
+      "buttons": null,
+      "display": "",
+      "preset_or_menu_model": ""
+    },
+    "license": "",
+    "availability_status": "unverified search hit",
+    "last_activity_or_date": "",
+    "scores": {
+      "utility": 0,
+      "novelty": 0,
+      "adaptability": 0,
+      "hardware_completeness": 0,
+      "build_credibility": 0,
+      "audio_electronics_value": 0,
+      "teensy4_relevance": 0,
+      "standalone_confidence": 0,
+      "hardware_boost": 0.0,
+      "overall": 0.0
+    },
+    "decision_reason": "Search hit needs primary-source verification before promotion.",
+    "caveats": [
+      "Search result only; not promoted without primary-source evidence."
+    ],
+    "source_quotes": [
+      {
+        "url": "https://www.facebook.com/groups/1470129233297275/posts/3554517981525046/",
+        "quote_or_paraphrase": "The updated USB2CMI interface features a modern Teensy 4.1 controller, enabling advanced features and a more stable supply chain, which has also ...",
+        "supports": "Discovery lead only."
+      }
+    ]
+  }
+]

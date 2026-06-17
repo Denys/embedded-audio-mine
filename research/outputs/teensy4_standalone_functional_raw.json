@@ -1,0 +1,1901 @@
+{
+  "generated_at": "2026-06-11T22:03:38.774129+00:00",
+  "repo": "C:\\Users\\denko\\embedded-audio-mine",
+  "firecrawl_status": {
+    "ok": true,
+    "stdout": "\u001b[38;5;208m🔥 \u001b[1mfirecrawl\u001b[0m \u001b[2mcli\u001b[0m \u001b[2mv1.19.6\u001b[0m\n\n  \u001b[32m●\u001b[0m Authenticated \u001b[2mvia FIRECRAWL_API_KEY\u001b[0m\n  \u001b[2mConcurrency:\u001b[0m 0/5 jobs \u001b[2m(parallel scrape limit)\u001b[0m\n  \u001b[2mCredits:\u001b[0m 2,325 / 5,000 \u001b[2m(47% left this cycle)\u001b[0m\n  \u001b[2m.firecrawl:\u001b[0m not found \u001b[2m- no local cache\u001b[0m\n  \u001b[2m.gitignore:\u001b[0m missing \u001b[2m- add .firecrawl/ to ignore cache\u001b[0m",
+    "stderr": "",
+    "command": "npx.cmd -y firecrawl-cli@latest --status"
+  },
+  "anti_repeat": {
+    "hard_count": 186,
+    "soft_count": 12
+  },
+  "runs": [
+    {
+      "lane": "A",
+      "lane_name": "PJRC forum",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_A_01_site-forum-pjrc-com-teensy-4-1-pcb-audio.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/question-about-powering-teensy-4-1-and-audio-shield-rev-d-in-pcb.76276/",
+              "title": "Question about powering Teensy 4.1 and Audio shield Rev D in PCB",
+              "description": "Question about powering Teensy 4.1 and Audio shield Rev D in PCB ... Please read the bottom of Audio Adaptor pcb: Audio Adaptor The ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/working-pcb-with-teensy-4-1-and-audio-adaptor-rev-d.76421/",
+              "title": "Working pcb with Teensy 4.1 and Audio adaptor rev D.",
+              "description": "Working pcb with Teensy 4.1 and Audio adaptor rev D. Thread starter ... audio adaptor is on the left side of the teensy as to shorten ...",
+              "position": 2
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/audio-teensy-4-1-problem.61996/",
+              "title": "Audio + Teensy 4.1 problem",
+              "description": "Audio + Teensy 4.1 problem ... Because of space restraints I decided to try to solder the Audio shield components myself directly on the PCB I ...",
+              "position": 3
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/pcb-with-teensy-4-1-and-audio-board-mounted-seperately.67971/",
+              "title": "PCB with Teensy 4.1 and audio board mounted seperately",
+              "description": "I'm desiging a PCB where the Teensy 4.1 and the Audio Adapter board will be mounted next to each other (for footprint related reasons) instead ...",
+              "position": 4
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/moving-forward-with-4-1-for-usb-audio.69602/",
+              "title": "Moving forward with 4.1 For USB audio | Teensy Forum",
+              "description": "Try running this on your Teensy 4.1. Code: #include ... I await the new pcb and I2S device to test the audio input >process> usb output.",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb68a-db2a-76be-8e79-fbe3a464dba1",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "A",
+      "lane_name": "PJRC forum",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_A_02_site-forum-pjrc-com-teensy-4-0-pcb-audio.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/a-little-help-with-a-schematic-for-the-audio-shield-4-x-rev-d.74549/",
+              "title": "A little help with a schematic for the Audio Shield 4.x Rev. D?",
+              "description": "I am making a simple pcb for the Teensy Audio Shield 4.x Rev. D. I ... I noticed that on the Audio Shield diagram REV D (for Teensy 4.0) ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/teensy-amazon-products.77630/",
+              "title": "Teensy Amazon Products",
+              "description": "I bought a Teensy 4.0 and Audio Board Rev. D from Amazon and been having problems with my custom PCB audio circuit, whereas previously I did not ...",
+              "position": 2
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/teensy-4-0-audio-toolkit-and-shield-an-open-source-audio-io-project-in-kicad.60411/",
+              "title": "An Open Source Audio IO Project in Kicad | Teensy Forum",
+              "description": "Teensy 4.0 Audio Toolkit and Shield - An Open Source Audio IO Project in Kicad ... Teensy 4.0 Audio Toolkit Shield - PCB.pdf. Feedback This ...",
+              "position": 3
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/audio-output-options-for-teensy-4-0-without-using-the-official-audio-adaptor.62062/",
+              "title": "Audio output options for Teensy 4.0 *without* using the official audio ...",
+              "description": "Audio output options for Teensy 4.0 *without* using the official audio adaptor ... Audio-Board-Equivalent-for-Custom-PCB?p=244469. Cheers Paul.",
+              "position": 4
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/moving-forward-with-4-1-for-usb-audio.69602/",
+              "title": "Moving forward with 4.1 For USB audio | Teensy Forum",
+              "description": "Just a few days ago I improved the ADC support for Teensy 4.0 & 4.1 in the audio library. ... I await the new pcb and I2S device to test the audio ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb68a-eaa9-712c-914b-207f4115deba",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "A",
+      "lane_name": "PJRC forum",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_A_03_site-forum-pjrc-com-teensy-4-1-synth-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/pcb-for-synth.77803/",
+              "title": "PCB for synth. - Teensy Forum",
+              "description": "To do this, I'm looking for schematic and PCB layouts, for Kicad, of the Teensy 4.1, including the USB HOST, and ideally, layouts of the ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/which-version-of-teensy-for-a-diy-synthesizer.67130/",
+              "title": "Which version of Teensy for a DIY synthesizer?",
+              "description": "Teensy 4.1 (pcb & front panel): https://www.tindie.com/products/electrotechnique/tsynth-teensy-based-diy-programmable-poly-synth/ (note sold out) ...",
+              "position": 2
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/new-teensy-4-1-diy-synthesizer.63255/page-4",
+              "title": "New Teensy 4.1 DIY Synthesizer | Page 4",
+              "description": "Besides the fact that S/N ratio isnt not really an important parameter to a Synth ... PCB? Just asking.... Rolfdegen. Well-known member. Jan 15 ...",
+              "position": 3
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/new-universal-teensy-synth-board.68951/",
+              "title": "New Universal Teensy Synth Board",
+              "description": "I am working on an universal Teensy synth board. The Idea is a board with the Teensy 4.1, the Audio Shield, A MIDI interface, a display and some encoders to ...",
+              "position": 4
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?members/phm78.85416/",
+              "title": "Phm78 - Teensy Forum",
+              "description": "To do this, I'm looking for schematic and PCB layouts, for Kicad, of the Teensy 4.1, including the USB HOST, and... Apr 4, 2026. Show older items.",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb68b-02af-754a-a6a7-39473ecd03e7",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_B_01_teensy-4-1-kicad-audio.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/working-pcb-with-teensy-4-1-and-audio-adaptor-rev-d.76421/",
+              "title": "Working pcb with Teensy 4.1 and Audio adaptor rev D.",
+              "description": "Working pcb with Teensy 4.1 and Audio adaptor rev D. Thread starter ... I think i used kicad's 8.0 default track settings except for the the power ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+              "title": "Teensy boards, for the uninitiated - The Contextual Electronics Forums",
+              "description": "I used a Teensy 4.1 to convert my old Firewire audio interface to USB. I had to modify the teensy libraries to support 48k 24bit audio, but ...",
+              "position": 2
+            },
+            {
+              "url": "https://forum.kicad.info/t/manufacture-teensy-4-1-papilio-pro-and-arduino-due/40696",
+              "title": "Manufacture teensy 4.1, papilio pro and arduino due",
+              "description": "I'm using kicad 6 and the easyeda sometimes. I'm want to manufacture and assemble an pcb with an teensy 4.1, an papilio pro and arduino due.",
+              "position": 3
+            },
+            {
+              "url": "https://github.com/newdigate/teensy-eurorack/blob/master/README.md",
+              "title": "teensy-eurorack/README.md at master - GitHub",
+              "description": "download kicad and freecad, clone this repo, make improvements ... youtube videos. Nic N · youtube: Assembling custom eurorack audio shield for teensy 4.1 ...",
+              "position": 4,
+              "category": "github"
+            },
+            {
+              "url": "https://www.facebook.com/groups/1470129233297275/posts/4085114565132049/",
+              "title": "Hi, i lost my teensy 4.1 cad files, anyone as a link for the ... - Facebook",
+              "description": "... kiCad only. 27w. Other posts ... Hello, did anyone already tied the audio Board rev d and a TFT 320x240 touchDisplay to the teensy 4.1.",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb68b-16ca-776f-825c-0c68746e6e9f",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_B_02_teensy-4-0-kicad-synth.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://github.com/newdigate/teensy-eurorack",
+              "title": "Eurorack shield for teensy 4.1 with 14 in / 16 out analog ... - GitHub",
+              "description": "socket to connect teensy 4.0 board; cs42448 audio codec ... audio design microcontroller teensy hardware analog panel pcb synthesizer synth diy maker kicad ...",
+              "position": 1,
+              "category": "github"
+            },
+            {
+              "url": "https://www.pjrc.com/2026/03/",
+              "title": "Teensy Arcade Synth - PJRC",
+              "description": "A GitHub repo provides KiCad files and firmware for the sensor/controller set. Some optional register-level enhancements take advantage of the Teensy 4.0's ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.tiktok.com/@phazerville/video/7435817092147989790",
+              "title": "Experimentando con Teensy 4.0 y OLED de 2.4\" | TikTok",
+              "description": "... synth DIY para adolescentes, experimentos con Teensy en audio ... kicad e eagle pra completar esse projeto! Qualquer duvida manda ai ...",
+              "position": 3
+            }
+          ]
+        },
+        "id": "019eb68b-2bd9-7182-9f69-4de76242e287",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_B_03_teensy-4-1-gerber-midi.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://github.com/PaulStoffregen/O_C_T41",
+              "title": "O_C T4.1 - Ornament and Crime with Teensy 4.1 - GitHub",
+              "description": "Gerber files o_c_3_analog_new_jlc.zip and o_c_3_cpu_new_jlc.zip have been ... Main input power for Teensy 4.1, the 1.3 inch display, and MIDI: This is ...",
+              "position": 1,
+              "category": "github"
+            },
+            {
+              "url": "https://www.facebook.com/groups/1040800816762898/posts/2052497625593207/",
+              "title": "Ornament and Crime hardware overview with Phazerville on Teensy ...",
+              "description": "like the gerber files for the pcb, and the panel will be a +1. ... Teensy 4.1 MIDI hardware sequencer development. Joe King ▻ Teensy ...",
+              "position": 2
+            },
+            {
+              "url": "https://github.com/newdigate/teensy-eurorack",
+              "title": "Eurorack shield for teensy 4.1 with 14 in / 16 out analog ... - GitHub",
+              "description": "Use these gerber files to order 3 pcboards. the uSD-card extender ... use 3.5mm jack sockets (as well as standard midi din connectors) for midi in and out.",
+              "position": 3,
+              "category": "github"
+            },
+            {
+              "url": "https://www.electronics-lab.com/project/teensy-4-1-expansion-board-with-dc-dc-converter/",
+              "title": "Teensy 4.1 Expansion Board with DC-DC Converter - Electronics-Lab",
+              "description": "Gerber View. ... MIDI musical instruments. A 5 pin header and a USB Host cable are needed to be able to plug in a. USB device. You can also ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "019eb68b-4171-7025-a897-8ba4ea7b7025",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_C_01_site-hackaday-io-teensy-4-1-audio-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://hackaday.io/project/21201-arduino-desktop/log/229778-arduinoteensy-based-sbc",
+              "title": "Arduino/Teensy based SBC | Details - Hackaday.io",
+              "description": "The Teensy 4.1 on its own provides Ethernet, a blazing fast processor, SDIO, I2S audio, a USB host, and 8 UARTs. ... PCB lines up so well ...",
+              "position": 1
+            },
+            {
+              "url": "https://hackaday.io/project/18995-opl2-audio-board-for-arduino-raspberry-pi",
+              "title": "OPL2 Audio Board for Arduino & Raspberry Pi - Hackaday.io",
+              "description": "I drew the schematic and PCB layout in Fritzing and sent it to them to have my PCB produced. ... Teensy 4.1 Programmable Guitar Pedal · dylan ...",
+              "position": 2
+            },
+            {
+              "url": "https://hackaday.io/project/187010-prang",
+              "title": "Prang | Hackaday.io",
+              "description": "I'm working on the PCB design for Teensy 4.1 rendition and will be publishing that once it is finished. ... audio/MIDI library htcw_sfx.",
+              "position": 3
+            }
+          ]
+        },
+        "id": "019eb68b-50bc-73bf-b366-17aa412df1ee",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_C_02_site-hackaday-io-teensy-4-0-synth-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://hackaday.io/project/170474/logs",
+              "title": "Project | Teensymoog | Hackaday.io",
+              "description": "A re-creation of the minimoog using Teensy 4.0 ... But is was yet too high, so the brackets were cut, and the pcb finally mounted on a wooden support on the synth ...",
+              "position": 1
+            },
+            {
+              "url": "https://hackaday.io/project/160626/logs",
+              "title": "Project | PolyMod: modular digital synthesizer | Hackaday.io",
+              "description": "... Teensy 4.0 or a different processor in the future; It would be nice if the ... PCB layouts, I realised I wanted to push my synth to that level. I'm now ...",
+              "position": 2
+            },
+            {
+              "url": "https://hackaday.io/project/162812/logs",
+              "title": "Project | PolyMod 2: modular digital synthesizer - Hackaday.io",
+              "description": "The current plan is for the synth to use something like a Teensy LC to handle all the multiplexing etc, while a Teensy 4.0 handles the synthesis. ... with PCB ...",
+              "position": 3
+            },
+            {
+              "url": "https://hackaday.io/project/160626-polymod-modular-digital-synthesizer",
+              "title": "PolyMod: modular digital synthesizer - Hackaday.io",
+              "description": "... Teensy 4.0 or a different processor in the future ... I've got a bunch of other commitments but I'm aiming to get a PCB version of my synth ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "019eb68b-5d29-736b-819a-63a0248b9774",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_C_03_site-hackaday-io-teensy-4-midi-cv.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://hackaday.io/project/162812-polymod-2-modular-digital-synthesizer",
+              "title": "PolyMod 2: modular digital synthesizer - Hackaday.io",
+              "description": "Adjustable polyphony, perhaps up to 8 notes; MIDI input; CV in/out for interfacing with Eurorack modules; Stereo audio in/out; OLED display and ...",
+              "position": 1
+            },
+            {
+              "url": "https://hackaday.io/project/162812/logs",
+              "title": "Project | PolyMod 2: modular digital synthesizer - Hackaday.io",
+              "description": "... MIDI input, audio outputs, (probably) audio inputs and (probably) some Eurorack CV inputs and outputs ... Teensy 4 should slot right in when the time comes.",
+              "position": 2
+            }
+          ]
+        },
+        "id": "019eb68b-68b3-707b-827e-7bf52fe8838f",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_D_01_site-modwiggler-com-teensy-4-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://modwiggler.com/forum/viewtopic.php?t=247723",
+              "title": "Can you use a Teensy 4.0 for an Ornament and Crime? - MOD ...",
+              "description": "Probably would also need to rework the PCB to get the pins to work too. ... I seem to remember the talk around the time that Teensy 4 came out was ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.modwiggler.com/forum/viewtopic.php?t=223928",
+              "title": "Teensy GND and AGND - MOD WIGGLER",
+              "description": "Thanks in advance! here is the teensy 4 schematic: Image. Top ... You will also want to use good analog/digital PCB techniques. Longer ...",
+              "position": 2
+            },
+            {
+              "url": "https://modwiggler.com/forum/viewtopic.php?p=4263480",
+              "title": "Thread about Ornament and Crime Teensy 4.x - Page 4 - MOD ...",
+              "description": "Thread about Ornament and Crime Teensy 4.x ... Re: Thread about Ornament and Crime Teensy 4.x ... PCB + Panel set for DIY builds of the thing? Lots ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.modwiggler.com/forum/viewtopic.php?t=281669",
+              "title": "intermittent power issues? - MOD WIGGLER",
+              "description": "... teensy 4 as well (we saw the same thing with T3.6 on DOT and other devices) ... Take a pic of the PCB, we provisioned the pogo a MIC803 a long time ago ...",
+              "position": 4
+            },
+            {
+              "url": "https://www.modwiggler.com/forum/viewtopic.php?t=277847&start=75",
+              "title": "Ksoloti Core - Page 3 - MOD WIGGLER",
+              "description": "I have uploaded a Ksoloti Core PCB mockup via Altium365 here. This is ... \"I would like to connect a teensy 4 (in usb-midi mode) to an axoloti. The ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb68b-75b9-7591-839c-ae645255ae6f",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_D_02_site-modwiggler-com-teensy-4-1-midi.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://modwiggler.com/forum/viewtopic.php?t=274083",
+              "title": "Teensy 4.1 midi controller (need help) for juno 66 - MOD WIGGLER",
+              "description": "Hey everyone. I am hoping to build a very simple midi controller using teensy 4.1. Specifically I want to build it to use with my juno 66 to access the ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.modwiggler.com/forum/viewtopic.php?t=289305",
+              "title": "a carrier board for Raspberry Pi Pico 2 or teensy 4.1 - MOD WIGGLER",
+              "description": "... teensy 4.1 - as a main board for midi keyboard .. it's easy to drag and drop patterns but when it comes to tracing i got lost and stuck. You ...",
+              "position": 2
+            },
+            {
+              "url": "https://modwiggler.com/forum/viewtopic.php?t=242034&start=100",
+              "title": "Tracker Talk - Page 4 - MOD WIGGLER",
+              "description": "I say bring on all the trackers, whether it be MIDI only or MIDI and audio! ... you'd need to install on Teensy 4.1, and run it through PC. yeah, that's the ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.modwiggler.com/forum/viewtopic.php?t=236799",
+              "title": "What programming platform to build a sequencer? - MOD WIGGLER",
+              "description": "So the Teensy 4.1 is amazingly capable and very well supported. And fast. I ... midi in/out, can even be a midi/usb-host. Easy to add buttons, LEDs ...",
+              "position": 4
+            },
+            {
+              "url": "https://modwiggler.com/forum/viewtopic.php?t=272790",
+              "title": "Piccolo MIDI sequencer : open software & hardware - MOD WIGGLER",
+              "description": "the current version is based on the Teensy 4.1 architecture and MIDI protocol. The previous versions were relying on Teensy 3.5 and earlier ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb68b-8206-77fe-8dc6-ebdb5790ba5d",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_D_03_site-lookmumnocomputer-discourse-group-teensy-4-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://lookmumnocomputer.discourse.group/t/kosmo-teensy-module/2796",
+              "title": "Kosmo Teensy Module - Look Mum No Computer Thingies",
+              "description": "I too have a Teensy 4.x and the audio board but haven't ... I also decided that I will go with PCB because the module is quite complex.",
+              "position": 1
+            },
+            {
+              "url": "https://lookmumnocomputer.discourse.group/t/prototyping-a-midi-to-cv-module-with-more-functionality-than-existing-offerings/3797?page=3",
+              "title": "Prototyping a Midi to CV module with more functionality than existing ...",
+              "description": "I'm wondering if anyone else has encountered this issue on the teensy 4 platform. ... pull the midi input circuit off my pcb and rebuild it off ...",
+              "position": 2
+            }
+          ]
+        },
+        "id": "019eb68b-8d45-720c-b5f1-2234bf534c31",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_01_microdexed-touch-teensy-4-1-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://protosupplies.com/product/teensy-41-microdexed/",
+              "title": "Teensy 4.1 For MicroDexed - ProtoSupplies",
+              "description": "Teensy 4.1 for MicroDexed is for use with the popular MicroDexed-Touch DIY ... PCB sandwich (Developers Edition) or a 3D printed enclosure. The project ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.elecrow.com/pcb-microdexed-touch.html?srsltid=AfmBOoo-8KB3Hyb0NNtraTnaU-rfFa31j-A834-K6dxtrhLH77PlJzKx",
+              "title": "[MDT] Microdexed Touch PCB (old PCB version) - Elecrow",
+              "description": "MicroDexed with TFT Touch Display, graphic UI and sequencer (old PCB version). Microdexed-touch required a Teensy 4.1, PCM5102 Audio Board, 320x240 ILI9341 ...",
+              "position": 2
+            },
+            {
+              "url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+              "title": "dcoredump/MicroDexed-touch - Codeberg.org",
+              "description": "https://codeberg.org/positionhigh/MicroDexed-touch/wiki/Current-State:-Hardware-%2F-PCB ... Teensy-4.1. MicroDexed is licensed on the GPL v3. The msfa ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+              "title": "[MDT] MicroDexed (Capacitive) Touch - Share Project - PCBWay",
+              "description": "Microdexed-touch required a Teensy 4.1, PCM5102 Audio Board, 320x240 ... mdt_pcb-enclosure-back This is the back plate for the pcb-based enclosure ...",
+              "position": 4
+            },
+            {
+              "url": "https://codeberg.org/positionhigh/MicroDexed-touch",
+              "title": "positionhigh/MicroDexed-touch - Codeberg",
+              "description": "PCB is available from PCBWAY. If you register and pay as a new user at PCBWAY ... Teensy-4.1. MicroDexed is licensed on the GPL v3. The msfa component ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb8ab-e39f-72ac-bdae-7b38d9845a68",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_02_microdexed-touch-teensy-4-1-hardware.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://discourse.zynthian.org/t/microdexed-dx7-to-go/1989?page=18",
+              "title": "MicroDexed - DX7 to go - Page 18 - Zynthian Discourse",
+              "description": "Microdexed-touch has only 2 of these Instances at once but a ... Hardware Design: Eurorack shield for teensy 4.1 with 14 in / 16 out ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/a-dx7-fm-synthesis-replacement-with-dexed-on-a-teensy.52126/page-5",
+              "title": "A DX7 (Fm synthesis) replacement with Dexed on a Teensy | Page 5",
+              "description": "I too wanted higher quality audio, so I have some nice hardware I'm experimenting with. ... 15 on my Teensy 4.1 and LCD 2x16 and PCM5102A.",
+              "position": 2
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=ZFvrbFw_cPg",
+              "title": "MICRODEXED - DIY 80s home studio in a nutshell - YouTube",
+              "description": "... hardware 04:49 connecting the screen 05:22 adding a USB port to the ... MicroDexed-touch Arduino Development Kit: https://www.arduino ...",
+              "position": 3
+            },
+            {
+              "url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+              "title": "dcoredump/MicroDexed-touch - Codeberg.org",
+              "description": "https://codeberg.org/positionhigh/MicroDexed-touch/wiki/Current-State:-Hardware-%2F-PCB ... Teensy-4.1. MicroDexed is licensed on the GPL v3. The msfa ...",
+              "position": 4
+            },
+            {
+              "url": "https://protosupplies.com/product/teensy-41-microdexed/",
+              "title": "Teensy 4.1 For MicroDexed - ProtoSupplies",
+              "description": "When used with 3.5mm low-profile female sockets, this pin arrangement provides a slightly lower clearance over our standard low-profile versions of the Teensy ...",
+              "position": 5
+            }
+          ]
+        },
+        "id": "019eb8ab-f38b-77a9-bcec-b7a711302383",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_04_tympan-rev-e-teensy-4-1-hardware.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.tympan.org/t/tympan-hardware/428",
+              "title": "Tympan Hardware",
+              "description": "We don't currently have plans to produce more of the Tympan Rev E. There was ... This could be mated to a Teensy 4.1, but requires a simple PCB interface.",
+              "position": 1
+            },
+            {
+              "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware",
+              "title": "Repository for Tympan Rev E Electronics and case designs - GitHub",
+              "description": "Tympan Rev E Hardware v2.0.0. Repository for Tympan Rev E v2 Electronics and case designs. This version of the Rev E is based on the Teensy 4.1 by PJRC and ...",
+              "position": 2,
+              "category": "github"
+            },
+            {
+              "url": "https://shop.tympan.org/pages/a-general-purpose-pipeline-to-interface-the-tympan-hardware-with-an-external-computer",
+              "title": "A general-purpose pipeline to interface the Tympan hardware with ...",
+              "description": "The Tympan Rev-E open source hearing-aid hardware, fitted with a fast Teensy 4.1 processor, is capable of handling most audio processing needs. However ...",
+              "position": 3
+            },
+            {
+              "url": "https://github.com/Tympan/Tympan_Library/issues/67",
+              "title": "Using the AIC CODEC Shield as Main sound processor · Issue #67 ...",
+              "description": "... Teensy 4.1 board, with no luck. The connections I ... Teensy 4.1 board, with no luck. ... I will make a branch of the Tympan Rev E hardware git to modify the board ...",
+              "position": 4,
+              "category": "github"
+            }
+          ]
+        },
+        "id": "019eb8ac-135d-73cc-a109-532a29a5b007",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_06_teensy-4-1-cs42448-kicad.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://hackaday.io/project/2984-teensy-audio-library/log/187557-updated-cs42448-pcb-for-teensy-4x",
+              "title": "Updated CS42448 PCB for Teensy 4.x | Details - Hackaday.io",
+              "description": "works fine with Teensy 4.1 if you just plug in the same 28 pins ... I put my KiCad schematic files on github, as well as a PDF version ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/6-channel-line-level-audio-interface-with-teensy-4-1.72887/",
+              "title": "6 channel line level audio interface with teensy 4.1?",
+              "description": "... CS42448 that was being used in mcginty's project, and upon googling ... I've since learned how to design my own hardware in Kicad, program (very ...",
+              "position": 2
+            },
+            {
+              "url": "https://www.facebook.com/MidiBen39/videos/helloa-teensy-41-groovebox-on-the-wayi-m-looking-for-advices-about-a-dac-to-have/2019255591966499/",
+              "title": "Hello. A teensy 4.1 groovebox on the way. I m looking for advices ...",
+              "description": "A teensy 4.1 groovebox on the way. I m looking for ... I started an kicad project based on this board. ... php?threads/cs42448-board-6-audio- inputs-8 ...",
+              "position": 3
+            }
+          ]
+        },
+        "id": "019eb8ac-3333-7748-9ada-768454923d5e",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_07_teensy-4-1-multichannel-audio-pcb.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/tdm-input-output-interference-cs42448.68915/",
+              "title": "TDM input/output interference (?) CS42448 | Teensy - Teensy Forum",
+              "description": "... Teensy 4.1-based breakout board for eurorack modular synth levels --- multichannel audio I/O and CV input. ... PCB and schematic to github.",
+              "position": 1
+            },
+            {
+              "url": "https://copperhilltech.com/blog/tag/Teensy+4.1+CAN+FD?fullSite=1",
+              "title": "Blog - Copperhill Technologies",
+              "description": "... Teensy 4.1 uses the same 600 MHz i.MX RT1062 chip ... Both 4.0 and 4.1 support the PJRC audio shield and multichannel audio library features. ... PCB. These ...",
+              "position": 2
+            }
+          ]
+        },
+        "id": "019eb8ac-42c9-72e1-9b67-a59bc3ea39cd",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_08_teensy-4-1-guitar-pedal-kicad.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://hackaday.io/project/203208-teensy-41-programmable-guitar-pedal",
+              "title": "Teensy 4.1 Programmable Guitar Pedal - Hackaday.io",
+              "description": "Teensy 4.1 Programmable Guitar Pedal. Programmable digital guitar ... KiCad schematics for the pedal. Zip Archive - 3.75 MB - 05/28/2025 ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.facebook.com/groups/1470129233297275/posts/3625943011049209/",
+              "title": "How to design input conditioning circuitry for Teensy 4.1 ... - Facebook",
+              "description": "As I already built two guitar pedal prototypes with a WM8731, I ... KiCad symbol or anywhere else I've been able to find..... I want to ...",
+              "position": 2
+            },
+            {
+              "url": "https://hackaday.io/project/203208/files",
+              "title": "Files | Teensy 4.1 Programmable Guitar Pedal | Hackaday.io",
+              "description": "Teensy 4.1 Programmable Guitar Pedal · Back to overview. Programmable digital guitar pedal based on the Teensy 4.1. dylan-brophy Dylan Brophy ... zip. KiCad ...",
+              "position": 3
+            },
+            {
+              "url": "https://www.patreon.com/gadgetreboot/sitemap",
+              "title": "Gadget Reboot — creating electronics hobby videos | Patreon",
+              "description": "Mailbag! Feb 20. PT2399 Lo-Fi Echo. Feb 16. MXR Distortion + Guitar Pedal Breadboarding ... Teensy 4.1 + Piezo Elements = Drums! Jan 26. Most ... KiCAD Fast Design ...",
+              "position": 4
+            }
+          ]
+        },
+        "id": "019eb8ac-554b-7347-9847-fa523fa647a3",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_10_teensy-4-1-audio-board-schematic.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/audio-teensy-4-1-problem.61996/",
+              "title": "Audio + Teensy 4.1 problem",
+              "description": "The 2.2k pull ups are placed on the PCB (just in another part of the schematic). ... audio board 0,15uF, your value is 0.1 uF. Hope it ...",
+              "position": 1
+            },
+            {
+              "url": "https://forum.allaboutcircuits.com/threads/teensy-4-1-wow-teensy-4-1.177495/page-3",
+              "title": "Wow. Teensy 4.1 | Page 3 | All About Circuits",
+              "description": "Teensy 4.1: Wow. Teensy 4.1. Thread starter Ya'akov; Start date ... Would appreciate a check of my Teensy 4.0 & Audio Board RevD Schematic.",
+              "position": 2
+            },
+            {
+              "url": "https://www.facebook.com/groups/1470129233297275/posts/4186402668336571/",
+              "title": "Hello. A teensy 4.1 groovebox on the way. I m looking for advices ...",
+              "description": "If I wish to wire the audio board to speakers instead of using head phones is that possible? ... I've checked the Jensen site for a schematic but ...",
+              "position": 3
+            }
+          ]
+        },
+        "id": "019eb8ac-727a-7229-8557-ffc32dee4fd5",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_11_teensymidiaudio.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://codeberg.org/dcoredump/TeensyMIDIAudio",
+              "title": "TeensyMIDIAudio - Codeberg",
+              "description": "You can build MIDI playable synths, effects or just sound generators - it's your part to decide what to do. For this the Teensy is really a very good platform.",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?attachments/teensymidiaudio-pdf.14310/",
+              "title": "[PDF] Teensy MIDI Audio - Teensy Forum",
+              "description": "Title: Teensy MIDI Audio. File: TeensyMIDIAudio.sch. Sheet: /. parasiTstudio. BCK. 1. WS. 2. DIN. 3. GND. 4. VDD. 5. LCH. 6. RCH. 8. NC. U2. PT8211. BCK. 3.3V.",
+              "position": 2
+            },
+            {
+              "url": "https://www.pcbway.com/project/share/TeensyMIDIAudio.html",
+              "title": "TeensyMIDIAudio - Share - PCBWay",
+              "description": "TeensyMIDIAudio. Many thanks! Everything works fine. Quality is very good and production and shipping are really fast! Sep 10,2018. 373 viewsReport item. PCB.",
+              "position": 3
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/teensymidiaudio-pcb-and-microdexed-micromdaepiano-synths-based-on-the-teensy.54866/",
+              "title": "TeensyMIDIAudio PCB and MicroDexed/MicroMDAEPiano: Synths ...",
+              "description": "A nice synth module which has support for MIDI (DIN or USB). Of course you don't need the PCB if you decide to organize your MIDI input and operating elements ...",
+              "position": 4
+            },
+            {
+              "url": "https://discourse.zynthian.org/t/microdexed-dx7-to-go/1989?page=5",
+              "title": "MicroDexed - DX7 to go - Page 5 - Zynthian Discourse",
+              "description": "A new audio demo of MicroDexed and MicroMDAEPiano (both based on the TeensyMIDIAudio board): (Multi channel recording!) No special effects. Only some panning ...",
+              "position": 5
+            },
+            {
+              "url": "https://www.pcbway.com/project/shareproject/W159675ASQ2_TeensyMIDIAudio.html",
+              "title": "TeensyMIDIAudio - Share Project - PCBWay",
+              "description": "You can build MIDI playable synths, effects or just sound generators - it's your part to decide what to do. For this the Teensy is really a very ...",
+              "position": 6
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?attachments/teensymidiaudio-pdf.14452/",
+              "title": "[PDF] Teensy MIDI Audio",
+              "description": "Title: Teensy MIDI Audio. File: TeensyMIDIAudio.sch. Sheet: /. parasiTstudio. BCK. 1. WS. 2. DIN. 3. GND. 4. VDD. 5. LCH. 6. RCH. 8. NC. U4. PT8211.",
+              "position": 7
+            },
+            {
+              "url": "https://www.reddit.com/r/synthdiy/comments/aafzhy/microdexed_teensy_dx7/",
+              "title": "Microdexed Teensy DX7 : r/synthdiy - Reddit",
+              "description": "Microdexed and MicroMDAEPiano based on the TeensyMIDIAudio-PCB are projects I created. The whole thing runs with a few adjustments also on ...",
+              "position": 8
+            },
+            {
+              "url": "https://www.youtube.com/playlist?list=PLDnEejiR3mBwSYLSxqluI-c01M04JyP2c",
+              "title": "Teensy Audio Projects - Sound Processing and Playback - YouTube",
+              "description": "Teensy Audio Part 1: How to Use the GUI Design Tool - Play wav Files from SD Card. Gadget Reboot · 17:44. Teensy Audio Part 2: Chorus and Flange Audio Effects.",
+              "position": 9
+            },
+            {
+              "url": "https://circuitcellar.com/research-design-hub/basics-of-design/the-teensy-audio-station/",
+              "title": "The Teensy Audio Station (Part 2) - Circuit Cellar",
+              "description": "A project that encompassed a two-in, two-out digital audio interface, which included control surface functionality.",
+              "position": 10
+            }
+          ]
+        },
+        "id": "019eb8b3-8b1b-70cd-8862-77eff54c5f58",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_12_teensy41_audio_shield_kicad_github.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/teensy-4-0-audio-toolkit-and-shield-an-open-source-audio-io-project-in-kicad.60411/",
+              "title": "An Open Source Audio IO Project in Kicad | Teensy Forum",
+              "description": "The Teensy 4.0 Audio Toolkit and Shield is part of an open source project for learning about, designing, and prototyping custom Audio PCBs using the Teensy ...",
+              "position": 1
+            },
+            {
+              "url": "https://www.facebook.com/groups/1470129233297275/posts/4138825879760917/",
+              "title": "Hello.. I have a teensy 4.1 and I want to add the audio shield. Rev ...",
+              "description": "Hello.. I have a teensy 4.1 and I want to add the audio shield. Rev D2 has been retired, could I use Rev D instead? Thanks.",
+              "position": 2
+            },
+            {
+              "url": "https://github.com/PaulStoffregen/Audio",
+              "title": "PaulStoffregen/Audio: Teensy Audio Library - GitHub",
+              "description": "Use this graphical tool to design your audio project. Easily browse the library's many features, connect objects, export to Arduino code, and quickly access ...",
+              "position": 3,
+              "category": "github"
+            },
+            {
+              "url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+              "title": "Best Practice for Integrating Teensy 4.1 in KiCAD Schematic and ...",
+              "description": "I see two potential methods to integrate the Teensy 4.1 into my schematic and PCB layout, but each has its own set of issues.",
+              "position": 4
+            },
+            {
+              "url": "https://learn.sparkfun.com/tutorials/getting-started-with-the-teensy/resources-and-going-further",
+              "title": "Getting Started with the Teensy - SparkFun Learn",
+              "description": "Building a pedal around the Teensy 3.2 and Teensy Audio shield. Changing the effect in the pedal is as easy as uploading a new sketch! LuMini Ring Hookup ...",
+              "position": 5
+            },
+            {
+              "url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+              "title": "Teensy boards, for the uninitiated - The Contextual Electronics Forums",
+              "description": "I used a Teensy 4.1 to convert my old Firewire audio interface to USB. I had to modify the teensy libraries to support 48k 24bit audio, but ...",
+              "position": 6
+            },
+            {
+              "url": "https://www.sparkfun.com/teensy-4-audio-shield-rev-d.html",
+              "title": "Teensy 4 Audio Shield (Rev D) | For Sale at SparkFun",
+              "description": "The Teensy 4 Audio Shield is a codec board for the Teensy 4.0 that provides 16-bit, 44.1kHz stereo audio input/output, a headphone amp, and a microSD card ...",
+              "position": 7
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=ssl2-zY6QSc",
+              "title": "Product Showcase: SparkFun Qwiic Shield for Teensy - YouTube",
+              "description": "TactileAudio Project: Assembling a Teensy, Audio Board, & Connectors ... New Products 5/13/20 featuring PJRC Teensy 4.1 Development Board!",
+              "position": 8
+            },
+            {
+              "url": "https://github.com/orgs/micropython/discussions/9939",
+              "title": "Simultaneous input and output Teensy 4.1 -> Audio Shield #9939",
+              "description": "If the signals line up you will be able to simultaneously receive and transmit audio samples from the codec on the Teensy audio shield. However, ...",
+              "position": 9,
+              "category": "github"
+            },
+            {
+              "url": "https://www.sparkfun.com/special-categories/pjrc.html",
+              "title": "PJRC - Special Categories - SparkFun Electronics",
+              "description": "Teensy 4 Audio Shield (Rev D2). $14.95. Discontinued. Compare Add to Wish List. Teensy 4 Audio Shield (Rev D) featured image on a white background. Backorder ...",
+              "position": 10
+            }
+          ]
+        },
+        "id": "019eb8b4-c3e1-72c1-8705-aa1fab4bc221",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_13_teensy41_standalone_synth_kicad.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+              "title": "Best Practice for Integrating Teensy 4.1 in KiCAD Schematic and ...",
+              "description": "I see two potential methods to integrate the Teensy 4.1 into my schematic and PCB layout, but each has its own set of issues.",
+              "position": 1
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/diy-teensy-4-1-kicad-files.70319/",
+              "title": "DIY Teensy 4.1 kicad files",
+              "description": "Hi all, I've now published my Kicad schematic and board files for making a custom T4.1 on https://github.com/jenschr/Teensy-4.1-example",
+              "position": 2
+            },
+            {
+              "url": "https://www.reddit.com/r/PrintedCircuitBoard/comments/1ifec3p/review_request_teensy_41_hall_effect_minikeyboard/",
+              "title": "Review Request: Teensy 4.1 Hall effect mini-keyboard - Reddit",
+              "description": "This is my first schematic/PCB. It's a keyboard with 3 Hall effect sensor keys, read via a multiplexer by a Teensy 4.1.",
+              "position": 3
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=tRJoIYXkm-U",
+              "title": "I Designed a Synth using Daisy and Arduino! KiCad PCB ... - YouTube",
+              "description": "Demo of my latest creation, a polyphonic touch synthesizer. Audio demo song, followed by overview of the synth, design process, Kicad PCB ...",
+              "position": 4
+            },
+            {
+              "url": "https://github.com/jenschr/Teensy-4.1-example",
+              "title": "jenschr/Teensy-4.1-example: Kicad files to make a custom ... - GitHub",
+              "description": "Teensy 4.1 Kicad example project. Kicad files to make a custom Teensy 4.1, based on the official Teensy schematics, but exposing all pins for testing.",
+              "position": 5,
+              "category": "github"
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=sXtFZuuaZ8I",
+              "title": "DIY Teensy Arcade Synth | Tutorial & Presets Demo - YouTube",
+              "description": "... teensy/tutorial.html Teensy Audio Library https://www.pjrc.com/teensy/td_libs_Audio.html Things used in this build: Teensy 4.0/4.1 https ...",
+              "position": 6
+            },
+            {
+              "url": "https://www.eevblog.com/forum/beginners/pcb-design-review-request-kicad-project-(teensy-4-1-midi-controller)/",
+              "title": "PCB Design Review Request – KiCad Project (Teensy 4.1 + MIDI ...",
+              "description": "I've designed a custom PCB in KiCad for a MIDI controller based on a Teensy 4.1. I'm on my 3rd iteration and before changing the design if ...",
+              "position": 7
+            },
+            {
+              "url": "https://www.snapeda.com/parts/Teensy%204.1/PJRC/view-part/",
+              "title": "Teensy 4.1 Symbol, Footprint & 3D Model by PJRC - SnapMagic",
+              "description": "Download schematic symbols, PCB footprints, 3D Models, pinout & datasheet for the Teensy 4.1 by PJRC. . Exports to OrCAD, Allegro, Altium, PADS, Eagle, KiCad,",
+              "position": 8
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=DeTsVf9XAWU",
+              "title": "Teensy 4.1 Polyphonic DYI Synthesizer Part 14: Filter experience",
+              "description": "Teensy 4.1 Polyphonic DYI Synthesizer Part 14: Filter experience. 1.2K views · 4 years ago ...more. Rolf Degen. 1.18K. Subscribe. 43. Share.",
+              "position": 9
+            },
+            {
+              "url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+              "title": "Teensy boards, for the uninitiated - The Contextual Electronics Forums",
+              "description": "If anyone want to get started making custom boards based on Teensy, I have verified Kicad files available for download for Teensy 3.2 and Teensy ...",
+              "position": 10
+            }
+          ]
+        },
+        "id": "019eb8b4-c739-7327-b7bb-ad0b03e73ddd",
+        "creditsUsed": 2
+      }
+    },
+    {
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "query": "",
+      "command": "",
+      "output_file": "research\\outputs\\firecrawl_search_F_14_teensy41_midi_controller_kicad_github.json",
+      "started_at": "",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "payload": {
+        "success": true,
+        "data": {
+          "web": [
+            {
+              "url": "https://github.com/tttapa/Control-Surface-Motor-Fader/issues/16",
+              "title": "Midi Controller and Motor Fader Controller on Teensy 4.1 #16 - GitHub",
+              "description": "I was thinking of a modular system whereby the banks are 8 channels and upto 8 banks. As the Teensy 4.1 is 600 MHz. Do you think it is possible ...",
+              "position": 1,
+              "category": "github"
+            },
+            {
+              "url": "https://github.com/jenschr/Teensy-4.1-example",
+              "title": "jenschr/Teensy-4.1-example: Kicad files to make a custom ... - GitHub",
+              "description": "Teensy 4.1 Kicad example project. Kicad files to make a custom Teensy 4.1, based on the official Teensy schematics, but exposing all pins for testing.",
+              "position": 2,
+              "category": "github"
+            },
+            {
+              "url": "https://www.eevblog.com/forum/beginners/pcb-design-review-request-kicad-project-(teensy-4-1-midi-controller)/",
+              "title": "PCB Design Review Request – KiCad Project (Teensy 4.1 + MIDI ...",
+              "description": "I've designed a custom PCB in KiCad for a MIDI controller based on a Teensy 4.1. I'm on my 3rd iteration and before changing the design if ...",
+              "position": 3
+            },
+            {
+              "url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+              "title": "Best Practice for Integrating Teensy 4.1 in KiCAD Schematic and ...",
+              "description": "I see two potential methods to integrate the Teensy 4.1 into my schematic and PCB layout, but each has its own set of issues.",
+              "position": 4
+            },
+            {
+              "url": "https://www.facebook.com/groups/1470129233297275/posts/3781582808818561/",
+              "title": "Handmade Midi Controller with Teensy 4.1 and 4.0 - Facebook",
+              "description": "Commenters praise the handmade MIDI controller, with some discussing the benefits of using multiple Teensys for simplicity and reduced latency, ...",
+              "position": 5
+            },
+            {
+              "url": "https://groups.google.com/g/hermes-lite/c/69sNmReKnnY",
+              "title": "Teensy 4 MIDI controller experiment - Google Groups",
+              "description": "I have never used KiCAD before so today I created a PCB layout 5\" x 2.5\" for the Teensy keyer files Steve posted up. I put all 4 pots and the ...",
+              "position": 6
+            },
+            {
+              "url": "https://github.com/newdigate/teensy-eurorack/blob/master/README.md",
+              "title": "teensy-eurorack/README.md at master - GitHub",
+              "description": "Sponsored by: open source hardware and software for a 30-channel (14 in / 16 out) 16-bit analog teensy 4.1 eurorack shield.",
+              "position": 7,
+              "category": "github"
+            },
+            {
+              "url": "https://forum.pjrc.com/index.php?threads/t-dsp-open-source-modular-audio-platform-for-teensy-4-1-diy-audio-interface-digital-mixer-synthesizer.77722/",
+              "title": "T-DSP - Open Source Modular Audio Platform for Teensy 4.1",
+              "description": "Hey everyone, I've been working on an open-source hardware platform called T-DSP built around the Teensy 4.1, and this community has been a ...",
+              "position": 8
+            },
+            {
+              "url": "https://gist.github.com/cowboy/f764ca1c6ce163f62f06fd0140c932c6",
+              "title": "Teensy 4.1 USB MIDI issue - GitHub Gist",
+              "description": "Solder a USB A female connector to a Teensy 4.1 USB HOST port; Connect a USB MIDI controller to that port (I'm using an Arturia Minilab Mk2); Connect the micro ...",
+              "position": 9,
+              "category": "github"
+            },
+            {
+              "url": "https://www.facebook.com/groups/1470129233297275/posts/3554517981525046/",
+              "title": "Expensive Notes (John) replace the internals of a MIDI Foot ...",
+              "description": "The updated USB2CMI interface features a modern Teensy 4.1 controller, enabling advanced features and a more stable supply chain, which has also ...",
+              "position": 10
+            }
+          ]
+        },
+        "id": "019eb8b4-bccf-73d6-baa6-065e3ddfc667",
+        "creditsUsed": 2
+      }
+    }
+  ],
+  "search_results": [
+    {
+      "query": "",
+      "lane": "A",
+      "lane_name": "PJRC forum",
+      "title": "Question about powering Teensy 4.1 and Audio shield Rev D in PCB",
+      "url": "https://forum.pjrc.com/index.php?threads/question-about-powering-teensy-4-1-and-audio-shield-rev-d-in-pcb.76276/",
+      "canonical_url": "https://forum.pjrc.com/index.php",
+      "snippet": "Question about powering Teensy 4.1 and Audio shield Rev D in PCB ... Please read the bottom of Audio Adaptor pcb: Audio Adaptor The ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Teensy boards, for the uninitiated - The Contextual Electronics Forums",
+      "url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+      "canonical_url": "https://forum.contextualelectronics.com/t/teensy-boards-for-the-uninitiated/4963",
+      "snippet": "I used a Teensy 4.1 to convert my old Firewire audio interface to USB. I had to modify the teensy libraries to support 48k 24bit audio, but ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Manufacture teensy 4.1, papilio pro and arduino due",
+      "url": "https://forum.kicad.info/t/manufacture-teensy-4-1-papilio-pro-and-arduino-due/40696",
+      "canonical_url": "https://forum.kicad.info/t/manufacture-teensy-4-1-papilio-pro-and-arduino-due/40696",
+      "snippet": "I'm using kicad 6 and the easyeda sometimes. I'm want to manufacture and assemble an pcb with an teensy 4.1, an papilio pro and arduino due.",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "teensy-eurorack/README.md at master - GitHub",
+      "url": "https://github.com/newdigate/teensy-eurorack/blob/master/README.md",
+      "canonical_url": "https://github.com/newdigate/teensy-eurorack/blob/master/README.md",
+      "snippet": "download kicad and freecad, clone this repo, make improvements ... youtube videos. Nic N · youtube: Assembling custom eurorack audio shield for teensy 4.1 ...",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Hi, i lost my teensy 4.1 cad files, anyone as a link for the ... - Facebook",
+      "url": "https://www.facebook.com/groups/1470129233297275/posts/4085114565132049/",
+      "canonical_url": "https://www.facebook.com/groups/1470129233297275/posts/4085114565132049",
+      "snippet": "... kiCad only. 27w. Other posts ... Hello, did anyone already tied the audio Board rev d and a TFT 320x240 touchDisplay to the teensy 4.1.",
+      "position": 5,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Eurorack shield for teensy 4.1 with 14 in / 16 out analog ... - GitHub",
+      "url": "https://github.com/newdigate/teensy-eurorack",
+      "canonical_url": "https://github.com/newdigate/teensy-eurorack",
+      "snippet": "socket to connect teensy 4.0 board; cs42448 audio codec ... audio design microcontroller teensy hardware analog panel pcb synthesizer synth diy maker kicad ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Teensy Arcade Synth - PJRC",
+      "url": "https://www.pjrc.com/2026/03/",
+      "canonical_url": "https://www.pjrc.com/2026/03",
+      "snippet": "A GitHub repo provides KiCad files and firmware for the sensor/controller set. Some optional register-level enhancements take advantage of the Teensy 4.0's ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Experimentando con Teensy 4.0 y OLED de 2.4\" | TikTok",
+      "url": "https://www.tiktok.com/@phazerville/video/7435817092147989790",
+      "canonical_url": "https://www.tiktok.com/@phazerville/video/7435817092147989790",
+      "snippet": "... synth DIY para adolescentes, experimentos con Teensy en audio ... kicad e eagle pra completar esse projeto! Qualquer duvida manda ai ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "O_C T4.1 - Ornament and Crime with Teensy 4.1 - GitHub",
+      "url": "https://github.com/PaulStoffregen/O_C_T41",
+      "canonical_url": "https://github.com/PaulStoffregen/O_C_T41",
+      "snippet": "Gerber files o_c_3_analog_new_jlc.zip and o_c_3_cpu_new_jlc.zip have been ... Main input power for Teensy 4.1, the 1.3 inch display, and MIDI: This is ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Ornament and Crime hardware overview with Phazerville on Teensy ...",
+      "url": "https://www.facebook.com/groups/1040800816762898/posts/2052497625593207/",
+      "canonical_url": "https://www.facebook.com/groups/1040800816762898/posts/2052497625593207",
+      "snippet": "like the gerber files for the pcb, and the panel will be a +1. ... Teensy 4.1 MIDI hardware sequencer development. Joe King ▻ Teensy ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "B",
+      "lane_name": "GitHub / GitLab / Codeberg",
+      "title": "Teensy 4.1 Expansion Board with DC-DC Converter - Electronics-Lab",
+      "url": "https://www.electronics-lab.com/project/teensy-4-1-expansion-board-with-dc-dc-converter/",
+      "canonical_url": "https://www.electronics-lab.com/project/teensy-4-1-expansion-board-with-dc-dc-converter",
+      "snippet": "Gerber View. ... MIDI musical instruments. A 5 pin header and a USB Host cable are needed to be able to plug in a. USB device. You can also ...",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "Arduino/Teensy based SBC | Details - Hackaday.io",
+      "url": "https://hackaday.io/project/21201-arduino-desktop/log/229778-arduinoteensy-based-sbc",
+      "canonical_url": "https://hackaday.io/project/21201-arduino-desktop/log/229778-arduinoteensy-based-sbc",
+      "snippet": "The Teensy 4.1 on its own provides Ethernet, a blazing fast processor, SDIO, I2S audio, a USB host, and 8 UARTs. ... PCB lines up so well ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "OPL2 Audio Board for Arduino & Raspberry Pi - Hackaday.io",
+      "url": "https://hackaday.io/project/18995-opl2-audio-board-for-arduino-raspberry-pi",
+      "canonical_url": "https://hackaday.io/project/18995-opl2-audio-board-for-arduino-raspberry-pi",
+      "snippet": "I drew the schematic and PCB layout in Fritzing and sent it to them to have my PCB produced. ... Teensy 4.1 Programmable Guitar Pedal · dylan ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "Prang | Hackaday.io",
+      "url": "https://hackaday.io/project/187010-prang",
+      "canonical_url": "https://hackaday.io/project/187010-prang",
+      "snippet": "I'm working on the PCB design for Teensy 4.1 rendition and will be publishing that once it is finished. ... audio/MIDI library htcw_sfx.",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "Project | Teensymoog | Hackaday.io",
+      "url": "https://hackaday.io/project/170474/logs",
+      "canonical_url": "https://hackaday.io/project/170474/logs",
+      "snippet": "A re-creation of the minimoog using Teensy 4.0 ... But is was yet too high, so the brackets were cut, and the pcb finally mounted on a wooden support on the synth ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "Project | PolyMod: modular digital synthesizer | Hackaday.io",
+      "url": "https://hackaday.io/project/160626/logs",
+      "canonical_url": "https://hackaday.io/project/160626/logs",
+      "snippet": "... Teensy 4.0 or a different processor in the future; It would be nice if the ... PCB layouts, I realised I wanted to push my synth to that level. I'm now ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "Project | PolyMod 2: modular digital synthesizer - Hackaday.io",
+      "url": "https://hackaday.io/project/162812/logs",
+      "canonical_url": "https://hackaday.io/project/162812/logs",
+      "snippet": "The current plan is for the synth to use something like a Teensy LC to handle all the multiplexing etc, while a Teensy 4.0 handles the synthesis. ... with PCB ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "PolyMod: modular digital synthesizer - Hackaday.io",
+      "url": "https://hackaday.io/project/160626-polymod-modular-digital-synthesizer",
+      "canonical_url": "https://hackaday.io/project/160626-polymod-modular-digital-synthesizer",
+      "snippet": "... Teensy 4.0 or a different processor in the future ... I've got a bunch of other commitments but I'm aiming to get a PCB version of my synth ...",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "C",
+      "lane_name": "maker/project sites",
+      "title": "PolyMod 2: modular digital synthesizer - Hackaday.io",
+      "url": "https://hackaday.io/project/162812-polymod-2-modular-digital-synthesizer",
+      "canonical_url": "https://hackaday.io/project/162812-polymod-2-modular-digital-synthesizer",
+      "snippet": "Adjustable polyphony, perhaps up to 8 notes; MIDI input; CV in/out for interfacing with Eurorack modules; Stereo audio in/out; OLED display and ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "title": "Can you use a Teensy 4.0 for an Ornament and Crime? - MOD ...",
+      "url": "https://modwiggler.com/forum/viewtopic.php?t=247723",
+      "canonical_url": "https://modwiggler.com/forum/viewtopic.php",
+      "snippet": "Probably would also need to rework the PCB to get the pins to work too. ... I seem to remember the talk around the time that Teensy 4 came out was ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "title": "Teensy GND and AGND - MOD WIGGLER",
+      "url": "https://www.modwiggler.com/forum/viewtopic.php?t=223928",
+      "canonical_url": "https://www.modwiggler.com/forum/viewtopic.php",
+      "snippet": "Thanks in advance! here is the teensy 4 schematic: Image. Top ... You will also want to use good analog/digital PCB techniques. Longer ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "title": "Thread about Ornament and Crime Teensy 4.x - Page 4 - MOD ...",
+      "url": "https://modwiggler.com/forum/viewtopic.php?p=4263480",
+      "canonical_url": "https://modwiggler.com/forum/viewtopic.php?p=4263480",
+      "snippet": "Thread about Ornament and Crime Teensy 4.x ... Re: Thread about Ornament and Crime Teensy 4.x ... PCB + Panel set for DIY builds of the thing? Lots ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "title": "Kosmo Teensy Module - Look Mum No Computer Thingies",
+      "url": "https://lookmumnocomputer.discourse.group/t/kosmo-teensy-module/2796",
+      "canonical_url": "https://lookmumnocomputer.discourse.group/t/kosmo-teensy-module/2796",
+      "snippet": "I too have a Teensy 4.x and the audio board but haven't ... I also decided that I will go with PCB because the module is quite complex.",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "D",
+      "lane_name": "synth/audio communities",
+      "title": "Prototyping a Midi to CV module with more functionality than existing ...",
+      "url": "https://lookmumnocomputer.discourse.group/t/prototyping-a-midi-to-cv-module-with-more-functionality-than-existing-offerings/3797?page=3",
+      "canonical_url": "https://lookmumnocomputer.discourse.group/t/prototyping-a-midi-to-cv-module-with-more-functionality-than-existing-offerings/3797",
+      "snippet": "I'm wondering if anyone else has encountered this issue on the teensy 4 platform. ... pull the midi input circuit off my pcb and rebuild it off ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy 4.1 For MicroDexed - ProtoSupplies",
+      "url": "https://protosupplies.com/product/teensy-41-microdexed/",
+      "canonical_url": "https://protosupplies.com/product/teensy-41-microdexed",
+      "snippet": "Teensy 4.1 for MicroDexed is for use with the popular MicroDexed-Touch DIY ... PCB sandwich (Developers Edition) or a 3D printed enclosure. The project ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "[MDT] Microdexed Touch PCB (old PCB version) - Elecrow",
+      "url": "https://www.elecrow.com/pcb-microdexed-touch.html?srsltid=AfmBOoo-8KB3Hyb0NNtraTnaU-rfFa31j-A834-K6dxtrhLH77PlJzKx",
+      "canonical_url": "https://www.elecrow.com/pcb-microdexed-touch.html",
+      "snippet": "MicroDexed with TFT Touch Display, graphic UI and sequencer (old PCB version). Microdexed-touch required a Teensy 4.1, PCM5102 Audio Board, 320x240 ILI9341 ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "dcoredump/MicroDexed-touch - Codeberg.org",
+      "url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+      "canonical_url": "https://codeberg.org/dcoredump/MicroDexed-touch",
+      "snippet": "https://codeberg.org/positionhigh/MicroDexed-touch/wiki/Current-State:-Hardware-%2F-PCB ... Teensy-4.1. MicroDexed is licensed on the GPL v3. The msfa ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "[MDT] MicroDexed (Capacitive) Touch - Share Project - PCBWay",
+      "url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+      "canonical_url": "https://www.pcbway.com/project/shareproject/MicroDexed_Capacitive_Touch_64970fee.html",
+      "snippet": "Microdexed-touch required a Teensy 4.1, PCM5102 Audio Board, 320x240 ... mdt_pcb-enclosure-back This is the back plate for the pcb-based enclosure ...",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "positionhigh/MicroDexed-touch - Codeberg",
+      "url": "https://codeberg.org/positionhigh/MicroDexed-touch",
+      "canonical_url": "https://codeberg.org/positionhigh/MicroDexed-touch",
+      "snippet": "PCB is available from PCBWAY. If you register and pay as a new user at PCBWAY ... Teensy-4.1. MicroDexed is licensed on the GPL v3. The msfa component ...",
+      "position": 5,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "MicroDexed - DX7 to go - Page 18 - Zynthian Discourse",
+      "url": "https://discourse.zynthian.org/t/microdexed-dx7-to-go/1989?page=18",
+      "canonical_url": "https://discourse.zynthian.org/t/microdexed-dx7-to-go/1989",
+      "snippet": "Microdexed-touch has only 2 of these Instances at once but a ... Hardware Design: Eurorack shield for teensy 4.1 with 14 in / 16 out ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "MICRODEXED - DIY 80s home studio in a nutshell - YouTube",
+      "url": "https://www.youtube.com/watch?v=ZFvrbFw_cPg",
+      "canonical_url": "https://www.youtube.com/watch",
+      "snippet": "... hardware 04:49 connecting the screen 05:22 adding a USB port to the ... MicroDexed-touch Arduino Development Kit: https://www.arduino ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Tympan Hardware",
+      "url": "https://forum.tympan.org/t/tympan-hardware/428",
+      "canonical_url": "https://forum.tympan.org/t/tympan-hardware/428",
+      "snippet": "We don't currently have plans to produce more of the Tympan Rev E. There was ... This could be mated to a Teensy 4.1, but requires a simple PCB interface.",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Repository for Tympan Rev E Electronics and case designs - GitHub",
+      "url": "https://github.com/Tympan/Tympan_Rev_E_Hardware",
+      "canonical_url": "https://github.com/Tympan/Tympan_Rev_E_Hardware",
+      "snippet": "Tympan Rev E Hardware v2.0.0. Repository for Tympan Rev E v2 Electronics and case designs. This version of the Rev E is based on the Teensy 4.1 by PJRC and ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "A general-purpose pipeline to interface the Tympan hardware with ...",
+      "url": "https://shop.tympan.org/pages/a-general-purpose-pipeline-to-interface-the-tympan-hardware-with-an-external-computer",
+      "canonical_url": "https://shop.tympan.org/pages/a-general-purpose-pipeline-to-interface-the-tympan-hardware-with-an-external-computer",
+      "snippet": "The Tympan Rev-E open source hearing-aid hardware, fitted with a fast Teensy 4.1 processor, is capable of handling most audio processing needs. However ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Using the AIC CODEC Shield as Main sound processor · Issue #67 ...",
+      "url": "https://github.com/Tympan/Tympan_Library/issues/67",
+      "canonical_url": "https://github.com/Tympan/Tympan_Library/issues/67",
+      "snippet": "... Teensy 4.1 board, with no luck. The connections I ... Teensy 4.1 board, with no luck. ... I will make a branch of the Tympan Rev E hardware git to modify the board ...",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Updated CS42448 PCB for Teensy 4.x | Details - Hackaday.io",
+      "url": "https://hackaday.io/project/2984-teensy-audio-library/log/187557-updated-cs42448-pcb-for-teensy-4x",
+      "canonical_url": "https://hackaday.io/project/2984-teensy-audio-library/log/187557-updated-cs42448-pcb-for-teensy-4x",
+      "snippet": "works fine with Teensy 4.1 if you just plug in the same 28 pins ... I put my KiCad schematic files on github, as well as a PDF version ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Hello. A teensy 4.1 groovebox on the way. I m looking for advices ...",
+      "url": "https://www.facebook.com/MidiBen39/videos/helloa-teensy-41-groovebox-on-the-wayi-m-looking-for-advices-about-a-dac-to-have/2019255591966499/",
+      "canonical_url": "https://www.facebook.com/MidiBen39/videos/helloa-teensy-41-groovebox-on-the-wayi-m-looking-for-advices-about-a-dac-to-have/2019255591966499",
+      "snippet": "A teensy 4.1 groovebox on the way. I m looking for ... I started an kicad project based on this board. ... php?threads/cs42448-board-6-audio- inputs-8 ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Blog - Copperhill Technologies",
+      "url": "https://copperhilltech.com/blog/tag/Teensy+4.1+CAN+FD?fullSite=1",
+      "canonical_url": "https://copperhilltech.com/blog/tag/Teensy+4.1+CAN+FD",
+      "snippet": "... Teensy 4.1 uses the same 600 MHz i.MX RT1062 chip ... Both 4.0 and 4.1 support the PJRC audio shield and multichannel audio library features. ... PCB. These ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy 4.1 Programmable Guitar Pedal - Hackaday.io",
+      "url": "https://hackaday.io/project/203208-teensy-41-programmable-guitar-pedal",
+      "canonical_url": "https://hackaday.io/project/203208-teensy-41-programmable-guitar-pedal",
+      "snippet": "Teensy 4.1 Programmable Guitar Pedal. Programmable digital guitar ... KiCad schematics for the pedal. Zip Archive - 3.75 MB - 05/28/2025 ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "How to design input conditioning circuitry for Teensy 4.1 ... - Facebook",
+      "url": "https://www.facebook.com/groups/1470129233297275/posts/3625943011049209/",
+      "canonical_url": "https://www.facebook.com/groups/1470129233297275/posts/3625943011049209",
+      "snippet": "As I already built two guitar pedal prototypes with a WM8731, I ... KiCad symbol or anywhere else I've been able to find..... I want to ...",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Files | Teensy 4.1 Programmable Guitar Pedal | Hackaday.io",
+      "url": "https://hackaday.io/project/203208/files",
+      "canonical_url": "https://hackaday.io/project/203208/files",
+      "snippet": "Teensy 4.1 Programmable Guitar Pedal · Back to overview. Programmable digital guitar pedal based on the Teensy 4.1. dylan-brophy Dylan Brophy ... zip. KiCad ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Gadget Reboot — creating electronics hobby videos | Patreon",
+      "url": "https://www.patreon.com/gadgetreboot/sitemap",
+      "canonical_url": "https://www.patreon.com/gadgetreboot/sitemap",
+      "snippet": "Mailbag! Feb 20. PT2399 Lo-Fi Echo. Feb 16. MXR Distortion + Guitar Pedal Breadboarding ... Teensy 4.1 + Piezo Elements = Drums! Jan 26. Most ... KiCAD Fast Design ...",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Wow. Teensy 4.1 | Page 3 | All About Circuits",
+      "url": "https://forum.allaboutcircuits.com/threads/teensy-4-1-wow-teensy-4-1.177495/page-3",
+      "canonical_url": "https://forum.allaboutcircuits.com/threads/teensy-4-1-wow-teensy-4-1.177495/page-3",
+      "snippet": "Teensy 4.1: Wow. Teensy 4.1. Thread starter Ya'akov; Start date ... Would appreciate a check of my Teensy 4.0 & Audio Board RevD Schematic.",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Hello. A teensy 4.1 groovebox on the way. I m looking for advices ...",
+      "url": "https://www.facebook.com/groups/1470129233297275/posts/4186402668336571/",
+      "canonical_url": "https://www.facebook.com/groups/1470129233297275/posts/4186402668336571",
+      "snippet": "If I wish to wire the audio board to speakers instead of using head phones is that possible? ... I've checked the Jensen site for a schematic but ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "TeensyMIDIAudio - Codeberg",
+      "url": "https://codeberg.org/dcoredump/TeensyMIDIAudio",
+      "canonical_url": "https://codeberg.org/dcoredump/TeensyMIDIAudio",
+      "snippet": "You can build MIDI playable synths, effects or just sound generators - it's your part to decide what to do. For this the Teensy is really a very good platform.",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "TeensyMIDIAudio - Share - PCBWay",
+      "url": "https://www.pcbway.com/project/share/TeensyMIDIAudio.html",
+      "canonical_url": "https://www.pcbway.com/project/share/TeensyMIDIAudio.html",
+      "snippet": "TeensyMIDIAudio. Many thanks! Everything works fine. Quality is very good and production and shipping are really fast! Sep 10,2018. 373 viewsReport item. PCB.",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "TeensyMIDIAudio - Share Project - PCBWay",
+      "url": "https://www.pcbway.com/project/shareproject/W159675ASQ2_TeensyMIDIAudio.html",
+      "canonical_url": "https://www.pcbway.com/project/shareproject/W159675ASQ2_TeensyMIDIAudio.html",
+      "snippet": "You can build MIDI playable synths, effects or just sound generators - it's your part to decide what to do. For this the Teensy is really a very ...",
+      "position": 6,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Microdexed Teensy DX7 : r/synthdiy - Reddit",
+      "url": "https://www.reddit.com/r/synthdiy/comments/aafzhy/microdexed_teensy_dx7/",
+      "canonical_url": "https://www.reddit.com/r/synthdiy/comments/aafzhy/microdexed_teensy_dx7",
+      "snippet": "Microdexed and MicroMDAEPiano based on the TeensyMIDIAudio-PCB are projects I created. The whole thing runs with a few adjustments also on ...",
+      "position": 8,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy Audio Projects - Sound Processing and Playback - YouTube",
+      "url": "https://www.youtube.com/playlist?list=PLDnEejiR3mBwSYLSxqluI-c01M04JyP2c",
+      "canonical_url": "https://www.youtube.com/playlist",
+      "snippet": "Teensy Audio Part 1: How to Use the GUI Design Tool - Play wav Files from SD Card. Gadget Reboot · 17:44. Teensy Audio Part 2: Chorus and Flange Audio Effects.",
+      "position": 9,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "The Teensy Audio Station (Part 2) - Circuit Cellar",
+      "url": "https://circuitcellar.com/research-design-hub/basics-of-design/the-teensy-audio-station/",
+      "canonical_url": "https://circuitcellar.com/research-design-hub/basics-of-design/the-teensy-audio-station",
+      "snippet": "A project that encompassed a two-in, two-out digital audio interface, which included control surface functionality.",
+      "position": 10,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Hello.. I have a teensy 4.1 and I want to add the audio shield. Rev ...",
+      "url": "https://www.facebook.com/groups/1470129233297275/posts/4138825879760917/",
+      "canonical_url": "https://www.facebook.com/groups/1470129233297275/posts/4138825879760917",
+      "snippet": "Hello.. I have a teensy 4.1 and I want to add the audio shield. Rev D2 has been retired, could I use Rev D instead? Thanks.",
+      "position": 2,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "PaulStoffregen/Audio: Teensy Audio Library - GitHub",
+      "url": "https://github.com/PaulStoffregen/Audio",
+      "canonical_url": "https://github.com/PaulStoffregen/Audio",
+      "snippet": "Use this graphical tool to design your audio project. Easily browse the library's many features, connect objects, export to Arduino code, and quickly access ...",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Best Practice for Integrating Teensy 4.1 in KiCAD Schematic and ...",
+      "url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+      "canonical_url": "https://forum.kicad.info/t/best-practice-for-integrating-teensy-4-1-in-kicad-schematic-and-pcb-layout/60747",
+      "snippet": "I see two potential methods to integrate the Teensy 4.1 into my schematic and PCB layout, but each has its own set of issues.",
+      "position": 4,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Getting Started with the Teensy - SparkFun Learn",
+      "url": "https://learn.sparkfun.com/tutorials/getting-started-with-the-teensy/resources-and-going-further",
+      "canonical_url": "https://learn.sparkfun.com/tutorials/getting-started-with-the-teensy/resources-and-going-further",
+      "snippet": "Building a pedal around the Teensy 3.2 and Teensy Audio shield. Changing the effect in the pedal is as easy as uploading a new sketch! LuMini Ring Hookup ...",
+      "position": 5,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy 4 Audio Shield (Rev D) | For Sale at SparkFun",
+      "url": "https://www.sparkfun.com/teensy-4-audio-shield-rev-d.html",
+      "canonical_url": "https://www.sparkfun.com/teensy-4-audio-shield-rev-d.html",
+      "snippet": "The Teensy 4 Audio Shield is a codec board for the Teensy 4.0 that provides 16-bit, 44.1kHz stereo audio input/output, a headphone amp, and a microSD card ...",
+      "position": 7,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Simultaneous input and output Teensy 4.1 -> Audio Shield #9939",
+      "url": "https://github.com/orgs/micropython/discussions/9939",
+      "canonical_url": "https://github.com/orgs/micropython/discussions/9939",
+      "snippet": "If the signals line up you will be able to simultaneously receive and transmit audio samples from the codec on the Teensy audio shield. However, ...",
+      "position": 9,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "PJRC - Special Categories - SparkFun Electronics",
+      "url": "https://www.sparkfun.com/special-categories/pjrc.html",
+      "canonical_url": "https://www.sparkfun.com/special-categories/pjrc.html",
+      "snippet": "Teensy 4 Audio Shield (Rev D2). $14.95. Discontinued. Compare Add to Wish List. Teensy 4 Audio Shield (Rev D) featured image on a white background. Backorder ...",
+      "position": 10,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Review Request: Teensy 4.1 Hall effect mini-keyboard - Reddit",
+      "url": "https://www.reddit.com/r/PrintedCircuitBoard/comments/1ifec3p/review_request_teensy_41_hall_effect_minikeyboard/",
+      "canonical_url": "https://www.reddit.com/r/PrintedCircuitBoard/comments/1ifec3p/review_request_teensy_41_hall_effect_minikeyboard",
+      "snippet": "This is my first schematic/PCB. It's a keyboard with 3 Hall effect sensor keys, read via a multiplexer by a Teensy 4.1.",
+      "position": 3,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "jenschr/Teensy-4.1-example: Kicad files to make a custom ... - GitHub",
+      "url": "https://github.com/jenschr/Teensy-4.1-example",
+      "canonical_url": "https://github.com/jenschr/Teensy-4.1-example",
+      "snippet": "Teensy 4.1 Kicad example project. Kicad files to make a custom Teensy 4.1, based on the official Teensy schematics, but exposing all pins for testing.",
+      "position": 5,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "PCB Design Review Request – KiCad Project (Teensy 4.1 + MIDI ...",
+      "url": "https://www.eevblog.com/forum/beginners/pcb-design-review-request-kicad-project-(teensy-4-1-midi-controller)/",
+      "canonical_url": "https://www.eevblog.com/forum/beginners/pcb-design-review-request-kicad-project-(teensy-4-1-midi-controller)",
+      "snippet": "I've designed a custom PCB in KiCad for a MIDI controller based on a Teensy 4.1. I'm on my 3rd iteration and before changing the design if ...",
+      "position": 7,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy 4.1 Symbol, Footprint & 3D Model by PJRC - SnapMagic",
+      "url": "https://www.snapeda.com/parts/Teensy%204.1/PJRC/view-part/",
+      "canonical_url": "https://www.snapeda.com/parts/Teensy%204.1/PJRC/view-part",
+      "snippet": "Download schematic symbols, PCB footprints, 3D Models, pinout & datasheet for the Teensy 4.1 by PJRC. . Exports to OrCAD, Allegro, Altium, PADS, Eagle, KiCad,",
+      "position": 8,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Midi Controller and Motor Fader Controller on Teensy 4.1 #16 - GitHub",
+      "url": "https://github.com/tttapa/Control-Surface-Motor-Fader/issues/16",
+      "canonical_url": "https://github.com/tttapa/Control-Surface-Motor-Fader/issues/16",
+      "snippet": "I was thinking of a modular system whereby the banks are 8 channels and upto 8 banks. As the Teensy 4.1 is 600 MHz. Do you think it is possible ...",
+      "position": 1,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Handmade Midi Controller with Teensy 4.1 and 4.0 - Facebook",
+      "url": "https://www.facebook.com/groups/1470129233297275/posts/3781582808818561/",
+      "canonical_url": "https://www.facebook.com/groups/1470129233297275/posts/3781582808818561",
+      "snippet": "Commenters praise the handmade MIDI controller, with some discussing the benefits of using multiple Teensys for simplicity and reduced latency, ...",
+      "position": 5,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy 4 MIDI controller experiment - Google Groups",
+      "url": "https://groups.google.com/g/hermes-lite/c/69sNmReKnnY",
+      "canonical_url": "https://groups.google.com/g/hermes-lite/c/69sNmReKnnY",
+      "snippet": "I have never used KiCAD before so today I created a PCB layout 5\" x 2.5\" for the Teensy keyer files Steve posted up. I put all 4 pots and the ...",
+      "position": 6,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Teensy 4.1 USB MIDI issue - GitHub Gist",
+      "url": "https://gist.github.com/cowboy/f764ca1c6ce163f62f06fd0140c932c6",
+      "canonical_url": "https://gist.github.com/cowboy/f764ca1c6ce163f62f06fd0140c932c6",
+      "snippet": "Solder a USB A female connector to a Teensy 4.1 USB HOST port; Connect a USB MIDI controller to that port (I'm using an Arturia Minilab Mk2); Connect the micro ...",
+      "position": 9,
+      "crawl_status": "search_result_only"
+    },
+    {
+      "query": "",
+      "lane": "F",
+      "lane_name": "targeted follow-up",
+      "title": "Expensive Notes (John) replace the internals of a MIDI Foot ...",
+      "url": "https://www.facebook.com/groups/1470129233297275/posts/3554517981525046/",
+      "canonical_url": "https://www.facebook.com/groups/1470129233297275/posts/3554517981525046",
+      "snippet": "The updated USB2CMI interface features a modern Teensy 4.1 controller, enabling advanced features and a more stable supply chain, which has also ...",
+      "position": 10,
+      "crawl_status": "search_result_only"
+    }
+  ]
+}
