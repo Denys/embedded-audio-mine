@@ -1,0 +1,11 @@
+resource,source_stream,source_file,record_type,first_seen,last_published,repeat_eligible_after,anti_repeat_scope,status,notes
+eh2k/squares-and-circles,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-09,2026-06-09,2026-07-09,hard,published,Recovered 2026-06-09 digest row; source re-check recommended
+zlosynth/achordion,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-09,2026-06-09,2026-07-09,hard,published,Recovered 2026-06-09 digest row; source re-check recommended
+danja/daisy-maybe,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-09,2026-06-09,2026-07-09,hard,published,Recovered 2026-06-09 digest row; source re-check recommended
+senorblasto/PicoADK-Eurorack,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-09,2026-06-09,2026-07-09,hard,published,Recovered 2026-06-09 digest row; source re-check recommended
+madskjeldgaard/portedplugins,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-09,2026-06-09,2026-07-09,hard,published,Recovered 2026-06-09 digest row; source re-check recommended
+modulove/MOD2,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-10,2026-06-10,2026-07-10,hard,published,Recovered 2026-06-10 digest row; source re-check recommended
+DADDesign-Projects/PENDAII-Hardware+PENDAII-Software,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-10,2026-06-13,2026-07-13,hard,published,Recovered 2026-06-10 and 2026-06-13 digest row; source re-check recommended
+charlesvestal/CVCHothouse:PSXVerb,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-10,2026-06-10,2026-07-10,hard,published,Recovered 2026-06-10 digest row; source re-check recommended
+FuzzyLotus/Phantasmagoria,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-10,2026-06-10,2026-07-10,hard,published,Recovered 2026-06-10 digest row; source re-check recommended
+DaisyForum/Daisy-Effect-Pedal-Prototyping-Board,webgpt_daily,data/published-repo-log.append-2026-06-09-to-2026-06-16.csv,published,2026-06-10,2026-06-10,2026-07-10,hard,published,Recovered 2026-06-10 digest row; URL re-check needed
