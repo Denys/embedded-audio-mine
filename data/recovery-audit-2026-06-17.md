@@ -14,7 +14,12 @@ Checked Embedded Audio Mine project-chat context after the last fully persisted 
 | `digests/2026-06-15.md` | recovered | MIDI controller digest. Corrected `westlicht/performer+performer-hardware` lane to PASS. |
 | `digests/2026-06-16-audio-mining-for-midi.md` | recovered | Custom MIDI/controller mining digest from `Audio Mining for MIDI`. |
 
-`digests/2026-06-13-recovery-note.md` remains as an audit note from the earlier partial repair; the canonical recovered file is now `digests/2026-06-13.md`.
+## Recovery notes, not canonical digests
+
+| File | Status | Reason |
+|---|---:|---|
+| `digests/2026-06-11-teensy-audio-boards-recovery-note.md` | gap note | A special-edition top-10 Teensy 4.x audio-board run existed, but exact ranked entries and tracker rows were not recoverable. |
+| `digests/2026-06-13-recovery-note.md` | superseded gap note | Earlier partial repair note; canonical recovered file is now `digests/2026-06-13.md`. |
 
 ## Tracker / anti-repeat files
 
