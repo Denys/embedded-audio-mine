@@ -1,0 +1,22 @@
+repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
+eh2k/squares-and-circles,STRONG_PASS,2026-06-09,2026-06-09,2026-07-09,published,Recovered 2026-06-09 digest row; source re-check recommended
+zlosynth/achordion,STRONG_PASS,2026-06-09,2026-06-09,2026-07-09,published,Recovered 2026-06-09 digest row; source re-check recommended
+danja/daisy-maybe,PASS,2026-06-09,2026-06-09,2026-07-09,published,Recovered 2026-06-09 digest row; source re-check recommended
+senorblasto/PicoADK-Eurorack,REF_PASS,2026-06-09,2026-06-09,2026-07-09,published,Recovered 2026-06-09 digest row; source re-check recommended
+madskjeldgaard/portedplugins,REF_PASS,2026-06-09,2026-06-09,2026-07-09,published,Recovered 2026-06-09 digest row; source re-check recommended
+modulove/MOD2,STRONG_PASS,2026-06-10,2026-06-10,2026-07-10,published,Recovered 2026-06-10 digest row; control extension hardware candidate; source re-check recommended
+DADDesign-Projects/PENDAII-Hardware+PENDAII-Software,PASS,2026-06-10,2026-06-13,2026-07-13,published,Recovered 2026-06-10 and 2026-06-13 digest row; Daisy Seed stereo effects platform with UI MIDI encoders pots and hardware files; source re-check recommended
+charlesvestal/CVCHothouse:PSXVerb,PASS,2026-06-10,2026-06-10,2026-07-10,published,Recovered 2026-06-10 digest row; Daisy Hothouse effect candidate; source re-check recommended
+FuzzyLotus/Phantasmagoria,STRONG_PASS,2026-06-10,2026-06-10,2026-07-10,published,Recovered 2026-06-10 digest row; hardware oriented embedded audio candidate; source re-check recommended
+DaisyForum/Daisy-Effect-Pedal-Prototyping-Board,REF_PASS,2026-06-10,2026-06-10,2026-07-10,published,Recovered 2026-06-10 digest row; non-GitHub Daisy pedal prototyping board reference; URL re-check needed
+16n-faderbank/16nx+16next_firmware,STRONG_PASS,2026-06-13,2026-06-16,2026-07-16,published,Recovered 2026-06-13 and 2026-06-16 digest row; 16n-family faderbank controller firmware and hardware direction; source re-check recommended
+shanteacontrols/OpenDeck,STRONG_PASS,2026-06-13,2026-06-13,2026-07-13,published,Recovered 2026-06-13 digest row; configurable MIDI OSC controller ecosystem with custom-board and schematic relevance; source re-check recommended
+lucidcoding/daisy-seed-development-kit,PASS,2026-06-13,2026-06-13,2026-07-13,published,Recovered 2026-06-13 digest row; Daisy Seed control extension kit with breakout codec MIDI and potentiometer array context; URL re-check needed
+newdigate/teensy-eurorack,REF_PASS,2026-06-13,2026-06-13,2026-07-13,published,Recovered 2026-06-13 digest row; Teensy Eurorack hardware software reference for control and audio IO expansion
+16n-faderbank/16n,STRONG_PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; open 16-fader MIDI CV I2C control-surface hardware firmware ecosystem; verify maintained fork before fabrication
+westlicht/performer+performer-hardware,PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; open sequencer controller firmware plus hardware reference for dense front-panel MIDI CV workflows
+jmamma/MegaCommand_Design+MCL,PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; MegaCommand MCL hardware firmware ecosystem useful for complex MIDI control appliance UI workflows
+zukaitis/midi-grid,REF_PASS,2026-06-15,2026-06-15,2026-07-15,published,Recovered 2026-06-15 MIDI controller digest row; grid-oriented MIDI controller reference for button-matrix UI mapping and performance control concepts
+DMME-NL/RP2040-DSP-Public,PASS,2026-06-16,2026-06-16,2026-07-16,published,Recovered 2026-06-16 Audio Mining for MIDI row; RP2040 DSP custom-controller candidate; repository URL/source re-check needed
+tomarus/midi2cv,PASS,2026-06-16,2026-06-16,2026-07-16,published,Recovered 2026-06-16 Audio Mining for MIDI row; MIDI to CV controller utility candidate; source re-check recommended
+da-penguin-guy/Virgil-Controller,PASS,2026-06-16,2026-06-16,2026-07-16,published,Recovered 2026-06-16 Audio Mining for MIDI row; custom MIDI controller candidate; source re-check recommended
