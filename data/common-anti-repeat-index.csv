@@ -8,7 +8,7 @@ alex6679/teensy-4-usbAudio,webgpt_daily,data/published-repo-log.csv,published,20
 alex6679/teensy-4-usbAudio,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,related_infrastructure,"status=related_infrastructure; origin=already_published; platforms=Teensy; tags=usb-audio,uac2,multichannel,audio-io; why_selected=Important Teensy multichannel USB audio infrastructure; notes=Already published earlier; do not duplicate as new digest item"
 alexiszbik/polyanalog,webgpt_daily,data/published-repo-log.csv,published,2026-06-03,2026-06-03,2026-07-03,hard,published,Daisy Seed 4-voice polysynth with SuperSaw PWM MIDI CC OLED 16 presets QSPI preset manager soft-takeover schematic and BOM
 algomusic/M16,webgpt_daily,data/published-repo-log.csv,published,2026-06-08,2026-06-08,2026-07-08,hard,published,Arduino 16bit audio synthesis library for ESP8266 ESP32 ESP32S2 ESP32S3 and Pico2 with I2S audioUpdate dual-core synchronization PSRAM diagnostics and timing caveats
-amsynth/amsynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=4
+amsynth/amsynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-06-17,2026-07-17,hard,published,feature_count=2; last_rank=2
 animatek/Nomad2026,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=7
 antoinevg/daisy_bsp,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-05-19,2026-06-18,hard,published,feature_count=4; last_rank=6
 anushkadas-coder/DCO6_synthesizer,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=10
@@ -21,6 +21,7 @@ Befaco/Oneiroi,webgpt_daily,data/published-repo-log.csv,published,2026-06-02,202
 Befaco/VCMC,webgpt_daily,data/published-repo-log.csv,published,2026-06-02,2026-06-02,2026-07-02,hard,published,Teensy Eurorack CV-to-MIDI firmware for VCMC CV Thing with chord strum poly aftertouch 14-bit CC NRPN calibration and web configurer
 bk40-home/Jteensy8000,webgpt_daily,data/published-repo-log.csv,published,2026-05-23,2026-05-23,2026-06-22,hard,published,PJRC synth project with OB-Xa and VA filters supersaw-oriented mods USB host audio and browser editor
 bkshepherd/DaisySeedProjects,webgpt_daily,data/published-repo-log.csv,published,2026-05-22,2026-05-22,2026-06-21,hard,published,Daisy Seed collection with substantial looper SDRAM waveform OLED MIDI sync USB storage and MIDI DMA notes
+bljustice/hue,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=1
 bluedrgn/usb-audio,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=5
 bossersimon/stm32-audio-DSP,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-04-21,2026-05-21,hard,published,feature_count=1; last_rank=10
 bristol-communal-modular/dual-2164-vca,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-05-29,2026-06-28,hard,published,feature_count=2; last_rank=3
@@ -31,8 +32,10 @@ CarlosDerSeher/snapclient,webgpt_daily,data/selected-projects.csv,selected_refer
 carlvp/daisylab,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=10
 carlvp/daisylab,webgpt_daily,data/published-repo-log.csv,published,2026-05-24,2026-05-24,2026-06-23,hard,published,Daisy experiments repo anchored by op6 six-operator FM synth DX7 SysEx conversion and companion editor workflow
 carstenbund/mac-resonant-AU-plugin:daisy-seed,webgpt_daily,data/published-repo-log.csv,published,2026-06-04,2026-06-04,2026-07-04,hard,published,Daisy Seed 4-mode modal resonator port with USB MIDI 48k stereo automated test suite modal integration and ESP32-to-Daisy architecture notes
+cehurley/kzoinks,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=6
 christofmuc/KnobKraft-orm,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=1
 clevelandmusicco/HothouseExamples,webgpt_daily,data/published-repo-log.csv,published,2026-05-23,2026-05-23,2026-06-22,hard,published,Hothouse examples drop with four new analog-pedal-style effects plus precompiled binaries and strong scaffolding docs
+clovesrodrigues/AUDIO_DSP,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=10
 clutchitggs/xiao-edge-audio,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=2
 craigyjp/AS2164-4P-filter,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-04-21,2026-05-21,hard,published,feature_count=1; last_rank=4
 craigyjp/Teensy-Hybrid-TDM-Synth,webgpt_daily,data/published-repo-log.csv,published,2026-05-25,2026-05-25,2026-06-24,hard,published,Teensy hybrid poly synth using CS42448 TDM outs into analog filters plus FV-1 effects and reusable control ideas
@@ -63,14 +66,15 @@ GareBear99/SpaceMaid,codex_weekly,codex-weekly/data/repo_feature_history.json,pu
 ghostintranslation/motherboard+synth+ds909,webgpt_daily,data/published-repo-log.csv,published,2026-06-07,2026-06-07,2026-07-07,hard,published,Teensy 4.0 modular synth platform with 16 analog inputs MIDI JSON SysEx 2ch I2S or 8ch TDM plus FM synth and DS909 drum synth
 glittershark/jazz,webgpt_daily,data/published-repo-log.csv,published,2026-06-08,2026-06-08,2026-07-08,hard,published,Daisy Seed granular engine source reference with circular buffer scheduled write erase updates multiple moving heads random grain jumps fade handling slab allocation and callback wrapper
 gmoican/GuitPreamp,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-04-21,2026-05-21,hard,published,feature_count=1; last_rank=7
-grame-cncm/faust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=3
+grahamfranz/PoleZero,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=7
+grame-cncm/faust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-06-17,2026-07-17,hard,published,feature_count=2; last_rank=1
 GreerPage/teensy_audio_illusions,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=6
 GuitarML/FunBox,webgpt_daily,data/published-repo-log.csv,published,2026-05-20,2026-05-20,2026-06-19,hard,published,Practical flashable pedal firmware
 GullDSP/Circulate-VST,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-26,2026-05-26,2026-06-25,hard,published,feature_count=1; last_rank=7
 h4yn0nnym0u5e/AudioPatcher,webgpt_daily,data/published-repo-log.csv,published,2026-06-01,2026-06-01,2026-07-01,hard,published,Teensy runtime configurable audio graph proof with dynamic audio objects patchcord editor SD patch loading MIDI and display control UI
 habuenav/samplerSynth,webgpt_daily,data/published-repo-log.csv,published,2026-05-26,2026-05-26,2026-06-25,hard,published,ESP32 I2S sample-synth library; WAV samples; polyphony; LittleFS and optional MIDI integration
 Harold-Street-Pedal-Company/HSP_Protoseed,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-05-19,2026-06-18,hard,published,feature_count=3; last_rank=10
-harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-04-18,2026-05-18,hard,published,feature_count=1; last_rank=8
+harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-06-09,2026-07-09,hard,published,feature_count=2; last_rank=10
 hasanalpdoyduk/Teensy_Drum_Machine,webgpt_daily,data/published-repo-log.csv,published,2026-05-26,2026-05-26,2026-06-25,hard,published,Teensy 4.1 drum machine with 16-step sequencer sampled voices USB MIDI clock output filter and EEPROM persistence
 hatchjaw/ananas-client,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-04-28,2026-05-28,hard,published,feature_count=1; last_rank=7
 heartwerktech/daisy_seed_tdm_eurorack_pmod,webgpt_daily,data/published-repo-log.csv,published,2026-06-07,2026-06-07,2026-07-07,hard,published,Daisy Seed TDM AK4619 Eurorack PMOD example with libDaisy fork driver pin map VU LED path and multichannel audio front-end bridge
@@ -82,7 +86,7 @@ jakubthedeveloper/Samplotron,codex_weekly,codex-weekly/data/repo_feature_history
 JerrySievert:PADSynth-Pulsar-PitchShiftedReverb,webgpt_daily,data/published-repo-log.append-2026-06-06.csv,published,2026-06-06,2026-06-06,2026-07-06,hard,published,Daisy Patch SM Patch Init mini-algorithm set covering PAD wavetable generation pulsar synthesis and pitch-shifted reverb with DFU build flows
 JerrySievert:PADSynth-Pulsar-PitchShiftedReverb,webgpt_daily,data/published-repo-log.csv,published,2026-06-06,2026-06-06,2026-07-06,hard,published,Daisy Patch SM Patch Init mini-algorithm set covering PAD wavetable generation pulsar synthesis and pitch-shifted reverb with DFU build flows
 joebmz98/Weasel-West-Coast-Synthesiser,webgpt_daily,data/published-repo-log.csv,published,2026-05-26,2026-05-26,2026-06-25,hard,published,Buchla-inspired Daisy synth with virtual patch bay wavefolder LPGs random voltage and dense hardware UI
-joeriben/T5ynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=6
+joeriben/T5ynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-06-17,2026-07-17,hard,published,feature_count=2; last_rank=5
 JordanAceto/micro-pico,webgpt_daily,data/published-repo-log.csv,published,2026-05-29,2026-05-29,2026-06-28,hard,published,SSI2130 analog monosynth and swappable VCF card ecosystem including SSI2140-relevant hardware patterns
 JordanAceto/SSI2140_12_stage_phase_shifter,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-05-26,2026-06-25,hard,published,feature_count=2; last_rank=5
 joshreiss/Audio_Effects-Theory_Implementation_and_Application,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2024-03-19,2024-04-18,hard,published,feature_count=1; last_rank=8
@@ -106,6 +110,7 @@ luni64/EncoderTool,webgpt_daily,data/selected-projects.csv,selected_reference,,,
 Lytrix/Teensy4-i2s-TDM,webgpt_daily,data/published-repo-log.csv,published,2026-05-20,2026-05-20,2026-06-19,hard,published,High-rate multichannel Teensy audio
 m0xpd/Daisy-Multiverse,webgpt_daily,data/published-repo-log.csv,published,2026-05-22,2026-05-22,2026-06-21,hard,published,Daisy Trellis OLED multi-application platform with synths looper Karplus-Strong Plaits-derived apps and reusable UI architecture
 malaiwah/dsp408-esphome,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=3
+ManasWolrd/VitalReverb,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=4
 marcel-licence/ml_epiano_example,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2024-03-26,2024-04-25,hard,published,feature_count=2; last_rank=5
 marcel-licence/ml_synth_pwm_osc_example,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2024-03-19,2024-04-18,hard,published,feature_count=1; last_rank=9
 marcel-licence/ML_SynthTools,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-05-19,2026-06-18,hard,published,feature_count=5; last_rank=3
@@ -115,15 +120,17 @@ mkfarrow/Eurorack_DualVCA,codex_weekly,codex-weekly/data/repo_feature_history.js
 nalexopo/BasicDaisy,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-04-21,2026-05-21,hard,published,feature_count=1; last_rank=8
 newdigate/teensy-polyphony,webgpt_daily,data/published-repo-log.csv,published,2026-05-29,2026-05-29,2026-06-28,hard,published,Teensy Audio polyphonic sampler layer above variable playback with voice sample model abstractions and MIDI-triggered examples
 newdigate/teensy-variable-playback,webgpt_daily,data/published-repo-log.csv,published,2026-05-25,2026-05-25,2026-06-24,hard,published,Teensy Audio extension for variable-rate sample playback with interpolation and sampler looper foundation value
+nutcas3/airten,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=8
 O_C-Phazerville,webgpt_daily,data/published-repo-log.csv,published,2026-05-20,2026-05-20,2026-06-19,hard,published,Teensy O_C firmware
 ohmic-net/puca_dsp,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-26,2026-05-19,2026-06-18,hard,published,feature_count=3; last_rank=7
-Ohminecraft/esp32-dsp-core,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-04-28,2026-05-28,hard,published,feature_count=1; last_rank=8
+Ohminecraft/esp32-dsp-core,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-06-17,2026-07-17,hard,published,feature_count=2; last_rank=9
 ohmtech-rdi/eurorack-blocks,webgpt_daily,data/published-repo-log.csv,published,2026-06-01,2026-06-01,2026-07-01,hard,published,Daisy Patch Submodule Eurorack framework generating firmware VCV simulator Gerbers BOM and panel files from Cpp Faust Max UI config
 ohmtech-rdi/eurorack-blocks,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=Daisy; tags=eurorack,daisy-patch-submodule,hardware-generation,simulator,faust,max; why_selected=Daisy Eurorack workflow and hardware/software framework; notes=Use main branch links, not master"
+Omraj09/ESP32-Based-DSP-Audio-Equalizer-and-Controller,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=6
 OpenAudio_ArduinoLibrary,webgpt_daily,data/published-repo-log.csv,published,2026-05-20,2026-05-20,2026-06-19,hard,published,Floating-point Teensy DSP
 Orastron/brickworks,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-19,2026-05-19,2026-06-18,hard,published,feature_count=1; last_rank=5
 Orastron/brickworks,webgpt_daily,data/published-repo-log.csv,published,2026-05-24,2026-05-24,2026-06-23,hard,published,Cross-platform DSP toolkit with Daisy Seed examples useful as portable architecture and algorithm source
-palmerr23/Teensy8x8AudioBoard,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-04-18,2026-05-18,hard,published,feature_count=2; last_rank=5
+palmerr23/Teensy8x8AudioBoard,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-06-09,2026-07-09,hard,published,feature_count=3; last_rank=3
 PaulStoffregen/Audio,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-16,2026-05-19,2026-06-18,hard,published,feature_count=2; last_rank=1
 PaulStoffregen/ST7735_t3,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,related_infrastructure,"status=related_infrastructure; origin=related_link; platforms=Teensy; tags=display,tft,ui; why_selected=Useful display/UI support library for embedded instruments; notes=Foundation/support library"
 pierreportal/rust-dsp,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-29,2026-05-29,2026-06-28,hard,published,feature_count=1; last_rank=9
@@ -143,16 +150,19 @@ rolfdegen/Jeannie-Open-source-Synthesizer,webgpt_daily,data/published-repo-log.c
 RVX/LTC2DMX_Teensy_41_Audioshield,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=4
 sauloverissimo/midi2cpp,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,related_infrastructure,"status=related_infrastructure; origin=related_link; platforms=Daisy,Teensy,ESP32,Pico,other; tags=midi,codegen,asset-tooling; why_selected=Potential MIDI-to-C++ tooling utility; notes=Verify before relying on details"
 SeanBonaventure01/stm32-audio-eq,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=8
+shakfu/cyfaust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=7
+shawlty/Daisy-Eurorack-Audio-Module,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=8
 shawlty/Daisy-Eurorack-Audio-Module,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,watch,"status=watch; origin=watchlist; platforms=Daisy; tags=eurorack,daisy,audio-module; why_selected=Keep an eye on; possible Daisy Eurorack project; notes=Do not promote until public availability and source depth are verified"
+shev0k/EQVita,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=4
 shorepine/amy,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2024-03-17,2024-04-16,hard,published,feature_count=1; last_rank=3
 SloeComputers/picoX7,webgpt_daily,data/published-repo-log.csv,published,2026-05-26,2026-05-26,2026-06-25,hard,published,RP2040/RP2350 DX7-style FM synth; dual-core voices; PIO I2S; USB/UART MIDI and SYSEX
 sophiapoirier/destroyfx,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-19,2026-05-19,2026-06-18,hard,published,feature_count=1; last_rank=4
-sourcebox/mi-plaits-dsp-rs,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-04-16,2026-05-16,hard,published,feature_count=3; last_rank=6
+sourcebox/mi-plaits-dsp-rs,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-06-17,2026-07-17,hard,published,feature_count=4; last_rank=3
 spandit69/nest-audio-pcb,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-05-26,2026-06-25,hard,published,feature_count=2; last_rank=8
 squeedee/daisy-studio,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-05-29,2026-06-28,hard,published,feature_count=2; last_rank=2
 src3453/3HSPlug,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-29,2026-05-29,2026-06-28,hard,published,feature_count=1; last_rank=4
 stone-voices/vasvas,webgpt_daily,data/published-repo-log.csv,published,2026-05-26,2026-05-26,2026-06-25,hard,published,Daisy noisebox with dual piezo stereo input Dattorro-style reverb shimmer freeze plus schematic PCB and source
-t-dsp/t-dsp_software,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-04-18,2026-05-18,hard,published,feature_count=1; last_rank=9
+t-dsp/t-dsp_software,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-06-09,2026-07-09,hard,published,feature_count=2; last_rank=5
 thi-ng/synstack,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-04-18,2026-05-18,hard,published,feature_count=2; last_rank=1
 tilmanlarndt/DaisyPlayground,webgpt_daily,data/published-repo-log.csv,published,2026-05-22,2026-05-22,2026-06-21,hard,published,Daisy algorithm and porting playground with stmlib ports CloudSeed oscillator effect experiments and extraction value
 tommyyork/resynthesis,webgpt_daily,data/published-repo-log.append-2026-06-06.csv,published,2026-06-06,2026-06-06,2026-07-06,hard,published,Daisy Patch Init spectral granular resynthesis module with FFT grains V Oct pitch lock CV controls offline tests panel generation and implementation caveat
@@ -162,6 +172,7 @@ TynanGuenther/teensy_audio_guestbook,codex_weekly,codex-weekly/data/repo_feature
 wgd-modular/loewenzahnhonig-firmware,webgpt_daily,data/published-repo-log.csv,published,2026-06-03,2026-06-03,2026-07-03,hard,published,Daisy-based Eurorack firmware collection with precompiled bins libDaisy DaisySP submodules VCA compressor delay reverb and MI Rings stereo reverb
 willbearfruits/daisy-guitar-web,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected_extra,"status=selected_extra; origin=manual_add; platforms=Daisy; tags=guitar-fx,webusb,webserial,firmware,web-ui; why_selected=Add despite not being final ranked digest entry; useful Daisy firmware plus web interface reference; notes=Do not treat as replacement for digest ranked entry"
 willbearfruits/GlitchPedal,webgpt_daily,data/published-repo-log.csv,published,2026-06-02,2026-06-02,2026-07-02,hard,published,Daisy Seed multi-FX pedal with QSPI SDRAM phase-vocoder pitch shift spectral freeze drone ReverbSc delay chorus and real-time-safety notes
+WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=2
 windysynth/windy1,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-26,2026-05-29,2026-06-28,hard,published,feature_count=3; last_rank=5
 windysynth/windy1,webgpt_daily,data/published-repo-log.csv,published,2026-05-23,2026-05-23,2026-06-22,hard,published,Teensy 4.1 USB-host wind-controller synth with Vyzex patch compatibility and practical power PSRAM handling
 yamamo2shun1/JUMBLEQ,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-05-29,2026-06-28,hard,published,feature_count=2; last_rank=6
@@ -171,3 +182,4 @@ zlosynth/arplus,codex_weekly,codex-weekly/data/repo_feature_history.json,publish
 zlosynth/kaseta,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-05-19,2026-06-18,hard,published,feature_count=5; last_rank=8
 zones-convolution/zones_client,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-05-12,2026-06-11,hard,published,feature_count=1; last_rank=9
 ZorakAudio/ZorakAudio-Experimental-Plugins,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-26,2026-05-26,2026-06-25,hard,published,feature_count=1; last_rank=2
+Zz0ne/Emulacao_de_Pedal_Analogico_com_Machine_Learning,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=9

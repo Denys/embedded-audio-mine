@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-17",
+  "added": [
+    "Ohminecraft/esp32-dsp-core",
+    "amsynth/amsynth",
+    "cehurley/kzoinks",
+    "clovesrodrigues/AUDIO_DSP",
+    "grahamfranz/PoleZero",
+    "grame-cncm/faust",
+    "joeriben/T5ynth",
+    "nutcas3/airten",
+    "shev0k/EQVita",
+    "sourcebox/mi-plaits-dsp-rs"
+  ],
+  "removed": [
+    "ManasWolrd/VitalReverb",
+    "Omraj09/ESP32-Based-DSP-Audio-Equalizer-and-Controller",
+    "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+    "Zz0ne/Emulacao_de_Pedal_Analogico_com_Machine_Learning",
+    "bljustice/hue",
+    "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
+    "palmerr23/Teensy8x8AudioBoard",
+    "shakfu/cyfaust",
+    "shawlty/Daisy-Eurorack-Audio-Module",
+    "t-dsp/t-dsp_software"
+  ],
+  "changed": []
+}

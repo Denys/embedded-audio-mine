@@ -1,0 +1,31 @@
+{
+  "name": "embedded-audio-mine-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/build-data.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "prebuild": "node scripts/build-data.mjs",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "build:data": "node scripts/build-data.mjs",
+    "qa:render": "node scripts/qa-render.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@tanstack/react-table": "^8.21.3",
+    "csv-parse": "^5.6.0",
+    "motion": "^12.23.26",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "playwright": "^1.61.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0"
+  }
+}

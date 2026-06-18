@@ -29,4 +29,4 @@ The WebGPT daily lane should likewise watch this folder, especially `data/repo_f
 
 ## Imported snapshot
 
-The initial import preserves the local Codex weekly archive through `2026-05-29` plus its JSON state. Future imports should keep this layout and update the shared common index after state changes.
+The imported Codex weekly archive is current through `2026-06-17` plus its JSON state. Future imports should keep this layout and update the shared common index after state changes.

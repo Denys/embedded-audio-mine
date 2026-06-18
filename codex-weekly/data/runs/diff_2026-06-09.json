@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-09",
+  "added": [
+    "ManasWolrd/VitalReverb",
+    "Omraj09/ESP32-Based-DSP-Audio-Equalizer-and-Controller",
+    "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+    "Zz0ne/Emulacao_de_Pedal_Analogico_com_Machine_Learning",
+    "bljustice/hue",
+    "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
+    "palmerr23/Teensy8x8AudioBoard",
+    "shakfu/cyfaust",
+    "shawlty/Daisy-Eurorack-Audio-Module",
+    "t-dsp/t-dsp_software"
+  ],
+  "removed": [
+    "DADDesign-Projects/DaisySeedCubeTemplate",
+    "bristol-communal-modular/dual-2164-vca",
+    "eTextile/Synth",
+    "kratofl/kratomix",
+    "lluisestape-upc/Synth1.0",
+    "pierreportal/rust-dsp",
+    "squeedee/daisy-studio",
+    "src3453/3HSPlug",
+    "windysynth/windy1",
+    "yamamo2shun1/JUMBLEQ"
+  ],
+  "changed": []
+}
