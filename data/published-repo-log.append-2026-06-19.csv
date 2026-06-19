@@ -1,0 +1,12 @@
+repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
+plinkysynth/plinky_public,STRONG_PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Touch synth; hw/imgs/sw/UF2/bin; hardware and software open-sourced; license file needs full read"
+bitfieldaudio/OTTO + cester-ino/OTTO-hardware,STRONG_PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Controls-rich Pi/STM32 groovebox hardware; DAC/main/power boards; SGTL5000; GPL-3.0; WIP"
+monome/norns-shield,STRONG_PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Pi audio shield; BOM/CAD/Eagle/images/schematic; CS4270/CS4271; GPL-3.0; unsupported but complete"
+zynthian/zynthian-hw + zynthian/zynthian-case,STRONG_PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Standalone Pi synth/effects platform; PCBs/schemes/parts/pin assignment plus 3D/aluminum/laser/CNC case assets"
+jonbro/Audcalc,STRONG_PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Pocket RP2040 groovebox; enclosure/hardware/images/firmware/guide; KiCad BOM; MIT"
+vonkonow/LeetAI,PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Portable ESP32-S2 synth ensemble; enclosure/hardware/firmware/assets; MIT; concept prototype"
+wntrblm/Big_Honking_Button,PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Eurorack sampler/performance module; faceplate/hardware/firmware/samples/user guide; MIT code + CC-BY-SA hardware"
+wntrblm/Sol,PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Open-source CircuitPython MIDI-to-CV Eurorack module; firmware/hardware/user guide; MIT code + CC-BY-SA hardware"
+wntrblm/Castor_and_Pollux,PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Juno-inspired Eurorack dual oscillator; KiCad mainboard/jackboard/panel/programming board; license file requires read"
+Ixox/preenfm3,PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"Standalone FM synth; bootloader/docs/firmware/hardware/libs/scripts/releases; license/case details need final verification"
+Ixox/preenfm2,PASS,2026-06-19,2026-06-19,2026-07-19,published_candidate,"preenFM2 firmware/source plus PCB/MCU board/case hardware files; older reference"
