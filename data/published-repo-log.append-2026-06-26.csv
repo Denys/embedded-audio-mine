@@ -1,0 +1,6 @@
+repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
+emeb/dspod,STRONG_PASS,2026-06-26,2026-06-26,2026-07-26,published,"Modular Eurorack audio DSP ecosystem with carrier and STM32U3C5/RP2350/ESP32S3/H7R3/iCE40 daughterboards; NAU88C22 codec; KiCad 9; bench-tested audio/CV/LCD/encoder; HSP spectral-freeze timing notes"
+apfaudio/eurorack-pmod,STRONG_PASS,2026-06-26,2026-06-26,2026-07-26,published,"OSHWA-certified FPGA Eurorack PMOD front end; AK4619 4in/4out DC-coupled codec; KiCad/fab/BOM; Verilog DSP cores and calibration workflow"
+mattybrad/drumkid2,PASS,2026-06-26,2026-06-26,2026-07-26,published,"Raspberry Pi Pico Eurorack aleatoric drum machine with code and PCB files; 44.1k audio; CV inputs; trigger outputs; SD samples; dense performance UI"
+alexlafetra/stepchild,PASS,2026-06-26,2026-06-26,2026-07-26,published,"Pi Pico generative MIDI/CV instrument with ChildOS sequencer, 4 MIDI outs, TRS/DIN/USB MIDI, CV out, PCBs, BOM, case STLs and Eurorack faceplate"
+tonystuart/music-device-lab,REF_PASS,2026-06-26,2026-06-26,2026-07-26,published,"ESP32 standalone music instrument lab with SoundFont-style wavetable synth, touch UI, multiple PCB prototypes, VS1053/CS4344/ESP32-A1S audio-board lessons"
