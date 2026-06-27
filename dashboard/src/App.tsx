@@ -91,6 +91,25 @@ function highlightNarrative(project: ProjectRecord) {
   return limitWords(uniqueParts.join(" "), HIGHLIGHT_WORD_LIMIT);
 }
 
+function projectSearchText(project: ProjectRecord) {
+  return [
+    project.repo,
+    project.status,
+    project.selectedStatus,
+    project.origin,
+    project.notes,
+    project.whySelected,
+    project.contentSummary,
+    project.portabilitySummary,
+    project.platforms.join(" "),
+    project.tags.join(" "),
+    project.representativeFiles.join(" "),
+    project.sourceFiles.join(" ")
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
 function streamText(streams: StreamKey[]) {
   return streams.map((stream) => streamLabels[stream]).join(" + ");
 }
@@ -196,23 +215,33 @@ function MetricTile({
   label,
   value,
   detail,
-  tone = "default"
+  tone = "default",
+  active = false,
+  onClick
 }: {
   icon: ReactNode;
   label: string;
   value: string;
   detail: string;
   tone?: "default" | "hot" | "cool";
+  active?: boolean;
+  onClick?: () => void;
 }) {
   return (
-    <motion.div className={`metric-tile ${tone}`} whileHover={{ y: -2 }} transition={{ duration: 0.18 }}>
+    <motion.button
+      className={`metric-tile ${tone} ${active ? "active" : ""}`}
+      type="button"
+      onClick={onClick}
+      whileHover={{ y: -2 }}
+      transition={{ duration: 0.18 }}
+    >
       <div className="metric-icon">{icon}</div>
       <div>
         <p>{label}</p>
         <strong>{value}</strong>
         <span>{detail}</span>
       </div>
-    </motion.div>
+    </motion.button>
   );
 }
 
@@ -337,7 +366,19 @@ function ProjectHighlightWindow({
   );
 }
 
-function DistributionBars({ title, points, limit = 7 }: { title: string; points: DistributionPoint[]; limit?: number }) {
+function DistributionBars({
+  title,
+  points,
+  limit = 7,
+  selectedKey = "all",
+  onSelect
+}: {
+  title: string;
+  points: DistributionPoint[];
+  limit?: number;
+  selectedKey?: string;
+  onSelect?: (key: string) => void;
+}) {
   const max = Math.max(...points.map((point) => point.count), 1);
   return (
     <section className="panel distribution-panel">
@@ -346,7 +387,12 @@ function DistributionBars({ title, points, limit = 7 }: { title: string; points:
       </div>
       <div className="bar-list">
         {points.slice(0, limit).map((point) => (
-          <div className="bar-row" key={point.key}>
+          <button
+            className={`bar-row ${selectedKey === point.key ? "active" : ""}`}
+            key={point.key}
+            type="button"
+            onClick={() => onSelect?.(point.key)}
+          >
             <span>{point.key}</span>
             <div className="bar-track">
               <motion.i
@@ -356,14 +402,20 @@ function DistributionBars({ title, points, limit = 7 }: { title: string; points:
               />
             </div>
             <b>{point.count}</b>
-          </div>
+          </button>
         ))}
       </div>
     </section>
   );
 }
 
-function TimelineStrip() {
+function TimelineStrip({
+  selectedDate,
+  onSelectDate
+}: {
+  selectedDate: string;
+  onSelectDate: (date: string) => void;
+}) {
   const points = data.timeline.slice(-22);
   const max = Math.max(...points.map((point) => point.codex_weekly + point.webgpt_daily), 1);
   const width = 640;
@@ -409,7 +461,24 @@ function TimelineStrip() {
           const value = point.codex_weekly + point.webgpt_daily;
           const x = index * step;
           const y = height - (value / max) * 104 - 14;
-          return <circle key={point.date} cx={x} cy={y} r="3.5" fill="#7cffb2" opacity={0.85} />;
+          return (
+            <circle
+              key={point.date}
+              className={selectedDate === point.date ? "active" : ""}
+              cx={x}
+              cy={y}
+              r="6"
+              fill="#7cffb2"
+              opacity={selectedDate === point.date ? 1 : 0.85}
+              role="button"
+              tabIndex={0}
+              aria-label={`Filter projects seen on ${formatDate(point.date)}`}
+              onClick={() => onSelectDate(point.date)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") onSelectDate(point.date);
+              }}
+            />
+          );
         })}
       </svg>
     </section>
@@ -472,7 +541,15 @@ function SignalRadar({ project }: { project: ProjectRecord }) {
   );
 }
 
-function DetailPanel({ project }: { project: ProjectRecord }) {
+function DetailPanel({
+  project,
+  onSurfaceSelect,
+  onTextSearch
+}: {
+  project: ProjectRecord;
+  onSurfaceSelect: (surface: string) => void;
+  onTextSearch: (value: string) => void;
+}) {
   return (
     <AnimatePresence mode="wait">
       <motion.aside
@@ -512,7 +589,13 @@ function DetailPanel({ project }: { project: ProjectRecord }) {
         </dl>
         <div className="tag-cloud">
           {[...project.platforms, ...project.tags].slice(0, 12).map((tag) => (
-            <span key={tag}>{tag}</span>
+            <button
+              key={tag}
+              type="button"
+              onClick={() => (project.platforms.includes(tag) ? onSurfaceSelect(tag) : onTextSearch(tag))}
+            >
+              {tag}
+            </button>
           ))}
         </div>
         <div className="detail-section">
@@ -520,7 +603,11 @@ function DetailPanel({ project }: { project: ProjectRecord }) {
           {project.representativeFiles.length ? (
             <ul className="file-list">
               {project.representativeFiles.slice(0, 5).map((file) => (
-                <li key={file}>{file}</li>
+                <li key={file}>
+                  <button type="button" onClick={() => onTextSearch(file)}>
+                    {file}
+                  </button>
+                </li>
               ))}
             </ul>
           ) : (
@@ -531,7 +618,11 @@ function DetailPanel({ project }: { project: ProjectRecord }) {
           <h3>Source Ledger</h3>
           <ul className="source-list">
             {project.sourceFiles.slice(0, 6).map((file) => (
-              <li key={file}>{file}</li>
+              <li key={file}>
+                <button type="button" onClick={() => onTextSearch(file)}>
+                  {file}
+                </button>
+              </li>
             ))}
           </ul>
         </div>
@@ -550,11 +641,17 @@ function DetailPanel({ project }: { project: ProjectRecord }) {
 function ProjectTable({
   projects,
   selectedId,
-  onSelect
+  onSelect,
+  onLaneSelect,
+  onRepeatSelect,
+  onSurfaceSelect
 }: {
   projects: ProjectRecord[];
   selectedId: string;
   onSelect: (project: ProjectRecord) => void;
+  onLaneSelect: (lane: string) => void;
+  onRepeatSelect: (repeat: string) => void;
+  onSurfaceSelect: (surface: string) => void;
 }) {
   const [sorting, setSorting] = useState<SortingState>([{ id: "portingScore", desc: true }]);
   const columns = useMemo(
@@ -577,7 +674,21 @@ function ProjectTable({
       }),
       columnHelper.accessor("lane", {
         header: "Lane",
-        cell: (info) => <span className="chip">{info.getValue() || info.row.original.contentValue || "unclassified"}</span>
+        cell: (info) => {
+          const lane = info.getValue() || info.row.original.contentValue || "unclassified";
+          return (
+            <button
+              className="chip"
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                onLaneSelect(lane);
+              }}
+            >
+              {lane}
+            </button>
+          );
+        }
       }),
       columnHelper.accessor("platforms", {
         header: "Porting Surface",
@@ -588,7 +699,16 @@ function ProjectTable({
               .getValue()
               .slice(0, 4)
               .map((platform) => (
-                <span key={platform}>{platform}</span>
+                <button
+                  key={platform}
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    onSurfaceSelect(platform);
+                  }}
+                >
+                  {platform}
+                </button>
               ))}
           </div>
         )
@@ -599,10 +719,21 @@ function ProjectTable({
       }),
       columnHelper.accessor("repeatState", {
         header: "Repeat",
-        cell: (info) => <span className={`state-chip ${info.getValue()}`}>{info.getValue()}</span>
+        cell: (info) => (
+          <button
+            className={`state-chip ${info.getValue()}`}
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              onRepeatSelect(info.getValue());
+            }}
+          >
+            {info.getValue()}
+          </button>
+        )
       })
     ],
-    []
+    [onLaneSelect, onRepeatSelect, onSurfaceSelect]
   );
 
   const table = useReactTable({
@@ -704,6 +835,9 @@ export function App() {
   const [stream, setStream] = useState("all");
   const [platform, setPlatform] = useState("all");
   const [repeat, setRepeat] = useState("all");
+  const [lane, setLane] = useState("all");
+  const [dateFilter, setDateFilter] = useState("all");
+  const [crossOnly, setCrossOnly] = useState(false);
   const highlightProjects = useMemo(() => data.topPorting.slice(0, HIGHLIGHT_PROJECT_LIMIT), []);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [isHighlightPaused, setIsHighlightPaused] = useState(false);
@@ -711,27 +845,110 @@ export function App() {
 
   const platforms = useMemo(() => data.platformDistribution.map((point) => point.key).filter((item) => item !== "unclassified"), []);
 
+  const selectFirstProject = useCallback(
+    (predicate: (project: ProjectRecord) => boolean) => {
+      const project = allProjects.find(predicate);
+      if (project) setSelectedId(project.id);
+    },
+    [allProjects]
+  );
+
+  const clearFilters = useCallback(() => {
+    setSearch("");
+    setStream("all");
+    setPlatform("all");
+    setRepeat("all");
+    setLane("all");
+    setDateFilter("all");
+    setCrossOnly(false);
+    if (allProjects[0]) setSelectedId(allProjects[0].id);
+  }, [allProjects]);
+
+  const resetFacetFilters = useCallback(() => {
+    setSearch("");
+    setStream("all");
+    setPlatform("all");
+    setRepeat("all");
+    setLane("all");
+    setDateFilter("all");
+    setCrossOnly(false);
+  }, []);
+
+  const applyTextSearch = useCallback((value: string) => {
+    setSearch(value);
+    setPlatform("all");
+    setLane("all");
+    setDateFilter("all");
+    setCrossOnly(false);
+    selectFirstProject((project) => projectSearchText(project).includes(value.toLowerCase()));
+  }, [selectFirstProject]);
+
+  const applySurface = useCallback((surface: string) => {
+    const next = platform === surface ? "all" : surface;
+    setSearch("");
+    setPlatform(next);
+    setLane("all");
+    setDateFilter("all");
+    setCrossOnly(false);
+    if (next !== "all") selectFirstProject((project) => project.platforms.includes(next));
+  }, [platform, selectFirstProject]);
+
+  const applyLane = useCallback((nextLane: string) => {
+    const next = lane === nextLane ? "all" : nextLane;
+    setSearch("");
+    setLane(next);
+    setDateFilter("all");
+    setCrossOnly(false);
+    if (next !== "all") selectFirstProject((project) => project.lane === next || project.contentValue === next);
+  }, [lane, selectFirstProject]);
+
+  const applyRepeat = useCallback((nextRepeat: string) => {
+    const next = repeat === nextRepeat ? "all" : nextRepeat;
+    setSearch("");
+    setRepeat(next);
+    setDateFilter("all");
+    setCrossOnly(false);
+    if (next !== "all") selectFirstProject((project) => project.repeatState === next);
+  }, [repeat, selectFirstProject]);
+
+  const applyStream = useCallback((nextStream: string) => {
+    setStream(nextStream);
+    setDateFilter("all");
+    setCrossOnly(false);
+    if (nextStream === "all") {
+      if (allProjects[0]) setSelectedId(allProjects[0].id);
+    } else {
+      selectFirstProject((project) => project.streams.includes(nextStream as StreamKey));
+    }
+  }, [allProjects, selectFirstProject]);
+
+  const applyMetricFilter = useCallback(
+    (filter: "all" | "blocked" | "soft" | "cross" | "eligible") => {
+      resetFacetFilters();
+      if (filter === "blocked" || filter === "soft" || filter === "eligible") setRepeat(filter);
+      if (filter === "cross") setCrossOnly(true);
+      if (filter === "all" && allProjects[0]) setSelectedId(allProjects[0].id);
+      if (filter === "blocked" || filter === "soft" || filter === "eligible") {
+        selectFirstProject((project) => project.repeatState === filter);
+      }
+      if (filter === "cross") selectFirstProject((project) => project.streams.length > 1);
+    },
+    [allProjects, resetFacetFilters, selectFirstProject]
+  );
+
   const filteredProjects = useMemo(() => {
     const query = search.trim().toLowerCase();
     return allProjects.filter((project) => {
       if (stream !== "all" && !project.streams.includes(stream as StreamKey)) return false;
       if (platform !== "all" && !project.platforms.includes(platform)) return false;
       if (repeat !== "all" && project.repeatState !== repeat) return false;
+      if (lane !== "all" && project.lane !== lane && project.contentValue !== lane) return false;
+      if (dateFilter !== "all" && project.lastPublished !== dateFilter && !project.digestDates.includes(dateFilter)) return false;
+      if (crossOnly && project.streams.length < 2) return false;
       if (!query) return true;
-      return [
-        project.repo,
-        project.notes,
-        project.whySelected,
-        project.contentSummary,
-        project.portabilitySummary,
-        project.platforms.join(" "),
-        project.tags.join(" ")
-      ]
-        .join(" ")
-        .toLowerCase()
-        .includes(query);
+      return projectSearchText(project).includes(query);
     });
-  }, [allProjects, platform, repeat, search, stream]);
+  }, [allProjects, crossOnly, dateFilter, lane, platform, repeat, search, stream]);
 
   const selectedProject = allProjects.find((project) => project.id === selectedId) ?? filteredProjects[0] ?? allProjects[0];
 
@@ -787,150 +1004,190 @@ export function App() {
         <aside className="left-rail">
           <section className="panel stream-panel">
             <h2>Streams</h2>
-            <button className={stream === "all" ? "active" : ""} onClick={() => setStream("all")} type="button">
+            <button className={stream === "all" ? "active" : ""} onClick={() => applyStream("all")} type="button">
               <Database size={18} /> All projects <b>{data.metrics.totalProjects}</b>
             </button>
             <button
               className={stream === "webgpt_daily" ? "active" : ""}
-              onClick={() => setStream("webgpt_daily")}
+              onClick={() => applyStream("webgpt_daily")}
               type="button"
             >
               <Heartbeat size={18} /> WebGPT Daily <b>{data.metrics.webgptProjects}</b>
             </button>
             <button
               className={stream === "codex_weekly" ? "active" : ""}
-              onClick={() => setStream("codex_weekly")}
+              onClick={() => applyStream("codex_weekly")}
               type="button"
             >
               <GithubLogo size={18} /> Codex Weekly <b>{data.metrics.codexProjects}</b>
             </button>
           </section>
 
-          <DistributionBars title="Porting Surfaces" points={data.platformDistribution} limit={8} />
+          <DistributionBars
+            title="Porting Surfaces"
+            points={data.platformDistribution}
+            limit={8}
+            selectedKey={platform}
+            onSelect={applySurface}
+          />
           <section className="panel source-panel">
             <div className="panel-heading">
               <h2>Source Readback</h2>
             </div>
             <dl>
-              <div>
-                <dt>Published CSV rows</dt>
-                <dd>{formatNumber(data.sourceSummary.publishedRows)}</dd>
-              </div>
-              <div>
-                <dt>Selected references</dt>
-                <dd>{formatNumber(data.sourceSummary.selectedRows)}</dd>
-              </div>
-              <div>
-                <dt>Common index rows</dt>
-                <dd>{formatNumber(data.sourceSummary.commonIndexRows)}</dd>
-              </div>
-              <div>
-                <dt>Codex run files</dt>
-                <dd>{formatNumber(data.sourceSummary.codexRunFiles)}</dd>
-              </div>
+              <button type="button" onClick={clearFilters}>
+                <span>Published CSV rows</span>
+                <b>{formatNumber(data.sourceSummary.publishedRows)}</b>
+              </button>
+              <button type="button" onClick={() => applyTextSearch("selected")}>
+                <span>Selected references</span>
+                <b>{formatNumber(data.sourceSummary.selectedRows)}</b>
+              </button>
+              <button type="button" onClick={() => applyTextSearch("common")}>
+                <span>Common index rows</span>
+                <b>{formatNumber(data.sourceSummary.commonIndexRows)}</b>
+              </button>
+              <button type="button" onClick={() => applyStream("codex_weekly")}>
+                <span>Codex run files</span>
+                <b>{formatNumber(data.sourceSummary.codexRunFiles)}</b>
+              </button>
             </dl>
           </section>
         </aside>
 
         <section className="main-stage">
-          <motion.section
-            className="metrics-grid"
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: {},
-              show: { transition: { staggerChildren: 0.06 } }
-            }}
-          >
-            {[
-              {
-                icon: <Database size={22} weight="duotone" />,
-                label: "Merged Projects",
-                value: formatNumber(data.metrics.totalProjects),
-                detail: "daily and weekly evidence"
-              },
-              {
-                icon: <WarningCircle size={22} weight="duotone" />,
-                label: "Hard Blocks",
-                value: formatNumber(data.metrics.hardBlocks),
-                detail: "repeat window active",
-                tone: "hot" as const
-              },
-              {
-                icon: <Stack size={22} weight="duotone" />,
-                label: "Soft References",
-                value: formatNumber(data.metrics.softReferences + data.metrics.selectedReferences),
-                detail: "watch and related infra"
-              },
-              {
-                icon: <ChartLine size={22} weight="duotone" />,
-                label: "Cross Stream",
-                value: formatNumber(data.metrics.crossStreamProjects),
-                detail: "seen by both lanes",
-                tone: "cool" as const
-              },
-              {
-                icon: <Cpu size={22} weight="duotone" />,
-                label: "Repeat Eligible",
-                value: formatNumber(data.metrics.repeatEligible),
-                detail: "safe to revisit"
-              }
-            ].map((metric) => (
-              <motion.div key={metric.label} variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}>
-                <MetricTile {...metric} />
-              </motion.div>
-            ))}
-          </motion.section>
-
-          <section className="command-bar">
-            <div className="search-box">
-              <MagnifyingGlass size={18} weight="bold" />
-              <input
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search repos, platforms, firmware notes, source evidence"
-              />
-            </div>
-            <FilterSelect
-              label="Platform"
-              value={platform}
-              options={platforms}
-              onChange={setPlatform}
-            />
-            <FilterSelect
-              label="Repeat"
-              value={repeat}
-              options={["blocked", "eligible", "soft", "unknown"]}
-              onChange={setRepeat}
-            />
-            <button className="clear-button" type="button" onClick={() => { setSearch(""); setStream("all"); setPlatform("all"); setRepeat("all"); }}>
-              <Funnel size={17} weight="bold" />
-              Clear
-            </button>
-          </section>
-
-          <ProjectHighlightWindow
-            projects={highlightProjects}
-            currentIndex={highlightIndex}
-            isPaused={isHighlightPaused}
-            onStep={stepHighlight}
-            onSelect={selectHighlight}
-            onTogglePause={() => setIsHighlightPaused((paused) => !paused)}
-          />
-
-          <div className="insight-grid">
-            <TimelineStrip />
-            <DistributionBars title="Lane Mix" points={data.laneDistribution} limit={6} />
-          </div>
-
           <ProjectTable
             projects={filteredProjects}
             selectedId={selectedProject.id}
             onSelect={(project) => setSelectedId(project.id)}
+            onLaneSelect={applyLane}
+            onRepeatSelect={applyRepeat}
+            onSurfaceSelect={applySurface}
           />
+
+          <div className="support-deck">
+            <section className="command-bar">
+              <div className="search-box">
+                <MagnifyingGlass size={18} weight="bold" />
+                <input
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Search repos, platforms, firmware notes, source evidence"
+                />
+              </div>
+              <FilterSelect
+                label="Platform"
+                value={platform}
+                options={platforms}
+                onChange={(value) => {
+                  setPlatform(value);
+                  setDateFilter("all");
+                  setCrossOnly(false);
+                }}
+              />
+              <FilterSelect
+                label="Repeat"
+                value={repeat}
+                options={["blocked", "eligible", "soft", "unknown"]}
+                onChange={(value) => {
+                  setRepeat(value);
+                  setDateFilter("all");
+                  setCrossOnly(false);
+                }}
+              />
+              <button className="clear-button" type="button" onClick={clearFilters}>
+                <Funnel size={17} weight="bold" />
+                Clear
+              </button>
+            </section>
+
+            <motion.section
+              className="metrics-grid"
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.06 } }
+              }}
+            >
+              {[
+                {
+                  icon: <Database size={22} weight="duotone" />,
+                  label: "Merged Projects",
+                  value: formatNumber(data.metrics.totalProjects),
+                  detail: "daily and weekly evidence",
+                  active: !search && stream === "all" && platform === "all" && repeat === "all" && lane === "all" && dateFilter === "all" && !crossOnly,
+                  onClick: () => applyMetricFilter("all")
+                },
+                {
+                  icon: <WarningCircle size={22} weight="duotone" />,
+                  label: "Hard Blocks",
+                  value: formatNumber(data.metrics.hardBlocks),
+                  detail: "repeat window active",
+                  tone: "hot" as const,
+                  active: repeat === "blocked",
+                  onClick: () => applyMetricFilter("blocked")
+                },
+                {
+                  icon: <Stack size={22} weight="duotone" />,
+                  label: "Soft References",
+                  value: formatNumber(data.metrics.softReferences + data.metrics.selectedReferences),
+                  detail: "watch and related infra",
+                  active: repeat === "soft",
+                  onClick: () => applyMetricFilter("soft")
+                },
+                {
+                  icon: <ChartLine size={22} weight="duotone" />,
+                  label: "Cross Stream",
+                  value: formatNumber(data.metrics.crossStreamProjects),
+                  detail: "seen by both lanes",
+                  tone: "cool" as const,
+                  active: crossOnly,
+                  onClick: () => applyMetricFilter("cross")
+                },
+                {
+                  icon: <Cpu size={22} weight="duotone" />,
+                  label: "Repeat Eligible",
+                  value: formatNumber(data.metrics.repeatEligible),
+                  detail: "safe to revisit",
+                  active: repeat === "eligible",
+                  onClick: () => applyMetricFilter("eligible")
+                }
+              ].map((metric) => (
+                <motion.div key={metric.label} variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}>
+                  <MetricTile {...metric} />
+                </motion.div>
+              ))}
+            </motion.section>
+
+            <ProjectHighlightWindow
+              projects={highlightProjects}
+              currentIndex={highlightIndex}
+              isPaused={isHighlightPaused}
+              onStep={stepHighlight}
+              onSelect={selectHighlight}
+              onTogglePause={() => setIsHighlightPaused((paused) => !paused)}
+            />
+
+            <div className="insight-grid">
+              <TimelineStrip
+                selectedDate={dateFilter}
+                onSelectDate={(date) => {
+                  const next = dateFilter === date ? "all" : date;
+                  setSearch("");
+                  setDateFilter(next);
+                  setCrossOnly(false);
+                  if (next !== "all") {
+                    selectFirstProject((project) => project.lastPublished === next || project.digestDates.includes(next));
+                  }
+                }}
+              />
+              <DistributionBars title="Lane Mix" points={data.laneDistribution} limit={6} selectedKey={lane} onSelect={applyLane} />
+            </div>
+          </div>
         </section>
 
-        <DetailPanel project={selectedProject} />
+        <DetailPanel project={selectedProject} onSurfaceSelect={applySurface} onTextSearch={applyTextSearch} />
       </main>
     </div>
   );

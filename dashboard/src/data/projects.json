@@ -4,13 +4,13 @@
     "codexProjects": 92,
     "webgptProjects": 138,
     "crossStreamProjects": 9,
-    "hardBlocks": 141,
+    "hardBlocks": 134,
     "softReferences": 9,
-    "repeatEligible": 39,
+    "repeatEligible": 46,
     "selectedReferences": 19,
     "latestCodexDate": "2026-06-17",
     "latestWebgptDate": "2026-06-17",
-    "generatedAt": "2026-06-18T16:23:52.958Z"
+    "generatedAt": "2026-06-19T12:05:31.360Z"
   },
   "projects": [
     {
@@ -504,72 +504,6 @@
       "portingScore": 157
     },
     {
-      "id": "orastron/brickworks",
-      "repo": "Orastron/brickworks",
-      "url": "https://github.com/Orastron/brickworks",
-      "streams": [
-        "codex_weekly",
-        "webgpt_daily"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md",
-        "data/published-repo-log.csv",
-        "digests/2026-05-24.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2026-05-19",
-        "2026-05-24",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "examples/fx_chorus/src/plugin.h",
-        "examples/fx_delay/src/plugin.h",
-        "examples/fx_flanger/src/plugin.h",
-        "examples/fx_noise_gate/src/plugin.h"
-      ],
-      "rankHistory": {
-        "2026-05-19": 5
-      },
-      "lane": "REF_PASS",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2026-05-19",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-23",
-      "antiRepeatScope": "hard",
-      "notes": "Cross-platform DSP toolkit with Daisy Seed examples useful as portable architecture and algorithm source feature_count=1; last_rank=5",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 1,
-      "latestRank": 5,
-      "stars": 105,
-      "forks": 7,
-      "pushedAt": "2026-04-05",
-      "topic": "Computer-first effects",
-      "score": 256,
-      "statusTag": "NEW",
-      "contentValue": "strong",
-      "contentSummary": "141 source files with 22 audio/DSP implementation files; files: examples/fx_chorus/src/plugin.h, examples/fx_delay/src/plugin.h, examples/fx_flanger/src/plugin.h, examples/fx_noise_gate/src/plugin.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
-      "repeatState": "blocked",
-      "portingScore": 151
-    },
-    {
       "id": "korginc/logue-sdk",
       "repo": "korginc/logue-sdk",
       "url": "https://github.com/korginc/logue-sdk",
@@ -648,8 +582,74 @@
       "contentSummary": "247 source files with 84 audio/DSP implementation files; files: platform/common/dsp/biquad.hpp, platform/drumlogue/dummy-delfx/delay.h, platform/drumlogue/dummy-revfx/reverb.h, platform/microkorg2/MultitapDelay/MultitapDelay.h",
       "portabilityValue": "high",
       "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
+      "repeatState": "eligible",
+      "portingScore": 151
+    },
+    {
+      "id": "orastron/brickworks",
+      "repo": "Orastron/brickworks",
+      "url": "https://github.com/Orastron/brickworks",
+      "streams": [
+        "codex_weekly",
+        "webgpt_daily"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md",
+        "data/published-repo-log.csv",
+        "digests/2026-05-24.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2026-05-19",
+        "2026-05-24",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "examples/fx_chorus/src/plugin.h",
+        "examples/fx_delay/src/plugin.h",
+        "examples/fx_flanger/src/plugin.h",
+        "examples/fx_noise_gate/src/plugin.h"
+      ],
+      "rankHistory": {
+        "2026-05-19": 5
+      },
+      "lane": "REF_PASS",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2026-05-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-23",
+      "antiRepeatScope": "hard",
+      "notes": "Cross-platform DSP toolkit with Daisy Seed examples useful as portable architecture and algorithm source feature_count=1; last_rank=5",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 1,
+      "latestRank": 5,
+      "stars": 105,
+      "forks": 7,
+      "pushedAt": "2026-04-05",
+      "topic": "Computer-first effects",
+      "score": 256,
+      "statusTag": "NEW",
+      "contentValue": "strong",
+      "contentSummary": "141 source files with 22 audio/DSP implementation files; files: examples/fx_chorus/src/plugin.h, examples/fx_delay/src/plugin.h, examples/fx_flanger/src/plugin.h, examples/fx_noise_gate/src/plugin.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "blocked",
-      "portingScore": 137
+      "portingScore": 151
     },
     {
       "id": "zlosynth/kaseta",
@@ -730,8 +730,300 @@
       "contentSummary": "6 hardware design files plus repository implementation evidence; files: benches/src/bin/compressor.rs, benches/src/bin/delay_blend.rs, benches/src/bin/delay_rewind.rs, benches/src/bin/oscillator.rs",
       "portabilityValue": "high",
       "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
-      "repeatState": "blocked",
+      "repeatState": "eligible",
+      "portingScore": 146
+    },
+    {
+      "id": "antoinevg/daisy_bsp",
+      "repo": "antoinevg/daisy_bsp",
+      "url": "https://github.com/antoinevg/daisy_bsp",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-16.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2024-03-19.md",
+        "codex-weekly/digests/2026-04-09.md",
+        "codex-weekly/digests/2026-04-16.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2024-03-19",
+        "2026-04-09",
+        "2026-04-16",
+        "2026-04-18",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "examples/audio_midi.rs",
+        "examples/dsp/mod.rs",
+        "examples/dsp/osc.rs",
+        "examples/dsp/wavetable.rs"
+      ],
+      "rankHistory": {
+        "2024-03-19": 2,
+        "2026-04-09": 5,
+        "2026-04-16": 5,
+        "2026-05-19": 6
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2024-03-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=4; last_rank=6",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 4,
+      "latestRank": 6,
+      "stars": 80,
+      "forks": 14,
+      "pushedAt": "2025-06-02",
+      "topic": "Daisy Seed",
+      "score": 222,
+      "statusTag": "RE-ENTRY: updated",
+      "contentValue": "strong",
+      "contentSummary": "29 source files with 9 audio/DSP implementation files; files: examples/dsp/wavetable.rs, examples/dsp/mod.rs, examples/dsp/osc.rs, examples/audio_midi.rs",
+      "portabilityValue": "high",
+      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
+      "repeatState": "eligible",
+      "portingScore": 138
+    },
+    {
+      "id": "ohmic-net/puca_dsp",
+      "repo": "ohmic-net/puca_dsp",
+      "url": "https://github.com/ohmic-net/puca_dsp",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-18.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2024-03-26.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-04-21.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "ESP32",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2024-03-26",
+        "2026-04-18",
+        "2026-04-21",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h",
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h",
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h",
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp"
+      ],
+      "rankHistory": {
+        "2024-03-26": 4,
+        "2026-04-18": 2,
+        "2026-05-19": 7
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2024-03-26",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=3; last_rank=7",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 3,
+      "latestRank": 7,
+      "stars": 76,
+      "forks": 6,
+      "pushedAt": "2026-04-25",
+      "topic": "ESP32 audio",
+      "score": 210,
+      "statusTag": "RETURNING",
+      "contentValue": "strong",
+      "contentSummary": "2 hardware design files plus repository implementation evidence; files: puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp",
+      "portabilityValue": "high",
+      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
+      "repeatState": "eligible",
+      "portingScore": 137
+    },
+    {
+      "id": "paulstoffregen/audio",
+      "repo": "PaulStoffregen/Audio",
+      "url": "https://github.com/PaulStoffregen/Audio",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-16.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2026-04-16.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2026-04-16",
+        "2026-04-18",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "analyze_fft1024.cpp",
+        "analyze_fft1024.h",
+        "analyze_fft256.cpp",
+        "analyze_fft256.h"
+      ],
+      "rankHistory": {
+        "2026-04-16": 3,
+        "2026-05-19": 1
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2026-04-16",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=2; last_rank=1",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 2,
+      "latestRank": 1,
+      "stars": 1236,
+      "forks": 431,
+      "pushedAt": "2026-05-05",
+      "topic": "Teensy audio",
+      "score": 3785,
+      "statusTag": "NEW",
+      "contentValue": "strong",
+      "contentSummary": "455 source files with 238 audio/DSP implementation files; files: analyze_fft1024.cpp, analyze_fft1024.h, analyze_fft256.cpp, analyze_fft256.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
+      "repeatState": "eligible",
       "portingScore": 132
+    },
+    {
+      "id": "harold-street-pedal-company/hsp_protoseed",
+      "repo": "Harold-Street-Pedal-Company/HSP_Protoseed",
+      "url": "https://github.com/Harold-Street-Pedal-Company/HSP_Protoseed",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-18.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2024-03-19.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-04-21.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "Daisy",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2024-03-19",
+        "2026-04-18",
+        "2026-04-21",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "src/vendor/daisy/src/utility/DaisySP/modules/adsr.cpp",
+        "src/vendor/daisy/src/utility/DaisySP/modules/adsr.h",
+        "src/vendor/daisy/src/utility/DaisySP/modules/biquad.cpp",
+        "src/vendor/daisy/src/utility/DaisySP/modules/biquad.h"
+      ],
+      "rankHistory": {
+        "2024-03-19": 7,
+        "2026-04-18": 3,
+        "2026-05-19": 10
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2024-03-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=3; last_rank=10",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 3,
+      "latestRank": 10,
+      "stars": 39,
+      "forks": 7,
+      "pushedAt": "2025-09-29",
+      "topic": "Daisy Seed",
+      "score": 119,
+      "statusTag": "RETURNING",
+      "contentValue": "strong",
+      "contentSummary": "2 hardware design files plus repository implementation evidence; files: src/vendor/daisy/src/utility/DaisySP/modules/adsr.cpp, src/vendor/daisy/src/utility/DaisySP/modules/adsr.h, src/vendor/daisy/src/utility/DaisySP/modules/biquad.cpp, src/vendor/daisy/src/utility/DaisySP/modules/biquad.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
+      "repeatState": "eligible",
+      "portingScore": 127
     },
     {
       "id": "carlvp/daisylab",
@@ -869,156 +1161,6 @@
       "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "blocked",
       "portingScore": 124
-    },
-    {
-      "id": "antoinevg/daisy_bsp",
-      "repo": "antoinevg/daisy_bsp",
-      "url": "https://github.com/antoinevg/daisy_bsp",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-16.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2024-03-19.md",
-        "codex-weekly/digests/2026-04-09.md",
-        "codex-weekly/digests/2026-04-16.md",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2024-03-19",
-        "2026-04-09",
-        "2026-04-16",
-        "2026-04-18",
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "examples/audio_midi.rs",
-        "examples/dsp/mod.rs",
-        "examples/dsp/osc.rs",
-        "examples/dsp/wavetable.rs"
-      ],
-      "rankHistory": {
-        "2024-03-19": 2,
-        "2026-04-09": 5,
-        "2026-04-16": 5,
-        "2026-05-19": 6
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2024-03-19",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=4; last_rank=6",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 4,
-      "latestRank": 6,
-      "stars": 80,
-      "forks": 14,
-      "pushedAt": "2025-06-02",
-      "topic": "Daisy Seed",
-      "score": 222,
-      "statusTag": "RE-ENTRY: updated",
-      "contentValue": "strong",
-      "contentSummary": "29 source files with 9 audio/DSP implementation files; files: examples/dsp/wavetable.rs, examples/dsp/mod.rs, examples/dsp/osc.rs, examples/audio_midi.rs",
-      "portabilityValue": "high",
-      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
-      "repeatState": "blocked",
-      "portingScore": 124
-    },
-    {
-      "id": "ohmic-net/puca_dsp",
-      "repo": "ohmic-net/puca_dsp",
-      "url": "https://github.com/ohmic-net/puca_dsp",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-18.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2024-03-26.md",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-04-21.md",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "ESP32",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2024-03-26",
-        "2026-04-18",
-        "2026-04-21",
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h",
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h",
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h",
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp"
-      ],
-      "rankHistory": {
-        "2024-03-26": 4,
-        "2026-04-18": 2,
-        "2026-05-19": 7
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2024-03-26",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=3; last_rank=7",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 3,
-      "latestRank": 7,
-      "stars": 76,
-      "forks": 6,
-      "pushedAt": "2026-04-25",
-      "topic": "ESP32 audio",
-      "score": 210,
-      "statusTag": "RETURNING",
-      "contentValue": "strong",
-      "contentSummary": "2 hardware design files plus repository implementation evidence; files: puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp",
-      "portabilityValue": "high",
-      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
-      "repeatState": "blocked",
-      "portingScore": 123
     },
     {
       "id": "daddesign-projects/daisyseedcubetemplate",
@@ -1512,76 +1654,6 @@
       "portingScore": 118
     },
     {
-      "id": "paulstoffregen/audio",
-      "repo": "PaulStoffregen/Audio",
-      "url": "https://github.com/PaulStoffregen/Audio",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-16.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2026-04-16.md",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2026-04-16",
-        "2026-04-18",
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "analyze_fft1024.cpp",
-        "analyze_fft1024.h",
-        "analyze_fft256.cpp",
-        "analyze_fft256.h"
-      ],
-      "rankHistory": {
-        "2026-04-16": 3,
-        "2026-05-19": 1
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2026-04-16",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=2; last_rank=1",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 2,
-      "latestRank": 1,
-      "stars": 1236,
-      "forks": 431,
-      "pushedAt": "2026-05-05",
-      "topic": "Teensy audio",
-      "score": 3785,
-      "statusTag": "NEW",
-      "contentValue": "strong",
-      "contentSummary": "455 source files with 238 audio/DSP implementation files; files: analyze_fft1024.cpp, analyze_fft1024.h, analyze_fft256.cpp, analyze_fft256.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
-      "repeatState": "blocked",
-      "portingScore": 118
-    },
-    {
       "id": "khiner/flowgrid",
       "repo": "khiner/flowgrid",
       "url": "https://github.com/khiner/flowgrid",
@@ -1708,6 +1780,68 @@
       "portabilityValue": "high",
       "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "blocked",
+      "portingScore": 117
+    },
+    {
+      "id": "sophiapoirier/destroyfx",
+      "repo": "sophiapoirier/destroyfx",
+      "url": "https://github.com/sophiapoirier/destroyfx",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "brokenfft/brokenfft.cpp",
+        "brokenfft/brokenfft.h",
+        "brokenfft/oldfft.cpp",
+        "brokenfft/oldfft.h"
+      ],
+      "rankHistory": {
+        "2026-05-19": 4
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2026-05-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=1; last_rank=4",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 1,
+      "latestRank": 4,
+      "stars": 259,
+      "forks": 11,
+      "pushedAt": "2026-05-09",
+      "topic": "Computer-first effects",
+      "score": 596,
+      "statusTag": "NEW",
+      "contentValue": "strong",
+      "contentSummary": "385 source files with 187 audio/DSP implementation files; files: brokenfft/brokenfft.cpp, brokenfft/brokenfft.h, brokenfft/oldfft.cpp, brokenfft/oldfft.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
+      "repeatState": "eligible",
       "portingScore": 117
     },
     {
@@ -2031,78 +2165,6 @@
       "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "eligible",
       "portingScore": 114
-    },
-    {
-      "id": "harold-street-pedal-company/hsp_protoseed",
-      "repo": "Harold-Street-Pedal-Company/HSP_Protoseed",
-      "url": "https://github.com/Harold-Street-Pedal-Company/HSP_Protoseed",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-18.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2024-03-19.md",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-04-21.md",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "Daisy",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2024-03-19",
-        "2026-04-18",
-        "2026-04-21",
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "src/vendor/daisy/src/utility/DaisySP/modules/adsr.cpp",
-        "src/vendor/daisy/src/utility/DaisySP/modules/adsr.h",
-        "src/vendor/daisy/src/utility/DaisySP/modules/biquad.cpp",
-        "src/vendor/daisy/src/utility/DaisySP/modules/biquad.h"
-      ],
-      "rankHistory": {
-        "2024-03-19": 7,
-        "2026-04-18": 3,
-        "2026-05-19": 10
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2024-03-19",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=3; last_rank=10",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 3,
-      "latestRank": 10,
-      "stars": 39,
-      "forks": 7,
-      "pushedAt": "2025-09-29",
-      "topic": "Daisy Seed",
-      "score": 119,
-      "statusTag": "RETURNING",
-      "contentValue": "strong",
-      "contentSummary": "2 hardware design files plus repository implementation evidence; files: src/vendor/daisy/src/utility/DaisySP/modules/adsr.cpp, src/vendor/daisy/src/utility/DaisySP/modules/adsr.h, src/vendor/daisy/src/utility/DaisySP/modules/biquad.cpp, src/vendor/daisy/src/utility/DaisySP/modules/biquad.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
-      "repeatState": "blocked",
-      "portingScore": 113
     },
     {
       "id": "sourcebox/mi-plaits-dsp-rs",
@@ -2882,68 +2944,6 @@
       "contentSummary": "1 hardware design files plus repository implementation evidence; files: Software/src/FlashMemory/main_flashAndAudioTest.cpp, Software/src/PSP/AudioEngine.cpp, Software/src/PSP/AudioEngine.h, Software/src/PSP/AudioEngineConfig.h",
       "portabilityValue": "high",
       "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
-      "repeatState": "blocked",
-      "portingScore": 103
-    },
-    {
-      "id": "sophiapoirier/destroyfx",
-      "repo": "sophiapoirier/destroyfx",
-      "url": "https://github.com/sophiapoirier/destroyfx",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "brokenfft/brokenfft.cpp",
-        "brokenfft/brokenfft.h",
-        "brokenfft/oldfft.cpp",
-        "brokenfft/oldfft.h"
-      ],
-      "rankHistory": {
-        "2026-05-19": 4
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2026-05-19",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=1; last_rank=4",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 1,
-      "latestRank": 4,
-      "stars": 259,
-      "forks": 11,
-      "pushedAt": "2026-05-09",
-      "topic": "Computer-first effects",
-      "score": 596,
-      "statusTag": "NEW",
-      "contentValue": "strong",
-      "contentSummary": "385 source files with 187 audio/DSP implementation files; files: brokenfft/brokenfft.cpp, brokenfft/brokenfft.h, brokenfft/oldfft.cpp, brokenfft/oldfft.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "blocked",
       "portingScore": 103
     },
@@ -12792,72 +12792,6 @@
       "portingScore": 157
     },
     {
-      "id": "orastron/brickworks",
-      "repo": "Orastron/brickworks",
-      "url": "https://github.com/Orastron/brickworks",
-      "streams": [
-        "codex_weekly",
-        "webgpt_daily"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md",
-        "data/published-repo-log.csv",
-        "digests/2026-05-24.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2026-05-19",
-        "2026-05-24",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "examples/fx_chorus/src/plugin.h",
-        "examples/fx_delay/src/plugin.h",
-        "examples/fx_flanger/src/plugin.h",
-        "examples/fx_noise_gate/src/plugin.h"
-      ],
-      "rankHistory": {
-        "2026-05-19": 5
-      },
-      "lane": "REF_PASS",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2026-05-19",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-23",
-      "antiRepeatScope": "hard",
-      "notes": "Cross-platform DSP toolkit with Daisy Seed examples useful as portable architecture and algorithm source feature_count=1; last_rank=5",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 1,
-      "latestRank": 5,
-      "stars": 105,
-      "forks": 7,
-      "pushedAt": "2026-04-05",
-      "topic": "Computer-first effects",
-      "score": 256,
-      "statusTag": "NEW",
-      "contentValue": "strong",
-      "contentSummary": "141 source files with 22 audio/DSP implementation files; files: examples/fx_chorus/src/plugin.h, examples/fx_delay/src/plugin.h, examples/fx_flanger/src/plugin.h, examples/fx_noise_gate/src/plugin.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
-      "repeatState": "blocked",
-      "portingScore": 151
-    },
-    {
       "id": "korginc/logue-sdk",
       "repo": "korginc/logue-sdk",
       "url": "https://github.com/korginc/logue-sdk",
@@ -12936,8 +12870,74 @@
       "contentSummary": "247 source files with 84 audio/DSP implementation files; files: platform/common/dsp/biquad.hpp, platform/drumlogue/dummy-delfx/delay.h, platform/drumlogue/dummy-revfx/reverb.h, platform/microkorg2/MultitapDelay/MultitapDelay.h",
       "portabilityValue": "high",
       "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
+      "repeatState": "eligible",
+      "portingScore": 151
+    },
+    {
+      "id": "orastron/brickworks",
+      "repo": "Orastron/brickworks",
+      "url": "https://github.com/Orastron/brickworks",
+      "streams": [
+        "codex_weekly",
+        "webgpt_daily"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md",
+        "data/published-repo-log.csv",
+        "digests/2026-05-24.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2026-05-19",
+        "2026-05-24",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "examples/fx_chorus/src/plugin.h",
+        "examples/fx_delay/src/plugin.h",
+        "examples/fx_flanger/src/plugin.h",
+        "examples/fx_noise_gate/src/plugin.h"
+      ],
+      "rankHistory": {
+        "2026-05-19": 5
+      },
+      "lane": "REF_PASS",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2026-05-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-23",
+      "antiRepeatScope": "hard",
+      "notes": "Cross-platform DSP toolkit with Daisy Seed examples useful as portable architecture and algorithm source feature_count=1; last_rank=5",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 1,
+      "latestRank": 5,
+      "stars": 105,
+      "forks": 7,
+      "pushedAt": "2026-04-05",
+      "topic": "Computer-first effects",
+      "score": 256,
+      "statusTag": "NEW",
+      "contentValue": "strong",
+      "contentSummary": "141 source files with 22 audio/DSP implementation files; files: examples/fx_chorus/src/plugin.h, examples/fx_delay/src/plugin.h, examples/fx_flanger/src/plugin.h, examples/fx_noise_gate/src/plugin.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "blocked",
-      "portingScore": 137
+      "portingScore": 151
     },
     {
       "id": "zlosynth/kaseta",
@@ -13018,8 +13018,300 @@
       "contentSummary": "6 hardware design files plus repository implementation evidence; files: benches/src/bin/compressor.rs, benches/src/bin/delay_blend.rs, benches/src/bin/delay_rewind.rs, benches/src/bin/oscillator.rs",
       "portabilityValue": "high",
       "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
-      "repeatState": "blocked",
+      "repeatState": "eligible",
+      "portingScore": 146
+    },
+    {
+      "id": "antoinevg/daisy_bsp",
+      "repo": "antoinevg/daisy_bsp",
+      "url": "https://github.com/antoinevg/daisy_bsp",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-16.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2024-03-19.md",
+        "codex-weekly/digests/2026-04-09.md",
+        "codex-weekly/digests/2026-04-16.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2024-03-19",
+        "2026-04-09",
+        "2026-04-16",
+        "2026-04-18",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "examples/audio_midi.rs",
+        "examples/dsp/mod.rs",
+        "examples/dsp/osc.rs",
+        "examples/dsp/wavetable.rs"
+      ],
+      "rankHistory": {
+        "2024-03-19": 2,
+        "2026-04-09": 5,
+        "2026-04-16": 5,
+        "2026-05-19": 6
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2024-03-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=4; last_rank=6",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 4,
+      "latestRank": 6,
+      "stars": 80,
+      "forks": 14,
+      "pushedAt": "2025-06-02",
+      "topic": "Daisy Seed",
+      "score": 222,
+      "statusTag": "RE-ENTRY: updated",
+      "contentValue": "strong",
+      "contentSummary": "29 source files with 9 audio/DSP implementation files; files: examples/dsp/wavetable.rs, examples/dsp/mod.rs, examples/dsp/osc.rs, examples/audio_midi.rs",
+      "portabilityValue": "high",
+      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
+      "repeatState": "eligible",
+      "portingScore": 138
+    },
+    {
+      "id": "ohmic-net/puca_dsp",
+      "repo": "ohmic-net/puca_dsp",
+      "url": "https://github.com/ohmic-net/puca_dsp",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-18.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2024-03-26.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-04-21.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "ESP32",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2024-03-26",
+        "2026-04-18",
+        "2026-04-21",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h",
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h",
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h",
+        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp"
+      ],
+      "rankHistory": {
+        "2024-03-26": 4,
+        "2026-04-18": 2,
+        "2026-05-19": 7
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2024-03-26",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=3; last_rank=7",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 3,
+      "latestRank": 7,
+      "stars": 76,
+      "forks": 6,
+      "pushedAt": "2026-04-25",
+      "topic": "ESP32 audio",
+      "score": 210,
+      "statusTag": "RETURNING",
+      "contentValue": "strong",
+      "contentSummary": "2 hardware design files plus repository implementation evidence; files: puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp",
+      "portabilityValue": "high",
+      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
+      "repeatState": "eligible",
+      "portingScore": 137
+    },
+    {
+      "id": "paulstoffregen/audio",
+      "repo": "PaulStoffregen/Audio",
+      "url": "https://github.com/PaulStoffregen/Audio",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-16.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2026-04-16.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "DSP Library",
+        "Daisy",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2026-04-16",
+        "2026-04-18",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "analyze_fft1024.cpp",
+        "analyze_fft1024.h",
+        "analyze_fft256.cpp",
+        "analyze_fft256.h"
+      ],
+      "rankHistory": {
+        "2026-04-16": 3,
+        "2026-05-19": 1
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2026-04-16",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=2; last_rank=1",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 2,
+      "latestRank": 1,
+      "stars": 1236,
+      "forks": 431,
+      "pushedAt": "2026-05-05",
+      "topic": "Teensy audio",
+      "score": 3785,
+      "statusTag": "NEW",
+      "contentValue": "strong",
+      "contentSummary": "455 source files with 238 audio/DSP implementation files; files: analyze_fft1024.cpp, analyze_fft1024.h, analyze_fft256.cpp, analyze_fft256.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
+      "repeatState": "eligible",
       "portingScore": 132
+    },
+    {
+      "id": "harold-street-pedal-company/hsp_protoseed",
+      "repo": "Harold-Street-Pedal-Company/HSP_Protoseed",
+      "url": "https://github.com/Harold-Street-Pedal-Company/HSP_Protoseed",
+      "streams": [
+        "codex_weekly"
+      ],
+      "sourceFiles": [
+        "codex-weekly/data/repo_feature_history.json",
+        "codex-weekly/data/runs/digest_2026-04-18.json",
+        "codex-weekly/data/runs/digest_2026-05-19.json",
+        "codex-weekly/digests/2024-03-19.md",
+        "codex-weekly/digests/2026-04-18.md",
+        "codex-weekly/digests/2026-04-21.md",
+        "codex-weekly/digests/2026-05-19.md",
+        "codex-weekly/digests/2026-05-26.md"
+      ],
+      "recordTypes": [
+        "markdown_mention",
+        "published"
+      ],
+      "platforms": [
+        "Daisy",
+        "Firmware",
+        "Hardware",
+        "Teensy"
+      ],
+      "tags": [],
+      "digestDates": [
+        "2024-03-19",
+        "2026-04-18",
+        "2026-04-21",
+        "2026-05-19",
+        "2026-05-26"
+      ],
+      "representativeFiles": [
+        "src/vendor/daisy/src/utility/DaisySP/modules/adsr.cpp",
+        "src/vendor/daisy/src/utility/DaisySP/modules/adsr.h",
+        "src/vendor/daisy/src/utility/DaisySP/modules/biquad.cpp",
+        "src/vendor/daisy/src/utility/DaisySP/modules/biquad.h"
+      ],
+      "rankHistory": {
+        "2024-03-19": 7,
+        "2026-04-18": 3,
+        "2026-05-19": 10
+      },
+      "lane": "",
+      "status": "published",
+      "selectedStatus": "",
+      "origin": "",
+      "firstSeen": "2024-03-19",
+      "lastPublished": "2026-05-26",
+      "repeatEligibleAfter": "2026-06-18",
+      "antiRepeatScope": "hard",
+      "notes": "feature_count=3; last_rank=10",
+      "whySelected": "",
+      "similarityAnchorNotes": "",
+      "featureCount": 3,
+      "latestRank": 10,
+      "stars": 39,
+      "forks": 7,
+      "pushedAt": "2025-09-29",
+      "topic": "Daisy Seed",
+      "score": 119,
+      "statusTag": "RETURNING",
+      "contentValue": "strong",
+      "contentSummary": "2 hardware design files plus repository implementation evidence; files: src/vendor/daisy/src/utility/DaisySP/modules/adsr.cpp, src/vendor/daisy/src/utility/DaisySP/modules/adsr.h, src/vendor/daisy/src/utility/DaisySP/modules/biquad.cpp, src/vendor/daisy/src/utility/DaisySP/modules/biquad.h",
+      "portabilityValue": "high",
+      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
+      "repeatState": "eligible",
+      "portingScore": 127
     },
     {
       "id": "carlvp/daisylab",
@@ -13157,156 +13449,6 @@
       "portabilitySummary": "desktop-first DSP code is separable from UI; added value is a host-tested algorithm core before a Daisy/Teensy fixed-block port",
       "repeatState": "blocked",
       "portingScore": 124
-    },
-    {
-      "id": "antoinevg/daisy_bsp",
-      "repo": "antoinevg/daisy_bsp",
-      "url": "https://github.com/antoinevg/daisy_bsp",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-16.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2024-03-19.md",
-        "codex-weekly/digests/2026-04-09.md",
-        "codex-weekly/digests/2026-04-16.md",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2024-03-19",
-        "2026-04-09",
-        "2026-04-16",
-        "2026-04-18",
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "examples/audio_midi.rs",
-        "examples/dsp/mod.rs",
-        "examples/dsp/osc.rs",
-        "examples/dsp/wavetable.rs"
-      ],
-      "rankHistory": {
-        "2024-03-19": 2,
-        "2026-04-09": 5,
-        "2026-04-16": 5,
-        "2026-05-19": 6
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2024-03-19",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=4; last_rank=6",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 4,
-      "latestRank": 6,
-      "stars": 80,
-      "forks": 14,
-      "pushedAt": "2025-06-02",
-      "topic": "Daisy Seed",
-      "score": 222,
-      "statusTag": "RE-ENTRY: updated",
-      "contentValue": "strong",
-      "contentSummary": "29 source files with 9 audio/DSP implementation files; files: examples/dsp/wavetable.rs, examples/dsp/mod.rs, examples/dsp/osc.rs, examples/audio_midi.rs",
-      "portabilityValue": "high",
-      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
-      "repeatState": "blocked",
-      "portingScore": 124
-    },
-    {
-      "id": "ohmic-net/puca_dsp",
-      "repo": "ohmic-net/puca_dsp",
-      "url": "https://github.com/ohmic-net/puca_dsp",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-18.json",
-        "codex-weekly/data/runs/digest_2026-05-19.json",
-        "codex-weekly/digests/2024-03-26.md",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-04-21.md",
-        "codex-weekly/digests/2026-05-19.md",
-        "codex-weekly/digests/2026-05-26.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "ESP32",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2024-03-26",
-        "2026-04-18",
-        "2026-04-21",
-        "2026-05-19",
-        "2026-05-26"
-      ],
-      "representativeFiles": [
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h",
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h",
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h",
-        "puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp"
-      ],
-      "rankHistory": {
-        "2024-03-26": 4,
-        "2026-04-18": 2,
-        "2026-05-19": 7
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2024-03-26",
-      "lastPublished": "2026-05-26",
-      "repeatEligibleAfter": "2026-06-18",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=3; last_rank=7",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 3,
-      "latestRank": 7,
-      "stars": 76,
-      "forks": 6,
-      "pushedAt": "2026-04-25",
-      "topic": "ESP32 audio",
-      "score": 210,
-      "statusTag": "RETURNING",
-      "contentValue": "strong",
-      "contentSummary": "2 hardware design files plus repository implementation evidence; files: puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/Audio.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/WM8978.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/include/arduinoFFT.h, puca_dsp-platformio-arduino-esp32/original edition/arduino-esp32_fft_example/src/Audio.cpp",
-      "portabilityValue": "high",
-      "portabilitySummary": "direct Daisy/Teensy-class hardware or firmware evidence; added value is board/audio-path bring-up plus reusable control mapping",
-      "repeatState": "blocked",
-      "portingScore": 123
     },
     {
       "id": "daddesign-projects/daisyseedcubetemplate",
@@ -13523,146 +13665,6 @@
       "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
       "repeatState": "blocked",
       "portingScore": 121
-    },
-    {
-      "id": "ohminecraft/esp32-dsp-core",
-      "repo": "Ohminecraft/esp32-dsp-core",
-      "url": "https://github.com/Ohminecraft/esp32-dsp-core",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-28.json",
-        "codex-weekly/data/runs/digest_2026-06-17.json",
-        "codex-weekly/digests/2026-04-28.md",
-        "codex-weekly/digests/2026-05-05.md",
-        "codex-weekly/digests/2026-06-17.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "ESP32",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2026-04-28",
-        "2026-05-05",
-        "2026-06-17"
-      ],
-      "representativeFiles": [
-        "src/effects/helper/biquad.cpp",
-        "src/effects/helper/biquad.h",
-        "unused/effects/noise_gate.cpp",
-        "unused/effects/noise_gate.h"
-      ],
-      "rankHistory": {
-        "2026-04-28": 8,
-        "2026-06-17": 9
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2026-04-28",
-      "lastPublished": "2026-06-17",
-      "repeatEligibleAfter": "2026-07-17",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=2; last_rank=9",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 2,
-      "latestRank": 9,
-      "stars": 3,
-      "forks": 0,
-      "pushedAt": "2026-06-12",
-      "topic": "ESP32 audio",
-      "score": 56,
-      "statusTag": "NEW",
-      "contentValue": "strong",
-      "contentSummary": "76 source files with 32 audio/DSP implementation files; files: src/effects/helper/biquad.cpp, src/effects/helper/biquad.h, unused/effects/noise_gate.cpp, unused/effects/noise_gate.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
-      "repeatState": "blocked",
-      "portingScore": 120
-    },
-    {
-      "id": "harshmane-git/real-time-embedded-audio-dsp-system-on-esp32",
-      "repo": "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
-      "url": "https://github.com/harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
-      "streams": [
-        "codex_weekly"
-      ],
-      "sourceFiles": [
-        "codex-weekly/data/repo_feature_history.json",
-        "codex-weekly/data/runs/digest_2026-04-18.json",
-        "codex-weekly/data/runs/digest_2026-06-09.json",
-        "codex-weekly/digests/2026-04-18.md",
-        "codex-weekly/digests/2026-04-21.md",
-        "codex-weekly/digests/2026-06-09.md",
-        "codex-weekly/digests/2026-06-17.md"
-      ],
-      "recordTypes": [
-        "markdown_mention",
-        "published"
-      ],
-      "platforms": [
-        "DSP Library",
-        "Daisy",
-        "ESP32",
-        "Firmware",
-        "Hardware",
-        "Teensy"
-      ],
-      "tags": [],
-      "digestDates": [
-        "2026-04-18",
-        "2026-04-21",
-        "2026-06-09",
-        "2026-06-17"
-      ],
-      "representativeFiles": [
-        "C_implementation/biquad.c",
-        "C_implementation/biquad.h",
-        "C_implementation/dsp_types.h",
-        "reference_model/test vector generation 2 (biquad).py"
-      ],
-      "rankHistory": {
-        "2026-04-18": 8,
-        "2026-06-09": 10
-      },
-      "lane": "",
-      "status": "published",
-      "selectedStatus": "",
-      "origin": "",
-      "firstSeen": "2026-04-18",
-      "lastPublished": "2026-06-17",
-      "repeatEligibleAfter": "2026-07-09",
-      "antiRepeatScope": "hard",
-      "notes": "feature_count=2; last_rank=10",
-      "whySelected": "",
-      "similarityAnchorNotes": "",
-      "featureCount": 2,
-      "latestRank": 10,
-      "stars": 0,
-      "forks": 0,
-      "pushedAt": "2026-06-06",
-      "topic": "ESP32 audio",
-      "score": 70,
-      "statusTag": "NEW",
-      "contentValue": "strong",
-      "contentSummary": "27 source files with 9 audio/DSP implementation files; files: C_implementation/biquad.c, C_implementation/biquad.h, reference_model/test vector generation 2 (biquad).py, C_implementation/dsp_types.h",
-      "portabilityValue": "high",
-      "portabilitySummary": "already targets embedded audio hardware; added value is direct firmware structure or DSP blocks for Daisy/Teensy reuse",
-      "repeatState": "blocked",
-      "portingScore": 118
     }
   ],
   "laneDistribution": [

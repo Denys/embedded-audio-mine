@@ -94,8 +94,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 72px;
-  padding: 14px clamp(16px, 2vw, 30px);
+  min-height: 64px;
+  padding: 10px clamp(14px, 2vw, 28px);
   border-bottom: 1px solid var(--line);
   background:
     linear-gradient(180deg, rgba(16, 17, 14, 0.92), rgba(16, 17, 14, 0.72)),
@@ -119,8 +119,8 @@ a {
 
 .brand-mark {
   display: grid;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   place-items: center;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
@@ -153,7 +153,7 @@ a {
 
 .freshness-strip {
   gap: 14px;
-  min-height: 42px;
+  min-height: 38px;
   padding: 0 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -170,11 +170,12 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(230px, 280px) minmax(0, 1fr) minmax(330px, 390px);
+  grid-template-columns: minmax(230px, 280px) minmax(0, 1fr) minmax(340px, 400px);
   gap: 16px;
   width: min(1880px, calc(100vw - 28px));
+  height: calc(100dvh - 80px);
   margin: 0 auto;
-  padding: 16px 0 24px;
+  padding: 14px 0 16px;
 }
 
 .left-rail,
@@ -186,8 +187,20 @@ a {
 .left-rail,
 .main-stage {
   display: grid;
-  align-content: start;
   gap: 16px;
+}
+
+.left-rail {
+  align-content: start;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.main-stage {
+  grid-template-rows: minmax(360px, 1fr) minmax(0, 370px);
+  align-content: stretch;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .panel,
@@ -287,11 +300,50 @@ a {
   gap: 12px;
 }
 
+.support-deck {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(330px, 0.85fr);
+  grid-template-rows: max-content max-content minmax(180px, 1fr);
+  grid-template-areas:
+    "command highlight"
+    "metrics highlight"
+    "insights insights";
+  gap: 12px;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.support-deck .command-bar {
+  grid-area: command;
+}
+
+.support-deck .metrics-grid {
+  grid-area: metrics;
+}
+
+.support-deck .highlight-window {
+  grid-area: highlight;
+}
+
+.support-deck .insight-grid {
+  grid-area: insights;
+}
+
 .metric-tile {
   display: flex;
   min-height: 116px;
   gap: 12px;
   padding: 16px;
+  color: var(--text);
+  text-align: left;
+}
+
+.metric-tile.active {
+  border-color: var(--line-strong);
+  background:
+    linear-gradient(135deg, rgba(124, 255, 178, 0.12), rgba(243, 241, 232, 0.025)),
+    var(--panel);
 }
 
 .metric-tile.hot .metric-icon {
@@ -424,10 +476,166 @@ a {
   gap: 16px;
 }
 
+.support-deck .command-bar {
+  grid-template-columns: minmax(210px, 1fr) 150px 128px 88px;
+  gap: 8px;
+  min-height: 58px;
+  padding: 10px;
+}
+
+.support-deck .search-box,
+.support-deck .clear-button {
+  min-height: 38px;
+}
+
+.support-deck .filter-select {
+  min-height: 38px;
+}
+
+.support-deck .metrics-grid {
+  gap: 8px;
+}
+
+.support-deck .metric-tile {
+  min-height: 76px;
+  padding: 10px;
+  gap: 8px;
+}
+
+.support-deck .metric-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.support-deck .metric-tile strong {
+  margin-top: 4px;
+  font-size: clamp(22px, 2vw, 28px);
+}
+
+.support-deck .metric-tile span {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.support-deck .highlight-window {
+  min-height: 0;
+  padding: 12px;
+}
+
+.support-deck .highlight-window::after {
+  opacity: 0.12;
+}
+
+.support-deck .highlight-topline {
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.support-deck .highlight-topline h2 {
+  max-width: 220px;
+  margin-top: 5px;
+  overflow: hidden;
+  font-size: clamp(16px, 1.5vw, 19px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.support-deck .highlight-controls {
+  gap: 6px;
+}
+
+.support-deck .source-pill {
+  min-height: 30px;
+}
+
+.support-deck .icon-button {
+  width: 32px;
+  height: 32px;
+}
+
+.support-deck .highlight-progress {
+  margin: 10px 0 12px;
+}
+
+.support-deck .highlight-layout {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.support-deck .highlight-copy {
+  min-height: 0;
+  gap: 9px;
+}
+
+.support-deck .highlight-title span {
+  width: 32px;
+  height: 28px;
+}
+
+.support-deck .highlight-title strong {
+  display: block;
+  overflow: hidden;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.support-deck .highlight-copy p {
+  display: -webkit-box;
+  max-width: none;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.support-deck .highlight-stats {
+  display: none;
+}
+
+.support-deck .highlight-selector {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.support-deck .highlight-selector button {
+  grid-template-columns: 24px minmax(0, 1fr);
+  min-height: 30px;
+  padding: 0 7px;
+}
+
+.support-deck .highlight-selector b {
+  font-size: 10px;
+}
+
+.support-deck .insight-grid {
+  grid-template-columns: minmax(0, 1.6fr) minmax(230px, 0.55fr);
+  gap: 12px;
+}
+
+.support-deck .timeline-panel svg {
+  max-height: 118px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
 .timeline-panel svg {
   display: block;
   width: calc(100% - 28px);
   margin: 12px 14px 14px;
+}
+
+.timeline-panel circle {
+  cursor: pointer;
+  outline: none;
+  transition: filter 160ms ease, opacity 160ms ease, r 160ms ease;
+}
+
+.timeline-panel circle:hover,
+.timeline-panel circle:focus,
+.timeline-panel circle.active {
+  filter: drop-shadow(0 0 8px rgba(124, 255, 178, 0.65));
 }
 
 .source-pill {
@@ -701,8 +909,23 @@ a {
   align-items: center;
   gap: 10px;
   min-height: 24px;
+  width: 100%;
+  padding: 0;
+  border: 0;
   color: var(--muted);
+  background: transparent;
   font-size: 12px;
+  text-align: left;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.bar-row:hover,
+.bar-row.active {
+  color: var(--text);
+}
+
+.bar-row:active {
+  transform: translateX(2px);
 }
 
 .bar-row span {
@@ -741,12 +964,16 @@ a {
 }
 
 .table-panel {
-  min-height: 520px;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
 }
 
 .table-scroll {
   position: relative;
-  max-height: min(58dvh, 680px);
+  flex: 1;
+  max-height: none;
+  min-height: 0;
   margin-top: 12px;
   overflow: auto;
   border-top: 1px solid var(--line);
@@ -837,7 +1064,9 @@ td {
 .chip,
 .state-chip,
 .inline-tags span,
-.tag-cloud span {
+.inline-tags button,
+.tag-cloud span,
+.tag-cloud button {
   display: inline-flex;
   align-items: center;
   min-height: 24px;
@@ -853,6 +1082,30 @@ td {
   color: var(--text);
   font-family: var(--font-mono);
   font-size: 11px;
+}
+
+button.chip,
+button.state-chip,
+.inline-tags button,
+.tag-cloud button {
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+button.chip:hover,
+button.state-chip:hover,
+.inline-tags button:hover,
+.tag-cloud button:hover {
+  border-color: var(--line-strong);
+  color: var(--accent);
+  background: rgba(124, 255, 178, 0.08);
+}
+
+button.chip:active,
+button.state-chip:active,
+.inline-tags button:active,
+.tag-cloud button:active {
+  transform: translateY(1px);
 }
 
 .state-chip.blocked {
@@ -878,7 +1131,9 @@ td {
 }
 
 .inline-tags span,
-.tag-cloud span {
+.inline-tags button,
+.tag-cloud span,
+.tag-cloud button {
   padding: 0 8px;
   color: var(--muted);
   font-size: 11px;
@@ -886,9 +1141,9 @@ td {
 
 .detail-panel {
   position: sticky;
-  top: 88px;
+  top: 78px;
   align-self: start;
-  max-height: calc(100dvh - 108px);
+  max-height: 100%;
   padding: 16px;
   overflow: auto;
   background: var(--panel-strong);
@@ -1020,6 +1275,26 @@ dd {
   overflow-wrap: anywhere;
 }
 
+.file-list button,
+.source-list button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  overflow-wrap: anywhere;
+  text-align: left;
+  transition: color 160ms ease;
+}
+
+.file-list button:hover,
+.source-list button:hover {
+  color: var(--accent);
+}
+
 .repo-link {
   width: 100%;
   margin-top: 18px;
@@ -1041,18 +1316,42 @@ dd {
   background: var(--line);
 }
 
-.source-panel dl div {
+.source-panel dl div,
+.source-panel dl button {
   display: flex;
   justify-content: space-between;
   gap: 12px;
+  width: 100%;
   padding: 10px;
+  border: 0;
+  color: inherit;
   background: rgba(16, 17, 14, 0.82);
+  text-align: left;
+}
+
+.source-panel dl button {
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.source-panel dl button:hover {
+  color: var(--accent);
+  background: rgba(124, 255, 178, 0.07);
 }
 
 .source-panel dt,
-.source-panel dd {
+.source-panel dd,
+.source-panel span,
+.source-panel b {
   margin: 0;
   font-size: 11px;
+}
+
+.source-panel span {
+  color: var(--faint);
+}
+
+.source-panel b {
+  font-family: var(--font-mono);
 }
 
 .empty-state {
@@ -1105,6 +1404,18 @@ dd {
 @media (max-width: 1320px) {
   .dashboard-grid {
     grid-template-columns: 240px minmax(0, 1fr);
+    height: auto;
+    overflow: visible;
+  }
+
+  .main-stage,
+  .left-rail {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .main-stage {
+    grid-template-rows: auto;
   }
 
   .detail-panel {
@@ -1116,6 +1427,15 @@ dd {
 
   .metrics-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .support-deck {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "command"
+      "metrics"
+      "highlight"
+      "insights";
   }
 }
 
@@ -1140,8 +1460,27 @@ dd {
   .metrics-grid,
   .insight-grid,
   .command-bar,
-  .highlight-layout {
+  .highlight-layout,
+  .support-deck .command-bar,
+  .support-deck .insight-grid {
     grid-template-columns: 1fr;
+  }
+
+  .main-stage {
+    grid-template-rows: auto;
+  }
+
+  .support-deck .highlight-stats {
+    display: grid;
+  }
+
+  .support-deck .highlight-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .support-deck .highlight-copy p {
+    display: block;
+    overflow: visible;
   }
 
   .highlight-topline {
