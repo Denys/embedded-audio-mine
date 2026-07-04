@@ -1,0 +1,4 @@
+date,project,status,origin,platforms,tags,why_selected,notes
+2026-07-04,Chrismettal/PedalDev,selected,digest_ranked,"Analog pedal/KiCad","pedal,stompbox,kicad,freecad,hardware-platform","Reusable two-board stompbox hardware platform with editable KiCad and production files","https://github.com/Chrismettal/PedalDev"
+2026-07-04,ohdsp/DSP-ADAU1452,selected,digest_ranked,"ADAU145x/SigmaDSP","dsp,adau1452,kicad,i2s,spdif,open-hardware","Reusable ADAU145x DSP core board with clean docs and KiCad/Gerber/BOM package","https://github.com/ohdsp/DSP-ADAU1452"
+2026-07-04,Papproni/stm_audio_board_v3_dsp_board,selected,digest_ranked,"STM32H7/KiCad","dsp-pedal,stm32h723,kicad,audio-io,pots,display","Dense STM32H7 effects-pedal hardware reference despite missing docs/firmware","https://github.com/Papproni/stm_audio_board_v3_dsp_board"
