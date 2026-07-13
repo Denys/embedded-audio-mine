@@ -25,6 +25,16 @@ Prioritize:
 - Eurorack, desktop synth, pedal, modular subassembly, voice-card, and reusable carrier/submodule architectures;
 - complete hardware source: schematic, PCB layout, BOM, fabrication files, panel/enclosure, calibration procedure, test points, measurements, or build reports.
 
+
+## Hidden-gems discovery gate
+
+Before candidate selection, read and execute:
+
+- `rules/hidden-gems-discovery-protocol.md`
+- `data/hidden-gems-source-registry.csv`
+
+Use the `weekly_deep` profile. The source-registry discovery/revalidation phase is mandatory and must occur before ranking. Update the registry during every run, including new reusable pages and status changes for known dynamic resources. Do not stop after finding 3–5 good candidates; satisfy the profile coverage and stopping rule first. Include the required discovery audit in the weekly digest.
+
 ## Mandatory source expansion
 
 Do **not** limit research to GitHub. Search several independent lanes each run:
