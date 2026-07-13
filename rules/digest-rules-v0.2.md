@@ -17,6 +17,16 @@ Primary goal:
 | HOLD | Temporarily excluded or uncertain |
 | FOUNDATION_UPDATE | Manufacturer/core infrastructure update |
 
+
+## Hidden-gems discovery gate
+
+Before candidate selection, read and execute:
+
+- `rules/hidden-gems-discovery-protocol.md`
+- `data/hidden-gems-source-registry.csv`
+
+Use the `daily_broad` profile. Start every run by revalidating due dynamic resources and discovering low-SEO blogs, forums, project hubs, self-hosted pages, alternative repository hosts, and manufacturer/reference pages. Update the registry on every run. Do not stop at the first publishable 3–5 candidates; satisfy the profile coverage and stopping rule, then rank only quality-supported items. Include the required discovery audit in the digest.
+
 ## Source priority
 
 1. Independent/community projects
