@@ -1,0 +1,4 @@
+resource,status,origin,platforms,tags,why_selected,notes
+buranelectrix/lunchbeat-PCB,selected,digest_ranked,ATmega328P,"groovebox,1bit,kicad,hardware,drum-machine","Complete editable low-cost groovebox hardware/firmware reference","https://github.com/buranelectrix/lunchbeat-PCB"
+kschzt/harp,related_infrastructure,digest_ranked,Raspberry Pi/Linux,"daw-integration,total-recall,usb-audio,ump,plugins,protocol","High-value open protocol and conformance architecture for hardware instruments","https://github.com/kschzt/harp"
+RealTimeAudioLab/RTAL-EAI-001-WELLENFORMER,watch,digest_ranked,Not verified,"wavetable,touchscreen,synth,midi,product-architecture","Monitor for release of editable CAD/BOM/build evidence","https://github.com/RealTimeAudioLab/RTAL-EAI-001-WELLENFORMER"
