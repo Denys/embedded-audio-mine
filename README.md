@@ -27,6 +27,23 @@ The goal is not to collect popular repos. The goal is to mine hidden, useful, ad
 - DSP architecture references
 - visual audio graph/codegen tools
 
+
+## Hidden-gems source registry
+
+Both streams share a persistent page-level source registry:
+
+```text
+data/hidden-gems-source-registry.csv
+```
+
+Every run must begin with the discovery and revalidation workflow in:
+
+```text
+rules/hidden-gems-discovery-protocol.md
+```
+
+The registry records low-SEO blogs, forum sections, project hubs, alternative repository hosts, self-hosted downloads, archives, manufacturer document hubs, application notes, and other repeatable discovery pages. It is source memory, not a publication tracker. Update it on every run; preserve blocked, moved, degraded, and dead pages as history.
+
 ## Digest archive
 
 Full WebGPT daily digest Markdown snapshots are stored in:
