@@ -1,0 +1,4 @@
+repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
+Soundpauli/toern,STRONG_PASS,2026-07-17,2026-07-17,2026-08-16,published,https://github.com/Soundpauli/toern standalone Teensy 4.1 SGTL5000 sampler sequencer looper synth with editable KiCad revision G Gerbers controls MIDI audio battery hardware CC-BY-NC and active MIT firmware
+apfaudio/tiliqua,STRONG_PASS,2026-07-17,2026-07-17,2026-08-16,published,https://github.com/apfaudio/tiliqua three-PCBA ECP5 FPGA audio ecosystem with editable KiCad motherboard SoldierCrab SoM 4in4out DC-coupled PMOD calibration USB MIDI gateware and CERN-OHL-S licensing
+lonesoulsurfer/Acid_Drip_Bassline_and_Drum_Synth,REF_PASS,2026-07-17,2026-07-17,2026-08-16,published,https://github.com/lonesoulsurfer/Acid_Drip_Bassline_and_Drum_Synth RP2040 Mozzi acid and drum groovebox with editable KiCad mainboard front panel CSV BOM firmware build photos and missing explicit licence
