@@ -1,0 +1,4 @@
+resource,status,origin,platforms,tags,why_selected,notes
+MidsoftEntertainment/MiniSynth-public+OCW-hardware,selected,digest_ranked,Teensy 4.0,"standalone-synth,looper,custom-pcb,keys,i2s,bringup","Current single-PCB instrument with unusually useful hardware correction and modular firmware evidence","https://ocw.cs.pub.ro/courses/pm/prj2026/bianca.popa1106/mihai.brisculescu"
+brume-aftertone/Brume,selected_extra,digest_ranked,Raspberry Pi CM5/Linux/Rust,"unusual-concept,software-defined-instrument,usb-audio,multitimbral,lua","Reference for validating a complete instrument on reproducible off-the-shelf hardware before custom carrier development","https://brume.aftertone.co/"
+TuriSc/Dodepan,selected,digest_ranked,RP2350,"expressive-interface,capacitive,imu,looper,portable","Strong unusual physical-control concept with real build and firmware evidence","https://github.com/TuriSc/Dodepan"
