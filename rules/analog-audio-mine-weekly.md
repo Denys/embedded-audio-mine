@@ -25,6 +25,7 @@ Prioritize:
 - Eurorack, desktop synth, pedal, modular subassembly, voice-card, and reusable carrier/submodule architectures;
 - complete hardware source: schematic, PCB layout, BOM, fabrication files, panel/enclosure, calibration procedure, test points, measurements, or build reports.
 
+The strict standalone-only daily profile does **not** narrow this weekly lane. Eurorack and reusable subassemblies remain eligible when their engineering value is strong.
 
 ## Hidden-gems discovery gate
 
@@ -32,8 +33,12 @@ Before candidate selection, read and execute:
 
 - `rules/hidden-gems-discovery-protocol.md`
 - `data/hidden-gems-source-registry.csv`
+- `rules/feedback-tuning-loop.md`
+- `data/prompt-evolution-state.yaml`
 
 Use the `weekly_deep` profile. The source-registry discovery/revalidation phase is mandatory and must occur before ranking. Update the registry during every run, including new reusable pages and status changes for known dynamic resources. Do not stop after finding 3–5 good candidates; satisfy the profile coverage and stopping rule first. Include the required discovery audit in the weekly digest.
+
+At the start of the run, apply only explicit prior `weekly_analog` or shared questionnaire feedback. Do not import daily-only standalone gates into the weekly analog scope.
 
 ## Mandatory source expansion
 
@@ -87,10 +92,13 @@ Do not call a project open source merely because a PDF schematic is visible. If 
 Before ranking, inspect the current `Denys/embedded-audio-mine` state where access exists:
 
 - `README.md`
-- latest file under `rules/`, including this prompt
+- `AGENTS.md`
+- latest applicable file under `rules/`, including this prompt
+- `rules/common-anti-repeat-policy.md`
 - `data/published-repo-log.csv`
 - `data/selected-projects.csv`
 - `data/common-anti-repeat-index.csv`
+- `data/prompt-evolution-state.yaml`
 - recent ranked digests in `digests/`
 - relevant Codex weekly history
 
@@ -137,9 +145,28 @@ Lanes:
 - `HOLD`: interesting but blocked by missing source, unclear license, unverified build, unavailable parts, or repeat status.
 - `FOUNDATION_UPDATE`: meaningful new manufacturer datasheet, eval board, application note, or reference design.
 
+## Self-improvement and questionnaire
+
+Apply `rules/feedback-tuning-loop.md` at the end of every normal weekly run.
+
+The weekly tuning questions should emphasize choices that can actually change analog mining quality, for example:
+
+- more complete instruments versus reusable circuit blocks;
+- modern synth ICs versus discrete/classic topologies;
+- pedals/BBD/PT2399 versus VCO/VCF/VCA/drum voices;
+- stricter open-hardware licensing versus exceptional reference-only circuits;
+- more personal blogs/forums versus manufacturer application notes;
+- greater emphasis on measurements/calibration/manufacturability.
+
+Keep the questionnaire to 6–8 questions and map every answer to a concrete next-run change. Store explicit answers and search debt in the `weekly_analog`/shared sections of `data/prompt-evolution-state.yaml` when writes are authorized.
+
+Do not let questionnaire feedback weaken the primary-artifact gate or overwrite the weekly scope without an explicit user decision.
+
 ## Weekly output
 
 Produce 3–5 ranked items when quality supports it. Do not force filler.
+
+Start with `Previous questionnaire feedback applied` when prior answers exist.
 
 For each item include:
 
@@ -160,6 +187,7 @@ End with:
 - sources and search lanes attempted;
 - tracker rows for any published items;
 - optional `selected-projects.csv` rows for exceptional anchors;
-- one concise note on how the next weekly search should improve.
+- `Prompt improvement for next run`;
+- the interactive `Feedback / Tuning Questionnaire`.
 
-If direct repository persistence is unavailable, return a complete Markdown report and proposed CSV rows. Never claim a file, commit, or tracker update occurred unless it actually did.
+If direct repository persistence is unavailable, return a complete Markdown report and proposed CSV/state rows. Never claim a file, commit, tracker update, questionnaire state update, or registry update occurred unless it actually did.
