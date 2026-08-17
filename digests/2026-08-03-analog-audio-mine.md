@@ -8,7 +8,7 @@ The pinned b:art Dual SSI2130 VCO Core was used only as a similarity anchor. No 
 
 ### 1. Len42/Synth VCO-2131 — PASS
 
-**Lane:** Modern SSI analog VCO  
+**Lane:** Modern SSI analog VCO
 **Canonical:** [VCO-2131 source](https://github.com/Len42/Synth/tree/main/modules/VCO-2131) · [personal project hub](https://lenp.net/synth/) · [SSI2131 manufacturer page](https://www.soundsemiconductor.com/)
 
 #### Documented facts
@@ -52,7 +52,7 @@ The pinned b:art Dual SSI2130 VCO Core was used only as a similarity anchor. No 
 
 ### 2. dilshan/arduino-mini-amp — PASS
 
-**Lane:** Digitally controlled analog stereo amplifier  
+**Lane:** Digitally controlled analog stereo amplifier
 **Canonical:** [source repository](https://github.com/dilshan/arduino-mini-amp) · [OSHWA LK000018](https://certification.oshwa.org/lk000018.html)
 
 #### Documented facts
@@ -92,7 +92,7 @@ The pinned b:art Dual SSI2130 VCO Core was used only as a similarity anchor. No 
 
 ### 3. chairaudio/ILSE revision 4 — REF_PASS
 
-**Lane:** Minimal educational analog synth voice  
+**Lane:** Minimal educational analog synth voice
 **Canonical:** [source repository](https://github.com/chairaudio/ILSE) · [revision-4 build instructions](https://discourse.chair.audio/t/ilse-build-instructions-for-revision-4/151/3) · [university course lineage](https://www.uni-weimar.de/kunst-und-gestaltung/wiki/IFD:Analog_Circuits_and_Interfaces_WS20_21/introduction_to_electronics)
 
 #### Documented facts
