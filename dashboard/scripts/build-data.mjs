@@ -149,6 +149,13 @@ function markdownToText(value) {
 
 const CLASSIFICATION_SECTION = /technical summary|implementation highlights?|hardware(?:\/electronics)? notes?|hardware modifiability|platform relevance|documented facts?|firmware(?:\/software)?(?: notes?)?|source(?:\/build)? evidence|build(?: \/ flash)? path|audio architecture|dsp architecture|current implementation/i;
 const SPECULATIVE_SECTION = /adaptation|future|next step|recommendation|potential use|why it matters|ideas?/i;
+const UNCERTAIN_EVIDENCE = /\b(?:verify|re-?check|unverified|not (?:yet )?(?:verified|confirmed|retrieved|checked)|needs? (?:verification|re-?check)|should be (?:verified|re-?checked)|could not (?:verify|confirm)|did not (?:verify|confirm|retrieve))\b/i;
+const NON_RANKED_SECTION_HEADING = /^(?:HOLD\s*\/\s*watchlist\b|Rejected\s*\/\s*not promoted\b|Tracker(?: update)? rows?\b|Ranked entries\b|Foundation updates?\b)/i;
+const LANE_NAMES = new Set(["STRONG_PASS", "REF_PASS", "PASS", "HOLD", "FOUNDATION_UPDATE"]);
+
+function isRankedEntryHeading(heading) {
+  return !NON_RANKED_SECTION_HEADING.test(markdownToText(heading));
+}
 
 function implementationEvidenceFromBlock(block) {
   const lines = String(block || "").split(/\r?\n/);
@@ -163,12 +170,13 @@ function implementationEvidenceFromBlock(block) {
       sawLabel = true;
       include = CLASSIFICATION_SECTION.test(label) && !SPECULATIVE_SECTION.test(label);
     }
-    if (include) kept.push(line);
+    if (include && !UNCERTAIN_EVIDENCE.test(markdownToText(line))) kept.push(line);
   }
   if (kept.length) return markdownToText(kept.join("\n"));
   if (sawLabel) return "";
   const factualPrefix = String(block || "").split(/\n\s*(?:###\s+)?(?:Why it matters|Adaptation ideas?|Future|Next steps?)/i)[0];
-  return markdownToText(factualPrefix.slice(0, 1800));
+  const factualLines = factualPrefix.split(/\r?\n/).filter((line) => !UNCERTAIN_EVIDENCE.test(markdownToText(line)));
+  return markdownToText(factualLines.join("\n").slice(0, 1800));
 }
 
 function extractHeadingResources(heading, block) {
@@ -177,11 +185,14 @@ function extractHeadingResources(heading, block) {
   for (const match of heading.matchAll(/https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/gi)) add(match[1]);
   for (const match of heading.matchAll(/`([A-Za-z0-9_.-]+\s*\/\s*[A-Za-z0-9_.-]+)`/g)) add(match[1]);
   for (const match of heading.matchAll(/(?:^|[\s+(])([A-Za-z0-9_.-]+\s*\/\s*[A-Za-z0-9_.-]+)(?=\s|\+|—|-|$)/g)) add(match[1]);
-  if (!resources.size) {
-    for (const match of String(block || "").matchAll(/https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/gi)) {
-      add(match[1]);
-      if (resources.size >= 2) break;
+  const owner = [...resources][0]?.split("/")[0] || "";
+  if (owner) {
+    for (const match of heading.matchAll(/\+\s*`?([A-Za-z0-9_.-]+)`?(?=\s|\+|—|-|$)/g)) {
+      if (!LANE_NAMES.has(match[1].toUpperCase())) add(`${owner}/${match[1]}`);
     }
+  }
+  if (!resources.size) {
+    for (const match of String(block || "").matchAll(/https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/gi)) add(match[1]);
   }
   return [...resources];
 }
@@ -284,6 +295,7 @@ function parseDigestRankings() {
     const matches = [...text.matchAll(headingPattern)];
     for (let index = 0; index < matches.length; index += 1) {
       const match = matches[index], heading = match[2];
+      if (!isRankedEntryHeading(heading)) continue;
       const lane = heading.match(/\b(STRONG_PASS|REF_PASS|PASS|HOLD|FOUNDATION_UPDATE)\b/)?.[1] || "";
       if (!lane) continue;
       const start = match.index ?? 0, end = matches[index + 1]?.index ?? text.length, block = text.slice(start, end);
