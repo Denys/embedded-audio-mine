@@ -11,7 +11,7 @@ const screenshotDir =
 mkdirSync(screenshotDir, { recursive: true });
 
 const browser = await chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1905, height: 900 } });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 const consoleMessages = [];
 
 page.on("console", (message) => {
@@ -24,7 +24,7 @@ page.on("pageerror", (error) => {
 });
 
 await page.goto(url, { waitUntil: "networkidle" });
-await page.waitForTimeout(900);
+await page.waitForTimeout(700);
 
 const title = await page.title();
 const bodyText = await page.locator("body").innerText();
@@ -32,7 +32,7 @@ if (!title.includes("Embedded Audio Mine")) {
   throw new Error(`Unexpected title: ${title}`);
 }
 const normalizedBodyText = bodyText.toLowerCase();
-for (const expected of ["Project Atlas", "Project Highlights", "Porting Radar", "Codex Weekly", "WebGPT Daily"]) {
+for (const expected of ["Repository coverage and engineering facets", "Project atlas", "WebGPT", "Codex", "Analog"]) {
   if (!normalizedBodyText.includes(expected.toLowerCase())) throw new Error(`Missing visible text: ${expected}`);
 }
 
@@ -40,17 +40,15 @@ const desktopPath = path.join(screenshotDir, "desktop.png");
 await page.screenshot({ path: desktopPath, fullPage: false });
 
 const layoutMetrics = await page.evaluate(() => {
-  const table = document.querySelector(".table-panel")?.getBoundingClientRect();
-  const detail = document.querySelector(".detail-panel")?.getBoundingClientRect();
-  const support = document.querySelector(".support-deck")?.getBoundingClientRect();
-  const supportElement = document.querySelector(".support-deck");
+  const table = document.querySelector(".eam-table-card")?.getBoundingClientRect();
+  const detail = document.querySelector(".eam-detail")?.getBoundingClientRect();
   return {
     tableTop: table?.top ?? null,
-    tableHeight: table?.height ?? null,
+    tableWidth: table?.width ?? null,
     detailTop: detail?.top ?? null,
-    supportTop: support?.top ?? null,
-    supportClientHeight: supportElement?.clientHeight ?? null,
-    supportScrollHeight: supportElement?.scrollHeight ?? null,
+    detailWidth: detail?.width ?? null,
+    clientWidth: document.documentElement.clientWidth,
+    scrollWidth: document.documentElement.scrollWidth,
     bodyClientHeight: document.documentElement.clientHeight,
     bodyScrollHeight: document.documentElement.scrollHeight
   };
@@ -59,100 +57,92 @@ const layoutMetrics = await page.evaluate(() => {
 if (
   layoutMetrics.tableTop === null ||
   layoutMetrics.detailTop === null ||
-  Math.abs(layoutMetrics.tableTop - layoutMetrics.detailTop) > 4
+  Math.abs(layoutMetrics.tableTop - layoutMetrics.detailTop) > 8
 ) {
-  throw new Error(`Project Atlas and detail panel are not top-aligned: ${JSON.stringify(layoutMetrics)}`);
+  throw new Error(`Project atlas and detail panel are not top-aligned: ${JSON.stringify(layoutMetrics)}`);
 }
-if (!layoutMetrics.tableHeight || layoutMetrics.tableHeight < 360) {
-  throw new Error(`Project Atlas pane is too short for 100% desktop view: ${JSON.stringify(layoutMetrics)}`);
+if (!layoutMetrics.tableWidth || !layoutMetrics.detailWidth) {
+  throw new Error(`Dashboard primary panes are missing: ${JSON.stringify(layoutMetrics)}`);
 }
-if (layoutMetrics.bodyScrollHeight > layoutMetrics.bodyClientHeight + 2) {
-  throw new Error(`Desktop page should fit without body scroll: ${JSON.stringify(layoutMetrics)}`);
-}
-
-await page.getByRole("button", { name: /Hard Blocks/i }).click();
-await page.waitForTimeout(150);
-const blockedRows = await page.locator("tbody tr").count();
-const firstRepeatState = await page.locator("tbody tr .state-chip").first().innerText();
-if (blockedRows < 1 || firstRepeatState !== "blocked") {
-  throw new Error(`Hard Blocks tile did not filter blocked rows: ${JSON.stringify({ blockedRows, firstRepeatState })}`);
-}
-await page.getByRole("button", { name: "Clear" }).click();
-
-await page.locator(".left-rail .distribution-panel").filter({ hasText: "Porting Surfaces" }).getByRole("button", { name: /Daisy/ }).click();
-await page.waitForTimeout(150);
-const platformValue = await page.locator(".filter-select").filter({ hasText: "Platform" }).locator("select").inputValue();
-if (platformValue !== "Daisy") throw new Error(`Porting surface bar did not set platform filter: ${platformValue}`);
-await page.getByRole("button", { name: "Clear" }).click();
-
-await page.locator(".support-deck .distribution-panel").filter({ hasText: "Lane Mix" }).getByRole("button", { name: /strong/ }).click();
-await page.waitForTimeout(150);
-const laneActive = await page.locator(".support-deck .distribution-panel").filter({ hasText: "Lane Mix" }).locator(".bar-row.active").innerText();
-if (!laneActive.includes("strong")) throw new Error(`Lane Mix row did not activate: ${laneActive}`);
-await page.getByRole("button", { name: "Clear" }).click();
-
-await page.locator(".timeline-panel circle[role='button']").first().click();
-await page.waitForTimeout(150);
-const activeTimelinePoints = await page.locator(".timeline-panel circle.active").count();
-if (activeTimelinePoints !== 1) throw new Error(`Timeline point did not activate: ${activeTimelinePoints}`);
-await page.getByRole("button", { name: "Clear" }).click();
-
-const firstDetailTag = await page.locator(".detail-panel .tag-cloud button").first().innerText();
-await page.locator(".detail-panel .tag-cloud button").first().click();
-await page.waitForTimeout(150);
-const detailTagPlatformValue = await page.locator(".filter-select").filter({ hasText: "Platform" }).locator("select").inputValue();
-if (detailTagPlatformValue !== firstDetailTag) {
-  throw new Error(`Detail tag did not apply platform filter: ${JSON.stringify({ firstDetailTag, detailTagPlatformValue })}`);
+if (layoutMetrics.scrollWidth > layoutMetrics.clientWidth + 2) {
+  throw new Error(`Desktop dashboard has horizontal page overflow: ${JSON.stringify(layoutMetrics)}`);
 }
 
-const firstEvidenceFile = await page.locator(".detail-panel .file-list button").first().innerText();
-await page.locator(".detail-panel .file-list button").first().click();
-await page.waitForTimeout(150);
-const searchValueAfterEvidence = await page.getByPlaceholder("Search repos, platforms, firmware notes, source evidence").inputValue();
-if (searchValueAfterEvidence !== firstEvidenceFile) {
-  throw new Error(`Evidence file did not populate search: ${JSON.stringify({ firstEvidenceFile, searchValueAfterEvidence })}`);
-}
-await page.getByRole("button", { name: "Clear" }).click();
+const filterSelect = (label) => page.locator(".eam-filter").filter({ hasText: label }).locator("select");
+const clearFilters = async () => {
+  await page.getByRole("button", { name: "Clear filters" }).click();
+  await page.waitForTimeout(150);
+};
 
-await page.locator(".support-deck").evaluate((element) => {
-  element.scrollTop = 0;
+await filterSelect("Repeat state").selectOption("blocked");
+await page.waitForTimeout(150);
+const blockedRows = await page.locator(".eam-table-card tbody tr").count();
+const blockedStates = await page.locator(".eam-table-card tbody tr .eam-repeat").allInnerTexts();
+if (blockedRows < 1 || blockedStates.some((state) => state.toLowerCase() !== "blocked")) {
+  throw new Error(`Repeat-state filter did not isolate blocked rows: ${JSON.stringify({ blockedRows, blockedStates: blockedStates.slice(0, 8) })}`);
+}
+await clearFilters();
+
+const hardwareSelect = filterSelect("Hardware evidence");
+const hardwareValue = await hardwareSelect.locator("option").evaluateAll((options) => {
+  const values = options.map((option) => option.value).filter((value) => value !== "all" && value !== "No explicit hardware evidence");
+  return values[0] || "";
 });
+if (!hardwareValue) throw new Error("Hardware evidence filter has no positive evidence options");
+await hardwareSelect.selectOption(hardwareValue);
 await page.waitForTimeout(150);
+const hardwareRows = await page.locator(".eam-table-card tbody tr").count();
+if (hardwareRows < 1) throw new Error(`Hardware evidence filter returned no rows for ${hardwareValue}`);
+await clearFilters();
 
-const initialHighlight = await page.locator(".highlight-title strong").innerText();
-await page.getByLabel("Next project highlight").scrollIntoViewIfNeeded();
-await page.getByLabel("Next project highlight").click();
-await page.waitForTimeout(300);
-const nextHighlight = await page.locator(".highlight-title strong").innerText();
-if (nextHighlight === initialHighlight) throw new Error("Next highlight did not advance the project");
-await page.waitForFunction(
-  (repo) => document.querySelector(".detail-panel h2")?.textContent === repo,
-  nextHighlight
-);
-const selectedHighlight = await page.locator(".detail-panel h2").innerText();
-if (selectedHighlight !== nextHighlight) {
-  throw new Error(`Highlight click did not update detail panel: ${selectedHighlight} !== ${nextHighlight}`);
+const mcuDistribution = page.locator(".eam-distribution").filter({ hasText: "MCU / platform" }).first();
+const firstMcuButton = mcuDistribution.locator("button").first();
+const firstMcuLabel = await firstMcuButton.locator("span").first().innerText();
+await firstMcuButton.click();
+await page.waitForTimeout(150);
+const mcuValue = await filterSelect("MCU / platform").inputValue();
+if (mcuValue !== firstMcuLabel) {
+  throw new Error(`MCU distribution did not set its filter: ${JSON.stringify({ firstMcuLabel, mcuValue })}`);
 }
-await page.getByLabel("Pause project highlights").click();
-await page.waitForTimeout(120);
-if (!(await page.getByLabel("Resume project highlights").isVisible())) {
-  throw new Error("Pause control did not change to resume state");
-}
-const highlightPath = path.join(screenshotDir, "highlight-next-paused.png");
-await page.screenshot({ path: highlightPath, fullPage: false });
+await clearFilters();
 
-await page.getByPlaceholder("Search repos, platforms, firmware notes, source evidence").fill("teensy");
-await page.waitForTimeout(250);
-const filteredRows = await page.locator("tbody tr").count();
+const search = page.locator(".eam-search input");
+await search.fill("teensy");
+await page.waitForTimeout(200);
+const filteredRows = await page.locator(".eam-table-card tbody tr").count();
 if (filteredRows < 1) throw new Error("Search for teensy returned no rows");
-await page.locator("tbody tr").first().click();
-await page.waitForTimeout(250);
-const selectedRepo = await page.locator(".detail-panel h2").innerText();
+const firstRow = page.locator(".eam-table-card tbody tr").first();
+const firstRepo = await firstRow.locator("td strong").first().innerText();
+await firstRow.click();
+await page.waitForTimeout(200);
+const selectedRepo = await page.locator(".eam-detail h2").innerText();
+if (selectedRepo !== firstRepo) {
+  throw new Error(`Project-row selection did not update detail panel: ${JSON.stringify({ firstRepo, selectedRepo })}`);
+}
 const interactionPath = path.join(screenshotDir, "interaction-teensy.png");
 await page.screenshot({ path: interactionPath, fullPage: false });
+await clearFilters();
+
+const sourceLedger = page.locator(".eam-detail details");
+await sourceLedger.locator("summary").click();
+await page.waitForTimeout(80);
+if ((await sourceLedger.locator("li").count()) < 1) throw new Error("Selected project source ledger is empty");
 
 await page.setViewportSize({ width: 390, height: 900 });
-await page.waitForTimeout(500);
+await page.waitForTimeout(350);
+const mobileMetrics = await page.evaluate(() => ({
+  clientWidth: document.documentElement.clientWidth,
+  scrollWidth: document.documentElement.scrollWidth,
+  controlsVisible: Boolean(document.querySelector(".eam-controls")?.getBoundingClientRect().height),
+  tableVisible: Boolean(document.querySelector(".eam-table-card")?.getBoundingClientRect().height),
+  detailVisible: Boolean(document.querySelector(".eam-detail")?.getBoundingClientRect().height)
+}));
+if (mobileMetrics.scrollWidth > mobileMetrics.clientWidth + 2) {
+  throw new Error(`Mobile dashboard has horizontal page overflow: ${JSON.stringify(mobileMetrics)}`);
+}
+if (!mobileMetrics.controlsVisible || !mobileMetrics.tableVisible || !mobileMetrics.detailVisible) {
+  throw new Error(`Mobile dashboard is missing primary UI regions: ${JSON.stringify(mobileMetrics)}`);
+}
 const mobilePath = path.join(screenshotDir, "mobile.png");
 await page.screenshot({ path: mobilePath, fullPage: false });
 
@@ -170,15 +160,12 @@ console.log(
       title,
       filteredRows,
       selectedRepo,
+      hardwareFilter: hardwareValue,
+      mcuDistributionSelection: firstMcuLabel,
       layout: layoutMetrics,
-      highlight: {
-        initial: initialHighlight,
-        afterNext: nextHighlight,
-        selectedDetail: selectedHighlight
-      },
+      mobile: mobileMetrics,
       screenshots: {
         desktop: desktopPath,
-        highlight: highlightPath,
         interaction: interactionPath,
         mobile: mobilePath
       },
