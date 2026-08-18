@@ -1,12 +1,15 @@
 export type StreamKey = "webgpt_daily" | "codex_weekly";
+export type DigestStreamKey = StreamKey | "analog_weekly";
 
 export type RepeatState = "blocked" | "eligible" | "soft" | "unknown";
+export type ClassificationConfidence = "high" | "medium" | "low";
 
 export interface ProjectRecord {
   id: string;
   repo: string;
   url: string;
   streams: StreamKey[];
+  digestStreams: DigestStreamKey[];
   sourceFiles: string[];
   recordTypes: string[];
   lane: string;
@@ -14,6 +17,13 @@ export interface ProjectRecord {
   selectedStatus: string;
   origin: string;
   platforms: string[];
+  repositoryTypes: string[];
+  hardwareEvidence: string[];
+  mcuPlatforms: string[];
+  languagesFrameworks: string[];
+  effects: string[];
+  classificationConfidence: ClassificationConfidence;
+  classificationGaps: string[];
   tags: string[];
   firstSeen: string;
   lastPublished: string;
@@ -27,6 +37,7 @@ export interface ProjectRecord {
   latestRank: number | null;
   rankHistory: Record<string, number>;
   digestDates: string[];
+  digestDatesByStream: Record<DigestStreamKey, string[]>;
   stars: number | null;
   forks: number | null;
   pushedAt: string;
@@ -50,19 +61,23 @@ export interface TimelinePoint {
   date: string;
   webgpt_daily: number;
   codex_weekly: number;
+  analog_weekly: number;
 }
 
 export interface DashboardMetrics {
   totalProjects: number;
   codexProjects: number;
   webgptProjects: number;
+  analogProjects: number;
   crossStreamProjects: number;
   hardBlocks: number;
   softReferences: number;
   repeatEligible: number;
   selectedReferences: number;
+  lowConfidenceClassifications: number;
   latestCodexDate: string;
   latestWebgptDate: string;
+  latestAnalogDate: string;
   generatedAt: string;
 }
 
@@ -72,13 +87,22 @@ export interface DashboardData {
   topPorting: ProjectRecord[];
   laneDistribution: DistributionPoint[];
   platformDistribution: DistributionPoint[];
+  repositoryTypeDistribution: DistributionPoint[];
+  hardwareEvidenceDistribution: DistributionPoint[];
+  mcuPlatformDistribution: DistributionPoint[];
+  languageFrameworkDistribution: DistributionPoint[];
+  effectDistribution: DistributionPoint[];
+  classificationConfidenceDistribution: DistributionPoint[];
   streamDistribution: DistributionPoint[];
+  provenanceDistribution: DistributionPoint[];
   timeline: TimelinePoint[];
   sourceSummary: {
     publishedRows: number;
     selectedRows: number;
     commonIndexRows: number;
     codexRunFiles: number;
-    markdownRepoMentions: number;
+    rankedDigestEntries: number;
+    analogDigestFiles: number;
+    lowConfidenceClassifications: number;
   };
 }
