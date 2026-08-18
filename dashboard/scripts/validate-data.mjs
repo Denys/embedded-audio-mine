@@ -33,13 +33,24 @@ function readCsv(relativePath) { return parseCsv(readFileSync(path.join(repoRoot
 function normalizeResource(value) { return String(value || "").trim().replace(/^https:\/\/github\.com\//i, "").replace(/\.git$/i, "").replace(/[)>.,;]+$/g, "").replace(/\s*\/\s*/g, "/"); }
 function safeDate(value) { return typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value) ? value.slice(0, 10) : ""; }
 function assert(condition, message) { if (!condition) throw new Error(message); }
+
+const NON_RANKED_SECTION_HEADING = /^(?:HOLD\s*\/\s*watchlist\b|Rejected\s*\/\s*not promoted\b|Tracker(?: update)? rows?\b|Ranked entries\b|Foundation updates?\b)/i;
+const LANE_NAMES = new Set(["STRONG_PASS", "REF_PASS", "PASS", "HOLD", "FOUNDATION_UPDATE"]);
+function headingText(value) { return String(value || "").replace(/[`*_>#|]/g, " ").replace(/\s+/g, " ").trim(); }
+function isRankedEntryHeading(heading) { return !NON_RANKED_SECTION_HEADING.test(headingText(heading)); }
 function extractHeadingResources(heading, block) {
   const resources = new Set();
   const add = (value) => { const normalized = normalizeResource(value); if (/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(normalized)) resources.add(normalized); };
   for (const match of heading.matchAll(/https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/gi)) add(match[1]);
   for (const match of heading.matchAll(/`([A-Za-z0-9_.-]+\s*\/\s*[A-Za-z0-9_.-]+)`/g)) add(match[1]);
   for (const match of heading.matchAll(/(?:^|[\s+(])([A-Za-z0-9_.-]+\s*\/\s*[A-Za-z0-9_.-]+)(?=\s|\+|—|-|$)/g)) add(match[1]);
-  if (!resources.size) for (const match of String(block || "").matchAll(/https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/gi)) { add(match[1]); if (resources.size >= 2) break; }
+  const owner = [...resources][0]?.split("/")[0] || "";
+  if (owner) {
+    for (const match of heading.matchAll(/\+\s*`?([A-Za-z0-9_.-]+)`?(?=\s|\+|—|-|$)/g)) {
+      if (!LANE_NAMES.has(match[1].toUpperCase())) add(`${owner}/${match[1]}`);
+    }
+  }
+  if (!resources.size) for (const match of String(block || "").matchAll(/https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/gi)) add(match[1]);
   return [...resources];
 }
 function compositeResource(resources) {
@@ -84,6 +95,7 @@ for (const fileName of digestFiles.filter((name) => !name.includes("analog-audio
   const matches = [...text.matchAll(headingPattern)];
   for (let index = 0; index < matches.length; index += 1) {
     const heading = matches[index][1];
+    if (!isRankedEntryHeading(heading)) continue;
     if (!/\b(STRONG_PASS|REF_PASS|PASS|HOLD|FOUNDATION_UPDATE)\b/.test(heading)) continue;
     const start = matches[index].index ?? 0, end = matches[index + 1]?.index ?? text.length;
     const resources = extractHeadingResources(heading, text.slice(start, end));
@@ -138,6 +150,27 @@ const h2Fixture = data.projects.find((project) => project.id === "emeb/dspod");
 assert(h2Fixture?.digestDatesByStream.webgpt_daily.includes("2026-06-26"), "H2 ranked heading provenance was not parsed");
 const compositePart = data.projects.find((project) => project.id === "westlicht/performer-hardware");
 assert(compositePart?.digestDatesByStream.webgpt_daily.includes("2026-06-15"), "composite ranked-entry companion repository missing");
+for (const facet of ["Schematic", "PCB / Gerbers", "BOM"]) {
+  assert(!compositePart?.hardwareEvidence.includes(facet), `unverified ${facet} leaked into westlicht hardware evidence`);
+}
+assert(compositePart?.classificationGaps.includes("hardware evidence"), "westlicht unverified hardware artifacts should remain a classification gap");
+assert(!idSet.has("hold/watchlist"), "HOLD/watchlist section label was parsed as a repository");
+
+const faderFirmware = data.projects.find((project) => project.id === "16n-faderbank/16next_firmware");
+assert(faderFirmware?.digestDatesByStream.webgpt_daily.includes("2026-06-13"), "owner-relative 16next_firmware companion lost digest provenance");
+const faderComposite = data.projects.find((project) => project.id === "16n-faderbank/16nx+16next_firmware");
+assert(faderComposite?.digestDatesByStream.webgpt_daily.includes("2026-06-13"), "16nx composite lost owner-relative companion provenance");
+const pendaSoftware = data.projects.find((project) => project.id === "daddesign-projects/pendaii-software");
+assert(pendaSoftware?.digestDatesByStream.webgpt_daily.includes("2026-06-13"), "owner-relative PENDAII-Software companion lost digest provenance");
+const pendaComposite = data.projects.find((project) => project.id === "daddesign-projects/pendaii-hardware+pendaii-software");
+assert(pendaComposite?.digestDatesByStream.webgpt_daily.includes("2026-06-13"), "PENDAII composite lost owner-relative companion provenance");
+
+for (const id of ["jerrysievert/padsynth", "jerrysievert/pulsar", "jerrysievert/pitchshiftedreverb"]) {
+  const project = data.projects.find((item) => item.id === id);
+  assert(project?.digestDatesByStream.webgpt_daily.includes("2026-06-06"), `fallback ranked block omitted ${id}`);
+}
+const jerryComposite = data.projects.find((project) => project.id === "jerrysievert/padsynth+pulsar+pitchshiftedreverb");
+assert(jerryComposite?.digestDatesByStream.webgpt_daily.includes("2026-06-06"), "fallback composite did not retain all JerrySievert repositories");
 
 const lowConfidence = data.projects.filter((project) => project.classificationConfidence === "low");
 assert(lowConfidence.length === data.metrics.lowConfidenceClassifications, "low-confidence metric mismatch");
@@ -145,5 +178,5 @@ assert(lowConfidence.length === data.sourceSummary.lowConfidenceClassifications,
 
 console.log(`dashboard coverage: ${canonical.size}/${canonical.size} canonical resources represented; ${rankedComponents.size} ranked repository components + ${rankedComposites.size} composites represented (${rankedOnly.length} ranked-only records); ${data.projects.length} total records`);
 console.log(`analog provenance: ${analogRows.size} publication rows across ${analogFiles.length} recovered digests; latest ${latestAnalogDate}`);
-console.log(`classification: ${lowConfidence.length} low-confidence records; speculative-adaptation and Pico2 regressions PASS`);
+console.log(`classification: ${lowConfidence.length} low-confidence records; PR #4 review regressions PASS`);
 if (lowConfidence.length) console.log(lowConfidence.map((project) => `  - ${project.repo}: ${project.classificationGaps.join("; ") || "thin evidence"}`).join("\n"));
