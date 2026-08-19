@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-18",
+  "added": [
+    "Faz8788/demod-dsp-gui",
+    "JonathanZeppa/FloydFM",
+    "KN-Hardwire/ReHarmonizer",
+    "animatek/Animatek-NME",
+    "eforzano/AudioLab",
+    "palmerr23/control_TLV320AIC3104",
+    "spandit69/nest-audio-pcb",
+    "synthalorian/open-synth",
+    "zlosynth/kaseta",
+    "zones-convolution/zones_client"
+  ],
+  "removed": [
+    "Ohminecraft/esp32-dsp-core",
+    "amsynth/amsynth",
+    "cehurley/kzoinks",
+    "clovesrodrigues/AUDIO_DSP",
+    "grahamfranz/PoleZero",
+    "grame-cncm/faust",
+    "joeriben/T5ynth",
+    "nutcas3/airten",
+    "shev0k/EQVita",
+    "sourcebox/mi-plaits-dsp-rs"
+  ],
+  "changed": []
+}
