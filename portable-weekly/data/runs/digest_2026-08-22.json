@@ -1,0 +1,323 @@
+{
+  "date": "2026-08-22",
+  "generated_at_utc": "2026-08-22T21:52:00Z",
+  "query_successful_count": 20,
+  "query_count": 20,
+  "shortlist_candidate_count": 49,
+  "unique_nonfork_repo_count": 191,
+  "transport_notes": [
+    "GitHub API used unauthenticated public requests",
+    "GitHub HTTP 409 for https://api.github.com/repos/DarkLarsen/Minecraft-problem/git/trees/master?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "GitHub HTTP 409 for https://api.github.com/repos/Luciana45/minecraft/git/trees/master?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "GitHub rate limit response; waited 60 seconds and retried once"
+  ],
+  "previous_digest_file": "2026-08-08 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1417,
+      "forks": 179,
+      "last_push": "2026-08-22",
+      "topic": "DSP library",
+      "score": 3486,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "BSL-1.0",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 183,
+        "dsp_file_count": 65,
+        "host_file_count": 7,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/support/audio_stream.hpp",
+          "q_lib/include/q/support/midi_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "Ameobea/web-synth",
+      "html_url": "https://github.com/Ameobea/web-synth",
+      "stars": 566,
+      "forks": 32,
+      "last_push": "2026-08-13",
+      "topic": "Faust synth",
+      "score": 1343,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Its standalone Faust sources include a stereo quadrature-LFO flanger and a three-band diode-ladder distortion, offering effect kernels beyond the browser DAW. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Compile one Faust effect at a time to C++, replace web controls with fixed parameters, and begin with the flanger before budgeting the three-band ladder path.",
+      "license": "NOASSERTION",
+      "note": "Re-entry: updated - Its standalone Faust sources include a stereo quadrature-LFO flanger and a three-band diode-ladder distortion, offering effect kernels beyond the browser DAW. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "Browser-based DAW and audio synthesis platform with dozens of effects, synths, and modules",
+      "evidence": {
+        "source_file_count": 138,
+        "dsp_file_count": 73,
+        "host_file_count": 6,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "engine/engine/static/flanger.dsp",
+          "engine/engine/static/rain.dsp",
+          "src/graphEditor/nodes/CustomAudio/MultibandDiodeLadderDistortion/dsp.faust"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "odoare/Mechanodd",
+      "html_url": "https://github.com/odoare/Mechanodd",
+      "stars": 29,
+      "forks": 1,
+      "last_push": "2026-08-20",
+      "topic": "Physical modeling",
+      "score": 196,
+      "portability_class": "Stretch",
+      "portability_reason": "The resonator algorithms are bounded, but JUCE DSP types, per-voice instantiation, an 8-voice feedback matrix, and effects chains make only a reduced single-resonator port prudent.",
+      "value_reason": "Mechanodd contains dispersive bidirectional waveguide strings and bounded modal banks for plates, membranes, and beams, plus explicit feedback-loop DC/finite guards. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Extract one mono waveguide or 8-16-mode resonator, replace JUCE DelayLine/parameter classes with fixed storage, and defer the 8-voice feedback matrix and four-slot effects chains.",
+      "license": "NOASSERTION",
+      "note": "New - Mechanodd contains dispersive bidirectional waveguide strings and bounded modal banks for plates, membranes, and beams, plus explicit feedback-loop DC/finite guards. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "New",
+      "summary": "Polyphonic physical-modelling synthesizer",
+      "evidence": {
+        "source_file_count": 87,
+        "dsp_file_count": 15,
+        "host_file_count": 8,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/Resonators/WaveguideResonator.cpp",
+          "Source/Resonators/WaveguideResonator.h",
+          "Source/Resonators/ModalResonator.cpp",
+          "Source/Resonators/ModalResonator.h",
+          "Source/Resonators/ModalResonatorComponent.cpp",
+          "Source/Resonators/ModalResonatorComponent.h",
+          "Source/Resonators/PlateResonator.cpp",
+          "Source/Resonators/PlateResonator.h"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "CristianMoresi/DSPark",
+      "html_url": "https://github.com/CristianMoresi/DSPark",
+      "stars": 13,
+      "forks": 0,
+      "last_push": "2026-08-22",
+      "topic": "DSP library",
+      "score": 176,
+      "portability_class": "Refactor",
+      "portability_reason": "Individual header models keep allocation in prepare(), but C++20, dynamic setup storage, calibration work, and optional heavyweight processors require a deliberately small firmware subset.",
+      "value_reason": "The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "port_idea": "Port one TransformerModel or TubePreamp block, preallocate its channel state, start at 1x oversampling, and leave convolution, phase-vocoder, and 64-grain processors out of the firmware build.",
+      "license": "MIT",
+      "note": "New - The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "rotation_status": "New",
+      "summary": "Header-only audio DSP framework in pure C++20, zero dependencies. 90+ real-time processors, physical analog models, EBU R128 metering.",
+      "evidence": {
+        "source_file_count": 227,
+        "dsp_file_count": 57,
+        "host_file_count": 88,
+        "heavy_file_count": 1,
+        "sample_dsp_paths": [
+          "Effects/TapeMachine.h",
+          "Effects/TubePreamp.h",
+          "Effects/TransformerModel.h",
+          "Core/AudioBuffer.h"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "synthalorian/open-synth",
+      "html_url": "https://github.com/synthalorian/open-synth",
+      "stars": 4,
+      "forks": 0,
+      "last_push": "2026-08-17",
+      "topic": "JUCE synth",
+      "score": 158,
+      "portability_class": "Refactor",
+      "portability_reason": "The procedural drum and delay sources are separable from JUCE and the sample ROMpler, but their voice count and per-sample transcendental math need an MCU-specific pass.",
+      "value_reason": "Its MIT DSP folder includes a fixed-pool procedural drum engine covering 16 percussion types plus a stereo fixed-array analog delay, independent of the optional sample ROMpler.",
+      "port_idea": "Extract the procedural drum pool and one stereo delay, cap simultaneous voices, replace per-sample exp/pow calls with tables or recurrences, and omit the filesystem-backed sample layer.",
+      "license": "MIT",
+      "note": "Returning - Its MIT DSP folder includes a fixed-pool procedural drum engine covering 16 percussion types plus a stereo fixed-array analog delay, independent of the optional sample ROMpler.",
+      "rotation_status": "Returning",
+      "summary": "\ud83c\udfb9 Open-source synthesizer \u2014 JUCE 8/C++20 engine, sample ROMpler, 5,600 presets. Standalone + VST3 + CLAP. This is the wave.",
+      "evidence": {
+        "source_file_count": 191,
+        "dsp_file_count": 125,
+        "host_file_count": 9,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "dsp/drum_synth.cpp",
+          "dsp/fx_analog_delay.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "Erick-vital/chord-synth",
+      "html_url": "https://github.com/Erick-vital/chord-synth",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-08-22",
+      "topic": "JUCE synth",
+      "score": 150,
+      "portability_class": "Refactor",
+      "portability_reason": "Harmony and voicing logic use bounded containers, but the current voices, filter, chorus, reverb, and tempo delay are coupled to JUCE types.",
+      "value_reason": "The source separates diatonic degree mapping, extensions, inversions, voicing styles, live re-voicing, and a 16-voice dual-oscillator engine into testable music and DSP modules.",
+      "port_idea": "Keep the fixed-size diatonic voicer and four to eight dual-oscillator voices, replace JUCE SynthesiserVoice/FX wrappers, and map the seven degree triggers to hardware buttons or MIDI.",
+      "license": "MIT",
+      "note": "New - The source separates diatonic degree mapping, extensions, inversions, voicing styles, live re-voicing, and a 16-voice dual-oscillator engine into testable music and DSP modules.",
+      "rotation_status": "New",
+      "summary": "Sintetizador polif\u00f3nico de acordes diat\u00f3nicos en C++20 con JUCE. Formatos Standalone y plugin VST3 para FL Studio con motor arm\u00f3nico, arpegiador y cadena de efectos DSP realtime-safe.",
+      "evidence": {
+        "source_file_count": 80,
+        "dsp_file_count": 35,
+        "host_file_count": 26,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/music/DiatonicChordVoicer.cpp",
+          "src/music/DiatonicChordVoicer.h",
+          "src/dsp/ChordVoice.cpp",
+          "src/dsp/ChordVoice.h",
+          "src/dsp/TempoDelay.cpp",
+          "src/dsp/TempoDelay.h"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "aar75/Eighty",
+      "html_url": "https://github.com/aar75/Eighty",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-08-17",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Refactor",
+      "portability_reason": "The PolyBLEP oscillator and two filter models are compact headers, while the 16-voice engine, dynamic buffers, JUCE integration, and oversampling must be left behind.",
+      "value_reason": "Its two voice models provide a CS-80 dual resonant HP/LP state-variable filter, a JP-8 IR3109-style four-stage ladder with ADAA feedback saturation, and PolyBLEP oscillators. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Extract one mono oscillator-plus-filter voice first, disable engine-wide oversampling and the 16-voice allocator, then benchmark the CS-80 and JP-8 filters separately on Cortex-M7.",
+      "license": "NOASSERTION",
+      "note": "New - Its two voice models provide a CS-80 dual resonant HP/LP state-variable filter, a JP-8 IR3109-style four-stage ladder with ADAA feedback saturation, and PolyBLEP oscillators. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "New",
+      "summary": "Dual-engine CS-80 / Jupiter-8 synth plugin (JUCE) \u2014 standalone, VST3, AU",
+      "evidence": {
+        "source_file_count": 19,
+        "dsp_file_count": 11,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/DSP/CS80Filter.h",
+          "Source/DSP/JP8Filter.h",
+          "Source/DSP/Oscillator.h",
+          "Source/DSP/SynthEngine.h"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "EsionHsrahLatigid/BinGrave",
+      "html_url": "https://github.com/EsionHsrahLatigid/BinGrave",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-08-16",
+      "topic": "JUCE effect",
+      "score": 135,
+      "portability_class": "Stretch",
+      "portability_reason": "The core is fixed-size and JUCE-independent, but its 64 x 1025 x 12-byte spectral history exceeds 0.75 MB before FFT, overlap-add, dry-delay, and snapshot storage.",
+      "value_reason": "The JUCE-independent core implements a fixed 2048-point radix-2 STFT spectral delay with per-bin phase propagation, deterministic spread, bounded feedback, freeze, and finite guards. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Reduce the FFT to 512 or 1024 points and the 64-frame history to a measured external-memory budget; the current history alone is about 0.75 MB before FFT and overlap buffers.",
+      "license": "NOASSERTION",
+      "note": "New - The JUCE-independent core implements a fixed 2048-point radix-2 STFT spectral delay with per-bin phase propagation, deterministic spread, bounded feedback, freeze, and finite guards. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "New",
+      "summary": "Spectral delay and bin-fracture audio effect for JUCE.",
+      "evidence": {
+        "source_file_count": 15,
+        "dsp_file_count": 8,
+        "host_file_count": 6,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "Source/dsp/FixedFft.cpp",
+          "Source/dsp/FixedFft.h",
+          "Source/dsp/StftEngine.cpp",
+          "Source/dsp/StftEngine.h",
+          "Source/dsp/SpectralDelayCore.cpp",
+          "Source/dsp/SpectralDelayCore.h"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "Ic3zy/rt-biquad-filter",
+      "html_url": "https://github.com/Ic3zy/rt-biquad-filter",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-08-04",
+      "topic": "DSP library",
+      "score": 115,
+      "portability_class": "Direct",
+      "portability_reason": "The C99 sample path uses precomputed coefficients and no allocation or transcendental math; only its init-time heap ownership should become caller-provided static state.",
+      "value_reason": "The MIT C99 header packages RBJ low/high shelves, peaking EQ, automatic graphic-band Q, stereo state, and epsilon-gated coefficient updates for amplifier-style tone controls.",
+      "port_idea": "Replace its init-time calloc ownership with caller-supplied band/state structs, keep coefficient updates at control rate, and run the multiply-accumulate-only sample path in the callback.",
+      "license": "MIT",
+      "note": "Returning - The MIT C99 header packages RBJ low/high shelves, peaking EQ, automatic graphic-band Q, stereo state, and epsilon-gated coefficient updates for amplifier-style tone controls.",
+      "rotation_status": "Returning",
+      "summary": "low-latency digital biquad filter library written in pure C for real-time audio processing and DSP pipelines.",
+      "evidence": {
+        "source_file_count": 4,
+        "dsp_file_count": 1,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/rt_biquad.h"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "zolaski333/EngineLab",
+      "html_url": "https://github.com/zolaski333/EngineLab",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-08-22",
+      "topic": "JUCE synth",
+      "score": 95,
+      "portability_class": "Stretch",
+      "portability_reason": "The allocation-free audio path is separable, but the full multi-cylinder C++20/JUCE model and optional convolution are too large; only a reduced fixed acoustic path is realistic.",
+      "value_reason": "EngineLab synthesizes exhaust from cylinder pressure through acoustic duct and radiation models with an allocation-free callback, a distinctive physical-modeling source absent from stock embedded libraries.",
+      "port_idea": "Keep one cylinder-pressure exciter and one fixed duct/radiation path, remove JUCE, JSON, convolution and graph editing, and profile the reduced C++20 core as a mono 48 kHz voice.",
+      "license": "MIT",
+      "note": "New - EngineLab synthesizes exhaust from cylinder pressure through acoustic duct and radiation models with an allocation-free callback, a distinctive physical-modeling source absent from stock embedded libraries.",
+      "rotation_status": "New",
+      "summary": "Four-stroke engine simulator and real-time audio synth (C++20/JUCE) whose exhaust sound comes from simulated cylinder pressure through a physical duct network, not samples. ECU tuner, exhaust graph editor, 16-engine catalogue, measurement harnesses.",
+      "evidence": {
+        "source_file_count": 183,
+        "dsp_file_count": 65,
+        "host_file_count": 62,
+        "heavy_file_count": 4,
+        "sample_dsp_paths": [
+          "src/audio/include/enginelab/audio/AcousticExhaustNetwork.hpp",
+          "src/audio/include/enginelab/audio/DuctWallLoss.hpp",
+          "src/audio/include/enginelab/audio/PipeRadiationModel.hpp",
+          "src/audio/src/RealtimeEngineAudio.cpp"
+        ]
+      }
+    }
+  ]
+}

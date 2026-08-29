@@ -1,0 +1,322 @@
+{
+  "date": "2026-07-18",
+  "generated_at_utc": "2026-07-18T11:15:25Z",
+  "query_successful_count": 18,
+  "query_count": 18,
+  "shortlist_candidate_count": 186,
+  "unique_nonfork_repo_count": 191,
+  "transport_notes": [
+    "GitHub API used authenticated token from local environment or gh auth",
+    "GitHub HTTP 404 for https://api.github.com/repos/2439905184/lmms_synth_faust_port/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/ChagoCruz/teensy_synth_sine/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/DannyJonel/SynthGranularV2/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/HallamSaunders/pocket-synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/Ic3zy/rt-biquad-filter/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/Jack-Hannon/Senior-Project-DSP/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/JarredHockleyDoingStuff/RealST_AnalogueSynthCollection/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/Mariastakh/Granular_synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/OriolFreixa/tmf_additive_synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/WilliamAshley2019/8ee0/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/afx1337/afxAudioEffects/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/benzoylperoxide/benquads-dsp/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/cescofors75/RedMaster-DaisySeed64MB/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/daleonov/SpringReverb/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/diotsonev91/cpp-dsp-lab/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/francesco4-gif/faust-synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/mgandhi27/wave-shield-dsp/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/percyc409/DaisyProjects/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/pvaliani/basic_oscillator_synth_vst3/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}"
+  ],
+  "previous_digest_file": "2026-07-11 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1407,
+      "forks": 179,
+      "last_push": "2026-07-13",
+      "topic": "DSP library",
+      "score": 3486,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable Q DSP primitives are in q_lib headers, while q_io device, file, and stream layers should stay out of firmware.",
+      "value_reason": "Q adds mature C++ biquad, delay, envelope, and synth utility primitives that can seed higher-quality embedded filters and modulation blocks than another minimal example.",
+      "port_idea": "Start with q_lib/include/q/fx/biquad.hpp, delay.hpp, and envelope.hpp; replace q_io with fixed board audio blocks and benchmark template size plus denormal behavior on Cortex-M7.",
+      "license": "BSL-1.0",
+      "note": "Re-entry: updated - Q adds mature C++ biquad, delay, envelope, and synth utility primitives that can seed higher-quality embedded filters and modulation blocks than another minimal example.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 174,
+        "dsp_file_count": 63,
+        "host_file_count": 7,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/synth/envelope.hpp",
+          "q_lib/include/q/synth/oscillator.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "nabsei/montagem-808",
+      "html_url": "https://github.com/nabsei/montagem-808",
+      "stars": 1,
+      "forks": 0,
+      "last_push": "2026-07-17",
+      "topic": "JUCE synth",
+      "score": 137,
+      "portability_class": "Refactor",
+      "portability_reason": "The 808 voice math is concentrated in E808Processor renderBlock, but it is still wrapped in JUCE AudioProcessor, APVTS parameters, and MIDI handling.",
+      "value_reason": "The per-sample glide, sine/triangle blend, exponential decay, and tanh drive form a compact modern 808 bass voice with more character than a plain sine kick.",
+      "port_idea": "Extract renderBlock into a single voice class, replace JUCE smoothing and MIDI parsing with board control state, and expose Amount as glide depth plus drive on Daisy or Teensy.",
+      "license": "MIT",
+      "note": "New - The per-sample glide, sine/triangle blend, exponential decay, and tanh drive form a compact modern 808 bass voice with more character than a plain sine kick.",
+      "rotation_status": "New",
+      "summary": "One-knob 808 slide synth, the instrument at the front of the Montagem chain (JUCE, VST3/AU/Standalone)",
+      "evidence": {
+        "source_file_count": 6,
+        "dsp_file_count": 2,
+        "host_file_count": 3,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/E808Processor.cpp",
+          "Source/E808Processor.h"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "bseverns/seedBox",
+      "html_url": "https://github.com/bseverns/seedBox",
+      "stars": 3,
+      "forks": 0,
+      "last_push": "2026-07-03",
+      "topic": "Teensy reference",
+      "score": 136,
+      "portability_class": "Direct",
+      "portability_reason": "Granular.cpp and AudioMemoryBudget.h already show Teensy-style DMAMEM grain pools, fixed voice limits, and explicit audio block budgeting.",
+      "value_reason": "The granular engine is a practical Teensy reference for voice-pool sizing, grain memory limits, and live buffer scheduling rather than only desktop granular theory.",
+      "port_idea": "Use src/engine/Granular as the reference engine, keep the 40-voice and 2048-sample grain caps initially, then map density, size, and spray to hardware controls.",
+      "license": "MIT",
+      "note": "Returning - The granular engine is a practical Teensy reference for voice-pool sizing, grain memory limits, and live buffer scheduling rather than only desktop granular theory.",
+      "rotation_status": "Returning",
+      "summary": "Audio seeds grow and develop",
+      "evidence": {
+        "source_file_count": 188,
+        "dsp_file_count": 24,
+        "host_file_count": 43,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/engine/Granular.cpp",
+          "src/engine/Granular.h",
+          "src/AudioMemoryBudget.h",
+          "examples/05_live_granular/src/main.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "mgandhi27/wave-shield-dsp",
+      "html_url": "https://github.com/mgandhi27/wave-shield-dsp",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-17",
+      "topic": "DSP library",
+      "score": 135,
+      "portability_class": "Refactor",
+      "portability_reason": "The low-pass and echo code is plain C++, but the current design processes whole WAV data in std::vector buffers and includes parser/file flow.",
+      "value_reason": "Its value is a small no-dependency low-pass plus echo example that can be turned into a streaming block, not a ready real-time effect engine.",
+      "port_idea": "Keep dsp_effects.cpp only, replace vector-wide processing with in-place fixed audio blocks, and rework echo as a static circular buffer sized for available SRAM or PSRAM.",
+      "license": "NOASSERTION",
+      "note": "New - Its value is a small no-dependency low-pass plus echo example that can be turned into a streaming block, not a ready real-time effect engine.",
+      "rotation_status": "New",
+      "summary": "A C++ command-line tool I built from scratch to read, process, and rewrite raw WAV audio files \u2014 no external libraries. It parses the binary file format by hand and applies custom sound effects, including a low-pass filter and an added echo/delay effect, to show real low-level systems programming skill.",
+      "evidence": {
+        "source_file_count": 6,
+        "dsp_file_count": 6,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "wave-shield-dsp/src/dsp_effects.cpp",
+          "wave-shield-dsp/include/dsp_effects.h",
+          "wave-shield-dsp/src/wav_parser.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "Thorwegian/libsynth",
+      "html_url": "https://github.com/Thorwegian/libsynth",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-16",
+      "topic": "DSP library",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "The synth primitives are exposed as C++ headers for oscillators, ADSR, filters, frames, and modulation without a visible desktop plugin host layer.",
+      "value_reason": "PolyBLEP oscillators plus a CEM3320/Oberheim-style stereo SVF make this a stronger subtractive-synth reference than a na\u00efve saw/filter demo.",
+      "port_idea": "Port oscillator.h, adsr.h, and filter.h first, replace variable-length stack buffers if needed, then build one mono voice before adapting stereo and performance counters.",
+      "license": "NOASSERTION",
+      "note": "New - PolyBLEP oscillators plus a CEM3320/Oberheim-style stereo SVF make this a stronger subtractive-synth reference than a na\u00efve saw/filter demo.",
+      "rotation_status": "New",
+      "summary": "C++20 subtractive synthesizer library. Reference implementation for Noaidi FPGA synth.",
+      "evidence": {
+        "source_file_count": 30,
+        "dsp_file_count": 19,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/dsp/oscillator.h",
+          "include/dsp/filter.h",
+          "include/dsp/adsr.h",
+          "include/dsp/frame.h"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "Ic3zy/rt-biquad-filter",
+      "html_url": "https://github.com/Ic3zy/rt-biquad-filter",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-12",
+      "topic": "DSP library",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "The core is a single C header with coefficient/state structs and inline processing, with allocation isolated to state creation.",
+      "value_reason": "A tiny real-time biquad header is useful for EQ, tone-shaping, and crossover experiments when the firmware project needs a minimal C dependency.",
+      "port_idea": "Allocate rt_biquad_state statically instead of calloc, compile the header as C or C++ in a Teensy/Daisy test, and validate coefficient updates outside the hot path.",
+      "license": "MIT",
+      "note": "New - A tiny real-time biquad header is useful for EQ, tone-shaping, and crossover experiments when the firmware project needs a minimal C dependency.",
+      "rotation_status": "New",
+      "summary": "low-latency digital biquad filter library written in pure C for real-time audio processing and DSP pipelines.",
+      "evidence": {
+        "source_file_count": 3,
+        "dsp_file_count": 1,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/rt_biquad.h"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "Its-Abacus/A-VST",
+      "html_url": "https://github.com/Its-Abacus/A-VST",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-16",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Refactor",
+      "portability_reason": "The DSP folder separates wavetable, distortion, bitcrush, chorus, and delay code, but the implementation still leans on JUCE dsp wrappers and plugin plumbing.",
+      "value_reason": "The payoff is a bundled wavetable-plus-effects voice chain: wavetable tone generation, drive, bitcrush, chorus, and delay in one extractable synth architecture.",
+      "port_idea": "Port the wavetable oscillator first, then replace JUCE delay/chorus/distortion helpers with fixed buffers and lookup tables sized for Daisy Seed or Teensy 4.1.",
+      "license": "NOASSERTION",
+      "note": "New - The payoff is a bundled wavetable-plus-effects voice chain: wavetable tone generation, drive, bitcrush, chorus, and delay in one extractable synth architecture.",
+      "rotation_status": "New",
+      "summary": "A Serum-inspired, EDM/bass-focused wavetable synth plugin (AU/VST3/Standalone) built with JUCE.",
+      "evidence": {
+        "source_file_count": 71,
+        "dsp_file_count": 46,
+        "host_file_count": 22,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/DSP/Distortion/Distortion.cpp",
+          "Source/DSP/Effects/BitcrushEffect.cpp",
+          "Source/DSP/Effects/ChorusEffect.cpp",
+          "Source/DSP/Effects/DelayEffect.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "vdgbcrypto/moog-sub37-clone",
+      "html_url": "https://github.com/vdgbcrypto/moog-sub37-clone",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-16",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Refactor",
+      "portability_reason": "The monophonic subtractive path is visible in PluginProcessor, but oscillator, ladder filter, envelope, and parameter storage are JUCE-bound.",
+      "value_reason": "It captures a compact dual-oscillator subtractive control model with detune, mix, envelope-modulated cutoff, resonance, and VCA behavior.",
+      "port_idea": "Recreate the signal path with DaisySP or Teensy oscillators plus a ladder/SVF filter, then map detune, mix, cutoff, resonance, envelope amount, and ADSR to hardware controls.",
+      "license": "MIT",
+      "note": "New - It captures a compact dual-oscillator subtractive control model with detune, mix, envelope-modulated cutoff, resonance, and VCA behavior.",
+      "rotation_status": "New",
+      "summary": "Moog Subsequent 37-style VST3 synth clone (JUCE 8) \u2014 research specs + build. Trademark-free: original brand mark, not a Moog replica.",
+      "evidence": {
+        "source_file_count": 5,
+        "dsp_file_count": 3,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/PluginProcessor.cpp",
+          "Source/PluginProcessor.h"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "vdgbcrypto/gabber-kick-generator",
+      "html_url": "https://github.com/vdgbcrypto/gabber-kick-generator",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-16",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Refactor",
+      "portability_reason": "The audio loop is small and per-sample, but it uses JUCE oscillator/audio buffers and APVTS parameters around the kick engine.",
+      "value_reason": "The pitch-decay sine body, amp envelope, selectable click source, and click envelope are a compact hardcore kick voice that maps well to a drum slot.",
+      "port_idea": "Replace the JUCE oscillator with a phase accumulator, keep pitchCoef/ampCoef/clickCoef as precomputed trigger state, and expose pitch start, decay, base note, click type, and mix.",
+      "license": "MIT",
+      "note": "New - The pitch-decay sine body, amp envelope, selectable click source, and click envelope are a compact hardcore kick voice that maps well to a drum slot.",
+      "rotation_status": "New",
+      "summary": "Gabber Kick Generator - JUCE 8 VST3 synth that generates gabber/hardcore kicks from scratch (pitch+amp envelope sine + transient layer)",
+      "evidence": {
+        "source_file_count": 5,
+        "dsp_file_count": 3,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/PluginProcessor.cpp",
+          "Source/PluginProcessor.h"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "vdgbcrypto/tb303-juce",
+      "html_url": "https://github.com/vdgbcrypto/tb303-juce",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-13",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Refactor",
+      "portability_reason": "The 303 sequencer and synth are in PluginProcessor, including pre-sized MIDI buffers, but host sync, APVTS, and JUCE processor code need removal.",
+      "value_reason": "The source has real 303-specific value: 16-step slide/accent patterns, PolyBLEP oscillator code, per-sample glide, and a resonant Chamberlin-style filter path.",
+      "port_idea": "Extract the pattern/slide/accent state machine, PolyBLEP oscillator, and SVF coefficients into a fixed-block mono voice; replace DAW sync with MIDI clock or internal tempo.",
+      "license": "NOASSERTION",
+      "note": "New - The source has real 303-specific value: 16-step slide/accent patterns, PolyBLEP oscillator code, per-sample glide, and a resonant Chamberlin-style filter path.",
+      "rotation_status": "New",
+      "summary": "TB-303 VST3 synth plugin (JUCE 8)",
+      "evidence": {
+        "source_file_count": 18,
+        "dsp_file_count": 15,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/PluginProcessor.cpp",
+          "Source/PluginProcessor.h",
+          "Source/patterns_data.h"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "date": "2026-08-29",
+  "generated_at_utc": "2026-08-29T09:44:32Z",
+  "query_successful_count": 20,
+  "query_count": 20,
+  "shortlist_candidate_count": 58,
+  "unique_nonfork_repo_count": 192,
+  "transport_notes": [
+    "Finalists were source-reviewed from downloaded GitHub snapshots; judgments are not build- or hardware-verified",
+    "GitHub API used unauthenticated public requests",
+    "GitHub HTTP 403 for https://api.github.com/repos/Coperh/SynthesisProject/git/trees/master?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/Enkerli/rnd-companion/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/Noktomezo/ShallowHost/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/ShmKnd/Patina/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/ainthero/SynthFM/git/trees/master?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/averagenative/0xSYNTH/git/trees/master?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/kellyfitz/loris/git/trees/master?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/mwicat/faust-reverb-mcu/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 403 for https://api.github.com/repos/synthalorian/open-synth/git/trees/master?recursive=1: {\"message\":\"API rate limit exceeded for 193.5.233.156. (But here's the good news: Authenticated requests get a higher rate limit. Check out ",
+    "GitHub HTTP 409 for https://api.github.com/repos/DarkLarsen/Minecraft-problem/git/trees/master?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "GitHub HTTP 409 for https://api.github.com/repos/Luciana45/minecraft/git/trees/master?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "GitHub HTTP 409 for https://api.github.com/repos/VINCENZO13/VINNY/git/trees/master?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "GitHub HTTP 409 for https://api.github.com/repos/shirinsathe/AudioEffectPlugin/git/trees/main?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "GitHub rate limit response; waited 60 seconds and retried once"
+  ],
+  "previous_digest_file": "2026-08-22 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1418,
+      "forks": 179,
+      "last_push": "2026-08-27",
+      "topic": "DSP library",
+      "score": 3488,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "BSL-1.0",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 183,
+        "dsp_file_count": 65,
+        "host_file_count": 7,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/support/audio_stream.hpp",
+          "q_lib/include/q/support/midi_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "RustAudio/dasp",
+      "html_url": "https://github.com/RustAudio/dasp",
+      "stars": 1185,
+      "forks": 79,
+      "last_push": "2026-01-12",
+      "topic": "DSP library",
+      "score": 2717,
+      "portability_class": "Direct",
+      "portability_reason": "The core crates explicitly support no_std, fixed arrays, borrowed slices and fixed ring buffers; graph and allocation-backed adapters can be left out of the firmware feature set.",
+      "value_reason": "The dual MIT/Apache Rust crates provide no_std frames, sample conversion, fixed or borrowed ring buffers, interpolation, RMS/peak envelopes and allocation-free slice processing as independent modules.",
+      "port_idea": "Build only frame, sample, slice, ring_buffer and linear interpolation with --no-default-features; avoid dasp_graph and allocation-backed signal adapters, which are unnecessary in a fixed callback.",
+      "license": "MIT OR Apache-2.0",
+      "note": "Returning - The dual MIT/Apache Rust crates provide no_std frames, sample conversion, fixed or borrowed ring buffers, interpolation, RMS/peak envelopes and allocation-free slice processing as independent modules.",
+      "rotation_status": "Returning",
+      "summary": "Modular Rust fundamentals for digital audio signal processing.",
+      "evidence": {
+        "source_file_count": 60,
+        "dsp_file_count": 8,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "dasp_signal/src/lib.rs",
+          "dasp_interpolate/src/lib.rs",
+          "dasp_ring_buffer/src/lib.rs",
+          "dasp_envelope/src/lib.rs"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "Themaister/libfmsynth",
+      "html_url": "https://github.com/Themaister/libfmsynth",
+      "stars": 362,
+      "forks": 29,
+      "last_push": "2020-06-28",
+      "topic": "FM synth",
+      "score": 921,
+      "portability_class": "Refactor",
+      "portability_reason": "A scalar hard-real-time C renderer exists, but eight operators and an 8x8 matrix per voice are expensive, while the optimized NEON code targets ARMv7/8 rather than Cortex-M7.",
+      "value_reason": "The MIT C core supplies eight operators, an arbitrary 8x8 modulation matrix, per-operator envelopes, carrier selection and hard-real-time rendering with scalar and ARM NEON paths.",
+      "port_idea": "Start from the scalar C renderer with one to four voices and four operators, keep its 32-sample control updates, then benchmark whether Teensy 4 M7 scalar throughput makes the ARMv7 NEON path unnecessary.",
+      "license": "MIT",
+      "note": "Returning - The MIT C core supplies eight operators, an arbitrary 8x8 modulation matrix, per-operator envelopes, carrier selection and hard-real-time rendering with scalar and ARM NEON paths.",
+      "rotation_status": "Returning",
+      "summary": "Hard-real-time C FM synthesizer with arbitrary eight-operator routing.",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/fmsynth.c",
+          "include/fmsynth.h",
+          "src/arm/fmsynth_arm.c"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "Signalsmith-Audio/dsp",
+      "html_url": "https://github.com/Signalsmith-Audio/dsp",
+      "stars": 274,
+      "forks": 31,
+      "last_push": "2026-08-23",
+      "topic": "DSP library",
+      "score": 791,
+      "portability_class": "Refactor",
+      "portability_reason": "The C++11 headers are host-independent, but delay and spectral classes own dynamic storage at setup; firmware should select small modules and replace those buffers with bounded caller-owned memory.",
+      "value_reason": "The MIT C++11 headers combine fractional/multi-tap delay, cubic curves, envelope utilities, multirate helpers, FFT/STFT and spectral-processing primitives behind small independent includes.",
+      "port_idea": "Start with delay.h plus envelopes.h, provide caller-owned fixed storage for the delay, and defer FFT/spectral modules until SRAM and cycle budgets are measured.",
+      "license": "MIT",
+      "note": "Returning - The MIT C++11 headers combine fractional/multi-tap delay, cubic curves, envelope utilities, multirate helpers, FFT/STFT and spectral-processing primitives behind small independent includes.",
+      "rotation_status": "Returning",
+      "summary": "GitHub mirror of Signalsmith Audio's C++ DSP support library",
+      "evidence": {
+        "source_file_count": 21,
+        "dsp_file_count": 13,
+        "host_file_count": 0,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "curves.h",
+          "include/signalsmith-dsp/curves.h",
+          "delay.h",
+          "include/signalsmith-dsp/delay.h",
+          "envelopes.h",
+          "include/signalsmith-dsp/envelopes.h",
+          "filters.h",
+          "include/signalsmith-dsp/filters.h"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "Chowdhury-DSP/chowdsp_wdf",
+      "html_url": "https://github.com/Chowdhury-DSP/chowdsp_wdf",
+      "stars": 184,
+      "forks": 18,
+      "last_push": "2026-07-03",
+      "topic": "DSP library",
+      "score": 532,
+      "portability_class": "Refactor",
+      "portability_reason": "Compile-time wdft trees avoid runtime topology allocation and XSIMD is optional, but nonlinear Omega evaluation and complex R-type circuits require deliberate model and approximation choices.",
+      "value_reason": "The BSD C++14 headers provide compile-time wave-digital circuit trees, diode and diode-pair nonlinearities, R-type adaptors and selectable Wright-Omega approximations used by real pedal models.",
+      "port_idea": "Instantiate one fixed wdft diode clipper or tone stack without XSIMD, choose a lower-order Omega approximation if needed, and update component impedances only at control rate.",
+      "license": "BSD-3-Clause",
+      "note": "Returning - The BSD C++14 headers provide compile-time wave-digital circuit trees, diode and diode-pair nonlinearities, R-type adaptors and selectable Wright-Omega approximations used by real pedal models.",
+      "rotation_status": "Returning",
+      "summary": "Header-only C++ library for real-time wave-digital circuit models.",
+      "evidence": {
+        "source_file_count": 36,
+        "dsp_file_count": 23,
+        "host_file_count": 2,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/chowdsp_wdf/wdft/wdft.h",
+          "include/chowdsp_wdf/wdft/wdft_nonlinearities.h",
+          "include/chowdsp_wdf/math/omega.h"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "PaulBatchelor/sndkit",
+      "html_url": "https://github.com/PaulBatchelor/sndkit",
+      "stars": 145,
+      "forks": 5,
+      "last_push": "2025-01-23",
+      "topic": "DSP library",
+      "score": 380,
+      "portability_class": "Refactor",
+      "portability_reason": "Individual C89 init/tick kernels are small and self-contained, but the repository's default graph/interpreter layer allocates and must be excluded in favor of selected caller-owned modules.",
+      "value_reason": "The MIT/Unlicense literate toolkit tangles self-contained C89 kernels and includes concrete talkbox, PADsynth, Verbity reverb and noise modules that can be extracted independently of its LIL/Graforge host.",
+      "port_idea": "Tangle or copy one sk_* init/tick kernel, move setup allocation into caller-owned state, and exclude the LIL interpreter, graph allocator and FFT-based modules from the first firmware build.",
+      "license": "Unlicense",
+      "note": "Returning - The MIT/Unlicense literate toolkit tangles self-contained C89 kernels and includes concrete talkbox, PADsynth, Verbity reverb and noise modules that can be extracted independently of its LIL/Graforge host.",
+      "rotation_status": "Returning",
+      "summary": "Portable audio DSP algorithms written as literate ANSI C.",
+      "evidence": {
+        "source_file_count": 176,
+        "dsp_file_count": 18,
+        "host_file_count": 0,
+        "heavy_file_count": 8,
+        "sample_dsp_paths": [
+          "extra/talkbox/talkbox.c",
+          "extra/padsynth/padsynth.c",
+          "extra/verbity/verbity.c",
+          "extra/brown/brown.c"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "Signalsmith-Audio/elliptic-blep",
+      "html_url": "https://github.com/Signalsmith-Audio/elliptic-blep",
+      "stars": 79,
+      "forks": 1,
+      "last_push": "2025-08-21",
+      "topic": "Core building blocks",
+      "score": 201,
+      "portability_class": "Direct",
+      "portability_reason": "The runtime is one MIT header with fixed pole/state counts; only the constructor's fractional-step vector should become build-time or fixed-capacity storage.",
+      "value_reason": "The MIT single header implements an 11th-order elliptic BLEP for step, impulse and slope discontinuities, including optional all-pass phase compensation and predesigned coefficients.",
+      "port_idea": "Generate the fractional-step pole table at build time or replace its setup vector with a fixed array, then use the residue path for one saw/pulse oscillator and profile the eight complex states.",
+      "license": "MIT",
+      "note": "Returning - The MIT single header implements an 11th-order elliptic BLEP for step, impulse and slope discontinuities, including optional all-pass phase compensation and predesigned coefficients.",
+      "rotation_status": "Returning",
+      "summary": "Header-only elliptic BLEP antialiasing for polynomial-segment oscillators.",
+      "evidence": {
+        "source_file_count": 3,
+        "dsp_file_count": 0,
+        "host_file_count": 0,
+        "heavy_file_count": 3,
+        "sample_dsp_paths": [
+          "elliptic-blep.h"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "averagenative/0xSYNTH",
+      "html_url": "https://github.com/averagenative/0xSYNTH",
+      "stars": 4,
+      "forks": 0,
+      "last_push": "2026-04-18",
+      "topic": "DSP library",
+      "score": 118,
+      "portability_class": "Refactor",
+      "portability_reason": "The pure-C engine and host boundary are unusually clean, but the full four-engine, sampler, 15-effect and oversampling configuration must be reduced to a fixed MCU build.",
+      "value_reason": "Its MIT pure-C engine separates subtractive, four-operator FM, wavetable and sampler voices from CLAP/VST3/ImGui hosts, with atomic parameters, SPSC command queues and zero allocation in the audio path.",
+      "port_idea": "Compile only src/engine plus synth_api, cap polyphony and effect count, replace desktop atomics where unnecessary, and omit sampler/file recording unless external storage is planned.",
+      "license": "MIT",
+      "note": "Returning - Its MIT pure-C engine separates subtractive, four-operator FM, wavetable and sampler voices from CLAP/VST3/ImGui hosts, with atomic parameters, SPSC command queues and zero allocation in the audio path.",
+      "rotation_status": "Returning",
+      "summary": "Multi-engine synthesizer with a pure-C real-time engine and separate CLAP/VST3/standalone hosts.",
+      "evidence": {
+        "source_file_count": 73,
+        "dsp_file_count": 20,
+        "host_file_count": 17,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/engine/fm.c",
+          "src/engine/wavetable.c",
+          "src/engine/effects.c",
+          "src/engine/command_queue.c",
+          "src/engine/filter.c",
+          "src/engine/voice.c"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "marcecj/faust_mbstereophony",
+      "html_url": "https://github.com/marcecj/faust_mbstereophony",
+      "stars": 3,
+      "forks": 0,
+      "last_push": "2013-06-07",
+      "topic": "Faust effect",
+      "score": 116,
+      "portability_class": "Refactor",
+      "portability_reason": "The static Faust filter bank is directly generatable, but six third-order Cauer bands and reconstruction variants need a reduced static configuration and Cortex-M7 profiling.",
+      "value_reason": "The MIT Faust sources implement six-band Regalia-Mitra complementary banks from third-order Cauer prototypes, with static/dynamic edges and sum-versus-synthesis reconstruction variants.",
+      "port_idea": "Generate the static sum-reconstruction variant first, reduce the six-band bank if needed, and keep edge-frequency changes at control rate; avoid the dynamic synthesis bank until CPU profiling passes.",
+      "license": "MIT",
+      "note": "New - The MIT Faust sources implement six-band Regalia-Mitra complementary banks from third-order Cauer prototypes, with static/dynamic edges and sum-versus-synthesis reconstruction variants.",
+      "rotation_status": "New",
+      "summary": "Regalia-Mitra multi-band stereophony and complementary filter banks in Faust.",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/mbstereophonyd_sum.dsp",
+          "src/mbstereophonys_sum.dsp",
+          "src/rmfbd_sum.dsp",
+          "src/rmfbs_sum.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "daleonov/SpringReverb",
+      "html_url": "https://github.com/daleonov/SpringReverb",
+      "stars": 3,
+      "forks": 0,
+      "last_push": "2025-09-14",
+      "topic": "Faust effect",
+      "score": 101,
+      "portability_class": "Stretch",
+      "portability_reason": "The Faust kernel is host-independent, but three eight-line diffusion stages plus eight long feedback delays require an explicit delay-memory and cycle budget on Daisy Seed or Teensy 4.1.",
+      "value_reason": "The Faust effect builds a spring-like tail from three eight-line Hadamard diffusion stages, prime-spaced feedback delays, low-pass loss, hard clipping and independent dwell, tone, tension and spring-spacing controls. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Generate static C++, compute the roughly 24 diffusion and eight feedback delay sizes at 48 kHz, then reduce N from eight to four or place delay storage in external RAM if the measured footprint is too high.",
+      "license": "NOASSERTION",
+      "note": "New - The Faust effect builds a spring-like tail from three eight-line Hadamard diffusion stages, prime-spaced feedback delays, low-pass loss, hard clipping and independent dwell, tone, tension and spring-spacing controls. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "New",
+      "summary": "Spring reverb effect written in Faust.",
+      "evidence": {
+        "source_file_count": 1,
+        "dsp_file_count": 1,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "springreverb.dsp"
+        ]
+      }
+    }
+  ]
+}

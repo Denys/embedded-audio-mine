@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-16",
+  "previous_digest_file": "2026-04-25 - Weekly Portable Audio DSP GitHub Digest.md",
+  "current_digest_file": "2026-05-16 - Weekly Portable Audio DSP GitHub Digest.md",
+  "added": [
+    {
+      "full_name": "Wasted-Audio/hvcc",
+      "rank": 1
+    },
+    {
+      "full_name": "igorski/MWEngine",
+      "rank": 2
+    },
+    {
+      "full_name": "marcel-licence/ML_SynthTools",
+      "rank": 3
+    },
+    {
+      "full_name": "magnetophon/VoiceOfFaust",
+      "rank": 4
+    },
+    {
+      "full_name": "rheslip/DaisySP_Teensy",
+      "rank": 5
+    },
+    {
+      "full_name": "isabelgk/airfx",
+      "rank": 6
+    },
+    {
+      "full_name": "jpcima/stone-phaser",
+      "rank": 7
+    },
+    {
+      "full_name": "Jacajack/stm32-faust-synth",
+      "rank": 8
+    },
+    {
+      "full_name": "anushkadas-coder/DCO6_synthesizer",
+      "rank": 9
+    },
+    {
+      "full_name": "CristianMoresi/DSPark",
+      "rank": 10
+    }
+  ],
+  "removed": [
+    "surge-synthesizer/surge",
+    "asb2m10/dexed",
+    "avaneev/r8brain-free-src",
+    "Chowdhury-DSP/BYOD",
+    "Themaister/libfmsynth",
+    "Chowdhury-DSP/ChowMatrix",
+    "midilab/jc303",
+    "dimtass/DSP-Cpp-filters",
+    "Chowdhury-DSP/ChowKick",
+    "surge-synthesizer/sst-filters"
+  ],
+  "changed": [
+    {
+      "full_name": "surge-synthesizer/surge",
+      "last_push": "2026-05-05",
+      "status": "Updated but excluded by 30-day repeat rule"
+    },
+    {
+      "full_name": "surge-synthesizer/sst-filters",
+      "last_push": "2026-05-07",
+      "status": "Updated but excluded by 30-day repeat rule"
+    }
+  ]
+}

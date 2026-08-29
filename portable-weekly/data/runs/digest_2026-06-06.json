@@ -1,0 +1,337 @@
+{
+  "date": "2026-06-06",
+  "generated_at_utc": "2026-06-06T10:21:09Z",
+  "query_successful_count": 18,
+  "query_count": 18,
+  "shortlist_candidate_count": 58,
+  "unique_nonfork_repo_count": 187,
+  "transport_notes": [
+    "GitHub API used authenticated token from local environment or gh auth",
+    "GitHub HTTP 404 for https://api.github.com/repos/benzoylperoxide/benquads-dsp/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/cescofors75/RedMaster-DaisySeed64MB/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/diotsonev91/cpp-dsp-lab/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 409 for https://api.github.com/repos/Luciana45/minecraft/git/trees/master?recursive=1: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}",
+    "curl GitHub message: Git Repository is empty.",
+    "curl GitHub message: Not Found"
+  ],
+  "previous_digest_file": "2026-05-29 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "magnetophon/DigiDrie",
+      "html_url": "https://github.com/magnetophon/DigiDrie",
+      "stars": 30,
+      "forks": 0,
+      "last_push": "2026-05-18",
+      "topic": "Faust synth",
+      "score": 155,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Faust-derived monophonic synth code is useful as an open-source study target; AGPL-3.0 means direct firmware reuse should stay AGPL-compatible or be treated as reference material.",
+      "port_idea": "Treat the generated DSP as a reference first, or keep derivative firmware AGPL-compatible while wrapping one voice path in a Daisy or Teensy audio callback.",
+      "license": "AGPL-3.0",
+      "note": "New - Faust-derived synth core has clear DSP paths, but AGPL-3.0 makes direct reuse a licensing decision.",
+      "rotation_status": "New",
+      "summary": "A monster monophonic synth, written in faust.",
+      "evidence": {
+        "source_file_count": 61,
+        "dsp_file_count": 26,
+        "host_file_count": 60,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "plugin/dpf/DigiDrie/dsp/dspcore.cpp",
+          "plugin/dpf/DigiDrie/dsp/dspcore.hpp",
+          "plugin/dpf/DigiDrie/dsp/faustdsp.hpp",
+          "plugin/dpf/common/dsp/constants.hpp",
+          "plugin/dpf/common/dsp/scale.hpp",
+          "plugin/dpf/common/dsp/smoother.hpp",
+          "plugin/dpf/common/dsp/somemath.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "jpcima/fverb",
+      "html_url": "https://github.com/jpcima/fverb",
+      "stars": 18,
+      "forks": 3,
+      "last_push": "2022-01-10",
+      "topic": "Faust effect",
+      "score": 155,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Faust DSP gives a clean route to generated C++ kernels with board-specific control and audio I/O added later.",
+      "port_idea": "Generate a small C++ DSP class from the Faust code and wrap it in a Daisy or Teensy audio callback with fixed parameters.",
+      "license": "BSD-2-Clause",
+      "note": "Returning - Faust DSP gives a clean route to generated C++ kernels with board-specific control and audio I/O added later.",
+      "rotation_status": "Returning",
+      "summary": "Plugin version of reverb effect to include in sfizz",
+      "evidence": {
+        "source_file_count": 18,
+        "dsp_file_count": 3,
+        "host_file_count": 5,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "plugins/fverb/dsp/Fverb.cpp",
+          "plugins/fverb/dsp/Fverb.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "ampactor-labs/sonido",
+      "html_url": "https://github.com/ampactor-labs/sonido",
+      "stars": 1,
+      "forks": 0,
+      "last_push": "2026-06-03",
+      "topic": "Daisy reference",
+      "score": 152,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "port_idea": "Port the core process function, replace host buffers with fixed audio blocks, and expose a small hardware parameter set.",
+      "license": "Apache-2.0",
+      "note": "Returning - The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "rotation_status": "Returning",
+      "summary": "Modular audio effects workstation \u2014 30+ DSP effects, node graph, CLAP plugin, Daisy hardware export",
+      "evidence": {
+        "source_file_count": 298,
+        "dsp_file_count": 58,
+        "host_file_count": 89,
+        "heavy_file_count": 1,
+        "sample_dsp_paths": [
+          "crates/sonido-analysis/src/distortion.rs",
+          "crates/sonido-analysis/src/filterbank.rs",
+          "crates/sonido-cli/src/commands/process.rs",
+          "crates/sonido-core/src/biquad.rs",
+          "crates/sonido-core/src/delay.rs",
+          "crates/sonido-core/src/dsp/gain_stage.rs",
+          "crates/sonido-core/src/dsp/mod.rs",
+          "crates/sonido-core/src/dsp/tone_stack.rs"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "shawlty/Daisy-Eurorack-Audio-Module",
+      "html_url": "https://github.com/shawlty/Daisy-Eurorack-Audio-Module",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-06-01",
+      "topic": "Daisy reference",
+      "score": 150,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "port_idea": "Port the core process function, replace host buffers with fixed audio blocks, and expose a small hardware parameter set.",
+      "license": "MIT",
+      "note": "New - The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "rotation_status": "New",
+      "summary": "Eurorack audio module built with Daisy Seed. Real-time DSP, delay, reverb, filters, OLED UI, CV control, and full hardware + firmware documentation.",
+      "evidence": {
+        "source_file_count": 12,
+        "dsp_file_count": 6,
+        "host_file_count": 2,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/audio_engine.cpp",
+          "src/audio_engine.h",
+          "src/delay.cpp",
+          "src/delay.h",
+          "src/filter.cpp",
+          "src/filter.h"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "Signalsmith-Audio/hilbert-iir",
+      "html_url": "https://github.com/Signalsmith-Audio/hilbert-iir",
+      "stars": 51,
+      "forks": 4,
+      "last_push": "2026-01-20",
+      "topic": "Filters",
+      "score": 144,
+      "portability_class": "Refactor",
+      "portability_reason": "Reusable DSP is present, but plugin/app wrappers or project structure need extraction before firmware use.",
+      "value_reason": "The implementation provides reusable DSP building blocks that can seed firmware tests or library modules.",
+      "port_idea": "Lift the smallest filter, oscillator, or utility block into a Teensy/Daisy test patch before attempting the whole project.",
+      "license": "0BSD",
+      "note": "Returning - The implementation provides reusable DSP building blocks that can seed firmware tests or library modules.",
+      "rotation_status": "Returning",
+      "summary": "IIR Hilbert filter: short, dependency-free, header-only C++",
+      "evidence": {
+        "source_file_count": 5,
+        "dsp_file_count": 0,
+        "host_file_count": 0,
+        "heavy_file_count": 1,
+        "sample_dsp_paths": [
+          "design/main.cpp",
+          "design/plot.h",
+          "design/simple-fft.h",
+          "hilbert.h",
+          "include/signalsmith-hilbert/hilbert.h"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "GizzZmo/DSP4Guitar",
+      "html_url": "https://github.com/GizzZmo/DSP4Guitar",
+      "stars": 5,
+      "forks": 1,
+      "last_push": "2026-06-03",
+      "topic": "JUCE effect",
+      "score": 143,
+      "portability_class": "Refactor",
+      "portability_reason": "Reusable DSP is present, but plugin/app wrappers or project structure need extraction before firmware use.",
+      "value_reason": "The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "port_idea": "Port the core process function, replace host buffers with fixed audio blocks, and expose a small hardware parameter set.",
+      "license": "MIT",
+      "note": "New - The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "rotation_status": "New",
+      "summary": "Multi-Effect VST Plugin \ud83c\udfb8 A JUCE-based multi-effect VST/AU plugin with advanced signal processing.  Built With - C++ (JUCE Framework) - Real-time DSP algorithms - MIDI integration - Custom preset system - Advanced effect chaining     and more          Goals: Provide an efficient, professional-grade audio processing plug in for guitar.",
+      "evidence": {
+        "source_file_count": 16,
+        "dsp_file_count": 7,
+        "host_file_count": 3,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "DSP4GuitarApp.h",
+          "Delay.cpp",
+          "Delay.h",
+          "Distortion.cpp",
+          "Distortion.h",
+          "MultiEffectProcessor.cpp",
+          "MultiEffectProcessor.h"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "GameCult/AquaSynth",
+      "html_url": "https://github.com/GameCult/AquaSynth",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-06-03",
+      "topic": "Faust synth",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Faust DSP gives a clean route to generated C++ kernels with board-specific control and audio I/O added later.",
+      "port_idea": "Generate a small C++ DSP class from the Faust code and wrap it in a Daisy or Teensy audio callback with fixed parameters.",
+      "license": "NOASSERTION",
+      "note": "New - Faust DSP gives a clean route to generated C++ kernels with board-specific control and audio I/O added later.",
+      "rotation_status": "New",
+      "summary": "C# patch DSL and Faust backend bridge for Aquarium Synth",
+      "evidence": {
+        "source_file_count": 3,
+        "dsp_file_count": 2,
+        "host_file_count": 0,
+        "heavy_file_count": 1,
+        "sample_dsp_paths": [
+          "patches/aquasynth-patch-cultcache.cc",
+          "tools/zyn-reference/ZynVoiceReference.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "hadencain/granular-synthesizer",
+      "html_url": "https://github.com/hadencain/granular-synthesizer",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-06-05",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "The synthesis method is distinctive enough to add value beyond stock oscillator and filter examples.",
+      "port_idea": "Extract one voice path first, cap voices and buffers, then map modulation controls to Daisy Seed or Teensy 4.1.",
+      "license": "NOASSERTION",
+      "note": "New - The synthesis method is distinctive enough to add value beyond stock oscillator and filter examples.",
+      "rotation_status": "New",
+      "summary": "Granular synthesis VST3 plugin built with JUCE 7",
+      "evidence": {
+        "source_file_count": 60,
+        "dsp_file_count": 32,
+        "host_file_count": 40,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "source/PluginProcessor.cpp",
+          "source/PluginProcessor.h",
+          "source/dsp/EffectsChain.cpp",
+          "source/dsp/EffectsChain.h",
+          "source/dsp/GranularParams.h",
+          "source/grain/Grain.h",
+          "source/grain/GrainBuffer.cpp",
+          "source/grain/GrainBuffer.h"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "synthalorian/open-synth",
+      "html_url": "https://github.com/synthalorian/open-synth",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-06-04",
+      "topic": "JUCE synth",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "The implementation provides reusable DSP building blocks that can seed firmware tests or library modules.",
+      "port_idea": "Lift the smallest filter, oscillator, or utility block into a Teensy/Daisy test patch before attempting the whole project.",
+      "license": "NOASSERTION",
+      "note": "New - The implementation provides reusable DSP building blocks that can seed firmware tests or library modules.",
+      "rotation_status": "New",
+      "summary": "An open-source, cross-platform software synthesizer built with C++ and JUCE",
+      "evidence": {
+        "source_file_count": 200,
+        "dsp_file_count": 137,
+        "host_file_count": 20,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "dsp/arpeggiator.cpp",
+          "dsp/audio_stream.cpp",
+          "dsp/audio_stream_ffi.cpp",
+          "dsp/audio_stream_test.cpp",
+          "dsp/audio_system.cpp",
+          "dsp/drum_ffi.cpp",
+          "dsp/drum_kit_mapping.cpp",
+          "dsp/drum_synth.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "yakunliu-aimusic/Simple_Delay_Plugin",
+      "html_url": "https://github.com/yakunliu-aimusic/Simple_Delay_Plugin",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-06-03",
+      "topic": "JUCE effect",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "port_idea": "Port the core process function, replace host buffers with fixed audio blocks, and expose a small hardware parameter set.",
+      "license": "MIT",
+      "note": "New - The effect code offers a concrete block that can become a standalone pedal or module algorithm.",
+      "rotation_status": "New",
+      "summary": "A real-time audio processing effect plugin built upon the JUCE C++ framework for VST/AU plugin hosts.",
+      "evidence": {
+        "source_file_count": 7,
+        "dsp_file_count": 4,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "source/PluginProcessor.cpp",
+          "source/PluginProcessor.h",
+          "source/dsp/DelayLine.cpp",
+          "source/dsp/DelayLine.h"
+        ]
+      }
+    }
+  ]
+}

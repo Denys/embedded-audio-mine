@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-01",
+  "added": [
+    "rheslip/DaisySP_Teensy",
+    "jpcima/stone-phaser",
+    "DirektDSP/PedalSuite",
+    "ShmKnd/Patina",
+    "Arperture/Maru-Mori-Groovebox",
+    "cescofors75/RedMaster-DaisySeed64MB",
+    "Makeph/cinderwave",
+    "zwaseem5/AudioPluginTool",
+    "Carrieukie/WavetableSynthesizer"
+  ],
+  "removed": [
+    "nabsei/montagem-808",
+    "bseverns/seedBox",
+    "mgandhi27/wave-shield-dsp",
+    "Thorwegian/libsynth",
+    "Ic3zy/rt-biquad-filter",
+    "Its-Abacus/A-VST",
+    "vdgbcrypto/moog-sub37-clone",
+    "vdgbcrypto/gabber-kick-generator",
+    "vdgbcrypto/tb303-juce"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}

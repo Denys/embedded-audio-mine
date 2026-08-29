@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-06",
+  "added": [
+    "cycfi/q",
+    "electro-smith/DaisySP",
+    "avaneev/r8brain-free-src",
+    "Ameobea/web-synth",
+    "dimtass/DSP-Cpp-filters",
+    "jatinchowdhury18/CrossroadsEffects",
+    "jpcima/fverb",
+    "okk-otsu/wav-audio-processor",
+    "Signalsmith-Audio/hilbert-iir",
+    "GareBear99/Instrudio"
+  ],
+  "removed": [
+    "LeonidaFx50c02/juceSynth",
+    "newdigate/teensy-audio-x86-stubs",
+    "SpotlightKid/dpf-faust-project-template",
+    "boblark/DSP_TeensyAudio_F32",
+    "Ketose333/HyperFrame",
+    "ShmKnd/Patina",
+    "OriolFreixa/tmf_additive_synth",
+    "TTeuber/GestureSynth",
+    "valentindush/toneflx-lite-vst",
+    "mariusz96/blue-synthesiser"
+  ],
+  "changed": []
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-08",
+  "added": [
+    "Ameobea/web-synth",
+    "dimtass/DSP-Cpp-filters",
+    "Signalsmith-Audio/hilbert-iir",
+    "jatinchowdhury18/CrossroadsEffects",
+    "jpcima/fverb",
+    "clovesrodrigues/AUDIO_DSP",
+    "boblark/DSP_TeensyAudio_F32",
+    "YSYourSoftware/YourSound",
+    "Lef-F/arcturus"
+  ],
+  "removed": [
+    "rheslip/DaisySP_Teensy",
+    "jpcima/stone-phaser",
+    "DirektDSP/PedalSuite",
+    "ShmKnd/Patina",
+    "Arperture/Maru-Mori-Groovebox",
+    "cescofors75/RedMaster-DaisySeed64MB",
+    "Makeph/cinderwave",
+    "zwaseem5/AudioPluginTool",
+    "Carrieukie/WavetableSynthesizer"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}

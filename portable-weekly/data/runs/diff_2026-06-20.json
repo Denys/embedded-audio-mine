@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-20",
+  "added": [
+    "Wasted-Audio/hvcc",
+    "marcel-licence/ML_SynthTools",
+    "magnetophon/VoiceOfFaust",
+    "rheslip/DaisySP_Teensy",
+    "isabelgk/airfx",
+    "jpcima/stone-phaser",
+    "Jacajack/stm32-faust-synth",
+    "miladjavadi/CrackedGlass",
+    "vNemetz/digital-synth",
+    "KelseyGeiger/MIDI-Manipulator"
+  ],
+  "removed": [
+    "tiagolr/ripplerx",
+    "lluisestape-upc/Synth1.0",
+    "bseverns/seedBox",
+    "filipeborato/borato-morphium",
+    "mdt516/voxGenesis",
+    "cescofors75/RedMaster-DaisySeed64MB",
+    "SpotlightKid/cookiecutter-dpf-faust",
+    "electro-smith/Daisy-Juce-Example",
+    "alexph10/bedridden",
+    "Carrieukie/WavetableSynthesizer"
+  ],
+  "changed": []
+}

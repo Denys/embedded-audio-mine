@@ -7,6 +7,7 @@
 - Do not merge Codex weekly Top 10 digests into the WebGPT daily format.
 - WebGPT daily outputs live under `digests/` and use `data/published-repo-log.csv` plus `data/selected-projects.csv`.
 - Codex weekly outputs live under `codex-weekly/` and use `codex-weekly/data/repo_feature_history.json` plus the run JSON files under `codex-weekly/data/runs/`.
+- Portable weekly outputs live under `portable-weekly/` and use `portable-weekly/data/repo_feature_history.json` plus the run JSON files under `portable-weekly/data/runs/`.
 - Analog Audio Mine weekly is a task-specific hardware lane that shares source memory and anti-repeat evidence but keeps its own broader analog/mixed-signal scope.
 
 ## Mandatory current rules
@@ -31,8 +32,10 @@ Before publishing or selecting a project in either stream, check all relevant st
 - `data/published-repo-log.csv`
 - `data/selected-projects.csv`
 - `codex-weekly/data/repo_feature_history.json`
+- `portable-weekly/data/repo_feature_history.json`
 - the newest committed Markdown digest in `digests/`
 - the newest committed Markdown digest in `codex-weekly/digests/`
+- the newest committed Markdown digest in `portable-weekly/digests/`
 
 Published entries in either stream are hard anti-repeat evidence. They block the same repo or resource for 30 days unless there is a meaningful update such as a new release, firmware asset, hardware target, DSP addition, architecture change, source/license clarification, or build/documentation improvement.
 
@@ -66,3 +69,9 @@ Every normal digest should apply `rules/feedback-tuning-loop.md`:
 - update `data/prompt-evolution-state.yaml` when writes are authorized.
 
 Do not let prompt evolution weaken source verification or leak task-specific gates across streams. In particular, the daily standalone profile must not narrow the weekly analog mine, which intentionally allows Eurorack, reusable subassemblies, and manufacturer reference designs.
+
+## Publication gate
+
+- Every successful digest run must commit its Markdown and JSON state to the default branch of this repository.
+- Keep the daily, Codex weekly, portable weekly, and analog weekly lane formats separate.
+- A run with only local artifacts is incomplete. Verify the remote digest and run state after the commit before reporting success.

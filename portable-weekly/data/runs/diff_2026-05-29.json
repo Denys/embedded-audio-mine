@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-29",
+  "added": [
+    "MTG/essentia",
+    "kfrlib/kfr",
+    "cycfi/q",
+    "electro-smith/DaisySP",
+    "avaneev/r8brain-free-src",
+    "Ameobea/web-synth",
+    "dimtass/DSP-Cpp-filters",
+    "kayrockscreenprinting/ultramaster_kr106",
+    "jatinchowdhury18/CrossroadsEffects",
+    "grahamwhaley/DSPham"
+  ],
+  "removed": [
+    "Wasted-Audio/hvcc",
+    "igorski/MWEngine",
+    "marcel-licence/ML_SynthTools",
+    "magnetophon/VoiceOfFaust",
+    "rheslip/DaisySP_Teensy",
+    "isabelgk/airfx",
+    "jpcima/stone-phaser",
+    "Jacajack/stm32-faust-synth",
+    "anushkadas-coder/DCO6_synthesizer",
+    "CristianMoresi/DSPark"
+  ],
+  "changed": []
+}

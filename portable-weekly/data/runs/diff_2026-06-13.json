@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-13",
+  "added": [
+    "tiagolr/ripplerx",
+    "lluisestape-upc/Synth1.0",
+    "bseverns/seedBox",
+    "filipeborato/borato-morphium",
+    "mdt516/voxGenesis",
+    "cescofors75/RedMaster-DaisySeed64MB",
+    "SpotlightKid/cookiecutter-dpf-faust",
+    "electro-smith/Daisy-Juce-Example",
+    "alexph10/bedridden",
+    "Carrieukie/WavetableSynthesizer"
+  ],
+  "removed": [
+    "magnetophon/DigiDrie",
+    "jpcima/fverb",
+    "ampactor-labs/sonido",
+    "shawlty/Daisy-Eurorack-Audio-Module",
+    "Signalsmith-Audio/hilbert-iir",
+    "GizzZmo/DSP4Guitar",
+    "GameCult/AquaSynth",
+    "hadencain/granular-synthesizer",
+    "synthalorian/open-synth",
+    "yakunliu-aimusic/Simple_Delay_Plugin"
+  ],
+  "changed": []
+}

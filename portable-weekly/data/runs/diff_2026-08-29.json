@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-29",
+  "added": [
+    "RustAudio/dasp",
+    "Themaister/libfmsynth",
+    "Signalsmith-Audio/dsp",
+    "Chowdhury-DSP/chowdsp_wdf",
+    "PaulBatchelor/sndkit",
+    "Signalsmith-Audio/elliptic-blep",
+    "averagenative/0xSYNTH",
+    "marcecj/faust_mbstereophony",
+    "daleonov/SpringReverb"
+  ],
+  "removed": [
+    "Ameobea/web-synth",
+    "odoare/Mechanodd",
+    "CristianMoresi/DSPark",
+    "synthalorian/open-synth",
+    "Erick-vital/chord-synth",
+    "aar75/Eighty",
+    "EsionHsrahLatigid/BinGrave",
+    "Ic3zy/rt-biquad-filter",
+    "zolaski333/EngineLab"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}

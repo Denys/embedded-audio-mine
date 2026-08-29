@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-27",
+  "added": [
+    "LeonidaFx50c02/juceSynth",
+    "newdigate/teensy-audio-x86-stubs",
+    "SpotlightKid/dpf-faust-project-template",
+    "boblark/DSP_TeensyAudio_F32",
+    "Ketose333/HyperFrame",
+    "ShmKnd/Patina",
+    "OriolFreixa/tmf_additive_synth",
+    "TTeuber/GestureSynth",
+    "valentindush/toneflx-lite-vst",
+    "mariusz96/blue-synthesiser"
+  ],
+  "removed": [
+    "Wasted-Audio/hvcc",
+    "marcel-licence/ML_SynthTools",
+    "magnetophon/VoiceOfFaust",
+    "rheslip/DaisySP_Teensy",
+    "isabelgk/airfx",
+    "jpcima/stone-phaser",
+    "Jacajack/stm32-faust-synth",
+    "miladjavadi/CrackedGlass",
+    "vNemetz/digital-synth",
+    "KelseyGeiger/MIDI-Manipulator"
+  ],
+  "changed": []
+}

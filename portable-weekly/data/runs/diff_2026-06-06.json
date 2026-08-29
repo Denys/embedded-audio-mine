@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-06",
+  "added": [
+    "magnetophon/DigiDrie",
+    "jpcima/fverb",
+    "ampactor-labs/sonido",
+    "shawlty/Daisy-Eurorack-Audio-Module",
+    "Signalsmith-Audio/hilbert-iir",
+    "GizzZmo/DSP4Guitar",
+    "GameCult/AquaSynth",
+    "hadencain/granular-synthesizer",
+    "synthalorian/open-synth",
+    "yakunliu-aimusic/Simple_Delay_Plugin"
+  ],
+  "removed": [
+    "MTG/essentia",
+    "kfrlib/kfr",
+    "cycfi/q",
+    "electro-smith/DaisySP",
+    "avaneev/r8brain-free-src",
+    "Ameobea/web-synth",
+    "dimtass/DSP-Cpp-filters",
+    "kayrockscreenprinting/ultramaster_kr106",
+    "jatinchowdhury18/CrossroadsEffects",
+    "grahamwhaley/DSPham"
+  ],
+  "changed": []
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-22",
+  "added": [
+    "odoare/Mechanodd",
+    "CristianMoresi/DSPark",
+    "synthalorian/open-synth",
+    "Erick-vital/chord-synth",
+    "aar75/Eighty",
+    "EsionHsrahLatigid/BinGrave",
+    "Ic3zy/rt-biquad-filter",
+    "zolaski333/EngineLab"
+  ],
+  "removed": [
+    "dimtass/DSP-Cpp-filters",
+    "Signalsmith-Audio/hilbert-iir",
+    "jatinchowdhury18/CrossroadsEffects",
+    "jpcima/fverb",
+    "clovesrodrigues/AUDIO_DSP",
+    "boblark/DSP_TeensyAudio_F32",
+    "YSYourSoftware/YourSound",
+    "Lef-F/arcturus"
+  ],
+  "changed": [
+    "cycfi/q",
+    "Ameobea/web-synth"
+  ]
+}

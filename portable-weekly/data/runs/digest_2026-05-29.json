@@ -1,0 +1,315 @@
+{
+  "date": "2026-05-29",
+  "generated_at_utc": "2026-05-29T17:54:38Z",
+  "query_successful_count": 18,
+  "query_count": 18,
+  "shortlist_candidate_count": 40,
+  "unique_nonfork_repo_count": 183,
+  "transport_notes": [
+    "GitHub API used unauthenticated public requests",
+    "GitHub rate limit response; waited 60 seconds and retried once"
+  ],
+  "previous_digest_file": "2026-05-16 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "MTG/essentia",
+      "html_url": "https://github.com/MTG/essentia",
+      "stars": 3579,
+      "forks": 618,
+      "last_push": "2026-05-20",
+      "topic": "DSP library",
+      "score": 9052,
+      "portability_class": "Stretch",
+      "portability_reason": "The reusable C++ algorithms are real, but the full library is analysis-scale and AGPL/Python/third-party heavy, so only narrow kernels are realistic firmware targets.",
+      "value_reason": "Useful as a reference for embedded onset, rhythm, tonal, and level-analysis control signals rather than as a whole synth/effect port.",
+      "port_idea": "Prototype one detector, such as onset or true-peak, as a fixed-buffer sidechain utility on Teensy 4.1 before considering any larger Essentia subsystem.",
+      "license": "AGPL-3.0",
+      "note": "New - Useful as a reference for embedded onset, rhythm, tonal, and level-analysis control signals rather than as a whole synth/effect port.",
+      "rotation_status": "New",
+      "summary": "C++ library for audio and music analysis, description and synthesis, including Python bindings",
+      "evidence": {
+        "source_file_count": 1089,
+        "dsp_file_count": 115,
+        "host_file_count": 66,
+        "heavy_file_count": 157,
+        "sample_dsp_paths": [
+          "src/algorithms/rhythm/onsetdetection.cpp",
+          "src/algorithms/rhythm/beattrackermultifeature.cpp",
+          "src/algorithms/extractor/tonalextractor.cpp",
+          "src/algorithms/audioproblems/truepeakdetector.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "kfrlib/kfr",
+      "html_url": "https://github.com/kfrlib/kfr",
+      "stars": 1876,
+      "forks": 276,
+      "last_push": "2026-04-08",
+      "topic": "Filters",
+      "score": 4600,
+      "portability_class": "Refactor",
+      "portability_reason": "The DSP headers are well separated, but the project leans on desktop SIMD and GPL licensing, so firmware use should be selective and reference-driven.",
+      "value_reason": "Strong reference implementations for biquads, FIR/IIR filters, oscillators, waveshaping, and sample-rate conversion can improve embedded DSP tests and comparisons.",
+      "port_idea": "Lift or reimplement one scalar filter/SRC block and benchmark it against DaisySP or Teensy Audio before touching the larger KFR framework.",
+      "license": "GPL-2.0",
+      "note": "New - Strong reference implementations for biquads, FIR/IIR filters, oscillators, waveshaping, and sample-rate conversion can improve embedded DSP tests and comparisons.",
+      "rotation_status": "New",
+      "summary": "Fast, modern C++ DSP framework, FFT, Sample Rate Conversion, FIR/IIR/Biquad Filters (SSE, AVX, AVX-512, ARM NEON, RISC-V RVV)",
+      "evidence": {
+        "source_file_count": 270,
+        "dsp_file_count": 68,
+        "host_file_count": 27,
+        "heavy_file_count": 10,
+        "sample_dsp_paths": [
+          "include/kfr/dsp/biquad.hpp",
+          "include/kfr/dsp/fir.hpp",
+          "include/kfr/dsp/iir.hpp",
+          "include/kfr/dsp/sample_rate_conversion.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1386,
+      "forks": 177,
+      "last_push": "2026-05-06",
+      "topic": "DSP library",
+      "score": 3418,
+      "portability_class": "Direct",
+      "portability_reason": "Header-oriented C++ DSP lives under q_lib/include/q/fx with little UI or plugin coupling in the core paths.",
+      "value_reason": "Adds a coherent portable set of effects, envelopes, math helpers, and audio-rate utilities beyond single-demo embedded examples.",
+      "port_idea": "Start with q::fx delay or envelope in a Daisy callback, then decide whether its fixed-point/math helpers fit the target toolchain.",
+      "license": "BSL-1.0",
+      "note": "Returning - Adds a coherent portable set of effects, envelopes, math helpers, and audio-rate utilities beyond single-demo embedded examples.",
+      "rotation_status": "Returning",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 144,
+        "dsp_file_count": 46,
+        "host_file_count": 7,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/waveshaper.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "electro-smith/DaisySP",
+      "html_url": "https://github.com/electro-smith/DaisySP",
+      "stars": 1164,
+      "forks": 191,
+      "last_push": "2025-05-29",
+      "topic": "Daisy reference",
+      "score": 2996,
+      "portability_class": "Direct",
+      "portability_reason": "The library is already organized as small C++ DSP modules for embedded audio callbacks.",
+      "value_reason": "Best used as the portability baseline for judging whether computer-first code adds anything beyond stock Daisy/Teensy blocks.",
+      "port_idea": "Use its oscillator, envelope, drum, and effect modules as reference tests when porting higher-level synth or effect algorithms from this digest.",
+      "license": "NOASSERTION",
+      "note": "New - Best used as the portability baseline for judging whether computer-first code adds anything beyond stock Daisy/Teensy blocks.",
+      "rotation_status": "New",
+      "summary": "A Powerful DSP Library in C++",
+      "evidence": {
+        "source_file_count": 100,
+        "dsp_file_count": 53,
+        "host_file_count": 2,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/Control/adsr.cpp",
+          "Source/Drums/synthbassdrum.cpp",
+          "Source/Effects/chorus.cpp",
+          "Source/Filters/svf.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "avaneev/r8brain-free-src",
+      "html_url": "https://github.com/avaneev/r8brain-free-src",
+      "stars": 699,
+      "forks": 82,
+      "last_push": "2026-05-25",
+      "topic": "DSP library",
+      "score": 1719,
+      "portability_class": "Refactor",
+      "portability_reason": "The C++ resampler is separated and header-friendly, but quality settings, filter length, and buffering need MCU-specific limits.",
+      "value_reason": "High-quality sample-rate conversion is valuable for sample playback, offline asset prep, and rate-bridging tests on embedded audio devices.",
+      "port_idea": "Constrain filter length and channel count, then test one mono conversion path on Teensy 4.1 with fixed input/output blocks.",
+      "license": "MIT",
+      "note": "Returning - High-quality sample-rate conversion is valuable for sample playback, offline asset prep, and rate-bridging tests on embedded audio devices.",
+      "rotation_status": "Returning",
+      "summary": "High-quality pro audio resampler / sample rate conversion header-only C++ library. Very fast, for both audio resampling and time-series interpolation.",
+      "evidence": {
+        "source_file_count": 39,
+        "dsp_file_count": 9,
+        "host_file_count": 0,
+        "heavy_file_count": 13,
+        "sample_dsp_paths": [
+          "CDSPResampler.h",
+          "CDSPFIRFilter.h",
+          "CDSPFracInterpolator.h",
+          "CDSPSincFilterGen.h"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "Ameobea/web-synth",
+      "html_url": "https://github.com/Ameobea/web-synth",
+      "stars": 555,
+      "forks": 30,
+      "last_push": "2026-05-27",
+      "topic": "Faust synth",
+      "score": 1335,
+      "portability_class": "Refactor",
+      "portability_reason": "The browser app is not portable as a system, but Rust DSP and wavetable/FM effect modules are separable enough for algorithm extraction.",
+      "value_reason": "The useful payoff is modern wavetable/FM effect design and filter code, not the web DAW shell.",
+      "port_idea": "Translate one oscillator or wavefolder module into C++ for Daisy/Teensy and ignore the browser, database, and worklet infrastructure.",
+      "license": "NOASSERTION",
+      "note": "New - The useful payoff is modern wavetable/FM effect design and filter code, not the web DAW shell.",
+      "rotation_status": "New",
+      "summary": "Browser-based DAW and audio synthesis platform with dozens of effects, synths, and modules",
+      "evidence": {
+        "source_file_count": 141,
+        "dsp_file_count": 71,
+        "host_file_count": 6,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "engine/dsp/src/filters/biquad.rs",
+          "engine/dsp/src/oscillator.rs",
+          "engine/wavetable/src/fm/effects/chorus.rs",
+          "engine/wavetable/src/fm/effects/wavefolder.rs"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "dimtass/DSP-Cpp-filters",
+      "html_url": "https://github.com/dimtass/DSP-Cpp-filters",
+      "stars": 187,
+      "forks": 39,
+      "last_push": "2025-11-03",
+      "topic": "Filters",
+      "score": 581,
+      "portability_class": "Direct",
+      "portability_reason": "Small C++ filter headers make this a direct firmware-reference target with little host structure to remove.",
+      "value_reason": "Useful for comparing simple biquad variants and coefficient handling against embedded library filters.",
+      "port_idea": "Port the biquad header into a Teensy Audio test object and measure coefficient update behavior under modulation.",
+      "license": "MIT",
+      "note": "Returning - Useful for comparing simple biquad variants and coefficient handling against embedded library filters.",
+      "rotation_status": "Returning",
+      "summary": "DSP C++ audio filters",
+      "evidence": {
+        "source_file_count": 43,
+        "dsp_file_count": 4,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "lib/biquad.h",
+          "lib/biquad_modified.h",
+          "lib/filter_common.h",
+          "src/main.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "kayrockscreenprinting/ultramaster_kr106",
+      "html_url": "https://github.com/kayrockscreenprinting/ultramaster_kr106",
+      "stars": 173,
+      "forks": 18,
+      "last_push": "2026-05-07",
+      "topic": "JUCE synth",
+      "score": 495,
+      "portability_class": "Refactor",
+      "portability_reason": "The JUCE project has a clear Source/DSP core, but firmware use still needs plugin-state, preset, and host assumptions removed.",
+      "value_reason": "The Juno-style oscillator, chorus, VCF, VCA, and envelope headers offer a focused synth-voice extraction target.",
+      "port_idea": "Extract one mono voice with oscillator, ADSR, VCF, and chorus disabled at first, then add chorus after CPU and RAM are measured.",
+      "license": "GPL-3.0",
+      "note": "Returning - The Juno-style oscillator, chorus, VCF, VCA, and envelope headers offer a focused synth-voice extraction target.",
+      "rotation_status": "Returning",
+      "summary": "Linux, Osx & Windows JUCE port of Ultramaster Group's classic 2001 software synth",
+      "evidence": {
+        "source_file_count": 72,
+        "dsp_file_count": 32,
+        "host_file_count": 6,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/DSP/KR106Oscillators.h",
+          "Source/DSP/KR106VCF.h",
+          "Source/DSP/KR106Chorus.h",
+          "Source/DSP/KR106ADSR.h"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "jatinchowdhury18/CrossroadsEffects",
+      "html_url": "https://github.com/jatinchowdhury18/CrossroadsEffects",
+      "stars": 33,
+      "forks": 0,
+      "last_push": "2020-04-08",
+      "topic": "Faust effect",
+      "score": 166,
+      "portability_class": "Direct",
+      "portability_reason": "The Faust scripts are small DSP sources that can generate C++ kernels without keeping the experiment scripts or plugin wrappers.",
+      "value_reason": "Good compact source material for generated filters, soft clipping, and experimental effect structures on MCU audio.",
+      "port_idea": "Generate C++ from one Faust effect, wrap it as a mono Daisy/Teensy block, and hard-code a few controls before exposing CV/MIDI.",
+      "license": "LGPL-3.0",
+      "note": "New - Good compact source material for generated filters, soft clipping, and experimental effect structures on MCU audio.",
+      "rotation_status": "New",
+      "summary": "At the crossroads of programming your own audio effects, and letting your audio effects be programmed for you.",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 11,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "faust_scripts/evolve_struct.dsp",
+          "faust_scripts/evolve_struct_FIR_filter.dsp",
+          "faust_scripts/evolve_struct_Soft-clip.dsp",
+          "faust_scripts/Two-pole-test.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "grahamwhaley/DSPham",
+      "html_url": "https://github.com/grahamwhaley/DSPham",
+      "stars": 37,
+      "forks": 9,
+      "last_push": "2025-03-03",
+      "topic": "Teensy reference",
+      "score": 156,
+      "portability_class": "Direct",
+      "portability_reason": "This is already Teensy-oriented Arduino code with project-specific dynamic filter files.",
+      "value_reason": "Practical reference for a Teensy audio processor with dynamic filtering rather than a desktop-to-MCU transplant.",
+      "port_idea": "Use the dynamic filter code as a Teensy baseline, then compare a Daisy port only after the control-rate update model is clear.",
+      "license": "GPL-3.0",
+      "note": "New - Practical reference for a Teensy audio processor with dynamic filtering rather than a desktop-to-MCU transplant.",
+      "rotation_status": "New",
+      "summary": "A Teensy based DSP audio processor",
+      "evidence": {
+        "source_file_count": 36,
+        "dsp_file_count": 4,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "DSPham.ino",
+          "dspfilter.h",
+          "dynamicFilters.cpp",
+          "dynamicFilters.h"
+        ]
+      }
+    }
+  ]
+}

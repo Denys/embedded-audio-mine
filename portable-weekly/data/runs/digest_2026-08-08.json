@@ -1,0 +1,343 @@
+{
+  "date": "2026-08-08",
+  "generated_at_utc": "2026-08-08T09:34:45Z",
+  "query_successful_count": 18,
+  "query_count": 18,
+  "shortlist_candidate_count": 182,
+  "unique_nonfork_repo_count": 187,
+  "transport_notes": [
+    "GitHub API used authenticated token from local environment or gh auth",
+    "GitHub HTTP 404 for https://api.github.com/repos/2439905184/lmms_synth_faust_port/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/ChagoCruz/teensy_synth_sine/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/DannyJonel/SynthGranularV2/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/DirektDSP/PedalSuite/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/Jack-Hannon/Senior-Project-DSP/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/JarredHockleyDoingStuff/RealST_AnalogueSynthCollection/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/Mariastakh/Granular_synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/OriolFreixa/tmf_additive_synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/afx1337/afxAudioEffects/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/br0kensource/pocket-synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/cescofors75/RedMaster-DaisySeed64MB/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/daleonov/SpringReverb/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/diotsonev91/cpp-dsp-lab/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/francesco4-gif/faust-synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/holaefrain/DOOF/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/mgandhi27/wave-shield-dsp/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/monoet/local-agent-synth/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/percyc409/DaisyProjects/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "GitHub HTTP 404 for https://api.github.com/repos/pvaliani/basic_oscillator_synth_vst3/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}"
+  ],
+  "previous_digest_file": "2026-08-01 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1416,
+      "forks": 179,
+      "last_push": "2026-08-02",
+      "topic": "DSP library",
+      "score": 3484,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "BSL-1.0",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 177,
+        "dsp_file_count": 65,
+        "host_file_count": 7,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/support/audio_stream.hpp",
+          "q_lib/include/q/support/midi_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "Ameobea/web-synth",
+      "html_url": "https://github.com/Ameobea/web-synth",
+      "stars": 563,
+      "forks": 30,
+      "last_push": "2026-08-05",
+      "topic": "Faust synth",
+      "score": 1351,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Its standalone Faust sources include a stereo quadrature-LFO flanger and a three-band diode-ladder distortion, offering effect kernels beyond the browser DAW. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Compile one Faust effect at a time to C++, replace web controls with fixed parameters, and begin with the flanger before budgeting the three-band ladder path.",
+      "license": "NOASSERTION",
+      "note": "Returning - Its standalone Faust sources include a stereo quadrature-LFO flanger and a three-band diode-ladder distortion, offering effect kernels beyond the browser DAW. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "Returning",
+      "summary": "Browser-based DAW and audio synthesis platform with dozens of effects, synths, and modules",
+      "evidence": {
+        "source_file_count": 138,
+        "dsp_file_count": 73,
+        "host_file_count": 6,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "engine/engine/static/flanger.dsp",
+          "engine/engine/static/rain.dsp",
+          "src/graphEditor/nodes/CustomAudio/MultibandDiodeLadderDistortion/dsp.faust"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "dimtass/DSP-Cpp-filters",
+      "html_url": "https://github.com/dimtass/DSP-Cpp-filters",
+      "stars": 188,
+      "forks": 39,
+      "last_push": "2025-11-03",
+      "topic": "Filters",
+      "score": 603,
+      "portability_class": "Direct",
+      "portability_reason": "The filter families are header-only sample processors and the repository documents a real-time Cortex-M4 test, leaving only callback and parameter plumbing.",
+      "value_reason": "Header-only biquads cover all-pass, shelving, Linkwitz-Riley, Butterworth, band-stop, and constant-Q EQ forms already exercised on a Cortex-M4.",
+      "port_idea": "Lift the header-only coefficient and sample functions into a fixed Daisy/Teensy block, recalculate only on parameter changes, and flush denormals.",
+      "license": "MIT",
+      "note": "Returning - Header-only biquads cover all-pass, shelving, Linkwitz-Riley, Butterworth, band-stop, and constant-Q EQ forms already exercised on a Cortex-M4.",
+      "rotation_status": "Returning",
+      "summary": "DSP C++ audio filters",
+      "evidence": {
+        "source_file_count": 43,
+        "dsp_file_count": 4,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "lib/biquad.h",
+          "lib/biquad_modified.h",
+          "lib/filter_common.h",
+          "lib/filter_includes.h"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "Signalsmith-Audio/hilbert-iir",
+      "html_url": "https://github.com/Signalsmith-Audio/hilbert-iir",
+      "stars": 52,
+      "forks": 4,
+      "last_push": "2026-01-20",
+      "topic": "Filters",
+      "score": 211,
+      "portability_class": "Direct",
+      "portability_reason": "The runtime is a short dependency-free single header parameterized by sample rate; the FFT design utility is not required on the target.",
+      "value_reason": "The dependency-free 0BSD header turns parallel complex one-pole sections into an analytic signal, enabling compact frequency shifters and single-sideband effects.",
+      "port_idea": "Compile the float header directly in a 48 kHz callback, validate phase and amplitude against its design tool, then map the complex output into a quadrature modulator.",
+      "license": "0BSD",
+      "note": "Returning - The dependency-free 0BSD header turns parallel complex one-pole sections into an analytic signal, enabling compact frequency shifters and single-sideband effects.",
+      "rotation_status": "Returning",
+      "summary": "IIR Hilbert filter: short, dependency-free, header-only C++",
+      "evidence": {
+        "source_file_count": 5,
+        "dsp_file_count": 2,
+        "host_file_count": 0,
+        "heavy_file_count": 1,
+        "sample_dsp_paths": [
+          "include/signalsmith-hilbert/hilbert.h"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "jatinchowdhury18/CrossroadsEffects",
+      "html_url": "https://github.com/jatinchowdhury18/CrossroadsEffects",
+      "stars": 33,
+      "forks": 0,
+      "last_push": "2020-04-08",
+      "topic": "Faust effect",
+      "score": 166,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Crossroads evolves gain-and-delay effect topologies offline and emits Faust, making it a useful source of generated comb, FIR, soft-clip, and delay structures rather than a runtime dependency.",
+      "port_idea": "Run the genetic search on a computer, keep only the emitted Faust topology, then compile that fixed kernel for the MCU and bound every evolved delay.",
+      "license": "LGPL-3.0",
+      "note": "Returning - Crossroads evolves gain-and-delay effect topologies offline and emits Faust, making it a useful source of generated comb, FIR, soft-clip, and delay structures rather than a runtime dependency.",
+      "rotation_status": "Returning",
+      "summary": "At the crossroads of programming your own audio effects, and letting your audio effects be programmed for you.",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 11,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "faust_scripts/Two-pole-test.dsp",
+          "faust_scripts/bench.dsp",
+          "faust_scripts/evolve_struct.dsp",
+          "faust_scripts/evolve_struct_FIR_filter.dsp",
+          "faust_scripts/evolve_struct_Soft-clip.dsp",
+          "faust_scripts/evolve_struct_delay.dsp",
+          "faust_scripts/evolve_struct_gain.dsp",
+          "faust_scripts/param_est.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "jpcima/fverb",
+      "html_url": "https://github.com/jpcima/fverb",
+      "stars": 18,
+      "forks": 3,
+      "last_push": "2022-01-10",
+      "topic": "Faust effect",
+      "score": 155,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Its single Faust file implements a Dattorro-style stereo reverb with staged diffusion, modulated feedback delays, damping, and left/right decorrelation.",
+      "port_idea": "Generate static C++, budget the predelay and eight diffusion/tank delays at 48 kHz, then reduce maximum predelay or modulation interpolation if SRAM or cycles are tight.",
+      "license": "BSD-2-Clause",
+      "note": "Returning - Its single Faust file implements a Dattorro-style stereo reverb with staged diffusion, modulated feedback delays, damping, and left/right decorrelation.",
+      "rotation_status": "Returning",
+      "summary": "Plugin version of reverb effect to include in sfizz",
+      "evidence": {
+        "source_file_count": 10,
+        "dsp_file_count": 3,
+        "host_file_count": 5,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "fverb.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "clovesrodrigues/AUDIO_DSP",
+      "html_url": "https://github.com/clovesrodrigues/AUDIO_DSP",
+      "stars": 2,
+      "forks": 0,
+      "last_push": "2026-08-04",
+      "topic": "DSP library",
+      "score": 154,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable header core is separate and process methods avoid allocation, but C++20 features, broad configuration, and optional plugin/convolution modules should be cut from the firmware build.",
+      "value_reason": "The MIT header library separates no-allocation fuzz, tube-preamp, tone-stack, fixed-buffer spring-reverb, and static oversampling blocks from optional plugin and convolution code.",
+      "port_idea": "Start with VintageFuzzDSP or one tube stage, disable oversampling, replace C++20-only conveniences if needed, then size spring delays explicitly before enabling reverb.",
+      "license": "MIT",
+      "note": "New - The MIT header library separates no-allocation fuzz, tube-preamp, tone-stack, fixed-buffer spring-reverb, and static oversampling blocks from optional plugin and convolution code.",
+      "rotation_status": "New",
+      "summary": "Biblioteca de DSP para \u00e1udio. C++ Audio DSP library for VST/VST3 plugins, Reaper, Audacity, and OBS Studio. Processamento e edi\u00e7\u00e3o de \u00e1udio em tempo real. ENGINE DE PROGRAMA\u00c7\u00c3O VST3 E \u00c1UDIO.",
+      "evidence": {
+        "source_file_count": 1530,
+        "dsp_file_count": 409,
+        "host_file_count": 1255,
+        "heavy_file_count": 22,
+        "sample_dsp_paths": [
+          "CV_DSP/Effects/Chorus.hpp",
+          "CV_DSP/Effects/Flanger.hpp",
+          "CV_DSP/Effects/Phaser.hpp",
+          "CV_DSP/Filters/AllPassFilter.hpp",
+          "CV_DSP/Filters/Biquad.hpp",
+          "CV_DSP/Filters/DCBlocker.hpp",
+          "CV_DSP/Filters/LadderFilter.hpp",
+          "CV_DSP/Filters/OnePoleFilter.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "boblark/DSP_TeensyAudio_F32",
+      "html_url": "https://github.com/boblark/DSP_TeensyAudio_F32",
+      "stars": 1,
+      "forks": 2,
+      "last_push": "2020-06-16",
+      "topic": "Teensy reference",
+      "score": 118,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Its Teensy F32 blocks include measured 90-degree FIR/Hilbert timing, phase analysis, arbitrary-coefficient FIR, and equalizer building blocks rather than only stock 16-bit audio nodes.",
+      "port_idea": "Reuse the 90-degree FIR block and coefficient interface first; select a tap count from the published Teensy 4 timing, then adapt OpenAudio block ownership only if targeting Daisy.",
+      "license": "MIT",
+      "note": "Returning - Its Teensy F32 blocks include measured 90-degree FIR/Hilbert timing, phase analysis, arbitrary-coefficient FIR, and equalizer building blocks rather than only stock 16-bit audio nodes.",
+      "rotation_status": "Returning",
+      "summary": "Collected blocks for use with OpenAudio/Tympan libraries with floating point.",
+      "evidence": {
+        "source_file_count": 50,
+        "dsp_file_count": 32,
+        "host_file_count": 13,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/AudioAnalyzePhase_F32.cpp",
+          "src/AudioAnalyzePhase_F32.h",
+          "src/AudioFilter90Deg_F32.cpp",
+          "src/AudioFilter90Deg_F32.h",
+          "src/AudioFilterEqualizer_F32.cpp",
+          "src/AudioFilterEqualizer_F32.h",
+          "src/AudioFilterFIRGeneral_F32.cpp",
+          "src/AudioFilterFIRGeneral_F32.h"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "YSYourSoftware/YourSound",
+      "html_url": "https://github.com/YSYourSoftware/YourSound",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-07-22",
+      "topic": "VST3 synth",
+      "score": 115,
+      "portability_class": "Refactor",
+      "portability_reason": "Reusable DSP is present, but JUCE, VST, Android, or plugin wrappers need separating before firmware use.",
+      "value_reason": "The engine separates a morphable stored wavetable player, polyphony controller, ADSR state, and block renderer from its plugin and ImGui layers. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Extract BinPlayerWavetable with a fixed voice cap, move its tables into bounded flash or external RAM, and replace GUI parameter calls with control-rate messages.",
+      "license": "NOASSERTION",
+      "note": "New - The engine separates a morphable stored wavetable player, polyphony controller, ADSR state, and block renderer from its plugin and ImGui layers. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "New",
+      "summary": "F.O.S.S. C++ Sound Engine",
+      "evidence": {
+        "source_file_count": 62,
+        "dsp_file_count": 7,
+        "host_file_count": 14,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "core/include/YourSound/IntegratedPlayers/BasicOSCPlayer.hpp",
+          "core/include/YourSound/IntegratedPlayers/ModLFO.hpp",
+          "core/src/IntegratedPlayers/BasicOSCPlayer.cpp",
+          "core/src/IntegratedPlayers/ModLFO.cpp",
+          "factory/binary/include/BinPlayerWavetable.hpp",
+          "factory/binary/src/BinPlayerWavetable.cpp",
+          "plugin/src/PluginProcessor.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "Lef-F/arcturus",
+      "html_url": "https://github.com/Lef-F/arcturus",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-04-26",
+      "topic": "Faust synth",
+      "score": 110,
+      "portability_class": "Stretch",
+      "portability_reason": "The Faust kernels are extractable, but eight voices plus chorus, a 100,000-sample delay and four-comb reverb exceed a prudent internal-memory budget without reducing the configuration.",
+      "value_reason": "The Faust voice combines dual-oscillator hard sync, a Buchla-style wavefolder, filter-envelope poly-mod and vintage drift, while the effects file adds Juno-style chorus and tape-flutter delay.",
+      "port_idea": "Compile one mono voice first, keep hard sync plus wavefolder and filter, then shorten the 100,000-sample delay or move it to external memory before adding chorus, reverb, or polyphony.",
+      "license": "MIT",
+      "note": "New - The Faust voice combines dual-oscillator hard sync, a Buchla-style wavefolder, filter-envelope poly-mod and vintage drift, while the effects file adds Juno-style chorus and tape-flutter delay.",
+      "rotation_status": "New",
+      "summary": "A hardware-first web synth for your Arturia KeyStep and BeatStep. Minimal computer, maximal knobs, built for the jam flow state.",
+      "evidence": {
+        "source_file_count": 2,
+        "dsp_file_count": 2,
+        "host_file_count": 2,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/audio/effects.dsp",
+          "src/audio/synth.dsp"
+        ]
+      }
+    }
+  ]
+}
