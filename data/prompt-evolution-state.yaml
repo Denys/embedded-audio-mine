@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-08-18
+last_updated: 2026-08-31
 
 shared:
   anti_repeat_window_days: 30
@@ -58,6 +58,19 @@ weekly_analog:
     - standalone_allowed
     - reusable_subassemblies_allowed
     - manufacturer_reference_designs_allowed_as_foundation_updates
+  recheck_queue:
+    - project: ThomHPL/Open80017a
+      status: ref_pass
+      blocker: verify a built v0.2 release, Gerbers, PMOS lifecycle substitution, and quantitative A/B results
+    - project: barnabywalters/Schraeg
+      status: pass_with_erratum
+      blocker: locate or validate an attenuverter-range fix and measured resonance-CV/FM behavior
+    - project: orange-dot/mamut-epm-hw-
+      status: hold
+      blocker: wait for a fabricated audio PCB, bench evidence, and measurements
+    - project: UNH µModules
+      status: hold
+      blocker: locate editable EDA, fabrication files, and an explicit hardware-source license separate from the thesis license
   note: daily standalone gates do not narrow the weekly analog mine
 
 feedback:
@@ -67,3 +80,6 @@ feedback:
     - "daily: verify recheck queue against current primary artifacts and both publication streams"
     - "daily: expand Codeberg/GitLab/SourceHut/Hackaday/forum lanes before ranking"
     - "weekly analog: continue hidden-gems registry revalidation under weekly_deep profile"
+    - "weekly analog: find a fabricated SSI2100 plus SSI2162 compandor with editable PCB source and measured tracking"
+    - "weekly analog: search non-GitHub digitally assisted analog calibration, DAC trims, autotune fixtures, and per-voice NVM"
+    - "weekly analog: recheck Open80017a v0.2, Schraeg attenuverter fixes, and ZVP1320F or V2164 lifecycle substitutes"
