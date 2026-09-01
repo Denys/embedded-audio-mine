@@ -22,6 +22,7 @@ export interface ProjectRecord {
   mcuPlatforms: string[];
   languagesFrameworks: string[];
   effects: string[];
+  dafxDomains: string[];
   classificationConfidence: ClassificationConfidence;
   classificationGaps: string[];
   tags: string[];
@@ -95,6 +96,7 @@ export interface DashboardData {
   mcuPlatformDistribution: DistributionPoint[];
   languageFrameworkDistribution: DistributionPoint[];
   effectDistribution: DistributionPoint[];
+  dafxDomainDistribution: DistributionPoint[];
   classificationConfidenceDistribution: DistributionPoint[];
   streamDistribution: DistributionPoint[];
   provenanceDistribution: DistributionPoint[];
