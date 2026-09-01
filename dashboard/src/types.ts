@@ -1,5 +1,5 @@
 export type StreamKey = "webgpt_daily" | "codex_weekly";
-export type DigestStreamKey = StreamKey | "analog_weekly";
+export type DigestStreamKey = StreamKey | "analog_weekly" | "portable_weekly";
 
 export type RepeatState = "blocked" | "eligible" | "soft" | "unknown";
 export type ClassificationConfidence = "high" | "medium" | "low";
@@ -62,6 +62,7 @@ export interface TimelinePoint {
   webgpt_daily: number;
   codex_weekly: number;
   analog_weekly: number;
+  portable_weekly: number;
 }
 
 export interface DashboardMetrics {
@@ -69,6 +70,7 @@ export interface DashboardMetrics {
   codexProjects: number;
   webgptProjects: number;
   analogProjects: number;
+  portableProjects: number;
   crossStreamProjects: number;
   hardBlocks: number;
   softReferences: number;
@@ -78,6 +80,7 @@ export interface DashboardMetrics {
   latestCodexDate: string;
   latestWebgptDate: string;
   latestAnalogDate: string;
+  latestPortableDate: string;
   generatedAt: string;
 }
 
@@ -101,6 +104,7 @@ export interface DashboardData {
     selectedRows: number;
     commonIndexRows: number;
     codexRunFiles: number;
+    portableRunFiles: number;
     rankedDigestEntries: number;
     analogDigestFiles: number;
     lowConfidenceClassifications: number;
