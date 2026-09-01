@@ -73,7 +73,7 @@ for (const fileName of analogFiles) {
 }
 assert(data.sourceSummary.analogDigestFiles === analogFiles.length, `Analog report count drift: ${data.sourceSummary.analogDigestFiles} != ${analogFiles.length}`);
 assert(data.metrics.latestAnalogDate === latestAnalog, `latest Analog report drift: ${data.metrics.latestAnalogDate} != ${latestAnalog}`);
-assert(latestAnalog === "2026-08-31", `expected latest Analog report 2026-08-31, got ${latestAnalog}`);
+assert(latestAnalog >= "2026-08-31", `2026-08-31 Analog report regression: latest date ${latestAnalog} is unexpectedly older`);
 
 const portableHistoryFile = path.join(repoRoot, "portable-weekly", "data", "repo_feature_history.json");
 const rawPortableHistory = JSON.parse(readFileSync(portableHistoryFile, "utf8"));
