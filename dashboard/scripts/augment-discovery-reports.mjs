@@ -130,6 +130,22 @@ function getProject(repo, url = "") {
   return project;
 }
 
+const portableGapNames = new Set(["repository type", "MCU / platform", "language / framework", "audio function / effects", "target MCU requires port profiling"]);
+function recomputePortableClassification(project, evidenceSignals) {
+  if (project.repositoryTypes.some((value) => value !== "Unclassified")) project.repositoryTypes = project.repositoryTypes.filter((value) => value !== "Unclassified");
+  const gaps = new Set((project.classificationGaps || []).filter((gap) => !portableGapNames.has(gap)));
+  if (!project.repositoryTypes.length || project.repositoryTypes.includes("Unclassified")) gaps.add("repository type");
+  if (!project.languagesFrameworks.length) gaps.add("language / framework");
+  if (!project.effects.length) gaps.add("audio function / effects");
+  const hasEmbeddedTarget = project.mcuPlatforms.some((value) => !["Desktop / host CPU", "Analog / no MCU stated"].includes(value));
+  if (!hasEmbeddedTarget) gaps.add("target MCU requires port profiling");
+  project.classificationGaps = [...gaps];
+  if (project.classificationConfidence !== "high") {
+    if (project.classificationGaps.length <= 1 && evidenceSignals >= 3) project.classificationConfidence = "high";
+    else if (project.classificationGaps.length <= 2 && evidenceSignals >= 1) project.classificationConfidence = "medium";
+  }
+}
+
 function inferPortableFacets(project, item) {
   const paths = item.evidence?.sample_dsp_paths || [];
   const text = [item.topic, item.summary, item.value_reason, item.portability_reason, item.port_idea, ...paths].filter(Boolean).join(" ");
@@ -148,7 +164,7 @@ function inferPortableFacets(project, item) {
 
   if (/library|dsp primitives|dsp library|toolkit|headers?/i.test(text)) addValue(project.repositoryTypes, "DSP / software library");
   if (/\bjuce\b|vst3?|plugin/i.test(text)) addValue(project.repositoryTypes, "Desktop audio / plugin");
-  if (/firmware|embedded|cortex-m|daisy|teensy|esp32|rp2040|rp2350/i.test(text) && !project.repositoryTypes.length) addValue(project.repositoryTypes, "Firmware / embedded software");
+  if (/firmware|embedded|cortex-m|daisy|teensy|esp32|rp2040|rp2350/i.test(text) && !project.repositoryTypes.some((value) => value !== "Unclassified")) addValue(project.repositoryTypes, "Firmware / embedded software");
   if (/synth|instrument|sampler|looper/i.test(text) && !/library/i.test(text)) addValue(project.repositoryTypes, "Audio application / instrument");
   if (!project.repositoryTypes.length) addValue(project.repositoryTypes, "Unclassified");
 
@@ -170,15 +186,8 @@ function inferPortableFacets(project, item) {
   if (/faust/i.test(text)) addValue(project.platforms, "Faust");
   if (/dsp|filter|delay|reverb|oscillator/i.test(text)) addValue(project.platforms, "DSP Library");
 
-  const gaps = [];
-  if (!project.repositoryTypes.length || project.repositoryTypes.includes("Unclassified")) gaps.push("repository type");
-  if (!project.languagesFrameworks.length) gaps.push("language / framework");
-  if (!project.effects.length) gaps.push("audio function / effects");
-  if (!project.mcuPlatforms.length) gaps.push("target MCU requires port profiling");
-  project.classificationGaps = uniq([...(project.classificationGaps || []), ...gaps]);
   const evidenceSignals = paths.length + (item.value_reason ? 1 : 0) + (item.portability_reason ? 1 : 0);
-  if (gaps.length <= 1 && evidenceSignals >= 3) project.classificationConfidence = "high";
-  else if (gaps.length <= 2 && evidenceSignals >= 1 && project.classificationConfidence === "low") project.classificationConfidence = "medium";
+  recomputePortableClassification(project, evidenceSignals);
 }
 
 function portableScore(project) {
@@ -203,7 +212,7 @@ if (existsSync(digestDir)) {
     const file = path.join(digestDir, fileName);
     const text = readFileSync(file, "utf8");
     const fallbackDate = safeDate(fileName);
-    const blockPattern = /##\s+(?:Proposed\s+)?publication(?:[-\s]+tracker)?\s+rows\s*\n+(?:Rows applied[^\n]*\n+)?```csv\s*\n([\s\S]*?)```/gi;
+    const blockPattern = /##\s+(?:Proposed\s+)?publication(?:[-\s]+tracker)?\s+rows\s*\r?\n(?:Rows applied[^\n]*\r?\n)?\s*```csv\s*\r?\n([\s\S]*?)```/gi;
     for (const match of text.matchAll(blockPattern)) {
       for (const row of parsePublicationRows(match[1])) {
         const project = getProject(row.repo);
@@ -226,11 +235,39 @@ if (existsSync(digestDir)) {
   }
 }
 
-// Portable Weekly is a separate project-discovery report lane. It adds provenance and engineering evidence,
-// but deliberately does not claim WebGPT/Codex canonical anti-repeat ownership.
-const portableRunDir = path.join(repoRoot, "portable-weekly", "data", "runs");
+// Portable Weekly is a separate project-discovery report lane. Feature history preserves older findings whose
+// per-run JSON is no longer retained; run JSON enriches the records with current implementation evidence.
 let portableRunFiles = 0;
 let latestPortableDate = "";
+const portableHistoryFile = path.join(repoRoot, "portable-weekly", "data", "repo_feature_history.json");
+if (existsSync(portableHistoryFile)) {
+  const rawHistory = JSON.parse(readFileSync(portableHistoryFile, "utf8"));
+  const entries = rawHistory.repos || rawHistory;
+  for (const [repo, info] of Object.entries(entries)) {
+    if (!info || typeof info !== "object" || (!Array.isArray(info.appearance_dates) && !info.last_featured && !info.ranks)) continue;
+    const project = getProject(repo);
+    if (!project) continue;
+    addValue(project.digestStreams, "portable_weekly");
+    addValue(project.sourceFiles, "portable-weekly/data/repo_feature_history.json");
+    addValue(project.recordTypes, "ranked_digest");
+    const dates = uniq([...(info.appearance_dates || []), ...Object.keys(info.ranks || {})].map(safeDate)).sort();
+    for (const date of dates) {
+      if (!date) continue;
+      addValue(project.digestDates, date);
+      addValue(project.digestDatesByStream.portable_weekly, date);
+      project.firstSeen = minDate(project.firstSeen, date);
+      project.lastPublished = maxDate(project.lastPublished, date);
+      latestPortableDate = maxDate(latestPortableDate, date);
+    }
+    const lastFeatured = safeDate(info.last_featured);
+    if (lastFeatured) {
+      project.lastPublished = maxDate(project.lastPublished, lastFeatured);
+      latestPortableDate = maxDate(latestPortableDate, lastFeatured);
+    }
+  }
+}
+
+const portableRunDir = path.join(repoRoot, "portable-weekly", "data", "runs");
 if (existsSync(portableRunDir)) {
   for (const fileName of readdirSync(portableRunDir).filter((name) => /^digest_\d{4}-\d{2}-\d{2}\.json$/.test(name)).sort()) {
     portableRunFiles += 1;
@@ -253,15 +290,14 @@ if (existsSync(portableRunDir)) {
       project.pushedAt = maxDate(project.pushedAt, safeDate(item.last_push || item.pushed_at));
       project.topic ||= item.topic || "";
       if (Number.isFinite(Number(item.score))) project.score = Number(item.score);
-      project.statusTag ||= item.rotation_status || item.status_tag || "";
+      project.statusTag = item.rotation_status || item.status_tag || project.statusTag;
       const portabilityClass = String(item.portability_class || "").toLowerCase();
-      if (!project.portabilityValue) project.portabilityValue = portabilityClass === "direct" ? "high" : portabilityClass === "refactor" ? "medium" : portabilityClass ? "reference" : "";
+      if (portabilityClass) project.portabilityValue = portabilityClass === "direct" ? "high" : portabilityClass === "refactor" ? "medium" : "reference";
       project.contentSummary = append(project.contentSummary, item.value_reason || item.summary || item.description);
       project.portabilitySummary = append(project.portabilitySummary, [item.portability_reason, item.port_idea].filter(Boolean).join(" "));
       project.notes = append(project.notes, item.note);
       addValues(project.representativeFiles, item.evidence?.sample_dsp_paths || item.representative_files || []);
       inferPortableFacets(project, item);
-      project.portingScore = Math.max(Number(project.portingScore || 0), portableScore(project));
     }
   }
 }
@@ -280,6 +316,7 @@ for (const project of data.projects) {
   project.digestDates = uniq(project.digestDates).sort();
   project.representativeFiles = uniq(project.representativeFiles).sort();
   for (const key of ["webgpt_daily", "codex_weekly", "analog_weekly", "portable_weekly"]) project.digestDatesByStream[key] = uniq(project.digestDatesByStream[key]).sort();
+  if (project.digestStreams.includes("portable_weekly")) project.portingScore = Math.max(Number(project.portingScore || 0), portableScore(project));
 }
 
 data.projects.sort((a, b) => Number(b.portingScore || 0) - Number(a.portingScore || 0) || String(b.lastPublished || "").localeCompare(String(a.lastPublished || "")) || a.repo.localeCompare(b.repo));
@@ -331,5 +368,5 @@ data.sourceSummary.portableRunFiles = portableRunFiles;
 data.sourceSummary.lowConfidenceClassifications = lowConfidence;
 
 writeFileSync(dataPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
-console.log(`augmented discovery reports: ${data.metrics.analogProjects} Analog projects across ${analogDigestFiles} reports; ${data.metrics.portableProjects} Portable projects across ${portableRunFiles} runs`);
+console.log(`augmented discovery reports: ${data.metrics.analogProjects} Analog projects across ${analogDigestFiles} reports; ${data.metrics.portableProjects} Portable projects across history + ${portableRunFiles} retained runs`);
 console.log(`latest discovery provenance: Analog ${latestAnalogDate || "n/a"}; Portable ${latestPortableDate || "n/a"}`);
