@@ -74,6 +74,7 @@ function emptyProject(repo, url = "") {
     mcuPlatforms: [],
     languagesFrameworks: [],
     effects: [],
+    dafxDomains: [],
     classificationConfidence: "low",
     classificationGaps: [],
     tags: [],
@@ -113,6 +114,7 @@ for (const project of data.projects || []) {
   project.digestDatesByStream.codex_weekly ||= [];
   project.digestDatesByStream.analog_weekly ||= [];
   project.digestDatesByStream.portable_weekly ||= [];
+  project.dafxDomains ||= [];
   projectsById.set(project.id, project);
 }
 
@@ -190,6 +192,38 @@ function inferPortableFacets(project, item) {
   recomputePortableClassification(project, evidenceSignals);
 }
 
+const dafxDomainPatterns = [
+  ["Filters & Delays", /delay|echo|comb|fractional delay|filter|equalizer|equaliser|\beq\b|biquad|svf|ladder|wah|phaser|chorus|flanger|vibrato/i],
+  ["Modulators & Demodulators", /ring mod|amplitude mod|frequency mod|phase mod|rotary|tremolo|modulator|demodulator|single[- ]side[- ]band|\bssb\b/i],
+  ["Nonlinear Processing", /compressor|limiter|expander|noise gate|distortion|overdrive|fuzz|waveshap|saturat|clipper|diode/i],
+  ["Spatial Effects", /reverb|panning|panner|spatial|room model|plate reverb|spring reverb/i],
+  ["Time-Segment Processing", /granular|grain|time[- ]stretch|time scale|time-scale|\bsola\b|psola|looper|sampler/i],
+  ["Time-Frequency Processing", /phase vocoder|time-frequency|stft|spectral freeze|frequency-domain synthesis|pitch shift|pitch-shift/i],
+  ["Source-Filter Processing", /source-filter|vocoder|\blpc\b|formant/i],
+  ["Adaptive DAFX", /adaptive dafx|adaptive effect|feature extraction|envelope follower|audio-driven control|cross-adaptive/i],
+  ["Spectral Processing", /spectral|\bfft\b|stft|frequency-domain/i],
+  ["Time/Frequency Warping", /frequency warp|time warp|warping operator|warped filter/i],
+  ["Virtual Analog", /virtual analog|\bwdf\b|wave digital|circuit model|analog model|valve|tube model|tape model|physical model/i],
+  ["Automatic Mixing", /automatic mix|automatic mixing|automix|gain sharing/i],
+  ["Source Separation", /source separation|source-separation|demix|blind source/i]
+];
+function inferDafxDomains(project) {
+  const text = [
+    project.repo,
+    project.topic,
+    project.notes,
+    project.whySelected,
+    project.contentSummary,
+    project.portabilitySummary,
+    ...project.effects,
+    ...project.tags,
+    ...project.representativeFiles,
+    ...project.platforms
+  ].filter(Boolean).join(" ");
+  project.dafxDomains = [];
+  for (const [label, pattern] of dafxDomainPatterns) if (pattern.test(text)) addValue(project.dafxDomains, label);
+}
+
 function portableScore(project) {
   let score = 0;
   if (project.portabilityValue === "high") score += 28;
@@ -250,6 +284,7 @@ if (existsSync(portableHistoryFile)) {
     addValue(project.digestStreams, "portable_weekly");
     addValue(project.sourceFiles, "portable-weekly/data/repo_feature_history.json");
     addValue(project.recordTypes, "ranked_digest");
+    project.featureCount = Math.max(Number(project.featureCount || 0), Number(info.feature_count || 0));
     const dates = uniq([...(info.appearance_dates || []), ...Object.keys(info.ranks || {})].map(safeDate)).sort();
     for (const date of dates) {
       if (!date) continue;
@@ -257,11 +292,13 @@ if (existsSync(portableHistoryFile)) {
       addValue(project.digestDatesByStream.portable_weekly, date);
       project.firstSeen = minDate(project.firstSeen, date);
       project.lastPublished = maxDate(project.lastPublished, date);
+      if (info.ranks?.[date]) project.rankHistory[date] = Number(info.ranks[date]);
       latestPortableDate = maxDate(latestPortableDate, date);
     }
     const lastFeatured = safeDate(info.last_featured);
     if (lastFeatured) {
       project.lastPublished = maxDate(project.lastPublished, lastFeatured);
+      if (info.ranks?.[lastFeatured]) project.latestRank = Number(info.ranks[lastFeatured]);
       latestPortableDate = maxDate(latestPortableDate, lastFeatured);
     }
   }
@@ -288,7 +325,7 @@ if (existsSync(portableRunDir)) {
       if (Number.isFinite(Number(item.stars))) project.stars = Number(item.stars);
       if (Number.isFinite(Number(item.forks))) project.forks = Number(item.forks);
       project.pushedAt = maxDate(project.pushedAt, safeDate(item.last_push || item.pushed_at));
-      project.topic ||= item.topic || "";
+      project.topic = item.topic || project.topic;
       if (Number.isFinite(Number(item.score))) project.score = Number(item.score);
       project.statusTag = item.rotation_status || item.status_tag || project.statusTag;
       const portabilityClass = String(item.portability_class || "").toLowerCase();
@@ -297,6 +334,10 @@ if (existsSync(portableRunDir)) {
       project.portabilitySummary = append(project.portabilitySummary, [item.portability_reason, item.port_idea].filter(Boolean).join(" "));
       project.notes = append(project.notes, item.note);
       addValues(project.representativeFiles, item.evidence?.sample_dsp_paths || item.representative_files || []);
+      if (item.rank) {
+        project.rankHistory[date] = Number(item.rank);
+        project.latestRank = Number(item.rank);
+      }
       inferPortableFacets(project, item);
     }
   }
@@ -316,6 +357,8 @@ for (const project of data.projects) {
   project.digestDates = uniq(project.digestDates).sort();
   project.representativeFiles = uniq(project.representativeFiles).sort();
   for (const key of ["webgpt_daily", "codex_weekly", "analog_weekly", "portable_weekly"]) project.digestDatesByStream[key] = uniq(project.digestDatesByStream[key]).sort();
+  inferDafxDomains(project);
+  project.dafxDomains = uniq(project.dafxDomains).sort();
   if (project.digestStreams.includes("portable_weekly")) project.portingScore = Math.max(Number(project.portingScore || 0), portableScore(project));
 }
 
@@ -338,6 +381,7 @@ data.hardwareEvidenceDistribution = distribution(data.projects, (p) => p.hardwar
 data.mcuPlatformDistribution = distribution(data.projects, (p) => p.mcuPlatforms.length ? p.mcuPlatforms : ["Unclassified"], 16);
 data.languageFrameworkDistribution = distribution(data.projects, (p) => p.languagesFrameworks.length ? p.languagesFrameworks : ["Unclassified"], 18);
 data.effectDistribution = distribution(data.projects, (p) => p.effects.length ? p.effects : ["Unclassified"], 20);
+data.dafxDomainDistribution = distribution(data.projects, (p) => p.dafxDomains.length ? p.dafxDomains : ["Unclassified"], 16);
 data.classificationConfidenceDistribution = distribution(data.projects, (p) => p.classificationConfidence, 3);
 data.streamDistribution = distribution(data.projects, (p) => p.streams.length ? p.streams.join(" + ") : "digest-only");
 data.provenanceDistribution = distribution(data.projects, (p) => p.digestStreams.length ? p.digestStreams : ["tracker-only"]);
@@ -370,3 +414,4 @@ data.sourceSummary.lowConfidenceClassifications = lowConfidence;
 writeFileSync(dataPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 console.log(`augmented discovery reports: ${data.metrics.analogProjects} Analog projects across ${analogDigestFiles} reports; ${data.metrics.portableProjects} Portable projects across history + ${portableRunFiles} retained runs`);
 console.log(`latest discovery provenance: Analog ${latestAnalogDate || "n/a"}; Portable ${latestPortableDate || "n/a"}`);
+console.log(`DAFX taxonomy: ${data.dafxDomainDistribution.filter((point) => point.key !== "Unclassified").length} populated technique domains`);
