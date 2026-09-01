@@ -150,8 +150,8 @@ function recomputePortableClassification(project, evidenceSignals) {
 
 function inferPortableFacets(project, item) {
   const paths = item.evidence?.sample_dsp_paths || [];
-  // Only observed/current evidence belongs here. `port_idea` is an adaptation proposal and must not become implementation truth.
-  const text = [item.topic, item.summary, item.value_reason, item.portability_reason, ...paths].filter(Boolean).join(" ");
+  // Only observed/current implementation evidence belongs here. Portability reasons and port ideas are proposals, not proof of target support.
+  const text = [item.topic, item.summary, item.value_reason, ...paths].filter(Boolean).join(" ");
   if (/\bc\+\+\b|\.cpp\b|\.hpp\b|c\+\+\d*/i.test(text)) addValue(project.languagesFrameworks, "C++");
   if (/\brust\b|\.rs\b|cargo|no_std/i.test(text)) addValue(project.languagesFrameworks, "Rust");
   if (/(?:^|[\s,;/])c(?:[\s,;/]|$)|\.c\b|ansi c|c89|c99/i.test(text)) addValue(project.languagesFrameworks, "C");
@@ -189,7 +189,7 @@ function inferPortableFacets(project, item) {
   if (/faust/i.test(text)) addValue(project.platforms, "Faust");
   if (/dsp|filter|delay|reverb|oscillator/i.test(text)) addValue(project.platforms, "DSP Library");
 
-  const evidenceSignals = paths.length + (item.value_reason ? 1 : 0) + (item.portability_reason ? 1 : 0);
+  const evidenceSignals = paths.length + (item.value_reason ? 1 : 0);
   recomputePortableClassification(project, evidenceSignals);
 }
 
@@ -204,7 +204,7 @@ const dafxDomainPatterns = [
   ["Adaptive DAFX", /adaptive dafx|adaptive effect|feature extraction|envelope follower|audio-driven control|cross-adaptive/i],
   ["Spectral Processing", /spectral|\bfft\b|stft|frequency-domain/i],
   ["Time/Frequency Warping", /frequency warp|time warp|warping operator|warped filter/i],
-  ["Virtual Analog", /virtual analog|\bwdf\b|wave digital|circuit model|analog model|valve|tube model|tape model|physical model/i],
+  ["Virtual Analog", /virtual analog|\bwdf\b|wave[- ]digital|circuit model|analog model|valve|tube model|tape model|physical model/i],
   ["Automatic Mixing", /automatic mix|automatic mixing|automix|gain sharing/i],
   ["Source Separation", /source separation|source-separation|demix|blind source/i]
 ];
@@ -237,6 +237,7 @@ function portableScore(project) {
   return score;
 }
 
+// Analog Audio Mine reports are discovery provenance, even when a report's tracker CSV block omits the header.
 const digestDir = path.join(repoRoot, "digests");
 let latestAnalogDate = data.metrics?.latestAnalogDate || "";
 let analogDigestFiles = 0;
@@ -269,6 +270,8 @@ if (existsSync(digestDir)) {
   }
 }
 
+// Portable Weekly is a separate project-discovery report lane. Feature history preserves older findings whose
+// per-run JSON is no longer retained; run JSON enriches the records with current implementation evidence.
 let portableRunFiles = 0;
 let latestPortableDate = "";
 const portableHistoryFile = path.join(repoRoot, "portable-weekly", "data", "repo_feature_history.json");
@@ -329,7 +332,7 @@ if (existsSync(portableRunDir)) {
       const portabilityClass = String(item.portability_class || "").toLowerCase();
       if (portabilityClass) project.portabilityValue = portabilityClass === "direct" ? "high" : portabilityClass === "refactor" ? "medium" : "reference";
       project.contentSummary = append(project.contentSummary, item.value_reason || item.summary || item.description);
-      // Port ideas remain available for human reading, but are not fed back into classification inference.
+      // Portability rationale and port ideas remain human-readable, but are never fed back into implementation inference.
       project.portabilitySummary = append(project.portabilitySummary, [item.portability_reason, item.port_idea].filter(Boolean).join(" "));
       project.notes = append(project.notes, item.note);
       addValues(project.representativeFiles, item.evidence?.sample_dsp_paths || item.representative_files || []);
