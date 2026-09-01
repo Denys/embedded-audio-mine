@@ -119,28 +119,47 @@ assert(data.metrics.portableProjects >= portableHistoryRepos, `Portable project 
 assert(data.metrics.analogProjects === data.projects.filter((project) => project.digestStreams.includes("analog_weekly")).length, "Analog project metric mismatch");
 assert(data.provenanceDistribution.some((point) => point.key.includes("portable_weekly")), "Portable provenance missing from distribution");
 
-const latestAnalogFixture = byId.get("alanbog/3374-vco");
-assert(latestAnalogFixture?.digestDatesByStream.analog_weekly.includes("2026-08-31"), "2026-08-31 Analog provenance regression");
-const latestPortableFixture = byId.get("cycfi/q");
-assert(latestPortableFixture?.digestDatesByStream.portable_weekly.includes("2026-08-29"), "2026-08-29 Portable provenance regression");
-assert(latestPortableFixture?.portabilityValue === "medium", `cycfi/q should keep newest Refactor=>medium classification, got ${latestPortableFixture?.portabilityValue}`);
+const analogFixture = byId.get("alanbog/3374-vco");
+assert(analogFixture?.digestDatesByStream.analog_weekly.includes("2026-08-31"), "2026-08-31 Analog provenance regression");
+
+const q = byId.get("cycfi/q");
+assert(q?.digestDatesByStream.portable_weekly.includes("2026-08-29"), "2026-08-29 Portable provenance regression");
+assert(q?.portabilityValue === "medium", `cycfi/q should keep newest Refactor=>medium classification, got ${q?.portabilityValue}`);
+assert(!q?.mcuPlatforms.includes("Daisy / STM32H7"), "cycfi/q portability prose leaked Daisy/STM32H7 into implementation facets");
+
 const voiceOfFaust = byId.get("magnetophon/voiceoffaust");
 assert(voiceOfFaust?.portabilityValue === "high", `VoiceOfFaust should keep newest Direct=>high classification, got ${voiceOfFaust?.portabilityValue}`);
+
 for (const id of ["rheslip/daisysp_teensy", "bseverns/seedbox"]) {
   const project = byId.get(id);
   assert(project, `portable gap regression fixture missing: ${id}`);
   assert(!project.classificationGaps.includes("MCU / platform"), `${id}: resolved MCU gap survived augmentation`);
   assert(!project.classificationGaps.includes("audio function / effects"), `${id}: resolved effect gap survived augmentation`);
 }
+
 const voxGenesis = byId.get("mdt516/voxgenesis");
 assert(voxGenesis, "port-suggestion leakage fixture missing: mdt516/voxGenesis");
 assert(!voxGenesis.mcuPlatforms.includes("Daisy / STM32H7"), "voxGenesis port idea leaked Daisy into implementation facets");
 assert(!voxGenesis.mcuPlatforms.includes("Teensy 4.x"), "voxGenesis port idea leaked Teensy into implementation facets");
 assert(voxGenesis.classificationGaps.includes("target MCU requires port profiling"), "voxGenesis should retain target-MCU porting gap");
 
+const hvcc = byId.get("wasted-audio/hvcc");
+assert(hvcc, "structured-evidence fixture missing: Wasted-Audio/hvcc");
+assert(hvcc.languagesFrameworks.includes("Python"), "hvcc lost structured Python repository-language evidence");
+assert(!hvcc.mcuPlatforms.includes("Daisy / STM32H7"), "hvcc report prose leaked Daisy into current MCU support");
+assert(!hvcc.mcuPlatforms.includes("Teensy 4.x"), "hvcc report prose leaked Teensy into current MCU support");
+
+const mlSynthTools = byId.get("marcel-licence/ml_synthtools");
+assert(mlSynthTools?.languagesFrameworks.includes("C"), "ML_SynthTools lost structured C language evidence");
+
+const crossStreamRank = byId.get("shawlty/daisy-eurorack-audio-module");
+assert(crossStreamRank, "cross-stream rank regression fixture missing");
+assert(crossStreamRank.lastPublished >= "2026-06-09", "cross-stream fixture lost newer Codex publication date");
+assert(crossStreamRank.latestRank === 8, `cross-stream latest rank should remain Codex rank 8, got ${crossStreamRank.latestRank}`);
+
 assert(Array.isArray(data.dafxDomainDistribution) && data.dafxDomainDistribution.length > 1, "DAFX domain distribution missing");
 assert(data.dafxDomainDistribution.some((point) => point.key === "Filters & Delays" && point.count > 0), "DAFX Filters & Delays domain missing");
-assert(latestPortableFixture?.dafxDomains.includes("Filters & Delays"), "cycfi/q lost DAFX Filters & Delays classification");
+assert(q?.dafxDomains.includes("Filters & Delays"), "cycfi/q lost DAFX Filters & Delays classification");
 const wdf = byId.get("chowdhury-dsp/chowdsp_wdf");
 assert(wdf?.dafxDomains.includes("Virtual Analog"), "chowdsp_wdf lost DAFX Virtual Analog classification");
 assert(wdf?.dafxDomains.includes("Nonlinear Processing"), "chowdsp_wdf lost DAFX Nonlinear Processing classification");
@@ -148,4 +167,4 @@ assert(wdf?.dafxDomains.includes("Nonlinear Processing"), "chowdsp_wdf lost DAFX
 console.log(`project discovery coverage: ${analogRows} Analog publication rows across ${analogFiles.length} reports; ${portableHistoryRepos} Portable history repositories + ${portableFindings} retained run occurrences across ${portableFiles.length} runs`);
 console.log(`latest project reports: Analog ${latestAnalog || "n/a"}; Portable ${latestPortable || "n/a"}`);
 console.log(`DAFX taxonomy: ${data.dafxDomainDistribution.filter((point) => point.key !== "Unclassified").length} populated technique domains`);
-console.log("review regressions and non-project work-product exclusions: PASS");
+console.log("structured-evidence, rank-recency, DAFX, and non-project exclusion regressions: PASS");
