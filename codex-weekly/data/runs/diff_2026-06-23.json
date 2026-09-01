@@ -1,0 +1,28 @@
+{
+  "date": "2026-06-23",
+  "added": [
+    "AnClark/ClassicFlanger-RE01",
+    "DatanoiseTV/aes70-esp-idf",
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "SevenT1123/SevenT.vst3",
+    "ampactor-labs/sonido",
+    "bhoot1234567890/VB1Reimpl",
+    "heyalohaloha/kirin_hypha",
+    "ohmic-net/puca_dsp",
+    "zlosynth/achordion",
+    "zones-convolution/zones_client"
+  ],
+  "removed": [
+    "Ohminecraft/esp32-dsp-core",
+    "amsynth/amsynth",
+    "cehurley/kzoinks",
+    "clovesrodrigues/AUDIO_DSP",
+    "grahamfranz/PoleZero",
+    "grame-cncm/faust",
+    "joeriben/T5ynth",
+    "nutcas3/airten",
+    "shev0k/EQVita",
+    "sourcebox/mi-plaits-dsp-rs"
+  ],
+  "changed": []
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-04",
+  "added": [
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "electrondrift123/stm32h7-audio-dsp-board",
+    "heyalohaloha/kirin_hypha",
+    "jasisz/grajek",
+    "joeriben/akroasys",
+    "justonem0reuser/MatchingCompressor",
+    "mkfarrow/Eurorack_DualVCA",
+    "timiliris/esp32-airplay-speaker",
+    "zem-invictus/bevy_sonus"
+  ],
+  "removed": [
+    "Fihdi/DSP32-CORE",
+    "Orastron/brickworks",
+    "TimMJN/Polymorph-VCO",
+    "ampactor-labs/sonido",
+    "brer-rabbit/zoxnoxious",
+    "reales/retromulator",
+    "shakfu/cyfaust",
+    "spandit69/nest-audio-pcb",
+    "t-dsp/t-dsp_software"
+  ],
+  "changed": [
+    "grame-cncm/faust"
+  ]
+}

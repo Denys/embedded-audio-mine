@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-15",
+  "added": [
+    "34tknowledge/PRISM",
+    "ALH477/DeMoD",
+    "KristofferKarlAxelEkstrand/jucebox",
+    "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
+    "pixelsncodes/lumen",
+    "sophiapoirier/destroyfx",
+    "sourcebox/mi-plaits-dsp-rs",
+    "t-dsp/t-dsp_software",
+    "xof-112/perseids"
+  ],
+  "removed": [
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "alexirae/unreal-audio-dsp-collection-UE5",
+    "alexirae/unreal-audio-dsp-template-UE5",
+    "justonem0reuser/MatchingCompressor",
+    "mgergos/Opus4Teensy",
+    "mkfarrow/Eurorack_DualVCA",
+    "newdigate/teensy-audio-x86-stubs",
+    "src3453/3HSPlug",
+    "timiliris/esp32-airplay-speaker"
+  ],
+  "changed": [
+    "spandit69/nest-audio-pcb"
+  ]
+}

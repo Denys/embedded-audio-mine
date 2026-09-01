@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-01",
+  "added": [
+    "AnshulJ999/Solace-Synth",
+    "KarolKks/RealTime-Audio-DSP",
+    "Orastron/brickworks",
+    "algomusic/M16",
+    "bogggare567/abcTrain",
+    "clovesrodrigues/AUDIO_DSP",
+    "helgev-in-arcana/audio-graph",
+    "pierreportal/rust-dsp"
+  ],
+  "removed": [
+    "MichaelTayler/SuperAudioBoard",
+    "RaviKachhwaha/AuraForge-50X",
+    "arturgadelshin/esphome-cx-audio-2026.7.4",
+    "blank-audio/CORE-Echo",
+    "davidthomas777/BlueSynthVST",
+    "isabelgk/airfx",
+    "newdigate/teensy-variable-playback",
+    "src3453/3HSPlug"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "spandit69/nest-audio-pcb"
+  ]
+}

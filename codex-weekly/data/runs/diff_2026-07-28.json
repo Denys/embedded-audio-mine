@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-28",
+  "added": [
+    "Orastron/brickworks",
+    "brer-rabbit/zoxnoxious",
+    "reales/retromulator",
+    "TimMJN/Polymorph-VCO",
+    "ampactor-labs/sonido",
+    "Fihdi/DSP32-CORE",
+    "shakfu/cyfaust",
+    "spandit69/nest-audio-pcb"
+  ],
+  "removed": [
+    "amsynth/amsynth",
+    "isabelgk/airfx",
+    "zlosynth/kaseta",
+    "jurihock/stftPitchShiftPlugin",
+    "getdunne/VanillaJuce",
+    "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+    "shakfu/chuck-max",
+    "joeriben/T5ynth"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "t-dsp/t-dsp_software"
+  ]
+}

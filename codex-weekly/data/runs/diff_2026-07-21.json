@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-21",
+  "added": [
+    "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+    "amsynth/amsynth",
+    "getdunne/VanillaJuce",
+    "grame-cncm/faust",
+    "isabelgk/airfx",
+    "joeriben/T5ynth",
+    "jurihock/stftPitchShiftPlugin",
+    "shakfu/chuck-max",
+    "zlosynth/kaseta"
+  ],
+  "removed": [
+    "34tknowledge/PRISM",
+    "ALH477/DeMoD",
+    "KristofferKarlAxelEkstrand/jucebox",
+    "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32",
+    "pixelsncodes/lumen",
+    "sophiapoirier/destroyfx",
+    "sourcebox/mi-plaits-dsp-rs",
+    "spandit69/nest-audio-pcb",
+    "xof-112/perseids"
+  ],
+  "changed": [
+    "t-dsp/t-dsp_software"
+  ]
+}

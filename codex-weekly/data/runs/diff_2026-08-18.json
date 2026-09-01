@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-18",
+  "added": [
+    "Faz8788/demod-dsp-gui",
+    "JonathanZeppa/FloydFM",
+    "KN-Hardwire/ReHarmonizer",
+    "animatek/Animatek-NME",
+    "eforzano/AudioLab",
+    "palmerr23/control_TLV320AIC3104",
+    "synthalorian/open-synth",
+    "zlosynth/kaseta",
+    "zones-convolution/zones_client"
+  ],
+  "removed": [
+    "ChuckFleming/pd-hybrid-synth",
+    "JustinBStrong/AudioControl",
+    "Losera/incant-audio",
+    "Noktomezo/ShallowHost",
+    "cryparc/Spandan",
+    "grame-cncm/faust",
+    "quadcom/Louder-ESP32Plus-DRC",
+    "smrg-lm/clausters",
+    "zlosynth/achordion"
+  ],
+  "changed": [
+    "spandit69/nest-audio-pcb"
+  ]
+}

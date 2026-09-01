@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-17T12:23:40.144855+00:00",
-  "source_digest_count": 15,
+  "generated_at_utc": "2026-09-01T18:26:03.714891+00:00",
+  "source_digest_count": 25,
   "repos": {
     "a3-audio/a3-system": {
       "feature_count": 1,
@@ -105,17 +105,21 @@
       }
     },
     "Harold-Street-Pedal-Company/HSP_Protoseed": {
-      "feature_count": 3,
-      "last_featured": "2026-05-19",
+      "feature_count": 5,
+      "last_featured": "2026-08-04",
       "appearance_dates": [
         "2024-03-19",
         "2026-04-18",
-        "2026-05-19"
+        "2026-05-19",
+        "2026-06-23",
+        "2026-08-04"
       ],
       "ranks": {
         "2024-03-19": 7,
         "2026-04-18": 3,
-        "2026-05-19": 10
+        "2026-05-19": 10,
+        "2026-06-23": 2,
+        "2026-08-04": 2
       }
     },
     "hemmer/PlaitsPatchInit": {
@@ -225,17 +229,19 @@
       }
     },
     "ohmic-net/puca_dsp": {
-      "feature_count": 3,
-      "last_featured": "2026-05-19",
+      "feature_count": 4,
+      "last_featured": "2026-06-23",
       "appearance_dates": [
         "2024-03-26",
         "2026-04-18",
-        "2026-05-19"
+        "2026-05-19",
+        "2026-06-23"
       ],
       "ranks": {
         "2024-03-26": 4,
         "2026-04-18": 2,
-        "2026-05-19": 7
+        "2026-05-19": 7,
+        "2026-06-23": 1
       }
     },
     "palmerr23/Teensy8x8AudioBoard": {
@@ -275,19 +281,21 @@
       }
     },
     "sourcebox/mi-plaits-dsp-rs": {
-      "feature_count": 4,
-      "last_featured": "2026-06-17",
+      "feature_count": 5,
+      "last_featured": "2026-07-15",
       "appearance_dates": [
         "2024-03-17",
         "2026-04-09",
         "2026-04-16",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-07-15"
       ],
       "ranks": {
         "2024-03-17": 8,
         "2026-04-09": 8,
         "2026-04-16": 6,
-        "2026-06-17": 3
+        "2026-06-17": 3,
+        "2026-07-15": 2
       }
     },
     "thi-ng/synstack": {
@@ -317,35 +325,43 @@
       }
     },
     "zlosynth/achordion": {
-      "feature_count": 3,
-      "last_featured": "2026-05-19",
+      "feature_count": 5,
+      "last_featured": "2026-08-11",
       "appearance_dates": [
         "2024-03-19",
         "2026-04-18",
-        "2026-05-19"
+        "2026-05-19",
+        "2026-06-23",
+        "2026-08-11"
       ],
       "ranks": {
         "2024-03-19": 6,
         "2026-04-18": 4,
-        "2026-05-19": 9
+        "2026-05-19": 9,
+        "2026-06-23": 3,
+        "2026-08-11": 2
       }
     },
     "zlosynth/kaseta": {
-      "feature_count": 5,
-      "last_featured": "2026-05-19",
+      "feature_count": 7,
+      "last_featured": "2026-08-18",
       "appearance_dates": [
         "2024-03-17",
         "2024-03-26",
         "2026-04-09",
         "2026-04-16",
-        "2026-05-19"
+        "2026-05-19",
+        "2026-07-21",
+        "2026-08-18"
       ],
       "ranks": {
         "2024-03-17": 9,
         "2024-03-26": 3,
         "2026-04-09": 7,
         "2026-04-16": 7,
-        "2026-05-19": 8
+        "2026-05-19": 8,
+        "2026-07-21": 4,
+        "2026-08-18": 1
       }
     },
     "PaulStoffregen/Audio": {
@@ -373,39 +389,61 @@
       }
     },
     "spandit69/nest-audio-pcb": {
-      "feature_count": 2,
-      "last_featured": "2026-05-26",
+      "feature_count": 9,
+      "last_featured": "2026-09-01",
       "appearance_dates": [
         "2026-04-18",
-        "2026-05-26"
+        "2026-05-26",
+        "2026-07-01",
+        "2026-07-15",
+        "2026-07-28",
+        "2026-08-11",
+        "2026-08-18",
+        "2026-08-25",
+        "2026-09-01"
       ],
       "ranks": {
         "2026-04-18": 7,
-        "2026-05-26": 8
+        "2026-05-26": 8,
+        "2026-07-01": 4,
+        "2026-07-15": 5,
+        "2026-07-28": 10,
+        "2026-08-11": 3,
+        "2026-08-18": 5,
+        "2026-08-25": 6,
+        "2026-09-01": 4
       }
     },
     "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32": {
-      "feature_count": 2,
-      "last_featured": "2026-06-09",
+      "feature_count": 3,
+      "last_featured": "2026-07-15",
       "appearance_dates": [
         "2026-04-18",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-07-15"
       ],
       "ranks": {
         "2026-04-18": 8,
-        "2026-06-09": 10
+        "2026-06-09": 10,
+        "2026-07-15": 6
       }
     },
     "t-dsp/t-dsp_software": {
-      "feature_count": 2,
-      "last_featured": "2026-06-09",
+      "feature_count": 5,
+      "last_featured": "2026-07-28",
       "appearance_dates": [
         "2026-04-18",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-07-15",
+        "2026-07-21",
+        "2026-07-28"
       ],
       "ranks": {
         "2026-04-18": 9,
-        "2026-06-09": 5
+        "2026-06-09": 5,
+        "2026-07-15": 4,
+        "2026-07-21": 10,
+        "2026-07-28": 7
       }
     },
     "bristol-communal-modular/dual-2164-vca": {
@@ -453,15 +491,19 @@
       }
     },
     "mkfarrow/Eurorack_DualVCA": {
-      "feature_count": 2,
-      "last_featured": "2026-05-26",
+      "feature_count": 4,
+      "last_featured": "2026-08-04",
       "appearance_dates": [
         "2026-04-21",
-        "2026-05-26"
+        "2026-05-26",
+        "2026-07-01",
+        "2026-08-04"
       ],
       "ranks": {
         "2026-04-21": 5,
-        "2026-05-26": 10
+        "2026-05-26": 10,
+        "2026-07-01": 5,
+        "2026-08-04": 6
       }
     },
     "yamamo2shun1/JUMBLEQ": {
@@ -713,49 +755,67 @@
       }
     },
     "grame-cncm/faust": {
-      "feature_count": 2,
-      "last_featured": "2026-06-17",
+      "feature_count": 8,
+      "last_featured": "2026-09-01",
       "appearance_dates": [
         "2026-05-12",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-07-21",
+        "2026-07-28",
+        "2026-08-04",
+        "2026-08-11",
+        "2026-08-25",
+        "2026-09-01"
       ],
       "ranks": {
         "2026-05-12": 3,
-        "2026-06-17": 1
+        "2026-06-17": 1,
+        "2026-07-21": 1,
+        "2026-07-28": 1,
+        "2026-08-04": 1,
+        "2026-08-11": 1,
+        "2026-08-25": 1,
+        "2026-09-01": 1
       }
     },
     "amsynth/amsynth": {
-      "feature_count": 2,
-      "last_featured": "2026-06-17",
+      "feature_count": 3,
+      "last_featured": "2026-07-21",
       "appearance_dates": [
         "2026-05-12",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-07-21"
       ],
       "ranks": {
         "2026-05-12": 4,
-        "2026-06-17": 2
+        "2026-06-17": 2,
+        "2026-07-21": 2
       }
     },
     "reales/retromulator": {
-      "feature_count": 1,
-      "last_featured": "2026-05-12",
+      "feature_count": 2,
+      "last_featured": "2026-07-28",
       "appearance_dates": [
-        "2026-05-12"
+        "2026-05-12",
+        "2026-07-28"
       ],
       "ranks": {
-        "2026-05-12": 5
+        "2026-05-12": 5,
+        "2026-07-28": 4
       }
     },
     "joeriben/T5ynth": {
-      "feature_count": 2,
-      "last_featured": "2026-06-17",
+      "feature_count": 3,
+      "last_featured": "2026-07-21",
       "appearance_dates": [
         "2026-05-12",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-07-21"
       ],
       "ranks": {
         "2026-05-12": 6,
-        "2026-06-17": 5
+        "2026-06-17": 5,
+        "2026-07-21": 9
       }
     },
     "animatek/Nomad2026": {
@@ -779,13 +839,17 @@
       }
     },
     "zones-convolution/zones_client": {
-      "feature_count": 1,
-      "last_featured": "2026-05-12",
+      "feature_count": 3,
+      "last_featured": "2026-08-18",
       "appearance_dates": [
-        "2026-05-12"
+        "2026-05-12",
+        "2026-06-23",
+        "2026-08-18"
       ],
       "ranks": {
-        "2026-05-12": 9
+        "2026-05-12": 9,
+        "2026-06-23": 6,
+        "2026-08-18": 4
       }
     },
     "anushkadas-coder/DCO6_synthesizer": {
@@ -799,33 +863,41 @@
       }
     },
     "sophiapoirier/destroyfx": {
-      "feature_count": 1,
-      "last_featured": "2026-05-19",
+      "feature_count": 2,
+      "last_featured": "2026-07-15",
       "appearance_dates": [
-        "2026-05-19"
+        "2026-05-19",
+        "2026-07-15"
       ],
       "ranks": {
-        "2026-05-19": 4
+        "2026-05-19": 4,
+        "2026-07-15": 1
       }
     },
     "Orastron/brickworks": {
-      "feature_count": 1,
-      "last_featured": "2026-05-19",
+      "feature_count": 3,
+      "last_featured": "2026-09-01",
       "appearance_dates": [
-        "2026-05-19"
+        "2026-05-19",
+        "2026-07-28",
+        "2026-09-01"
       ],
       "ranks": {
-        "2026-05-19": 5
+        "2026-05-19": 5,
+        "2026-07-28": 2,
+        "2026-09-01": 2
       }
     },
     "ZorakAudio/ZorakAudio-Experimental-Plugins": {
-      "feature_count": 1,
-      "last_featured": "2026-05-26",
+      "feature_count": 2,
+      "last_featured": "2026-07-01",
       "appearance_dates": [
-        "2026-05-26"
+        "2026-05-26",
+        "2026-07-01"
       ],
       "ranks": {
-        "2026-05-26": 2
+        "2026-05-26": 2,
+        "2026-07-01": 3
       }
     },
     "DIYSynthMNL/Eurorack-2164-Quad-Exponential-VCA": {
@@ -869,13 +941,17 @@
       }
     },
     "src3453/3HSPlug": {
-      "feature_count": 1,
-      "last_featured": "2026-05-29",
+      "feature_count": 3,
+      "last_featured": "2026-08-25",
       "appearance_dates": [
-        "2026-05-29"
+        "2026-05-29",
+        "2026-07-01",
+        "2026-08-25"
       ],
       "ranks": {
-        "2026-05-29": 4
+        "2026-05-29": 4,
+        "2026-07-01": 6,
+        "2026-08-25": 5
       }
     },
     "lluisestape-upc/Synth1.0": {
@@ -889,13 +965,15 @@
       }
     },
     "pierreportal/rust-dsp": {
-      "feature_count": 1,
-      "last_featured": "2026-05-29",
+      "feature_count": 2,
+      "last_featured": "2026-09-01",
       "appearance_dates": [
-        "2026-05-29"
+        "2026-05-29",
+        "2026-09-01"
       ],
       "ranks": {
-        "2026-05-29": 9
+        "2026-05-29": 9,
+        "2026-09-01": 7
       }
     },
     "kratofl/kratomix": {
@@ -919,13 +997,15 @@
       }
     },
     "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC": {
-      "feature_count": 1,
-      "last_featured": "2026-06-09",
+      "feature_count": 2,
+      "last_featured": "2026-07-21",
       "appearance_dates": [
-        "2026-06-09"
+        "2026-06-09",
+        "2026-07-21"
       ],
       "ranks": {
-        "2026-06-09": 2
+        "2026-06-09": 2,
+        "2026-07-21": 7
       }
     },
     "ManasWolrd/VitalReverb": {
@@ -949,13 +1029,15 @@
       }
     },
     "shakfu/cyfaust": {
-      "feature_count": 1,
-      "last_featured": "2026-06-09",
+      "feature_count": 2,
+      "last_featured": "2026-07-28",
       "appearance_dates": [
-        "2026-06-09"
+        "2026-06-09",
+        "2026-07-28"
       ],
       "ranks": {
-        "2026-06-09": 7
+        "2026-06-09": 7,
+        "2026-07-28": 9
       }
     },
     "shawlty/Daisy-Eurorack-Audio-Module": {
@@ -1019,13 +1101,555 @@
       }
     },
     "clovesrodrigues/AUDIO_DSP": {
-      "feature_count": 1,
-      "last_featured": "2026-06-17",
+      "feature_count": 2,
+      "last_featured": "2026-09-01",
       "appearance_dates": [
-        "2026-06-17"
+        "2026-06-17",
+        "2026-09-01"
       ],
       "ranks": {
-        "2026-06-17": 10
+        "2026-06-17": 10,
+        "2026-09-01": 9
+      }
+    },
+    "DatanoiseTV/aes70-esp-idf": {
+      "feature_count": 1,
+      "last_featured": "2026-06-23",
+      "appearance_dates": [
+        "2026-06-23"
+      ],
+      "ranks": {
+        "2026-06-23": 4
+      }
+    },
+    "ampactor-labs/sonido": {
+      "feature_count": 2,
+      "last_featured": "2026-07-28",
+      "appearance_dates": [
+        "2026-06-23",
+        "2026-07-28"
+      ],
+      "ranks": {
+        "2026-06-23": 5,
+        "2026-07-28": 6
+      }
+    },
+    "SevenT1123/SevenT.vst3": {
+      "feature_count": 1,
+      "last_featured": "2026-06-23",
+      "appearance_dates": [
+        "2026-06-23"
+      ],
+      "ranks": {
+        "2026-06-23": 7
+      }
+    },
+    "AnClark/ClassicFlanger-RE01": {
+      "feature_count": 1,
+      "last_featured": "2026-06-23",
+      "appearance_dates": [
+        "2026-06-23"
+      ],
+      "ranks": {
+        "2026-06-23": 8
+      }
+    },
+    "heyalohaloha/kirin_hypha": {
+      "feature_count": 2,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-06-23",
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-06-23": 9,
+        "2026-08-04": 10
+      }
+    },
+    "bhoot1234567890/VB1Reimpl": {
+      "feature_count": 1,
+      "last_featured": "2026-06-23",
+      "appearance_dates": [
+        "2026-06-23"
+      ],
+      "ranks": {
+        "2026-06-23": 10
+      }
+    },
+    "alexirae/unreal-audio-dsp-template-UE5": {
+      "feature_count": 1,
+      "last_featured": "2026-07-01",
+      "appearance_dates": [
+        "2026-07-01"
+      ],
+      "ranks": {
+        "2026-07-01": 1
+      }
+    },
+    "alexirae/unreal-audio-dsp-collection-UE5": {
+      "feature_count": 1,
+      "last_featured": "2026-07-01",
+      "appearance_dates": [
+        "2026-07-01"
+      ],
+      "ranks": {
+        "2026-07-01": 2
+      }
+    },
+    "justonem0reuser/MatchingCompressor": {
+      "feature_count": 2,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-07-01",
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-07-01": 7,
+        "2026-08-04": 5
+      }
+    },
+    "mgergos/Opus4Teensy": {
+      "feature_count": 1,
+      "last_featured": "2026-07-01",
+      "appearance_dates": [
+        "2026-07-01"
+      ],
+      "ranks": {
+        "2026-07-01": 8
+      }
+    },
+    "timiliris/esp32-airplay-speaker": {
+      "feature_count": 2,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-07-01",
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-07-01": 9,
+        "2026-08-04": 8
+      }
+    },
+    "newdigate/teensy-audio-x86-stubs": {
+      "feature_count": 1,
+      "last_featured": "2026-07-01",
+      "appearance_dates": [
+        "2026-07-01"
+      ],
+      "ranks": {
+        "2026-07-01": 10
+      }
+    },
+    "pixelsncodes/lumen": {
+      "feature_count": 1,
+      "last_featured": "2026-07-15",
+      "appearance_dates": [
+        "2026-07-15"
+      ],
+      "ranks": {
+        "2026-07-15": 3
+      }
+    },
+    "xof-112/perseids": {
+      "feature_count": 1,
+      "last_featured": "2026-07-15",
+      "appearance_dates": [
+        "2026-07-15"
+      ],
+      "ranks": {
+        "2026-07-15": 7
+      }
+    },
+    "KristofferKarlAxelEkstrand/jucebox": {
+      "feature_count": 1,
+      "last_featured": "2026-07-15",
+      "appearance_dates": [
+        "2026-07-15"
+      ],
+      "ranks": {
+        "2026-07-15": 8
+      }
+    },
+    "ALH477/DeMoD": {
+      "feature_count": 1,
+      "last_featured": "2026-07-15",
+      "appearance_dates": [
+        "2026-07-15"
+      ],
+      "ranks": {
+        "2026-07-15": 9
+      }
+    },
+    "34tknowledge/PRISM": {
+      "feature_count": 1,
+      "last_featured": "2026-07-15",
+      "appearance_dates": [
+        "2026-07-15"
+      ],
+      "ranks": {
+        "2026-07-15": 10
+      }
+    },
+    "isabelgk/airfx": {
+      "feature_count": 2,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-07-21",
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-07-21": 3,
+        "2026-08-25": 3
+      }
+    },
+    "jurihock/stftPitchShiftPlugin": {
+      "feature_count": 1,
+      "last_featured": "2026-07-21",
+      "appearance_dates": [
+        "2026-07-21"
+      ],
+      "ranks": {
+        "2026-07-21": 5
+      }
+    },
+    "getdunne/VanillaJuce": {
+      "feature_count": 1,
+      "last_featured": "2026-07-21",
+      "appearance_dates": [
+        "2026-07-21"
+      ],
+      "ranks": {
+        "2026-07-21": 6
+      }
+    },
+    "shakfu/chuck-max": {
+      "feature_count": 1,
+      "last_featured": "2026-07-21",
+      "appearance_dates": [
+        "2026-07-21"
+      ],
+      "ranks": {
+        "2026-07-21": 8
+      }
+    },
+    "brer-rabbit/zoxnoxious": {
+      "feature_count": 1,
+      "last_featured": "2026-07-28",
+      "appearance_dates": [
+        "2026-07-28"
+      ],
+      "ranks": {
+        "2026-07-28": 3
+      }
+    },
+    "TimMJN/Polymorph-VCO": {
+      "feature_count": 1,
+      "last_featured": "2026-07-28",
+      "appearance_dates": [
+        "2026-07-28"
+      ],
+      "ranks": {
+        "2026-07-28": 5
+      }
+    },
+    "Fihdi/DSP32-CORE": {
+      "feature_count": 1,
+      "last_featured": "2026-07-28",
+      "appearance_dates": [
+        "2026-07-28"
+      ],
+      "ranks": {
+        "2026-07-28": 8
+      }
+    },
+    "joeriben/akroasys": {
+      "feature_count": 1,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-08-04": 3
+      }
+    },
+    "electrondrift123/stm32h7-audio-dsp-board": {
+      "feature_count": 1,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-08-04": 4
+      }
+    },
+    "jasisz/grajek": {
+      "feature_count": 1,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-08-04": 7
+      }
+    },
+    "zem-invictus/bevy_sonus": {
+      "feature_count": 1,
+      "last_featured": "2026-08-04",
+      "appearance_dates": [
+        "2026-08-04"
+      ],
+      "ranks": {
+        "2026-08-04": 9
+      }
+    },
+    "JustinBStrong/AudioControl": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 4
+      }
+    },
+    "Noktomezo/ShallowHost": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 5
+      }
+    },
+    "ChuckFleming/pd-hybrid-synth": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 6
+      }
+    },
+    "Losera/incant-audio": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 7
+      }
+    },
+    "smrg-lm/clausters": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 8
+      }
+    },
+    "cryparc/Spandan": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 9
+      }
+    },
+    "quadcom/Louder-ESP32Plus-DRC": {
+      "feature_count": 1,
+      "last_featured": "2026-08-11",
+      "appearance_dates": [
+        "2026-08-11"
+      ],
+      "ranks": {
+        "2026-08-11": 10
+      }
+    },
+    "animatek/Animatek-NME": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 2
+      }
+    },
+    "palmerr23/control_TLV320AIC3104": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 3
+      }
+    },
+    "KN-Hardwire/ReHarmonizer": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 6
+      }
+    },
+    "synthalorian/open-synth": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 7
+      }
+    },
+    "JonathanZeppa/FloydFM": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 8
+      }
+    },
+    "eforzano/AudioLab": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 9
+      }
+    },
+    "Faz8788/demod-dsp-gui": {
+      "feature_count": 1,
+      "last_featured": "2026-08-18",
+      "appearance_dates": [
+        "2026-08-18"
+      ],
+      "ranks": {
+        "2026-08-18": 10
+      }
+    },
+    "newdigate/teensy-variable-playback": {
+      "feature_count": 1,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-08-25": 2
+      }
+    },
+    "MichaelTayler/SuperAudioBoard": {
+      "feature_count": 1,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-08-25": 4
+      }
+    },
+    "blank-audio/CORE-Echo": {
+      "feature_count": 1,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-08-25": 7
+      }
+    },
+    "RaviKachhwaha/AuraForge-50X": {
+      "feature_count": 1,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-08-25": 8
+      }
+    },
+    "davidthomas777/BlueSynthVST": {
+      "feature_count": 1,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-08-25": 9
+      }
+    },
+    "arturgadelshin/esphome-cx-audio-2026.7.4": {
+      "feature_count": 1,
+      "last_featured": "2026-08-25",
+      "appearance_dates": [
+        "2026-08-25"
+      ],
+      "ranks": {
+        "2026-08-25": 10
+      }
+    },
+    "algomusic/M16": {
+      "feature_count": 1,
+      "last_featured": "2026-09-01",
+      "appearance_dates": [
+        "2026-09-01"
+      ],
+      "ranks": {
+        "2026-09-01": 3
+      }
+    },
+    "KarolKks/RealTime-Audio-DSP": {
+      "feature_count": 1,
+      "last_featured": "2026-09-01",
+      "appearance_dates": [
+        "2026-09-01"
+      ],
+      "ranks": {
+        "2026-09-01": 5
+      }
+    },
+    "bogggare567/abcTrain": {
+      "feature_count": 1,
+      "last_featured": "2026-09-01",
+      "appearance_dates": [
+        "2026-09-01"
+      ],
+      "ranks": {
+        "2026-09-01": 6
+      }
+    },
+    "AnshulJ999/Solace-Synth": {
+      "feature_count": 1,
+      "last_featured": "2026-09-01",
+      "appearance_dates": [
+        "2026-09-01"
+      ],
+      "ranks": {
+        "2026-09-01": 8
+      }
+    },
+    "helgev-in-arcana/audio-graph": {
+      "feature_count": 1,
+      "last_featured": "2026-09-01",
+      "appearance_dates": [
+        "2026-09-01"
+      ],
+      "ranks": {
+        "2026-09-01": 10
       }
     }
   }

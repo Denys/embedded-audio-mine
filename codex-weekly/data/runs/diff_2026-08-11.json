@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-11",
+  "added": [
+    "ChuckFleming/pd-hybrid-synth",
+    "JustinBStrong/AudioControl",
+    "Losera/incant-audio",
+    "Noktomezo/ShallowHost",
+    "cryparc/Spandan",
+    "quadcom/Louder-ESP32Plus-DRC",
+    "smrg-lm/clausters",
+    "spandit69/nest-audio-pcb",
+    "zlosynth/achordion"
+  ],
+  "removed": [
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "electrondrift123/stm32h7-audio-dsp-board",
+    "heyalohaloha/kirin_hypha",
+    "jasisz/grajek",
+    "joeriben/akroasys",
+    "justonem0reuser/MatchingCompressor",
+    "mkfarrow/Eurorack_DualVCA",
+    "timiliris/esp32-airplay-speaker",
+    "zem-invictus/bevy_sonus"
+  ],
+  "changed": [
+    "grame-cncm/faust"
+  ]
+}
