@@ -55,54 +55,17 @@ function parsePublicationRows(text) {
 }
 
 function emptyProject(repo, url = "") {
-  const id = normalizeResource(repo).toLowerCase();
+  const normalized = normalizeResource(repo);
   return {
-    id,
-    repo: normalizeResource(repo),
-    url: url || repoUrl(repo),
-    streams: [],
-    digestStreams: [],
-    sourceFiles: [],
-    recordTypes: [],
-    lane: "",
-    status: "",
-    selectedStatus: "",
-    origin: "",
-    platforms: [],
-    repositoryTypes: [],
-    hardwareEvidence: [],
-    mcuPlatforms: [],
-    languagesFrameworks: [],
-    effects: [],
-    dafxDomains: [],
-    classificationConfidence: "low",
-    classificationGaps: [],
-    tags: [],
-    firstSeen: "",
-    lastPublished: "",
-    repeatEligibleAfter: "",
-    repeatState: "unknown",
-    antiRepeatScope: "",
-    notes: "",
-    whySelected: "",
-    similarityAnchorNotes: "",
-    featureCount: 0,
-    latestRank: null,
-    rankHistory: {},
-    digestDates: [],
+    id: normalized.toLowerCase(), repo: normalized, url: url || repoUrl(normalized),
+    streams: [], digestStreams: [], sourceFiles: [], recordTypes: [], lane: "", status: "", selectedStatus: "", origin: "",
+    platforms: [], repositoryTypes: [], hardwareEvidence: [], mcuPlatforms: [], languagesFrameworks: [], effects: [], dafxDomains: [],
+    classificationConfidence: "low", classificationGaps: [], tags: [], firstSeen: "", lastPublished: "", repeatEligibleAfter: "",
+    repeatState: "unknown", antiRepeatScope: "", notes: "", whySelected: "", similarityAnchorNotes: "", featureCount: 0,
+    latestRank: null, rankHistory: {}, digestDates: [],
     digestDatesByStream: { webgpt_daily: [], codex_weekly: [], analog_weekly: [], portable_weekly: [] },
-    stars: null,
-    forks: null,
-    pushedAt: "",
-    topic: "",
-    score: null,
-    statusTag: "",
-    contentValue: "",
-    contentSummary: "",
-    representativeFiles: [],
-    portabilityValue: "",
-    portabilitySummary: "",
-    portingScore: 0
+    stars: null, forks: null, pushedAt: "", topic: "", score: null, statusTag: "", contentValue: "", contentSummary: "",
+    representativeFiles: [], portabilityValue: "", portabilitySummary: "", portingScore: 0
   };
 }
 
@@ -117,7 +80,6 @@ for (const project of data.projects || []) {
   project.dafxDomains ||= [];
   projectsById.set(project.id, project);
 }
-
 function getProject(repo, url = "") {
   const normalized = normalizeResource(repo);
   const id = normalized.toLowerCase();
@@ -134,7 +96,9 @@ function getProject(repo, url = "") {
 
 const portableGapNames = new Set(["repository type", "MCU / platform", "language / framework", "audio function / effects", "target MCU requires port profiling"]);
 function recomputePortableClassification(project, evidenceSignals) {
-  if (project.repositoryTypes.some((value) => value !== "Unclassified")) project.repositoryTypes = project.repositoryTypes.filter((value) => value !== "Unclassified");
+  if (project.repositoryTypes.some((value) => value !== "Unclassified")) {
+    project.repositoryTypes = project.repositoryTypes.filter((value) => value !== "Unclassified");
+  }
   const gaps = new Set((project.classificationGaps || []).filter((gap) => !portableGapNames.has(gap)));
   if (!project.repositoryTypes.length || project.repositoryTypes.includes("Unclassified")) gaps.add("repository type");
   if (!project.languagesFrameworks.length) gaps.add("language / framework");
@@ -148,79 +112,88 @@ function recomputePortableClassification(project, evidenceSignals) {
   }
 }
 
+function addStructuredLanguage(project, language) {
+  const value = String(language || "").trim();
+  if (!value) return;
+  if (/c\+\+/i.test(value)) addValue(project.languagesFrameworks, "C++");
+  else if (/^c(?:\b|\d)/i.test(value)) addValue(project.languagesFrameworks, "C");
+  if (/python/i.test(value)) addValue(project.languagesFrameworks, "Python");
+  if (/rust/i.test(value)) addValue(project.languagesFrameworks, "Rust");
+  if (/faust/i.test(value)) addValue(project.languagesFrameworks, "Faust");
+  if (/javascript|typescript/i.test(value)) addValue(project.languagesFrameworks, "JavaScript / TypeScript");
+}
+
 function inferPortableFacets(project, item) {
   const paths = item.evidence?.sample_dsp_paths || [];
-  // Only observed/current implementation evidence belongs here. Portability reasons and port ideas are proposals, not proof of target support.
-  const text = [item.topic, item.summary, item.value_reason, ...paths].filter(Boolean).join(" ");
-  if (/\bc\+\+\b|\.cpp\b|\.hpp\b|c\+\+\d*/i.test(text)) addValue(project.languagesFrameworks, "C++");
-  if (/\brust\b|\.rs\b|cargo|no_std/i.test(text)) addValue(project.languagesFrameworks, "Rust");
-  if (/(?:^|[\s,;/])c(?:[\s,;/]|$)|\.c\b|ansi c|c89|c99/i.test(text)) addValue(project.languagesFrameworks, "C");
-  if (/\bfaust\b|\.dsp\b/i.test(text)) addValue(project.languagesFrameworks, "Faust");
-  if (/\bjuce\b/i.test(text)) addValue(project.languagesFrameworks, "JUCE");
-  if (/\bcmake\b/i.test(text)) addValue(project.languagesFrameworks, "CMake");
-  if (/\bdaisy\b|stm32h7|cortex-m7/i.test(text)) addValue(project.mcuPlatforms, "Daisy / STM32H7");
-  if (/\bteensy\b|imxrt1062/i.test(text)) addValue(project.mcuPlatforms, "Teensy 4.x");
-  if (/\besp32\b|esp-idf/i.test(text)) addValue(project.mcuPlatforms, "ESP32");
-  if (/\brp2040\b|raspberry pi pico(?!\s*2\b)/i.test(text)) addValue(project.mcuPlatforms, "RP2040 / Pico");
-  if (/\brp2350\b|pico\s*2/i.test(text)) addValue(project.mcuPlatforms, "RP2350 / Pico 2");
-  if (/\bjuce\b|vst3?|desktop|plugin/i.test(text) && !project.mcuPlatforms.length) addValue(project.mcuPlatforms, "Desktop / host CPU");
+  const pathText = paths.join(" ");
+  const structuredLanguage = String(item.evidence?.language || "");
+  const sourceText = `${structuredLanguage} ${pathText}`;
 
-  if (/library|dsp primitives|dsp library|toolkit|headers?/i.test(text)) addValue(project.repositoryTypes, "DSP / software library");
-  if (/\bjuce\b|vst3?|plugin/i.test(text)) addValue(project.repositoryTypes, "Desktop audio / plugin");
-  if (/firmware|embedded|cortex-m|daisy|teensy|esp32|rp2040|rp2350/i.test(text) && !project.repositoryTypes.some((value) => value !== "Unclassified")) addValue(project.repositoryTypes, "Firmware / embedded software");
-  if (/synth|instrument|sampler|looper/i.test(text) && !/library/i.test(text)) addValue(project.repositoryTypes, "Audio application / instrument");
+  // Portable report prose describes suitability and adaptation. It is deliberately excluded from implementation truth.
+  addStructuredLanguage(project, structuredLanguage);
+  if (/\bc\+\+\b|\.cpp\b|\.hpp\b/i.test(sourceText)) addValue(project.languagesFrameworks, "C++");
+  if (/(?:^|[\s/_.-])c(?:[\s/_.-]|$)|\.c\b|ansi c|c89|c99/i.test(sourceText)) addValue(project.languagesFrameworks, "C");
+  if (/\brust\b|\.rs\b|cargo/i.test(sourceText)) addValue(project.languagesFrameworks, "Rust");
+  if (/\bpython\b|\.py\b/i.test(sourceText)) addValue(project.languagesFrameworks, "Python");
+  if (/\bfaust\b|\.dsp\b/i.test(sourceText)) addValue(project.languagesFrameworks, "Faust");
+  if (/\bjuce\b/i.test(sourceText)) addValue(project.languagesFrameworks, "JUCE");
+  if (/\bcmake\b|cmakelists/i.test(sourceText)) addValue(project.languagesFrameworks, "CMake");
+  if (/pure data|\.pd\b/i.test(sourceText)) addValue(project.languagesFrameworks, "Pure Data");
+
+  // Target support must come from observed paths, never from topic/value/portability prose.
+  if (/\bdaisy\b|libdaisy|stm32h750/i.test(pathText)) addValue(project.mcuPlatforms, "Daisy / STM32H7");
+  if (/teensy\s*4|teensy4|imxrt1062/i.test(pathText)) addValue(project.mcuPlatforms, "Teensy 4.x");
+  if (/\besp32(?:-s2|-s3|-c3)?\b|esp-idf/i.test(pathText)) addValue(project.mcuPlatforms, "ESP32");
+  if (/\brp2350\b|pico[_ -]?2/i.test(pathText)) addValue(project.mcuPlatforms, "RP2350 / Pico 2");
+  if (/\brp2040\b|raspberry[_ -]?pi[_ -]?pico(?![_ -]?2)/i.test(pathText)) addValue(project.mcuPlatforms, "RP2040 / Pico");
+  if (/\bstm32(?:h7|f7|f4|l4|h743|h750)?\b/i.test(pathText) && !project.mcuPlatforms.includes("Daisy / STM32H7")) addValue(project.mcuPlatforms, "STM32");
+
+  if (/generator|templates?|compiler|codegen|tooling/i.test(pathText)) addValue(project.repositoryTypes, "Tooling / framework");
+  if (/plugin|vst3?|juce|fmod|wwise|unity|clap/i.test(pathText)) addValue(project.repositoryTypes, "Desktop audio / plugin");
+  if (/firmware|boards?|libdaisy|teensy|esp32|rp2040|rp2350|stm32/i.test(pathText)) addValue(project.repositoryTypes, "Firmware / embedded software");
+  if (/dsp|filters?|effects?|fx|oscillator|synth|audio|delay|reverb|envelope|fft|stft/i.test(pathText)) addValue(project.repositoryTypes, "DSP / software library");
   if (!project.repositoryTypes.length) addValue(project.repositoryTypes, "Unclassified");
 
   const effectPatterns = [
-    ["Delay / Echo", /\bdelay\b|\becho\b|fractional delay/i],
+    ["Delay / Echo", /\bdelay\b|\becho\b|fractional[_ -]?delay/i],
     ["Reverb / Diffusion", /\breverb\b|\bfdn\b|diffusion/i],
-    ["Dynamics / Gate", /compressor|limiter|envelope|noise gate|dynamics/i],
-    ["EQ / Filter", /biquad|filter|svf|ladder|equalizer|tone stack/i],
+    ["Dynamics / Gate", /compressor|limiter|envelope|noise[_ -]?gate|dynamics/i],
+    ["EQ / Filter", /biquad|filter|svf|ladder|equalizer|tone[_ -]?stack/i],
     ["Drive / Distortion / Fuzz", /diode|clipper|distortion|overdrive|waveshap|saturat|wdf/i],
-    ["Pitch / Shimmer", /pitch|hilbert|frequency shift|shimmer/i],
-    ["Synthesis / Oscillator", /oscillator|synth|fm synth|padsynth|wavetable/i],
+    ["Pitch / Shimmer", /pitch|hilbert|frequency[_ -]?shift|shimmer/i],
+    ["Synthesis / Oscillator", /oscillator|synth|fm[_ -]?synth|padsynth|wavetable/i],
     ["Granular / Freeze", /granular|grain|freeze|stft|spectral/i],
-    ["Looper / Sampler", /looper|sampler|sample playback/i]
+    ["Looper / Sampler", /looper|sampler|sample[_ -]?playback/i]
   ];
-  for (const [label, pattern] of effectPatterns) if (pattern.test(text)) addValue(project.effects, label);
+  for (const [label, pattern] of effectPatterns) if (pattern.test(pathText)) addValue(project.effects, label);
 
-  if (/daisy/i.test(text)) addValue(project.platforms, "Daisy");
-  if (/teensy/i.test(text)) addValue(project.platforms, "Teensy");
-  if (/faust/i.test(text)) addValue(project.platforms, "Faust");
-  if (/dsp|filter|delay|reverb|oscillator/i.test(text)) addValue(project.platforms, "DSP Library");
+  if (/daisy|libdaisy/i.test(pathText)) addValue(project.platforms, "Daisy");
+  if (/teensy/i.test(pathText)) addValue(project.platforms, "Teensy");
+  if (/faust|\.dsp\b/i.test(pathText)) addValue(project.platforms, "Faust");
+  if (/dsp|filter|delay|reverb|oscillator|fft|stft/i.test(pathText)) addValue(project.platforms, "DSP Library");
 
-  const evidenceSignals = paths.length + (item.value_reason ? 1 : 0);
+  const evidenceSignals = paths.length + (structuredLanguage ? 1 : 0);
   recomputePortableClassification(project, evidenceSignals);
 }
 
 const dafxDomainPatterns = [
-  ["Filters & Delays", /delay|echo|comb|fractional delay|filter|equalizer|equaliser|\beq\b|biquad|svf|ladder|wah|phaser|chorus|flanger|vibrato/i],
-  ["Modulators & Demodulators", /ring mod|amplitude mod|frequency mod|phase mod|rotary|tremolo|modulator|demodulator|single[- ]side[- ]band|\bssb\b/i],
-  ["Nonlinear Processing", /compressor|limiter|expander|noise gate|distortion|overdrive|fuzz|waveshap|saturat|clipper|diode/i],
-  ["Spatial Effects", /reverb|panning|panner|spatial|room model|plate reverb|spring reverb/i],
-  ["Time-Segment Processing", /granular|grain|time[- ]stretch|time scale|time-scale|\bsola\b|psola|looper|sampler/i],
-  ["Time-Frequency Processing", /phase vocoder|time-frequency|stft|spectral freeze|frequency-domain synthesis|pitch shift|pitch-shift/i],
-  ["Source-Filter Processing", /source-filter|vocoder|\blpc\b|formant/i],
-  ["Adaptive DAFX", /adaptive dafx|adaptive effect|feature extraction|envelope follower|audio-driven control|cross-adaptive/i],
-  ["Spectral Processing", /spectral|\bfft\b|stft|frequency-domain/i],
-  ["Time/Frequency Warping", /frequency warp|time warp|warping operator|warped filter/i],
-  ["Virtual Analog", /virtual analog|\bwdf\b|wave[- ]digital|circuit model|analog model|valve|tube model|tape model|physical model/i],
-  ["Automatic Mixing", /automatic mix|automatic mixing|automix|gain sharing/i],
-  ["Source Separation", /source separation|source-separation|demix|blind source/i]
+  ["Filters & Delays", /delay|echo|comb|fractional[_ -]?delay|filter|equalizer|equaliser|\beq\b|biquad|svf|ladder|wah|phaser|chorus|flanger|vibrato/i],
+  ["Modulators & Demodulators", /ring[_ -]?mod|amplitude[_ -]?mod|frequency[_ -]?mod|phase[_ -]?mod|rotary|tremolo|modulator|demodulator|single[- ]side[- ]band|\bssb\b/i],
+  ["Nonlinear Processing", /compressor|limiter|expander|noise[_ -]?gate|distortion|overdrive|fuzz|waveshap|saturat|clipper|diode/i],
+  ["Spatial Effects", /reverb|panning|panner|spatial|room[_ -]?model|plate[_ -]?reverb|spring[_ -]?reverb/i],
+  ["Time-Segment Processing", /granular|grain|time[- _]?stretch|time[- _]?scale|\bsola\b|psola|looper|sampler/i],
+  ["Time-Frequency Processing", /phase[_ -]?vocoder|time[- _]?frequency|stft|spectral[_ -]?freeze|frequency[- _]?domain|pitch[_ -]?shift/i],
+  ["Source-Filter Processing", /source[- _]?filter|vocoder|\blpc\b|formant/i],
+  ["Adaptive DAFX", /adaptive[_ -]?dafx|adaptive[_ -]?effect|feature[_ -]?extraction|envelope[_ -]?follower|audio[- _]?driven|cross[- _]?adaptive/i],
+  ["Spectral Processing", /spectral|\bfft\b|stft|frequency[- _]?domain/i],
+  ["Time/Frequency Warping", /frequency[- _]?warp|time[- _]?warp|warping[_ -]?operator|warped[_ -]?filter/i],
+  ["Virtual Analog", /virtual[_ -]?analog|\bwdf\b|wave[- _]?digital|circuit[_ -]?model|analog[_ -]?model|valve|tube[_ -]?model|tape[_ -]?model|physical[_ -]?model/i],
+  ["Automatic Mixing", /automatic[_ -]?mix|automix|gain[_ -]?sharing/i],
+  ["Source Separation", /source[- _]?separation|demix|blind[_ -]?source/i]
 ];
 function inferDafxDomains(project) {
-  // Keep DAFX classification on observed implementation/function evidence. Do not mine porting proposals.
-  const text = [
-    project.repo,
-    project.topic,
-    project.notes,
-    project.whySelected,
-    project.contentSummary,
-    ...project.effects,
-    ...project.tags,
-    ...project.representativeFiles,
-    ...project.platforms
-  ].filter(Boolean).join(" ");
+  // DAFX domains come from classified functions and representative source paths, not adaptation prose.
+  const text = [project.repo, ...(project.effects || []), ...(project.tags || []), ...(project.representativeFiles || [])].join(" ");
   project.dafxDomains = [];
   for (const [label, pattern] of dafxDomainPatterns) if (pattern.test(text)) addValue(project.dafxDomains, label);
 }
@@ -237,7 +210,7 @@ function portableScore(project) {
   return score;
 }
 
-// Analog Audio Mine reports are discovery provenance, even when a report's tracker CSV block omits the header.
+// Analog Audio Mine reports are project-discovery provenance even when legacy tracker blocks are headerless.
 const digestDir = path.join(repoRoot, "digests");
 let latestAnalogDate = data.metrics?.latestAnalogDate || "";
 let analogDigestFiles = 0;
@@ -270,8 +243,7 @@ if (existsSync(digestDir)) {
   }
 }
 
-// Portable Weekly is a separate project-discovery report lane. Feature history preserves older findings whose
-// per-run JSON is no longer retained; run JSON enriches the records with current implementation evidence.
+// Portable feature history preserves older discoveries even when their detailed run JSON is no longer retained.
 let portableRunFiles = 0;
 let latestPortableDate = "";
 const portableHistoryFile = path.join(repoRoot, "portable-weekly", "data", "repo_feature_history.json");
@@ -282,6 +254,7 @@ if (existsSync(portableHistoryFile)) {
     if (!info || typeof info !== "object" || (!Array.isArray(info.appearance_dates) && !info.last_featured && !info.ranks)) continue;
     const project = getProject(repo);
     if (!project) continue;
+    const priorLatestDate = project.lastPublished;
     addValue(project.digestStreams, "portable_weekly");
     addValue(project.sourceFiles, "portable-weekly/data/repo_feature_history.json");
     addValue(project.recordTypes, "ranked_digest");
@@ -293,18 +266,20 @@ if (existsSync(portableHistoryFile)) {
       addValue(project.digestDatesByStream.portable_weekly, date);
       project.firstSeen = minDate(project.firstSeen, date);
       project.lastPublished = maxDate(project.lastPublished, date);
-      if (info.ranks?.[date]) project.rankHistory[date] = Number(info.ranks[date]);
+      if (info.ranks?.[date] != null && project.rankHistory[date] == null) project.rankHistory[date] = Number(info.ranks[date]);
       latestPortableDate = maxDate(latestPortableDate, date);
     }
-    const lastFeatured = safeDate(info.last_featured);
+    const lastFeatured = safeDate(info.last_featured) || dates.at(-1) || "";
     if (lastFeatured) {
       project.lastPublished = maxDate(project.lastPublished, lastFeatured);
-      if (info.ranks?.[lastFeatured]) project.latestRank = Number(info.ranks[lastFeatured]);
+      const portableRank = info.ranks?.[lastFeatured];
+      if (portableRank != null && (!priorLatestDate || lastFeatured >= priorLatestDate)) project.latestRank = Number(portableRank);
       latestPortableDate = maxDate(latestPortableDate, lastFeatured);
     }
   }
 }
 
+const portableEvidenceDate = new Map();
 const portableRunDir = path.join(repoRoot, "portable-weekly", "data", "runs");
 if (existsSync(portableRunDir)) {
   for (const fileName of readdirSync(portableRunDir).filter((name) => /^digest_\d{4}-\d{2}-\d{2}\.json$/.test(name)).sort()) {
@@ -316,6 +291,7 @@ if (existsSync(portableRunDir)) {
     for (const item of run.top_repos || run.selected || []) {
       const project = getProject(item.full_name, item.html_url);
       if (!project) continue;
+      const priorLatestDate = project.lastPublished;
       addValue(project.digestStreams, "portable_weekly");
       addValue(project.sourceFiles, path.relative(repoRoot, file).replaceAll(path.sep, "/"));
       addValue(project.recordTypes, "ranked_digest");
@@ -323,23 +299,28 @@ if (existsSync(portableRunDir)) {
       addValue(project.digestDatesByStream.portable_weekly, date);
       project.firstSeen = minDate(project.firstSeen, date);
       project.lastPublished = maxDate(project.lastPublished, date);
-      if (Number.isFinite(Number(item.stars))) project.stars = Number(item.stars);
-      if (Number.isFinite(Number(item.forks))) project.forks = Number(item.forks);
-      project.pushedAt = maxDate(project.pushedAt, safeDate(item.last_push || item.pushed_at));
-      project.topic = item.topic || project.topic;
-      if (Number.isFinite(Number(item.score))) project.score = Number(item.score);
-      project.statusTag = item.rotation_status || item.status_tag || project.statusTag;
-      const portabilityClass = String(item.portability_class || "").toLowerCase();
-      if (portabilityClass) project.portabilityValue = portabilityClass === "direct" ? "high" : portabilityClass === "refactor" ? "medium" : "reference";
+      if (item.rank != null && project.rankHistory[date] == null) project.rankHistory[date] = Number(item.rank);
+      if (item.rank != null && (!priorLatestDate || date >= priorLatestDate)) project.latestRank = Number(item.rank);
+
+      const id = project.id;
+      const previousPortableEvidenceDate = portableEvidenceDate.get(id) || "";
+      const newestPortableEvidence = !previousPortableEvidenceDate || date >= previousPortableEvidenceDate;
+      if (newestPortableEvidence) {
+        portableEvidenceDate.set(id, date);
+        if (Number.isFinite(Number(item.stars))) project.stars = Number(item.stars);
+        if (Number.isFinite(Number(item.forks))) project.forks = Number(item.forks);
+        project.pushedAt = maxDate(project.pushedAt, safeDate(item.last_push || item.pushed_at));
+        project.topic = item.topic || project.topic;
+        if (Number.isFinite(Number(item.score))) project.score = Number(item.score);
+        project.statusTag = item.rotation_status || item.status_tag || project.statusTag;
+        const portabilityClass = String(item.portability_class || "").toLowerCase();
+        if (portabilityClass) project.portabilityValue = portabilityClass === "direct" ? "high" : portabilityClass === "refactor" ? "medium" : "reference";
+      }
+
       project.contentSummary = append(project.contentSummary, item.value_reason || item.summary || item.description);
-      // Portability rationale and port ideas remain human-readable, but are never fed back into implementation inference.
       project.portabilitySummary = append(project.portabilitySummary, [item.portability_reason, item.port_idea].filter(Boolean).join(" "));
       project.notes = append(project.notes, item.note);
       addValues(project.representativeFiles, item.evidence?.sample_dsp_paths || item.representative_files || []);
-      if (item.rank) {
-        project.rankHistory[date] = Number(item.rank);
-        project.latestRank = Number(item.rank);
-      }
       inferPortableFacets(project, item);
     }
   }
