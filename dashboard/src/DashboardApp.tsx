@@ -235,7 +235,6 @@ export function DashboardApp() {
         <Metric label="Common anti-repeat" value={data.sourceSummary.commonIndexRows} note="canonical shared-index rows represented" />
         <Metric label="Analog provenance" value={data.metrics.analogProjects} note={`${data.sourceSummary.analogDigestFiles} weekly project reports`} />
         <Metric label="Portable provenance" value={data.metrics.portableProjects} note={`${data.sourceSummary.portableRunFiles} weekly project runs`} />
-        <Metric label="Cross-report" value={data.metrics.crossStreamProjects} note="tracker or discovery-report overlap" />
         <Metric label="Hard blocks" value={data.metrics.hardBlocks} note="repeat window active" />
         <Metric label="Needs classification" value={data.metrics.lowConfidenceClassifications} note="low-confidence inferred metadata" />
       </section>
@@ -289,7 +288,7 @@ export function DashboardApp() {
       </section>
 
       <footer className="eam-footer">
-        <p>Source rows: {data.sourceSummary.publishedRows} publication · {data.sourceSummary.selectedRows} selected · {data.sourceSummary.commonIndexRows} common anti-repeat · {data.sourceSummary.rankedDigestEntries} daily/analog ranked entries · {data.sourceSummary.codexRunFiles} Codex runs · {data.sourceSummary.portableRunFiles} Portable runs.</p>
+        <p>Source state: {data.sourceSummary.publishedRows} publication rows · {data.sourceSummary.selectedRows} selected rows · {data.sourceSummary.commonIndexRows} common anti-repeat rows · {data.sourceSummary.codexRunFiles} Codex run files · {data.sourceSummary.analogDigestFiles} Analog project reports · {data.sourceSummary.portableRunFiles} Portable project runs.</p>
         <p>Analog Weekly and Portable Weekly are discovery-report provenance only; they do not create new canonical anti-repeat streams. Product-design reports, books, AGENTS/context files, raw scrapes, and weekly-income reports are excluded.</p>
       </footer>
     </div>
