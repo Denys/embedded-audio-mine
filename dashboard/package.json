@@ -4,14 +4,14 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs",
+    "predev": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs && node scripts/finalize-dafx-domains.mjs",
     "dev": "vite --host 127.0.0.1",
-    "prebuild": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs",
+    "prebuild": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs && node scripts/finalize-dafx-domains.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "build:data": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs",
+    "build:data": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs && node scripts/finalize-dafx-domains.mjs",
     "qa:render": "node scripts/qa-render.mjs",
-    "test:data": "node scripts/build-data.mjs && node scripts/validate-data.mjs && node scripts/augment-discovery-reports.mjs && node scripts/validate-discovery-reports.mjs",
+    "test:data": "node scripts/build-data.mjs && node scripts/validate-data.mjs && node scripts/augment-discovery-reports.mjs && node scripts/finalize-dafx-domains.mjs && node scripts/validate-discovery-reports.mjs",
     "check:data": "npm run test:data"
   },
   "dependencies": {
