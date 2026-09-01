@@ -132,6 +132,11 @@ for (const id of ["rheslip/daisysp_teensy", "bseverns/seedbox"]) {
   assert(!project.classificationGaps.includes("MCU / platform"), `${id}: resolved MCU gap survived augmentation`);
   assert(!project.classificationGaps.includes("audio function / effects"), `${id}: resolved effect gap survived augmentation`);
 }
+const voxGenesis = byId.get("mdt516/voxgenesis");
+assert(voxGenesis, "port-suggestion leakage fixture missing: mdt516/voxGenesis");
+assert(!voxGenesis.mcuPlatforms.includes("Daisy / STM32H7"), "voxGenesis port idea leaked Daisy into implementation facets");
+assert(!voxGenesis.mcuPlatforms.includes("Teensy 4.x"), "voxGenesis port idea leaked Teensy into implementation facets");
+assert(voxGenesis.classificationGaps.includes("target MCU requires port profiling"), "voxGenesis should retain target-MCU porting gap");
 
 assert(Array.isArray(data.dafxDomainDistribution) && data.dafxDomainDistribution.length > 1, "DAFX domain distribution missing");
 assert(data.dafxDomainDistribution.some((point) => point.key === "Filters & Delays" && point.count > 0), "DAFX Filters & Delays domain missing");

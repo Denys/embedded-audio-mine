@@ -150,7 +150,8 @@ function recomputePortableClassification(project, evidenceSignals) {
 
 function inferPortableFacets(project, item) {
   const paths = item.evidence?.sample_dsp_paths || [];
-  const text = [item.topic, item.summary, item.value_reason, item.portability_reason, item.port_idea, ...paths].filter(Boolean).join(" ");
+  // Only observed/current evidence belongs here. `port_idea` is an adaptation proposal and must not become implementation truth.
+  const text = [item.topic, item.summary, item.value_reason, item.portability_reason, ...paths].filter(Boolean).join(" ");
   if (/\bc\+\+\b|\.cpp\b|\.hpp\b|c\+\+\d*/i.test(text)) addValue(project.languagesFrameworks, "C++");
   if (/\brust\b|\.rs\b|cargo|no_std/i.test(text)) addValue(project.languagesFrameworks, "Rust");
   if (/(?:^|[\s,;/])c(?:[\s,;/]|$)|\.c\b|ansi c|c89|c99/i.test(text)) addValue(project.languagesFrameworks, "C");
@@ -208,13 +209,13 @@ const dafxDomainPatterns = [
   ["Source Separation", /source separation|source-separation|demix|blind source/i]
 ];
 function inferDafxDomains(project) {
+  // Keep DAFX classification on observed implementation/function evidence. Do not mine porting proposals.
   const text = [
     project.repo,
     project.topic,
     project.notes,
     project.whySelected,
     project.contentSummary,
-    project.portabilitySummary,
     ...project.effects,
     ...project.tags,
     ...project.representativeFiles,
@@ -236,7 +237,6 @@ function portableScore(project) {
   return score;
 }
 
-// Analog Audio Mine reports are discovery provenance, even when a report's tracker CSV block omits the header.
 const digestDir = path.join(repoRoot, "digests");
 let latestAnalogDate = data.metrics?.latestAnalogDate || "";
 let analogDigestFiles = 0;
@@ -269,8 +269,6 @@ if (existsSync(digestDir)) {
   }
 }
 
-// Portable Weekly is a separate project-discovery report lane. Feature history preserves older findings whose
-// per-run JSON is no longer retained; run JSON enriches the records with current implementation evidence.
 let portableRunFiles = 0;
 let latestPortableDate = "";
 const portableHistoryFile = path.join(repoRoot, "portable-weekly", "data", "repo_feature_history.json");
@@ -331,6 +329,7 @@ if (existsSync(portableRunDir)) {
       const portabilityClass = String(item.portability_class || "").toLowerCase();
       if (portabilityClass) project.portabilityValue = portabilityClass === "direct" ? "high" : portabilityClass === "refactor" ? "medium" : "reference";
       project.contentSummary = append(project.contentSummary, item.value_reason || item.summary || item.description);
+      // Port ideas remain available for human reading, but are not fed back into classification inference.
       project.portabilitySummary = append(project.portabilitySummary, [item.portability_reason, item.port_idea].filter(Boolean).join(" "));
       project.notes = append(project.notes, item.note);
       addValues(project.representativeFiles, item.evidence?.sample_dsp_paths || item.representative_files || []);
