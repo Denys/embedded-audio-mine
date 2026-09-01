@@ -11,8 +11,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "build:data": "node scripts/build-data.mjs && node scripts/augment-discovery-reports.mjs",
     "qa:render": "node scripts/qa-render.mjs",
-    "test:data": "node scripts/validate-data.mjs",
-    "check:data": "npm run build:data && npm run test:data"
+    "test:data": "node scripts/build-data.mjs && node scripts/validate-data.mjs && node scripts/augment-discovery-reports.mjs && node scripts/validate-discovery-reports.mjs",
+    "check:data": "npm run test:data"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
