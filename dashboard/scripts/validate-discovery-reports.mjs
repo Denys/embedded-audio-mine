@@ -54,7 +54,7 @@ let latestAnalog = "";
 for (const fileName of analogFiles) {
   const text = readFileSync(path.join(digestDir, fileName), "utf8");
   const fallbackDate = safeDate(fileName);
-  const blockPattern = /##\s+(?:Proposed\s+)?publication(?:-tracker)?\s+rows\s*\n+(?:Rows applied[^\n]*\n+)?```csv\s*\n([\s\S]*?)```/gi;
+  const blockPattern = /##\s+(?:Proposed\s+)?publication(?:[-\s]+tracker)?\s+rows\s*\n+(?:Rows applied[^\n]*\n+)?```csv\s*\n([\s\S]*?)```/gi;
   for (const match of text.matchAll(blockPattern)) {
     for (const row of parsePublicationRows(match[1])) {
       const id = normalizeResource(row.repo).toLowerCase();
