@@ -10,6 +10,7 @@ const data = JSON.parse(readFileSync(path.join(dashboardRoot, "src", "data", "pr
 function safeDate(value) { return typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value) ? value.slice(0, 10) : ""; }
 function normalizeResource(value) { return String(value || "").trim().replace(/^https:\/\/github\.com\//i, "").replace(/\.git$/i, "").replace(/[)>.,;]+$/g, "").replace(/\s*\/\s*/g, "/"); }
 function assert(condition, message) { if (!condition) throw new Error(message); }
+function maxDate(a, b) { if (!a) return b || ""; if (!b) return a; return a > b ? a : b; }
 
 function parseCsv(text) {
   const rows = [];
@@ -44,6 +45,7 @@ function parsePublicationRows(text) {
 const byId = new Map(data.projects.map((project) => [project.id, project]));
 for (const project of data.projects) {
   assert(project.digestDatesByStream && Array.isArray(project.digestDatesByStream.portable_weekly), `${project.repo}: portable discovery provenance missing`);
+  assert(Array.isArray(project.dafxDomains), `${project.repo}: DAFX domains missing`);
   assert(!project.sourceFiles.some((file) => file.startsWith("work_products/weekly-income/")), `${project.repo}: weekly-income report leaked into project dashboard`);
 }
 
@@ -54,14 +56,14 @@ let latestAnalog = "";
 for (const fileName of analogFiles) {
   const text = readFileSync(path.join(digestDir, fileName), "utf8");
   const fallbackDate = safeDate(fileName);
-  const blockPattern = /##\s+(?:Proposed\s+)?publication(?:[-\s]+tracker)?\s+rows\s*\n+(?:Rows applied[^\n]*\n+)?```csv\s*\n([\s\S]*?)```/gi;
+  const blockPattern = /##\s+(?:Proposed\s+)?publication(?:[-\s]+tracker)?\s+rows\s*\r?\n(?:Rows applied[^\n]*\r?\n)?\s*```csv\s*\r?\n([\s\S]*?)```/gi;
   for (const match of text.matchAll(blockPattern)) {
     for (const row of parsePublicationRows(match[1])) {
       const id = normalizeResource(row.repo).toLowerCase();
       if (!id) continue;
       analogRows += 1;
       const date = safeDate(row.last_published) || fallbackDate;
-      if (date > latestAnalog) latestAnalog = date;
+      latestAnalog = maxDate(latestAnalog, date);
       const project = byId.get(id);
       assert(project, `Analog report finding missing from dashboard: ${row.repo}`);
       assert(project.digestStreams.includes("analog_weekly"), `Analog provenance missing for ${row.repo}`);
@@ -71,20 +73,40 @@ for (const fileName of analogFiles) {
 }
 assert(data.sourceSummary.analogDigestFiles === analogFiles.length, `Analog report count drift: ${data.sourceSummary.analogDigestFiles} != ${analogFiles.length}`);
 assert(data.metrics.latestAnalogDate === latestAnalog, `latest Analog report drift: ${data.metrics.latestAnalogDate} != ${latestAnalog}`);
+assert(latestAnalog === "2026-08-31", `expected latest Analog report 2026-08-31, got ${latestAnalog}`);
+
+const portableHistoryFile = path.join(repoRoot, "portable-weekly", "data", "repo_feature_history.json");
+const rawPortableHistory = JSON.parse(readFileSync(portableHistoryFile, "utf8"));
+const portableHistory = rawPortableHistory.repos || rawPortableHistory;
+let portableHistoryRepos = 0;
+let latestPortable = "";
+for (const [repo, info] of Object.entries(portableHistory)) {
+  if (!info || typeof info !== "object" || (!Array.isArray(info.appearance_dates) && !info.last_featured && !info.ranks)) continue;
+  portableHistoryRepos += 1;
+  const project = byId.get(normalizeResource(repo).toLowerCase());
+  assert(project, `Portable feature-history repository missing from dashboard: ${repo}`);
+  assert(project.digestStreams.includes("portable_weekly"), `Portable history provenance missing for ${repo}`);
+  assert(project.sourceFiles.includes("portable-weekly/data/repo_feature_history.json"), `Portable history source ledger missing for ${repo}`);
+  const dates = [...new Set([...(info.appearance_dates || []), ...Object.keys(info.ranks || {})].map(safeDate).filter(Boolean))];
+  for (const date of dates) {
+    latestPortable = maxDate(latestPortable, date);
+    assert(project.digestDatesByStream.portable_weekly.includes(date), `Portable history date missing for ${repo}: ${date}`);
+  }
+  latestPortable = maxDate(latestPortable, safeDate(info.last_featured));
+}
 
 const portableRunDir = path.join(repoRoot, "portable-weekly", "data", "runs");
 const portableFiles = existsSync(portableRunDir) ? readdirSync(portableRunDir).filter((name) => /^digest_\d{4}-\d{2}-\d{2}\.json$/.test(name)).sort() : [];
 let portableFindings = 0;
-let latestPortable = "";
 for (const fileName of portableFiles) {
   const run = JSON.parse(readFileSync(path.join(portableRunDir, fileName), "utf8"));
   const date = safeDate(run.date) || safeDate(fileName.replace(/^digest_/, ""));
-  if (date > latestPortable) latestPortable = date;
+  latestPortable = maxDate(latestPortable, date);
   for (const item of run.top_repos || run.selected || []) {
     portableFindings += 1;
     const id = normalizeResource(item.full_name).toLowerCase();
     const project = byId.get(id);
-    assert(project, `Portable report finding missing from dashboard: ${item.full_name}`);
+    assert(project, `Portable run finding missing from dashboard: ${item.full_name}`);
     assert(project.digestStreams.includes("portable_weekly"), `Portable provenance missing for ${item.full_name}`);
     assert(project.digestDatesByStream.portable_weekly.includes(date), `Portable report date missing for ${item.full_name}: ${date}`);
     assert(project.sourceFiles.includes(`portable-weekly/data/runs/${fileName}`), `Portable source ledger missing ${fileName} for ${item.full_name}`);
@@ -93,6 +115,7 @@ for (const fileName of portableFiles) {
 assert(data.sourceSummary.portableRunFiles === portableFiles.length, `Portable run count drift: ${data.sourceSummary.portableRunFiles} != ${portableFiles.length}`);
 assert(data.metrics.latestPortableDate === latestPortable, `latest Portable report drift: ${data.metrics.latestPortableDate} != ${latestPortable}`);
 assert(data.metrics.portableProjects === data.projects.filter((project) => project.digestStreams.includes("portable_weekly")).length, "Portable project metric mismatch");
+assert(data.metrics.portableProjects >= portableHistoryRepos, `Portable project coverage ${data.metrics.portableProjects} < history repositories ${portableHistoryRepos}`);
 assert(data.metrics.analogProjects === data.projects.filter((project) => project.digestStreams.includes("analog_weekly")).length, "Analog project metric mismatch");
 assert(data.provenanceDistribution.some((point) => point.key.includes("portable_weekly")), "Portable provenance missing from distribution");
 
@@ -100,7 +123,24 @@ const latestAnalogFixture = byId.get("alanbog/3374-vco");
 assert(latestAnalogFixture?.digestDatesByStream.analog_weekly.includes("2026-08-31"), "2026-08-31 Analog provenance regression");
 const latestPortableFixture = byId.get("cycfi/q");
 assert(latestPortableFixture?.digestDatesByStream.portable_weekly.includes("2026-08-29"), "2026-08-29 Portable provenance regression");
+assert(latestPortableFixture?.portabilityValue === "medium", `cycfi/q should keep newest Refactor=>medium classification, got ${latestPortableFixture?.portabilityValue}`);
+const voiceOfFaust = byId.get("magnetophon/voiceoffaust");
+assert(voiceOfFaust?.portabilityValue === "high", `VoiceOfFaust should keep newest Direct=>high classification, got ${voiceOfFaust?.portabilityValue}`);
+for (const id of ["rheslip/daisysp_teensy", "bseverns/seedbox"]) {
+  const project = byId.get(id);
+  assert(project, `portable gap regression fixture missing: ${id}`);
+  assert(!project.classificationGaps.includes("MCU / platform"), `${id}: resolved MCU gap survived augmentation`);
+  assert(!project.classificationGaps.includes("audio function / effects"), `${id}: resolved effect gap survived augmentation`);
+}
 
-console.log(`project discovery coverage: ${analogRows} Analog publication rows across ${analogFiles.length} reports; ${portableFindings} Portable ranked occurrences across ${portableFiles.length} runs`);
+assert(Array.isArray(data.dafxDomainDistribution) && data.dafxDomainDistribution.length > 1, "DAFX domain distribution missing");
+assert(data.dafxDomainDistribution.some((point) => point.key === "Filters & Delays" && point.count > 0), "DAFX Filters & Delays domain missing");
+assert(latestPortableFixture?.dafxDomains.includes("Filters & Delays"), "cycfi/q lost DAFX Filters & Delays classification");
+const wdf = byId.get("chowdhury-dsp/chowdsp_wdf");
+assert(wdf?.dafxDomains.includes("Virtual Analog"), "chowdsp_wdf lost DAFX Virtual Analog classification");
+assert(wdf?.dafxDomains.includes("Nonlinear Processing"), "chowdsp_wdf lost DAFX Nonlinear Processing classification");
+
+console.log(`project discovery coverage: ${analogRows} Analog publication rows across ${analogFiles.length} reports; ${portableHistoryRepos} Portable history repositories + ${portableFindings} retained run occurrences across ${portableFiles.length} runs`);
 console.log(`latest project reports: Analog ${latestAnalog || "n/a"}; Portable ${latestPortable || "n/a"}`);
-console.log("non-project work products excluded: PASS");
+console.log(`DAFX taxonomy: ${data.dafxDomainDistribution.filter((point) => point.key !== "Unclassified").length} populated technique domains`);
+console.log("review regressions and non-project work-product exclusions: PASS");

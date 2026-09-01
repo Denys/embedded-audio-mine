@@ -26,7 +26,7 @@ These are the report families that may add project provenance to the dashboard:
 - WebGPT daily ranked project digests: `../digests/YYYY-MM-DD.md`
 - Analog Audio Mine project reports: `../digests/*-analog-audio-mine.md`
 - Codex weekly project runs/state: `../codex-weekly/data/repo_feature_history.json` and `../codex-weekly/data/runs/digest_*.json`
-- Portable Weekly Audio DSP project runs: `../portable-weekly/data/runs/digest_*.json`
+- Portable Weekly Audio DSP project history/runs: `../portable-weekly/data/repo_feature_history.json` and `../portable-weekly/data/runs/digest_*.json`
 
 Canonical publication/selection state remains:
 
@@ -58,12 +58,35 @@ The dashboard keeps anti-repeat ownership separate from report provenance:
 
 This preserves `rules/common-anti-repeat-policy.md` while still making all recurring project-finding reports visible.
 
-The Analog parser accepts both normal tracker CSV blocks with a header and legacy/headerless publication blocks such as the 2026-08-31 report, so report provenance cannot disappear merely because Markdown formatting wandered off unsupervised.
+The Analog parser accepts both normal tracker CSV blocks with a header and legacy/headerless publication blocks such as the 2026-08-31 report, including blank lines before the CSV fence.
+
+Portable feature history is ingested alongside retained run JSON so older featured projects do not vanish merely because their original run payload is no longer present. Newer retained runs supersede older portability-class labels and enrich the history rows with current source-path evidence.
+
+## DAFX technique taxonomy
+
+The dashboard also adds a technique-level DAFX facet derived from documented implementation evidence. The taxonomy follows the major engineering families used in *DAFX: Digital Audio Effects* rather than inventing another boutique tag cloud:
+
+- Filters & Delays
+- Modulators & Demodulators
+- Nonlinear Processing
+- Spatial Effects
+- Time-Segment Processing
+- Time-Frequency Processing
+- Source-Filter Processing
+- Adaptive DAFX
+- Spectral Processing
+- Time/Frequency Warping
+- Virtual Analog
+- Automatic Mixing
+- Source Separation
+
+A project may occupy more than one DAFX domain. These labels are evidence-derived classifications, not claims that the original project author used the same terminology, and they do not replace project lane, source confidence, or hardware verification.
 
 ## Classification filters
 
 The generated snapshot adds evidence-derived facets for:
 
+- DAFX technique domain;
 - repository type;
 - hardware design evidence such as schematic, editable EDA, PCB/Gerbers, BOM, panel/enclosure, calibration/test, and open-hardware evidence;
 - MCU/platform, including Daisy/STM32H7, Teensy, RP2040/RP2350, ESP32, STM32, Raspberry Pi/SBC, FPGA, and analog/no-MCU records;
@@ -71,4 +94,4 @@ The generated snapshot adds evidence-derived facets for:
 - implemented or documented audio functions/effects such as delay, reverb, modulation, drive, dynamics, filtering, synthesis, sequencing, MIDI/CV, and sampling/looping;
 - discovery-report provenance, including Portable Weekly.
 
-Portable-only records use conservative evidence inference from the weekly run's source paths, portability notes, summaries, and topic. Every record continues to carry `classificationConfidence` and `classificationGaps`; missing target-MCU proof remains visible rather than being guessed into existence.
+Portable-only records use conservative evidence inference from source paths, portability notes, summaries, and topic. Every record continues to carry `classificationConfidence` and `classificationGaps`; missing target-MCU proof remains visible rather than being guessed into existence.

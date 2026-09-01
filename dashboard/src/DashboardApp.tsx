@@ -43,6 +43,7 @@ function haystack(project: ProjectRecord) {
     ...project.mcuPlatforms,
     ...project.languagesFrameworks,
     ...project.effects,
+    ...project.dafxDomains,
     ...project.tags,
     ...project.representativeFiles,
     ...project.classificationGaps
@@ -130,6 +131,7 @@ function ProjectDetail({ project }: { project: ProjectRecord | undefined }) {
         <div><dt>Last seen</dt><dd>{formatDate(project.lastPublished)}</dd></div>
         <div><dt>Porting score</dt><dd>{project.portingScore}</dd></div>
       </dl>
+      <TagGroup label="DAFX technique domain" values={project.dafxDomains} />
       <TagGroup label="Repository type" values={project.repositoryTypes} />
       <TagGroup label="Hardware evidence" values={project.hardwareEvidence} empty="No explicit hardware evidence" />
       <TagGroup label="MCU / platform" values={project.mcuPlatforms} />
@@ -155,6 +157,7 @@ export function DashboardApp() {
   const [mcu, setMcu] = useState("all");
   const [language, setLanguage] = useState("all");
   const [effect, setEffect] = useState("all");
+  const [dafx, setDafx] = useState("all");
   const [repeat, setRepeat] = useState("all");
   const [confidence, setConfidence] = useState("all");
   const [selectedId, setSelectedId] = useState(projects[0]?.id ?? "");
@@ -164,6 +167,7 @@ export function DashboardApp() {
   const mcuOptions = useMemo(() => uniq(projects.map((project) => project.mcuPlatforms)).concat("Unclassified"), [projects]);
   const languageOptions = useMemo(() => uniq(projects.map((project) => project.languagesFrameworks)).concat("Unclassified"), [projects]);
   const effectOptions = useMemo(() => uniq(projects.map((project) => project.effects)).concat("Unclassified"), [projects]);
+  const dafxOptions = useMemo(() => uniq(projects.map((project) => project.dafxDomains)).concat("Unclassified"), [projects]);
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -193,11 +197,15 @@ export function DashboardApp() {
         if (effect === "Unclassified" && project.effects.length) return false;
         if (effect !== "Unclassified" && !project.effects.includes(effect)) return false;
       }
+      if (dafx !== "all") {
+        if (dafx === "Unclassified" && project.dafxDomains.length) return false;
+        if (dafx !== "Unclassified" && !project.dafxDomains.includes(dafx)) return false;
+      }
       if (repeat !== "all" && project.repeatState !== repeat) return false;
       if (confidence !== "all" && project.classificationConfidence !== confidence) return false;
       return true;
     });
-  }, [confidence, effect, hardware, language, mcu, projects, query, repeat, repoType, stream]);
+  }, [confidence, dafx, effect, hardware, language, mcu, projects, query, repeat, repoType, stream]);
 
   const selected = filtered.find((project) => project.id === selectedId) ?? filtered[0];
 
@@ -209,6 +217,7 @@ export function DashboardApp() {
     setMcu("all");
     setLanguage("all");
     setEffect("all");
+    setDafx("all");
     setRepeat("all");
     setConfidence("all");
   }
@@ -219,7 +228,7 @@ export function DashboardApp() {
         <div>
           <p className="eam-kicker">Embedded Audio Mine · current project-discovery state</p>
           <h1>Found projects and engineering facets</h1>
-          <p>Published/selected trackers plus ranked project-discovery reports. Anti-repeat ownership stays separate from Analog and Portable report provenance.</p>
+          <p>Published/selected trackers plus ranked project-discovery reports, with DAFX technique classification and anti-repeat ownership kept separate from report provenance.</p>
         </div>
         <div className="eam-freshness">
           <span>WebGPT {formatDate(data.metrics.latestWebgptDate)}</span>
@@ -234,14 +243,15 @@ export function DashboardApp() {
         <Metric label="Current records" value={data.metrics.totalProjects} note={`${data.sourceSummary.publishedRows} canonical publication rows`} />
         <Metric label="Common anti-repeat" value={data.sourceSummary.commonIndexRows} note="canonical shared-index rows represented" />
         <Metric label="Analog provenance" value={data.metrics.analogProjects} note={`${data.sourceSummary.analogDigestFiles} weekly project reports`} />
-        <Metric label="Portable provenance" value={data.metrics.portableProjects} note={`${data.sourceSummary.portableRunFiles} weekly project runs`} />
+        <Metric label="Portable provenance" value={data.metrics.portableProjects} note={`${data.sourceSummary.portableRunFiles} retained weekly runs + feature history`} />
         <Metric label="Hard blocks" value={data.metrics.hardBlocks} note="repeat window active" />
         <Metric label="Needs classification" value={data.metrics.lowConfidenceClassifications} note="low-confidence inferred metadata" />
       </section>
 
       <section className="eam-card eam-controls">
-        <label className="eam-search"><span>Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="repo, hardware, MCU, Faust, JUCE, delay…" /></label>
+        <label className="eam-search"><span>Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="repo, DAFX, hardware, MCU, Faust, delay…" /></label>
         <FilterSelect label="Report / provenance" value={stream} options={["webgpt_daily", "codex_weekly", "analog_weekly", "portable_weekly"]} onChange={setStream} />
+        <FilterSelect label="DAFX technique" value={dafx} options={dafxOptions} onChange={setDafx} />
         <FilterSelect label="Repository type" value={repoType} options={repoTypes} onChange={setRepoType} />
         <FilterSelect label="Hardware evidence" value={hardware} options={hardwareOptions} onChange={setHardware} />
         <FilterSelect label="MCU / platform" value={mcu} options={mcuOptions} onChange={setMcu} />
@@ -258,7 +268,7 @@ export function DashboardApp() {
             <header><div><h2>Project atlas</h2><p>{nf.format(filtered.length)} of {nf.format(projects.length)} records match.</p></div></header>
             <div className="eam-table-wrap">
               <table>
-                <thead><tr><th>Repository / resource</th><th>Score</th><th>Type</th><th>MCU / platform</th><th>Stack</th><th>Effects</th><th>Last seen</th><th>Repeat</th></tr></thead>
+                <thead><tr><th>Repository / resource</th><th>Score</th><th>Type</th><th>MCU / platform</th><th>Stack</th><th>Effects</th><th>DAFX</th><th>Last seen</th><th>Repeat</th></tr></thead>
                 <tbody>
                   {filtered.map((project) => (
                     <tr key={project.id} className={selected?.id === project.id ? "selected" : ""} onClick={() => setSelectedId(project.id)}>
@@ -268,6 +278,7 @@ export function DashboardApp() {
                       <td>{project.mcuPlatforms.slice(0, 2).join(" · ") || "Unclassified"}</td>
                       <td>{project.languagesFrameworks.slice(0, 2).join(" · ") || "Unclassified"}</td>
                       <td>{project.effects.slice(0, 2).join(" · ") || "Unclassified"}</td>
+                      <td>{project.dafxDomains.slice(0, 2).join(" · ") || "Unclassified"}</td>
                       <td>{formatDate(project.lastPublished)}</td>
                       <td><span className={`eam-repeat ${project.repeatState}`}>{project.repeatState}</span></td>
                     </tr>
@@ -278,6 +289,7 @@ export function DashboardApp() {
           </section>
 
           <div className="eam-distributions">
+            <Distribution title="DAFX technique domains" points={data.dafxDomainDistribution} onPick={setDafx} />
             <Distribution title="Repository types" points={data.repositoryTypeDistribution} onPick={setRepoType} />
             <Distribution title="MCU / platform" points={data.mcuPlatformDistribution} onPick={setMcu} />
             <Distribution title="Languages / frameworks" points={data.languageFrameworkDistribution} onPick={setLanguage} />
@@ -288,8 +300,8 @@ export function DashboardApp() {
       </section>
 
       <footer className="eam-footer">
-        <p>Source state: {data.sourceSummary.publishedRows} publication rows · {data.sourceSummary.selectedRows} selected rows · {data.sourceSummary.commonIndexRows} common anti-repeat rows · {data.sourceSummary.codexRunFiles} Codex run files · {data.sourceSummary.analogDigestFiles} Analog project reports · {data.sourceSummary.portableRunFiles} Portable project runs.</p>
-        <p>Analog Weekly and Portable Weekly are discovery-report provenance only; they do not create new canonical anti-repeat streams. Product-design reports, books, AGENTS/context files, raw scrapes, and weekly-income reports are excluded.</p>
+        <p>Source state: {data.sourceSummary.publishedRows} publication rows · {data.sourceSummary.selectedRows} selected rows · {data.sourceSummary.commonIndexRows} common anti-repeat rows · {data.sourceSummary.codexRunFiles} Codex run files · {data.sourceSummary.analogDigestFiles} Analog project reports · {data.sourceSummary.portableRunFiles} Portable run files.</p>
+        <p>DAFX domains are technique-level inferences from implementation evidence and documented effects; they do not replace project lanes or verification confidence. Non-project reports remain excluded.</p>
       </footer>
     </div>
   );
