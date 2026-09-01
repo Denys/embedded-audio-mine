@@ -14,7 +14,8 @@ const canonicalStreamLabels: Record<StreamKey, string> = {
 const digestStreamLabels: Record<DigestStreamKey, string> = {
   webgpt_daily: "WebGPT Daily",
   codex_weekly: "Codex Weekly",
-  analog_weekly: "Analog Weekly"
+  analog_weekly: "Analog Weekly",
+  portable_weekly: "Portable Weekly"
 };
 
 function formatDate(value: string) {
@@ -123,7 +124,7 @@ function ProjectDetail({ project }: { project: ProjectRecord | undefined }) {
       <p className="eam-summary">{project.whySelected || project.contentSummary || project.notes || "No detailed summary is present in the canonical state."}</p>
       <dl className="eam-facts">
         <div><dt>Canonical streams</dt><dd>{project.streams.map((stream) => canonicalStreamLabels[stream]).join(" + ") || "none"}</dd></div>
-        <div><dt>Digest provenance</dt><dd>{project.digestStreams.map((stream) => digestStreamLabels[stream]).join(" + ") || "tracker only"}</dd></div>
+        <div><dt>Discovery-report provenance</dt><dd>{project.digestStreams.map((stream) => digestStreamLabels[stream]).join(" + ") || "tracker only"}</dd></div>
         <div><dt>Lane</dt><dd>{project.lane || project.contentValue || "unclassified"}</dd></div>
         <div><dt>Repeat state</dt><dd>{project.repeatState}{project.repeatEligibleAfter ? ` · ${formatDate(project.repeatEligibleAfter)}` : ""}</dd></div>
         <div><dt>Last seen</dt><dd>{formatDate(project.lastPublished)}</dd></div>
@@ -169,8 +170,9 @@ export function DashboardApp() {
     return projects.filter((project) => {
       if (needle && !haystack(project).includes(needle)) return false;
       if (stream !== "all") {
-        const streamMatch = stream === "analog_weekly"
-          ? project.digestStreams.includes("analog_weekly")
+        const provenanceOnly = stream === "analog_weekly" || stream === "portable_weekly";
+        const streamMatch = provenanceOnly
+          ? project.digestStreams.includes(stream as DigestStreamKey)
           : project.streams.includes(stream as StreamKey);
         if (!streamMatch) return false;
       }
@@ -215,14 +217,15 @@ export function DashboardApp() {
     <div className="eam-shell">
       <header className="eam-hero">
         <div>
-          <p className="eam-kicker">Embedded Audio Mine · current canonical state</p>
-          <h1>Repository coverage and engineering facets</h1>
-          <p>Current trackers plus ranked recovered digests, with anti-repeat ownership kept separate from Analog digest provenance.</p>
+          <p className="eam-kicker">Embedded Audio Mine · current project-discovery state</p>
+          <h1>Found projects and engineering facets</h1>
+          <p>Published/selected trackers plus ranked project-discovery reports. Anti-repeat ownership stays separate from Analog and Portable report provenance.</p>
         </div>
         <div className="eam-freshness">
           <span>WebGPT {formatDate(data.metrics.latestWebgptDate)}</span>
           <span>Codex {formatDate(data.metrics.latestCodexDate)}</span>
           <span>Analog {formatDate(data.metrics.latestAnalogDate)}</span>
+          <span>Portable {formatDate(data.metrics.latestPortableDate)}</span>
           <small>generated {new Date(data.metrics.generatedAt).toLocaleString()}</small>
         </div>
       </header>
@@ -230,15 +233,16 @@ export function DashboardApp() {
       <section className="eam-metrics">
         <Metric label="Current records" value={data.metrics.totalProjects} note={`${data.sourceSummary.publishedRows} canonical publication rows`} />
         <Metric label="Common anti-repeat" value={data.sourceSummary.commonIndexRows} note="canonical shared-index rows represented" />
-        <Metric label="Analog provenance" value={data.metrics.analogProjects} note={`${data.sourceSummary.analogDigestFiles} recovered weekly digests`} />
-        <Metric label="Cross-stream" value={data.metrics.crossStreamProjects} note="tracker or digest provenance overlap" />
+        <Metric label="Analog provenance" value={data.metrics.analogProjects} note={`${data.sourceSummary.analogDigestFiles} weekly project reports`} />
+        <Metric label="Portable provenance" value={data.metrics.portableProjects} note={`${data.sourceSummary.portableRunFiles} weekly project runs`} />
+        <Metric label="Cross-report" value={data.metrics.crossStreamProjects} note="tracker or discovery-report overlap" />
         <Metric label="Hard blocks" value={data.metrics.hardBlocks} note="repeat window active" />
         <Metric label="Needs classification" value={data.metrics.lowConfidenceClassifications} note="low-confidence inferred metadata" />
       </section>
 
       <section className="eam-card eam-controls">
         <label className="eam-search"><span>Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="repo, hardware, MCU, Faust, JUCE, delay…" /></label>
-        <FilterSelect label="Stream / provenance" value={stream} options={["webgpt_daily", "codex_weekly", "analog_weekly"]} onChange={setStream} />
+        <FilterSelect label="Report / provenance" value={stream} options={["webgpt_daily", "codex_weekly", "analog_weekly", "portable_weekly"]} onChange={setStream} />
         <FilterSelect label="Repository type" value={repoType} options={repoTypes} onChange={setRepoType} />
         <FilterSelect label="Hardware evidence" value={hardware} options={hardwareOptions} onChange={setHardware} />
         <FilterSelect label="MCU / platform" value={mcu} options={mcuOptions} onChange={setMcu} />
@@ -285,8 +289,8 @@ export function DashboardApp() {
       </section>
 
       <footer className="eam-footer">
-        <p>Source rows: {data.sourceSummary.publishedRows} publication · {data.sourceSummary.selectedRows} selected · {data.sourceSummary.commonIndexRows} common anti-repeat · {data.sourceSummary.rankedDigestEntries} ranked digest entries.</p>
-        <p>Analog Weekly is shown as digest provenance, not a third canonical anti-repeat stream.</p>
+        <p>Source rows: {data.sourceSummary.publishedRows} publication · {data.sourceSummary.selectedRows} selected · {data.sourceSummary.commonIndexRows} common anti-repeat · {data.sourceSummary.rankedDigestEntries} daily/analog ranked entries · {data.sourceSummary.codexRunFiles} Codex runs · {data.sourceSummary.portableRunFiles} Portable runs.</p>
+        <p>Analog Weekly and Portable Weekly are discovery-report provenance only; they do not create new canonical anti-repeat streams. Product-design reports, books, AGENTS/context files, raw scrapes, and weekly-income reports are excluded.</p>
       </footer>
     </div>
   );
