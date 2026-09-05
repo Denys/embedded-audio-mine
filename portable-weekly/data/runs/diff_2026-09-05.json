@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-05",
+  "added": [
+    "thestk/stk",
+    "SamiPerttu/fundsp",
+    "Chowdhury-DSP/ChowMatrix",
+    "hollance/mda-plugins-juce",
+    "Chowdhury-DSP/ChowKick",
+    "Signalsmith-Audio/basics",
+    "PaulBatchelor/Soundpipe",
+    "jpcima/stone-phaser",
+    "atbran/aeriform"
+  ],
+  "removed": [
+    "RustAudio/dasp",
+    "Themaister/libfmsynth",
+    "Signalsmith-Audio/dsp",
+    "Chowdhury-DSP/chowdsp_wdf",
+    "PaulBatchelor/sndkit",
+    "Signalsmith-Audio/elliptic-blep",
+    "averagenative/0xSYNTH",
+    "marcecj/faust_mbstereophony",
+    "daleonov/SpringReverb"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "cycfi/q": {
-    "feature_count": 9,
-    "last_featured": "2026-08-29",
+    "feature_count": 10,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
       "2026-04-18",
       "2026-05-29",
@@ -11,7 +11,8 @@
       "2026-08-01",
       "2026-08-08",
       "2026-08-22",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "ranks": {
       "2026-04-18": 1,
@@ -22,7 +23,8 @@
       "2026-08-01": 1,
       "2026-08-08": 1,
       "2026-08-22": 1,
-      "2026-08-29": 1
+      "2026-08-29": 1,
+      "2026-09-05": 1
     }
   },
   "Signalsmith-Audio/dsp": {
@@ -50,23 +52,27 @@
     }
   },
   "hollance/mda-plugins-juce": {
-    "feature_count": 1,
-    "last_featured": "2026-04-18",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-18"
+      "2026-04-18",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-18": 4
+      "2026-04-18": 4,
+      "2026-09-05": 5
     }
   },
   "Signalsmith-Audio/basics": {
-    "feature_count": 1,
-    "last_featured": "2026-04-18",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-18"
+      "2026-04-18",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-18": 5
+      "2026-04-18": 5,
+      "2026-09-05": 7
     }
   },
   "Signalsmith-Audio/hilbert-iir": {
@@ -140,13 +146,15 @@
     }
   },
   "thestk/stk": {
-    "feature_count": 1,
-    "last_featured": "2026-04-23",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-23"
+      "2026-04-23",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-23": 1
+      "2026-04-23": 1,
+      "2026-09-05": 2
     }
   },
   "airwindows/airwindows": {
@@ -172,13 +180,15 @@
     }
   },
   "SamiPerttu/fundsp": {
-    "feature_count": 1,
-    "last_featured": "2026-04-23",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-23"
+      "2026-04-23",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-23": 4
+      "2026-04-23": 4,
+      "2026-09-05": 3
     }
   },
   "tiagolr/ripplerx": {
@@ -240,13 +250,15 @@
     }
   },
   "PaulBatchelor/Soundpipe": {
-    "feature_count": 1,
-    "last_featured": "2026-04-23",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-23"
+      "2026-04-23",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-23": 10
+      "2026-04-23": 10,
+      "2026-09-05": 8
     }
   },
   "surge-synthesizer/surge": {
@@ -306,13 +318,15 @@
     }
   },
   "Chowdhury-DSP/ChowMatrix": {
-    "feature_count": 1,
-    "last_featured": "2026-04-25",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-25"
+      "2026-04-25",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-25": 6
+      "2026-04-25": 6,
+      "2026-09-05": 4
     }
   },
   "midilab/jc303": {
@@ -342,13 +356,15 @@
     }
   },
   "Chowdhury-DSP/ChowKick": {
-    "feature_count": 1,
-    "last_featured": "2026-04-25",
+    "feature_count": 2,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
-      "2026-04-25"
+      "2026-04-25",
+      "2026-09-05"
     ],
     "ranks": {
-      "2026-04-25": 9
+      "2026-04-25": 9,
+      "2026-09-05": 6
     }
   },
   "surge-synthesizer/sst-filters": {
@@ -434,17 +450,19 @@
     }
   },
   "jpcima/stone-phaser": {
-    "feature_count": 3,
-    "last_featured": "2026-08-01",
+    "feature_count": 4,
+    "last_featured": "2026-09-05",
     "appearance_dates": [
       "2026-05-16",
       "2026-06-20",
-      "2026-08-01"
+      "2026-08-01",
+      "2026-09-05"
     ],
     "ranks": {
       "2026-05-16": 7,
       "2026-06-20": 6,
-      "2026-08-01": 3
+      "2026-08-01": 3,
+      "2026-09-05": 9
     }
   },
   "Jacajack/stm32-faust-synth": {
@@ -1165,6 +1183,16 @@
     ],
     "ranks": {
       "2026-08-29": 10
+    }
+  },
+  "atbran/aeriform": {
+    "feature_count": 1,
+    "last_featured": "2026-09-05",
+    "appearance_dates": [
+      "2026-09-05"
+    ],
+    "ranks": {
+      "2026-09-05": 10
     }
   }
 }
