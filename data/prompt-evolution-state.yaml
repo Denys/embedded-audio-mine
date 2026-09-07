@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-08-31
+last_updated: 2026-09-07
 
 shared:
   anti_repeat_window_days: 30
@@ -71,6 +71,15 @@ weekly_analog:
     - project: UNH µModules
       status: hold
       blocker: locate editable EDA, fabrication files, and an explicit hardware-source license separate from the thesis license
+    - project: MatthewATaylor/Modular-Synth-Hardware
+      status: ref_pass
+      blocker: verify a current built revision, fabrication release, measurements, and license compatibility for each upstream-derived module
+    - project: kweiwen/vermiliad
+      status: ref_pass
+      blocker: locate or create BOM and Gerbers; requalify current Raspberry Pi and codec bring-up; measure audio, CV, power, and latency
+    - project: jypma/modsynth
+      status: hold
+      blocker: resolve repository-wide hardware license and per-module upstream rights before promotion
   note: daily standalone gates do not narrow the weekly analog mine
 
 feedback:
@@ -79,7 +88,9 @@ feedback:
   next_run_search_debt:
     - "daily: verify recheck queue against current primary artifacts and both publication streams"
     - "daily: expand Codeberg/GitLab/SourceHut/Hackaday/forum lanes before ranking"
-    - "weekly analog: continue hidden-gems registry revalidation under weekly_deep profile"
-    - "weekly analog: find a fabricated SSI2100 plus SSI2162 compandor with editable PCB source and measured tracking"
-    - "weekly analog: search non-GitHub digitally assisted analog calibration, DAC trims, autotune fixtures, and per-voice NVM"
-    - "weekly analog: recheck Open80017a v0.2, Schraeg attenuverter fixes, and ZVP1320F or V2164 lifecycle substitutes"
+    - "weekly analog: continue hidden-gems registry revalidation under weekly_deep profile and seek more non-GitHub primary artifacts"
+    - "weekly analog: find a fabricated licensed SSI2100 plus SSI2162 compandor with editable PCB source and measured tracking"
+    - "weekly analog: search non-GitHub digitally assisted analog calibration bipolar DAC trims autotune fixtures closed-loop VCA control and per-voice NVM"
+    - "weekly analog: find a licensed SSI2190 mixer with editable EDA DAC routing control and measured noise crosstalk and headroom"
+    - "weekly analog: resolve jypma module lineage OpenCEM3340 license and Synthex VCF Bitbucket artifact access"
+    - "weekly analog: recheck Open80017a v0.2 Schraeg attenuverter fixes MAMUT hardware progress and UNH editable sources only for material revisions"
