@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-01T18:26:03.714891+00:00",
-  "source_digest_count": 25,
+  "generated_at_utc": "2026-09-08T18:33:59.289631+00:00",
+  "source_digest_count": 26,
   "repos": {
     "a3-audio/a3-system": {
       "feature_count": 1,
@@ -105,21 +105,23 @@
       }
     },
     "Harold-Street-Pedal-Company/HSP_Protoseed": {
-      "feature_count": 5,
-      "last_featured": "2026-08-04",
+      "feature_count": 6,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
         "2024-03-19",
         "2026-04-18",
         "2026-05-19",
         "2026-06-23",
-        "2026-08-04"
+        "2026-08-04",
+        "2026-09-08"
       ],
       "ranks": {
         "2024-03-19": 7,
         "2026-04-18": 3,
         "2026-05-19": 10,
         "2026-06-23": 2,
-        "2026-08-04": 2
+        "2026-08-04": 2,
+        "2026-09-08": 2
       }
     },
     "hemmer/PlaitsPatchInit": {
@@ -135,15 +137,17 @@
       }
     },
     "jakubthedeveloper/Samplotron": {
-      "feature_count": 2,
-      "last_featured": "2026-04-28",
+      "feature_count": 3,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
         "2024-03-26",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-09-08"
       ],
       "ranks": {
         "2024-03-26": 6,
-        "2026-04-28": 1
+        "2026-04-28": 1,
+        "2026-09-08": 3
       }
     },
     "joshreiss/Audio_Effects-Theory_Implementation_and_Application": {
@@ -389,8 +393,8 @@
       }
     },
     "spandit69/nest-audio-pcb": {
-      "feature_count": 9,
-      "last_featured": "2026-09-01",
+      "feature_count": 10,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
         "2026-04-18",
         "2026-05-26",
@@ -400,7 +404,8 @@
         "2026-08-11",
         "2026-08-18",
         "2026-08-25",
-        "2026-09-01"
+        "2026-09-01",
+        "2026-09-08"
       ],
       "ranks": {
         "2026-04-18": 7,
@@ -411,7 +416,8 @@
         "2026-08-11": 3,
         "2026-08-18": 5,
         "2026-08-25": 6,
-        "2026-09-01": 4
+        "2026-09-01": 4,
+        "2026-09-08": 5
       }
     },
     "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32": {
@@ -491,19 +497,21 @@
       }
     },
     "mkfarrow/Eurorack_DualVCA": {
-      "feature_count": 4,
-      "last_featured": "2026-08-04",
+      "feature_count": 5,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
         "2026-04-21",
         "2026-05-26",
         "2026-07-01",
-        "2026-08-04"
+        "2026-08-04",
+        "2026-09-08"
       ],
       "ranks": {
         "2026-04-21": 5,
         "2026-05-26": 10,
         "2026-07-01": 5,
-        "2026-08-04": 6
+        "2026-08-04": 6,
+        "2026-09-08": 9
       }
     },
     "yamamo2shun1/JUMBLEQ": {
@@ -755,8 +763,8 @@
       }
     },
     "grame-cncm/faust": {
-      "feature_count": 8,
-      "last_featured": "2026-09-01",
+      "feature_count": 9,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
         "2026-05-12",
         "2026-06-17",
@@ -765,7 +773,8 @@
         "2026-08-04",
         "2026-08-11",
         "2026-08-25",
-        "2026-09-01"
+        "2026-09-01",
+        "2026-09-08"
       ],
       "ranks": {
         "2026-05-12": 3,
@@ -775,7 +784,8 @@
         "2026-08-04": 1,
         "2026-08-11": 1,
         "2026-08-25": 1,
-        "2026-09-01": 1
+        "2026-09-01": 1,
+        "2026-09-08": 1
       }
     },
     "amsynth/amsynth": {
@@ -1029,15 +1039,17 @@
       }
     },
     "shakfu/cyfaust": {
-      "feature_count": 2,
-      "last_featured": "2026-07-28",
+      "feature_count": 3,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
         "2026-06-09",
-        "2026-07-28"
+        "2026-07-28",
+        "2026-09-08"
       ],
       "ranks": {
         "2026-06-09": 7,
-        "2026-07-28": 9
+        "2026-07-28": 9,
+        "2026-09-08": 6
       }
     },
     "shawlty/Daisy-Eurorack-Audio-Module": {
@@ -1383,13 +1395,15 @@
       }
     },
     "jasisz/grajek": {
-      "feature_count": 1,
-      "last_featured": "2026-08-04",
+      "feature_count": 2,
+      "last_featured": "2026-09-08",
       "appearance_dates": [
-        "2026-08-04"
+        "2026-08-04",
+        "2026-09-08"
       ],
       "ranks": {
-        "2026-08-04": 7
+        "2026-08-04": 7,
+        "2026-09-08": 7
       }
     },
     "zem-invictus/bevy_sonus": {
@@ -1650,6 +1664,36 @@
       ],
       "ranks": {
         "2026-09-01": 10
+      }
+    },
+    "reneweller-coding/AmbientSynth": {
+      "feature_count": 1,
+      "last_featured": "2026-09-08",
+      "appearance_dates": [
+        "2026-09-08"
+      ],
+      "ranks": {
+        "2026-09-08": 4
+      }
+    },
+    "ShaunPrice/LoopSmith": {
+      "feature_count": 1,
+      "last_featured": "2026-09-08",
+      "appearance_dates": [
+        "2026-09-08"
+      ],
+      "ranks": {
+        "2026-09-08": 8
+      }
+    },
+    "AnClark/ClassicReverb-RE04": {
+      "feature_count": 1,
+      "last_featured": "2026-09-08",
+      "appearance_dates": [
+        "2026-09-08"
+      ],
+      "ranks": {
+        "2026-09-08": 10
       }
     }
   }

@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-08",
+  "added": [
+    "AnClark/ClassicReverb-RE04",
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "ShaunPrice/LoopSmith",
+    "jakubthedeveloper/Samplotron",
+    "jasisz/grajek",
+    "mkfarrow/Eurorack_DualVCA",
+    "reneweller-coding/AmbientSynth",
+    "shakfu/cyfaust"
+  ],
+  "removed": [
+    "AnshulJ999/Solace-Synth",
+    "KarolKks/RealTime-Audio-DSP",
+    "Orastron/brickworks",
+    "algomusic/M16",
+    "bogggare567/abcTrain",
+    "clovesrodrigues/AUDIO_DSP",
+    "helgev-in-arcana/audio-graph",
+    "pierreportal/rust-dsp"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "spandit69/nest-audio-pcb"
+  ]
+}
