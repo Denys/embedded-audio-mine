@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-12",
+  "added": [
+    "micknoise/Maximilian",
+    "dimtass/DSP-Cpp-filters",
+    "hamiltonkibbe/FxDSP",
+    "analogcode/606-Inspired-Synth-Drums",
+    "Signalsmith-Audio/hilbert-iir",
+    "libraz/libsonare",
+    "keithhetrick/bellweather-audio-core",
+    "jpcima/fverb",
+    "charCulbert/chardsp"
+  ],
+  "removed": [
+    "thestk/stk",
+    "SamiPerttu/fundsp",
+    "Chowdhury-DSP/ChowMatrix",
+    "hollance/mda-plugins-juce",
+    "Chowdhury-DSP/ChowKick",
+    "Signalsmith-Audio/basics",
+    "PaulBatchelor/Soundpipe",
+    "jpcima/stone-phaser",
+    "atbran/aeriform"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}
+
