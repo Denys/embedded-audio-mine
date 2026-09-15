@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-08T18:33:59.289631+00:00",
-  "source_digest_count": 26,
+  "generated_at_utc": "2026-09-15T18:26:21.388532+00:00",
+  "source_digest_count": 27,
   "repos": {
     "a3-audio/a3-system": {
       "feature_count": 1,
@@ -137,17 +137,19 @@
       }
     },
     "jakubthedeveloper/Samplotron": {
-      "feature_count": 3,
-      "last_featured": "2026-09-08",
+      "feature_count": 4,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2024-03-26",
         "2026-04-28",
-        "2026-09-08"
+        "2026-09-08",
+        "2026-09-15"
       ],
       "ranks": {
         "2024-03-26": 6,
         "2026-04-28": 1,
-        "2026-09-08": 3
+        "2026-09-08": 3,
+        "2026-09-15": 5
       }
     },
     "joshreiss/Audio_Effects-Theory_Implementation_and_Application": {
@@ -285,21 +287,23 @@
       }
     },
     "sourcebox/mi-plaits-dsp-rs": {
-      "feature_count": 5,
-      "last_featured": "2026-07-15",
+      "feature_count": 6,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2024-03-17",
         "2026-04-09",
         "2026-04-16",
         "2026-06-17",
-        "2026-07-15"
+        "2026-07-15",
+        "2026-09-15"
       ],
       "ranks": {
         "2024-03-17": 8,
         "2026-04-09": 8,
         "2026-04-16": 6,
         "2026-06-17": 3,
-        "2026-07-15": 2
+        "2026-07-15": 2,
+        "2026-09-15": 4
       }
     },
     "thi-ng/synstack": {
@@ -329,21 +333,23 @@
       }
     },
     "zlosynth/achordion": {
-      "feature_count": 5,
-      "last_featured": "2026-08-11",
+      "feature_count": 6,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2024-03-19",
         "2026-04-18",
         "2026-05-19",
         "2026-06-23",
-        "2026-08-11"
+        "2026-08-11",
+        "2026-09-15"
       ],
       "ranks": {
         "2024-03-19": 6,
         "2026-04-18": 4,
         "2026-05-19": 9,
         "2026-06-23": 3,
-        "2026-08-11": 2
+        "2026-08-11": 2,
+        "2026-09-15": 7
       }
     },
     "zlosynth/kaseta": {
@@ -393,8 +399,8 @@
       }
     },
     "spandit69/nest-audio-pcb": {
-      "feature_count": 10,
-      "last_featured": "2026-09-08",
+      "feature_count": 11,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-04-18",
         "2026-05-26",
@@ -405,7 +411,8 @@
         "2026-08-18",
         "2026-08-25",
         "2026-09-01",
-        "2026-09-08"
+        "2026-09-08",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-04-18": 7,
@@ -417,7 +424,8 @@
         "2026-08-18": 5,
         "2026-08-25": 6,
         "2026-09-01": 4,
-        "2026-09-08": 5
+        "2026-09-08": 5,
+        "2026-09-15": 10
       }
     },
     "harshmane-git/Real-Time-Embedded-Audio-DSP-System-on-ESP32": {
@@ -435,21 +443,23 @@
       }
     },
     "t-dsp/t-dsp_software": {
-      "feature_count": 5,
-      "last_featured": "2026-07-28",
+      "feature_count": 6,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-04-18",
         "2026-06-09",
         "2026-07-15",
         "2026-07-21",
-        "2026-07-28"
+        "2026-07-28",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-04-18": 9,
         "2026-06-09": 5,
         "2026-07-15": 4,
         "2026-07-21": 10,
-        "2026-07-28": 7
+        "2026-07-28": 7,
+        "2026-09-15": 8
       }
     },
     "bristol-communal-modular/dual-2164-vca": {
@@ -763,8 +773,8 @@
       }
     },
     "grame-cncm/faust": {
-      "feature_count": 9,
-      "last_featured": "2026-09-08",
+      "feature_count": 10,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-05-12",
         "2026-06-17",
@@ -774,7 +784,8 @@
         "2026-08-11",
         "2026-08-25",
         "2026-09-01",
-        "2026-09-08"
+        "2026-09-08",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-05-12": 3,
@@ -785,7 +796,8 @@
         "2026-08-11": 1,
         "2026-08-25": 1,
         "2026-09-01": 1,
-        "2026-09-08": 1
+        "2026-09-08": 1,
+        "2026-09-15": 1
       }
     },
     "amsynth/amsynth": {
@@ -873,41 +885,47 @@
       }
     },
     "sophiapoirier/destroyfx": {
-      "feature_count": 2,
-      "last_featured": "2026-07-15",
+      "feature_count": 3,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-05-19",
-        "2026-07-15"
+        "2026-07-15",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-05-19": 4,
-        "2026-07-15": 1
+        "2026-07-15": 1,
+        "2026-09-15": 2
       }
     },
     "Orastron/brickworks": {
-      "feature_count": 3,
-      "last_featured": "2026-09-01",
+      "feature_count": 4,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-05-19",
         "2026-07-28",
-        "2026-09-01"
+        "2026-09-01",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-05-19": 5,
         "2026-07-28": 2,
-        "2026-09-01": 2
+        "2026-09-01": 2,
+        "2026-09-15": 3
       }
     },
     "ZorakAudio/ZorakAudio-Experimental-Plugins": {
-      "feature_count": 2,
-      "last_featured": "2026-07-01",
+      "feature_count": 3,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-05-26",
-        "2026-07-01"
+        "2026-07-01",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-05-26": 2,
-        "2026-07-01": 3
+        "2026-07-01": 3,
+        "2026-09-15": 6
       }
     },
     "DIYSynthMNL/Eurorack-2164-Quad-Exponential-VCA": {
@@ -1039,17 +1057,19 @@
       }
     },
     "shakfu/cyfaust": {
-      "feature_count": 3,
-      "last_featured": "2026-09-08",
+      "feature_count": 4,
+      "last_featured": "2026-09-15",
       "appearance_dates": [
         "2026-06-09",
         "2026-07-28",
-        "2026-09-08"
+        "2026-09-08",
+        "2026-09-15"
       ],
       "ranks": {
         "2026-06-09": 7,
         "2026-07-28": 9,
-        "2026-09-08": 6
+        "2026-09-08": 6,
+        "2026-09-15": 9
       }
     },
     "shawlty/Daisy-Eurorack-Audio-Module": {

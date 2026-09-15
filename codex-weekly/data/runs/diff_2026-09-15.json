@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-15",
+  "added": [
+    "Orastron/brickworks",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "sophiapoirier/destroyfx",
+    "sourcebox/mi-plaits-dsp-rs",
+    "t-dsp/t-dsp_software",
+    "zlosynth/achordion"
+  ],
+  "removed": [
+    "AnClark/ClassicReverb-RE04",
+    "Harold-Street-Pedal-Company/HSP_Protoseed",
+    "ShaunPrice/LoopSmith",
+    "jasisz/grajek",
+    "mkfarrow/Eurorack_DualVCA",
+    "reneweller-coding/AmbientSynth"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "jakubthedeveloper/Samplotron",
+    "shakfu/cyfaust",
+    "spandit69/nest-audio-pcb"
+  ]
+}
