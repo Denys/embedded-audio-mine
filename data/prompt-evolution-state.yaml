@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-09-14
+last_updated: 2026-09-21
 
 shared:
   anti_repeat_window_days: 30
@@ -29,6 +29,15 @@ daily:
     - photo_only_or_store_page_only_hardware
     - generic_dev_shield_or_bare_codec_board
   recheck_queue:
+    - project: amesser-group/modular-fx
+      status: hold
+      blocker: wait for completed prototype testing BOM Gerbers consolidated license files and quantitative audio measurements
+    - project: vitoria-b/little-angel-chorus
+      status: hold
+      blocker: verify an explicit reusable hardware license and BBD design lineage
+    - project: FAREKIND/VCO-SSI2131
+      status: hold
+      blocker: publish the actual circuit and PCB source rather than panel files and photographs only
     - project: plinkysynth/plinky_public
       status: provisional_lead
       blocker: fresh anti-repeat/current-state verification before ranking
@@ -90,8 +99,8 @@ feedback:
     - "daily: expand Codeberg/GitLab/SourceHut/Hackaday/forum lanes before ranking"
     - "weekly analog: continue hidden-gems registry revalidation under weekly_deep profile and seek more non-GitHub primary artifacts"
     - "weekly analog: find a fabricated licensed SSI2100 plus SSI2162 compandor with editable EDA and measured tracking clock leakage SNR and overload recovery"
-    - "weekly analog: revisit b:ond only after a canonical complete licensed hardware repository appears and continue non-GitHub bipolar DAC autotune and temperature-sweep searches"
     - "weekly analog: find a licensed SSI2190 mixer with editable EDA DAC routing control and measured noise crosstalk headroom and control feedthrough"
-    - "weekly analog: target licensed BBD chorus flanger phaser and analog drum voices on personal sites alternative forges and university archives"
-    - "weekly analog: resolve Dogone23 hardware-license mismatch F113X license and blocked alternative-forge candidates"
-    - "weekly analog: recheck Open80017a v0.2 Schraeg attenuverter fix HEAR tested Gerbers and MAMUT hardware only for material revisions"
+    - "weekly analog: revisit amesser modular-fx after completed prototype testing BOM Gerbers normalized license files and analyzer data; resolve Basari through primary Codeberg access"
+    - "weekly analog: target commercial-open BBD chorus flanger phaser hardware with current Coolaudio parts clock filtering and measured noise"
+    - "weekly analog: search university pages GitLab self-hosted Git and personal sites for digitally assisted analog VCO VCF calibration and preset routing"
+    - "weekly analog: recheck little-angel FAREKIND SSI2131 Mechlab Open80017a Schraeg and HEAR only for material licensing fabrication or test revisions"
