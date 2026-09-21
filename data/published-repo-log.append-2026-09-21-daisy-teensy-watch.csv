@@ -1,0 +1,2 @@
+repo,lane,first_seen,last_published,repeat_eligible_after,status,notes
+Peteranthony1st/PZD-Daisy-Pod-4-Track-Looper,STRONG_PASS,2026-09-21,2026-09-21,2026-10-21,published,https://github.com/Peteranthony1st/PZD-Daisy-Pod-4-Track-Looper ; v2.0.0 2026-09-20 adds concurrent Dexed 10-voice six-operator FM and Grains engines plus Hann-windowed transport freeze release binary QSPI boot and dense Pod UI; MIT code; Daisy Pod plus OLED and hand-wired SD; bundled preset provenance requires separate audit
