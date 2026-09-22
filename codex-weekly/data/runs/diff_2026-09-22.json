@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-22",
+  "added": [
+    "ManasWolrd/VitalReverb",
+    "amsynth/amsynth",
+    "mishan/thinksynth",
+    "reales/retromulator",
+    "zlosynth/kaseta"
+  ],
+  "removed": [
+    "jakubthedeveloper/Samplotron",
+    "shakfu/cyfaust",
+    "spandit69/nest-audio-pcb",
+    "t-dsp/t-dsp_software",
+    "zlosynth/achordion"
+  ],
+  "changed": [
+    "Orastron/brickworks",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "grame-cncm/faust",
+    "sophiapoirier/destroyfx",
+    "sourcebox/mi-plaits-dsp-rs"
+  ]
+}
