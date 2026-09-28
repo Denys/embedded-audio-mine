@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-09-21
+last_updated: 2026-09-28
 
 shared:
   anti_repeat_window_days: 30
@@ -89,6 +89,15 @@ weekly_analog:
     - project: barnabywalters/Schraeg
       status: pass_with_erratum
       blocker: locate or validate an attenuverter-range fix and measured resonance-CV and FM behavior
+    - project: rabid.audio Bass Chorus
+      status: hold
+      blocker: wait for breadboard confirmation final schematic editable PCB fabrication files build evidence and measured BBD clock noise and bandwidth
+    - project: bosco-drg/Analog-Compressor-Pedal
+      status: hold
+      blocker: verify an explicit hardware/source license and add BOM calibration procedure measured transfer curves noise and attack/release results
+    - project: rockola/triton-delay
+      status: hold
+      blocker: verify upstream forum lineage completed-build evidence BOM calibration and quantitative PT2399 noise bandwidth and modulation behavior
   note: daily standalone gates do not narrow the weekly analog mine
 
 feedback:
@@ -97,10 +106,10 @@ feedback:
   next_run_search_debt:
     - "daily: verify recheck queue against current primary artifacts and both publication streams"
     - "daily: expand Codeberg/GitLab/SourceHut/Hackaday/forum lanes before ranking"
-    - "weekly analog: continue hidden-gems registry revalidation under weekly_deep profile and seek more non-GitHub primary artifacts"
-    - "weekly analog: find a fabricated licensed SSI2100 plus SSI2162 compandor with editable EDA and measured tracking clock leakage SNR and overload recovery"
-    - "weekly analog: find a licensed SSI2190 mixer with editable EDA DAC routing control and measured noise crosstalk headroom and control feedthrough"
-    - "weekly analog: revisit amesser modular-fx after completed prototype testing BOM Gerbers normalized license files and analyzer data; resolve Basari through primary Codeberg access"
-    - "weekly analog: target commercial-open BBD chorus flanger phaser hardware with current Coolaudio parts clock filtering and measured noise"
+    - "weekly analog: continue hidden-gems registry revalidation under weekly_deep and distinguish simulated bench-electrical acoustic listening-only and absent measurements"
+    - "weekly analog: find a fabricated licensed SSI2100 plus SSI2162 compandor or BBD effect with editable EDA and measured tracking clock leakage SNR and overload recovery"
+    - "weekly analog: find a licensed SSI2190 or SSI2164 panner mixer with editable EDA DAC recall and measured noise crosstalk pan law headroom and control feedthrough"
+    - "weekly analog: revisit Rabid Audio Bass Chorus after breadboard proof and PCB release; resolve Basari through primary Codeberg access"
+    - "weekly analog: find a current licensed analog compressor with build evidence attack release calibration and measured transfer curves; recheck bosco-drg only if licensing appears"
     - "weekly analog: search university pages GitLab self-hosted Git and personal sites for digitally assisted analog VCO VCF calibration and preset routing"
-    - "weekly analog: recheck little-angel FAREKIND SSI2131 Mechlab Open80017a Schraeg and HEAR only for material licensing fabrication or test revisions"
+    - "weekly analog: resolve Hands of Svarog J3RK lineage qualify a current headphone driver and verify Keep v4 production source Gerber correspondence"
