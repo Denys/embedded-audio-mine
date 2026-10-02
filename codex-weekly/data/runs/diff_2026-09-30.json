@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-30",
+  "added": [
+    "JordanAceto/micro-pico",
+    "TimMJN/Polymorph-VCO",
+    "agooddaytowork/dq-dsp-firmware",
+    "ampactor-labs/sonido",
+    "jakubthedeveloper/Samplotron",
+    "joeriben/akroasys",
+    "oikoaudio/oikoaudio",
+    "sneed-and-feed/braun_rb-26",
+    "src3453/3HSPlug"
+  ],
+  "removed": [
+    "ManasWolrd/VitalReverb",
+    "Orastron/brickworks",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "amsynth/amsynth",
+    "grame-cncm/faust",
+    "mishan/thinksynth",
+    "sophiapoirier/destroyfx",
+    "sourcebox/mi-plaits-dsp-rs",
+    "zlosynth/kaseta"
+  ],
+  "changed": [
+    "reales/retromulator"
+  ]
+}

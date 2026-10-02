@@ -1,10 +1,13 @@
 {
-  "last_run_utc": "2026-09-22T18:26:42Z",
-  "run_count": 37,
-  "latest_digest_date": "2026-09-22",
-  "latest_digest_file": "2026-09-22 - Weekly Embedded DSP GitHub Digest.md",
-  "previous_digest_file": "2026-09-15 - Weekly Embedded DSP GitHub Digest.md",
+  "last_run_utc": "2026-10-02T19:10:32.480742+00:00",
+  "run_count": 38,
+  "latest_digest_date": "2026-09-30",
+  "latest_digest_file": "2026-09-30 - Weekly Embedded DSP GitHub Digest.md",
+  "previous_digest_file": "2026-09-22 - Weekly Embedded DSP GitHub Digest.md",
   "history_seeded_from_markdown": true,
   "history_seeded_at_utc": "2026-04-16T17:54:30.9469586Z",
-  "project_rules_version": "2026-09-08-portability-fit-filter"
+  "project_rules_version": "2026-09-08-portability-fit-filter",
+  "original_discovery_utc": "2026-09-29T22:18:46Z",
+  "finalized_at_utc": "2026-10-02T19:10:32.480742+00:00",
+  "supplementary_queries_successful": 6
 }
