@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-26",
+  "added": [
+    "Ameobea/web-synth",
+    "cucuwritescode/adac",
+    "CristianMoresi/DSPark",
+    "odoare/Mechanodd",
+    "clovesrodrigues/AUDIO_DSP",
+    "Na1w/infinitedsp",
+    "hulkajoshua69/GritEngine",
+    "Carrieukie/WavetableSynthesizer",
+    "mkaudio-company/libmksim"
+  ],
+  "removed": [
+    "madrona-labs/madronalib",
+    "CuteDSP/RSCuteDSP",
+    "hasenbanck/resampler",
+    "jatinchowdhury18/CrossroadsEffects",
+    "synthalorian/open-synth",
+    "SpotlightKid/adt",
+    "tpt-solutions/tpt-dsp",
+    "Ion3rik/JonssonicDSP",
+    "xikxp1/bs2b"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}

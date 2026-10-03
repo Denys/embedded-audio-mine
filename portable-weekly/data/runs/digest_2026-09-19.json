@@ -1,0 +1,332 @@
+{
+  "date": "2026-09-19",
+  "generated_at_utc": "2026-09-19T20:30:15Z",
+  "query_successful_count": 27,
+  "query_count": 27,
+  "shortlist_candidate_count": 31,
+  "unique_nonfork_repo_count": 192,
+  "transport_notes": [
+    "Codeload archive exceeded 64 MiB for cycfi/q",
+    "GitHub API used unauthenticated public requests",
+    "GitHub HTTP 403 for https://api.github.com/repos/Chowdhury-DSP/ChowKick: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/Chowdhury-DSP/ChowMatrix: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/Chowdhury-DSP/chowdsp_wdf: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/PaulBatchelor/Soundpipe: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/PaulBatchelor/sndkit: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/RustAudio/dasp: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/SamiPerttu/fundsp: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/Signalsmith-Audio/basics: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/Signalsmith-Audio/elliptic-blep: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/Themaister/libfmsynth: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/hollance/mda-plugins-juce: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/micknoise/Maximilian: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub HTTP 403 for https://api.github.com/repos/thestk/stk: {\"message\":\"API rate limit exceeded for 173.255.161.124. (But here's the good news: Authenticated requests get a higher rate limit. Check ou",
+    "GitHub rate limit response; waited 60 seconds and retried once",
+    "curl transport disabled after first failure; using urllib for remaining requests"
+  ],
+  "previous_digest_file": "2026-09-12 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1422,
+      "forks": 178,
+      "last_push": "2026-09-17",
+      "topic": "DSP library",
+      "score": 3493,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "BSL-1.0",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 183,
+        "dsp_file_count": 65,
+        "host_file_count": 7,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/support/audio_stream.hpp",
+          "q_lib/include/q/support/midi_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "madrona-labs/madronalib",
+      "html_url": "https://github.com/madrona-labs/madronalib",
+      "stars": 336,
+      "forks": 25,
+      "last_push": "2026-09-16",
+      "topic": "DSP library",
+      "score": 897,
+      "portability_class": "Stretch",
+      "portability_reason": "The header-only DSP layer is cleanly separated, but its four-lane math backend selects SSE4.1 or NEON with no Cortex-M7 scalar fallback and many processors own dynamic vectors.",
+      "value_reason": "Madronalib's mature MIT source/DSP layer combines vectorized filters, delays, generators, routing, resampling and approximation math behind one header-only include, separately from its RtAudio and VST examples.",
+      "port_idea": "Implement a four-lane scalar float backend for MLDSPMathSIMD, then extract one filter-plus-delay chain with fixed buffers; leave matrix, networking, dynamic graph and FFT support out of the first Cortex-M7 build.",
+      "license": "MIT",
+      "note": "New - Madronalib's mature MIT source/DSP layer combines vectorized filters, delays, generators, routing, resampling and approximation math behind one header-only include, separately from its RtAudio and VST examples.",
+      "rotation_status": "New",
+      "summary": "Madronalib: a C++ framework for DSP applications.",
+      "evidence": {
+        "source_file_count": 124,
+        "dsp_file_count": 61,
+        "host_file_count": 15,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "source/DSP/MLDSPFilters.h",
+          "source/DSP/MLDSPDelays.h",
+          "source/DSP/MLDSPResampling.h",
+          "source/DSP/MLDSPGens.h"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "CuteDSP/RSCuteDSP",
+      "html_url": "https://github.com/CuteDSP/RSCuteDSP",
+      "stars": 25,
+      "forks": 6,
+      "last_push": "2026-06-17",
+      "topic": "DSP library",
+      "score": 178,
+      "portability_class": "Refactor",
+      "portability_reason": "Useful scalar modules are host-independent, but the advertised no_std build retains unconditional std references and most delay, spectral and spatial processors depend on alloc-backed Vec storage.",
+      "value_reason": "The MIT Rust port exposes Signalsmith-derived delays, filters, FFT/STFT, convolution, time stretching, phase rotation and room-spacing blocks in one library with generic f32-capable APIs.",
+      "port_idea": "Extract the delay and biquad modules first, replace Vec storage with fixed-capacity buffers, repair unconditional std constants/imports in the advertised no_std build, and defer STFT, convolution and time stretching until memory profiling passes.",
+      "license": "MIT",
+      "note": "New - The MIT Rust port exposes Signalsmith-derived delays, filters, FFT/STFT, convolution, time stretching, phase rotation and room-spacing blocks in one library with generic f32-capable APIs.",
+      "rotation_status": "New",
+      "summary": "A Rust library for audio and signal processing",
+      "evidence": {
+        "source_file_count": 42,
+        "dsp_file_count": 8,
+        "host_file_count": 1,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "src/delay.rs",
+          "src/filters.rs",
+          "src/stretch.rs",
+          "src/convolver.rs",
+          "src/spacing.rs"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "hasenbanck/resampler",
+      "html_url": "https://github.com/hasenbanck/resampler",
+      "stars": 33,
+      "forks": 3,
+      "last_push": "2026-08-10",
+      "topic": "DSP library",
+      "score": 170,
+      "portability_class": "Refactor",
+      "portability_reason": "The crate has no_std, scalar and NEON implementations and preallocated processing buffers, but it still requires alloc/Vec/Arc and its NEON kernel targets AArch64 rather than Cortex-M7.",
+      "value_reason": "The dual-licensed Rust crate provides both a 16-64 sample-latency polyphase FIR and a mixed-radix FFT resampler, with f32 scalar and ARM NEON kernels plus explicit no_std support.",
+      "port_idea": "Start with the FIR path and scalar convolution, prebuild its 32-128 tap tables off the audio callback, replace alloc-owned buffers with a board arena, and benchmark the existing AArch64 NEON kernel only as an algorithm reference.",
+      "license": "MIT OR Apache-2.0",
+      "note": "New - The dual-licensed Rust crate provides both a 16-64 sample-latency polyphase FIR and a mixed-radix FFT resampler, with f32 scalar and ARM NEON kernels plus explicit no_std support.",
+      "rotation_status": "New",
+      "summary": "Resampler optimized for audio",
+      "evidence": {
+        "source_file_count": 60,
+        "dsp_file_count": 0,
+        "host_file_count": 1,
+        "heavy_file_count": 48,
+        "sample_dsp_paths": [
+          "src/resampler_fir.rs",
+          "src/fir/neon.rs",
+          "src/window.rs"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "jatinchowdhury18/CrossroadsEffects",
+      "html_url": "https://github.com/jatinchowdhury18/CrossroadsEffects",
+      "stars": 33,
+      "forks": 0,
+      "last_push": "2020-04-08",
+      "topic": "Faust effect",
+      "score": 166,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Crossroads evolves gain-and-delay effect topologies offline and emits Faust, making it a useful source of generated comb, FIR, soft-clip, and delay structures rather than a runtime dependency.",
+      "port_idea": "Run the genetic search on a computer, keep only the emitted Faust topology, then compile that fixed kernel for the MCU and bound every evolved delay.",
+      "license": "LGPL-3.0",
+      "note": "Returning - Crossroads evolves gain-and-delay effect topologies offline and emits Faust, making it a useful source of generated comb, FIR, soft-clip, and delay structures rather than a runtime dependency.",
+      "rotation_status": "Returning",
+      "summary": "At the crossroads of programming your own audio effects, and letting your audio effects be programmed for you.",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 11,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "faust_scripts/Two-pole-test.dsp",
+          "faust_scripts/bench.dsp",
+          "faust_scripts/evolve_struct.dsp",
+          "faust_scripts/evolve_struct_FIR_filter.dsp",
+          "faust_scripts/evolve_struct_Soft-clip.dsp",
+          "faust_scripts/evolve_struct_delay.dsp",
+          "faust_scripts/evolve_struct_gain.dsp",
+          "faust_scripts/param_est.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "synthalorian/open-synth",
+      "html_url": "https://github.com/synthalorian/open-synth",
+      "stars": 5,
+      "forks": 0,
+      "last_push": "2026-09-16",
+      "topic": "JUCE synth",
+      "score": 160,
+      "portability_class": "Refactor",
+      "portability_reason": "The procedural drum and delay sources are separable from JUCE and the sample ROMpler, but their voice count and per-sample transcendental math need an MCU-specific pass.",
+      "value_reason": "Its Apache-licensed DSP folder includes a fixed-pool procedural drum engine covering 16 percussion types plus a stereo fixed-array analog delay, independent of the optional sample ROMpler.",
+      "port_idea": "Extract the procedural drum pool and one stereo delay, cap simultaneous voices, replace per-sample exp/pow calls with tables or recurrences, and omit the filesystem-backed sample layer.",
+      "license": "Apache-2.0",
+      "note": "Returning - Its Apache-licensed DSP folder includes a fixed-pool procedural drum engine covering 16 percussion types plus a stereo fixed-array analog delay, independent of the optional sample ROMpler.",
+      "rotation_status": "Returning",
+      "summary": "\ud83c\udfb9 Open-source synthesizer \u2014 JUCE 8/C++20 engine, sample ROMpler, 5,600 presets. Standalone + VST3 + CLAP. This is the wave.",
+      "evidence": {
+        "source_file_count": 193,
+        "dsp_file_count": 125,
+        "host_file_count": 9,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "dsp/drum_synth.cpp",
+          "dsp/fx_analog_delay.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "SpotlightKid/adt",
+      "html_url": "https://github.com/SpotlightKid/adt",
+      "stars": 20,
+      "forks": 1,
+      "last_push": "2024-12-28",
+      "topic": "Faust effect",
+      "score": 153,
+      "portability_class": "Stretch",
+      "portability_reason": "Faust separates the DSP cleanly, but the generated four-voice pitch/delay engine reserves about 2.25 MiB of float delay storage, exceeding internal Daisy Seed and Teensy 4.x memory.",
+      "value_reason": "The MIT Faust kernel creates four-voice automatic double tracking from independent delay, pitch and pan spreads plus wet filtering, with generated standalone C++ separated from its DPF plugin wrapper.",
+      "port_idea": "Regenerate a two-voice float kernel with much smaller pitch/delay maxima and fixed controls; the checked-in four-voice C++ reserves 589,824 floats (about 2.25 MiB) before other state, so it cannot use internal Daisy/Teensy RAM unchanged.",
+      "license": "MIT",
+      "note": "New - The MIT Faust kernel creates four-voice automatic double tracking from independent delay, pitch and pan spreads plus wet filtering, with generated standalone C++ separated from its DPF plugin wrapper.",
+      "rotation_status": "New",
+      "summary": "Automatic double tracking plugin (not only) for vocals",
+      "evidence": {
+        "source_file_count": 8,
+        "dsp_file_count": 3,
+        "host_file_count": 8,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "faust/adt.dsp",
+          "plugins/adt/ADT.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "tpt-solutions/tpt-dsp",
+      "html_url": "https://github.com/tpt-solutions/tpt-dsp",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-09-15",
+      "topic": "DSP library",
+      "score": 150,
+      "portability_class": "Refactor",
+      "portability_reason": "tpt-dsp-core genuinely builds no_std with a stable scalar fallback, but the synth/effect crate still relies on std, Vec and Box, so only core primitives are direct and musical blocks need fixed-storage rewrites.",
+      "value_reason": "The dual-licensed Rust core provides no_std scalar filters, FFT/DCT/Hilbert, ring buffers and caller-buffer processing, while the adjacent audio crate supplies concrete FM, wavetable, subtractive, waveshaper, delay and EQ references.",
+      "port_idea": "Start with tpt-dsp-core --no-default-features and its scalar backend on thumbv7em; port one oscillator or waveshaper from tpt-dsp-audio to fixed arrays instead of bringing over its Vec/Box graph and convolution reverb.",
+      "license": "MIT OR Apache-2.0",
+      "note": "New - The dual-licensed Rust core provides no_std scalar filters, FFT/DCT/Hilbert, ring buffers and caller-buffer processing, while the adjacent audio crate supplies concrete FM, wavetable, subtractive, waveshaper, delay and EQ references.",
+      "rotation_status": "New",
+      "summary": "Pure-Rust, real-time-safe DSP framework \u2014 zero-allocation audio/RF/control processing for desktop, WebAssembly, and no_std embedded targets. Dual-licensed MIT/Apache-2.0.",
+      "evidence": {
+        "source_file_count": 87,
+        "dsp_file_count": 87,
+        "host_file_count": 22,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "tpt-dsp-core/src/filters.rs",
+          "tpt-dsp-core/src/ring.rs",
+          "tpt-dsp-core/src/simd_scalar.rs",
+          "tpt-dsp-audio/src/oscillator.rs",
+          "tpt-dsp-audio/src/waveshaper.rs"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "Ion3rik/JonssonicDSP",
+      "html_url": "https://github.com/Ion3rik/JonssonicDSP",
+      "stars": 11,
+      "forks": 0,
+      "last_push": "2026-03-06",
+      "topic": "DSP library",
+      "score": 132,
+      "portability_class": "Refactor",
+      "portability_reason": "Processing is scalar and host-independent, but channels, delay lines, oversamplers, matrices and some pointer helpers use dynamic vectors that must become bounded firmware storage.",
+      "value_reason": "JonssonicDSP's MIT header set exposes scalar TPT/SVF filters, waveshaping, oversampling, modulated delays and a configurable feedback-delay-network reverb with readable per-sample APIs.",
+      "port_idea": "Freeze one mono or stereo SVF-plus-FDN configuration, replace prepare-time std::vector storage and pointer-vector helpers with fixed arrays, and omit the FFT utility layer.",
+      "license": "MIT",
+      "note": "New - JonssonicDSP's MIT header set exposes scalar TPT/SVF filters, waveshaping, oversampling, modulated delays and a configurable feedback-delay-network reverb with readable per-sample APIs.",
+      "rotation_status": "New",
+      "summary": "A Modular Realtime C++ Audio DSP Library.",
+      "evidence": {
+        "source_file_count": 102,
+        "dsp_file_count": 70,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/jonssonic/models/reverb/feedback_delay_network.h",
+          "include/jonssonic/core/oversampling/oversampler.h",
+          "include/jonssonic/core/nonlinear/wave_shaper.h",
+          "include/jonssonic/core/filters/state_variable_filter.h"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "xikxp1/bs2b",
+      "html_url": "https://github.com/xikxp1/bs2b",
+      "stars": 1,
+      "forks": 0,
+      "last_push": "2026-07-13",
+      "topic": "DSP library",
+      "score": 97,
+      "portability_class": "Refactor",
+      "portability_reason": "The no_std frame path has tiny fixed state and no allocation, but all coefficients and hot-path processing are f64, which needs an f32 specialization for Cortex-M7 throughput.",
+      "value_reason": "This MIT Rust crate implements Bauer stereo-to-binaural crossfeed with reference-vector tests, streaming state, no_std support and allocation-free frame processing, a useful headphone block absent from stock embedded audio libraries.",
+      "port_idea": "Specialize the coefficient, state and process_frame path to f32 for Cortex-M7, preserve the C-reference golden vectors, and expose the three documented crossfeed profiles as fixed hardware presets.",
+      "license": "MIT",
+      "note": "New - This MIT Rust crate implements Bauer stereo-to-binaural crossfeed with reference-vector tests, streaming state, no_std support and allocation-free frame processing, a useful headphone block absent from stock embedded audio libraries.",
+      "rotation_status": "New",
+      "summary": "A modern Rust implementation of the Bauer stereophonic-to-binaural (bs2b) crossfeed DSP",
+      "evidence": {
+        "source_file_count": 4,
+        "dsp_file_count": 1,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/lib.rs"
+        ]
+      }
+    }
+  ]
+}

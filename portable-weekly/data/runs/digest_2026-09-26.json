@@ -1,0 +1,328 @@
+{
+  "date": "2026-09-26",
+  "generated_at_utc": "2026-09-26T11:54:47Z",
+  "query_successful_count": 31,
+  "query_count": 35,
+  "shortlist_candidate_count": 11,
+  "unique_nonfork_repo_count": 210,
+  "transport_notes": [
+    "Completed 27-query discovery plus four exact GitHub searches and codeload source review after anonymous core quota exhaustion"
+  ],
+  "previous_digest_file": "2026-09-19 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1425,
+      "forks": 178,
+      "last_push": "2026-09-25",
+      "topic": "DSP library",
+      "score": 3499,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "BSL-1.0",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 183,
+        "dsp_file_count": 65,
+        "host_file_count": 7,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/support/audio_stream.hpp",
+          "q_lib/include/q/support/midi_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "Ameobea/web-synth",
+      "html_url": "https://github.com/Ameobea/web-synth",
+      "stars": 572,
+      "forks": 33,
+      "last_push": "2026-08-13",
+      "topic": "Faust synth",
+      "score": 1338,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "Its standalone Faust sources include a stereo quadrature-LFO flanger and a three-band diode-ladder distortion, offering effect kernels beyond the browser DAW. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Compile one Faust effect at a time to C++, replace web controls with fixed parameters, and begin with the flanger before budgeting the three-band ladder path.",
+      "license": "NOASSERTION",
+      "note": "Returning - Its standalone Faust sources include a stereo quadrature-LFO flanger and a three-band diode-ladder distortion, offering effect kernels beyond the browser DAW. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "Returning",
+      "summary": "Browser-based DAW and audio synthesis platform with dozens of effects, synths, and modules",
+      "evidence": {
+        "source_file_count": 138,
+        "dsp_file_count": 73,
+        "host_file_count": 6,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "engine/engine/static/flanger.dsp",
+          "engine/engine/static/rain.dsp",
+          "src/graphEditor/nodes/CustomAudio/MultibandDiodeLadderDistortion/dsp.faust"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "cucuwritescode/adac",
+      "html_url": "https://github.com/cucuwritescode/adac",
+      "stars": 42,
+      "forks": 0,
+      "last_push": "2026-07-11",
+      "topic": "Faust effect",
+      "score": 194,
+      "portability_class": "Direct",
+      "portability_reason": "Python, PyTorch and FLAMO run only during offline training/export; the deployment artifact is a fixed Faust kernel whose delays, matrices, filters and stability verdict are explicit before firmware compilation.",
+      "value_reason": "ADAC converts trained FLAMO delay, gain, filter and matrix graphs into Faust, emits integer or fractional-delay FDNs, and computes a small-gain stability certificate over the exact single-precision parameters.",
+      "port_idea": "Train and certify a four- or eight-line FDN offline, export only the generated Faust kernel, compile it for Daisy or Teensy, and cap delay maxima to the measured internal or external memory budget.",
+      "license": "MIT",
+      "note": "New - ADAC converts trained FLAMO delay, gain, filter and matrix graphs into Faust, emits integer or fractional-delay FDNs, and computes a small-gain stability certificate over the exact single-precision parameters.",
+      "rotation_status": "New",
+      "summary": "Automatic Differentiable Audio Compilation: differentiable audio graphs to real-time DSP",
+      "evidence": {
+        "source_file_count": 1,
+        "dsp_file_count": 1,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/adac/codegen/json_to_faust.py",
+          "src/adac/certificate.py",
+          "tests/integration/nice_reverb.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "CristianMoresi/DSPark",
+      "html_url": "https://github.com/CristianMoresi/DSPark",
+      "stars": 20,
+      "forks": 1,
+      "last_push": "2026-09-26",
+      "topic": "DSP library",
+      "score": 193,
+      "portability_class": "Refactor",
+      "portability_reason": "Individual header models keep allocation in prepare(), but C++20, dynamic setup storage, calibration work, and optional heavyweight processors require a deliberately small firmware subset.",
+      "value_reason": "The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "port_idea": "Port one TransformerModel or TubePreamp block, preallocate its channel state, start at 1x oversampling, and leave convolution, phase-vocoder, and 64-grain processors out of the firmware build.",
+      "license": "MIT",
+      "note": "Returning - The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "rotation_status": "Returning",
+      "summary": "Header-only audio DSP framework in pure C++20, zero dependencies. 100+ real-time processors, physical analog models, EBU R128 metering. One codebase for cross-platform audio apps - desktop, mobile, WebAssembly, embedded - and VST3/CLAP/AU plugins.",
+      "evidence": {
+        "source_file_count": 228,
+        "dsp_file_count": 58,
+        "host_file_count": 88,
+        "heavy_file_count": 1,
+        "sample_dsp_paths": [
+          "Effects/TapeMachine.h",
+          "Effects/TubePreamp.h",
+          "Effects/TransformerModel.h",
+          "Core/AudioBuffer.h"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "odoare/Mechanodd",
+      "html_url": "https://github.com/odoare/Mechanodd",
+      "stars": 41,
+      "forks": 1,
+      "last_push": "2026-08-20",
+      "topic": "Physical modeling",
+      "score": 180,
+      "portability_class": "Stretch",
+      "portability_reason": "The resonator algorithms are bounded, but JUCE DSP types, per-voice instantiation, an 8-voice feedback matrix, and effects chains make only a reduced single-resonator port prudent.",
+      "value_reason": "Mechanodd contains dispersive bidirectional waveguide strings and bounded modal banks for plates, membranes, and beams, plus explicit feedback-loop DC/finite guards. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Extract one mono waveguide or 8-16-mode resonator, replace JUCE DelayLine/parameter classes with fixed storage, and defer the 8-voice feedback matrix and four-slot effects chains.",
+      "license": "NOASSERTION",
+      "note": "Returning - Mechanodd contains dispersive bidirectional waveguide strings and bounded modal banks for plates, membranes, and beams, plus explicit feedback-loop DC/finite guards. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "Returning",
+      "summary": "Polyphonic physical-modelling synthesizer",
+      "evidence": {
+        "source_file_count": 87,
+        "dsp_file_count": 15,
+        "host_file_count": 8,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "Source/Resonators/WaveguideResonator.cpp",
+          "Source/Resonators/WaveguideResonator.h",
+          "Source/Resonators/ModalResonator.cpp",
+          "Source/Resonators/ModalResonator.h",
+          "Source/Resonators/ModalResonatorComponent.cpp",
+          "Source/Resonators/ModalResonatorComponent.h",
+          "Source/Resonators/PlateResonator.cpp",
+          "Source/Resonators/PlateResonator.h"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "clovesrodrigues/AUDIO_DSP",
+      "html_url": "https://github.com/clovesrodrigues/AUDIO_DSP",
+      "stars": 2,
+      "forks": 0,
+      "last_push": "2026-09-21",
+      "topic": "DSP library",
+      "score": 154,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable header core is separate and process methods avoid allocation, but C++20 features, broad configuration, and optional plugin/convolution modules should be cut from the firmware build.",
+      "value_reason": "The MIT header library separates no-allocation fuzz, tube-preamp, tone-stack, fixed-buffer spring-reverb, and static oversampling blocks from optional plugin and convolution code.",
+      "port_idea": "Start with VintageFuzzDSP or one tube stage, disable oversampling, replace C++20-only conveniences if needed, then size spring delays explicitly before enabling reverb.",
+      "license": "MIT",
+      "note": "Returning - The MIT header library separates no-allocation fuzz, tube-preamp, tone-stack, fixed-buffer spring-reverb, and static oversampling blocks from optional plugin and convolution code.",
+      "rotation_status": "Returning",
+      "summary": "Biblioteca de DSP para \u00e1udio. C++ Audio DSP library for VST/VST3 plugins, Reaper, Audacity, and OBS Studio. Processamento e edi\u00e7\u00e3o de \u00e1udio em tempo real. ENGINE DE PROGRAMA\u00c7\u00c3O VST3 E \u00c1UDIO.",
+      "evidence": {
+        "source_file_count": 1533,
+        "dsp_file_count": 409,
+        "host_file_count": 1258,
+        "heavy_file_count": 22,
+        "sample_dsp_paths": [
+          "CV_DSP/Effects/Chorus.hpp",
+          "CV_DSP/Effects/Flanger.hpp",
+          "CV_DSP/Effects/Phaser.hpp",
+          "CV_DSP/Filters/AllPassFilter.hpp",
+          "CV_DSP/Filters/Biquad.hpp",
+          "CV_DSP/Filters/DCBlocker.hpp",
+          "CV_DSP/Filters/LadderFilter.hpp",
+          "CV_DSP/Filters/OnePoleFilter.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "Na1w/infinitedsp",
+      "html_url": "https://github.com/Na1w/infinitedsp",
+      "stars": 19,
+      "forks": 2,
+      "last_push": "2026-06-18",
+      "topic": "DSP library",
+      "score": 154,
+      "portability_class": "Refactor",
+      "portability_reason": "The core supports no_std and static dispatch, but it still requires alloc and many delay, reverb, granular and spectral modules own dynamic buffers that must become bounded firmware storage.",
+      "value_reason": "The MIT no_std Rust library combines static DSP chains with predictive ZDF ladder and TPT filters, low-memory delay/reverb variants, tape delay, formant speech, and Karplus-Strong/brass models.",
+      "port_idea": "Build no_std with one static chain, choose the low-memory delay or reverb plus one predictive ZDF or physical-model voice, replace alloc-owned buffers with a fixed arena, and omit OLA, granular, and spectral modules.",
+      "license": "MIT",
+      "note": "New - The MIT no_std Rust library combines static DSP chains with predictive ZDF ladder and TPT filters, low-memory delay/reverb variants, tape delay, formant speech, and Karplus-Strong/brass models.",
+      "rotation_status": "New",
+      "summary": "A modular, high-performance audio DSP library for Rust, designed for real-time synthesis and effects processing",
+      "evidence": {
+        "source_file_count": 98,
+        "dsp_file_count": 48,
+        "host_file_count": 2,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/core/static_dsp_chain.rs",
+          "src/effects/filter/predictive_ladder.rs",
+          "src/effects/time/reverb.rs",
+          "src/synthesis/karplus_strong.rs",
+          "src/synthesis/speech.rs"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "hulkajoshua69/GritEngine",
+      "html_url": "https://github.com/hulkajoshua69/GritEngine",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-09-21",
+      "topic": "Faust effect",
+      "score": 135,
+      "portability_class": "Direct",
+      "portability_reason": "DSP evidence is already visible in portable source paths with little host/UI coupling.",
+      "value_reason": "The single Faust kernel combines prefiltered asymmetric saturation, sine wavefolding, sample-rate decimation, variable bit crushing, tone shaping, and parallel wet/dry control in one compact degradation effect. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "port_idea": "Generate a float C++ kernel, keep the saturation, fold, decimation, and bit-depth controls at control-rate updates, and benchmark the complete mono path before enabling stereo on Cortex-M7.",
+      "license": "NOASSERTION",
+      "note": "New - The single Faust kernel combines prefiltered asymmetric saturation, sine wavefolding, sample-rate decimation, variable bit crushing, tone shaping, and parallel wet/dry control in one compact degradation effect. License metadata is absent, so treat it as reference-only until terms are clarified.",
+      "rotation_status": "New",
+      "summary": "Stereo industrial audio degradation effect in FAUST. Combines pre-filtered asymmetric saturation, sine wavefolding, sample-rate decimation, and variable bit-crushing with tone shaping and parallel wet/dry mix control.",
+      "evidence": {
+        "source_file_count": 1,
+        "dsp_file_count": 1,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "GritEngine.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "Carrieukie/WavetableSynthesizer",
+      "html_url": "https://github.com/Carrieukie/WavetableSynthesizer",
+      "stars": 8,
+      "forks": 1,
+      "last_push": "2024-11-01",
+      "topic": "Wavetable synth",
+      "score": 129,
+      "portability_class": "Refactor",
+      "portability_reason": "Reusable DSP is present, but JUCE, VST, Android, or plugin wrappers need separating before firmware use.",
+      "value_reason": "Its native C++ wavetable factory and oscillator are already separated from the Kotlin UI through a narrow Oboe/JNI audio layer.",
+      "port_idea": "Keep the wavetable factory and oscillator, replace Oboe/JNI with the board callback, and cap table count and resolution to the available SRAM.",
+      "license": "Apache-2.0",
+      "note": "Returning - Its native C++ wavetable factory and oscillator are already separated from the Kotlin UI through a narrow Oboe/JNI audio layer.",
+      "rotation_status": "Returning",
+      "summary": "Wavetable Synthesizer is an Android app created as a journey to overcome my own fears of C++. This project combines Kotlin, Jetpack Compose, and C++ through the Java Native Interface (JNI) to explore real-time audio processing in a mobile environment.",
+      "evidence": {
+        "source_file_count": 13,
+        "dsp_file_count": 12,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "app/src/main/cpp/include/audio/AudioPlayer.h",
+          "app/src/main/cpp/include/audio/AudioSource.h",
+          "app/src/main/cpp/include/audio/OboeAudioPlayer.h",
+          "app/src/main/cpp/include/wavetable/WatableFactory.h",
+          "app/src/main/cpp/include/wavetable/WatableOscillator.h",
+          "app/src/main/cpp/include/wavetable/Wavetable.h",
+          "app/src/main/cpp/include/wavetable/WavetableSynthesizer.h",
+          "app/src/main/cpp/src/audio/OboeAudioPlayer.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "mkaudio-company/libmksim",
+      "html_url": "https://github.com/mkaudio-company/libmksim",
+      "stars": 3,
+      "forks": 0,
+      "last_push": "2026-03-08",
+      "topic": "Nonlinear effects",
+      "score": 116,
+      "portability_class": "Refactor",
+      "portability_reason": "A scalar f32 backend and allocation-free process graph exist, but construction owns Vec-backed pools and the Rust core is not documented as no_std, so a fixed subset and arena are required.",
+      "value_reason": "The MIT Rust core combines WDF passive networks with local Newton-Raphson tube, diode, transistor and op-amp models, a WIDTH=1 scalar backend, preallocated signal buffers, oversampling, and ready-made amp stages.",
+      "port_idea": "Start with ScalarFloat and one diode or triode stage plus its tone stack, replace compile-time Vec-owned pools with a fixed board arena, and defer SIMD dispatch and multi-stage oversampling until measured.",
+      "license": "MIT",
+      "note": "New - The MIT Rust core combines WDF passive networks with local Newton-Raphson tube, diode, transistor and op-amp models, a WIDTH=1 scalar backend, preallocated signal buffers, oversampling, and ready-made amp stages.",
+      "rotation_status": "New",
+      "summary": "Real-time SIMD-optimized analog circuit simulation for audio DSP",
+      "evidence": {
+        "source_file_count": 45,
+        "dsp_file_count": 6,
+        "host_file_count": 1,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/simd/scalar.rs",
+          "src/core/buffer_pool.rs",
+          "src/components/tubes.rs",
+          "src/components/diode.rs",
+          "src/wdf/adaptors.rs",
+          "src/stages/tone_stack.rs"
+        ]
+      }
+    }
+  ]
+}

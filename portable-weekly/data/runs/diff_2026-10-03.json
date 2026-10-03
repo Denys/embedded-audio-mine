@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-03",
+  "added": [
+    "RustAudio/dasp",
+    "Themaister/libfmsynth",
+    "Signalsmith-Audio/dsp",
+    "Chowdhury-DSP/chowdsp_wdf",
+    "PaulBatchelor/sndkit",
+    "Signalsmith-Audio/elliptic-blep",
+    "averagenative/0xSYNTH",
+    "marcecj/faust_mbstereophony"
+  ],
+  "removed": [
+    "Ameobea/web-synth",
+    "cucuwritescode/adac",
+    "odoare/Mechanodd",
+    "clovesrodrigues/AUDIO_DSP",
+    "Na1w/infinitedsp",
+    "hulkajoshua69/GritEngine",
+    "Carrieukie/WavetableSynthesizer",
+    "mkaudio-company/libmksim"
+  ],
+  "changed": [
+    "cycfi/q",
+    "CristianMoresi/DSPark"
+  ]
+}

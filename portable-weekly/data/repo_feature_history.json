@@ -1,7 +1,7 @@
 {
   "cycfi/q": {
-    "feature_count": 11,
-    "last_featured": "2026-09-12",
+    "feature_count": 14,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-18",
       "2026-05-29",
@@ -13,7 +13,10 @@
       "2026-08-22",
       "2026-08-29",
       "2026-09-05",
-      "2026-09-12"
+      "2026-09-12",
+      "2026-09-19",
+      "2026-09-26",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-18": 1,
@@ -26,19 +29,24 @@
       "2026-08-22": 1,
       "2026-08-29": 1,
       "2026-09-05": 1,
-      "2026-09-12": 2
+      "2026-09-12": 2,
+      "2026-09-19": 1,
+      "2026-09-26": 1,
+      "2026-10-03": 1
     }
   },
   "Signalsmith-Audio/dsp": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-18",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-18": 2,
-      "2026-08-29": 4
+      "2026-08-29": 4,
+      "2026-10-03": 4
     }
   },
   "kayrockscreenprinting/ultramaster_kr106": {
@@ -140,15 +148,17 @@
     }
   },
   "averagenative/0xSYNTH": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-18",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-18": 10,
-      "2026-08-29": 8
+      "2026-08-29": 8,
+      "2026-10-03": 9
     }
   },
   "thestk/stk": {
@@ -174,15 +184,17 @@
     }
   },
   "RustAudio/dasp": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-23",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-23": 3,
-      "2026-08-29": 2
+      "2026-08-29": 2,
+      "2026-10-03": 2
     }
   },
   "SamiPerttu/fundsp": {
@@ -220,39 +232,45 @@
     }
   },
   "Chowdhury-DSP/chowdsp_wdf": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-23",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-23": 7,
-      "2026-08-29": 5
+      "2026-08-29": 5,
+      "2026-10-03": 5
     }
   },
   "PaulBatchelor/sndkit": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-23",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-23": 8,
-      "2026-08-29": 6
+      "2026-08-29": 6,
+      "2026-10-03": 6
     }
   },
   "Signalsmith-Audio/elliptic-blep": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-23",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-23": 9,
-      "2026-08-29": 7
+      "2026-08-29": 7,
+      "2026-10-03": 7
     }
   },
   "PaulBatchelor/Soundpipe": {
@@ -312,15 +330,17 @@
     }
   },
   "Themaister/libfmsynth": {
-    "feature_count": 2,
-    "last_featured": "2026-08-29",
+    "feature_count": 3,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-04-25",
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-04-25": 5,
-      "2026-08-29": 3
+      "2026-08-29": 3,
+      "2026-10-03": 3
     }
   },
   "Chowdhury-DSP/ChowMatrix": {
@@ -496,15 +516,19 @@
     }
   },
   "CristianMoresi/DSPark": {
-    "feature_count": 2,
-    "last_featured": "2026-08-22",
+    "feature_count": 4,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
       "2026-05-16",
-      "2026-08-22"
+      "2026-08-22",
+      "2026-09-26",
+      "2026-10-03"
     ],
     "ranks": {
       "2026-05-16": 10,
-      "2026-08-22": 4
+      "2026-08-22": 4,
+      "2026-09-26": 4,
+      "2026-10-03": 8
     }
   },
   "MTG/essentia": {
@@ -540,33 +564,37 @@
     }
   },
   "Ameobea/web-synth": {
-    "feature_count": 4,
-    "last_featured": "2026-08-22",
+    "feature_count": 5,
+    "last_featured": "2026-09-26",
     "appearance_dates": [
       "2026-05-29",
       "2026-07-06",
       "2026-08-08",
-      "2026-08-22"
+      "2026-08-22",
+      "2026-09-26"
     ],
     "ranks": {
       "2026-05-29": 6,
       "2026-07-06": 4,
       "2026-08-08": 2,
-      "2026-08-22": 2
+      "2026-08-22": 2,
+      "2026-09-26": 2
     }
   },
   "jatinchowdhury18/CrossroadsEffects": {
-    "feature_count": 3,
-    "last_featured": "2026-08-08",
+    "feature_count": 4,
+    "last_featured": "2026-09-19",
     "appearance_dates": [
       "2026-05-29",
       "2026-07-06",
-      "2026-08-08"
+      "2026-08-08",
+      "2026-09-19"
     ],
     "ranks": {
       "2026-05-29": 9,
       "2026-07-06": 6,
-      "2026-08-08": 5
+      "2026-08-08": 5,
+      "2026-09-19": 5
     }
   },
   "grahamwhaley/DSPham": {
@@ -630,17 +658,19 @@
     }
   },
   "synthalorian/open-synth": {
-    "feature_count": 3,
-    "last_featured": "2026-08-22",
+    "feature_count": 4,
+    "last_featured": "2026-09-19",
     "appearance_dates": [
       "2026-06-06",
       "2026-07-11",
-      "2026-08-22"
+      "2026-08-22",
+      "2026-09-19"
     ],
     "ranks": {
       "2026-06-06": 9,
       "2026-07-11": 5,
-      "2026-08-22": 5
+      "2026-08-22": 5,
+      "2026-09-19": 6
     }
   },
   "yakunliu-aimusic/Simple_Delay_Plugin": {
@@ -738,15 +768,17 @@
     }
   },
   "Carrieukie/WavetableSynthesizer": {
-    "feature_count": 2,
-    "last_featured": "2026-08-01",
+    "feature_count": 3,
+    "last_featured": "2026-09-26",
     "appearance_dates": [
       "2026-06-13",
-      "2026-08-01"
+      "2026-08-01",
+      "2026-09-26"
     ],
     "ranks": {
       "2026-06-13": 10,
-      "2026-08-01": 10
+      "2026-08-01": 10,
+      "2026-09-26": 9
     }
   },
   "miladjavadi/CrackedGlass": {
@@ -1094,13 +1126,15 @@
     }
   },
   "clovesrodrigues/AUDIO_DSP": {
-    "feature_count": 1,
-    "last_featured": "2026-08-08",
+    "feature_count": 2,
+    "last_featured": "2026-09-26",
     "appearance_dates": [
-      "2026-08-08"
+      "2026-08-08",
+      "2026-09-26"
     ],
     "ranks": {
-      "2026-08-08": 7
+      "2026-08-08": 7,
+      "2026-09-26": 6
     }
   },
   "YSYourSoftware/YourSound": {
@@ -1154,13 +1188,15 @@
     }
   },
   "odoare/Mechanodd": {
-    "feature_count": 1,
-    "last_featured": "2026-08-22",
+    "feature_count": 2,
+    "last_featured": "2026-09-26",
     "appearance_dates": [
-      "2026-08-22"
+      "2026-08-22",
+      "2026-09-26"
     ],
     "ranks": {
-      "2026-08-22": 3
+      "2026-08-22": 3,
+      "2026-09-26": 5
     }
   },
   "zolaski333/EngineLab": {
@@ -1174,13 +1210,15 @@
     }
   },
   "marcecj/faust_mbstereophony": {
-    "feature_count": 1,
-    "last_featured": "2026-08-29",
+    "feature_count": 2,
+    "last_featured": "2026-10-03",
     "appearance_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-10-03"
     ],
     "ranks": {
-      "2026-08-29": 9
+      "2026-08-29": 9,
+      "2026-10-03": 10
     }
   },
   "daleonov/SpringReverb": {
@@ -1262,6 +1300,115 @@
     "ranks": {
       "2026-09-12": 10
     }
+  },
+  "madrona-labs/madronalib": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 2
+    }
+  },
+  "CuteDSP/RSCuteDSP": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 3
+    }
+  },
+  "hasenbanck/resampler": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 4
+    }
+  },
+  "SpotlightKid/adt": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 7
+    }
+  },
+  "tpt-solutions/tpt-dsp": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 8
+    }
+  },
+  "Ion3rik/JonssonicDSP": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 9
+    }
+  },
+  "xikxp1/bs2b": {
+    "feature_count": 1,
+    "last_featured": "2026-09-19",
+    "appearance_dates": [
+      "2026-09-19"
+    ],
+    "ranks": {
+      "2026-09-19": 10
+    }
+  },
+  "cucuwritescode/adac": {
+    "feature_count": 1,
+    "last_featured": "2026-09-26",
+    "appearance_dates": [
+      "2026-09-26"
+    ],
+    "ranks": {
+      "2026-09-26": 3
+    }
+  },
+  "Na1w/infinitedsp": {
+    "feature_count": 1,
+    "last_featured": "2026-09-26",
+    "appearance_dates": [
+      "2026-09-26"
+    ],
+    "ranks": {
+      "2026-09-26": 7
+    }
+  },
+  "hulkajoshua69/GritEngine": {
+    "feature_count": 1,
+    "last_featured": "2026-09-26",
+    "appearance_dates": [
+      "2026-09-26"
+    ],
+    "ranks": {
+      "2026-09-26": 8
+    }
+  },
+  "mkaudio-company/libmksim": {
+    "feature_count": 1,
+    "last_featured": "2026-09-26",
+    "appearance_dates": [
+      "2026-09-26"
+    ],
+    "ranks": {
+      "2026-09-26": 10
+    }
   }
 }
-

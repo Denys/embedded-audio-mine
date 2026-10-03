@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-19",
+  "added": [
+    "madrona-labs/madronalib",
+    "CuteDSP/RSCuteDSP",
+    "hasenbanck/resampler",
+    "jatinchowdhury18/CrossroadsEffects",
+    "synthalorian/open-synth",
+    "SpotlightKid/adt",
+    "tpt-solutions/tpt-dsp",
+    "Ion3rik/JonssonicDSP",
+    "xikxp1/bs2b"
+  ],
+  "removed": [
+    "micknoise/Maximilian",
+    "dimtass/DSP-Cpp-filters",
+    "hamiltonkibbe/FxDSP",
+    "analogcode/606-Inspired-Synth-Drums",
+    "Signalsmith-Audio/hilbert-iir",
+    "libraz/libsonare",
+    "keithhetrick/bellweather-audio-core",
+    "jpcima/fverb",
+    "charCulbert/chardsp"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}
