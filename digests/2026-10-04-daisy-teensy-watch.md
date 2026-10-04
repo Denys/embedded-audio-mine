@@ -55,7 +55,7 @@ Per il Multi-Delay, il valore immediato è estrarre la logica ring/keyframe e il
 
 **Caveat**
 
-- Licenza **AGPL-3.0** per Capicola; SDK Alchemy e libDaisy venduto mantengono MIT.
+- Licenza **AGPL-3.0** per Capicola; SDK Alchemy e libDaisy vendorizzato mantengono la licenza MIT.
 - Le preset pre-release non sono compatibili con v1.0.0.
 - Gli esempi audio pubblicati documentano il motore base, non ancora l’intero firmware Capicola.
 - Build, asset e test sorgente sono stati ispezionati; questa esecuzione non ha flashato il modulo né rifatto le misure audio.
