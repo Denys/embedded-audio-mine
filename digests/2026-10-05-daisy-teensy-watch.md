@@ -9,6 +9,8 @@ Due aggiornamenti indipendenti Teensy superano le verifiche di data, sorgente, p
 
 La qualità ha imposto un digest di due voci. Nessun nuovo progetto Daisy ha superato GSP e Capicola del 2 ottobre; i reply recenti sui forum non sono stati trattati come release. La piccola correzione CD4021 di hvcc è stata verificata ma resta HOLD per anti-repeat e impatto limitato.
 
+M16 era già stato pubblicato nel daily il 2026-06-08 e nel Codex weekly il 2026-09-01; il relativo blocco terminava il 2026-10-01, prima del cutoff corrente. La nuova promozione è quindi fuori dalla finestra di 30 giorni ed è comunque sostenuta da un delta DSP verificato, non da attività generica.
+
 ## 1. MahmoudBasio/DSP-Guitar-MultiFX — PASS
 
 **Evento verificato**
@@ -111,7 +113,7 @@ Per il Multi-Delay, provare il bookkeeping di fase per riallineare LFO o teste m
 - Data run: 2026-10-05 Europe/Zurich; cutoff 30 giorni: 2026-09-05; overlap fresco dal 2026-10-03.
 - Regole/stato: README, AGENTS, digest-rules-v0.3, hidden-gems protocol, common anti-repeat policy, feedback state, source registry, tracker pubblicati/selezionati, indice comune, digest 2026-10-04 e cronologia settimanale pertinente.
 - Exa Search/Fetch: oltre **180 risultati** in query distinte per forum Daisy, forum PJRC, GitHub Daisy, GitHub Teensy, Daisy Field, host alternativi, fondazioni e recheck esatti; connessione riuscita senza autenticazione o rate limit.
-- Classi/domìni: forum specialistici, repository/package registry, pagine tecniche personali, pagine progetto primarie e core documentation; almeno nove domini, con maggioranza non-GitHub nelle corsie di scoperta.
+- Classi/domini: forum specialistici, repository/package registry, pagine tecniche personali, pagine progetto primarie e core documentation; almeno nove domini, con maggioranza non-GitHub nelle corsie di scoperta.
 - Query family: host-specific/forum, artifact/build-led, repository activity/date, lineage/recheck e alternative-host.
 - Pool: oltre 20 candidati plausibili; date finali ricontrollate su commit e pagine primarie. Due batch indipendenti successivi non hanno prodotto un terzo candidato serio.
 - Nuova sorgente registrata: pagina PlatformIO di M16. Nessuna sorgente marcata dead/moved/blocked.
