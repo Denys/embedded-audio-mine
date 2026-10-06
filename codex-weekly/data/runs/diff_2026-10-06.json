@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-06",
+  "added": [
+    "Orastron/brickworks",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "amsynth/amsynth",
+    "estuariolabs/tolhuin-chord",
+    "grame-cncm/faust",
+    "jbschooley/Virtual-FM-1",
+    "lexslo/delazed",
+    "reneweller-coding/Ephemeris",
+    "t-dsp/t-dsp_software"
+  ],
+  "removed": [
+    "JordanAceto/micro-pico",
+    "TimMJN/Polymorph-VCO",
+    "agooddaytowork/dq-dsp-firmware",
+    "ampactor-labs/sonido",
+    "jakubthedeveloper/Samplotron",
+    "joeriben/akroasys",
+    "oikoaudio/oikoaudio",
+    "sneed-and-feed/braun_rb-26",
+    "src3453/3HSPlug"
+  ],
+  "changed": [
+    "reales/retromulator"
+  ]
+}

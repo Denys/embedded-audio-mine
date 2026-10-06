@@ -29,4 +29,4 @@ The WebGPT daily lane should likewise watch this folder, especially `data/repo_f
 
 ## Imported snapshot
 
-The Codex weekly archive is current through `2026-09-30` plus its JSON state. The September 30 discovery snapshot was source-reviewed and supplemented on October 2; the digest and per-entry metadata distinguish those dates. Future imports should keep this layout and update the shared common index after state changes.
+The Codex weekly archive is current through `2026-10-06` with its Markdown and JSON state. The current run completed 21 required and six supplementary SSI queries; all ten ranked entries have pinned source evidence. Builds, flashing and hardware tests remain NOT_RUN. Future imports should keep this layout and refresh the shared common index.

@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-02
+last_updated: 2026-10-06
 
 shared:
   anti_repeat_window_days: 30
@@ -61,25 +61,25 @@ daily:
   note: all candidates are research state only; none are publication evidence until canonical trackers/digests say so
 
 codex_weekly:
-  latest_digest_date: 2026-09-30
-  source_review_completed: 2026-10-02
+  latest_digest_date: 2026-10-06
+  source_review_completed: 2026-10-06
   explicit_questionnaire_answers: {}
   next_run_rule_change:
-    date: 2026-10-02
+    date: 2026-10-06
     stream: codex_weekly
     status: proposed_not_implemented
-    change: add bare SSI searches and pinned implementation citations; exclude control-only editors without audio processing or hardware; match BOM names at token boundaries
-    failure_mode_fixed: UI/control files and bundled wxWidgets bombs paths were mistaken for DSP or hardware; manual supplements also need the shared starred exclusion gate
-    expected_improvement: stronger source evidence and broader IC discovery without promoting known watched projects
-    regression_risk: over-filtering useful controller integration or older schematic references
-    test_case: real populated KiCad and BOM design versus bundled bombs files and a control-only synth editor
-    acceptance_criteria: all six SSI searches complete; real implementation evidence survives; shared starred and canonical repeat checks cover every final selection; no inferred build claims
-    keep_or_remove_decision: test next run before making durable runner or rule changes
+    change: integrate bare SSI queries, pinned file reads, meaningful-repeat checks and token-boundary BOM qualification
+    failure_mode_fixed: panel-only assets, dummy PCB files, control-only editors, copied cores and metadata-only repeats require source-level review
+    expected_improvement: source-grounded rankings without weakening strict rotation or cross-stream checks
+    regression_risk: losing useful incomplete hardware references or distinct integration value
+    test_case: populated circuit source versus dummy PCB; audio renderer versus MIDI editor; substantive phase generator delta versus GUI noexcept change
+    acceptance_criteria: all six SSI families researched; pinned source review for every ranked entry; existing repeat rules retained; no inferred target tests
+    keep_or_remove_decision: validate before changing persistent runner rules
   next_run_search_debt:
-    - verify actual SSI2131 circuit and board assets for FAREKIND-VIRTUAL-ASSETS/VCO-SSI2131
-    - recheck aesuf SSI2130 MIDI integration only after annotation and firmware evidence improves
-    - expand primary SSI2190 circuit sources; zero repository-search matches do not establish global absence
-  note: proposals and research leads only; no user feedback inferred and no daily or analog gates changed
+    - expand SSI2190 mixer and filter-bank circuit leads beyond GitHub repository metadata
+    - recheck aesuf only after circuit annotations and PCB completion
+    - recheck FAREKIND only after circuit sources accompany the panel assets
+  note: current run tested supplemental source review; no explicit feedback inferred and no daily or analog gate changed
 
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
