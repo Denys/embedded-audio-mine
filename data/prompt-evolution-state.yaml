@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-06
+last_updated: 2026-10-12
 
 shared:
   anti_repeat_window_days: 30
@@ -83,6 +83,9 @@ codex_weekly:
 
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
+  latest_digest_date: 2026-10-12
+  source_review_completed: 2026-10-12
+  explicit_questionnaire_answers: {}
   preserve_scope:
     - eurorack_allowed
     - standalone_allowed
@@ -119,6 +122,15 @@ weekly_analog:
     - project: rockola/triton-delay
       status: hold
       blocker: verify upstream forum lineage completed-build evidence BOM calibration and quantitative PT2399 noise bandwidth and modulation behavior
+    - project: gtfields13/PSX011_SSI2100_Demo_Board
+      status: hold
+      blocker: verify an explicit reusable hardware license completed build and measured compressor and expander transfer behavior
+    - project: Randomwaves/Drumboy-Pro
+      status: hold
+      blocker: resolve SGTL5000 lifecycle and add quantitative analog input output noise THD headroom and clock coupling measurements
+    - project: minisystem/SIP-Modules
+      status: hold
+      blocker: establish explicit hardware licensing and identify the exact current source revision for each module
   note: daily standalone gates do not narrow the weekly analog mine
 
 feedback:
@@ -134,3 +146,6 @@ feedback:
     - "weekly analog: find a current licensed analog compressor with build evidence attack release calibration and measured transfer curves; recheck bosco-drg only if licensing appears"
     - "weekly analog: search university pages GitLab self-hosted Git and personal sites for digitally assisted analog VCO VCF calibration and preset routing"
     - "weekly analog: resolve Hands of Svarog J3RK lineage qualify a current headphone driver and verify Keep v4 production source Gerber correspondence"
+    - "weekly analog: add physical_evidence_class beside measurement_class so production assembled bare-PCB breadboard simulation-only and absent evidence cannot collapse into built"
+    - "weekly analog: recheck the SSI2100 demo board only after licensing build proof and compressor expander measurements appear"
+    - "weekly analog: resolve Drumboy Pro SGTL5000 lifecycle and SIP-Modules licence/revision state before reconsideration"
