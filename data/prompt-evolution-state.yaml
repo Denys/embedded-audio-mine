@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-12
+last_updated: 2026-10-17
 
 shared:
   anti_repeat_window_days: 30
@@ -149,3 +149,16 @@ feedback:
     - "weekly analog: add physical_evidence_class beside measurement_class so production assembled bare-PCB breadboard simulation-only and absent evidence cannot collapse into built"
     - "weekly analog: recheck the SSI2100 demo board only after licensing build proof and compressor expander measurements appear"
     - "weekly analog: resolve Drumboy Pro SGTL5000 lifecycle and SIP-Modules licence/revision state before reconsideration"
+
+daisy_teensy_watch:
+  latest_digest_date: 2026-10-17
+  source_review_completed: 2026-10-17
+  last_successful_scan: 2026-10-17
+  explicit_questionnaire_answers: {}
+  next_run_search_debt:
+    - "PZD: no repeat before 2026-11-16 absent verified material release, target, DSP, architecture or measurement delta."
+    - "Wish: recheck new release or verified Patch.Init save/load steps 6-7 and additional load/audio measurements."
+    - "Floret: watch upstream merge/release, Linux and external USB validation, or explicit Daisy Field port."
+    - "PJRC Audio Projects: retry direct category fetch after Exa CRAWL_NOT_FOUND; follow primary threads with source/build evidence."
+    - "RidgeField: hard hold through 2026-11-08 absent material firmware/hardware delta."
+    - "ESP-beatsy: hard hold through 2026-11-11 absent material transport/release/hardware-validation delta."
