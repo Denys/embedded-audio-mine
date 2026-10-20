@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-17
+last_updated: 2026-10-20
 
 shared:
   anti_repeat_window_days: 30
@@ -151,14 +151,15 @@ feedback:
     - "weekly analog: resolve Drumboy Pro SGTL5000 lifecycle and SIP-Modules licence/revision state before reconsideration"
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-10-17
-  source_review_completed: 2026-10-17
-  last_successful_scan: 2026-10-17
+  latest_digest_date: 2026-10-20
+  source_review_completed: 2026-10-20
+  last_successful_scan: 2026-10-20
   explicit_questionnaire_answers: {}
   next_run_search_debt:
-    - "PZD: no repeat before 2026-11-16 absent verified material release, target, DSP, architecture or measurement delta."
-    - "Wish: recheck new release or verified Patch.Init save/load steps 6-7 and additional load/audio measurements."
-    - "Floret: watch upstream merge/release, Linux and external USB validation, or explicit Daisy Field port."
-    - "PJRC Audio Projects: retry direct category fetch after Exa CRAWL_NOT_FOUND; follow primary threads with source/build evidence."
-    - "RidgeField: hard hold through 2026-11-08 absent material firmware/hardware delta."
-    - "ESP-beatsy: hard hold through 2026-11-11 absent material transport/release/hardware-validation delta."
+    - "Squatch-Stack/squatch-dsp: hold until 2026-11-19 absent a material release, target, benchmark or build change; watch for a second Seed3/compiler and any Field adapter."
+    - "WeebLabs/DSPi: hold until 2026-11-19 absent a material release or clock/ring/USB/I2S/S/PDIF change; RP2040/RP2350 reference only."
+    - "a7v7/libDaisy fixes: branch-only commits dated 2026-10-08/13; recheck only for an upstream PR/merge or new hardware reproduction."
+    - "PZD v2.5.0, Wish/Beads v1.0.0 and Floret/UAC2: hard hold until 2026-11-16 absent a verified material delta."
+    - "PJRC Audio Projects: direct category fetch returns the forum index; recover the exact contactless MIDI-keyboard topic URL and verify source/build."
+    - "MicroDexed-touch Codeberg: release page works but direct commit/README fetch is anti-bot; recheck only if the firmware code delta can be verified."
+    - "Keep Daisy Field as the adaptation target; never claim compatibility from the Seed3 MCU alone."
