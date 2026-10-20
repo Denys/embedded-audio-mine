@@ -163,3 +163,6 @@ daisy_teensy_watch:
     - "PJRC Audio Projects: direct category fetch returns the forum index; recover the exact contactless MIDI-keyboard topic URL and verify source/build."
     - "MicroDexed-touch Codeberg: release page works but direct commit/README fetch is anti-bot; recheck only if the firmware code delta can be verified."
     - "Keep Daisy Field as the adaptation target; never claim compatibility from the Seed3 MCU alone."
+  publication_status: pending_pr_blocked
+  pending_branch: watch/daisy-teensy-2026-10-20
+  pending_reason: "PR creation was blocked by OpenAI safety checks; main remains at 8620fa27. Digest and tracker changes exist on the branch; do not repeat Oct17/Oct20 entries without a material delta."
