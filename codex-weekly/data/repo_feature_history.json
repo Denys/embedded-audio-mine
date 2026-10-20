@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-10-06T18:54:30.360458+00:00",
-  "source_digest_count": 30,
+  "generated_at_utc": "2026-10-20T20:50:17.431995+00:00",
+  "source_digest_count": 31,
   "repos": {
     "a3-audio/a3-system": {
       "feature_count": 1,
@@ -783,8 +783,8 @@
       }
     },
     "grame-cncm/faust": {
-      "feature_count": 12,
-      "last_featured": "2026-10-06",
+      "feature_count": 13,
+      "last_featured": "2026-10-20",
       "appearance_dates": [
         "2026-05-12",
         "2026-06-17",
@@ -797,7 +797,8 @@
         "2026-09-08",
         "2026-09-15",
         "2026-09-22",
-        "2026-10-06"
+        "2026-10-06",
+        "2026-10-20"
       ],
       "ranks": {
         "2026-05-12": 3,
@@ -811,7 +812,8 @@
         "2026-09-08": 1,
         "2026-09-15": 1,
         "2026-09-22": 1,
-        "2026-10-06": 1
+        "2026-10-06": 1,
+        "2026-10-20": 1
       }
     },
     "amsynth/amsynth": {
@@ -833,21 +835,23 @@
       }
     },
     "reales/retromulator": {
-      "feature_count": 5,
-      "last_featured": "2026-10-06",
+      "feature_count": 6,
+      "last_featured": "2026-10-20",
       "appearance_dates": [
         "2026-05-12",
         "2026-07-28",
         "2026-09-22",
         "2026-09-30",
-        "2026-10-06"
+        "2026-10-06",
+        "2026-10-20"
       ],
       "ranks": {
         "2026-05-12": 5,
         "2026-07-28": 4,
         "2026-09-22": 6,
         "2026-09-30": 1,
-        "2026-10-06": 4
+        "2026-10-06": 4,
+        "2026-10-20": 2
       }
     },
     "joeriben/T5ynth": {
@@ -1061,15 +1065,17 @@
       }
     },
     "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC": {
-      "feature_count": 2,
-      "last_featured": "2026-07-21",
+      "feature_count": 3,
+      "last_featured": "2026-10-20",
       "appearance_dates": [
         "2026-06-09",
-        "2026-07-21"
+        "2026-07-21",
+        "2026-10-20"
       ],
       "ranks": {
         "2026-06-09": 2,
-        "2026-07-21": 7
+        "2026-07-21": 7,
+        "2026-10-20": 4
       }
     },
     "ManasWolrd/VitalReverb": {
@@ -1561,13 +1567,15 @@
       }
     },
     "palmerr23/control_TLV320AIC3104": {
-      "feature_count": 1,
-      "last_featured": "2026-08-18",
+      "feature_count": 2,
+      "last_featured": "2026-10-20",
       "appearance_dates": [
-        "2026-08-18"
+        "2026-08-18",
+        "2026-10-20"
       ],
       "ranks": {
-        "2026-08-18": 3
+        "2026-08-18": 3,
+        "2026-10-20": 5
       }
     },
     "KN-Hardwire/ReHarmonizer": {
@@ -1701,13 +1709,15 @@
       }
     },
     "bogggare567/abcTrain": {
-      "feature_count": 1,
-      "last_featured": "2026-09-01",
+      "feature_count": 2,
+      "last_featured": "2026-10-20",
       "appearance_dates": [
-        "2026-09-01"
+        "2026-09-01",
+        "2026-10-20"
       ],
       "ranks": {
-        "2026-09-01": 6
+        "2026-09-01": 6,
+        "2026-10-20": 10
       }
     },
     "AnshulJ999/Solace-Synth": {
@@ -1838,6 +1848,56 @@
       ],
       "ranks": {
         "2026-10-06": 10
+      }
+    },
+    "Alxdreee/TYPE-2": {
+      "feature_count": 1,
+      "last_featured": "2026-10-20",
+      "appearance_dates": [
+        "2026-10-20"
+      ],
+      "ranks": {
+        "2026-10-20": 3
+      }
+    },
+    "sigprolabs/RadioSonic-Firmware-Core": {
+      "feature_count": 1,
+      "last_featured": "2026-10-20",
+      "appearance_dates": [
+        "2026-10-20"
+      ],
+      "ranks": {
+        "2026-10-20": 6
+      }
+    },
+    "r0main-f/G2fresh": {
+      "feature_count": 1,
+      "last_featured": "2026-10-20",
+      "appearance_dates": [
+        "2026-10-20"
+      ],
+      "ranks": {
+        "2026-10-20": 7
+      }
+    },
+    "askz/unrack": {
+      "feature_count": 1,
+      "last_featured": "2026-10-20",
+      "appearance_dates": [
+        "2026-10-20"
+      ],
+      "ranks": {
+        "2026-10-20": 8
+      }
+    },
+    "orth4x0r/ilanaSynth": {
+      "feature_count": 1,
+      "last_featured": "2026-10-20",
+      "appearance_dates": [
+        "2026-10-20"
+      ],
+      "ranks": {
+        "2026-10-20": 9
       }
     }
   }

@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-20",
+  "added": [
+    "Alxdreee/TYPE-2",
+    "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+    "askz/unrack",
+    "bogggare567/abcTrain",
+    "orth4x0r/ilanaSynth",
+    "palmerr23/control_TLV320AIC3104",
+    "r0main-f/G2fresh",
+    "sigprolabs/RadioSonic-Firmware-Core"
+  ],
+  "removed": [
+    "Orastron/brickworks",
+    "ZorakAudio/ZorakAudio-Experimental-Plugins",
+    "amsynth/amsynth",
+    "estuariolabs/tolhuin-chord",
+    "jbschooley/Virtual-FM-1",
+    "lexslo/delazed",
+    "reneweller-coding/Ephemeris",
+    "t-dsp/t-dsp_software"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "reales/retromulator"
+  ]
+}
