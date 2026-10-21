@@ -91,6 +91,22 @@ codex_weekly:
       blocker: FDN source copied from recently featured Ephemeris; establish distinct embedded value
   note: 21 required plus six bare SSI searches; pinned source review; no inferred feedback or candidate builds; runner rule proposals remain unimplemented
 
+daisy_teensy_watch:
+  latest_digest_date: 2026-10-21
+  source_review_completed: 2026-10-21
+  last_successful_scan: 2026-10-21
+  overlap_start: 2026-10-17
+  anti_repeat_cutoff: 2026-09-21
+  explicit_questionnaire_answers: {}
+  recheck_queue:
+    - project: Eight4aWish/eurorack_daisy_patch_init
+      status: published_material_repeat
+      blocker: wait until 2026-11-20 unless a FILTERS release asset new target measured real-time correction or other material DSP change appears
+    - project: FrankBoesing/ESP-beatsy-Audio-Library
+      status: hold
+      blocker: oscillator restart API alone is below the repeat threshold after recent transport-backend coverage
+  note: forum activity and index dates remain discovery-only; verify commit release and asset dates on primary pages
+
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
   latest_digest_date: 2026-10-12
