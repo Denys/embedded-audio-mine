@@ -92,19 +92,22 @@ codex_weekly:
   note: 21 required plus six bare SSI searches; pinned source review; no inferred feedback or candidate builds; runner rule proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-10-21
-  source_review_completed: 2026-10-21
-  last_successful_scan: 2026-10-21
-  overlap_start: 2026-10-17
-  anti_repeat_cutoff: 2026-09-21
+  latest_digest_date: 2026-10-22
+  source_review_completed: 2026-10-22
+  last_successful_scan: 2026-10-22
+  overlap_start: 2026-10-20
+  anti_repeat_cutoff: 2026-09-22
   explicit_questionnaire_answers: {}
   recheck_queue:
-    - project: Eight4aWish/eurorack_daisy_patch_init
+    - project: Squatch-Stack/squatch-dsp
       status: published_material_repeat
+      blocker: wait until 2026-11-21 unless a release embedded port new target or further measured architecture change appears
+    - project: Eight4aWish/eurorack_daisy_patch_init
+      status: hold
       blocker: wait until 2026-11-20 unless a FILTERS release asset new target measured real-time correction or other material DSP change appears
     - project: FrankBoesing/ESP-beatsy-Audio-Library
       status: hold
-      blocker: oscillator restart API alone is below the repeat threshold after recent transport-backend coverage
+      blocker: oscillator restart API alone remains below the repeat threshold after recent transport-backend coverage
   note: forum activity and index dates remain discovery-only; verify commit release and asset dates on primary pages
 
 weekly_analog:
