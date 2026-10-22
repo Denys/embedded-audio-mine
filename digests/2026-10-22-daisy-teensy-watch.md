@@ -71,6 +71,23 @@ Come prova su Daisy Field, partire da un harness dedicato con due catene di dela
 - **PJRC Audio Projects** — gli indici mostrano attività, ma non è stata verificata una nuova release/commit/hardware artifact nel periodo; una risposta recente non è prova di firmware nuovo.
 - **Codeberg/GitLab/Hackaday/pagine personali** — nessun evento datato nell'overlap ha superato sorgente, build, licenza e novità materiale.
 
+## Analysed resources
+
+- Daisy Community: Projects & Examples, Software, Latest e i thread Squatch/PZD collegati; reply e activity date trattati solo come discovery.
+- PJRC/Teensy: Audio Projects, indice forum corrente e i lead “New Teensy 4.1 DIY Synthesizer”, voice changer e auto-BPM looper.
+- GitHub primario: Squatch-Stack/squatch-dsp, Eight4aWish/eurorack_daisy_patch_init, FrankBoesing/ESP-beatsy-Audio-Library, PZD, WeebLabs/DSPi, a7v7/floret, a7v7/libDaisy, bkshepherd/DaisySeedProjects, rainybit-code/spore e balazsbencs/daisy-nam-pedal.
+- Per Squatch: commit/diff, README, LICENSE, sorgenti CabSwap/NamAmp/GateStage e quattro workflow del commit finale.
+- Host alternativi: Codeberg, GitLab, SourceHut, Hackaday e pagine personali/progetto emerse dalle community; nessun secondo evento datato ha superato il gate.
+- Stato interno: tracker published/selected/common, source registry, digest Daisy/Teensy recenti e cronologie Codex/portable.
+
+## Tracker updates
+
+- `data/published-repo-log.csv`: aggiunta una sola riga ranked per `Squatch-Stack/squatch-dsp`, `STRONG_PASS`, first seen 2026-10-20, pubblicata 2026-10-22, repeat eligible 2026-11-21.
+- `data/common-anti-repeat-index.csv`: rigenerata la voce hard corrispondente.
+- `data/hidden-gems-source-registry.csv`: aggiunta Squatch; revalidati Daisy Community, PJRC Audio Projects, PZD ed ESP-beatsy al 2026-10-22.
+- `data/prompt-evolution-state.yaml`: avanzato il run, aggiornati recheck queue e search debt.
+- `data/selected-projects.csv`: nessuna modifica; il repeat non è un nuovo anchor eccezionale.
+
 ## Prompt improvement for next run
 
 - Bloccare `Squatch-Stack/squatch-dsp` fino al 2026-11-21 salvo release, port embedded verificato, nuovo target o un ulteriore cambio architetturale misurato.
