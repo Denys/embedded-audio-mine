@@ -25,11 +25,11 @@ Un aggiornamento supera verifica primaria e anti-repeat:
 - [Commit 9e72a90](https://github.com/Squatch-Stack/squatch-dsp/commit/9e72a90259f93a8b2347a0b8e525029d5fcde776), **2026-10-21 11:02 UTC**: `NamAmp` carica e sostituisce modelli NAM live con makeup per voce.
 - [Commit 8cb420b](https://github.com/Squatch-Stack/squatch-dsp/commit/8cb420bee1ae90db0ed64f8cdcb5884d04f4bfc0), **2026-10-21 11:56 UTC**: nuovo `GateStage` con handover anti-click.
 - [README e build/test](https://github.com/Squatch-Stack/squatch-dsp/blob/8cb420bee1ae90db0ed64f8cdcb5884d04f4bfc0/README.md) e [licenza MIT](https://github.com/Squatch-Stack/squatch-dsp/blob/8cb420bee1ae90db0ed64f8cdcb5884d04f4bfc0/LICENSE).
-- Sul commit finale risultano riusciti i workflow Quality e gli altri check pubblicati.
+- Sul commit finale risultano riusciti i quattro workflow pubblicati: Quality, Daisy, CI e Push on main.
 
 ### Cosa è cambiato
 
-- `CabSwap` mantiene due istanze `Cabinet` dietro `ModelSwap`: copia l'IR sul thread di controllo, prepara la voce standby, la riscalda sulla storia del segnale per la lunghezza della risposta e poi effettua il crossfade. `process()` non alloca e non prende lock. Il limite dichiarato è (2^{18}) tap; un cambio con latenza diversa viene rifiutato.
+- `CabSwap` mantiene due istanze `Cabinet` dietro `ModelSwap`: copia l'IR sul thread di controllo, prepara la voce standby, la riscalda sulla storia del segnale per la lunghezza della risposta e poi effettua il crossfade. `process()` non alloca e non prende lock. Il limite dichiarato è 262.144 tap; un cambio con latenza diversa viene rifiutato.
 - Il test dedicato libera il buffer IR del chiamante prima dell'uso e gira con ASan/UBSan, verificando che lo stage possieda davvero i tap.
 - `NamAmp` costruisce il nuovo modello, esegue reset/prewarm e I/O file fuori dal thread audio, poi pubblica la voce standby. Ogni voce conserva il proprio makeup di loudness; controlla sample rate e latenza e inserisce un DC blocker a 5 Hz inizializzato sul bias del modello per evitare il transiente al cambio.
 - `GateStage` mantiene il gate caldo anche quando è bypassato e usa fade asimmetrici documentati: 40 ms all'attivazione e 10 ms alla disattivazione. I test includono un oracle di glitch, negative control con hard switch, equivalenza tra block size 1/7/32/64/128, ParamQueue e sorveglianza allocazioni/lock.
