@@ -108,6 +108,9 @@ daisy_teensy_watch:
     - project: FrankBoesing/ESP-beatsy-Audio-Library
       status: hold
       blocker: oscillator restart API alone remains below the repeat threshold after recent transport-backend coverage
+  next_run_search_debt:
+    - retrieve canonical PJRC thread URLs directly instead of relying on cached forum index titles
+    - run a narrower GitLab and SourceHut embedded-audio pass with exact dated artifact queries
   note: forum activity and index dates remain discovery-only; verify commit release and asset dates on primary pages
 
 weekly_analog:
