@@ -26,7 +26,7 @@ Nessuna risposta esplicita è registrata (`explicit_questionnaire_answers: {}`).
 - Stop condition: tre batch finali indipendenti — PJRC mirato, GitHub datato e host alternativi — non hanno prodotto un secondo candidato qualificante. Search debt: recall debole per URL PJRC esatti e forge GitLab/SourceHut, da rieseguire con query più strette.
 - Date di indicizzazione e reply sono state usate solo come lead. I thread PJRC recenti non hanno fornito un evento firmware/hardware qualificante verificabile; il reply del 21 ottobre al post Squatch del 19 non è stato usato come data di release.
 
-## 1. Squatch DSP: live model/cabinet swap + gate anti-click — STRONG_PASS
+## 1. Squatch-Stack/squatch-dsp — live model and cabinet swap + gate anti-click — STRONG_PASS
 
 ### Evento verificato e delta anti-repeat
 
