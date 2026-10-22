@@ -8,12 +8,22 @@ Un aggiornamento supera verifica primaria e anti-repeat:
 
 È un repeat entro 30 giorni. L'avviso fallback del 2026-10-20 riguardava il nuovo convolver per IR lunghe e i benchmark Daisy Seed3; i tre commit del 21 ottobre aggiungono invece una nuova architettura di cambio runtime e un nuovo stadio DSP, quindi il delta è materiale.
 
+## Previous questionnaire feedback applied
+
+Nessuna risposta esplicita è registrata (`explicit_questionnaire_answers: {}`). Non sono state inferite preferenze dal silenzio; restano invariati soglia di novità, verifica primaria, anti-repeat e rilevanza per DSP/audio firmware.
+
 ## Pre-flight / discovery audit
 
 - Data: 2026-10-22 Europe/Zurich; cutoff anti-repeat: 2026-09-22; overlap dal 2026-10-20 rispetto all'ultimo controllo riuscito del 2026-10-21.
 - Main verificato a `216da030488c2e0f55da18ebe7e6116d54274c6f`; ispezionati README, AGENTS, regole v0.3, protocollo hidden-gems, policy anti-repeat, tracker pubblicati/selezionati/comuni, stato prompt, digest recenti e cronologie Codex/portable pertinenti.
 - Le pubblicazioni fallback recenti sono state trattate come hard evidence anche se non ancora presenti nel log canonico.
-- Exa: 21 query riuscite e un batch di fetch primari, con workstream distinti per Daisy Community, PJRC Audio Projects, GitHub Daisy/Teensy e host alternativi.
+- Profilo: `daily_broad`, ristretto al monitor Daisy/Teensy.
+- Exa Search/Fetch: **21 query riuscite**, fino a **236 slot richiesti**, più un batch di fetch primari; nessun rate limit, errore di connessione o pagina primaria bloccante.
+- Copertura: **7 famiglie di query indipendenti** (Daisy forum, PJRC, GitHub Daisy, GitHub Teensy, firmware adiacente, forge/host alternativi, recheck mirati); almeno **7 domini espliciti**, di cui **6 non-GitHub**.
+- Classi di fonte: categorie e thread forum, repository/commit/release, workflow/check, forge alternative e pagine progetto/personali.
+- Pool di shortlist: **13 entità** (10 repository e 3 thread PJRC) sottoposte a controllo data/artefatto; 1 promossa, 12 in HOLD/escluse.
+- Registry: **1 aggiunta** (Squatch DSP) e **2 revalidazioni** (Daisy Community Projects e PJRC Audio Projects).
+- Stop condition: tre batch finali indipendenti — PJRC mirato, GitHub datato e host alternativi — non hanno prodotto un secondo candidato qualificante. Search debt: recall debole per URL PJRC esatti e forge GitLab/SourceHut, da rieseguire con query più strette.
 - Date di indicizzazione e reply sono state usate solo come lead. I thread PJRC recenti non hanno fornito un evento firmware/hardware qualificante verificabile; il reply del 21 ottobre al post Squatch del 19 non è stato usato come data di release.
 
 ## 1. Squatch DSP: live model/cabinet swap + gate anti-click — STRONG_PASS
@@ -66,3 +76,23 @@ Come prova su Daisy Field, partire da un harness dedicato con due catene di dela
 - Bloccare `Squatch-Stack/squatch-dsp` fino al 2026-11-21 salvo release, port embedded verificato, nuovo target o un ulteriore cambio architetturale misurato.
 - Controllare se CabSwap/NamAmp passano da adapter host a blocchi con storage statico riusabile su MCU.
 - Continuare a distinguere data del forum, data del commit, data della release e presenza effettiva dell'asset firmware.
+- Rafforzare il recupero degli URL canonici PJRC e una corsia separata GitLab/SourceHut senza abbassare il gate degli artefatti primari.
+
+## Interactive Feedback / Tuning Questionnaire
+
+Rispondere, se utile, con codici come `Q1=B Q2=A Q3=C`; ogni scelta modifica il run successivo.
+
+- **Q1 — Direzione:** A continua così; B più verifica profonda; C soglia di novità più alta; D più varietà.  
+  Azioni: A mantiene; B aumenta diff/test; C penalizza repeat; D amplia le famiglie di query.
+- **Q2 — Tipo da favorire:** A firmware Daisy; B firmware Teensy; C hardware/audio-I/O; D librerie DSP portabili.  
+  Azione: boost della corsia scelta.
+- **Q3 — Repeat entro 30 giorni:** A solo release/asset; B anche nuova architettura misurata; C anche nuovi algoritmi sorgente; D vietarli.  
+  Azione: modifica temporanea della soglia anti-repeat senza indebolire la verifica primaria.
+- **Q4 — Evidenza minima:** A sorgente+build+licenza; B aggiungere CI/test; C richiedere misura hardware; D accettare REF_PASS con caveat.  
+  Azione: alza o modula il gate di promozione.
+- **Q5 — Rilevanza Multi-Delay:** A delay/feedback; B preset/UI; C audio-I/O; D scheduling/memoria.  
+  Azione: priorità di ranking e profondità dell'adattamento.
+- **Q6 — Corsia da espandere:** A PJRC forum; B Daisy forum; C GitLab/Codeberg/SourceHut; D pagine personali/Hackaday.  
+  Azione: assegna più query e revalidation alla corsia scelta.
+- **Q7 — Profondità output:** A più conciso; B invariato; C più dettagli su diff/test; D più dettagli hardware.  
+  Azione: regola la densità del digest mantenendo date e caveat obbligatori.
