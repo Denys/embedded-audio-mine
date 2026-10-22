@@ -22,7 +22,7 @@ Nessuna risposta esplicita è registrata (`explicit_questionnaire_answers: {}`).
 - Copertura: **7 famiglie di query indipendenti** (Daisy forum, PJRC, GitHub Daisy, GitHub Teensy, firmware adiacente, forge/host alternativi, recheck mirati); almeno **7 domini espliciti**, di cui **6 non-GitHub**.
 - Classi di fonte: categorie e thread forum, repository/commit/release, workflow/check, forge alternative e pagine progetto/personali.
 - Pool di shortlist: **13 entità** (10 repository e 3 thread PJRC) sottoposte a controllo data/artefatto; 1 promossa, 12 in HOLD/escluse.
-- Registry: **1 aggiunta** (Squatch DSP) e **2 revalidazioni** (Daisy Community Projects e PJRC Audio Projects).
+- Registry: **1 aggiunta** (Squatch DSP) e **4 revalidazioni** (Daisy Community Projects, PJRC Audio Projects, PZD ed ESP-beatsy).
 - Stop condition: tre batch finali indipendenti — PJRC mirato, GitHub datato e host alternativi — non hanno prodotto un secondo candidato qualificante. Search debt: recall debole per URL PJRC esatti e forge GitLab/SourceHut, da rieseguire con query più strette.
 - Date di indicizzazione e reply sono state usate solo come lead. I thread PJRC recenti non hanno fornito un evento firmware/hardware qualificante verificabile; il reply del 21 ottobre al post Squatch del 19 non è stato usato come data di release.
 
