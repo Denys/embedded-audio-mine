@@ -6,7 +6,7 @@ Tre aggiornamenti superano verifica primaria e anti-repeat:
 
 1. **ampactor-labs/sonido — STRONG_PASS** — commit `d46d4c3` del 2026-10-22: misure complete dei 36 kernel su Daisy Seed, budget real-time nel pedale Hothouse e correzioni DSP udibili.
 2. **smartin77/BroTracker — PASS** — commit `64a3898` del 2026-10-21: synth realtime a otto canali su Teensy 4.1, storage fisso, eventi sample-accurate e verifica hardware.
-3. **deemonoise/D-TRK — REF_PASS** — commit `b4f3cf4` del 2026-10-22: otto scene, morph A/B e handoff atomico verso l'audio task; è ESP32-S3, quindi entra solo come architettura adattabile.
+3. **deemonoise/D-TRK — REF_PASS** — commit `b4f3cf4` del 2026-10-22: otto scene, morph A/B e pubblicazione ordinata a due fasi verso l'audio task; è ESP32-S3, quindi entra solo come architettura adattabile.
 
 `sonido` è un repeat entro 30 giorni rispetto alla storia Codex del 2026-09-30. Il delta è materiale: misure M7/Hothouse nuove, protezione del budget della callback, nuova tabella costi completa e correzioni ADAA/parametri che cambiano il comportamento audio e il valore di riuso.
 
@@ -83,7 +83,7 @@ Il pattern utile è il renderer bounded: comandi ordinati con offset nel blocco,
 - Il mix di sample forti e otto voci può saturare: la documentazione non ridefinisce la policy di gain.
 - L'adattamento Field richiede un backend audio separato; nessuna compatibilità Field dichiarata.
 
-## 3. deemonoise/D-TRK — atomic scene morphing for an embedded audio task — REF_PASS
+## 3. deemonoise/D-TRK — fenced two-phase scene publication for an embedded audio task — REF_PASS
 
 ### Evento verificato
 
