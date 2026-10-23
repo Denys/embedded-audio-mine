@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-20
+last_updated: 2026-10-23
 
 shared:
   anti_repeat_window_days: 30
@@ -92,27 +92,48 @@ codex_weekly:
   note: 21 required plus six bare SSI searches; pinned source review; no inferred feedback or candidate builds; runner rule proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-10-22
-  source_review_completed: 2026-10-22
-  last_successful_scan: 2026-10-22
-  overlap_start: 2026-10-20
-  anti_repeat_cutoff: 2026-09-22
+  latest_digest_date: 2026-10-23
+  source_review_completed: 2026-10-23
+  last_successful_scan: 2026-10-23
+  overlap_start: 2026-10-21
+  anti_repeat_cutoff: 2026-09-23
+  last_main_sha: cd20737c6950770c92fedcb5f338ce40d86d4c3a
   explicit_questionnaire_answers: {}
+  selected_this_run:
+    - project: ampactor-labs/sonido
+      lane: STRONG_PASS
+      reason: material_repeat_daisy_measurements_and_budget_guards
+      repeat_block_until: 2026-11-22
+    - project: smartin77/BroTracker
+      lane: PASS
+      reason: teensy_fixed_storage_synth_and_hardware_validation
+      repeat_block_until: 2026-11-22
+    - project: deemonoise/D-TRK
+      lane: REF_PASS
+      reason: atomic_scene_morph_reference
+      repeat_block_until: 2026-11-22
   recheck_queue:
-    - project: Squatch-Stack/squatch-dsp
+    - project: ampactor-labs/sonido
       status: published_material_repeat
+      blocker: wait until 2026-11-22 unless an ARM CI path release asset Field target or new measured DSP architecture delta appears
+    - project: smartin77/BroTracker
+      status: published
+      blocker: wait until 2026-11-22 unless a release binary new instrument backend or completed rapid-retrigger and physical-audio validation appears
+    - project: deemonoise/D-TRK
+      status: published_reference
+      blocker: wait until 2026-11-22 unless hardware callback measurements a new target or a stronger atomic snapshot design appears
+    - project: Squatch-Stack/squatch-dsp
+      status: hold
       blocker: wait until 2026-11-21 unless a release embedded port new target or further measured architecture change appears
     - project: Eight4aWish/eurorack_daisy_patch_init
       status: hold
       blocker: wait until 2026-11-20 unless a FILTERS release asset new target measured real-time correction or other material DSP change appears
-    - project: FrankBoesing/ESP-beatsy-Audio-Library
-      status: hold
-      blocker: oscillator restart API alone remains below the repeat threshold after recent transport-backend coverage
   next_run_search_debt:
     - retrieve canonical PJRC thread URLs directly instead of relying on cached forum index titles
-    - run a narrower GitLab and SourceHut embedded-audio pass with exact dated artifact queries
-  note: forum activity and index dates remain discovery-only; verify commit release and asset dates on primary pages
-
+    - verify whether Sonido adds thumbv7em CI or a firmware release asset after d46d4c3
+    - recheck OpenIFW-fm1 only after hardware root cause or physical audio acceptance is documented
+    - continue narrow GitLab SourceHut and Codeberg dated-artifact searches
+  note: forum activity and index dates remain discovery-only; verify commit release asset build license and hardware evidence on primary pages
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
   latest_digest_date: 2026-10-12
