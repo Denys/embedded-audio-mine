@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-24",
+  "generated_at_utc": "2026-10-24T09:06:17Z",
+  "query_successful_count": 35,
+  "query_count": 35,
+  "shortlist_candidate_count": 13,
+  "unique_nonfork_repo_count": 214,
+  "transport_notes": [
+    "Codeload archive exceeded 64 MiB for cycfi/q",
+    "GitHub API used authenticated token from local environment or gh auth",
+    "GitHub HTTP 404 for https://api.github.com/repos/daleonov/SpringReverb/readme: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-a-repository-readme\",\"status\":\"404\"}",
+    "Source-reviewed carry restored 13 repositories outside updated-first search windows",
+    "curl GitHub message: Not Found"
+  ],
+  "previous_digest_file": "2026-10-10 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1444,
+      "forks": 180,
+      "last_push": "2026-10-22",
+      "topic": "DSP library",
+      "score": 3543,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "MIT",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 394,
+        "dsp_file_count": 148,
+        "host_file_count": 24,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/midi/processor.hpp",
+          "q_lib/include/q/midi/ump_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "madrona-labs/madronalib",
+      "html_url": "https://github.com/madrona-labs/madronalib",
+      "stars": 335,
+      "forks": 25,
+      "last_push": "2026-10-17",
+      "topic": "DSP library",
+      "score": 895,
+      "portability_class": "Stretch",
+      "portability_reason": "The header-only DSP layer is cleanly separated, but its four-lane math backend selects SSE4.1 or NEON with no Cortex-M7 scalar fallback and many processors own dynamic vectors.",
+      "value_reason": "Madronalib's mature MIT source/DSP layer combines vectorized filters, delays, generators, routing, resampling and approximation math behind one header-only include, separately from its RtAudio and VST examples.",
+      "port_idea": "Implement a four-lane scalar float backend for MLDSPMathSIMD, then extract one filter-plus-delay chain with fixed buffers; leave matrix, networking, dynamic graph and FFT support out of the first Cortex-M7 build.",
+      "license": "MIT",
+      "note": "Returning - Madronalib's mature MIT source/DSP layer combines vectorized filters, delays, generators, routing, resampling and approximation math behind one header-only include, separately from its RtAudio and VST examples.",
+      "rotation_status": "Returning",
+      "summary": "Madronalib: a C++ framework for DSP applications.",
+      "evidence": {
+        "source_file_count": 131,
+        "dsp_file_count": 62,
+        "host_file_count": 15,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "source/DSP/MLDSPFilters.h",
+          "source/DSP/MLDSPDelays.h",
+          "source/DSP/MLDSPResampling.h",
+          "source/DSP/MLDSPGens.h"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "Signalsmith-Audio/dsp",
+      "html_url": "https://github.com/Signalsmith-Audio/dsp",
+      "stars": 278,
+      "forks": 31,
+      "last_push": "2026-10-20",
+      "topic": "DSP library",
+      "score": 799,
+      "portability_class": "Refactor",
+      "portability_reason": "The C++11 headers are host-independent, but delay and spectral classes own dynamic storage at setup; firmware should select small modules and replace those buffers with bounded caller-owned memory.",
+      "value_reason": "The MIT C++11 headers combine fractional/multi-tap delay, cubic curves, envelope utilities, multirate helpers, FFT/STFT and spectral-processing primitives behind small independent includes.",
+      "port_idea": "Start with delay.h plus envelopes.h, provide caller-owned fixed storage for the delay, and defer FFT/spectral modules until SRAM and cycle budgets are measured.",
+      "license": "MIT",
+      "note": "Returning - The MIT C++11 headers combine fractional/multi-tap delay, cubic curves, envelope utilities, multirate helpers, FFT/STFT and spectral-processing primitives behind small independent includes.",
+      "rotation_status": "Returning",
+      "summary": "GitHub mirror of Signalsmith Audio's C++ DSP support library",
+      "evidence": {
+        "source_file_count": 21,
+        "dsp_file_count": 13,
+        "host_file_count": 0,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "curves.h",
+          "include/signalsmith-dsp/curves.h",
+          "delay.h",
+          "include/signalsmith-dsp/delay.h",
+          "envelopes.h",
+          "include/signalsmith-dsp/envelopes.h",
+          "filters.h",
+          "include/signalsmith-dsp/filters.h"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "hasenbanck/resampler",
+      "html_url": "https://github.com/hasenbanck/resampler",
+      "stars": 33,
+      "forks": 3,
+      "last_push": "2026-10-10",
+      "topic": "DSP library",
+      "score": 190,
+      "portability_class": "Refactor",
+      "portability_reason": "The crate has no_std, scalar and NEON implementations and preallocated processing buffers, but it still requires alloc/Vec/Arc and its NEON kernel targets AArch64 rather than Cortex-M7.",
+      "value_reason": "The dual-licensed Rust crate provides both a 16-64 sample-latency polyphase FIR and a mixed-radix FFT resampler, with f32 scalar and ARM NEON kernels plus explicit no_std support.",
+      "port_idea": "Start with the FIR path and scalar convolution, prebuild its 32-128 tap tables off the audio callback, replace alloc-owned buffers with a board arena, and benchmark the existing AArch64 NEON kernel only as an algorithm reference.",
+      "license": "MIT OR Apache-2.0",
+      "note": "Returning - The dual-licensed Rust crate provides both a 16-64 sample-latency polyphase FIR and a mixed-radix FFT resampler, with f32 scalar and ARM NEON kernels plus explicit no_std support.",
+      "rotation_status": "Returning",
+      "summary": "Resampler optimized for audio",
+      "evidence": {
+        "source_file_count": 60,
+        "dsp_file_count": 0,
+        "host_file_count": 1,
+        "heavy_file_count": 48,
+        "sample_dsp_paths": [
+          "src/resampler_fir.rs",
+          "src/fir/neon.rs",
+          "src/window.rs"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "CuteDSP/RSCuteDSP",
+      "html_url": "https://github.com/CuteDSP/RSCuteDSP",
+      "stars": 26,
+      "forks": 6,
+      "last_push": "2026-06-17",
+      "topic": "DSP library",
+      "score": 180,
+      "portability_class": "Refactor",
+      "portability_reason": "Useful scalar modules are host-independent, but the advertised no_std build retains unconditional std references and most delay, spectral and spatial processors depend on alloc-backed Vec storage.",
+      "value_reason": "The MIT Rust port exposes Signalsmith-derived delays, filters, FFT/STFT, convolution, time stretching, phase rotation and room-spacing blocks in one library with generic f32-capable APIs.",
+      "port_idea": "Extract the delay and biquad modules first, replace Vec storage with fixed-capacity buffers, repair unconditional std constants/imports in the advertised no_std build, and defer STFT, convolution and time stretching until memory profiling passes.",
+      "license": "MIT",
+      "note": "Returning - The MIT Rust port exposes Signalsmith-derived delays, filters, FFT/STFT, convolution, time stretching, phase rotation and room-spacing blocks in one library with generic f32-capable APIs.",
+      "rotation_status": "Returning",
+      "summary": "A Rust library for audio and signal processing",
+      "evidence": {
+        "source_file_count": 42,
+        "dsp_file_count": 8,
+        "host_file_count": 1,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "src/delay.rs",
+          "src/filters.rs",
+          "src/stretch.rs",
+          "src/convolver.rs",
+          "src/spacing.rs"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "CristianMoresi/DSPark",
+      "html_url": "https://github.com/CristianMoresi/DSPark",
+      "stars": 19,
+      "forks": 1,
+      "last_push": "2026-10-13",
+      "topic": "DSP library",
+      "score": 171,
+      "portability_class": "Refactor",
+      "portability_reason": "Individual header models keep allocation in prepare(), but C++20, dynamic setup storage, calibration work, and optional heavyweight processors require a deliberately small firmware subset.",
+      "value_reason": "The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "port_idea": "Port one TransformerModel or TubePreamp block, preallocate its channel state, start at 1x oversampling, and leave convolution, phase-vocoder, and 64-grain processors out of the firmware build.",
+      "license": "MIT",
+      "note": "Re-entry: updated - The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "Header-only C++20 audio DSP for real-time and offline processing. Filters, effects, analog circuit models, automatic dynamics, stereo tools, analysis and EBU R128 metering. Dependency-free DSP core with optional VST3, CLAP and Audio Unit adapters.",
+      "evidence": {
+        "source_file_count": 301,
+        "dsp_file_count": 73,
+        "host_file_count": 91,
+        "heavy_file_count": 3,
+        "sample_dsp_paths": [
+          "Effects/TapeMachine.h",
+          "Effects/TubePreamp.h",
+          "Effects/TransformerModel.h",
+          "Core/AudioBuffer.h"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "SpotlightKid/adt",
+      "html_url": "https://github.com/SpotlightKid/adt",
+      "stars": 21,
+      "forks": 1,
+      "last_push": "2024-12-28",
+      "topic": "Faust effect",
+      "score": 155,
+      "portability_class": "Stretch",
+      "portability_reason": "Faust separates the DSP cleanly, but the generated four-voice pitch/delay engine reserves about 2.25 MiB of float delay storage, exceeding internal Daisy Seed and Teensy 4.x memory.",
+      "value_reason": "The MIT Faust kernel creates four-voice automatic double tracking from independent delay, pitch and pan spreads plus wet filtering, with generated standalone C++ separated from its DPF plugin wrapper.",
+      "port_idea": "Regenerate a two-voice float kernel with much smaller pitch/delay maxima and fixed controls; the checked-in four-voice C++ reserves 589,824 floats (about 2.25 MiB) before other state, so it cannot use internal Daisy/Teensy RAM unchanged.",
+      "license": "MIT",
+      "note": "Returning - The MIT Faust kernel creates four-voice automatic double tracking from independent delay, pitch and pan spreads plus wet filtering, with generated standalone C++ separated from its DPF plugin wrapper.",
+      "rotation_status": "Returning",
+      "summary": "Automatic double tracking plugin (not only) for vocals",
+      "evidence": {
+        "source_file_count": 8,
+        "dsp_file_count": 3,
+        "host_file_count": 8,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "faust/adt.dsp",
+          "plugins/adt/ADT.cpp"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "tpt-solutions/tpt-dsp",
+      "html_url": "https://github.com/tpt-solutions/tpt-dsp",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-10-20",
+      "topic": "DSP library",
+      "score": 150,
+      "portability_class": "Refactor",
+      "portability_reason": "tpt-dsp-core genuinely builds no_std with a stable scalar fallback, but the synth/effect crate still relies on std, Vec and Box, so only core primitives are direct and musical blocks need fixed-storage rewrites.",
+      "value_reason": "The dual-licensed Rust core provides no_std scalar filters, FFT/DCT/Hilbert, ring buffers and caller-buffer processing, while the adjacent audio crate supplies concrete FM, wavetable, subtractive, waveshaper, delay and EQ references.",
+      "port_idea": "Start with tpt-dsp-core --no-default-features and its scalar backend on thumbv7em; port one oscillator or waveshaper from tpt-dsp-audio to fixed arrays instead of bringing over its Vec/Box graph and convolution reverb.",
+      "license": "MIT OR Apache-2.0",
+      "note": "Returning - The dual-licensed Rust core provides no_std scalar filters, FFT/DCT/Hilbert, ring buffers and caller-buffer processing, while the adjacent audio crate supplies concrete FM, wavetable, subtractive, waveshaper, delay and EQ references.",
+      "rotation_status": "Returning",
+      "summary": "Pure-Rust, real-time-safe DSP framework \u2014 zero-allocation audio/RF/control processing for desktop, WebAssembly, and no_std embedded targets. Dual-licensed MIT/Apache-2.0.",
+      "evidence": {
+        "source_file_count": 87,
+        "dsp_file_count": 87,
+        "host_file_count": 22,
+        "heavy_file_count": 2,
+        "sample_dsp_paths": [
+          "tpt-dsp-core/src/filters.rs",
+          "tpt-dsp-core/src/ring.rs",
+          "tpt-dsp-core/src/simd_scalar.rs",
+          "tpt-dsp-audio/src/oscillator.rs",
+          "tpt-dsp-audio/src/waveshaper.rs"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "Ion3rik/JonssonicDSP",
+      "html_url": "https://github.com/Ion3rik/JonssonicDSP",
+      "stars": 11,
+      "forks": 0,
+      "last_push": "2026-03-06",
+      "topic": "DSP library",
+      "score": 132,
+      "portability_class": "Refactor",
+      "portability_reason": "Processing is scalar and host-independent, but channels, delay lines, oversamplers, matrices and some pointer helpers use dynamic vectors that must become bounded firmware storage.",
+      "value_reason": "JonssonicDSP's MIT header set exposes scalar TPT/SVF filters, waveshaping, oversampling, modulated delays and a configurable feedback-delay-network reverb with readable per-sample APIs.",
+      "port_idea": "Freeze one mono or stereo SVF-plus-FDN configuration, replace prepare-time std::vector storage and pointer-vector helpers with fixed arrays, and omit the FFT utility layer.",
+      "license": "MIT",
+      "note": "Returning - JonssonicDSP's MIT header set exposes scalar TPT/SVF filters, waveshaping, oversampling, modulated delays and a configurable feedback-delay-network reverb with readable per-sample APIs.",
+      "rotation_status": "Returning",
+      "summary": "A Modular Realtime C++ Audio DSP Library.",
+      "evidence": {
+        "source_file_count": 102,
+        "dsp_file_count": 70,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/jonssonic/models/reverb/feedback_delay_network.h",
+          "include/jonssonic/core/oversampling/oversampler.h",
+          "include/jonssonic/core/nonlinear/wave_shaper.h",
+          "include/jonssonic/core/filters/state_variable_filter.h"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "khenderson20/sonic-forge-dsp",
+      "html_url": "https://github.com/khenderson20/sonic-forge-dsp",
+      "stars": 1,
+      "forks": 0,
+      "last_push": "2026-05-10",
+      "topic": "DSP library",
+      "score": 112,
+      "portability_class": "Direct",
+      "portability_reason": "Oscillator, ZDF filter, waveshaper and smoother have fixed processing state and zero runtime dependencies; only the vector-owned DelayLine needs caller-provided storage or omission.",
+      "value_reason": "The MIT C++17 modules provide PolyBLEP oscillators, a Cytomic/Zavalishin ZDF state-variable filter, third-order Lagrange fractional delay, a Buchla-style wavefolder, smoothing, and 61 host tests without runtime dependencies.",
+      "port_idea": "Port the oscillator, SVF, waveshaper, and smoother directly; give DelayLine a caller-owned fixed buffer before enabling it, and map atomic parameter setters to control-rate updates.",
+      "license": "MIT",
+      "note": "Returning - The MIT C++17 modules provide PolyBLEP oscillators, a Cytomic/Zavalishin ZDF state-variable filter, third-order Lagrange fractional delay, a Buchla-style wavefolder, smoothing, and 61 host tests without runtime dependencies.",
+      "rotation_status": "Returning",
+      "summary": "A high-performance, real-time C++ Digital Signal Processing (DSP) library designed for modular synthesis and low-latency audio applications.",
+      "evidence": {
+        "source_file_count": 13,
+        "dsp_file_count": 8,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/sonicforge/oscillator.hpp",
+          "include/sonicforge/state_variable_filter.hpp",
+          "include/sonicforge/delayline.hpp",
+          "include/sonicforge/waveshaper.hpp"
+        ]
+      }
+    }
+  ]
+}

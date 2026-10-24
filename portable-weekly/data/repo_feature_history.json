@@ -1,7 +1,7 @@
 {
   "cycfi/q": {
-    "feature_count": 15,
-    "last_featured": "2026-10-10",
+    "feature_count": 16,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
       "2026-04-18",
       "2026-05-29",
@@ -17,7 +17,8 @@
       "2026-09-19",
       "2026-09-26",
       "2026-10-03",
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-24"
     ],
     "ranks": {
       "2026-04-18": 1,
@@ -34,21 +35,24 @@
       "2026-09-19": 1,
       "2026-09-26": 1,
       "2026-10-03": 1,
-      "2026-10-10": 1
+      "2026-10-10": 1,
+      "2026-10-24": 1
     }
   },
   "Signalsmith-Audio/dsp": {
-    "feature_count": 3,
-    "last_featured": "2026-10-03",
+    "feature_count": 4,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
       "2026-04-18",
       "2026-08-29",
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-24"
     ],
     "ranks": {
       "2026-04-18": 2,
       "2026-08-29": 4,
-      "2026-10-03": 4
+      "2026-10-03": 4,
+      "2026-10-24": 3
     }
   },
   "kayrockscreenprinting/ultramaster_kr106": {
@@ -532,21 +536,23 @@
     }
   },
   "CristianMoresi/DSPark": {
-    "feature_count": 5,
-    "last_featured": "2026-10-10",
+    "feature_count": 6,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
       "2026-05-16",
       "2026-08-22",
       "2026-09-26",
       "2026-10-03",
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-24"
     ],
     "ranks": {
       "2026-05-16": 10,
       "2026-08-22": 4,
       "2026-09-26": 4,
       "2026-10-03": 8,
-      "2026-10-10": 9
+      "2026-10-10": 9,
+      "2026-10-24": 6
     }
   },
   "MTG/essentia": {
@@ -1002,13 +1008,15 @@
     }
   },
   "khenderson20/sonic-forge-dsp": {
-    "feature_count": 1,
-    "last_featured": "2026-07-11",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-07-11"
+      "2026-07-11",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-07-11": 9
+      "2026-07-11": 9,
+      "2026-10-24": 10
     }
   },
   "nicole-alassandro/faust-tone-matrix": {
@@ -1322,63 +1330,75 @@
     }
   },
   "madrona-labs/madronalib": {
-    "feature_count": 1,
-    "last_featured": "2026-09-19",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-09-19"
+      "2026-09-19",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-09-19": 2
+      "2026-09-19": 2,
+      "2026-10-24": 2
     }
   },
   "CuteDSP/RSCuteDSP": {
-    "feature_count": 1,
-    "last_featured": "2026-09-19",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-09-19"
+      "2026-09-19",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-09-19": 3
+      "2026-09-19": 3,
+      "2026-10-24": 5
     }
   },
   "hasenbanck/resampler": {
-    "feature_count": 1,
-    "last_featured": "2026-09-19",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-09-19"
+      "2026-09-19",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-09-19": 4
+      "2026-09-19": 4,
+      "2026-10-24": 4
     }
   },
   "SpotlightKid/adt": {
-    "feature_count": 1,
-    "last_featured": "2026-09-19",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-09-19"
+      "2026-09-19",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-09-19": 7
+      "2026-09-19": 7,
+      "2026-10-24": 7
     }
   },
   "tpt-solutions/tpt-dsp": {
-    "feature_count": 1,
-    "last_featured": "2026-09-19",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-09-19"
+      "2026-09-19",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-09-19": 8
+      "2026-09-19": 8,
+      "2026-10-24": 8
     }
   },
   "Ion3rik/JonssonicDSP": {
-    "feature_count": 1,
-    "last_featured": "2026-09-19",
+    "feature_count": 2,
+    "last_featured": "2026-10-24",
     "appearance_dates": [
-      "2026-09-19"
+      "2026-09-19",
+      "2026-10-24"
     ],
     "ranks": {
-      "2026-09-19": 9
+      "2026-09-19": 9,
+      "2026-10-24": 9
     }
   },
   "xikxp1/bs2b": {
