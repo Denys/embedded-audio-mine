@@ -18,11 +18,11 @@ Nessuna risposta esplicita è registrata (`explicit_questionnaire_answers: {}`).
 
 - Data Europe/Zurich: **2026-10-23**; cutoff 30 giorni: **2026-09-23**; overlap dal **2026-10-21** rispetto all'ultimo scan riuscito del 2026-10-22.
 - La PR #30 del run precedente è stata revisionata senza rilievi, mergiata e verificata su `main` al commit `cd20737c6950770c92fedcb5f338ce40d86d4c3a`.
-- Ispezionati README, AGENTS, regole v0.3, protocollo hidden-gems, policy anti-repeat, publication/selected/common trackers, source registry, stato prompt, digest del 22 ottobre e storia Codex pertinente.
+- Ispezionati README, AGENTS, regole v0.3, protocollo hidden-gems, policy anti-repeat, publication/selected/common trackers, source registry, stato prompt, digest del 22 ottobre, storia Codex pertinente e stato portable-weekly canonico (`repo_feature_history.json`, `run_state.json`, `latest_results.json`, digest del 2026-10-10). Sonido vi risulta pubblicato l'ultima volta il 2026-06-06; BroTracker e D-TRK non compaiono.
 - Profilo `daily_broad`: **20 query Exa** su 6 famiglie indipendenti, fino a **194 slot** più un batch di 9 fetch primari. Nessun errore di connessione o rate limit.
 - Corsie distinte: Daisy Community, PJRC Audio Projects, GitHub Daisy, GitHub Teensy, recheck mirati, GitLab/Codeberg/SourceHut/Hackaday.
 - Classi di fonte: forum/category, repository, commit/diff, build config, test, licenza, check-run e documentazione hardware.
-- Shortlist approfondita: Sonido, BroTracker, D-TRK, OpenIFW-fm1, daisy-rs, DaisySeedProjects e MicroDexed-touch; tre promossi.
+- Pool plausibile ispezionato: **12 candidati** — Sonido, BroTracker, D-TRK, OpenIFW-fm1, daisy-rs, DaisySeedProjects, MicroDexed-touch, Daisypatcher, Squatch DSP, ESP-beatsy, PZD Daisy Pod Looper e Wish/Mirth; tre promossi. I nove esclusi non superano insieme data evento, anti-repeat e delta materiale.
 - Date di reply/indice forum usate solo come discovery. Gli eventi pubblicati derivano da commit primari datati.
 - Stop condition: i pass mirati Daisy forum, PJRC, GitHub Teensy e forge alternative non hanno prodotto altri candidati con data, licenza, build e delta materiale verificabili.
 
