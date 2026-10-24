@@ -110,7 +110,7 @@ daisy_teensy_watch:
       repeat_block_until: 2026-11-22
     - project: deemonoise/D-TRK
       lane: REF_PASS
-      reason: atomic_scene_morph_reference
+      reason: fenced_two_phase_scene_morph_reference
       repeat_block_until: 2026-11-22
   recheck_queue:
     - project: ampactor-labs/sonido
@@ -123,11 +123,14 @@ daisy_teensy_watch:
       status: published_reference
       blocker: wait until 2026-11-22 unless hardware callback measurements a new target or a stronger atomic snapshot design appears
     - project: Squatch-Stack/squatch-dsp
-      status: hold
+      status: published_material_repeat
       blocker: wait until 2026-11-21 unless a release embedded port new target or further measured architecture change appears
     - project: Eight4aWish/eurorack_daisy_patch_init
       status: hold
       blocker: wait until 2026-11-20 unless a FILTERS release asset new target measured real-time correction or other material DSP change appears
+    - project: FrankBoesing/ESP-beatsy-Audio-Library
+      status: hold
+      blocker: oscillator restart API alone remains below the repeat threshold after recent transport-backend coverage
   next_run_search_debt:
     - retrieve canonical PJRC thread URLs directly instead of relying on cached forum index titles
     - verify whether Sonido adds thumbv7em CI or a firmware release asset after d46d4c3
