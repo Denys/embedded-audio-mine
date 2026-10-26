@@ -141,8 +141,9 @@ daisy_teensy_watch:
 
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
-  latest_digest_date: 2026-10-12
-  source_review_completed: 2026-10-12
+  latest_digest_date: 2026-10-26
+  source_review_completed: 2026-10-26
+  last_successful_scan: 2026-10-26
   explicit_questionnaire_answers: {}
   preserve_scope:
     - eurorack_allowed
@@ -150,6 +151,27 @@ weekly_analog:
     - reusable_subassemblies_allowed
     - manufacturer_reference_designs_allowed_as_foundation_updates
   recheck_queue:
+    - project: dmsd-lab/AMP8611
+      status: published_material_revision
+      blocker: wait until 2026-11-25 unless a complete v2.x build protection and fault test or analyzer-grade THD+N IMD noise crosstalk or thermal result appears
+    - project: rsholmes/ringer
+      status: published
+      blocker: wait until 2026-11-25 unless a material hardware revision or quantitative carrier-rejection feedthrough noise gain or drift measurement appears
+    - project: rsholmes/audiomixer
+      status: published
+      blocker: wait until 2026-11-25 unless a material hardware revision or quantitative noise headroom clipping crosstalk response or load-stability measurement appears
+    - project: heolfief/minimood
+      status: published_reference
+      blocker: wait until 2026-11-25 unless a completed build native fabrication release calibration procedure or integrated audio measurement appears
+    - project: afhinestrosa/ewi-analog-synth
+      status: hold
+      blocker: wait for assembled-build calibration and quantitative audio or control evidence
+    - project: rsholmes/pmf
+      status: hold
+      blocker: resolve current-revision build evidence and upstream Electric Druid circuit-rights scope
+    - project: rsholmes/arpenvfol
+      status: hold
+      blocker: resolve reuse permissions across the cited ARP CGS and preamp sources
     - project: hankdraco/sidapticus
       status: ref_pass
       blocker: wait for a released PCB layout and fabrication package; verify 6581 direct drive and full audio thermal and fault measurements
@@ -190,6 +212,12 @@ weekly_analog:
       status: hold
       blocker: establish explicit hardware licensing and identify the exact current source revision for each module
   note: daily standalone gates do not narrow the weekly analog mine
+  next_run_rule_change:
+    date: 2026-10-26
+    stream: weekly_analog
+    status: proposed_not_implemented
+    change: add licence_scope_class with hardware_specific whole_project_generic platform_only and absent values beside physical and measurement evidence classes
+    regression_test: retain useful whole-project GPL or MIT reference designs as REF_PASS while keeping derivative circuits with unresolved upstream rights on HOLD
 
 feedback:
   last_answers: {}
@@ -207,3 +235,6 @@ feedback:
     - "weekly analog: add physical_evidence_class beside measurement_class so production assembled bare-PCB breadboard simulation-only and absent evidence cannot collapse into built"
     - "weekly analog: recheck the SSI2100 demo board only after licensing build proof and compressor expander measurements appear"
     - "weekly analog: resolve Drumboy Pro SGTL5000 lifecycle and SIP-Modules licence/revision state before reconsideration"
+    - "weekly analog: recheck AMP8611 only after a full v2.x build protection and fault tests or analyzer-grade noise THD+N IMD crosstalk and thermal evidence"
+    - "weekly analog: resolve rsholmes PMF and ARP envelope-follower upstream circuit rights before promotion"
+    - "weekly analog: find current open hardware using digitally measured or DAC-trimmed analog VCO or VCF calibration with temperature and tracking data"
