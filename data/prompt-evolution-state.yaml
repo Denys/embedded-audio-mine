@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-23
+last_updated: 2026-10-26
 
 shared:
   anti_repeat_window_days: 30
@@ -92,26 +92,22 @@ codex_weekly:
   note: 21 required plus six bare SSI searches; pinned source review; no inferred feedback or candidate builds; runner rule proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-10-25
-  source_review_completed: 2026-10-25
-  last_successful_scan: 2026-10-25
-  overlap_start: 2026-10-22
-  anti_repeat_cutoff: 2026-09-25
-  last_main_sha: 692867b7b0b49e45e6b657957d1d9ecd75c42f4b
+  latest_digest_date: 2026-10-26
+  source_review_completed: 2026-10-26
+  last_successful_scan: 2026-10-26
+  overlap_start: 2026-10-23
+  anti_repeat_cutoff: 2026-09-26
+  last_main_sha: 85f23b6bd9cc84d2b3e19e1850b69f76006919f0
   explicit_questionnaire_answers: {}
   selected_this_run:
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       lane: STRONG_PASS
-      reason: material_repeat_v3_multitimbral_sampler_ensemble
-      repeat_block_until: 2026-11-24
-    - project: nzimas/bigorna
-      lane: REF_PASS
-      reason: new_adjacent_pattern_loop_dsp_architecture
-      repeat_block_until: 2026-11-24
+      reason: material_repeat_shared_stereo_delay_and_global_tpt_svf
+      repeat_block_until: 2026-11-25
   recheck_queue:
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       status: published_material_repeat
-      blocker: wait until 2026-11-24 unless a Field target new engine new release or independently useful measured architecture delta appears
+      blocker: wait until 2026-11-25 unless a Field target new engine independent measurement or other release-level architecture delta appears
     - project: nzimas/bigorna
       status: published_reference
       blocker: wait until 2026-11-24 unless a tagged release new DSP engine or stronger hardware timing measurement appears
@@ -138,10 +134,11 @@ daisy_teensy_watch:
       blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
   next_run_search_debt:
     - resolve the canonical PJRC UAC2 thread URL and require a linked repository or reproducible source
-    - recheck PZD only after a post-v3.0.0 material target engine measurement or release
+    - recheck PZD only after a post-v3.3.0 Field target engine independent measurement or release-level architecture delta
     - recheck Bigorna only after a tagged release new engine or timing measurement
     - continue narrow GitLab SourceHut Codeberg and personal-site dated-artifact searches
   note: forum and index activity remain discovery-only; verify event dates release assets source build license and hardware evidence on primary pages
+
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
   latest_digest_date: 2026-10-12
