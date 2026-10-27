@@ -4,6 +4,10 @@
 
 1. **Peteranthony1st/PZD-Daisy-Pod-Groovebox v3.4.0 + v3.4.1 — STRONG_PASS** — repeat materiale a un giorno da v3.3.0: il mix/output path cambia davvero e la patch successiva corregge una regressione di stato UI capace di alterare i preset.
 
+## Previous questionnaire feedback applied
+
+Nessuna risposta esplicita registrata. Il silenzio non modifica le preferenze: restano invariati verifica primaria, anti-repeat, priorità alla community e valore riusabile per DSP/audio firmware.
+
 ## Finestra e metodo
 
 - Data Europe/Zurich: **2026-10-27**; cutoff anti-repeat 30 giorni: **2026-09-27**; overlap: **2026-10-24–2026-10-27**, dall'ultimo scan riuscito del 2026-10-26.
@@ -68,3 +72,29 @@ Il cambio di pan rende i progetti esistenti circa 3 dB più forti al centro; ser
 - [Compare v3.4.0…v3.4.1](https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/compare/v3.4.0...v3.4.1)
 - [Sorgente pan law](https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/blob/v3.4.1/src/pan_law.h)
 - [Thread Daisy](https://community.daisy.audio/t/pzd-daisy-pod-4-track-looper/9677)
+
+## Prompt improvement for next run
+
+- **Migliorato:** la coppia `release feed → compare` ha individuato due tag pubblicati dopo lo scan precedente e ha separato il delta architetturale dalla patch correttiva.
+- **Debole:** la risoluzione degli URL PJRC continua a partire da indici; Mirth espone commit e metadata senza una release canonica, mentre Oopsy produce rumore da prerelease storiche.
+- **Lane sotto-usate/noisy:** approfondire Codeberg/forja e asset su pagine progetto; penalizzare indici che mostrano solo “recent reply” o vecchi tag.
+- **Regola proposta, non ancora permanente:** per repository pubblicati nelle ultime 48 ore, confrontare sempre l'ultimo tag alertato con il tag corrente. Test di regressione: non trasformare patch README/UI cosmetiche in repeat; accettare solo DSP, target, asset, misure, architettura o correzioni che proteggono stato/audio.
+- **Recheck:** PZD bloccato fino al 2026-11-26 salvo un altro delta release-level; Mirth richiede un asset/tag v1.1.0; Sereia richiede un commit post-overlap; PJRC UAC2 richiede URL canonico e sorgente/build.
+- **Delta compatto:** `scan primary release feeds from last successful scan + compare alerted_tag...current_tag + verify asset/source/license; treat forum reply dates as discovery only`.
+
+## Feedback / Tuning Questionnaire
+
+Nessuna risposta è richiesta; il silenzio non modifica le preferenze. Risposta compatta possibile: `Q1=B Q2=A Q3=C Q4=B Q5=A Q6=D`.
+
+- **Q1 — Direzione:** A continua così; B verifica più profonda; C soglia novità più alta; D più finding quando reggono.  
+  Azione: profondità, novelty gate o ampiezza del ranking.
+- **Q2 — Ecosistema:** A più Daisy; B più Teensy; C bilanciato.  
+  Azione: boost della lane scelta senza abbassare la verifica primaria.
+- **Q3 — Valore tecnico:** A DSP delay/granular; B UI/preset/storage; C audio I/O, clock e gain staging; D hardware open.  
+  Azione: priorità di ranking e query.
+- **Q4 — Evidenza:** A richiedere sempre asset flashabile; B accettare source-only con build riproducibile; C privilegiare misure hardware.  
+  Azione: gate asset/build/measurement.
+- **Q5 — Repeat:** A mantenere l'attuale eccezione materiale; B ammettere solo nuovo target/release maggiore; C ammettere anche fix critici di stato/audio.  
+  Azione: severità anti-repeat.
+- **Q6 — Lane da espandere:** A Daisy forum; B PJRC; C GitHub release/compare; D Codeberg/GitLab/SourceHut; E pagine personali/indici low-SEO.  
+  Azione: allocazione delle query nel prossimo overlap.
