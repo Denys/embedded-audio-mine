@@ -383,7 +383,7 @@ GareBear99/SpaceMaid,codex_weekly,codex-weekly/data/repo_feature_history.json,pu
 getdunne/VanillaJuce,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-07-21,2026-07-21,2026-08-20,hard,published,feature_count=1; last_rank=6
 gmoican/GuitPreamp,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-04-21,2026-05-21,hard,published,feature_count=1; last_rank=7
 grahamfranz/PoleZero,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=7
-grame-cncm/faust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-10-20,2026-11-19,hard,published,feature_count=13; last_rank=1
+grame-cncm/faust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-10-28,2026-11-27,hard,published,feature_count=14; last_rank=1
 GreerPage/teensy_audio_illusions,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=6
 GullDSP/Circulate-VST,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-26,2026-05-26,2026-06-25,hard,published,feature_count=1; last_rank=7
 Harold-Street-Pedal-Company/HSP_Protoseed,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-09-08,2026-10-08,hard,published,feature_count=6; last_rank=2
@@ -400,6 +400,7 @@ joeriben/akroasys,codex_weekly,codex-weekly/data/repo_feature_history.json,publi
 joeriben/T5ynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-07-21,2026-08-20,hard,published,feature_count=3; last_rank=9
 JonathanZeppa/FloydFM,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-18,2026-08-18,2026-09-17,hard,published,feature_count=1; last_rank=8
 JordanAceto/micro-pico,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-09-30,2026-09-30,2026-10-30,hard,published,feature_count=1; last_rank=5
+JordanAceto/SSI2130_VCO,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-28,2026-10-28,2026-11-27,hard,published,feature_count=1; last_rank=6
 JordanAceto/SSI2140_12_stage_phase_shifter,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-05-26,2026-06-25,hard,published,feature_count=2; last_rank=5
 joshreiss/Audio_Effects-Theory_Implementation_and_Application,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2024-03-19,2024-04-18,hard,published,feature_count=1; last_rank=8
 JoshuaJRideout/PedalForge,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-26,2026-05-26,2026-06-25,hard,published,feature_count=1; last_rank=9
@@ -424,8 +425,9 @@ marcel-licence/ml_synth_pwm_osc_example,codex_weekly,codex-weekly/data/repo_feat
 marcel-licence/ML_SynthTools,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-05-19,2026-06-18,hard,published,feature_count=5; last_rank=3
 mgergos/Opus4Teensy,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-07-01,2026-07-01,2026-07-31,hard,published,feature_count=1; last_rank=8
 MichaelTayler/SuperAudioBoard,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-25,2026-08-25,2026-09-24,hard,published,feature_count=1; last_rank=4
-mishan/thinksynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-09-22,2026-09-22,2026-10-22,hard,published,feature_count=1; last_rank=10
+mishan/thinksynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-09-22,2026-10-28,2026-11-27,hard,published,feature_count=2; last_rank=7
 mkfarrow/Eurorack_DualVCA,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-09-08,2026-10-08,hard,published,feature_count=5; last_rank=9
+MrDesjardins/audiorouter,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-28,2026-10-28,2026-11-27,hard,published,feature_count=1; last_rank=4
 nalexopo/BasicDaisy,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-04-21,2026-05-21,hard,published,feature_count=1; last_rank=8
 newdigate/teensy-audio-x86-stubs,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-07-01,2026-07-01,2026-07-31,hard,published,feature_count=1; last_rank=10
 newdigate/teensy-variable-playback,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-25,2026-08-25,2026-09-24,hard,published,feature_count=1; last_rank=2
@@ -438,15 +440,15 @@ Omraj09/ESP32-Based-DSP-Audio-Equalizer-and-Controller,codex_weekly,codex-weekly
 Orastron/brickworks,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-19,2026-10-06,2026-11-05,hard,published,feature_count=6; last_rank=3
 orth4x0r/ilanaSynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-20,2026-10-20,2026-11-19,hard,published,feature_count=1; last_rank=9
 palmerr23/control_TLV320AIC3104,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-18,2026-10-20,2026-11-19,hard,published,feature_count=2; last_rank=5
-palmerr23/Teensy8x8AudioBoard,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-06-09,2026-07-09,hard,published,feature_count=3; last_rank=3
+palmerr23/Teensy8x8AudioBoard,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-10-28,2026-11-27,hard,published,feature_count=4; last_rank=5
 PaulStoffregen/Audio,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-16,2026-05-19,2026-06-18,hard,published,feature_count=2; last_rank=1
 pierreportal/rust-dsp,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-29,2026-09-01,2026-10-01,hard,published,feature_count=2; last_rank=7
 pixelsncodes/lumen,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-07-15,2026-07-15,2026-08-14,hard,published,feature_count=1; last_rank=3
 PoliTeK/PSP-PlantSignalProcessing,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-05-26,2026-06-25,hard,published,feature_count=2; last_rank=4
 quadcom/Louder-ESP32Plus-DRC,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-11,2026-08-11,2026-09-10,hard,published,feature_count=1; last_rank=10
 r0main-f/G2fresh,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-20,2026-10-20,2026-11-19,hard,published,feature_count=1; last_rank=7
-RaviKachhwaha/AuraForge-50X,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-25,2026-08-25,2026-09-24,hard,published,feature_count=1; last_rank=8
-reales/retromulator,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-10-20,2026-11-19,hard,published,feature_count=6; last_rank=2
+RaviKachhwaha/AuraForge-50X,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-25,2026-10-28,2026-11-27,hard,published,feature_count=2; last_rank=9
+reales/retromulator,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-10-28,2026-11-27,hard,published,feature_count=7; last_rank=3
 reneweller-coding/AmbientSynth,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-09-08,2026-09-08,2026-10-08,hard,published,feature_count=1; last_rank=4
 reneweller-coding/Ephemeris,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-06,2026-10-06,2026-11-05,hard,published,feature_count=1; last_rank=9
 rheslip/DaisySP_Teensy,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-04-09,2026-05-09,hard,published,feature_count=2; last_rank=6
@@ -454,7 +456,7 @@ RVX/LTC2DMX_Teensy_41_Audioshield,codex_weekly,codex-weekly/data/repo_feature_hi
 SeanBonaventure01/stm32-audio-eq,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-05,2026-05-05,2026-06-04,hard,published,feature_count=1; last_rank=8
 SevenT1123/SevenT.vst3,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-23,2026-06-23,2026-07-23,hard,published,feature_count=1; last_rank=7
 shakfu/chuck-max,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-07-21,2026-07-21,2026-08-20,hard,published,feature_count=1; last_rank=8
-shakfu/cyfaust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-09-15,2026-10-15,hard,published,feature_count=4; last_rank=9
+shakfu/cyfaust,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-10-28,2026-11-27,hard,published,feature_count=5; last_rank=8
 ShaunPrice/LoopSmith,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-09-08,2026-09-08,2026-10-08,hard,published,feature_count=1; last_rank=8
 shawlty/Daisy-Eurorack-Audio-Module,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=8
 shev0k/EQVita,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-17,2026-06-17,2026-07-17,hard,published,feature_count=1; last_rank=4
@@ -462,7 +464,8 @@ shorepine/amy,codex_weekly,codex-weekly/data/repo_feature_history.json,published
 sigprolabs/RadioSonic-Firmware-Core,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-20,2026-10-20,2026-11-19,hard,published,feature_count=1; last_rank=6
 smrg-lm/clausters,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-11,2026-08-11,2026-09-10,hard,published,feature_count=1; last_rank=8
 sneed-and-feed/braun_rb-26,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-09-30,2026-09-30,2026-10-30,hard,published,feature_count=1; last_rank=7
-sophiapoirier/destroyfx,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-19,2026-09-22,2026-10-22,hard,published,feature_count=4; last_rank=3
+Snipet/FCompressor,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-10-28,2026-10-28,2026-11-27,hard,published,feature_count=1; last_rank=10
+sophiapoirier/destroyfx,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-19,2026-10-28,2026-11-27,hard,published,feature_count=5; last_rank=2
 sourcebox/mi-plaits-dsp-rs,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-09-22,2026-10-22,hard,published,feature_count=7; last_rank=5
 spandit69/nest-audio-pcb,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-18,2026-09-15,2026-10-15,hard,published,feature_count=11; last_rank=10
 squeedee/daisy-studio,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-05-29,2026-06-28,hard,published,feature_count=2; last_rank=2
@@ -477,9 +480,6 @@ WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC,codex_weekly,codex-weekly/data/r
 windysynth/windy1,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-26,2026-05-29,2026-06-28,hard,published,feature_count=3; last_rank=5
 xof-112/perseids,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-07-15,2026-07-15,2026-08-14,hard,published,feature_count=1; last_rank=7
 yamamo2shun1/JUMBLEQ,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-21,2026-05-29,2026-06-28,hard,published,feature_count=2; last_rank=6
-zem-invictus/bevy_sonus,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-04,2026-08-04,2026-09-03,hard,published,feature_count=1; last_rank=9
-zisonzishen0415-stack/esp32-fdnreverb,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-04-28,2026-05-28,hard,published,feature_count=1; last_rank=3
-zlosynth/achordion,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-09-15,2026-10-15,hard,published,feature_count=6; last_rank=7
 northcoastsynthesis/msk-010-fixed-sine-bank,webgpt_daily,data/published-repo-log.csv,published,2026-10-12,2026-10-12,2026-11-11,hard,published,GPL production-backed eight-Wien-bridge analog LFO bank with complete editable source and build/test evidence; quantitative THD noise amplitude-spread and thermal data absent
 bubbajfett/kicad-guitar-pedals,webgpt_daily,data/published-repo-log.csv,published,2026-10-12,2026-10-12,2026-11-11,hard,published,CC0 36-board pedal corpus with KiCad Gerbers new build documents and build ledger; verified rows only and per-circuit derivative lineage remains to audit
 KamikazeVildsvin/Solstrejf,webgpt_daily,data/published-repo-log.csv,published,2026-10-12,2026-10-12,2026-11-11,hard,published,GPL AS3372E four-voice drone with complete multi-board source and bare prototype PCBs; assembled build and quantitative measurements absent
@@ -488,11 +488,11 @@ northcoastsynthesis/msk-010-fixed-sine-bank,webgpt_daily,data/selected-projects.
 bubbajfett/kicad-guitar-pedals,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=Analog,Pedal,PT2399,LM13700; tags=delay,compressor,chorus,envelope-filter,kicad,gerbers,build-docs,cc0; why_selected=Large tested pedal corpus pairs editable source with fabrication and build documents; notes=Audit derivative circuit rights and use verified rows only"
 KamikazeVildsvin/Solstrejf,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=Analog,Standalone,AS3372E,TL072,LM324; tags=drone,vcf,vca,pan,modulation-matrix,kicad,open-hardware; why_selected=Complete four-voice modern analog instrument architecture; notes=GPL-3.0 source with bare boards but no assembled proof or measurements"
 dilshan/6ch-sound-processor,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=Analog,Mixed-Signal,PT2322,Arduino Nano; tags=5.1,tone-control,attenuator,preset-control,kicad,gtk,mit; why_selected=Built digitally controlled six-channel analog processor; notes=No Gerbers or quantitative measurements and PT2322 lifecycle unresolved"
+zem-invictus/bevy_sonus,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-08-04,2026-08-04,2026-09-03,hard,published,feature_count=1; last_rank=9
+zisonzishen0415-stack/esp32-fdnreverb,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-04-28,2026-05-28,hard,published,feature_count=1; last_rank=3
+zlosynth/achordion,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-19,2026-09-15,2026-10-15,hard,published,feature_count=6; last_rank=7
 zlosynth/arplus,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-04-28,2026-04-28,2026-05-28,hard,published,feature_count=1; last_rank=5
 zlosynth/kaseta,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2024-03-17,2026-09-22,2026-10-22,hard,published,feature_count=8; last_rank=7
-zones-convolution/zones_client,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-08-18,2026-09-17,hard,published,feature_count=3; last_rank=4
-ZorakAudio/ZorakAudio-Experimental-Plugins,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-26,2026-10-06,2026-11-05,hard,published,feature_count=5; last_rank=5
-Zz0ne/Emulacao_de_Pedal_Analogico_com_Machine_Learning,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=9
 Eight4aWish/eurorack_daisy_patch_init,webgpt_daily,data/published-repo-log.csv,published,2026-10-12,2026-10-21,2026-11-20,hard,published,"Material repeat after 2026-10-17 fallback publication: Mirth adds Wasp GRU-16 FILTERS, optional 2048-point STFT granular layer, SDRAM/DTCMRAM placement, compensated dry latency and bench-verified ten-slice scheduling; source-only, no new release asset or Daisy Field target"
 ampactor-labs/sonido,webgpt_daily,data/published-repo-log.csv,published,2026-06-23,2026-10-23,2026-11-22,hard,published,"Material repeat after 2026-09-30 Codex coverage: d46d4c3 adds measured Daisy/Hothouse cost tables and real-time admission guards plus ADAA fixes; AGPL/commercial; ARM manually tested, no Field target."
 deemonoise/D-TRK,webgpt_daily,data/published-repo-log.csv,published,2026-10-22,2026-10-23,2026-11-22,hard,published,"Eight-scene A/B morph with value-before-mask publication fences and native tests; ESP32-S3 adjacent reference, GPL-3.0/CERN-OHL-S, no Field target or callback measurement."
@@ -507,3 +507,6 @@ dmsd-lab/AMP8611,webgpt_daily,data/selected-projects.csv,selected_reference,,,,s
 rsholmes/ringer,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=Analog,Kosmo,AD633,TL074,LM4040; tags=ring-mod,multiplier,vca,attenuverter,cv,kicad,gerbers,calibration,cc0; why_selected=Built precision four-quadrant multiplier with complete source fabrication and calibration; notes=CC0-1.0; AD633 cost dominates and quantitative measurements are absent"
 rsholmes/audiomixer,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=Analog,Kosmo,TL072; tags=mixer,dual-output,slider,kicad,gerbers,panel,cc0; why_selected=Complete built analog summing and mechanical baseline; notes=CC0-1.0; current draw documented but quantitative performance and input protection absent"
 heolfief/minimood,webgpt_daily,data/selected-projects.csv,selected_reference,,,,soft,selected,"status=selected; origin=digest_ranked; platforms=STM32F446,Mixed-Signal,MCP6002,RC4558,LM4808; tags=synth,analog-vcf,distortion,headphone,midi,kicad,firmware,gpl; why_selected=Full digital-oscillator to analog-filter distortion and headphone source; notes=GPL-3.0 whole project; WIP with no completed build native Gerber calibration or system measurements"
+zones-convolution/zones_client,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-12,2026-08-18,2026-09-17,hard,published,feature_count=3; last_rank=4
+ZorakAudio/ZorakAudio-Experimental-Plugins,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-05-26,2026-10-06,2026-11-05,hard,published,feature_count=5; last_rank=5
+Zz0ne/Emulacao_de_Pedal_Analogico_com_Machine_Learning,codex_weekly,codex-weekly/data/repo_feature_history.json,published,2026-06-09,2026-06-09,2026-07-09,hard,published,feature_count=1; last_rank=9

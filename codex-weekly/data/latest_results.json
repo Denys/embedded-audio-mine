@@ -1,59 +1,52 @@
 {
-  "date": "2026-10-20",
-  "previous_digest_date": "2026-10-06",
+  "date": "2026-10-28",
+  "previous_digest_date": "2026-10-20",
   "queries_successful": 21,
-  "evaluated_unique_nonfork_repos": 141,
+  "evaluated_unique_nonfork_repos": 137,
   "selected": [
     {
       "rank": 1,
       "full_name": "grame-cncm/faust",
       "html_url": "https://github.com/grame-cncm/faust",
-      "stars": 3190,
-      "forks": 431,
-      "pushed_at": "2026-10-20",
+      "stars": 3196,
+      "forks": 433,
+      "pushed_at": "2026-10-28",
       "topic": "Computer-first DSP",
       "description": "Functional programming language for signal processing and sound synthesis",
       "matched_ic_query": false,
-      "score": 7723,
+      "score": 7741,
       "status_tag": "RE-ENTRY: updated",
       "content_value": "strong",
-      "content_summary": "The Hothouse Makefile and ex_faust.cpp provide a real Daisy architecture; dsp-adapter.h and juce-dsp-adapter.h contain the new host/DSP adapter lifecycle.",
+      "content_summary": "A real Daisy/Hothouse Makefile and audio callback architecture accompany the compiler. The JUCE architecture now initializes effect static tables before instance constants.",
       "representative_files": [
         "architecture/hothouse/Makefile",
         "architecture/hothouse/ex_faust.cpp",
-        "architecture/faust/dsp/dsp-adapter.h",
-        "architecture/faust/dsp/juce-dsp-adapter.h"
+        "architecture/juce/juce-plugin.cpp"
       ],
       "portability_value": "high",
-      "portability_summary": "Generate the bounded DSP for Daisy/Hothouse; the JUCE adapter is a host reference and must not be copied into the MCU callback.",
-      "reuse_idea": "Keep host channel/block adaptation outside the generated kernel, then compare one delay on the host and Daisy at the same sample rate.",
-      "source_revision": "5a36313132131dab393cac3351a765a879c48862",
+      "portability_summary": "Generate a small kernel through the existing Daisy architecture. Keep host adapters and compiler/runtime allocation off the MCU audio callback.",
+      "reuse_idea": "Use the repaired host initialization path for reference renders, then compare a generated delay on Daisy at the same sample rate.",
+      "source_revision": "e9569a924292ddbe4be6d4f1dfc87a5fbe9e3ece",
       "content_evidence": [
         {
           "path": "architecture/hothouse/Makefile",
-          "local": "source-grame-cncm--faust--4.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/5a36313132131dab393cac3351a765a879c48862/architecture/hothouse/Makefile"
+          "local": "source-grame-cncm--faust--0.txt",
+          "url": "https://github.com/grame-cncm/faust/blob/e9569a924292ddbe4be6d4f1dfc87a5fbe9e3ece/architecture/hothouse/Makefile"
         },
         {
           "path": "architecture/hothouse/ex_faust.cpp",
-          "local": "source-grame-cncm--faust--5.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/5a36313132131dab393cac3351a765a879c48862/architecture/hothouse/ex_faust.cpp"
+          "local": "source-grame-cncm--faust--1.txt",
+          "url": "https://github.com/grame-cncm/faust/blob/e9569a924292ddbe4be6d4f1dfc87a5fbe9e3ece/architecture/hothouse/ex_faust.cpp"
         },
         {
-          "path": "architecture/faust/dsp/dsp-adapter.h",
-          "local": "source-grame-cncm--faust--6.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/5a36313132131dab393cac3351a765a879c48862/architecture/faust/dsp/dsp-adapter.h"
-        },
-        {
-          "path": "architecture/faust/dsp/juce-dsp-adapter.h",
-          "local": "source-grame-cncm--faust--7.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/5a36313132131dab393cac3351a765a879c48862/architecture/faust/dsp/juce-dsp-adapter.h"
+          "path": "architecture/juce/juce-plugin.cpp",
+          "local": "source-grame-cncm--faust--3.txt",
+          "url": "https://github.com/grame-cncm/faust/blob/e9569a924292ddbe4be6d4f1dfc87a5fbe9e3ece/architecture/juce/juce-plugin.cpp"
         }
       ],
       "fork": false,
-      "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "source_file_count": 1989,
+      "source_file_count": 1991,
+      "hardware_design_file_count": 0,
       "build_files": [
         ".github/llvm/smoke/CMakeLists.txt",
         "Makefile",
@@ -66,71 +59,117 @@
         "architecture/esp32/drivers/es8388/CMakeLists.txt",
         "architecture/esp32/drivers/wm8978/CMakeLists.txt",
         "architecture/esp32/gramo-bt-midi/CMakeLists.txt",
-        "architecture/esp32/gramo-bt-midi/Makefile",
-        "architecture/esp32/gramo-bt-midi/components/blemidi/CMakeLists.txt",
-        "architecture/esp32/gramo-bt-midi/main/CMakeLists.txt",
-        "architecture/hothouse/Makefile",
-        "architecture/httpdlib/html/js/svg/api/Makefile"
-      ],
-      "hardware_design_file_count": 0,
-      "meaningful_repeat_evidence": "bccb79b2 adds a host adapter rebuilt when the host configuration changes and explicit DSP ownership; a258bc1e resets the compiler floating-point environment. Both patches were inspected.",
-      "repeat_commit_sources": [
-        {
-          "sha": "bccb79b28b8fc0acb9e93b86cad556c763f0baf1",
-          "url": "https://github.com/grame-cncm/faust/commit/bccb79b28b8fc0acb9e93b86cad556c763f0baf1"
-        },
-        {
-          "sha": "a258bc1ee6b1fb1b53f1fadf53a9f9350334b55d",
-          "url": "https://github.com/grame-cncm/faust/commit/a258bc1ee6b1fb1b53f1fadf53a9f9350334b55d"
-        }
+        "architecture/esp32/gramo-bt-midi/Makefile"
       ],
       "build_file_count": 78,
-      "build_files_truncated": true
+      "build_verification": "NOT_RUN",
+      "hardware_verification": "NOT_RUN",
+      "meaningful_repeat_evidence": "04b121fe initializes effect::classInit for POLY2 effects before instance constants, correcting generated plugin initialization rather than just updating a version.",
+      "repeat_commit_sources": [
+        {
+          "sha": "04b121feb77ca1e6960e0fa639ad6801e9cb2fec",
+          "url": "https://github.com/grame-cncm/faust/commit/04b121feb77ca1e6960e0fa639ad6801e9cb2fec"
+        }
+      ]
     },
     {
       "rank": 2,
-      "full_name": "reales/retromulator",
-      "html_url": "https://github.com/reales/retromulator",
-      "stars": 64,
-      "forks": 10,
-      "pushed_at": "2026-10-20",
-      "topic": "Computer-first synth",
-      "description": "A standalone app and DAW plugin (AAX / VST3 / AU) that emulates classic hardware synthesizers, samplers, and keyboards by running their original firmware on cycle-accurate CPU and DSP emulators.",
+      "full_name": "sophiapoirier/destroyfx",
+      "html_url": "https://github.com/sophiapoirier/destroyfx",
+      "stars": 274,
+      "forks": 12,
+      "pushed_at": "2026-10-24",
+      "topic": "Computer-first effects",
+      "description": "Destroy FX is a music software project of Sophia Poirier and Tom Murphy 7.  Mostly we make audio effect plugins that destroy your sound.  Supported plugin APIs include Audio Unit and VST.  Includes the DfxPlugin and DFX GUI frameworks.",
       "matched_ic_query": false,
-      "score": 228,
-      "status_tag": "RE-ENTRY: updated",
+      "score": 634,
+      "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "ParameterPool.cpp decodes native synth parameters and routes MIDI; HeadlessProcessor.cpp has the shared latency mapping; cem3396.cpp contains a separate oscillator/filter model.",
+      "content_summary": "iirfilter.cpp implements coefficient calculation and filter paths; firfilter.cpp implements odd-tap ideal low-pass coefficients and window functions.",
       "representative_files": [
-        "source/plugin/ParameterPool.cpp",
-        "source/plugin/HeadlessProcessor.cpp",
-        "source/matrixLib/cem3396.cpp"
+        "dfx-library/iirfilter.cpp",
+        "dfx-library/firfilter.cpp",
+        "dfx-library/bsd-license.txt"
       ],
       "portability_value": "medium",
-      "portability_summary": "Use a bounded synth model or parameter/MIDI translation as a reference; the full emulator, JUCE runtime and background boot system are unsuitable for a direct Cortex-M7 port.",
-      "reuse_idea": "Extract the native-parameter MIDI serializer for a hardware controller and keep the audio-core latency consistent across boot paths.",
-      "source_revision": "e536c3d34d2620e54957b3471243cece5d1254aa",
+      "portability_summary": "Extract individual filters and replace framework helpers; review double-precision and C++ library costs on Cortex-M7. The full plug-in framework remains host software.",
+      "reuse_idea": "Compare the FIR coefficient generator against a host impulse response before translating its bounded tap loop to CMSIS-DSP.",
+      "source_revision": "f1d7f06e685e205d4c2d4c9e3948cbfab0fbd980",
       "content_evidence": [
         {
-          "path": "source/plugin/ParameterPool.cpp",
-          "local": "source-reales--retromulator--4.txt",
-          "url": "https://github.com/reales/retromulator/blob/e536c3d34d2620e54957b3471243cece5d1254aa/source/plugin/ParameterPool.cpp"
+          "path": "dfx-library/iirfilter.cpp",
+          "local": "source-sophiapoirier--destroyfx--0.txt",
+          "url": "https://github.com/sophiapoirier/destroyfx/blob/f1d7f06e685e205d4c2d4c9e3948cbfab0fbd980/dfx-library/iirfilter.cpp"
         },
         {
-          "path": "source/plugin/HeadlessProcessor.cpp",
-          "local": "source-reales--retromulator--5.txt",
-          "url": "https://github.com/reales/retromulator/blob/e536c3d34d2620e54957b3471243cece5d1254aa/source/plugin/HeadlessProcessor.cpp"
+          "path": "dfx-library/firfilter.cpp",
+          "local": "source-sophiapoirier--destroyfx--1.txt",
+          "url": "https://github.com/sophiapoirier/destroyfx/blob/f1d7f06e685e205d4c2d4c9e3948cbfab0fbd980/dfx-library/firfilter.cpp"
         },
         {
-          "path": "source/matrixLib/cem3396.cpp",
-          "local": "source-reales--retromulator--6.txt",
-          "url": "https://github.com/reales/retromulator/blob/e536c3d34d2620e54957b3471243cece5d1254aa/source/matrixLib/cem3396.cpp"
+          "path": "dfx-library/bsd-license.txt",
+          "local": "source-sophiapoirier--destroyfx--2.txt",
+          "url": "https://github.com/sophiapoirier/destroyfx/blob/f1d7f06e685e205d4c2d4c9e3948cbfab0fbd980/dfx-library/bsd-license.txt"
         }
       ],
       "fork": false,
+      "source_file_count": 385,
+      "hardware_design_file_count": 0,
+      "build_files": [
+        "ann/MS_Win32/Makefile",
+        "ann/ann2fig/Makefile",
+        "ann/sample/Makefile",
+        "ann/src/Makefile",
+        "ann/test/Makefile"
+      ],
+      "build_file_count": 5,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
+      "license_note": "Inspected filter source headers say GPL-2.0-or-later. The separate BSD text does not establish that these filters are BSD licensed."
+    },
+    {
+      "rank": 3,
+      "full_name": "reales/retromulator",
+      "html_url": "https://github.com/reales/retromulator",
+      "stars": 68,
+      "forks": 12,
+      "pushed_at": "2026-10-28",
+      "topic": "Computer-first synth",
+      "description": "A standalone app and DAW plugin (AAX / VST3 / AU) that emulates classic hardware synthesizers, samplers, and keyboards by running their original firmware on cycle-accurate CPU and DSP emulators.",
+      "matched_ic_query": false,
+      "score": 242,
+      "status_tag": "RE-ENTRY: updated",
+      "content_value": "strong",
+      "content_summary": "CA-72 oscillator and nonlinear filter models are real C++ implementations; synth.cpp contains the worker/block deadline policy.",
+      "representative_files": [
+        "source/ca72Lib/dsp/vco.cpp",
+        "source/ca72Lib/dsp/vcf.cpp",
+        "source/ca72Lib/synth.cpp"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "Treat a single oscillator/filter model as a reference. Double-precision nonlinear solves and desktop worker threads require substantial simplification and measured MCU budgets.",
+      "reuse_idea": "Prototype a bounded single-voice model, cap solver work and measure worst-case callback time before adding polyphony.",
+      "source_revision": "1f2ebb6523803d8129d3f284224ecebf2e3131bc",
+      "content_evidence": [
+        {
+          "path": "source/ca72Lib/dsp/vco.cpp",
+          "local": "source-reales--retromulator--1.txt",
+          "url": "https://github.com/reales/retromulator/blob/1f2ebb6523803d8129d3f284224ecebf2e3131bc/source/ca72Lib/dsp/vco.cpp"
+        },
+        {
+          "path": "source/ca72Lib/dsp/vcf.cpp",
+          "local": "source-reales--retromulator--0.txt",
+          "url": "https://github.com/reales/retromulator/blob/1f2ebb6523803d8129d3f284224ecebf2e3131bc/source/ca72Lib/dsp/vcf.cpp"
+        },
+        {
+          "path": "source/ca72Lib/synth.cpp",
+          "local": "source-reales--retromulator--3.txt",
+          "url": "https://github.com/reales/retromulator/blob/1f2ebb6523803d8129d3f284224ecebf2e3131bc/source/ca72Lib/synth.cpp"
+        }
+      ],
+      "fork": false,
       "source_file_count": 6149,
+      "hardware_design_file_count": 0,
       "build_files": [
         "source/baseLib/CMakeLists.txt",
         "source/bridge/bridgeLib/CMakeLists.txt",
@@ -143,569 +182,480 @@
         "source/dsp56300/source/dsp56kBase/CMakeLists.txt",
         "source/dsp56300/source/dsp56kDebugger/CMakeLists.txt",
         "source/dsp56300/source/dsp56kEmu/CMakeLists.txt",
-        "source/dsp56300/source/dsp56kTestRunner/CMakeLists.txt",
-        "source/dsp56300/source/vtuneSdk/CMakeLists.txt",
-        "source/dsp56300/source/wxWidgets/3rdparty/catch/CMakeLists.txt",
-        "source/dsp56300/source/wxWidgets/3rdparty/catch/test_package/CMakeLists.txt",
-        "source/dsp56300/source/wxWidgets/3rdparty/pcre/CMakeLists.txt"
-      ],
-      "hardware_design_file_count": 0,
-      "meaningful_repeat_evidence": "a0069051 adds native parameter decoding/sending for DX7, Matrix-1000 and JE-8086; 0e6d61e7 unifies latency reporting across boot paths. These are inspected integration changes, beyond release-number edits.",
-      "repeat_commit_sources": [
-        {
-          "sha": "0e6d61e7d44644534e3b8b16a5817562e0807819",
-          "url": "https://github.com/reales/retromulator/commit/0e6d61e7d44644534e3b8b16a5817562e0807819"
-        },
-        {
-          "sha": "a006905165d013ceef7f32b7243aa7efd9855bb5",
-          "url": "https://github.com/reales/retromulator/commit/a006905165d013ceef7f32b7243aa7efd9855bb5"
-        }
+        "source/dsp56300/source/dsp56kTestRunner/CMakeLists.txt"
       ],
       "build_file_count": 62,
-      "build_files_truncated": true
-    },
-    {
-      "rank": 3,
-      "full_name": "Alxdreee/TYPE-2",
-      "html_url": "https://github.com/Alxdreee/TYPE-2",
-      "stars": 56,
-      "forks": 3,
-      "pushed_at": "2026-10-19",
-      "topic": "ESP32 audio",
-      "description": "Touch-capacitive polyphonic synthesizer powered by ESP32-S3",
-      "matched_ic_query": false,
-      "score": 171,
-      "status_tag": "NEW",
-      "content_value": "strong",
-      "content_summary": "TYPE2.ino contains a polyphonic ESP32-S3 audio task, oscillator/filter state and I2S output; Type2_v2.kicad_sch and Type2_v2.kicad_pcb contain populated design data.",
-      "representative_files": [
-        "firmware/TYPE2.ino",
-        "hardware/Type2_v2.kicad_sch",
-        "hardware/Type2_v2.kicad_pcb"
-      ],
-      "portability_value": "high",
-      "portability_summary": "A complete firmware audio path is visible; move its voice/filter code to a Daisy or Teensy callback and replace ESP32 tasks, touch input and USB/I2S plumbing.",
-      "reuse_idea": "Prototype one voice with the two-stage state-variable filter and keep touch/UI updates outside the audio callback.",
-      "source_revision": "eecbf4d37fe3e22bd7d9868bfe1ae92a2a01a027",
-      "content_evidence": [
-        {
-          "path": "firmware/TYPE2.ino",
-          "local": "source-Alxdreee--TYPE-2--3.txt",
-          "url": "https://github.com/Alxdreee/TYPE-2/blob/eecbf4d37fe3e22bd7d9868bfe1ae92a2a01a027/firmware/TYPE2.ino"
-        },
-        {
-          "path": "hardware/Type2_v2.kicad_sch",
-          "local": "source-Alxdreee--TYPE-2--4.txt",
-          "url": "https://github.com/Alxdreee/TYPE-2/blob/eecbf4d37fe3e22bd7d9868bfe1ae92a2a01a027/hardware/Type2_v2.kicad_sch"
-        },
-        {
-          "path": "hardware/Type2_v2.kicad_pcb",
-          "local": "source-Alxdreee--TYPE-2--1.txt",
-          "url": "https://github.com/Alxdreee/TYPE-2/blob/eecbf4d37fe3e22bd7d9868bfe1ae92a2a01a027/hardware/Type2_v2.kicad_pcb"
-        }
-      ],
-      "fork": false,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "license_note": "Firmware header says MIT while root LICENSE contains GPLv3; licensing scope is unresolved. Treat this as an engineering reference pending clarification.",
-      "source_file_count": 2,
-      "build_files": [],
-      "hardware_design_file_count": 2,
-      "build_file_count": 0,
-      "build_files_truncated": false
+      "meaningful_repeat_evidence": "23059f69 changes the CA-72 worker wait from 75% to 100% of a block period. This changes real-time audio behavior: late voices can cause a glitch instead of being muted; it is not evidence of improved MCU timing.",
+      "repeat_commit_sources": [
+        {
+          "sha": "23059f69995390b6fba1d7c0500d6323200e60b1",
+          "url": "https://github.com/reales/retromulator/commit/23059f69995390b6fba1d7c0500d6323200e60b1"
+        }
+      ]
     },
     {
       "rank": 4,
-      "full_name": "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
-      "html_url": "https://github.com/WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
-      "stars": 35,
-      "forks": 4,
-      "pushed_at": "2026-10-20",
-      "topic": "ESP32 audio",
-      "description": "ESP32 A2DP Bluetooth Audio Sink with BLE GATT, DSP, Level Meters, and LDAC support",
+      "full_name": "MrDesjardins/audiorouter",
+      "html_url": "https://github.com/MrDesjardins/audiorouter",
+      "stars": 48,
+      "forks": 2,
+      "pushed_at": "2026-10-28",
+      "topic": "Computer-first effects",
+      "description": "Free, open source visual audio router for Windows 11. Route, process and record your audio on a canvas: noise gate, EQ, compressor, VST plugins, per-app capture, two-PC streaming, Stream Deck, API and MCP.",
       "matched_ic_query": false,
-      "score": 132,
-      "status_tag": "RETURNING",
+      "score": 152,
+      "status_tag": "NEW",
       "content_value": "strong",
-      "content_summary": "biquad.h and dsp_processor.h implement the signal-processing chain; goertzel.h contains a three-band detector with per-sample state and bounded analysis windows.",
+      "content_summary": "The Rust DSP crate contains a fixed-hop pitch shifter and a TD-PSOLA voice path with bounded rings, microfft transforms and fixed latency constants.",
       "representative_files": [
-        "main/dsp/biquad.h",
-        "main/dsp/dsp_processor.h",
-        "main/dsp/goertzel.h"
+        "crates/dsp/src/voice_changer.rs",
+        "crates/dsp/src/pitch_shift.rs",
+        "crates/dsp/Cargo.toml"
       ],
-      "portability_value": "high",
-      "portability_summary": "The scalar biquad and detector are reusable candidates; replace Xtensa math and ESP-IDF/Bluetooth I/O. This does not establish LDAC/aptX availability on Daisy or Teensy.",
-      "reuse_idea": "Port the Goertzel detector with a known sample rate, retain window resets, and compare detector magnitude against a host sine sweep.",
-      "source_revision": "9bc60623e044c06b50213373e9eabaf9fa3f2b5f",
+      "portability_value": "medium",
+      "portability_summary": "The small DSP crate is separable from the Windows router. Port only the pitch core or biquads, arrange state allocation at startup and measure FFT/analysis cost; a no_std target build is unverified.",
+      "reuse_idea": "Run the 1024-point shifter on fixed 128-frame blocks and compare silence, sine and voiced transitions before attempting a Teensy/Daisy callback.",
+      "source_revision": "358e03e3bf7f9e4fc4b57686873b9e3b2fed0f88",
       "content_evidence": [
         {
-          "path": "main/dsp/biquad.h",
-          "local": "source-WillyBilly06--esp32-a2dp-sink-with-LDAC-APTX-AAC--0.txt",
-          "url": "https://github.com/WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC/blob/9bc60623e044c06b50213373e9eabaf9fa3f2b5f/main/dsp/biquad.h"
+          "path": "crates/dsp/src/voice_changer.rs",
+          "local": "source-MrDesjardins--audiorouter--0.txt",
+          "url": "https://github.com/MrDesjardins/audiorouter/blob/358e03e3bf7f9e4fc4b57686873b9e3b2fed0f88/crates/dsp/src/voice_changer.rs"
         },
         {
-          "path": "main/dsp/dsp_processor.h",
-          "local": "source-WillyBilly06--esp32-a2dp-sink-with-LDAC-APTX-AAC--1.txt",
-          "url": "https://github.com/WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC/blob/9bc60623e044c06b50213373e9eabaf9fa3f2b5f/main/dsp/dsp_processor.h"
+          "path": "crates/dsp/src/pitch_shift.rs",
+          "local": "source-MrDesjardins--audiorouter--1.txt",
+          "url": "https://github.com/MrDesjardins/audiorouter/blob/358e03e3bf7f9e4fc4b57686873b9e3b2fed0f88/crates/dsp/src/pitch_shift.rs"
         },
         {
-          "path": "main/dsp/goertzel.h",
-          "local": "source-WillyBilly06--esp32-a2dp-sink-with-LDAC-APTX-AAC--3.txt",
-          "url": "https://github.com/WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC/blob/9bc60623e044c06b50213373e9eabaf9fa3f2b5f/main/dsp/goertzel.h"
+          "path": "crates/dsp/Cargo.toml",
+          "local": "source-MrDesjardins--audiorouter--2.txt",
+          "url": "https://github.com/MrDesjardins/audiorouter/blob/358e03e3bf7f9e4fc4b57686873b9e3b2fed0f88/crates/dsp/Cargo.toml"
         }
       ],
       "fork": false,
+      "source_file_count": 512,
+      "hardware_design_file_count": 0,
+      "build_files": [
+        "Cargo.toml",
+        "contracts/package.json",
+        "crates/cli/Cargo.toml",
+        "crates/control/Cargo.toml",
+        "crates/domain/Cargo.toml",
+        "crates/driver-helper/Cargo.toml",
+        "crates/dsp/Cargo.toml",
+        "crates/engine/Cargo.toml",
+        "crates/plugin-host/Cargo.toml",
+        "crates/protocol/Cargo.toml",
+        "crates/recording/Cargo.toml",
+        "crates/storage/Cargo.toml"
+      ],
+      "build_file_count": 21,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "license_note": "Root LICENSE offers public-domain or CC0 terms for repository code; external codec components need their own scope review.",
-      "source_file_count": 30,
-      "build_files": [
-        "CMakeLists.txt",
-        "Makefile",
-        "_reference/led_effects_example/CMakeLists.txt",
-        "_reference/led_effects_example/Makefile",
-        "_reference/led_effects_example/main/CMakeLists.txt",
-        "_reference/led_effects_example/main/idf_component.yml",
-        "components/ESP32-A2DP/CMakeLists.txt",
-        "components/arduino-audio-tools/CMakeLists.txt",
-        "components/arduino-audio-tools/examples/examples-desktop/generator/CMakeLists.txt",
-        "components/arduino-audio-tools/examples/examples-desktop/min-generator/CMakeLists.txt",
-        "components/arduino-audio-tools/examples/examples-desktop/mp3/CMakeLists.txt",
-        "components/arduino-audio-tools/examples/examples-dsp/examples-stk/streams-stk-desktop/CMakeLists.txt",
-        "components/arduino-audio-tools/examples/examples-dsp/examples-stk/streams-stk_allinstruments-audiokit/CMakeLists.txt",
-        "components/arduino-audio-tools/tests-cmake/CMakeLists.txt",
-        "components/arduino-audio-tools/tests-cmake/codec/CMakeLists.txt",
-        "components/arduino-audio-tools/tests-cmake/codec/aac-faad/CMakeLists.txt"
-      ],
-      "hardware_design_file_count": 0,
-      "build_file_count": 1419,
-      "build_files_truncated": true
+      "license_note": "Root LICENSE is GPLv3; pitch_shift.rs separately attributes an MIT-licensed upstream component."
     },
     {
       "rank": 5,
-      "full_name": "palmerr23/control_TLV320AIC3104",
-      "html_url": "https://github.com/palmerr23/control_TLV320AIC3104",
-      "stars": 12,
+      "full_name": "palmerr23/Teensy8x8AudioBoard",
+      "html_url": "https://github.com/palmerr23/Teensy8x8AudioBoard",
+      "stars": 29,
       "forks": 3,
-      "pushed_at": "2026-10-17",
+      "pushed_at": "2026-10-21",
       "topic": "Teensy audio",
-      "description": "A Teensy Audio Library driver for the TLV320AIC3104 CODEC",
+      "description": "Design files and library for a stackable TLV320AIC3104 based 8x8 multi-channel audio board for Teensy 4.x",
       "matched_ic_query": false,
-      "score": 103,
+      "score": 137,
       "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "control_tlv320aic3104.cpp configures multiple codecs and TDM; DAC filter code handles codec coefficient conventions; 8x8_Filters.ino connects noise, TDM and FFT objects.",
+      "content_summary": "The Eurorack audio-output wing has populated editable KiCad circuitry and a routed PCB, alongside separate control-output wings and main-board assets.",
       "representative_files": [
-        "src/control_tlv320aic3104.cpp",
-        "src/tlv320aic3104_DAC_filters.h",
-        "examples/8x8_Filters/8x8_Filters.ino",
-        "examples/OpenAudioLib_F32/OpenAudioLib_F32.ino"
+        "Board Files/Euro Audio Output Wing/Wing Board TRS Eurorack Audio Output.kicad_sch",
+        "Board Files/Euro Audio Output Wing/Wing Board TRS Eurorack Audio Output.kicad_pcb",
+        "LICENSE"
       ],
       "portability_value": "high",
-      "portability_summary": "The examples directly use Teensy Audio and OpenAudio F32; Daisy requires new TDM/I2C transport and clock configuration while preserving codec register logic.",
-      "reuse_idea": "Bring up one codec pair first and verify register byte order and the DAC numerator/denominator scaling before expanding the TDM chain.",
-      "source_revision": "e0d607b211440a3d27d1cc3cea87f3921616ab85",
+      "portability_summary": "Direct hardware reference for a Teensy multi-codec system. A Daisy design needs its own clocks, codec/control firmware and signal-level review; the wing is not a standalone DSP kernel.",
+      "reuse_idea": "Adapt the output conditioning as a separate board, checking gain, headroom, grounding and connector pinout before integrating the codec board.",
+      "source_revision": "ef8a77d771ae9150f5d4178fad243fb49db1b6ca",
       "content_evidence": [
         {
-          "path": "src/control_tlv320aic3104.cpp",
-          "local": "source-palmerr23--control_TLV320AIC3104--5.txt",
-          "url": "https://github.com/palmerr23/control_TLV320AIC3104/blob/e0d607b211440a3d27d1cc3cea87f3921616ab85/src/control_tlv320aic3104.cpp"
+          "path": "Board Files/Euro Audio Output Wing/Wing Board TRS Eurorack Audio Output.kicad_sch",
+          "local": "source-palmerr23--Teensy8x8AudioBoard--0.txt",
+          "url": "https://github.com/palmerr23/Teensy8x8AudioBoard/blob/ef8a77d771ae9150f5d4178fad243fb49db1b6ca/Board%20Files/Euro%20Audio%20Output%20Wing/Wing%20Board%20TRS%20Eurorack%20Audio%20Output.kicad_sch"
         },
         {
-          "path": "src/tlv320aic3104_DAC_filters.h",
-          "local": "source-palmerr23--control_TLV320AIC3104--1.txt",
-          "url": "https://github.com/palmerr23/control_TLV320AIC3104/blob/e0d607b211440a3d27d1cc3cea87f3921616ab85/src/tlv320aic3104_DAC_filters.h"
+          "path": "Board Files/Euro Audio Output Wing/Wing Board TRS Eurorack Audio Output.kicad_pcb",
+          "local": "source-palmerr23--Teensy8x8AudioBoard--1.txt",
+          "url": "https://github.com/palmerr23/Teensy8x8AudioBoard/blob/ef8a77d771ae9150f5d4178fad243fb49db1b6ca/Board%20Files/Euro%20Audio%20Output%20Wing/Wing%20Board%20TRS%20Eurorack%20Audio%20Output.kicad_pcb"
         },
         {
-          "path": "examples/8x8_Filters/8x8_Filters.ino",
-          "local": "source-palmerr23--control_TLV320AIC3104--0.txt",
-          "url": "https://github.com/palmerr23/control_TLV320AIC3104/blob/e0d607b211440a3d27d1cc3cea87f3921616ab85/examples/8x8_Filters/8x8_Filters.ino"
-        },
-        {
-          "path": "examples/OpenAudioLib_F32/OpenAudioLib_F32.ino",
-          "local": "source-palmerr23--control_TLV320AIC3104--3.txt",
-          "url": "https://github.com/palmerr23/control_TLV320AIC3104/blob/e0d607b211440a3d27d1cc3cea87f3921616ab85/examples/OpenAudioLib_F32/OpenAudioLib_F32.ino"
+          "path": "LICENSE",
+          "local": "source-palmerr23--Teensy8x8AudioBoard--2.txt",
+          "url": "https://github.com/palmerr23/Teensy8x8AudioBoard/blob/ef8a77d771ae9150f5d4178fad243fb49db1b6ca/LICENSE"
         }
       ],
       "fork": false,
+      "source_file_count": 0,
+      "hardware_design_file_count": 4,
+      "build_files": [],
+      "build_file_count": 0,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "license_note": "Root LICENSE is GPLv3 while source headers claim MIT; preserve both notices and resolve scope before redistributing a port.",
-      "source_file_count": 31,
-      "build_files": [],
-      "hardware_design_file_count": 0,
-      "build_file_count": 0,
-      "build_files_truncated": false
+      "license_note": "Inspected root LICENSE contains OSHWA identification and CC0 terms."
     },
     {
       "rank": 6,
-      "full_name": "sigprolabs/RadioSonic-Firmware-Core",
-      "html_url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core",
-      "stars": 2,
-      "forks": 1,
-      "pushed_at": "2026-10-13",
-      "topic": "ESP32 audio",
-      "description": "Open-source core firmware for the RadioSonic ESP32-S3 audio DSP board (MIT)",
-      "matched_ic_query": false,
-      "score": 77,
+      "full_name": "JordanAceto/SSI2130_VCO",
+      "html_url": "https://github.com/JordanAceto/SSI2130_VCO",
+      "stars": 21,
+      "forks": 2,
+      "pushed_at": "2022-06-04",
+      "topic": "Audio IC hardware",
+      "description": "VCO core built around the SSI2130 chip",
+      "matched_ic_query": true,
+      "score": 108,
       "status_tag": "NEW",
       "content_value": "strong",
-      "content_summary": "audio_dsp.c performs packed PCM/float conversion and dispatch; channel_fx.c implements a weighted multi-tap stereo delay with per-codec-pair PSRAM rings; CMakeLists.txt provides the ESP-IDF build entry.",
+      "content_summary": "Editable KiCad documents implement an SSI2130 VCO core and through-zero FM conditioning, with a populated routed PCB and construction assets.",
       "representative_files": [
-        "main/audio/audio_dsp.c",
-        "main/audio/channel_fx.c",
-        "main/audio/dsp_effects.c",
-        "CMakeLists.txt"
+        "kicad_6_docs/VCO_core.kicad_sch",
+        "kicad_6_docs/tzfm_conditioner.kicad_sch",
+        "kicad_6_docs/SSI2130_VCO.kicad_pcb",
+        "LICENSE"
       ],
       "portability_value": "high",
-      "portability_summary": "The effect interface and channel math are concrete; replace ESP-IDF tasks, timer and PSRAM allocators with target-specific initialization and callback code.",
-      "reuse_idea": "Allocate delay rings at startup, port the multi-tap effect to SDRAM on Daisy, and retain clipping and pair-wise mix-gain behavior.",
-      "source_revision": "e9312f0627afac2d85912ae82b4f1dcb295d055f",
+      "portability_summary": "High value as an analog hardware companion to Daisy/Teensy control or ADC/DAC experiments, not firmware that can be compiled for those boards.",
+      "reuse_idea": "Study the through-zero FM conditioning and output-level interfaces for an MCU-controlled analog voice; verify calibration and tracking independently.",
+      "source_revision": "5ac175b64d7ddfbd419d93b2bf38d88f6371d16c",
       "content_evidence": [
         {
-          "path": "main/audio/audio_dsp.c",
-          "local": "source-sigprolabs--RadioSonic-Firmware-Core--1.txt",
-          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/e9312f0627afac2d85912ae82b4f1dcb295d055f/main/audio/audio_dsp.c"
+          "path": "kicad_6_docs/VCO_core.kicad_sch",
+          "local": "source-JordanAceto--SSI2130_VCO--0.txt",
+          "url": "https://github.com/JordanAceto/SSI2130_VCO/blob/5ac175b64d7ddfbd419d93b2bf38d88f6371d16c/kicad_6_docs/VCO_core.kicad_sch"
         },
         {
-          "path": "main/audio/channel_fx.c",
-          "local": "source-sigprolabs--RadioSonic-Firmware-Core--4.txt",
-          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/e9312f0627afac2d85912ae82b4f1dcb295d055f/main/audio/channel_fx.c"
+          "path": "kicad_6_docs/tzfm_conditioner.kicad_sch",
+          "local": "source-JordanAceto--SSI2130_VCO--1.txt",
+          "url": "https://github.com/JordanAceto/SSI2130_VCO/blob/5ac175b64d7ddfbd419d93b2bf38d88f6371d16c/kicad_6_docs/tzfm_conditioner.kicad_sch"
         },
         {
-          "path": "main/audio/dsp_effects.c",
-          "local": "source-sigprolabs--RadioSonic-Firmware-Core--3.txt",
-          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/e9312f0627afac2d85912ae82b4f1dcb295d055f/main/audio/dsp_effects.c"
+          "path": "kicad_6_docs/SSI2130_VCO.kicad_pcb",
+          "local": "source-JordanAceto--SSI2130_VCO--2.txt",
+          "url": "https://github.com/JordanAceto/SSI2130_VCO/blob/5ac175b64d7ddfbd419d93b2bf38d88f6371d16c/kicad_6_docs/SSI2130_VCO.kicad_pcb"
         },
         {
-          "path": "CMakeLists.txt",
-          "local": "source-sigprolabs--RadioSonic-Firmware-Core--5.txt",
-          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/e9312f0627afac2d85912ae82b4f1dcb295d055f/CMakeLists.txt"
+          "path": "LICENSE",
+          "local": "source-JordanAceto--SSI2130_VCO--3.txt",
+          "url": "https://github.com/JordanAceto/SSI2130_VCO/blob/5ac175b64d7ddfbd419d93b2bf38d88f6371d16c/LICENSE"
         }
       ],
       "fork": false,
+      "source_file_count": 0,
+      "hardware_design_file_count": 7,
+      "build_files": [],
+      "build_file_count": 0,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "source_file_count": 52,
-      "build_files": [
-        "CMakeLists.txt",
-        "components/rs_student_fx/CMakeLists.txt",
-        "main/CMakeLists.txt",
-        "main/idf_component.yml",
-        "templates/radiosonic-filters-template/CMakeLists.txt"
-      ],
-      "hardware_design_file_count": 0,
-      "build_file_count": 5,
-      "build_files_truncated": false
+      "license_note": "Root license is CC BY 4.0. This is a historical hardware reference, last pushed in 2022; source presence is not a current production or measured-performance claim."
     },
     {
       "rank": 7,
-      "full_name": "r0main-f/G2fresh",
-      "html_url": "https://github.com/r0main-f/G2fresh",
+      "full_name": "mishan/thinksynth",
+      "html_url": "https://github.com/mishan/thinksynth",
       "stars": 2,
       "forks": 0,
-      "pushed_at": "2026-10-20",
+      "pushed_at": "2026-10-22",
       "topic": "Computer-first synth",
-      "description": "Modern Nord Modular G2 editor and emulator (stand-alone + VST3/AU), rebuilt from automated reverse engineering of the original",
+      "description": "Modular software synthesizer and algorithmic composition engine in one graph language. C++/GTK4 desktop, WebAssembly in the browser.",
       "matched_ic_query": false,
       "score": 74,
-      "status_tag": "NEW",
+      "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "The native engine CMake target compiles independent oscillator, low-pass, envelope and mixer modules; env_adsr.cpp implements an ADSR/VCA separate from the DSP563xx emulator.",
+      "content_summary": "grain.cpp implements bounded grain slots, interpolation and deterministic stereo clouds; the granular effect reads a live sample ring and supports freeze.",
       "representative_files": [
-        "engine/modules/env_adsr.cpp",
-        "engine/modules/osc_a.cpp",
-        "engine/modules/flt_lp.cpp",
-        "engine/CMakeLists.txt"
+        "plugins/osc/grain.cpp",
+        "libthink/thSampleRing.h",
+        "dsp/fx/granular.dsp"
       ],
       "portability_value": "medium",
-      "portability_summary": "Extract only native module math and replace graph/parameter containers; the firmware emulator and its ROM-dependent reference tools are not an MCU implementation.",
-      "reuse_idea": "Compare the native envelope stage transitions at control rate against a fixed-buffer MCU implementation, without requiring firmware ROMs in the port.",
-      "source_revision": "b30867f555065e788c6ec87949601bbf749119d5",
+      "portability_summary": "Extract the C++ grain engine and replace graph/plugin plumbing. These .dsp files are Thinksynth graph syntax, not Faust; the eight-second ring needs an explicit MCU memory plan.",
+      "reuse_idea": "Build one fixed-capacity granular voice in Daisy SDRAM and retain deterministic seeding to compare host and MCU output.",
+      "source_revision": "230dd88ee448dab04929381d56cb78e31f8b7e9a",
       "content_evidence": [
         {
-          "path": "engine/modules/env_adsr.cpp",
-          "local": "source-r0main-f--G2fresh--0.txt",
-          "url": "https://github.com/r0main-f/G2fresh/blob/b30867f555065e788c6ec87949601bbf749119d5/engine/modules/env_adsr.cpp"
+          "path": "plugins/osc/grain.cpp",
+          "local": "source-mishan--thinksynth--3.txt",
+          "url": "https://github.com/mishan/thinksynth/blob/230dd88ee448dab04929381d56cb78e31f8b7e9a/plugins/osc/grain.cpp"
         },
         {
-          "path": "engine/modules/osc_a.cpp",
-          "local": "source-r0main-f--G2fresh--6.txt",
-          "url": "https://github.com/r0main-f/G2fresh/blob/b30867f555065e788c6ec87949601bbf749119d5/engine/modules/osc_a.cpp"
+          "path": "libthink/thSampleRing.h",
+          "local": "source-mishan--thinksynth--4.txt",
+          "url": "https://github.com/mishan/thinksynth/blob/230dd88ee448dab04929381d56cb78e31f8b7e9a/libthink/thSampleRing.h"
         },
         {
-          "path": "engine/modules/flt_lp.cpp",
-          "local": "source-r0main-f--G2fresh--7.txt",
-          "url": "https://github.com/r0main-f/G2fresh/blob/b30867f555065e788c6ec87949601bbf749119d5/engine/modules/flt_lp.cpp"
-        },
-        {
-          "path": "engine/CMakeLists.txt",
-          "local": "source-r0main-f--G2fresh--4.txt",
-          "url": "https://github.com/r0main-f/G2fresh/blob/b30867f555065e788c6ec87949601bbf749119d5/engine/CMakeLists.txt"
+          "path": "dsp/fx/granular.dsp",
+          "local": "source-mishan--thinksynth--0.txt",
+          "url": "https://github.com/mishan/thinksynth/blob/230dd88ee448dab04929381d56cb78e31f8b7e9a/dsp/fx/granular.dsp"
         }
       ],
       "fork": false,
-      "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "source_file_count": 326,
+      "source_file_count": 625,
+      "hardware_design_file_count": 0,
       "build_files": [
         "CMakeLists.txt",
-        "bridge/CMakeLists.txt",
-        "clavia/CMakeLists.txt",
-        "core/CMakeLists.txt",
-        "emu/CMakeLists.txt",
-        "engine/CMakeLists.txt",
+        "libthink/CMakeLists.txt",
+        "mcp/package.json",
         "plugin/CMakeLists.txt",
-        "proto/CMakeLists.txt",
-        "tests/CMakeLists.txt",
-        "tools/audiopath/CMakeLists.txt",
-        "tools/benchpack/CMakeLists.txt",
-        "tools/g2audio/CMakeLists.txt",
-        "tools/g2tool/CMakeLists.txt",
-        "tools/plugintest/CMakeLists.txt",
-        "tools/render/CMakeLists.txt",
-        "usb/CMakeLists.txt"
+        "plugins/CMakeLists.txt",
+        "scripts/CMakeLists.txt",
+        "src/CMakeLists.txt",
+        "wasm/CMakeLists.txt",
+        "wasm/web/CMakeLists.txt",
+        "wasm/web/package.json"
       ],
-      "hardware_design_file_count": 0,
-      "build_file_count": 16,
-      "build_files_truncated": false
+      "build_file_count": 10,
+      "build_verification": "NOT_RUN",
+      "hardware_verification": "NOT_RUN"
     },
     {
       "rank": 8,
-      "full_name": "askz/unrack",
-      "html_url": "https://github.com/askz/unrack",
-      "stars": 2,
-      "forks": 0,
-      "pushed_at": "2026-10-15",
-      "topic": "Embedded control integration",
-      "description": "Open-source control software for rack DSPs with Windows-only editors. Use it from Chrome/Edge over USB, on Android, or over Wi-Fi from any phone or browser by plugging in an ESP32-S3 board that costs under $10. Supports the t.racks DSP 4x4 Mini Pro; more devices welcome.",
+      "full_name": "shakfu/cyfaust",
+      "html_url": "https://github.com/shakfu/cyfaust",
+      "stars": 10,
+      "forks": 1,
+      "pushed_at": "2026-10-21",
+      "topic": "Computer-first DSP",
+      "description": "A cross-platform cython wrapper of the faust interpreter with rtaudio.",
       "matched_ic_query": false,
-      "score": 74,
-      "status_tag": "NEW",
-      "content_value": "medium",
-      "content_summary": "dsp_gate.c serializes device transactions through FreeRTOS queues; dsp_proto.c validates and decodes reports; web biquad code computes the displayed EQ response.",
+      "score": 73,
+      "status_tag": "RETURNING",
+      "content_value": "strong",
+      "content_summary": "Cython wraps libfaust interpreter factories and compute buffers; concrete interpreter tests and CMake targets support a host prototyping workflow.",
       "representative_files": [
-        "firmware/main/dsp_gate.c",
-        "firmware/main/dsp_proto.c",
-        "web/src/eq/biquad.ts",
-        "firmware/CMakeLists.txt"
+        "src/cyfaust/interp.pyx",
+        "tests/test_cyfaust_interp.py",
+        "CMakeLists.txt"
       ],
       "portability_value": "medium",
-      "portability_summary": "This is control/integration firmware, not an audio-rendering kernel. The bounded request gate and protocol parser are useful for a Daisy/Teensy front panel; replace ESP32 USB/network tasks.",
-      "reuse_idea": "Reuse the single outstanding transaction and reply-routing design for a codec/DSP control bridge, keeping web requests away from the real-time audio path.",
-      "source_revision": "41cc12f8e1f0be6c82d24c503ec41a1371ccbbe5",
+      "portability_summary": "Use on the development computer to exercise DSP before exporting generated target code. Python, Cython and interpreter factory allocation are not the MCU payload.",
+      "reuse_idea": "Create repeatable host input/output fixtures for a Faust kernel and compare them with a separately generated Daisy build.",
+      "source_revision": "b4f8f169cc87ecd42d3686144251f269f34648b4",
       "content_evidence": [
         {
-          "path": "firmware/main/dsp_gate.c",
-          "local": "source-askz--unrack--1.txt",
-          "url": "https://github.com/askz/unrack/blob/41cc12f8e1f0be6c82d24c503ec41a1371ccbbe5/firmware/main/dsp_gate.c"
+          "path": "src/cyfaust/interp.pyx",
+          "local": "source-shakfu--cyfaust--0.txt",
+          "url": "https://github.com/shakfu/cyfaust/blob/b4f8f169cc87ecd42d3686144251f269f34648b4/src/cyfaust/interp.pyx"
         },
         {
-          "path": "firmware/main/dsp_proto.c",
-          "local": "source-askz--unrack--3.txt",
-          "url": "https://github.com/askz/unrack/blob/41cc12f8e1f0be6c82d24c503ec41a1371ccbbe5/firmware/main/dsp_proto.c"
+          "path": "tests/test_cyfaust_interp.py",
+          "local": "source-shakfu--cyfaust--2.txt",
+          "url": "https://github.com/shakfu/cyfaust/blob/b4f8f169cc87ecd42d3686144251f269f34648b4/tests/test_cyfaust_interp.py"
         },
         {
-          "path": "web/src/eq/biquad.ts",
-          "local": "source-askz--unrack--0.txt",
-          "url": "https://github.com/askz/unrack/blob/41cc12f8e1f0be6c82d24c503ec41a1371ccbbe5/web/src/eq/biquad.ts"
-        },
-        {
-          "path": "firmware/CMakeLists.txt",
-          "local": "source-askz--unrack--4.txt",
-          "url": "https://github.com/askz/unrack/blob/41cc12f8e1f0be6c82d24c503ec41a1371ccbbe5/firmware/CMakeLists.txt"
+          "path": "CMakeLists.txt",
+          "local": "source-shakfu--cyfaust--1.txt",
+          "url": "https://github.com/shakfu/cyfaust/blob/b4f8f169cc87ecd42d3686144251f269f34648b4/CMakeLists.txt"
         }
       ],
       "fork": false,
+      "source_file_count": 53,
+      "hardware_design_file_count": 0,
+      "build_files": [
+        "CMakeLists.txt",
+        "Makefile",
+        "pyproject.toml",
+        "resources/architecture/clap/Makefile",
+        "resources/architecture/cmajor/Makefile",
+        "resources/architecture/daisy/Makefile",
+        "resources/architecture/esp32/CMakeLists.txt",
+        "resources/architecture/esp32/drivers/ac101/CMakeLists.txt",
+        "resources/architecture/esp32/drivers/es8388/CMakeLists.txt",
+        "resources/architecture/esp32/drivers/wm8978/CMakeLists.txt",
+        "resources/architecture/esp32/gramo-bt-midi/CMakeLists.txt",
+        "resources/architecture/esp32/gramo-bt-midi/Makefile"
+      ],
+      "build_file_count": 20,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "source_file_count": 123,
-      "build_files": [
-        "firmware/CMakeLists.txt",
-        "firmware/main/CMakeLists.txt",
-        "firmware/main/idf_component.yml",
-        "firmware/test/Makefile",
-        "web/package.json"
-      ],
-      "hardware_design_file_count": 0,
-      "build_file_count": 5,
-      "build_files_truncated": false
+      "license_note": "Project wrapper code is MIT; its LICENSE explicitly preserves separate terms for wrapped and third-party code. This is distinct host tooling adjacent to Faust, not another synthesis kernel."
     },
     {
       "rank": 9,
-      "full_name": "orth4x0r/ilanaSynth",
-      "html_url": "https://github.com/orth4x0r/ilanaSynth",
-      "stars": 1,
+      "full_name": "RaviKachhwaha/AuraForge-50X",
+      "html_url": "https://github.com/RaviKachhwaha/AuraForge-50X",
+      "stars": 0,
       "forks": 0,
-      "pushed_at": "2026-10-20",
-      "topic": "Computer-first synth",
-      "description": "A physical-hybrid synthesizer: strings, bows, hammers and pianos you can break, plus wavetable, FM / DX7, granular and sample engines, 39 filters and a 41-type FX rack. VST3 / CLAP / AU. JUCE C++.",
-      "matched_ic_query": false,
-      "score": 72,
-      "status_tag": "NEW",
-      "content_value": "strong",
-      "content_summary": "FilterCore.h supplies nonlinear TPT/oversampling helpers; FilterModels2.h contains per-sample state-variable and circuit-model filters; Biquad.h separates plain coefficients from the response display.",
-      "representative_files": [
-        "src/dsp/FilterCore.h",
-        "src/dsp/FilterModels2.h",
-        "src/dsp/Biquad.h"
-      ],
-      "portability_value": "medium",
-      "portability_summary": "Small filter classes are separable, but JUCE helpers, double-precision nonlinear solves and oversampling need replacement or a measured MCU budget.",
-      "reuse_idea": "Start with one state-variable filter and fixed state; add nonlinear models only after measuring worst-case iterations and oversampling cost.",
-      "source_revision": "7608d152f295fdef3a52d2c60b24d5099d3a2897",
-      "content_evidence": [
-        {
-          "path": "src/dsp/FilterCore.h",
-          "local": "source-orth4x0r--ilanaSynth--2.txt",
-          "url": "https://github.com/orth4x0r/ilanaSynth/blob/7608d152f295fdef3a52d2c60b24d5099d3a2897/src/dsp/FilterCore.h"
-        },
-        {
-          "path": "src/dsp/FilterModels2.h",
-          "local": "source-orth4x0r--ilanaSynth--3.txt",
-          "url": "https://github.com/orth4x0r/ilanaSynth/blob/7608d152f295fdef3a52d2c60b24d5099d3a2897/src/dsp/FilterModels2.h"
-        },
-        {
-          "path": "src/dsp/Biquad.h",
-          "local": "source-orth4x0r--ilanaSynth--1.txt",
-          "url": "https://github.com/orth4x0r/ilanaSynth/blob/7608d152f295fdef3a52d2c60b24d5099d3a2897/src/dsp/Biquad.h"
-        }
-      ],
-      "fork": false,
-      "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "license_note": "The included Airwindows material has a component MIT license; no root license was found in the inspected tree, so broader reuse permissions remain unverified.",
-      "source_file_count": 331,
-      "build_files": [
-        "CMakeLists.txt"
-      ],
-      "hardware_design_file_count": 0,
-      "build_file_count": 1,
-      "build_files_truncated": false
-    },
-    {
-      "rank": 10,
-      "full_name": "bogggare567/abcTrain",
-      "html_url": "https://github.com/bogggare567/abcTrain",
-      "stars": 10,
-      "forks": 0,
-      "pushed_at": "2026-10-20",
-      "topic": "Computer-first effects",
-      "description": "Ear training for audio engineers: practise frequency, dynamics, space and tone, then apply what you hear with real EQ, compressor & reverb plugins. Free \u00b7 macOS \u00b7 Windows \u00b7 Linux.",
+      "pushed_at": "2026-10-28",
+      "topic": "ESP32 audio",
+      "description": "A 4-layer programmable PCB board audio platform featuring an ESP32 DSP core, 50Hz Wi-Fi CSI radar, 2x50W TPA3116D2 Class-D amp, hybrid dual-rail power (10A TPS61088 3.7V-to-12V boost & 12\u201321V DC jack), 3A USB-C fast charging, BMS protection & Cyberpunk Web HUD. This is more than an amp, a complete wireless sound computer.",
       "matched_ic_query": false,
       "score": 70,
       "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "CompressorEngine.h has a custom soft-knee gain computer and attack/release smoothing; ReverbEngine.h contains distinct FDN, plate and spring paths; EQCoefficients.h exposes filter formulas.",
+      "content_summary": "DspEngine.cpp implements biquad EQ and a radix-2 FFT; main.cpp connects A2DP input to processAudioBlock. Editable schematic and populated PCB data accompany PlatformIO firmware.",
       "representative_files": [
-        "shared/dsp/CompressorEngine.h",
-        "shared/dsp/ReverbEngine.h",
-        "shared/dsp/EQCoefficients.h",
-        "shared/audio/TestSignalGenerator.h"
+        "firmware/src/DspEngine.cpp",
+        "firmware/src/main.cpp",
+        "firmware/platformio.ini",
+        "hardware/AuraForge_50X.kicad_pcb"
       ],
-      "portability_value": "medium",
-      "portability_summary": "The DSP is real despite the training UI; isolate the compressor first, replace JUCE buffer/math helpers, and budget delay memory before attempting the reverbs.",
-      "reuse_idea": "Move the soft-knee compressor to a fixed stereo block and preserve gain-reduction telemetry for a hardware meter.",
-      "source_revision": "8937daf937e75ba8b275a5074a1f2e55c99c3fb4",
+      "portability_value": "high",
+      "portability_summary": "The scalar EQ is separable; replace ESP32 Bluetooth, I2S, task and web configuration paths. Hardware assembly and callback correctness were not tested.",
+      "reuse_idea": "Extract one peaking section, verify coefficient and sample-rate behavior with a sine sweep, then move parameter updates outside the audio callback.",
+      "source_revision": "698a9356e635ba59ab984ef294aa89f5a79c1715",
       "content_evidence": [
         {
-          "path": "shared/dsp/CompressorEngine.h",
-          "local": "source-bogggare567--abcTrain--4.txt",
-          "url": "https://github.com/bogggare567/abcTrain/blob/8937daf937e75ba8b275a5074a1f2e55c99c3fb4/shared/dsp/CompressorEngine.h"
+          "path": "firmware/src/DspEngine.cpp",
+          "local": "source-RaviKachhwaha--AuraForge-50X--0.txt",
+          "url": "https://github.com/RaviKachhwaha/AuraForge-50X/blob/698a9356e635ba59ab984ef294aa89f5a79c1715/firmware/src/DspEngine.cpp"
         },
         {
-          "path": "shared/dsp/ReverbEngine.h",
-          "local": "source-bogggare567--abcTrain--5.txt",
-          "url": "https://github.com/bogggare567/abcTrain/blob/8937daf937e75ba8b275a5074a1f2e55c99c3fb4/shared/dsp/ReverbEngine.h"
+          "path": "firmware/src/main.cpp",
+          "local": "source-RaviKachhwaha--AuraForge-50X--1.txt",
+          "url": "https://github.com/RaviKachhwaha/AuraForge-50X/blob/698a9356e635ba59ab984ef294aa89f5a79c1715/firmware/src/main.cpp"
         },
         {
-          "path": "shared/dsp/EQCoefficients.h",
-          "local": "source-bogggare567--abcTrain--6.txt",
-          "url": "https://github.com/bogggare567/abcTrain/blob/8937daf937e75ba8b275a5074a1f2e55c99c3fb4/shared/dsp/EQCoefficients.h"
+          "path": "firmware/platformio.ini",
+          "local": "source-RaviKachhwaha--AuraForge-50X--2.txt",
+          "url": "https://github.com/RaviKachhwaha/AuraForge-50X/blob/698a9356e635ba59ab984ef294aa89f5a79c1715/firmware/platformio.ini"
         },
         {
-          "path": "shared/audio/TestSignalGenerator.h",
-          "local": "source-bogggare567--abcTrain--7.txt",
-          "url": "https://github.com/bogggare567/abcTrain/blob/8937daf937e75ba8b275a5074a1f2e55c99c3fb4/shared/audio/TestSignalGenerator.h"
+          "path": "hardware/AuraForge_50X.kicad_pcb",
+          "local": "source-RaviKachhwaha--AuraForge-50X--4.txt",
+          "url": "https://github.com/RaviKachhwaha/AuraForge-50X/blob/698a9356e635ba59ab984ef294aa89f5a79c1715/hardware/AuraForge_50X.kicad_pcb"
         }
       ],
       "fork": false,
+      "source_file_count": 14,
+      "hardware_design_file_count": 3,
+      "build_files": [
+        "firmware/platformio.ini"
+      ],
+      "build_file_count": 1,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "source_file_count": 311,
+      "license_note": "No root license file was found in the current tree. Keep this as an engineering reference; broader reuse permissions remain unverified."
+    },
+    {
+      "rank": 10,
+      "full_name": "Snipet/FCompressor",
+      "html_url": "https://github.com/Snipet/FCompressor",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-10-28",
+      "topic": "Computer-first effects",
+      "description": "All-in-one compressor plugin for macOS (AU, VST3, Standalone): 14 compressor Modes, from clean digital to VCA, FET, opto, vari-mu and diode bridge, sharing one UI whose curves and meters come from the audio code. C++20, JUCE 8.",
+      "matched_ic_query": false,
+      "score": 70,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "ProgressiveKnee implements a level-dependent gain law with a bounded Newton solve; DualRelease models two release paths; ScFilter separates side-chain shaping.",
+      "representative_files": [
+        "Source/fcdsp/engine/stages/gain/ProgressiveKnee.h",
+        "Source/fcdsp/engine/stages/ballistics/DualRelease.h",
+        "Source/fcdsp/engine/host/ScFilter.h"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "The staged DSP is distinct from the JUCE editor, but four-lane SIMD wrappers, templates and solver cost need scalar or ARM replacements before an MCU port.",
+      "reuse_idea": "Start with the feed-forward knee and dual-release envelope; compare static transfer curves and burst recovery before enabling feedback solves.",
+      "source_revision": "f9d3598d4764d7488f78df5b42e7d883e1cda476",
+      "content_evidence": [
+        {
+          "path": "Source/fcdsp/engine/stages/gain/ProgressiveKnee.h",
+          "local": "source-Snipet--FCompressor--4.txt",
+          "url": "https://github.com/Snipet/FCompressor/blob/f9d3598d4764d7488f78df5b42e7d883e1cda476/Source/fcdsp/engine/stages/gain/ProgressiveKnee.h"
+        },
+        {
+          "path": "Source/fcdsp/engine/stages/ballistics/DualRelease.h",
+          "local": "source-Snipet--FCompressor--5.txt",
+          "url": "https://github.com/Snipet/FCompressor/blob/f9d3598d4764d7488f78df5b42e7d883e1cda476/Source/fcdsp/engine/stages/ballistics/DualRelease.h"
+        },
+        {
+          "path": "Source/fcdsp/engine/host/ScFilter.h",
+          "local": "source-Snipet--FCompressor--0.txt",
+          "url": "https://github.com/Snipet/FCompressor/blob/f9d3598d4764d7488f78df5b42e7d883e1cda476/Source/fcdsp/engine/host/ScFilter.h"
+        }
+      ],
+      "fork": false,
+      "source_file_count": 359,
+      "hardware_design_file_count": 0,
       "build_files": [
         "CMakeLists.txt",
-        "website/package.json"
+        "web/package.json"
       ],
-      "hardware_design_file_count": 0,
       "build_file_count": 2,
-      "build_files_truncated": false
+      "build_verification": "NOT_RUN",
+      "hardware_verification": "NOT_RUN",
+      "license_note": "Root LICENSE is GPLv3."
     }
   ],
   "supplementary_queries_successful": 6,
   "total_queries_successful": 27,
-  "discovery_nonfork_count_before_exclusions": 264,
-  "required_query_nonfork_count_before_exclusions": 251,
+  "discovery_nonfork_count_before_exclusions": 263,
+  "required_query_nonfork_count_before_exclusions": 250,
   "supplementary_query_nonfork_count_before_exclusions": 18,
   "supplementary_overlap_count": 5,
-  "scored_candidate_count": 141,
-  "source_review_completed_at_utc": "2026-10-20T20:53:27.323073+00:00",
+  "scored_candidate_count": 137,
+  "source_review_completed_at_utc": "2026-10-28T17:12:56.928123+00:00",
   "excluded_after_review": {
-    "amsynth/amsynth": "Since October 6: X11 key forwarding and README link only; no meaningful DSP, target or build improvement for embedded reuse.",
-    "aesuf/SSI2130-Oscillator": "Pinned circuit review found unfinished integration and a 52-byte empty SubOscillator PCB; retain as schematic reference, not a ranked implementation.",
-    "WillyBilly06/BDK-AUDIO-APP": "Root license explicitly proprietary; reviewed permissive decoder component targets host file conversion, while advertised DSP paths are LED visuals. No distinct reusable embedded audio core beyond the separately ranked firmware.",
-    "spandit69/nest-audio-pcb": "Pinned schematic contains placeholder Audio/Power/MCU/IO boxes with no circuit or routed PCB; BOM and ESPHome config do not substantiate the drop-in hardware claims.",
-    "reneweller-coding/Totality": "Near-duplicate of October 6 Ephemeris: Reverb.cpp explicitly records copying its FDN core from Ephemeris. Hold pending a distinct embedded adaptation beyond the recently featured shared core."
+    "audaudio/aud_dsp_mi": "Inspected native C implementation is the generated Flutter FFI sum/sum_long_running example, including a simulated five-second sleep; no project-specific audio/DSP implementation.",
+    "animatek/Animatek-NME": "Current CMake and MIDI source implement a Nord editor/control bridge; no separable audio-rendering kernel was found in the inspected implementation.",
+    "WillyBilly06/BDK-AUDIO-APP": "Root license is explicitly proprietary and inspected DSP files implement LED visuals, not a distinct reusable embedded audio-rendering core.",
+    "aesuf/SSI2130-Oscillator": "Current pinned source still contains a 52-byte dummy SubOscillator PCB. Keep the real schematic as a research reference; unfinished circuit integration is not a ranked hardware implementation.",
+    "jakubthedeveloper/Samplotron": "Inside the 30-day window since September 30: inspected changes only add SD scan logging; no material audio, target, storage implementation or build delta justifies a repeat."
   },
   "previously_featured": [
     {
       "full_name": "grame-cncm/faust",
-      "pushed_at": "2026-10-20",
+      "pushed_at": "2026-10-28",
       "status": "Updated"
-    },
-    {
-      "full_name": "amsynth/amsynth",
-      "pushed_at": "2026-10-11",
-      "status": "Updated"
-    },
-    {
-      "full_name": "Orastron/brickworks",
-      "pushed_at": "2026-09-30",
-      "status": "No change"
     },
     {
       "full_name": "reales/retromulator",
-      "pushed_at": "2026-10-20",
+      "pushed_at": "2026-10-28",
       "status": "Updated"
     },
     {
-      "full_name": "ZorakAudio/ZorakAudio-Experimental-Plugins",
-      "pushed_at": "2026-10-09",
-      "status": "Updated"
-    },
-    {
-      "full_name": "jbschooley/Virtual-FM-1",
-      "pushed_at": "2026-10-16",
-      "status": "Updated"
-    },
-    {
-      "full_name": "t-dsp/t-dsp_software",
-      "pushed_at": "2026-10-02",
+      "full_name": "Alxdreee/TYPE-2",
+      "pushed_at": "2026-10-19",
       "status": "No change"
     },
     {
-      "full_name": "estuariolabs/tolhuin-chord",
-      "pushed_at": "2026-10-04",
+      "full_name": "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+      "pushed_at": "2026-10-20",
       "status": "No change"
     },
     {
-      "full_name": "reneweller-coding/Ephemeris",
-      "pushed_at": "2026-10-20",
+      "full_name": "palmerr23/control_TLV320AIC3104",
+      "pushed_at": "2026-10-17",
+      "status": "No change"
+    },
+    {
+      "full_name": "sigprolabs/RadioSonic-Firmware-Core",
+      "pushed_at": "2026-10-27",
       "status": "Updated"
     },
     {
-      "full_name": "lexslo/delazed",
-      "pushed_at": "2026-09-29",
+      "full_name": "r0main-f/G2fresh",
+      "pushed_at": "2026-10-25",
+      "status": "Updated"
+    },
+    {
+      "full_name": "askz/unrack",
+      "pushed_at": "2026-10-15",
+      "status": "No change"
+    },
+    {
+      "full_name": "orth4x0r/ilanaSynth",
+      "pushed_at": "2026-10-28",
+      "status": "Updated"
+    },
+    {
+      "full_name": "bogggare567/abcTrain",
+      "pushed_at": "2026-10-20",
       "status": "No change"
     }
   ]

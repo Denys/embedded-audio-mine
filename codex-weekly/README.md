@@ -29,4 +29,4 @@ The WebGPT daily lane should likewise watch this folder, especially `data/repo_f
 
 ## Imported snapshot
 
-The Codex weekly archive is current through `2026-10-20` with its Markdown and JSON state. The current run completed 21 required and six supplementary SSI queries; all ten ranked entries have pinned source evidence. Builds, flashing and hardware tests were not run (NOT_RUN). Future imports should keep this layout and refresh the shared common index.
+The Codex weekly archive is current through `2026-10-28` with its Markdown and JSON state. The current run completed 21 required and six supplementary SSI queries; all ten ranked entries have pinned source evidence. Builds, flashing and hardware tests were not run (NOT_RUN). Future imports should keep this layout and refresh the shared common index.

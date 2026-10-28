@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "added": [
+    "JordanAceto/SSI2130_VCO",
+    "MrDesjardins/audiorouter",
+    "RaviKachhwaha/AuraForge-50X",
+    "Snipet/FCompressor",
+    "mishan/thinksynth",
+    "palmerr23/Teensy8x8AudioBoard",
+    "shakfu/cyfaust",
+    "sophiapoirier/destroyfx"
+  ],
+  "removed": [
+    "Alxdreee/TYPE-2",
+    "WillyBilly06/esp32-a2dp-sink-with-LDAC-APTX-AAC",
+    "askz/unrack",
+    "bogggare567/abcTrain",
+    "orth4x0r/ilanaSynth",
+    "palmerr23/control_TLV320AIC3104",
+    "r0main-f/G2fresh",
+    "sigprolabs/RadioSonic-Firmware-Core"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "reales/retromulator"
+  ]
+}
