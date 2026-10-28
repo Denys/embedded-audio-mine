@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-10-27
+last_updated: 2026-10-28
 
 shared:
   anti_repeat_window_days: 30
@@ -92,22 +92,22 @@ codex_weekly:
   note: 21 required plus six bare SSI searches; pinned source review; no inferred feedback or candidate builds; runner rule proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-10-27
-  source_review_completed: 2026-10-27
-  last_successful_scan: 2026-10-27
-  overlap_start: 2026-10-24
-  anti_repeat_cutoff: 2026-09-27
+  latest_digest_date: 2026-10-28
+  source_review_completed: 2026-10-28
+  last_successful_scan: 2026-10-28
+  overlap_start: 2026-10-25
+  anti_repeat_cutoff: 2026-09-28
   last_main_sha: 1db242187baf60f48706910adb5b2dbc48e8e305
   explicit_questionnaire_answers: {}
   selected_this_run:
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       lane: STRONG_PASS
-      reason: material_repeat_gain_staging_master_limiter_dbfs_metering_and_knob_pickup_fix
-      repeat_block_until: 2026-11-26
+      reason: material_repeat_multisample_import_pipeline_and_measured_realtime_budget_architecture
+      repeat_block_until: 2026-11-27
   recheck_queue:
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       status: published_material_repeat
-      blocker: wait until 2026-11-26 unless a Field target new engine independent measurement or another release-level audio architecture or critical state-integrity delta appears
+      blocker: wait until 2026-11-27 unless a Field target new engine independent measurement or another release-level DSP storage or real-time architecture delta appears
     - project: nzimas/bigorna
       status: published_reference
       blocker: wait until 2026-11-24 unless a tagged release new DSP engine or stronger hardware timing measurement appears
@@ -136,20 +136,21 @@ daisy_teensy_watch:
       status: hold
       blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
   next_run_rule_change:
-    date: 2026-10-27
+    date: 2026-10-28
     stream: daisy_teensy_watch
-    status: proposed_not_implemented
+    status: validated_once_not_implemented
     change: compare the latest alerted tag against the current primary release feed for repositories published in the prior 48 hours
     failure_mode_fixed: same-day releases posted after the previous scan can be missed or collapsed into forum activity
     expected_improvement: detect material rapid release trains while retaining exact event dates and assets
     regression_risk: noisy cosmetic patch tags could create excessive repeats
-    test_case: PZD v3.3.0 to v3.4.0/v3.4.1 versus a README-only patch tag
-    acceptance_criteria: repeat only when compare and primary release evidence show DSP target asset measurement architecture or critical audio-state integrity value
-    keep_or_remove_decision: validate on the next two daily overlaps before making durable
+    test_case: PZD v3.4.1 to v3.4.2/v3.5.0 versus submodule bumps or README-only patch tags
+    acceptance_criteria: repeat only when compare and primary release evidence show DSP storage target asset measurement architecture or critical audio-state integrity value
+    keep_or_remove_decision: validated on PZD release train; test on two further overlaps before making durable
   next_run_search_debt:
     - resolve the canonical PJRC UAC2 thread URL and require a linked repository or reproducible source
-    - recheck PZD only after 2026-11-26 unless a Field target engine independent measurement release-level audio architecture or critical state-integrity delta appears
+    - recheck PZD only after 2026-11-27 unless a Field target engine independent measurement or release-level DSP storage or real-time architecture delta appears
     - require a canonical Mirth v1.1.0 tag or asset before reconsidering the October 25 source-only commits
+    - recheck rainybit-code/spore only after a tag newer than v0.5.4; submodule bumps alone do not qualify
     - recheck Oopsy only from a current primary tag release or substantive commit rather than cached prerelease listings
     - continue narrow GitLab SourceHut Codeberg and personal-site dated-artifact searches
   note: forum and index activity remain discovery-only; verify event dates release assets source build license and hardware evidence on primary pages
