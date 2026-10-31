@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "added": [
+    "cucuwritescode/adac",
+    "Na1w/infinitedsp",
+    "scjurgen/AbacDsp",
+    "Carrieukie/WavetableSynthesizer",
+    "ayutaz/tiny-formant-synth",
+    "mkaudio-company/libmksim",
+    "chalkwalk/chalkwalk-tape",
+    "clovesrodrigues/AUDIO_DSP",
+    "xikxp1/bs2b"
+  ],
+  "removed": [
+    "madrona-labs/madronalib",
+    "Signalsmith-Audio/dsp",
+    "hasenbanck/resampler",
+    "CuteDSP/RSCuteDSP",
+    "CristianMoresi/DSPark",
+    "SpotlightKid/adt",
+    "tpt-solutions/tpt-dsp",
+    "Ion3rik/JonssonicDSP",
+    "khenderson20/sonic-forge-dsp"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}
