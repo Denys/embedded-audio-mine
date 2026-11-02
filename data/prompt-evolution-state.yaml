@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-01
+last_updated: 2026-11-02
 
 shared:
   anti_repeat_window_days: 30
@@ -102,19 +102,22 @@ codex_weekly:
     feedback: no explicit answers; existing proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-01
-  source_review_completed: 2026-11-01
-  last_successful_scan: 2026-11-01
-  overlap_start: 2026-10-29
-  anti_repeat_cutoff: 2026-10-02
-  last_main_sha: 09ec1eac5b04babacbf809fe58a2e1a86d1f6fcd
+  latest_digest_date: 2026-11-02
+  source_review_completed: 2026-11-02
+  last_successful_scan: 2026-11-02
+  overlap_start: 2026-10-30
+  anti_repeat_cutoff: 2026-10-03
+  last_main_sha: f1eb91044db9e288b6b5ce5a82359fa51e5586d4
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: nzimas/bigorna
+    - project: ejtb76/amenity
       lane: REF_PASS
-      reason: material_repeat_persistent_subtracks_per_lane_sidechain_and_backward_compatible_state_architecture
-      repeat_block_until: 2026-12-01
+      reason: first_v1_fm1_package_with_burst_clock_pll_host_timing_tests_and_reproducible_build
+      repeat_block_until: 2026-12-02
   recheck_queue:
+    - project: ejtb76/amenity
+      status: published_reference
+      blocker: wait until 2026-12-02 unless a new hardware target release-level DSP architecture independent hardware measurement or material resolution of the bundled-sample rights boundary appears
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       status: published_material_repeat
       blocker: wait until 2026-11-29 unless a Field target new engine independent measurement or another release-level DSP storage or real-time architecture delta appears
@@ -146,24 +149,25 @@ daisy_teensy_watch:
       status: hold
       blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
   next_run_rule_change:
-    date: 2026-11-01
+    date: 2026-11-02
     stream: daisy_teensy_watch
     status: validated_twice_keep_temporary
-    change: compare the latest alerted revision against current primary release and commit feeds for repositories published in the prior 72 hours
-    failure_mode_fixed: rapid release trains and untagged packaged builds can be missed or collapsed into forum and index activity
-    expected_improvement: detect material post-alert architecture changes while retaining exact event dates assets and source diffs
-    regression_risk: high-frequency projects can dominate with cosmetic builds
-    test_case: Bigorna build 69 to builds 79/80 versus its website-only and logo commits
-    acceptance_criteria: repeat only when source compare plus package or hardware evidence shows DSP storage target measurement architecture or critical audio-state integrity value
-    keep_or_remove_decision: retained temporarily after PZD Mirth and Bigorna; require one more independent project before making durable
+    change: require a primary tag or commit date plus package/build evidence and explicit third-party asset rights review before promoting a dated aggregator lead
+    failure_mode_fixed: fresh index dates can hide stale code while bundled media can make an otherwise open firmware unsafe to redistribute
+    expected_improvement: retain low-SEO discovery value without mistaking index freshness for a release or overlooking licence boundaries
+    regression_risk: adjacent projects with strong reusable architecture can consume attention despite no Daisy or Teensy target
+    test_case: Amenity v1.0.0 primary tag and assets versus the altstrument index date; T-DSP forum resurfacing versus its July publication record
+    acceptance_criteria: promote only when primary event date source/build package and licence boundaries are verified and the adaptation value is concrete
+    keep_or_remove_decision: retained temporarily; test on the next independent adjacent release
   next_run_search_debt:
+    - recheck Amenity only after 2026-12-02 unless a new target DSP architecture measurement or rights-resolution delta appears
     - resolve the canonical PJRC contactless-keyboard and UAC2 thread URLs and require linked repositories or reproducible source
     - recheck PZD only after 2026-11-29 unless its canonical feed shows another release-level material delta
     - recheck Mirth only after 2026-11-30 unless its canonical feed shows another release-level material delta
     - recheck Bigorna only after 2026-12-01 unless a new engine measurement target or major architecture delta appears
-    - recheck Oopsy only from a current primary tag release or substantive commit rather than cached prerelease listings
-    - continue narrow GitLab SourceHut Codeberg and personal-site dated-artifact searches
-  note: forum and index activity remain discovery-only; verify event dates release assets source build license and hardware evidence on primary pages
+    - treat T-DSP forum activity as a stale resurfacing unless its repositories show a post-July material event
+    - continue narrow GitLab SourceHut Codeberg personal-site and dated-artifact searches
+  note: forum aggregator and index activity remain discovery-only; verify event dates release assets source build licence third-party rights and hardware evidence on primary pages
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
   latest_digest_date: 2026-10-26
