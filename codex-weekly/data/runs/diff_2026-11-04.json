@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-04",
+  "added": [
+    "JordanAceto/micro-pico",
+    "benjamindehli/overtonium",
+    "jakubthedeveloper/Samplotron",
+    "juzzlin/Noteahead",
+    "mearxl/Korg-MS20-Synth",
+    "odoare/Camshaft",
+    "oikoaudio/oikoaudio",
+    "src3453/3HSPlug"
+  ],
+  "removed": [
+    "JordanAceto/SSI2130_VCO",
+    "MrDesjardins/audiorouter",
+    "RaviKachhwaha/AuraForge-50X",
+    "Snipet/FCompressor",
+    "mishan/thinksynth",
+    "palmerr23/Teensy8x8AudioBoard",
+    "shakfu/cyfaust",
+    "sophiapoirier/destroyfx"
+  ],
+  "changed": [
+    "grame-cncm/faust",
+    "reales/retromulator"
+  ]
+}
