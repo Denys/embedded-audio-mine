@@ -14,6 +14,16 @@
 - Le date Exa e le reply dei forum sono state usate solo come lead. Ogni promozione è ancorata a release o commit primario, sorgenti, build/flash, licenza e hardware dichiarato.
 - Nessun finding era già presente in published, selected, common index o history settimanali. PZD resta bloccato fino al 5 dicembre: nessun delta successivo a v3.6.0.
 
+
+### Discovery audit
+
+- **Profilo:** 'daily_broad'; tre passaggi indipendenti, 28 query e 264 risultati richiesti. Nessun retry, errore di connessione o rate limit.
+- **Famiglie di query:** Daisy forum Projects/Examples e Latest/Software; PJRC Audio Projects e thread correlati; GitHub release; GitHub commit; Daisy Field/adattamento; Teensy 4.x/Audio Library; pagine progetto/host alternativi; recheck dei lead noti.
+- **Domini e classi effettivamente coperti:** 'community.daisy.audio' e 'forum.pjrc.com' (forum); 'github.com' (repository, release, commit e asset); 'altstrument.org' e pagine progetto (indici/changelog); query mirate a Codeberg, GitLab e host personali. I finding pubblicati dipendono da pagine primarie GitHub, non dall'indicizzazione.
+- **Registry revalidato:** Daisy Community Projects/Examples, altstrument recent firmware e PZD sono stati ricontrollati; reply e date d'indice sono rimaste discovery-only. I quattro nuovi repository sono stati aggiunti al registry dopo verifica primaria.
+- **Bilanciamento:** il pool ha incluso firmware Daisy, Teensy, hardware/carrier, tool visuali, simulatori e target adiacenti. Quattro finding indipendenti hanno superato la soglia; cinque lead concreti sono stati esclusi o messi in HOLD per licenza, data o mancanza di un evento audio.
+- **Stop rule:** chiusa la discovery solo dopo copertura delle tre lane richieste, un passaggio GitHub globale e due passaggi di follow-up, verifica di tutti i lead con data post-overlap e assenza di candidati irrisolti sopra la soglia. Il candidato più vicino, 'seed-patcher', resta HOLD esplicito.
+
 ## Finding qualificati
 
 ### 1. Athanor v0.4.0 — STRONG_PASS
@@ -94,3 +104,27 @@
 - [GLOOP repository](https://github.com/joebmz98/GLOOP) · [firmware README](https://github.com/joebmz98/GLOOP/blob/main/src/gloop_fw/README.md)
 - [Rodeo repository](https://github.com/dotrodeo/rodeo) · [SDK](https://github.com/dotrodeo/rodeo/tree/main/rodeo-sdk)
 - [ichosynth repository](https://github.com/luigismith/ichosynth) · [release v1.0](https://github.com/luigismith/ichosynth/releases/tag/v1.0)
+
+
+## Previous questionnaire feedback applied
+
+Nessuna risposta esplicita è registrata. Restano attivi hard anti-repeat, priorità ai progetti community con artefatti primari e Daisy Field come target di adattamento senza compatibilità presunta.
+
+## Prompt improvement for next run
+
+- **Migliorato:** la separazione tra forum, GitHub e pagine alternative ha evitato di scambiare reply recenti per release e ha fatto emergere sia firmware sia correzioni hardware.
+- **Debole:** i repository appena creati possono mostrare molti commit in poche ore; il volume non sostituisce release, licenza o prova hardware.
+- **Regola temporanea:** mantenere il requisito di evento primario più almeno una dimensione strutturale — DSP/grafo, real-time, stato migrabile, target o misura — e aggiungere licenza esplicita come gate per i nuovi proof-of-concept.
+- **Recheck:** Athanor, GLOOP, Rodeo e ichosynth bloccati fino al 2026-12-06 salvo i delta elencati nello stato; PZD resta bloccato fino al 2026-12-05.
+- **Delta compatto:** 'Athanor release; GLOOP DSP; Rodeo engine/SDK; ichosynth physical-clearance validation'.
+
+## Feedback / Tuning Questionnaire
+
+Nessuna risposta è richiesta; il silenzio non modifica le preferenze. Risposta compatta possibile: 'Q1=B Q2=C Q3=A Q4=B Q5=A Q6=C'.
+
+- **Q1 — Direzione:** A continua così; B più verifica dei diff; C soglia novità più alta; D più finding quando reggono.
+- **Q2 — Ecosistema:** A più Daisy; B più Teensy; C bilanciato; D più adiacenti adattabili.
+- **Q3 — Valore:** A clock/jitter/delay; B UI/preset/storage; C audio I/O; D hardware aperto.
+- **Q4 — Evidenza:** A richiedere asset taggato; B accettare source diff/build/test; C privilegiare misure hardware.
+- **Q5 — Repeat:** A mantenere override solo per delta materiale; B solo release maggiore/target; C anche fix audio-state critici.
+- **Q6 — Fonti:** A Daisy forum; B PJRC; C GitHub release/compare; D host alternativi; E pagine personali/indici low-SEO.
