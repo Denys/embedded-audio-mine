@@ -179,6 +179,12 @@ daisy_teensy_watch:
     - project: curiosa/sereia
       status: stale_lead
       blocker: source and forja build path are concrete but latest canonical commit is 2026-06-16; require a post-overlap firmware or hardware event
+    - project: FrankBoesing/ESP-beatsy-Audio-Library
+      status: hold
+      blocker: oscillator restart API alone remains below the repeat threshold after recent transport-backend coverage
+    - project: NorfolkHacker/acid-fm
+      status: hold
+      blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
   next_run_rule_change:
     date: 2026-11-06
     stream: daisy_teensy_watch
@@ -187,19 +193,24 @@ daisy_teensy_watch:
     failure_mode_fixed: high-cadence repositories can turn every tag into an alert even when reuse value is unchanged
     expected_improvement: admit structural firmware releases while rejecting cosmetic tags and narrow maintenance
     regression_risk: a critical small audio-state fix can be understated when file counts are low
-    test_case: PZD was correctly suppressed after v3.6.0 while Athanor GLOOP Rodeo and ichosynth were admitted as new canonical resources with primary event evidence
+    test_case: PZD was correctly suppressed after v3.6.0 while four new canonical resources with primary event evidence were admitted
     acceptance_criteria: promote only when primary event evidence and at least one structural reuse dimension are verified
     keep_or_remove_decision: retain temporarily and test on the next inside-window repeat
   next_run_search_debt:
     - recheck Athanor GLOOP Rodeo and ichosynth only after 2026-12-06 unless their explicit blockers resolve
+    - keep seed-patcher on hold until it declares a license and establishes a sustained project history
+    - treat Daisy SITL/HITL reply activity as resurfacing until a primary simulator release or commit lands
     - recheck Amenity only after 2026-12-02 unless a new target DSP architecture measurement or rights-resolution delta appears
     - resolve the canonical PJRC contactless-keyboard and UAC2 thread URLs and require linked repositories or reproducible source
     - recheck PZD only after 2026-12-05 unless its canonical feed shows a Field target independent measurement or another release-level DSP storage audio-graph or real-time architecture delta
-    - keep seed-patcher on hold until it declares a license and establishes a sustained project history
-    - treat Daisy SITL/HITL reply activity as resurfacing until a primary simulator release or commit lands
+    - recheck Mirth only after 2026-11-30 unless its canonical feed shows another release-level material delta
+    - recheck Bigorna only after 2026-12-01 unless a new engine measurement target or major architecture delta appears
+    - treat T-DSP forum activity as a stale resurfacing unless its repositories show a post-July material event
+    - record the 2026-11-05 PJRC editorial SD-player resurfacing as non-event unless its linked source gains a current release or target
+    - keep curiosa/sereia stale until Codeberg shows a post-overlap event; latest verified commit remains 2026-06-16
+    - treat oikoaudio/oikoaudio as cross-stream published on 2026-11-04 and do not repeat without a material delta
     - continue narrow GitLab SourceHut Codeberg personal-site and dated-artifact searches
   note: forum aggregator and index activity remain discovery-only; verify event dates release assets source build licence third-party rights and hardware evidence on primary pages
-
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
   latest_digest_date: 2026-10-26
