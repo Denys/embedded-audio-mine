@@ -1,0 +1,318 @@
+{
+  "date": "2026-11-07",
+  "generated_at_utc": "2026-11-07T10:02:37Z",
+  "query_successful_count": 37,
+  "query_count": 37,
+  "shortlist_candidate_count": 11,
+  "unique_nonfork_repo_count": 221,
+  "transport_notes": [
+    "Codeload archive exceeded 64 MiB for cycfi/q",
+    "GitHub API used authenticated token from local environment or gh auth",
+    "Source-reviewed carry restored 13 repositories outside updated-first search windows"
+  ],
+  "previous_digest_file": "2026-10-31 - Weekly Portable Audio DSP GitHub Digest.md",
+  "top_repos": [
+    {
+      "rank": 1,
+      "full_name": "cycfi/q",
+      "html_url": "https://github.com/cycfi/q",
+      "stars": 1449,
+      "forks": 181,
+      "last_push": "2026-11-06",
+      "topic": "DSP library",
+      "score": 3556,
+      "portability_class": "Refactor",
+      "portability_reason": "The reusable q_lib headers are separable from q_io audio-device, stream, and file code, but templates and memory behavior still need Cortex-M7 profiling.",
+      "value_reason": "Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "port_idea": "Start with q_lib biquad, delay, envelope, and oscillator headers; replace q_io with fixed board callbacks and benchmark template size plus denormal behavior.",
+      "license": "MIT",
+      "note": "Re-entry: updated - Q's q_lib contributes reusable biquads, delay lines, envelopes, oscillators, and pitch utilities without requiring its q_io device layer.",
+      "rotation_status": "Re-entry: updated",
+      "summary": "C++ Library for Audio Digital Signal Processing",
+      "evidence": {
+        "source_file_count": 394,
+        "dsp_file_count": 148,
+        "host_file_count": 24,
+        "heavy_file_count": 5,
+        "sample_dsp_paths": [
+          "q_lib/include/q/fx/biquad.hpp",
+          "q_lib/include/q/fx/delay.hpp",
+          "q_lib/include/q/fx/envelope.hpp",
+          "q_lib/include/q/fx/hilbert_quadrature.hpp",
+          "q_lib/include/q/fx/ladder.hpp",
+          "q_lib/include/q/fx/svf.hpp",
+          "q_lib/include/q/midi/processor.hpp",
+          "q_lib/include/q/midi/ump_processor.hpp"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "full_name": "RustAudio/dasp",
+      "html_url": "https://github.com/RustAudio/dasp",
+      "stars": 1198,
+      "forks": 82,
+      "last_push": "2026-01-12",
+      "topic": "DSP library",
+      "score": 2752,
+      "portability_class": "Direct",
+      "portability_reason": "The core crates explicitly support no_std, fixed arrays, borrowed slices and fixed ring buffers; graph and allocation-backed adapters can be left out of the firmware feature set.",
+      "value_reason": "The dual MIT/Apache Rust crates provide no_std frames, sample conversion, fixed or borrowed ring buffers, interpolation, RMS/peak envelopes and allocation-free slice processing as independent modules.",
+      "port_idea": "Build only frame, sample, slice, ring_buffer and linear interpolation with --no-default-features; avoid dasp_graph and allocation-backed signal adapters, which are unnecessary in a fixed callback.",
+      "license": "MIT OR Apache-2.0",
+      "note": "Returning - The dual MIT/Apache Rust crates provide no_std frames, sample conversion, fixed or borrowed ring buffers, interpolation, RMS/peak envelopes and allocation-free slice processing as independent modules.",
+      "rotation_status": "Returning",
+      "summary": "The fundamentals for Digital Audio Signal Processing. Formerly `sample`.",
+      "evidence": {
+        "source_file_count": 60,
+        "dsp_file_count": 8,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "dasp_signal/src/lib.rs",
+          "dasp_interpolate/src/lib.rs",
+          "dasp_ring_buffer/src/lib.rs",
+          "dasp_envelope/src/lib.rs"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "full_name": "Themaister/libfmsynth",
+      "html_url": "https://github.com/Themaister/libfmsynth",
+      "stars": 365,
+      "forks": 29,
+      "last_push": "2020-06-28",
+      "topic": "FM synth",
+      "score": 927,
+      "portability_class": "Refactor",
+      "portability_reason": "A scalar hard-real-time C renderer exists, but eight operators and an 8x8 matrix per voice are expensive, while the optimized NEON code targets ARMv7/8 rather than Cortex-M7.",
+      "value_reason": "The MIT C core supplies eight operators, an arbitrary 8x8 modulation matrix, per-operator envelopes, carrier selection and hard-real-time rendering with scalar and ARM NEON paths.",
+      "port_idea": "Start from the scalar C renderer with one to four voices and four operators, keep its 32-sample control updates, then benchmark whether Teensy 4 M7 scalar throughput makes the ARMv7 NEON path unnecessary.",
+      "license": "MIT",
+      "note": "Returning - The MIT C core supplies eight operators, an arbitrary 8x8 modulation matrix, per-operator envelopes, carrier selection and hard-real-time rendering with scalar and ARM NEON paths.",
+      "rotation_status": "Returning",
+      "summary": "A C library which implements an FM synthesizer",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/fmsynth.c",
+          "include/fmsynth.h",
+          "src/arm/fmsynth_arm.c"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "full_name": "Chowdhury-DSP/chowdsp_wdf",
+      "html_url": "https://github.com/Chowdhury-DSP/chowdsp_wdf",
+      "stars": 196,
+      "forks": 20,
+      "last_push": "2026-07-03",
+      "topic": "DSP library",
+      "score": 562,
+      "portability_class": "Refactor",
+      "portability_reason": "Compile-time wdft trees avoid runtime topology allocation and XSIMD is optional, but nonlinear Omega evaluation and complex R-type circuits require deliberate model and approximation choices.",
+      "value_reason": "The BSD C++14 headers provide compile-time wave-digital circuit trees, diode and diode-pair nonlinearities, R-type adaptors and selectable Wright-Omega approximations used by real pedal models.",
+      "port_idea": "Instantiate one fixed wdft diode clipper or tone stack without XSIMD, choose a lower-order Omega approximation if needed, and update component impedances only at control rate.",
+      "license": "BSD-3-Clause",
+      "note": "Returning - The BSD C++14 headers provide compile-time wave-digital circuit trees, diode and diode-pair nonlinearities, R-type adaptors and selectable Wright-Omega approximations used by real pedal models.",
+      "rotation_status": "Returning",
+      "summary": "Chowdhury DSP Wave Digital Filters Library",
+      "evidence": {
+        "source_file_count": 36,
+        "dsp_file_count": 23,
+        "host_file_count": 2,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/chowdsp_wdf/wdft/wdft.h",
+          "include/chowdsp_wdf/wdft/wdft_nonlinearities.h",
+          "include/chowdsp_wdf/math/omega.h"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "full_name": "PaulBatchelor/sndkit",
+      "html_url": "https://github.com/PaulBatchelor/sndkit",
+      "stars": 148,
+      "forks": 5,
+      "last_push": "2025-01-23",
+      "topic": "DSP library",
+      "score": 386,
+      "portability_class": "Refactor",
+      "portability_reason": "Individual C89 init/tick kernels are small and self-contained, but the repository's default graph/interpreter layer allocates and must be excluded in favor of selected caller-owned modules.",
+      "value_reason": "The MIT/Unlicense literate toolkit tangles self-contained C89 kernels and includes concrete talkbox, PADsynth, Verbity reverb and noise modules that can be extracted independently of its LIL/Graforge host.",
+      "port_idea": "Tangle or copy one sk_* init/tick kernel, move setup allocation into caller-owned state, and exclude the LIL interpreter, graph allocator and FFT-based modules from the first firmware build.",
+      "license": "Unlicense",
+      "note": "Returning - The MIT/Unlicense literate toolkit tangles self-contained C89 kernels and includes concrete talkbox, PADsynth, Verbity reverb and noise modules that can be extracted independently of its LIL/Graforge host.",
+      "rotation_status": "Returning",
+      "summary": "A collection of highly portable audio DSP algorithms, written in ANSI C using literate programming.",
+      "evidence": {
+        "source_file_count": 176,
+        "dsp_file_count": 18,
+        "host_file_count": 0,
+        "heavy_file_count": 8,
+        "sample_dsp_paths": [
+          "extra/talkbox/talkbox.c",
+          "extra/padsynth/padsynth.c",
+          "extra/verbity/verbity.c",
+          "extra/brown/brown.c"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "full_name": "Signalsmith-Audio/elliptic-blep",
+      "html_url": "https://github.com/Signalsmith-Audio/elliptic-blep",
+      "stars": 80,
+      "forks": 1,
+      "last_push": "2025-08-21",
+      "topic": "Core building blocks",
+      "score": 203,
+      "portability_class": "Direct",
+      "portability_reason": "The runtime is one MIT header with fixed pole/state counts; only the constructor's fractional-step vector should become build-time or fixed-capacity storage.",
+      "value_reason": "The MIT single header implements an 11th-order elliptic BLEP for step, impulse and slope discontinuities, including optional all-pass phase compensation and predesigned coefficients.",
+      "port_idea": "Generate the fractional-step pole table at build time or replace its setup vector with a fixed array, then use the residue path for one saw/pulse oscillator and profile the eight complex states.",
+      "license": "MIT",
+      "note": "Returning - The MIT single header implements an 11th-order elliptic BLEP for step, impulse and slope discontinuities, including optional all-pass phase compensation and predesigned coefficients.",
+      "rotation_status": "Returning",
+      "summary": "Code to accompany the ADC24 talk",
+      "evidence": {
+        "source_file_count": 3,
+        "dsp_file_count": 0,
+        "host_file_count": 0,
+        "heavy_file_count": 3,
+        "sample_dsp_paths": [
+          "elliptic-blep.h"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "full_name": "CristianMoresi/DSPark",
+      "html_url": "https://github.com/CristianMoresi/DSPark",
+      "stars": 20,
+      "forks": 1,
+      "last_push": "2026-11-07",
+      "topic": "DSP library",
+      "score": 193,
+      "portability_class": "Refactor",
+      "portability_reason": "Individual header models keep allocation in prepare(), but C++20, dynamic setup storage, calibration work, and optional heavyweight processors require a deliberately small firmware subset.",
+      "value_reason": "The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "port_idea": "Port one TransformerModel or TubePreamp block, preallocate its channel state, start at 1x oversampling, and leave convolution, phase-vocoder, and 64-grain processors out of the firmware build.",
+      "license": "MIT",
+      "note": "Returning - The MIT, header-only C++20 library exposes setup-thread-allocated tape, Koren triode/tone-stack, and Jiles-Atherton transformer models and ships an exceptions-free embedded profile.",
+      "rotation_status": "Returning",
+      "summary": "Header-only C++20 audio DSP for real-time and offline processing. Filters, effects, analog circuit models, automatic dynamics, stereo tools, analysis and EBU R128 metering. Dependency-free DSP core with optional VST3, CLAP and Audio Unit adapters.",
+      "evidence": {
+        "source_file_count": 306,
+        "dsp_file_count": 73,
+        "host_file_count": 92,
+        "heavy_file_count": 4,
+        "sample_dsp_paths": [
+          "Effects/TapeMachine.h",
+          "Effects/TubePreamp.h",
+          "Effects/TransformerModel.h",
+          "Core/AudioBuffer.h"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "full_name": "averagenative/0xSYNTH",
+      "html_url": "https://github.com/averagenative/0xSYNTH",
+      "stars": 5,
+      "forks": 0,
+      "last_push": "2026-04-18",
+      "topic": "Wavetable synth",
+      "score": 120,
+      "portability_class": "Refactor",
+      "portability_reason": "The pure-C engine and host boundary are unusually clean, but the full four-engine, sampler, 15-effect and oversampling configuration must be reduced to a fixed MCU build.",
+      "value_reason": "Its MIT pure-C engine separates subtractive, four-operator FM, wavetable and sampler voices from CLAP/VST3/ImGui hosts, with atomic parameters, SPSC command queues and zero allocation in the audio path.",
+      "port_idea": "Compile only src/engine plus synth_api, cap polyphony and effect count, replace desktop atomics where unnecessary, and omit sampler/file recording unless external storage is planned.",
+      "license": "MIT",
+      "note": "Returning - Its MIT pure-C engine separates subtractive, four-operator FM, wavetable and sampler voices from CLAP/VST3/ImGui hosts, with atomic parameters, SPSC command queues and zero allocation in the audio path.",
+      "rotation_status": "Returning",
+      "summary": "Multi-engine synthesizer (subtractive/FM/wavetable) \u2014 CLAP/VST3 plugin + standalone. Pure C, real-time safe.",
+      "evidence": {
+        "source_file_count": 73,
+        "dsp_file_count": 20,
+        "host_file_count": 17,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/engine/fm.c",
+          "src/engine/wavetable.c",
+          "src/engine/effects.c",
+          "src/engine/command_queue.c",
+          "src/engine/filter.c",
+          "src/engine/voice.c"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "full_name": "marcecj/faust_mbstereophony",
+      "html_url": "https://github.com/marcecj/faust_mbstereophony",
+      "stars": 3,
+      "forks": 0,
+      "last_push": "2013-06-07",
+      "topic": "Faust effect",
+      "score": 116,
+      "portability_class": "Refactor",
+      "portability_reason": "The static Faust filter bank is directly generatable, but six third-order Cauer bands and reconstruction variants need a reduced static configuration and Cortex-M7 profiling.",
+      "value_reason": "The MIT Faust sources implement six-band Regalia-Mitra complementary banks from third-order Cauer prototypes, with static/dynamic edges and sum-versus-synthesis reconstruction variants.",
+      "port_idea": "Generate the static sum-reconstruction variant first, reduce the six-band bank if needed, and keep edge-frequency changes at control rate; avoid the dynamic synthesis bank until CPU profiling passes.",
+      "license": "MIT",
+      "note": "Returning - The MIT Faust sources implement six-band Regalia-Mitra complementary banks from third-order Cauer prototypes, with static/dynamic edges and sum-versus-synthesis reconstruction variants.",
+      "rotation_status": "Returning",
+      "summary": "Multi-Band Stereophony is a simple multi-band effect implemented in FAUST that down-mixes a stereo signal separately per frequency band.",
+      "evidence": {
+        "source_file_count": 11,
+        "dsp_file_count": 11,
+        "host_file_count": 0,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "src/mbstereophonyd_sum.dsp",
+          "src/mbstereophonys_sum.dsp",
+          "src/rmfbd_sum.dsp",
+          "src/rmfbs_sum.dsp"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "full_name": "chalkwalk/chalkwalk-physical",
+      "html_url": "https://github.com/chalkwalk/chalkwalk-physical",
+      "stars": 0,
+      "forks": 0,
+      "last_push": "2026-08-22",
+      "topic": "Physical modeling",
+      "score": 95,
+      "portability_class": "Refactor",
+      "portability_reason": "The waveguide render loop is bounded and host-independent, but prepare() allocates its delay vector; the modal branch is currently a placeholder, so the realistic target is one fixed-storage waveguide and exciter.",
+      "value_reason": "The MIT C++17 waveguide combines a high-order Lagrange fractional delay, phase-delay damping compensation, bowed/struck exciters and tuning tests that quantify its sample-rate limits.",
+      "port_idea": "Port one mono waveguide with a fixed delay buffer and one exciter; omit the still-placeholder modal branch and translate only after host tests preserve the published tuning bounds.",
+      "license": "MIT",
+      "note": "New - The MIT C++17 waveguide combines a high-order Lagrange fractional delay, phase-delay damping compensation, bowed/struck exciters and tuning tests that quantify its sample-rate limits.",
+      "rotation_status": "New",
+      "summary": "Physical modelling: waveguide and modal resonators, struck and bowed exciters, MPE expression mapping. JUCE-free, MIT.",
+      "evidence": {
+        "source_file_count": 31,
+        "dsp_file_count": 0,
+        "host_file_count": 4,
+        "heavy_file_count": 0,
+        "sample_dsp_paths": [
+          "include/chalkwalk/physical/WaveguideResonator.h",
+          "src/WaveguideResonator.cpp",
+          "include/chalkwalk/physical/BowedExciter.h",
+          "src/BowedExciter.cpp",
+          "test/TuningTests.cpp"
+        ]
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
-  "last_run_utc": "2026-10-31T10:15:10Z",
-  "run_count": 35,
-  "latest_digest_date": "2026-10-31",
-  "latest_digest_file": "2026-10-31 - Weekly Portable Audio DSP GitHub Digest.md",
-  "previous_digest_file": "2026-10-24 - Weekly Portable Audio DSP GitHub Digest.md",
+  "last_run_utc": "2026-11-07T10:02:37Z",
+  "run_count": 36,
+  "latest_digest_date": "2026-11-07",
+  "latest_digest_file": "2026-11-07 - Weekly Portable Audio DSP GitHub Digest.md",
+  "previous_digest_file": "2026-10-31 - Weekly Portable Audio DSP GitHub Digest.md",
   "history_seeded_from_markdown": false,
   "project_rules_version": "portable-audio-dsp-digest-v12",
   "write_status": "fallback_artifacts_written_due_portable_project_write_denied"

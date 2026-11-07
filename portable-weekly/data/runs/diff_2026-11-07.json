@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-07",
+  "added": [
+    "RustAudio/dasp",
+    "Themaister/libfmsynth",
+    "Chowdhury-DSP/chowdsp_wdf",
+    "PaulBatchelor/sndkit",
+    "Signalsmith-Audio/elliptic-blep",
+    "CristianMoresi/DSPark",
+    "averagenative/0xSYNTH",
+    "marcecj/faust_mbstereophony",
+    "chalkwalk/chalkwalk-physical"
+  ],
+  "removed": [
+    "cucuwritescode/adac",
+    "Na1w/infinitedsp",
+    "scjurgen/AbacDsp",
+    "Carrieukie/WavetableSynthesizer",
+    "ayutaz/tiny-formant-synth",
+    "mkaudio-company/libmksim",
+    "chalkwalk/chalkwalk-tape",
+    "clovesrodrigues/AUDIO_DSP",
+    "xikxp1/bs2b"
+  ],
+  "changed": [
+    "cycfi/q"
+  ]
+}
