@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-06
+last_updated: 2026-11-07
 
 shared:
   anti_repeat_window_days: 30
@@ -112,31 +112,25 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-06
-  source_review_completed: 2026-11-06
-  last_successful_scan: 2026-11-06
-  overlap_start: 2026-11-04
-  anti_repeat_cutoff: 2026-10-07
-  last_main_sha: 620c2aad4099974a6de93741839191f173a261c0
+  latest_digest_date: 2026-11-07
+  source_review_completed: 2026-11-07
+  last_successful_scan: 2026-11-07
+  overlap_start: 2026-11-05
+  anti_repeat_cutoff: 2026-10-08
+  last_main_sha: 2106f996365fe5aba08ecc529e08e97b82b9b9ea
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: pixelscript/athanor
-      lane: STRONG_PASS
-      reason: first_flashable_alchemy_v2_stereo_performance_fx_release_with_hashes_build_tests_and_tail_safe_bypass
-      repeat_block_until: 2026-12-06
-    - project: joebmz98/GLOOP
-      lane: STRONG_PASS
-      reason: bounded_two_track_granular_looper_with_block_rate_modal_resonator_cpu_guard_and_dirty_band_ui
-      repeat_block_until: 2026-12-06
-    - project: dotrodeo/rodeo
-      lane: STRONG_PASS
-      reason: host_testable_daisy_sdk_plus_fm_zdf_ladder_mono_glide_and_dual_codec_4x4_carrier
-      repeat_block_until: 2026-12-06
-    - project: luigismith/ichosynth
+    - project: sscheidl/Daisy-Seed
       lane: PASS
-      reason: first_prototype_clearance_failures_converted_to_parametric_cad_checks_mutation_tests_and_rebuilt_mechanics
-      repeat_block_until: 2026-12-06
+      reason: looper_0_6_1_writable_fat32_exfat_storage_power_loss_campaigns_and_final_share_handoff
+      repeat_block_until: 2026-12-07
   recheck_queue:
+    - project: sscheidl/Daisy-Seed
+      status: published
+      blocker: wait until 2026-12-07 unless a release asset Seed3 hardware or Daisy Field validation or another major DSP storage or real-time architecture delta appears
+    - project: darrenji/hmsl-daisy
+      status: hold
+      blocker: latest canonical commit is 2026-11-02 outside the overlap; wait for a post-overlap release firmware asset hardware target or material scheduler synth or I/O change
     - project: pixelscript/athanor
       status: published
       blocker: wait until 2026-12-06 unless a new hardware target major DSP row independent timing measurement or release-level crash and real-time architecture delta appears
@@ -186,17 +180,21 @@ daisy_teensy_watch:
       status: hold
       blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
   next_run_rule_change:
-    date: 2026-11-06
+    date: 2026-11-07
     stream: daisy_teensy_watch
     status: validated_once_keep_temporary
-    change: require a primary compare plus a material audio-graph real-time scheduling versioned-state target or independent-measurement delta for repeats inside 30 days
-    failure_mode_fixed: high-cadence repositories can turn every tag into an alert even when reuse value is unchanged
-    expected_improvement: admit structural firmware releases while rejecting cosmetic tags and narrow maintenance
-    regression_risk: a critical small audio-state fix can be understated when file counts are low
-    test_case: PZD was correctly suppressed after v3.6.0 while four new canonical resources with primary event evidence were admitted
-    acceptance_criteria: promote only when primary event evidence and at least one structural reuse dimension are verified
-    keep_or_remove_decision: retain temporarily and test on the next inside-window repeat
+    change: allow a small critical audio-state or persistence fix when a primary diff reproduces the loss or real-time fault and adds regression coverage on the production path
+    failure_mode_fixed: file-count and release-size heuristics can hide high-value data-loss or callback-boundary fixes
+    expected_improvement: retain strict novelty while admitting narrow fixes with disproportionate engineering reuse value
+    regression_risk: ordinary maintenance could be overstated as critical
+    test_case: Looper 0.6.1 reproduces lost edits around SHARE then holds inputs waits a callback and reruns the decision under production-main tests
+    acceptance_criteria: require primary before-and-after evidence production-path regression tests and a concrete loss timing or safety boundary
+    keep_or_remove_decision: retain temporarily and test against the next small-fix candidate
   next_run_search_debt:
+    - recheck sscheidl/Daisy-Seed only after 2026-12-07 unless release hardware Field or another material DSP storage or real-time delta resolves the blocker
+    - recheck darrenji/hmsl-daisy only after a post-2026-11-05 material commit or release
+    - resolve canonical PJRC voice-changer and auto-BPM-looper thread URLs and require linked source or reproducible firmware
+    - treat Eight4aWish TEENSY_MOVE documentation-only bench updates as non-events unless code firmware or release evidence changes
     - recheck Athanor GLOOP Rodeo and ichosynth only after 2026-12-06 unless their explicit blockers resolve
     - keep seed-patcher on hold until it declares a license and establishes a sustained project history
     - treat Daisy SITL/HITL reply activity as resurfacing until a primary simulator release or commit lands
