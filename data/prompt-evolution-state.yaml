@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-07
+last_updated: 2026-11-08
 
 shared:
   anti_repeat_window_days: 30
@@ -112,31 +112,48 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-07
-  source_review_completed: 2026-11-07
-  last_successful_scan: 2026-11-07
-  overlap_start: 2026-11-05
-  anti_repeat_cutoff: 2026-10-08
-  last_main_sha: 2106f996365fe5aba08ecc529e08e97b82b9b9ea
+  latest_digest_date: 2026-11-08
+  source_review_completed: 2026-11-08
+  last_successful_scan: 2026-11-08
+  overlap_start: 2026-11-06
+  anti_repeat_cutoff: 2026-10-09
+  last_main_sha: 59b5dc26ff8f7014eb59b358347e4ca0f712b7e2
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: sscheidl/Daisy-Seed
-      lane: PASS
-      reason: looper_0_6_1_writable_fat32_exfat_storage_power_loss_campaigns_and_final_share_handoff
-      repeat_block_until: 2026-12-07
+    - project: AlexKokoschka/StepDaddy
+      lane: STRONG_PASS
+      reason: teensy_4_1_release_hex_updater_fixed_point_303_usb_audio_open_hardware
+      repeat_block_until: 2026-12-08
+    - project: joebmz98/GLOOP
+      lane: STRONG_PASS
+      reason: material_repeat_comb_modulation_two_slot_fx_and_block_optimized_engine
+      repeat_block_until: 2026-12-08
+    - project: newdigate/rt1176-evkb
+      lane: REF_PASS
+      reason: teensy_audio_graph_port_sgtl5000_target_and_sample_exact_qemu_gates
+      repeat_block_until: 2026-12-08
   recheck_queue:
+    - project: AlexKokoschka/StepDaddy
+      status: published_selected
+      blocker: wait until 2026-12-08 unless a new hardware revision analog audio path release DSP engine Field target or independent timing and audio measurement appears
+    - project: joebmz98/GLOOP
+      status: published_material_repeat
+      blocker: wait until 2026-12-08 unless SD sample loading tagged binary Field target independent callback measurement or another major DSP architecture delta appears
+    - project: newdigate/rt1176-evkb
+      status: published_reference
+      blocker: wait until 2026-12-08 unless a release physical Nosh audio validation new Teensy target or further sample-exact audio architecture change appears
     - project: sscheidl/Daisy-Seed
       status: published
       blocker: wait until 2026-12-07 unless a release asset Seed3 hardware or Daisy Field validation or another major DSP storage or real-time architecture delta appears
     - project: darrenji/hmsl-daisy
       status: hold
       blocker: latest canonical commit is 2026-11-02 outside the overlap; wait for a post-overlap release firmware asset hardware target or material scheduler synth or I/O change
+    - project: YazKzirius/KzX_Version1
+      status: hold
+      blocker: require an explicit license release or hardware source and measured or tested audio quality before promotion
     - project: pixelscript/athanor
       status: published
       blocker: wait until 2026-12-06 unless a new hardware target major DSP row independent timing measurement or release-level crash and real-time architecture delta appears
-    - project: joebmz98/GLOOP
-      status: published
-      blocker: wait until 2026-12-06 unless SD sample loading a tagged binary Field target independent callback measurement or another major DSP architecture delta appears
     - project: dotrodeo/rodeo
       status: published
       blocker: wait until 2026-12-06 unless Rev B hardware bring-up measurements a release new target or another material audio-I/O or DSP architecture change appears
@@ -180,20 +197,28 @@ daisy_teensy_watch:
       status: hold
       blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
   next_run_rule_change:
-    date: 2026-11-07
+    date: 2026-11-08
     stream: daisy_teensy_watch
     status: validated_once_keep_temporary
-    change: allow a small critical audio-state or persistence fix when a primary diff reproduces the loss or real-time fault and adds regression coverage on the production path
-    failure_mode_fixed: file-count and release-size heuristics can hide high-value data-loss or callback-boundary fixes
-    expected_improvement: retain strict novelty while admitting narrow fixes with disproportionate engineering reuse value
-    regression_risk: ordinary maintenance could be overstated as critical
-    test_case: Looper 0.6.1 reproduces lost edits around SHARE then holds inputs waits a callback and reruns the decision under production-main tests
-    acceptance_criteria: require primary before-and-after evidence production-path regression tests and a concrete loss timing or safety boundary
-    keep_or_remove_decision: retain temporarily and test against the next small-fix candidate
+    change: classify simulator timing fixes as reference value only when a primary gate demonstrates a deterministic audio failure and exact before-after recovery
+    failure_mode_fixed: simulator maintenance can look like firmware progress without proving audio timing value
+    expected_improvement: admit reproducible callback DMA and streaming test methods while preventing adjacent platform work from masquerading as target compatibility
+    regression_risk: custom emulator details may still dominate over reusable embedded insight
+    test_case: rt1176 sd_wav_play_test loses one block under dynamic icount and becomes mono-stereo sample-exact at fixed shift across two codec models
+    acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
+    keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck StepDaddy and StepMother only after 2026-12-08 unless a new release hardware revision analog I/O or independent measurement lands
+    - recheck GLOOP only after 2026-12-08 unless SD loading tagged binary Field target independent callback measurement or major architecture delta lands
+    - keep rt1176-evkb adjacent and blocked until 2026-12-08 absent physical Nosh audio proof release or direct Teensy target
     - recheck sscheidl/Daisy-Seed only after 2026-12-07 unless release hardware Field or another material DSP storage or real-time delta resolves the blocker
-    - recheck darrenji/hmsl-daisy only after a post-2026-11-05 material commit or release
+    - recheck darrenji/hmsl-daisy only after a canonical post-2026-11-05 commit or release; ignore relative GitLab page dates
     - resolve canonical PJRC voice-changer and auto-BPM-looper thread URLs and require linked source or reproducible firmware
+    - treat Daisy forum support replies as non-events unless linked to source release commit or hardware artifacts
+    - recheck MicroDexed-touch only on a post-2026-11-03 material release and against prior publication history
+    - recheck Athanor Rodeo and ichosynth only after 2026-12-06 unless their explicit blockers resolve
+    - continue narrow GitLab SourceHut Codeberg personal-site and dated-artifact searches
+    - recheck darrenji/hmsl-daisy only after a post-2026-11-05 material commit or release
     - treat Eight4aWish TEENSY_MOVE documentation-only bench updates as non-events unless code firmware or release evidence changes
     - recheck Athanor GLOOP Rodeo and ichosynth only after 2026-12-06 unless their explicit blockers resolve
     - keep seed-patcher on hold until it declares a license and establishes a sustained project history
@@ -207,8 +232,8 @@ daisy_teensy_watch:
     - record the 2026-11-05 PJRC editorial SD-player resurfacing as non-event unless its linked source gains a current release or target
     - keep curiosa/sereia stale until Codeberg shows a post-overlap event; latest verified commit remains 2026-06-16
     - treat oikoaudio/oikoaudio as cross-stream published on 2026-11-04 and do not repeat without a material delta
-    - continue narrow GitLab SourceHut Codeberg personal-site and dated-artifact searches
-  note: forum aggregator and index activity remain discovery-only; verify event dates release assets source build licence third-party rights and hardware evidence on primary pages
+  note: forum aggregator index and relative activity remain discovery-only; verify canonical event date source build licence release hardware and Field target evidence on primary pages
+
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
   latest_digest_date: 2026-10-26
