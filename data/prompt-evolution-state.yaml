@@ -218,7 +218,6 @@ daisy_teensy_watch:
     - recheck MicroDexed-touch only on a post-2026-11-03 material release and against prior publication history
     - recheck Athanor Rodeo and ichosynth only after 2026-12-06 unless their explicit blockers resolve
     - continue narrow GitLab SourceHut Codeberg personal-site and dated-artifact searches
-    - recheck darrenji/hmsl-daisy only after a post-2026-11-05 material commit or release
     - treat Eight4aWish TEENSY_MOVE documentation-only bench updates as non-events unless code firmware or release evidence changes
     - recheck Athanor GLOOP Rodeo and ichosynth only after 2026-12-06 unless their explicit blockers resolve
     - keep seed-patcher on hold until it declares a license and establishes a sustained project history
