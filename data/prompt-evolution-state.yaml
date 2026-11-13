@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-08
+last_updated: 2026-11-13
 
 shared:
   anti_repeat_window_days: 30
@@ -112,27 +112,36 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-08
-  source_review_completed: 2026-11-08
-  last_successful_scan: 2026-11-08
-  overlap_start: 2026-11-06
-  anti_repeat_cutoff: 2026-10-09
-  last_main_sha: 59b5dc26ff8f7014eb59b358347e4ca0f712b7e2
+  latest_digest_date: 2026-11-13
+  source_review_completed: 2026-11-13
+  last_successful_scan: 2026-11-13
+  overlap_start: 2026-11-08
+  anti_repeat_cutoff: 2026-10-14
+  last_main_sha: 7a498cfe0bbf08c6dda6e0dc5084d4922d0bd280
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: AlexKokoschka/StepDaddy
+    - project: Eight4aWish/eurorack_modules
       lane: STRONG_PASS
-      reason: teensy_4_1_release_hex_updater_fixed_point_303_usb_audio_open_hardware
-      repeat_block_until: 2026-12-08
-    - project: joebmz98/GLOOP
+      reason: secret_teensy_chaos_new_firmware_target_hardware_cpu_and_noise_measurements
+      repeat_block_until: 2026-12-13
+    - project: modularev/Nemesis
       lane: STRONG_PASS
-      reason: material_repeat_comb_modulation_two_slot_fx_and_block_optimized_engine
-      repeat_block_until: 2026-12-08
-    - project: newdigate/rt1176-evkb
-      lane: REF_PASS
-      reason: teensy_audio_graph_port_sgtl5000_target_and_sample_exact_qemu_gates
-      repeat_block_until: 2026-12-08
+      reason: measured_juno_106_faust_voice_and_tested_small_system_polyphony
+      repeat_block_until: 2026-12-13
+    - project: sscheidl/Daisy-Seed
+      lane: PASS
+      reason: material_repeat_new_cumulonimbus_product_and_realtime_contract_fixes
+      repeat_block_until: 2026-12-13
   recheck_queue:
+    - project: Eight4aWish/eurorack_modules
+      status: published_material_update
+      blocker: wait until 2026-12-13 unless a new hardware target tagged release audio-input implementation independent measurement or major DSP architecture delta appears
+    - project: modularev/Nemesis
+      status: published
+      blocker: wait until 2026-12-13 unless a tagged firmware release new hardware revision independent measurement or major DSP architecture delta appears
+    - project: dylangmiles/daisy-tone-trixter
+      status: hold
+      blocker: require an explicit repository license before publication; then recheck only on a release Field target or further material USB audio or DSP delta
     - project: AlexKokoschka/StepDaddy
       status: published_selected
       blocker: wait until 2026-12-08 unless a new hardware revision analog audio path release DSP engine Field target or independent timing and audio measurement appears
@@ -143,8 +152,8 @@ daisy_teensy_watch:
       status: published_reference
       blocker: wait until 2026-12-08 unless a release physical Nosh audio validation new Teensy target or further sample-exact audio architecture change appears
     - project: sscheidl/Daisy-Seed
-      status: published
-      blocker: wait until 2026-12-07 unless a release asset Seed3 hardware or Daisy Field validation or another major DSP storage or real-time architecture delta appears
+      status: published_material_repeat
+      blocker: wait until 2026-12-13 unless a public release asset Seed3 hardware or Daisy Field validation or another major DSP storage or real-time architecture delta appears
     - project: darrenji/hmsl-daisy
       status: hold
       blocker: latest canonical commit is 2026-11-02 outside the overlap; wait for a post-overlap release firmware asset hardware target or material scheduler synth or I/O change
@@ -208,6 +217,10 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck Eight4aWish Secret only after 2026-12-13 unless release audio-input new target or independent measurement lands
+    - recheck Nemesis only after 2026-12-13 unless release new target or material measured DSP architecture lands
+    - recheck sscheidl/Daisy-Seed only after 2026-12-13 unless release hardware Field or another major DSP storage or real-time delta resolves the blocker
+    - keep daisy-tone-trixter on HOLD until an explicit license appears; do not treat its hardware measurements as reuse permission
     - recheck StepDaddy and StepMother only after 2026-12-08 unless a new release hardware revision analog I/O or independent measurement lands
     - recheck GLOOP only after 2026-12-08 unless SD loading tagged binary Field target independent callback measurement or major architecture delta lands
     - keep rt1176-evkb adjacent and blocked until 2026-12-08 absent physical Nosh audio proof release or direct Teensy target
