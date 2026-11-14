@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-13
+last_updated: 2026-11-14
 
 shared:
   anti_repeat_window_days: 30
@@ -112,26 +112,26 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-13
-  source_review_completed: 2026-11-13
-  last_successful_scan: 2026-11-13
-  overlap_start: 2026-11-08
-  anti_repeat_cutoff: 2026-10-14
-  last_main_sha: 7a498cfe0bbf08c6dda6e0dc5084d4922d0bd280
+  latest_digest_date: 2026-11-14
+  source_review_completed: 2026-11-14
+  last_successful_scan: 2026-11-14
+  overlap_start: 2026-11-13
+  anti_repeat_cutoff: 2026-10-15
+  last_main_sha: d459e1d9cb06fea1a5da5e8c26acbcd26afc1ab0
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: Eight4aWish/eurorack_modules
+    - project: pixelscript/athanor
       lane: STRONG_PASS
-      reason: secret_teensy_chaos_new_firmware_target_hardware_cpu_and_noise_measurements
-      repeat_block_until: 2026-12-13
-    - project: modularev/Nemesis
+      reason: material_repeat_v0_5_0_melodic_shifter_recorder_clock_and_release_assets
+      repeat_block_until: 2026-12-14
+    - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       lane: STRONG_PASS
-      reason: measured_juno_106_faust_voice_and_tested_small_system_polyphony
-      repeat_block_until: 2026-12-13
-    - project: sscheidl/Daisy-Seed
+      reason: material_repeat_v4_full_source_midi_tracks_scenes_song_arps_and_wav_export
+      repeat_block_until: 2026-12-14
+    - project: Rastapopolix/tessera
       lane: PASS
-      reason: material_repeat_new_cumulonimbus_product_and_realtime_contract_fixes
-      repeat_block_until: 2026-12-13
+      reason: first_daisy_seed_target_with_qspi_itcm_dtcm_memcheck_and_peak_load_telemetry
+      repeat_block_until: 2026-12-14
   recheck_queue:
     - project: Eight4aWish/eurorack_modules
       status: published_material_update
@@ -161,8 +161,8 @@ daisy_teensy_watch:
       status: hold
       blocker: require an explicit license release or hardware source and measured or tested audio quality before promotion
     - project: pixelscript/athanor
-      status: published
-      blocker: wait until 2026-12-06 unless a new hardware target major DSP row independent timing measurement or release-level crash and real-time architecture delta appears
+      status: published_material_repeat
+      blocker: wait until 2026-12-14 unless a new hardware target release-level DSP architecture independent timing measurement or Field build appears
     - project: dotrodeo/rodeo
       status: published
       blocker: wait until 2026-12-06 unless Rev B hardware bring-up measurements a release new target or another material audio-I/O or DSP architecture change appears
@@ -177,7 +177,7 @@ daisy_teensy_watch:
       blocker: wait until 2026-12-02 unless a new hardware target release-level DSP architecture independent hardware measurement or material resolution of the bundled-sample rights boundary appears
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       status: published_material_repeat
-      blocker: wait until 2026-12-05 unless a Field target independent measurement or another release-level DSP storage audio-graph or real-time architecture delta appears
+      blocker: wait until 2026-12-14 unless a Field target independent measurement or another release-level DSP storage audio-graph or real-time architecture delta appears
     - project: nzimas/bigorna
       status: published_material_repeat
       blocker: wait until 2026-12-01 unless a tagged release new DSP engine hardware timing measurement or another major sequencer/storage/audio-state architecture delta appears
@@ -205,6 +205,12 @@ daisy_teensy_watch:
     - project: NorfolkHacker/acid-fm
       status: hold
       blocker: wait for implemented BREAK TAPE generator or another material DSP feature rather than roadmap/spec changes
+    - project: Rastapopolix/tessera
+      status: published
+      blocker: wait until 2026-12-14 unless hardware audio validation UI MIDI storage Field support a tagged release or another major DSP real-time architecture delta appears
+    - project: volfovich/teensy41
+      status: hold
+      blocker: require an explicit repository license before publication; then recheck on a tagged release new hardware revision or material measured DSP architecture delta
   next_run_rule_change:
     date: 2026-11-08
     stream: daisy_teensy_watch
@@ -217,6 +223,8 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck Athanor PZD and Tessera only after 2026-12-14 unless their explicit material-delta blockers resolve
+    - keep volfovich/teensy41 on HOLD until an explicit repository license appears; preserve its NAM and full-chain CPU measurements as a lead only
     - recheck Eight4aWish Secret only after 2026-12-13 unless release audio-input new target or independent measurement lands
     - recheck Nemesis only after 2026-12-13 unless release new target or material measured DSP architecture lands
     - recheck sscheidl/Daisy-Seed only after 2026-12-13 unless release hardware Field or another major DSP storage or real-time delta resolves the blocker
