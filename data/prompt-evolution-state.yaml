@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-14
+last_updated: 2026-11-15
 
 shared:
   anti_repeat_window_days: 30
@@ -112,27 +112,28 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-14
-  source_review_completed: 2026-11-14
-  last_successful_scan: 2026-11-14
-  overlap_start: 2026-11-13
-  anti_repeat_cutoff: 2026-10-15
-  last_main_sha: d459e1d9cb06fea1a5da5e8c26acbcd26afc1ab0
+  latest_digest_date: 2026-11-15
+  source_review_completed: 2026-11-15
+  last_successful_scan: 2026-11-15
+  overlap_start: 2026-11-14
+  anti_repeat_cutoff: 2026-10-16
+  last_main_sha: 5ed5cda68ac43eb0d53b42001554da38beda7c39
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: pixelscript/athanor
+    - project: spamatica/DaisySeedProjects
       lane: STRONG_PASS
-      reason: material_repeat_v0_5_0_melodic_shifter_recorder_clock_and_release_assets
-      repeat_block_until: 2026-12-14
-    - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
-      lane: STRONG_PASS
-      reason: material_repeat_v4_full_source_midi_tracks_scenes_song_arps_and_wav_export
-      repeat_block_until: 2026-12-14
-    - project: Rastapopolix/tessera
-      lane: PASS
-      reason: first_daisy_seed_target_with_qspi_itcm_dtcm_memcheck_and_peak_load_telemetry
-      repeat_block_until: 2026-12-14
+      reason: forum_announced_v1_block_dsp_generated_effect_chains_nam_and_measured_resource_telemetry
+      repeat_block_until: 2026-12-15
   recheck_queue:
+    - project: spamatica/DaisySeedProjects
+      status: published
+      blocker: wait until 2026-12-15 unless a tagged release binary Field target independent measurement new hardware target or major DSP and real-time architecture delta appears
+    - project: Electrotechnique/TSynth-Teensy4.1
+      status: hold
+      blocker: require an explicit repository license before publication; then recheck only on a release new hardware revision or material DSP architecture delta
+    - project: anguslmm/pocket-groove
+      status: hold
+      blocker: require an explicit repository license and hardware audio validation before promotion; no Field target exists
     - project: Eight4aWish/eurorack_modules
       status: published_material_update
       blocker: wait until 2026-12-13 unless a new hardware target tagged release audio-input implementation independent measurement or major DSP architecture delta appears
@@ -223,6 +224,9 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck spamatica/DaisySeedProjects only after 2026-12-15 unless a tagged release binary Field target independent measurement new hardware target or major DSP architecture delta appears
+    - keep TSynth V3.01 on HOLD until an explicit repository license appears; the HEX and DSP delta do not establish reuse permission
+    - keep pocket-groove on HOLD until an explicit license and hardware validation appear; preserve its simulator and persistence architecture as a lead only
     - recheck Athanor PZD and Tessera only after 2026-12-14 unless their explicit material-delta blockers resolve
     - keep volfovich/teensy41 on HOLD until an explicit repository license appears; preserve its NAM and full-chain CPU measurements as a lead only
     - recheck Eight4aWish Secret only after 2026-12-13 unless release audio-input new target or independent measurement lands
