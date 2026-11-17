@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-16
+last_updated: 2026-11-17
 
 shared:
   anti_repeat_window_days: 30
@@ -115,27 +115,43 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-16
-  source_review_completed: 2026-11-16
-  last_successful_scan: 2026-11-16
-  overlap_start: 2026-11-15
-  anti_repeat_cutoff: 2026-10-17
-  last_main_sha: 329e67c99eb236c8eeb2c8967d2dc11bcfea949f
+  latest_digest_date: 2026-11-17
+  source_review_completed: 2026-11-17
+  last_successful_scan: 2026-11-17
+  overlap_start: 2026-11-16
+  anti_repeat_cutoff: 2026-10-18
+  last_main_sha: b2e550054dac6111a5a7978decdd8985f87abc0c
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: Electrotechnique/Momentum
+    - project: Ninety-Days/DaisyPodUsbAudio
       lane: STRONG_PASS
-      reason: V2_00_hex_64_sample_realtime_scheduling_and_major_dsp_rewrite
-      repeat_block_until: 2026-12-16
-    - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
-      lane: STRONG_PASS
-      reason: material_repeat_v4_0_1_to_v4_0_3_measured_supersaw_stereo_chorus_and_mixers
-      repeat_block_until: 2026-12-16
+      reason: new_forum_announcement_of_2026_10_28_release_with_measured_usb_audio_transport
+      repeat_block_until: 2026-12-17
     - project: Rastapopolix/andamento-fw
       lane: PASS
-      reason: material_tessera_continuation_with_ui_master_texture_and_sdram_architecture
-      repeat_block_until: 2026-12-16
+      reason: material_repeat_adds_plaits_and_repairs_dtcm_budget_with_axi_audio_arena
+      repeat_block_until: 2026-12-17
+    - project: myklemykle/tweacman
+      lane: REF_PASS
+      reason: new_project_page_plus_sd_fault_validation_and_as_built_output_filter_update
+      repeat_block_until: 2026-12-17
+    - project: bobpuley/ds-ide
+      lane: REF_PASS
+      reason: first_public_preview_of_seed_callback_debug_and_flash_environment
+      repeat_block_until: 2026-12-17
   recheck_queue:
+    - project: Ninety-Days/DaisyPodUsbAudio
+      status: published_selected
+      blocker: wait until 2026-12-17 unless a new release hardware target measured transport result Field build or major USB audio and DSP integration delta appears
+    - project: myklemykle/tweacman
+      status: published_reference
+      blocker: wait until 2026-12-17 unless live audio input a new hardware revision release asset or major measured streaming and DSP delta appears
+    - project: bobpuley/ds-ide
+      status: published_reference
+      blocker: wait until 2026-12-17 unless Windows or Linux support Field support cycle or resource modelling or another major architecture delta appears
+    - project: HotPTgz/Limoncello
+      status: hold
+      blocker: require a built full instrument or validated four-key board with working audio UI and control path; current full system is source and simulation evidence only
     - project: spamatica/DaisySeedProjects
       status: published
       blocker: wait until 2026-12-15 unless a tagged release binary Field target independent measurement new hardware target or major DSP and real-time architecture delta appears
@@ -222,7 +238,7 @@ daisy_teensy_watch:
       blocker: wait until 2026-12-16 unless hardware audio validation completed peripheral I/O a Field target tagged release or another major DSP and real-time architecture delta appears
     - project: Rastapopolix/andamento-fw
       status: published_material_repeat
-      blocker: wait until 2026-12-16 unless physical hardware audio validation completed peripheral I/O a Field target tagged release or another major architecture delta appears
+      blocker: wait until 2026-12-17 unless physical hardware audio validation completed peripheral I/O a Field target tagged release or another major DSP memory or real-time architecture delta appears
     - project: Electrotechnique/Momentum
       status: published
       blocker: wait until 2026-12-16 unless a new hardware revision tagged release independent audio measurement direct Teensy 4.x target or another major DSP and real-time architecture delta appears
@@ -241,6 +257,8 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck DaisyPodUsbAudio Andamento TWEACMAN and ds-ide only after 2026-12-17 unless their explicit material-delta blockers resolve
+    - keep HotPTgz/Limoncello on HOLD until a physical board or full instrument validates the audio UI and control path
     - recheck spamatica/DaisySeedProjects only after 2026-12-15 unless a tagged release binary Field target independent measurement new hardware target or major DSP architecture delta appears
     - keep TSynth V3.01 on HOLD until an explicit repository license appears; the HEX and DSP delta do not establish reuse permission
     - keep pocket-groove on HOLD until an explicit license and hardware validation appear; preserve its simulator and persistence architecture as a lead only
