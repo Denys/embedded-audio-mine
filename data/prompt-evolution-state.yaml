@@ -115,31 +115,25 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-17
-  source_review_completed: 2026-11-17
-  last_successful_scan: 2026-11-17
-  overlap_start: 2026-11-16
-  anti_repeat_cutoff: 2026-10-18
-  last_main_sha: b2e550054dac6111a5a7978decdd8985f87abc0c
+  latest_digest_date: 2026-11-18
+  source_review_completed: 2026-11-18
+  last_successful_scan: 2026-11-18
+  overlap_start: 2026-11-17
+  anti_repeat_cutoff: 2026-10-19
+  last_main_sha: 4d5e421e2f8a85a3d226362418a3d5b598a8a5c1
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: Ninety-Days/DaisyPodUsbAudio
+    - project: clevelandmusicco/HothouseExamples
       lane: STRONG_PASS
-      reason: new_forum_announcement_of_2026_10_28_release_with_measured_usb_audio_transport
-      repeat_block_until: 2026-12-17
-    - project: Rastapopolix/andamento-fw
-      lane: PASS
-      reason: material_repeat_adds_plaits_and_repairs_dtcm_budget_with_axi_audio_arena
-      repeat_block_until: 2026-12-17
-    - project: myklemykle/tweacman
-      lane: REF_PASS
-      reason: new_project_page_plus_sd_fault_validation_and_as_built_output_filter_update
-      repeat_block_until: 2026-12-17
-    - project: bobpuley/ds-ide
-      lane: REF_PASS
-      reason: first_public_preview_of_seed_callback_debug_and_flash_environment
-      repeat_block_until: 2026-12-17
+      reason: v26_11_02_adds_release_binary_and_source_for_neptune_stereo_reverb_multi_delay
+      repeat_block_until: 2026-12-18
   recheck_queue:
+    - project: clevelandmusicco/HothouseExamples
+      status: published_selected_material_repeat
+      blocker: wait until 2026-12-18 unless a Field target new release hardware revision measured audio result or major routing DSP or memory architecture delta appears
+    - project: mrarm84/customFWVersioNE9in1
+      status: hold
+      blocker: require an explicit repository licence and hardware validation; source and two binaries exist but the README says not yet tested on hardware
     - project: Ninety-Days/DaisyPodUsbAudio
       status: published_selected
       blocker: wait until 2026-12-17 unless a new release hardware target measured transport result Field build or major USB audio and DSP integration delta appears
@@ -257,6 +251,8 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck HothouseExamples only after 2026-12-18 unless a Field target new release measured result or major routing DSP or memory delta appears
+    - keep customFWVersioNE9in1 on HOLD until an explicit repository licence and hardware validation appear
     - recheck DaisyPodUsbAudio Andamento TWEACMAN and ds-ide only after 2026-12-17 unless their explicit material-delta blockers resolve
     - keep HotPTgz/Limoncello on HOLD until a physical board or full instrument validates the audio UI and control path
     - recheck spamatica/DaisySeedProjects only after 2026-12-15 unless a tagged release binary Field target independent measurement new hardware target or major DSP architecture delta appears
