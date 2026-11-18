@@ -15,7 +15,7 @@ Nessuna risposta esplicita registrata. Restano attivi i gate su data canonica de
 - Profilo: `daily_broad`. Discovery Exa: **120 risultati richiesti** in 12 ricerche distinte, con angoli separati Daisy forum, PJRC/Teensy, GitHub release/commit, host alternativi, build log, hardware artifact, DSP architecture e pagine personali.
 - Copertura: almeno 7 domini, almeno 4 classi e almeno 3 famiglie di query; oltre metà dei domini non GitHub. Ispezionati almeno 10 candidati plausibili e una corsia indipendente aggiuntiva dopo il primo candidato pubblicabile.
 - Le date di indice e i reply forum sono stati usati solo per discovery; release, commit e file sono stati verificati sulle pagine primarie.
-- Source registry: aggiunte le pagine Neptune e customFWVersioNE9in1; Daisy Community e PJRC Audio Projects rivalidate. Nessuna pagina bloccata, morta o spostata.
+- Source registry: aggiunte le pagine Neptune e customFWVersioNE9in1; Daisy Community cercata e PJRC Audio Projects rivalidato. Nessuna pagina bloccata, morta o spostata.
 - Debito successivo: cercare una licenza e una prova hardware per customFWVersioNE9in1; risolvere nuovi thread PJRC soltanto quando puntano a sorgenti, release o hardware canonici.
 
 ## Ranked entries
