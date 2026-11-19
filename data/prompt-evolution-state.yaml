@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-17
+last_updated: 2026-11-19
 
 shared:
   anti_repeat_window_days: 30
@@ -115,18 +115,18 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-18
-  source_review_completed: 2026-11-18
-  last_successful_scan: 2026-11-18
-  overlap_start: 2026-11-17
-  anti_repeat_cutoff: 2026-10-19
-  last_main_sha: 4d5e421e2f8a85a3d226362418a3d5b598a8a5c1
+  latest_digest_date: 2026-11-19
+  source_review_completed: 2026-11-19
+  last_successful_scan: 2026-11-19
+  overlap_start: 2026-11-18
+  anti_repeat_cutoff: 2026-10-20
+  last_main_sha: c8153540923b87ce1cda8f94c366ac0c3f6d6e7f
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: clevelandmusicco/HothouseExamples
-      lane: STRONG_PASS
-      reason: v26_11_02_adds_release_binary_and_source_for_neptune_stereo_reverb_multi_delay
-      repeat_block_until: 2026-12-18
+    - project: newdigate/rt1176-evkb+nosh-dev-board
+      lane: REF_PASS
+      reason: material_repeat_physical_nosh_full_duplex_audio_and_sdram_display_validation
+      repeat_block_until: 2026-12-19
   recheck_queue:
     - project: clevelandmusicco/HothouseExamples
       status: published_selected_material_repeat
@@ -171,8 +171,11 @@ daisy_teensy_watch:
       status: published_material_repeat
       blocker: wait until 2026-12-08 unless SD sample loading tagged binary Field target independent callback measurement or another major DSP architecture delta appears
     - project: newdigate/rt1176-evkb
-      status: published_reference
-      blocker: wait until 2026-12-08 unless a release physical Nosh audio validation new Teensy target or further sample-exact audio architecture change appears
+      status: published_selected_material_repeat
+      blocker: wait until 2026-12-19 unless a tagged release new Teensy target independent replication or further measured audio memory or multicore architecture delta appears
+    - project: newdigate/nosh-dev-board
+      status: published_selected_material_family
+      blocker: wait until 2026-12-19 unless a hardware revision tagged release independent measurements or new measured audio storage display or multicore architecture delta appears
     - project: sscheidl/Daisy-Seed
       status: published_material_repeat
       blocker: wait until 2026-12-13 unless a public release asset Seed3 hardware or Daisy Field validation or another major DSP storage or real-time architecture delta appears
