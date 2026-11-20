@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-19
+last_updated: 2026-11-20
 
 shared:
   anti_repeat_window_days: 30
@@ -115,19 +115,52 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-19
-  source_review_completed: 2026-11-19
-  last_successful_scan: 2026-11-19
-  overlap_start: 2026-11-18
-  anti_repeat_cutoff: 2026-10-20
-  last_main_sha: c8153540923b87ce1cda8f94c366ac0c3f6d6e7f
+  latest_digest_date: 2026-11-20
+  source_review_completed: 2026-11-20
+  last_successful_scan: 2026-11-20
+  overlap_start: 2026-11-19
+  anti_repeat_cutoff: 2026-10-21
+  last_main_sha: c3abaa5373c697aa20faef8bab06f48a173d5b52
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: newdigate/rt1176-evkb+nosh-dev-board
-      lane: REF_PASS
-      reason: material_repeat_physical_nosh_full_duplex_audio_and_sdram_display_validation
-      repeat_block_until: 2026-12-19
+    - project: StillRez/BluemchenFX
+      lane: STRONG_PASS
+      reason: v0_6_0_four_slot_effect_chain_hardware_verified_limiter_host_tests_and_flashable_bin
+      repeat_block_until: 2026-12-20
+    - project: vincentltm/TouchBends
+      lane: STRONG_PASS
+      reason: v0_9_1_sample_local_delay_pipeline_freeze_scrub_stutter_reverse_and_22_host_tests
+      repeat_block_until: 2026-12-20
+    - project: sfaber02/CHOMPI-MULTI-FIRMWARE
+      lane: STRONG_PASS
+      reason: launcher_1_8_2_companion_file_protocol_atomic_sd_install_and_usb_ownership_fix
+      repeat_block_until: 2026-12-20
+    - project: SandroGrassia/Lilla_Audio_Sampler
+      lane: PASS
+      reason: v7_3_1_partial_canvas_transfer_with_psram_budget_build_and_hex_asset
+      repeat_block_until: 2026-12-20
   recheck_queue:
+    - project: StillRez/BluemchenFX
+      status: published_selected
+      blocker: wait until 2026-12-20 unless a new effect family parallel routing Field target independent measurement or major chain memory or real-time architecture delta appears
+    - project: vincentltm/TouchBends
+      status: published_selected
+      blocker: wait until 2026-12-20 unless a Field target new hardware target independent measurement or major delay feedback or control architecture delta appears
+    - project: sfaber02/CHOMPI-MULTI-FIRMWARE
+      status: published
+      blocker: wait until 2026-12-20 unless a tagged 1.8.2-or-newer release asset hardware-independent transport port independent validation or major boot storage or USB architecture delta appears
+    - project: SandroGrassia/Lilla_Audio_Sampler
+      status: published
+      blocker: wait until 2026-12-20 unless physical 7.3.1 flicker validation a new DSP or storage feature hardware revision or independently measured real-time UI result appears
+    - project: joebmz98/Weasel-West-Coast-Synthesiser
+      status: hold_material_lead
+      blocker: require assembled validation or a release for the 6N138 MIDI input revision before repeating the May publication
+    - project: rhdghcks/stm32-dsp-delay-effect
+      status: hold
+      blocker: require an explicit repository license and physical Seed validation of audio levels noise DMA and controls
+    - project: FullMoon425/teensy-nam-pedal
+      status: hold
+      blocker: require implemented NAM inference and full signal processing plus non-empty hardware evidence before promotion
     - project: clevelandmusicco/HothouseExamples
       status: published_selected_material_repeat
       blocker: wait until 2026-12-18 unless a Field target new release hardware revision measured audio result or major routing DSP or memory architecture delta appears
@@ -254,6 +287,11 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck BluemchenFX TouchBends CHOMPI Multi-Firmware and LILLA only after 2026-12-20 unless their explicit material-delta blockers resolve
+    - keep Weasel MIDI revision on HOLD until assembled or release evidence confirms the new 6N138 input stage
+    - keep stm32-dsp-delay-effect on HOLD until licensing and physical Seed audio validation appear
+    - keep teensy-nam-pedal on HOLD until NAM inference and the full audio chain are implemented and verified
+    - recheck CHOMPI launcher when a tagged 1.8.2-or-newer card image or binary is published
     - recheck HothouseExamples only after 2026-12-18 unless a Field target new release measured result or major routing DSP or memory delta appears
     - keep customFWVersioNE9in1 on HOLD until an explicit repository licence and hardware validation appear
     - recheck DaisyPodUsbAudio Andamento TWEACMAN and ds-ide only after 2026-12-17 unless their explicit material-delta blockers resolve
@@ -290,7 +328,7 @@ daisy_teensy_watch:
     - record the 2026-11-05 PJRC editorial SD-player resurfacing as non-event unless its linked source gains a current release or target
     - keep curiosa/sereia stale until Codeberg shows a post-overlap event; latest verified commit remains 2026-06-16
     - treat oikoaudio/oikoaudio as cross-stream published on 2026-11-04 and do not repeat without a material delta
-  note: forum aggregator index and relative activity remain discovery-only; fork and continuation lineages share anti-repeat scope; verify canonical event date source build licence release hardware and Field target evidence on primary pages
+  note: forum aggregator index and relative activity remain discovery-only; fork and continuation lineages share anti-repeat scope; partial UI updates qualify only with build memory budget audio invariants and explicit hardware caveats; verify canonical event date source build licence release hardware and Field target evidence on primary pages
 
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
