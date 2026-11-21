@@ -115,30 +115,22 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-20
-  source_review_completed: 2026-11-20
-  last_successful_scan: 2026-11-20
-  overlap_start: 2026-11-19
-  anti_repeat_cutoff: 2026-10-21
-  last_main_sha: c3abaa5373c697aa20faef8bab06f48a173d5b52
+  latest_digest_date: 2026-11-21
+  source_review_completed: 2026-11-21
+  last_successful_scan: 2026-11-21
+  overlap_start: 2026-11-20
+  anti_repeat_cutoff: 2026-10-22
+  last_main_sha: d9bc790004b90e0ed0392e6941bdfdfdc9778c3e
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: StillRez/BluemchenFX
+    - project: modularev/Nemesis
       lane: STRONG_PASS
-      reason: v0_6_0_four_slot_effect_chain_hardware_verified_limiter_host_tests_and_flashable_bin
-      repeat_block_until: 2026-12-20
-    - project: vincentltm/TouchBends
-      lane: STRONG_PASS
-      reason: v0_9_1_sample_local_delay_pipeline_freeze_scrub_stutter_reverse_and_22_host_tests
-      repeat_block_until: 2026-12-20
-    - project: sfaber02/CHOMPI-MULTI-FIRMWARE
-      lane: STRONG_PASS
-      reason: launcher_1_8_2_companion_file_protocol_atomic_sd_install_and_usb_ownership_fix
-      repeat_block_until: 2026-12-20
-    - project: SandroGrassia/Lilla_Audio_Sampler
-      lane: PASS
-      reason: v7_3_1_partial_canvas_transfer_with_psram_budget_build_and_hex_asset
-      repeat_block_until: 2026-12-20
+      reason: material_repeat_new_slush_stft_phase_vocoder_freeze_smear_and_profiled_realtime_path
+      repeat_block_until: 2026-12-21
+    - project: Eight4aWish/eurorack_electronics
+      lane: REF_PASS
+      reason: corrected_teensy_16bit_noise_deadzone_and_reproducible_measurement_method
+      repeat_block_until: 2026-12-21
   recheck_queue:
     - project: StillRez/BluemchenFX
       status: published_selected
@@ -192,8 +184,11 @@ daisy_teensy_watch:
       status: published_material_update
       blocker: wait until 2026-12-13 unless a new hardware target tagged release audio-input implementation independent measurement or major DSP architecture delta appears
     - project: modularev/Nemesis
-      status: published
-      blocker: wait until 2026-12-13 unless a tagged firmware release new hardware revision independent measurement or major DSP architecture delta appears
+      status: published_material_repeat
+      blocker: wait until 2026-12-21 unless a tagged firmware release new hardware revision independent measurement Field target or another major DSP architecture delta appears
+    - project: Eight4aWish/eurorack_electronics
+      status: published_reference
+      blocker: wait until 2026-12-21 unless a direct 24/32-bit Boy Rev A remeasurement new hardware revision or independently replicated noise result appears
     - project: dylangmiles/daisy-tone-trixter
       status: hold
       blocker: require an explicit repository license before publication; then recheck only on a release Field target or further material USB audio or DSP delta
@@ -287,6 +282,8 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck Nemesis only after 2026-12-21 unless a tagged release hardware revision independent measurement Field target or another major DSP architecture delta appears
+    - recheck eurorack_electronics only after 2026-12-21 unless Boy Rev A is directly remeasured at 24/32 bits or a new hardware or independent measurement delta appears
     - recheck BluemchenFX TouchBends CHOMPI Multi-Firmware and LILLA only after 2026-12-20 unless their explicit material-delta blockers resolve
     - keep Weasel MIDI revision on HOLD until assembled or release evidence confirms the new 6N138 input stage
     - keep stm32-dsp-delay-effect on HOLD until licensing and physical Seed audio validation appear
@@ -302,7 +299,6 @@ daisy_teensy_watch:
     - recheck Athanor PZD and Tessera only after 2026-12-14 unless their explicit material-delta blockers resolve
     - keep volfovich/teensy41 on HOLD until an explicit repository license appears; preserve its NAM and full-chain CPU measurements as a lead only
     - recheck Eight4aWish Secret only after 2026-12-13 unless release audio-input new target or independent measurement lands
-    - recheck Nemesis only after 2026-12-13 unless release new target or material measured DSP architecture lands
     - recheck sscheidl/Daisy-Seed only after 2026-12-13 unless release hardware Field or another major DSP storage or real-time delta resolves the blocker
     - keep daisy-tone-trixter on HOLD until an explicit license appears; do not treat its hardware measurements as reuse permission
     - recheck StepDaddy and StepMother only after 2026-12-08 unless a new release hardware revision analog I/O or independent measurement lands
