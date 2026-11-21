@@ -67,7 +67,7 @@ none recorded
 - Nemesis aggiornato come ripetizione materiale, nuovo ultimo alert **2026-11-21**, blocco fino al **2026-12-21**.
 - eurorack_electronics pubblicato come REF_PASS, blocco fino al **2026-12-21**.
 - Nessuna aggiunta a selected-projects: entrambi sono utili, ma il valore è già rappresentato dal tracker e dal source registry.
-- Common anti-repeat index rigenerato dai recordi canonici interessati; source registry e prompt state aggiornati.
+- Common anti-repeat index rigenerato dai record canonici interessati; source registry e prompt state aggiornati.
 
 ## Prompt improvement for next run
 
