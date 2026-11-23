@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-20
+last_updated: 2026-11-23
 
 shared:
   anti_repeat_window_days: 30
@@ -331,16 +331,48 @@ daisy_teensy_watch:
 
 weekly_analog:
   active_focus: open_source_analog_and_mixed_signal_audio_hardware
-  latest_digest_date: 2026-11-16
-  source_review_completed: 2026-11-16
-  last_successful_scan: 2026-11-16
+  latest_digest_date: 2026-11-23
+  source_review_completed: 2026-11-23
+  last_successful_scan: 2026-11-23
   explicit_questionnaire_answers: {}
+  selected_this_run:
+    - project: trope-oshw/anthracite
+      lane: STRONG_PASS
+      current_revision_evidence: measured_build
+      repeat_block_until: 2026-12-23
+    - project: HAGIWO/SSI2190-6Band-VC-Filter-Bank
+      lane: PASS
+      current_revision_evidence: functional_build
+      repeat_block_until: 2026-12-23
+    - project: dfourer/eHandPan
+      lane: PASS
+      current_revision_evidence: measured_build
+      repeat_block_until: 2026-12-23
+    - project: supersynthesis/eurorack
+      lane: REF_PASS
+      current_revision_evidence: functional_build
+      repeat_block_until: 2026-12-23
   preserve_scope:
     - eurorack_allowed
     - standalone_allowed
     - reusable_subassemblies_allowed
     - manufacturer_reference_designs_allowed_as_foundation_updates
   recheck_queue:
+    - project: trope-oshw/anthracite
+      status: published_selected
+      blocker: wait until 2026-12-23 unless a hardware revision independent measurement environmental leakage result or major analog or switching architecture delta appears
+    - project: HAGIWO/SSI2190-6Band-VC-Filter-Bank
+      status: published_selected
+      blocker: wait until 2026-12-23 unless editable EDA public production files a hardware revision or quantitative band-response noise THD feedthrough headroom or CV-law measurements appear
+    - project: dfourer/eHandPan
+      status: published_selected
+      blocker: wait until 2026-12-23 unless editable PCB and BOM a hardware revision independent build or quantitative latency crosstalk noise or reliability measurements appear
+    - project: supersynthesis/eurorack
+      status: published_reference
+      blocker: wait until 2026-12-23 unless current production EDA and fabrication correspondence quantitative measurements or a material circuit revision appears
+    - project: caroleq/Compressor
+      status: hold
+      blocker: require an explicit reusable hardware license before promotion; then verify calibration transfer curve noise and attack or release measurements
     - project: dmsd-lab/AMP8611
       status: published_material_revision
       blocker: wait until 2026-11-25 unless a complete v2.x build protection and fault test or analyzer-grade THD+N IMD noise crosstalk or thermal result appears
@@ -417,9 +449,10 @@ weekly_analog:
   next_run_rule_change:
     date: 2026-11-16
     stream: weekly_analog
-    status: proposed_not_implemented
+    status: implemented_in_tracker_evidence
     change: add current_revision_evidence with measured_build functional_build fabricated_unassembled source_only and unknown values beside physical measurement and licence-scope evidence
     regression_test: retain exceptional source-only architectures as REF_PASS while preventing physical proof from an obsolete revision from upgrading an unbuilt current revision
+    keep_or_remove_decision: keep; the field separated Anthracite and eHandPan measured builds from HAGIWO and Super Synthesis functional-build evidence without excluding the reference lane
 
 feedback:
   last_answers: {}
@@ -444,3 +477,8 @@ feedback:
     - "weekly analog: recheck Dolphins only after a versioned fabrication release current physical proof build guide and clock-noise bandwidth feedback and overload measurements"
     - "weekly analog: independently reproduce PolyUAnalog PWM sidebands VCF slope inter-voice crosstalk rail loading and multi-temperature calibration"
     - "weekly analog: recover or replace the dead Rabid Audio chorus primary source; do not promote from cached schematics alone"
+    - "weekly analog: find a fully public editable SSI2190 implementation with BOM Gerbers and measured noise THD control feedthrough headroom and CV law; HAGIWO remains blocked until those artifacts or measurements appear"
+    - "weekly analog: find a licensed current compressor with public editable EDA and measured threshold ratio knee attack release noise and headroom; keep Karolina Gontarek and christosthp on HOLD until hardware licensing is explicit"
+    - "weekly analog: search university labs and self-hosted repositories for digitally calibrated analog VCO or VCF hardware with DAC trim firmware multi-temperature tracking data and fabrication files"
+    - "weekly analog: test whether the Super Synthesis PDF circuits exactly match current Puget Audio production and reconcile conflicting TVCA current-draw figures before elevating beyond REF_PASS"
+    - "weekly analog: seek an independently replicated eHandPan build and quantify mux settling adjacent-pad crosstalk end-to-end latency ESD behavior and radio or LED supply coupling"
