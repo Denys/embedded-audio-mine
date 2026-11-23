@@ -191,7 +191,10 @@ daisy_teensy_watch:
       blocker: wait until 2026-12-21 unless a direct 24/32-bit Boy Rev A remeasurement new hardware revision or independently replicated noise result appears
     - project: dylangmiles/daisy-tone-trixter
       status: hold
-      blocker: require an explicit repository license before publication; then recheck only on a release Field target or further material USB audio or DSP delta
+      blocker: commit 74896d6 adds bench-verified five-channel UAC2 capture but publication still requires an explicit repository license; then recheck CH-B wet processing and reduced-RxFIFO reamp validation
+    - project: BIM4GIB/GhettoRack
+      status: hold
+      blocker: require an explicit repository license plus clearer physical Daisy/T95 build evidence before promoting the measured OLED-DMA and bridge architecture
     - project: AlexKokoschka/StepDaddy
       status: published_selected
       blocker: wait until 2026-12-08 unless a new hardware revision analog audio path release DSP engine Field target or independent timing and audio measurement appears
@@ -230,7 +233,7 @@ daisy_teensy_watch:
       blocker: wait until 2026-12-02 unless a new hardware target release-level DSP architecture independent hardware measurement or material resolution of the bundled-sample rights boundary appears
     - project: Peteranthony1st/PZD-Daisy-Pod-Groovebox
       status: published_material_repeat
-      blocker: wait until 2026-12-16 unless a tagged release Field target independent measurement new hardware target or another major DSP storage audio-graph or real-time architecture delta appears
+      blocker: wait until 2026-12-23 unless a Field target independent measurement new hardware target or another major DSP storage audio-graph or real-time architecture delta appears after v4.0.7
     - project: nzimas/bigorna
       status: published_material_repeat
       blocker: wait until 2026-12-01 unless a tagged release new DSP engine hardware timing measurement or another major sequencer/storage/audio-state architecture delta appears
