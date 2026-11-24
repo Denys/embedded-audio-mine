@@ -166,8 +166,8 @@ daisy_teensy_watch:
       status: published_reference
       blocker: wait until 2026-12-17 unless live audio input a new hardware revision release asset or major measured streaming and DSP delta appears
     - project: bobpuley/ds-ide
-      status: published_reference
-      blocker: wait until 2026-12-17 unless Windows or Linux support Field support cycle or resource modelling or another major architecture delta appears
+      status: published_material_repeat
+      blocker: wait until 2026-12-24 unless Linux or Field support cycle/resource modelling independent timing validation or another major emulator architecture delta appears after 0.27.4
     - project: HotPTgz/Limoncello
       status: hold
       blocker: require a built full instrument or validated four-key board with working audio UI and control path; current full system is source and simulation evidence only
@@ -191,10 +191,13 @@ daisy_teensy_watch:
       blocker: wait until 2026-12-21 unless a direct 24/32-bit Boy Rev A remeasurement new hardware revision or independently replicated noise result appears
     - project: dylangmiles/daisy-tone-trixter
       status: hold
-      blocker: commit 74896d6 adds bench-verified five-channel UAC2 capture but publication still requires an explicit repository license; then recheck CH-B wet processing and reduced-RxFIFO reamp validation
+      blocker: commits through a8c36e9 fix reamp no-WET and add CH-B gain plus crash diagnostics but publication still requires an explicit repository license
     - project: BIM4GIB/GhettoRack
       status: hold
-      blocker: require an explicit repository license plus clearer physical Daisy/T95 build evidence before promoting the measured OLED-DMA and bridge architecture
+      blocker: v13.16-v13.17 now have release binary and stronger rig/Wi-Fi evidence but publication still requires an explicit repository license
+    - project: slabcloud/reverb
+      status: hold
+      blocker: require an explicit project license and documented rights or replacement for the embedded vocal sample before promotion
     - project: AlexKokoschka/StepDaddy
       status: published_selected
       blocker: wait until 2026-12-08 unless a new hardware revision analog audio path release DSP engine Field target or independent timing and audio measurement appears
