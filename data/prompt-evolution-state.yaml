@@ -115,23 +115,22 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-21
-  source_review_completed: 2026-11-21
-  last_successful_scan: 2026-11-21
-  overlap_start: 2026-11-20
-  anti_repeat_cutoff: 2026-10-22
-  last_main_sha: d9bc790004b90e0ed0392e6941bdfdfdc9778c3e
+  latest_digest_date: 2026-11-25
+  source_review_completed: 2026-11-25
+  last_successful_scan: 2026-11-25
+  overlap_start: 2026-11-24
+  anti_repeat_cutoff: 2026-10-26
+  last_main_sha: 4a92184c69b76a661d7b813df3bac924109bfb03
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: modularev/Nemesis
+    - project: tone-3000/t3k-diy-pedal
       lane: STRONG_PASS
-      reason: material_repeat_new_slush_stft_phase_vocoder_freeze_smear_and_profiled_realtime_path
-      repeat_block_until: 2026-12-21
-    - project: Eight4aWish/eurorack_electronics
-      lane: REF_PASS
-      reason: corrected_teensy_16bit_noise_deadzone_and_reproducible_measurement_method
-      repeat_block_until: 2026-12-21
+      reason: public_launch_of_complete_mit_seed3_nam_pedal_firmware_webusb_and_fabrication_package
+      repeat_block_until: 2026-12-25
   recheck_queue:
+    - project: tone-3000/t3k-diy-pedal
+      status: published_selected
+      blocker: wait until 2026-12-25 unless a Daisy Field target new release independent analyzer measurement hardware revision or major neural DSP convolution provisioning or audio-I/O architecture delta appears
     - project: StillRez/BluemchenFX
       status: published_selected
       blocker: wait until 2026-12-20 unless a new effect family parallel routing Field target independent measurement or major chain memory or real-time architecture delta appears
@@ -194,7 +193,7 @@ daisy_teensy_watch:
       blocker: commits through a8c36e9 fix reamp no-WET and add CH-B gain plus crash diagnostics but publication still requires an explicit repository license
     - project: BIM4GIB/GhettoRack
       status: hold
-      blocker: v13.16-v13.17 now have release binary and stronger rig/Wi-Fi evidence but publication still requires an explicit repository license
+      blocker: commit c06ee1c4 now demonstrates zero skipped USB packets for 90 s at 76 percent CPU after SAI IRQ reprioritization but promotion still requires an explicit repository license a released binary and resolution of the full-overload lockup
     - project: slabcloud/reverb
       status: hold
       blocker: require an explicit project license and documented rights or replacement for the embedded vocal sample before promotion
@@ -288,6 +287,8 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck tone-3000/t3k-diy-pedal only after 2026-12-25 unless a Field target new release independent analyzer measurement hardware revision or major DSP convolution provisioning or audio-I/O delta appears
+    - keep GhettoRack on HOLD until an explicit license and release binary include the IRQ priority fix and the full-overload lockup is resolved
     - recheck Nemesis only after 2026-12-21 unless a tagged release hardware revision independent measurement Field target or another major DSP architecture delta appears
     - recheck eurorack_electronics only after 2026-12-21 unless Boy Rev A is directly remeasured at 24/32 bits or a new hardware or independent measurement delta appears
     - recheck BluemchenFX TouchBends CHOMPI Multi-Firmware and LILLA only after 2026-12-20 unless their explicit material-delta blockers resolve
