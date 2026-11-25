@@ -1,57 +1,64 @@
 {
-  "date": "2026-11-04",
-  "previous_digest_date": "2026-10-28",
+  "date": "2026-11-25",
+  "previous_digest_date": "2026-11-04",
   "queries_successful": 21,
-  "evaluated_unique_nonfork_repos": 142,
+  "evaluated_unique_nonfork_repos": 152,
   "selected": [
     {
       "rank": 1,
       "full_name": "grame-cncm/faust",
       "html_url": "https://github.com/grame-cncm/faust",
-      "stars": 3202,
-      "forks": 433,
-      "pushed_at": "2026-11-04",
+      "stars": 3221,
+      "forks": 442,
+      "pushed_at": "2026-11-25",
       "topic": "Computer-first DSP",
       "description": "Functional programming language for signal processing and sound synthesis",
       "matched_ic_query": false,
-      "score": 7753,
+      "score": 7818,
       "status_tag": "RE-ENTRY: updated",
       "content_value": "strong",
-      "content_summary": "Daisy/Hothouse audio callback and Makefile accompany the compiler; generated JUCE CMake now supports PluginGuiMagic exports.",
+      "content_summary": "Daisy callback integration and Teensy AudioStream adapters accompany a sample-rate adapter that now clears its input/output filters on lifecycle resets; a new float/double reset regression is present.",
       "representative_files": [
-        "architecture/juce/juce-plugin.cpp",
-        "architecture/hothouse/Makefile",
-        "architecture/hothouse/ex_faust.cpp",
-        "architecture/juce/plugin/CMakeLists.txt"
+        "architecture/daisy/ex_faust.cpp",
+        "architecture/faust/audio/teensy-dsp.h",
+        "COPYING.txt",
+        "architecture/faust/dsp/dsp-adapter.h",
+        "tests/architecture-tests/sr-adapter-reset.cpp"
       ],
       "portability_value": "high",
-      "portability_summary": "Generate a small kernel with the existing Daisy architecture; keep compiler, host GUI and dynamic allocation outside the MCU callback.",
-      "reuse_idea": "Compare a generated filter through the JUCE reference build and Daisy callback at matching sample rates.",
-      "source_revision": "8b18a88ee8490d59d9431abed85b206e19d31da4",
+      "portability_summary": "Existing Daisy and Teensy adapters provide a direct starting point; generated DSP still needs per-program RAM, sample-format and callback timing checks.",
+      "reuse_idea": "Exercise repeated init/clear on an oversampled Daisy effect and verify that zero input cannot retain the previous filter tail.",
+      "license_note": "Architecture files use LGPL with an unmodified-architecture linking exception; inspect the generated program and included library licenses separately.",
+      "source_revision": "0e81f47efb2f35977a9278c1badc751219d4313c",
       "content_evidence": [
         {
-          "path": "architecture/juce/juce-plugin.cpp",
+          "path": "architecture/daisy/ex_faust.cpp",
           "local": "source-grame-cncm--faust--0.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/8b18a88ee8490d59d9431abed85b206e19d31da4/architecture/juce/juce-plugin.cpp"
+          "url": "https://github.com/grame-cncm/faust/blob/0e81f47efb2f35977a9278c1badc751219d4313c/architecture/daisy/ex_faust.cpp"
         },
         {
-          "path": "architecture/hothouse/Makefile",
+          "path": "architecture/faust/audio/teensy-dsp.h",
           "local": "source-grame-cncm--faust--1.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/8b18a88ee8490d59d9431abed85b206e19d31da4/architecture/hothouse/Makefile"
+          "url": "https://github.com/grame-cncm/faust/blob/0e81f47efb2f35977a9278c1badc751219d4313c/architecture/faust/audio/teensy-dsp.h"
         },
         {
-          "path": "architecture/hothouse/ex_faust.cpp",
+          "path": "COPYING.txt",
           "local": "source-grame-cncm--faust--2.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/8b18a88ee8490d59d9431abed85b206e19d31da4/architecture/hothouse/ex_faust.cpp"
+          "url": "https://github.com/grame-cncm/faust/blob/0e81f47efb2f35977a9278c1badc751219d4313c/COPYING.txt"
         },
         {
-          "path": "architecture/juce/plugin/CMakeLists.txt",
+          "path": "architecture/faust/dsp/dsp-adapter.h",
           "local": "source-grame-cncm--faust--3.txt",
-          "url": "https://github.com/grame-cncm/faust/blob/8b18a88ee8490d59d9431abed85b206e19d31da4/architecture/juce/plugin/CMakeLists.txt"
+          "url": "https://github.com/grame-cncm/faust/blob/0e81f47efb2f35977a9278c1badc751219d4313c/architecture/faust/dsp/dsp-adapter.h"
+        },
+        {
+          "path": "tests/architecture-tests/sr-adapter-reset.cpp",
+          "local": "source-grame-cncm--faust--4.txt",
+          "url": "https://github.com/grame-cncm/faust/blob/0e81f47efb2f35977a9278c1badc751219d4313c/tests/architecture-tests/sr-adapter-reset.cpp"
         }
       ],
       "fork": false,
-      "source_file_count": 2037,
+      "source_file_count": 2066,
       "hardware_design_file_count": 0,
       "build_files": [
         ".github/llvm/smoke/CMakeLists.txt",
@@ -67,601 +74,620 @@
         "architecture/esp32/gramo-bt-midi/CMakeLists.txt",
         "architecture/esp32/gramo-bt-midi/Makefile"
       ],
-      "build_file_count": 80,
+      "build_file_count": 85,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN",
-      "meaningful_repeat_evidence": "f9332748 adds generated CMake support for PluginGuiMagic exports, a concrete host-build improvement; no new embedded kernel is claimed.",
+      "meaningful_repeat_evidence": "The November 25 patch resets resampling-filter state in instanceClear, instanceInit and init, with an explicit zero-input regression across filter types and ratios.",
       "repeat_commit_sources": [
         {
-          "sha": "f93327486f6169a463598b0395322f83381ac86b",
-          "url": "https://github.com/grame-cncm/faust/commit/f93327486f6169a463598b0395322f83381ac86b"
+          "sha": "0e81f47efb2f35977a9278c1badc751219d4313c",
+          "url": "https://github.com/grame-cncm/faust/commit/0e81f47efb2f35977a9278c1badc751219d4313c"
         }
       ]
     },
     {
       "rank": 2,
-      "full_name": "reales/retromulator",
-      "html_url": "https://github.com/reales/retromulator",
-      "stars": 80,
-      "forks": 12,
-      "pushed_at": "2026-11-04",
+      "full_name": "amsynth/amsynth",
+      "html_url": "https://github.com/amsynth/amsynth",
+      "stars": 508,
+      "forks": 60,
+      "pushed_at": "2026-11-21",
       "topic": "Computer-first synth",
-      "description": "A standalone app and DAW plugin (AAX / VST3 / AU) that emulates classic hardware synthesizers, samplers, and keyboards by running their original firmware on cycle-accurate CPU and DSP emulators.",
+      "description": "Simple software synthesizer for Linux",
       "matched_ic_query": false,
-      "score": 266,
-      "status_tag": "RE-ENTRY: updated",
+      "score": 1246,
+      "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "New Matrix-1000 control core includes integer DCO CV mapping; DX7 clean Core implements an additional synthesis path.",
+      "content_summary": "Oscillator.cpp, LowPassFilter.cpp and VoiceBoard.cpp implement a subtractive voice with waveform generation, sync, modulation, filter processing and smoothed amplitude control.",
       "representative_files": [
-        "source/matrixLib/clean/core.cpp",
-        "source/matrixLib/clean/cvDco.cpp",
-        "source/dx7Lib/clean/Core.cpp"
+        "src/core/synth/Oscillator.cpp",
+        "src/core/synth/LowPassFilter.cpp",
+        "src/core/synth/VoiceBoard.cpp",
+        "COPYING"
       ],
       "portability_value": "medium",
-      "portability_summary": "Extract one bounded voice or control model; desktop emulation, double precision and worker infrastructure need substantial adaptation and timing measurements.",
-      "reuse_idea": "Use the integer DCO pitch/count mapping as a host reference for an MCU-controlled analog voice.",
-      "source_revision": "5343ef3f8e85f36daa2d20b0bda46a74c1e2a93f",
+      "portability_summary": "The C++ voice math can be separated from Linux/JUCE UI and device services; use fixed voice buffers and profile trigonometry and polyphony on Cortex-M7.",
+      "reuse_idea": "Extract one oscillator/filter/envelope voice into a Teensy callback and compare aliasing and CPU load before adding polyphony.",
+      "license_note": "Inspected voice sources are GPL-2.0-or-later; redistribution of derived firmware must satisfy those terms. Returning reference last featured October 6, outside 30 days.",
+      "source_revision": "e9807829c59115f6df0bbacb41d5529aff0402dd",
       "content_evidence": [
         {
-          "path": "source/matrixLib/clean/core.cpp",
-          "local": "source-reales--retromulator--1.txt",
-          "url": "https://github.com/reales/retromulator/blob/5343ef3f8e85f36daa2d20b0bda46a74c1e2a93f/source/matrixLib/clean/core.cpp"
+          "path": "src/core/synth/Oscillator.cpp",
+          "local": "source-amsynth--amsynth--0.txt",
+          "url": "https://github.com/amsynth/amsynth/blob/e9807829c59115f6df0bbacb41d5529aff0402dd/src/core/synth/Oscillator.cpp"
         },
         {
-          "path": "source/matrixLib/clean/cvDco.cpp",
-          "local": "source-reales--retromulator--2.txt",
-          "url": "https://github.com/reales/retromulator/blob/5343ef3f8e85f36daa2d20b0bda46a74c1e2a93f/source/matrixLib/clean/cvDco.cpp"
+          "path": "src/core/synth/LowPassFilter.cpp",
+          "local": "source-amsynth--amsynth--1.txt",
+          "url": "https://github.com/amsynth/amsynth/blob/e9807829c59115f6df0bbacb41d5529aff0402dd/src/core/synth/LowPassFilter.cpp"
         },
         {
-          "path": "source/dx7Lib/clean/Core.cpp",
-          "local": "source-reales--retromulator--3.txt",
-          "url": "https://github.com/reales/retromulator/blob/5343ef3f8e85f36daa2d20b0bda46a74c1e2a93f/source/dx7Lib/clean/Core.cpp"
+          "path": "src/core/synth/VoiceBoard.cpp",
+          "local": "source-amsynth--amsynth--2.txt",
+          "url": "https://github.com/amsynth/amsynth/blob/e9807829c59115f6df0bbacb41d5529aff0402dd/src/core/synth/VoiceBoard.cpp"
+        },
+        {
+          "path": "COPYING",
+          "local": "source-amsynth--amsynth--3.txt",
+          "url": "https://github.com/amsynth/amsynth/blob/e9807829c59115f6df0bbacb41d5529aff0402dd/COPYING"
         }
       ],
       "fork": false,
-      "source_file_count": 6202,
+      "source_file_count": 78,
       "hardware_design_file_count": 0,
-      "build_files": [
-        "source/baseLib/CMakeLists.txt",
-        "source/bridge/bridgeLib/CMakeLists.txt",
-        "source/bridge/client/CMakeLists.txt",
-        "source/dsp56300/CMakeLists.txt",
-        "source/dsp56300/source/CMakeLists.txt",
-        "source/dsp56300/source/HxDplugin/CMakeLists.txt",
-        "source/dsp56300/source/asmjit/CMakeLists.txt",
-        "source/dsp56300/source/disassemble/CMakeLists.txt",
-        "source/dsp56300/source/dsp56kBase/CMakeLists.txt",
-        "source/dsp56300/source/dsp56kDebugger/CMakeLists.txt",
-        "source/dsp56300/source/dsp56kEmu/CMakeLists.txt",
-        "source/dsp56300/source/dsp56kTestRunner/CMakeLists.txt"
-      ],
-      "build_file_count": 62,
+      "build_files": [],
+      "build_file_count": 0,
       "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "meaningful_repeat_evidence": "f951c62f introduces the Matrix-1000 clean-room core; d5bc14df changes DX7 core behavior. These are source-level synthesis additions/fixes since October 28.",
-      "repeat_commit_sources": [
-        {
-          "sha": "d5bc14dffdfd2fd1de747094fae47fab8f9670be",
-          "url": "https://github.com/reales/retromulator/commit/d5bc14dffdfd2fd1de747094fae47fab8f9670be"
-        },
-        {
-          "sha": "f951c62f6f935b15b8ce1266fc0d3c72aac209ee",
-          "url": "https://github.com/reales/retromulator/commit/f951c62f6f935b15b8ce1266fc0d3c72aac209ee"
-        }
-      ]
+      "hardware_verification": "NOT_RUN"
     },
     {
       "rank": 3,
-      "full_name": "benjamindehli/overtonium",
-      "html_url": "https://github.com/benjamindehli/overtonium",
-      "stars": 69,
-      "forks": 3,
-      "pushed_at": "2026-11-03",
-      "topic": "Computer-first synth",
-      "description": "32-partial additive synthesizer laid out like a 32-channel mixer. Every channel is one sine oscillator locked to a harmonic of the played note, and every channel has its own tuning, envelope and modulation.",
+      "full_name": "sourcebox/mi-plaits-dsp-rs",
+      "html_url": "https://github.com/sourcebox/mi-plaits-dsp-rs",
+      "stars": 70,
+      "forks": 9,
+      "pushed_at": "2026-11-19",
+      "topic": "Mutable Instruments",
+      "description": "Rust port of Mutable Instruments Plaits module DSP code.",
       "matched_ic_query": false,
       "score": 217,
-      "status_tag": "NEW",
+      "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "Per-partial envelope implements delayed ADSR and two-stage key-off; LFO and JUCE processor provide a real additive-synthesis implementation.",
+      "content_summary": "The no_std Rust crate contains Plaits synthesis engines, slice-based render methods and engine tests; the inspected virtual-analog engine allocates its boxed scratch buffer at construction.",
       "representative_files": [
-        "Source/PluginProcessor.cpp",
-        "Source/dsp/Envelope.h",
-        "Source/dsp/Lfo.h"
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/engine/virtual_analog_engine.rs",
+        "tests/all_engines.rs"
       ],
       "portability_value": "medium",
-      "portability_summary": "Extract envelope/LFO classes from the JUCE processor, limit partial/voice counts and profile coefficient updates and worst-case work on Cortex-M7.",
-      "reuse_idea": "Port a fixed-count additive voice with the key-off swell envelope and compare deterministic note-on/off renders.",
-      "source_revision": "9f4690287109bd39d4e39757c20b9f00c1f1df33",
+      "portability_summary": "A Cortex-M Rust integration is plausible, but no_std still uses alloc, and board audio I/O, allocator initialization and engine memory budgets must be supplied.",
+      "reuse_idea": "Construct one virtual-analog engine before audio starts, feed fixed-size output/auxiliary slices from a Daisy callback and measure RAM and deadline margin.",
+      "license_note": "Cargo declares MIT and the inspected engine credits Emilie Gillet MIT code; this is a port of Plaits, not a newly invented synthesis family.",
+      "source_revision": "d615458aab7239eee544811de8d76ae7ac6b07db",
       "content_evidence": [
         {
-          "path": "Source/PluginProcessor.cpp",
-          "local": "source-benjamindehli--overtonium--0.txt",
-          "url": "https://github.com/benjamindehli/overtonium/blob/9f4690287109bd39d4e39757c20b9f00c1f1df33/Source/PluginProcessor.cpp"
+          "path": "Cargo.toml",
+          "local": "source-sourcebox--mi-plaits-dsp-rs--0.txt",
+          "url": "https://github.com/sourcebox/mi-plaits-dsp-rs/blob/d615458aab7239eee544811de8d76ae7ac6b07db/Cargo.toml"
         },
         {
-          "path": "Source/dsp/Envelope.h",
-          "local": "source-benjamindehli--overtonium--1.txt",
-          "url": "https://github.com/benjamindehli/overtonium/blob/9f4690287109bd39d4e39757c20b9f00c1f1df33/Source/dsp/Envelope.h"
+          "path": "src/lib.rs",
+          "local": "source-sourcebox--mi-plaits-dsp-rs--1.txt",
+          "url": "https://github.com/sourcebox/mi-plaits-dsp-rs/blob/d615458aab7239eee544811de8d76ae7ac6b07db/src/lib.rs"
         },
         {
-          "path": "Source/dsp/Lfo.h",
-          "local": "source-benjamindehli--overtonium--2.txt",
-          "url": "https://github.com/benjamindehli/overtonium/blob/9f4690287109bd39d4e39757c20b9f00c1f1df33/Source/dsp/Lfo.h"
+          "path": "src/engine/virtual_analog_engine.rs",
+          "local": "source-sourcebox--mi-plaits-dsp-rs--2.txt",
+          "url": "https://github.com/sourcebox/mi-plaits-dsp-rs/blob/d615458aab7239eee544811de8d76ae7ac6b07db/src/engine/virtual_analog_engine.rs"
+        },
+        {
+          "path": "tests/all_engines.rs",
+          "local": "source-sourcebox--mi-plaits-dsp-rs--3.txt",
+          "url": "https://github.com/sourcebox/mi-plaits-dsp-rs/blob/d615458aab7239eee544811de8d76ae7ac6b07db/tests/all_engines.rs"
         }
       ],
       "fork": false,
-      "source_file_count": 97,
+      "source_file_count": 136,
       "hardware_design_file_count": 0,
       "build_files": [
-        "CMakeLists.txt",
-        "package.json"
+        "Cargo.toml"
       ],
-      "build_file_count": 2,
+      "build_file_count": 1,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN"
     },
     {
       "rank": 4,
-      "full_name": "juzzlin/Noteahead",
-      "html_url": "https://github.com/juzzlin/Noteahead",
-      "stars": 75,
-      "forks": 5,
-      "pushed_at": "2026-11-03",
-      "topic": "JUCE effects",
-      "description": "Noteahead is a MIDI tracker and sequencer with built-in synths and effects, written in C++20/Qt/QML and targeted for Linux. It does not use JUCE\u2014only custom DSP code!",
+      "full_name": "aquanodemusic/aquanode-modular",
+      "html_url": "https://github.com/aquanodemusic/aquanode-modular",
+      "stars": 18,
+      "forks": 2,
+      "pushed_at": "2026-11-24",
+      "topic": "Computer-first synth",
+      "description": "A comprehensive modular synthesizer written in JUCE/C++. Precompiled for Android and Windows, also as an effect plugin. 140+ modules (e.g. Spectral Processing, Physical Modelling), 25+ built-in modularizable plugins. Loads external VST3 Plugins. Supports MPE and Microtuning. Capable of Self-Feedback Routing. Random Patch Generation and Evolution. ",
       "matched_ic_query": false,
-      "score": 215,
+      "score": 112,
       "status_tag": "NEW",
       "content_value": "strong",
-      "content_summary": "Project-specific kick-808 and saturating state-variable filter implementations sit in a distinct domain DSP directory with CMake integration.",
+      "content_summary": "The DuskTapeEcho subdirectory contains a framework-free C++ tape echo with three read heads, nonlinear feedback and dispersive spring-reverb code; delay storage is assigned during prepare.",
       "representative_files": [
-        "src/domain/dsp/drum/kick_808_engine.cpp",
-        "src/domain/dsp/saturating_svf.cpp",
-        "src/domain/dsp/CMakeLists.txt"
+        "Source/Modules/Effects/Delays/DuskTapeEcho/TapeEchoDSP.hpp",
+        "Source/Modules/Effects/Delays/DuskTapeEcho/TapeEchoDSP.cpp",
+        "Source/Modules/Effects/Resonators/ModalBodyModule.cpp",
+        "LICENSE"
       ],
       "portability_value": "medium",
-      "portability_summary": "Port a drum kernel and its dependencies rather than the Qt sequencer; inspect double-precision math, allocation and sample-rate assumptions before using an MCU callback.",
-      "reuse_idea": "Extract one 808-style kick and compare decay and pitch-sweep envelopes using fixed host fixtures.",
-      "source_revision": "7203bfdac389f9069c941f4d743f261aeecf7e23",
+      "portability_summary": "The isolated C++ core avoids JUCE, but long tape buffers and the multi-spring allpass workload need SDRAM planning and reduced configurations on Daisy or Teensy.",
+      "reuse_idea": "Prototype the tape feedback and head interpolation without spring reverb first; measure memory and aliasing before enabling the complete effect.",
+      "license_note": "Repository LICENSE is AGPL-3.0; the inspected tape core explicitly credits dusk-audio-plugins under GPL-3.0-or-later. Preserve upstream attribution and file-specific terms.",
+      "source_revision": "dd8aa769a8b9191737e36d261051faefefa1d52c",
       "content_evidence": [
         {
-          "path": "src/domain/dsp/drum/kick_808_engine.cpp",
-          "local": "source-juzzlin--Noteahead--1.txt",
-          "url": "https://github.com/juzzlin/Noteahead/blob/7203bfdac389f9069c941f4d743f261aeecf7e23/src/domain/dsp/drum/kick_808_engine.cpp"
+          "path": "Source/Modules/Effects/Delays/DuskTapeEcho/TapeEchoDSP.hpp",
+          "local": "source-aquanodemusic--aquanode-modular--0.txt",
+          "url": "https://github.com/aquanodemusic/aquanode-modular/blob/dd8aa769a8b9191737e36d261051faefefa1d52c/Source/Modules/Effects/Delays/DuskTapeEcho/TapeEchoDSP.hpp"
         },
         {
-          "path": "src/domain/dsp/saturating_svf.cpp",
-          "local": "source-juzzlin--Noteahead--2.txt",
-          "url": "https://github.com/juzzlin/Noteahead/blob/7203bfdac389f9069c941f4d743f261aeecf7e23/src/domain/dsp/saturating_svf.cpp"
+          "path": "Source/Modules/Effects/Delays/DuskTapeEcho/TapeEchoDSP.cpp",
+          "local": "source-aquanodemusic--aquanode-modular--1.txt",
+          "url": "https://github.com/aquanodemusic/aquanode-modular/blob/dd8aa769a8b9191737e36d261051faefefa1d52c/Source/Modules/Effects/Delays/DuskTapeEcho/TapeEchoDSP.cpp"
         },
         {
-          "path": "src/domain/dsp/CMakeLists.txt",
-          "local": "source-juzzlin--Noteahead--3.txt",
-          "url": "https://github.com/juzzlin/Noteahead/blob/7203bfdac389f9069c941f4d743f261aeecf7e23/src/domain/dsp/CMakeLists.txt"
+          "path": "Source/Modules/Effects/Resonators/ModalBodyModule.cpp",
+          "local": "source-aquanodemusic--aquanode-modular--2.txt",
+          "url": "https://github.com/aquanodemusic/aquanode-modular/blob/dd8aa769a8b9191737e36d261051faefefa1d52c/Source/Modules/Effects/Resonators/ModalBodyModule.cpp"
+        },
+        {
+          "path": "LICENSE",
+          "local": "source-aquanodemusic--aquanode-modular--3.txt",
+          "url": "https://github.com/aquanodemusic/aquanode-modular/blob/dd8aa769a8b9191737e36d261051faefefa1d52c/LICENSE"
         }
       ],
       "fork": false,
-      "source_file_count": 1145,
+      "source_file_count": 1480,
       "hardware_design_file_count": 0,
-      "build_files": [
-        "CMakeLists.txt",
-        "package.json",
-        "src/CMakeLists.txt",
-        "src/application/CMakeLists.txt",
-        "src/common/CMakeLists.txt",
-        "src/contrib/Argengine/CMakeLists.txt",
-        "src/contrib/Argengine/src/CMakeLists.txt",
-        "src/contrib/Argengine/src/examples/CMakeLists.txt",
-        "src/contrib/Argengine/src/examples/ex1/CMakeLists.txt",
-        "src/contrib/Argengine/src/examples/ex2/CMakeLists.txt",
-        "src/contrib/Argengine/src/examples/ex3/CMakeLists.txt",
-        "src/contrib/Argengine/src/tests/CMakeLists.txt"
-      ],
-      "build_file_count": 229,
+      "build_files": [],
+      "build_file_count": 0,
       "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "license_note": "Inspected DSP source headers are GPL-3.0-or-later. Comments about RD-8 measurements are author claims, not reproduced measurements."
+      "hardware_verification": "NOT_RUN"
     },
     {
       "rank": 5,
-      "full_name": "jakubthedeveloper/Samplotron",
-      "html_url": "https://github.com/jakubthedeveloper/Samplotron",
-      "stars": 38,
-      "forks": 1,
-      "pushed_at": "2026-10-26",
-      "topic": "ESP32 audio",
-      "description": "Samplotron is an ESP32 hardware sampler for musicians and producers: play WAVs from SD, map samples to MIDI notes, tweak per-sample volume and shot/loop mode, and save live-ready setups on device.",
-      "matched_ic_query": false,
-      "score": 99,
-      "status_tag": "RETURNING",
+      "full_name": "sazuma0219-sudo/pan",
+      "html_url": "https://github.com/sazuma0219-sudo/pan",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-11-22",
+      "topic": "Audio IC hardware",
+      "description": "2-input stereo panning mixer module for AE Modular (SSI2164 + CH32V003): schematic, firmware and specification",
+      "matched_ic_query": true,
+      "score": 110,
+      "status_tag": "NEW",
       "content_value": "strong",
-      "content_summary": "ESP32/WROVER sample-player firmware has a concrete audio voice engine, budgeted output path and PlatformIO Makefile.",
+      "content_summary": "MIT CH32V003 firmware reads six ADC controls and drives four 10-bit PWM control voltages from a constant-power lookup table; the circuit export and BOM identify an SSI2164 and output/control op amps.",
       "representative_files": [
-        "src/audio_voice_engine.cpp",
-        "include/budgeted_audio_output.h",
-        "Makefile"
+        "firmware/pan/pan.c",
+        "firmware/pan/build.sh",
+        "hardware/PAN_BOM.csv",
+        "hardware/PAN_schematic_p1.svg",
+        "hardware/LICENSE",
+        "firmware/LICENSE"
       ],
       "portability_value": "medium",
-      "portability_summary": "Concrete ESP32 firmware reference; moving to Daisy or Teensy requires replacing board audio, storage and scheduling integration. SD latency and memory budgets remain unmeasured.",
-      "reuse_idea": "Adapt its bounded voice budget and SD-backed sample scheduling to a small Daisy or Teensy sampler.",
-      "source_revision": "58761071835089f23d071199516d5c6abf30fb76",
+      "portability_summary": "Reuse is primarily the analog VCA control path: replace CH32 register access with Daisy/Teensy ADC and DAC/PWM services, and adapt the 0-5 V AE Modular interface.",
+      "reuse_idea": "Reuse the startup-mute sequencing, filtered CV acquisition and pan table for an SSI2164 stereo output stage; measure control ripple and gain law on the target hardware.",
+      "license_note": "Firmware is MIT; hardware is CERN-OHL-P-2.0. Board operation is author-reported; no build, electrical measurement or hardware validation was performed here.",
+      "source_revision": "6a2d9170c1673ad38bb5ee314df0dce2221979f0",
       "content_evidence": [
         {
-          "path": "src/audio_voice_engine.cpp",
-          "local": "source-jakubthedeveloper--Samplotron--0.txt",
-          "url": "https://github.com/jakubthedeveloper/Samplotron/blob/58761071835089f23d071199516d5c6abf30fb76/src/audio_voice_engine.cpp"
+          "path": "firmware/pan/pan.c",
+          "local": "source-sazuma0219-sudo--pan--0.txt",
+          "url": "https://github.com/sazuma0219-sudo/pan/blob/6a2d9170c1673ad38bb5ee314df0dce2221979f0/firmware/pan/pan.c"
         },
         {
-          "path": "include/budgeted_audio_output.h",
-          "local": "source-jakubthedeveloper--Samplotron--1.txt",
-          "url": "https://github.com/jakubthedeveloper/Samplotron/blob/58761071835089f23d071199516d5c6abf30fb76/include/budgeted_audio_output.h"
+          "path": "firmware/pan/build.sh",
+          "local": "source-sazuma0219-sudo--pan--1.txt",
+          "url": "https://github.com/sazuma0219-sudo/pan/blob/6a2d9170c1673ad38bb5ee314df0dce2221979f0/firmware/pan/build.sh"
         },
         {
-          "path": "Makefile",
-          "local": "source-jakubthedeveloper--Samplotron--2.txt",
-          "url": "https://github.com/jakubthedeveloper/Samplotron/blob/58761071835089f23d071199516d5c6abf30fb76/Makefile"
+          "path": "hardware/PAN_BOM.csv",
+          "local": "source-sazuma0219-sudo--pan--2.txt",
+          "url": "https://github.com/sazuma0219-sudo/pan/blob/6a2d9170c1673ad38bb5ee314df0dce2221979f0/hardware/PAN_BOM.csv"
+        },
+        {
+          "path": "hardware/PAN_schematic_p1.svg",
+          "local": "source-sazuma0219-sudo--pan--3.txt",
+          "url": "https://github.com/sazuma0219-sudo/pan/blob/6a2d9170c1673ad38bb5ee314df0dce2221979f0/hardware/PAN_schematic_p1.svg"
+        },
+        {
+          "path": "hardware/LICENSE",
+          "local": "source-sazuma0219-sudo--pan--4.txt",
+          "url": "https://github.com/sazuma0219-sudo/pan/blob/6a2d9170c1673ad38bb5ee314df0dce2221979f0/hardware/LICENSE"
+        },
+        {
+          "path": "firmware/LICENSE",
+          "local": "source-sazuma0219-sudo--pan--5.txt",
+          "url": "https://github.com/sazuma0219-sudo/pan/blob/6a2d9170c1673ad38bb5ee314df0dce2221979f0/firmware/LICENSE"
         }
       ],
       "fork": false,
-      "source_file_count": 85,
+      "source_file_count": 3,
+      "hardware_design_file_count": 1,
+      "build_files": [],
+      "build_file_count": 0,
+      "build_verification": "NOT_RUN",
+      "hardware_verification": "NOT_RUN"
+    },
+    {
+      "rank": 6,
+      "full_name": "algomusic/M16",
+      "html_url": "https://github.com/algomusic/M16",
+      "stars": 39,
+      "forks": 1,
+      "pushed_at": "2026-11-17",
+      "topic": "Teensy audio",
+      "description": "Arduino Audio Synthesis Library for ESP8266, ESP32, Pi Pico and Teensy 4",
+      "matched_ic_query": false,
+      "score": 101,
+      "status_tag": "RETURNING",
+      "content_value": "strong",
+      "content_summary": "M16.h has explicit IMXRT1062/Teensy I/O and memory paths; BBD.h and Phys.h implement delay and physical-model processing, and BBDelay.ino connects a real oscillator/envelope/delay audioUpdate path.",
+      "representative_files": [
+        "M16.h",
+        "BBD.h",
+        "Phys.h",
+        "examples/BBDelay/BBDelay.ino",
+        "library.properties"
+      ],
+      "portability_value": "high",
+      "portability_summary": "Teensy 4 support is explicit in source; Daisy requires replacing Arduino/I2S scheduling while retaining the sample-level DSP and allocating delay storage before processing.",
+      "reuse_idea": "Run the BBD example on Teensy, then isolate delay scan-rate, feedback and interpolation behavior for a Daisy multitap experiment.",
+      "license_note": "Inspected headers specify CC-BY-NC-SA-4.0: noncommercial reuse restriction matters for product work; this is not a permissively licensed code library.",
+      "source_revision": "da67dd4e46a9d7d2b028afdbb88a00a6c448a549",
+      "content_evidence": [
+        {
+          "path": "M16.h",
+          "local": "source-algomusic--M16--0.txt",
+          "url": "https://github.com/algomusic/M16/blob/da67dd4e46a9d7d2b028afdbb88a00a6c448a549/M16.h"
+        },
+        {
+          "path": "BBD.h",
+          "local": "source-algomusic--M16--1.txt",
+          "url": "https://github.com/algomusic/M16/blob/da67dd4e46a9d7d2b028afdbb88a00a6c448a549/BBD.h"
+        },
+        {
+          "path": "Phys.h",
+          "local": "source-algomusic--M16--2.txt",
+          "url": "https://github.com/algomusic/M16/blob/da67dd4e46a9d7d2b028afdbb88a00a6c448a549/Phys.h"
+        },
+        {
+          "path": "examples/BBDelay/BBDelay.ino",
+          "local": "source-algomusic--M16--3.txt",
+          "url": "https://github.com/algomusic/M16/blob/da67dd4e46a9d7d2b028afdbb88a00a6c448a549/examples/BBDelay/BBDelay.ino"
+        },
+        {
+          "path": "library.properties",
+          "local": "source-algomusic--M16--4.txt",
+          "url": "https://github.com/algomusic/M16/blob/da67dd4e46a9d7d2b028afdbb88a00a6c448a549/library.properties"
+        }
+      ],
+      "fork": false,
+      "source_file_count": 72,
+      "hardware_design_file_count": 0,
+      "build_files": [],
+      "build_file_count": 0,
+      "build_verification": "NOT_RUN",
+      "hardware_verification": "NOT_RUN"
+    },
+    {
+      "rank": 7,
+      "full_name": "lucioaraujo/rasgo-modular",
+      "html_url": "https://github.com/lucioaraujo/rasgo-modular",
+      "stars": 8,
+      "forks": 1,
+      "pushed_at": "2026-11-24",
+      "topic": "Computer-first synth",
+      "description": "Rasgo Modular \u2014 a RASGO instrument: a generative modular synthesizer where the cable is an object with state (C++/JUCE, AGPL-3.0)",
+      "matched_ic_query": false,
+      "score": 89,
+      "status_tag": "NEW",
+      "content_value": "strong",
+      "content_summary": "Filter.hpp implements a trapezoidal state-variable filter with three related outputs; Oscillator.hpp, a typed signal graph and test_filter.cpp provide actual DSP and regression cases.",
+      "representative_files": [
+        "src/dsp/Filter.hpp",
+        "src/dsp/Oscillator.hpp",
+        "src/core/SignalGraph.hpp",
+        "tests/test_filter.cpp",
+        "LICENSE"
+      ],
+      "portability_value": "medium",
+      "portability_summary": "The DSP is visible separately from the desktop apps, but vector-backed graph interfaces, UI metadata and dynamic routing need a bounded embedded wrapper.",
+      "reuse_idea": "Extract the three-output filter into a fixed-buffer Teensy/Daisy unit and port its response tests before adding spread and drive modulation.",
+      "license_note": "Root LICENSE is AGPL-3.0; the filter source attributes the public Simper/Cytomic integration method. No measured stability or performance is asserted here.",
+      "source_revision": "514674e8d60c4b6883c4b5419ed24a1b77d4cd1d",
+      "content_evidence": [
+        {
+          "path": "src/dsp/Filter.hpp",
+          "local": "source-lucioaraujo--rasgo-modular--0.txt",
+          "url": "https://github.com/lucioaraujo/rasgo-modular/blob/514674e8d60c4b6883c4b5419ed24a1b77d4cd1d/src/dsp/Filter.hpp"
+        },
+        {
+          "path": "src/dsp/Oscillator.hpp",
+          "local": "source-lucioaraujo--rasgo-modular--1.txt",
+          "url": "https://github.com/lucioaraujo/rasgo-modular/blob/514674e8d60c4b6883c4b5419ed24a1b77d4cd1d/src/dsp/Oscillator.hpp"
+        },
+        {
+          "path": "src/core/SignalGraph.hpp",
+          "local": "source-lucioaraujo--rasgo-modular--2.txt",
+          "url": "https://github.com/lucioaraujo/rasgo-modular/blob/514674e8d60c4b6883c4b5419ed24a1b77d4cd1d/src/core/SignalGraph.hpp"
+        },
+        {
+          "path": "tests/test_filter.cpp",
+          "local": "source-lucioaraujo--rasgo-modular--3.txt",
+          "url": "https://github.com/lucioaraujo/rasgo-modular/blob/514674e8d60c4b6883c4b5419ed24a1b77d4cd1d/tests/test_filter.cpp"
+        },
+        {
+          "path": "LICENSE",
+          "local": "source-lucioaraujo--rasgo-modular--4.txt",
+          "url": "https://github.com/lucioaraujo/rasgo-modular/blob/514674e8d60c4b6883c4b5419ed24a1b77d4cd1d/LICENSE"
+        }
+      ],
+      "fork": false,
+      "source_file_count": 329,
       "hardware_design_file_count": 0,
       "build_files": [
-        "Makefile",
-        "platformio.ini"
+        "CMakeLists.txt",
+        "apps/juce/CMakeLists.txt"
       ],
       "build_file_count": 2,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN"
     },
     {
-      "rank": 6,
-      "full_name": "odoare/Camshaft",
-      "html_url": "https://github.com/odoare/Camshaft",
-      "stars": 9,
-      "forks": 0,
-      "pushed_at": "2026-10-30",
-      "topic": "JUCE effects",
-      "description": "Range wavetable synth plugin (VST3, CLAP, AU): turn any audio file into up to four wavetable oscillators, with a timing belt of cross-modulation, 16 modulators and built-in effects",
-      "matched_ic_query": false,
-      "score": 88,
-      "status_tag": "NEW",
-      "content_value": "strong",
-      "content_summary": "CamVoice implements voice state, modulation and audio generation; a separate two-slot effect chain provides host integration.",
-      "representative_files": [
-        "Source/Engine/CamVoice.cpp",
-        "Source/Effects/EffectChain.h"
-      ],
-      "portability_value": "medium",
-      "portability_summary": "Extract a bounded single-voice core and replace fxme/JUCE facilities; keep effect loading and host state changes outside real-time processing.",
-      "reuse_idea": "Prototype one voice with fixed modulation state and compare note transitions before enabling multiple voices.",
-      "source_revision": "389c7f61ca0ab566b2ac85aa858598f7765561ef",
-      "content_evidence": [
-        {
-          "path": "Source/Engine/CamVoice.cpp",
-          "local": "source-odoare--Camshaft--0.txt",
-          "url": "https://github.com/odoare/Camshaft/blob/389c7f61ca0ab566b2ac85aa858598f7765561ef/Source/Engine/CamVoice.cpp"
-        },
-        {
-          "path": "Source/Effects/EffectChain.h",
-          "local": "source-odoare--Camshaft--1.txt",
-          "url": "https://github.com/odoare/Camshaft/blob/389c7f61ca0ab566b2ac85aa858598f7765561ef/Source/Effects/EffectChain.h"
-        }
-      ],
-      "fork": false,
-      "source_file_count": 62,
-      "hardware_design_file_count": 0,
-      "build_files": [
-        "CMakeLists.txt"
-      ],
-      "build_file_count": 1,
-      "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "license_note": "CamVoice.cpp says LGPL-3.0-or-later; EffectChain.h says AGPL-3.0-or-later or commercial. Licensing differs by layer."
-    },
-    {
-      "rank": 7,
-      "full_name": "JordanAceto/micro-pico",
-      "html_url": "https://github.com/JordanAceto/micro-pico",
-      "stars": 11,
-      "forks": 1,
-      "pushed_at": "2023-01-21",
-      "topic": "Audio IC hardware",
-      "description": "Tiny analog monosynth with 2 SSI2130 VCOs and swappable filter",
-      "matched_ic_query": true,
-      "score": 85,
-      "status_tag": "AUDIO-IC hardware",
-      "content_value": "strong",
-      "content_summary": "Populated editable Micro-Pico VCO and VCF schematics and main PCB provide a real SSI2130 analog monosynth reference.",
-      "representative_files": [
-        "main_pcb/kicad_6/VCO.kicad_sch",
-        "main_pcb/kicad_6/VCF.kicad_sch",
-        "main_pcb/kicad_6/micro_pico.kicad_pcb",
-        "LICENSE"
-      ],
-      "portability_value": "high",
-      "portability_summary": "High hardware-reference value alongside Daisy/Teensy ADC/DAC control; this is analog circuitry, not firmware to compile for either board.",
-      "reuse_idea": "Study VCO control scaling and filter interfaces for an MCU-controlled analog voice, then independently verify levels, tracking and calibration.",
-      "source_revision": "db0dd1ef577c030f92178ce4661d8089da9d8e99",
-      "content_evidence": [
-        {
-          "path": "main_pcb/kicad_6/VCO.kicad_sch",
-          "local": "source-JordanAceto--micro-pico--2.txt",
-          "url": "https://github.com/JordanAceto/micro-pico/blob/db0dd1ef577c030f92178ce4661d8089da9d8e99/main_pcb/kicad_6/VCO.kicad_sch"
-        },
-        {
-          "path": "main_pcb/kicad_6/VCF.kicad_sch",
-          "local": "source-JordanAceto--micro-pico--3.txt",
-          "url": "https://github.com/JordanAceto/micro-pico/blob/db0dd1ef577c030f92178ce4661d8089da9d8e99/main_pcb/kicad_6/VCF.kicad_sch"
-        },
-        {
-          "path": "main_pcb/kicad_6/micro_pico.kicad_pcb",
-          "local": "source-JordanAceto--micro-pico--4.txt",
-          "url": "https://github.com/JordanAceto/micro-pico/blob/db0dd1ef577c030f92178ce4661d8089da9d8e99/main_pcb/kicad_6/micro_pico.kicad_pcb"
-        },
-        {
-          "path": "LICENSE",
-          "local": "source-JordanAceto--micro-pico--5.txt",
-          "url": "https://github.com/JordanAceto/micro-pico/blob/db0dd1ef577c030f92178ce4661d8089da9d8e99/LICENSE"
-        }
-      ],
-      "fork": false,
-      "source_file_count": 0,
-      "hardware_design_file_count": 18,
-      "build_files": [],
-      "build_file_count": 0,
-      "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "license_note": "Inspected schematic title blocks specify CC BY 4.0. Historical circuit reference; populated design files do not establish current production or measured performance."
-    },
-    {
       "rank": 8,
-      "full_name": "oikoaudio/oikoaudio",
-      "html_url": "https://github.com/oikoaudio/oikoaudio",
-      "stars": 6,
-      "forks": 0,
-      "pushed_at": "2026-11-04",
-      "topic": "Computer-first effects",
-      "description": "Open-source audio plugins: Weft spectral filter, Wow pitch modulation and Inton microtuning. CLAP and VST3 for macOS, Windows and Linux.",
+      "full_name": "orth4x0r/ilanaSynth",
+      "html_url": "https://github.com/orth4x0r/ilanaSynth",
+      "stars": 4,
+      "forks": 2,
+      "pushed_at": "2026-11-25",
+      "topic": "Computer-first synth",
+      "description": "A physical-hybrid synthesizer: strings, bows, hammers and pianos you can break, plus wavetable, FM / DX7, granular and sample engines, 39 filters and a 41-type FX rack. VST3 / CLAP / AU. JUCE C++.",
       "matched_ic_query": false,
-      "score": 82,
+      "score": 84,
       "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "Rust DSP implements cubic Farrow/Lagrange fractional-delay kernels, minimum-phase table design and concrete tests.",
+      "content_summary": "KarplusStrong.h and ResonatorBank.h contain physical-model and resonant delay processing; ResonatorBank preallocates its three delay buffers in prepare and updates pitch-dependent periods separately.",
       "representative_files": [
-        "crates/oiko-dsp/src/fractional_delay.rs",
-        "crates/oiko-dsp/src/fractional_delay/minimum_phase.rs",
-        "crates/oiko-dsp/src/fractional_delay/minimum_phase/tests.rs",
-        "crates/oiko-dsp/src/fractional_delay/tests.rs"
+        "src/dsp/KarplusStrong.h",
+        "src/dsp/ResonatorBank.h",
+        "cmake/engine/CMakeLists.txt"
       ],
       "portability_value": "medium",
-      "portability_summary": "Separate offline allocating table construction from callback kernels, fix table/ring sizes and evaluate f64 cost or f32 conversion on Cortex-M7.",
-      "reuse_idea": "Use a precomputed minimum-phase fractional-delay table for bounded wow/flutter modulation and compare impulse responses.",
-      "source_revision": "8137b54ea0ed2bfd27d4d9263657749f0ee2223a",
+      "portability_summary": "Extract a single voice rather than the desktop engine; replace small JUCE utilities, bound vector storage and profile the physical model on Cortex-M7.",
+      "reuse_idea": "Start with the three-line resonator bank and test tuning, decay and reset behavior before considering the much larger Karplus-Strong voice.",
+      "license_note": "No repository-wide reuse license was found in the pinned root tree. A license under .claude/skills applies to that skill, not the synth DSP; copying for distribution needs clarification.",
+      "source_revision": "bd68e82691ba198201e99fd16790d866ac973220",
       "content_evidence": [
         {
-          "path": "crates/oiko-dsp/src/fractional_delay.rs",
-          "local": "source-oikoaudio--oikoaudio--0.txt",
-          "url": "https://github.com/oikoaudio/oikoaudio/blob/8137b54ea0ed2bfd27d4d9263657749f0ee2223a/crates/oiko-dsp/src/fractional_delay.rs"
+          "path": "src/dsp/KarplusStrong.h",
+          "local": "source-orth4x0r--ilanaSynth--0.txt",
+          "url": "https://github.com/orth4x0r/ilanaSynth/blob/bd68e82691ba198201e99fd16790d866ac973220/src/dsp/KarplusStrong.h"
         },
         {
-          "path": "crates/oiko-dsp/src/fractional_delay/minimum_phase.rs",
-          "local": "source-oikoaudio--oikoaudio--1.txt",
-          "url": "https://github.com/oikoaudio/oikoaudio/blob/8137b54ea0ed2bfd27d4d9263657749f0ee2223a/crates/oiko-dsp/src/fractional_delay/minimum_phase.rs"
+          "path": "src/dsp/ResonatorBank.h",
+          "local": "source-orth4x0r--ilanaSynth--1.txt",
+          "url": "https://github.com/orth4x0r/ilanaSynth/blob/bd68e82691ba198201e99fd16790d866ac973220/src/dsp/ResonatorBank.h"
         },
         {
-          "path": "crates/oiko-dsp/src/fractional_delay/minimum_phase/tests.rs",
-          "local": "source-oikoaudio--oikoaudio--2.txt",
-          "url": "https://github.com/oikoaudio/oikoaudio/blob/8137b54ea0ed2bfd27d4d9263657749f0ee2223a/crates/oiko-dsp/src/fractional_delay/minimum_phase/tests.rs"
-        },
-        {
-          "path": "crates/oiko-dsp/src/fractional_delay/tests.rs",
-          "local": "source-oikoaudio--oikoaudio--3.txt",
-          "url": "https://github.com/oikoaudio/oikoaudio/blob/8137b54ea0ed2bfd27d4d9263657749f0ee2223a/crates/oiko-dsp/src/fractional_delay/tests.rs"
+          "path": "cmake/engine/CMakeLists.txt",
+          "local": "source-orth4x0r--ilanaSynth--2.txt",
+          "url": "https://github.com/orth4x0r/ilanaSynth/blob/bd68e82691ba198201e99fd16790d866ac973220/cmake/engine/CMakeLists.txt"
         }
       ],
       "fork": false,
-      "source_file_count": 143,
+      "source_file_count": 445,
       "hardware_design_file_count": 0,
       "build_files": [
-        "Cargo.toml",
-        "crates/oiko-dsp/Cargo.toml",
-        "crates/oiko-plugin/Cargo.toml",
-        "crates/oiko-tuning/Cargo.toml",
-        "crates/oiko-ui/Cargo.toml",
-        "plugins/inton/Cargo.toml",
-        "plugins/inton/crates/inton-core/Cargo.toml",
-        "plugins/weft/crates/spectral-dsp/Cargo.toml",
-        "plugins/weft/crates/spectral-plugin/Cargo.toml",
-        "plugins/weft/crates/spectral-render/Cargo.toml",
-        "plugins/weft/packaging/auv2/CMakeLists.txt",
-        "plugins/wow/crates/wow-dsp/Cargo.toml"
+        "CMakeLists.txt",
+        "cmake/engine/CMakeLists.txt"
       ],
-      "build_file_count": 27,
+      "build_file_count": 2,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN"
     },
     {
       "rank": 9,
-      "full_name": "src3453/3HSPlug",
-      "html_url": "https://github.com/src3453/3HSPlug",
-      "stars": 13,
+      "full_name": "sigprolabs/RadioSonic-Firmware-Core",
+      "html_url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core",
+      "stars": 4,
       "forks": 1,
-      "pushed_at": "2026-11-04",
-      "topic": "Computer-first synth",
-      "description": "An experimental multi-timbal MIDI Synthesizer that uses 3HS88PWN4 to make sound.",
+      "pushed_at": "2026-11-24",
+      "topic": "ESP32 audio",
+      "description": "Open-source core firmware for the RadioSonic ESP32-S3 audio DSP board (MIT)",
       "matched_ic_query": false,
-      "score": 79,
+      "score": 81,
       "status_tag": "RETURNING",
       "content_value": "strong",
-      "content_summary": "Independent hs816 envelope and wavetable sources implement integer segment timing, exponential lookup interpolation and editable sample tables.",
+      "content_summary": "ESP-IDF audio_dsp.c converts I2S/TDM samples to float and dispatches effects; dsp_effects.c defines a per-block parameter snapshot and effect registry, with concrete board HAL and pinned components.",
       "representative_files": [
-        "src/s3hs_core/3hs/3hs816/include/hs816/envelope.hpp",
-        "src/s3hs_core/3hs/3hs816/include/hs816/wavetables.hpp",
-        "src/s3hs_core/3hs/3hs816/src/envelope.cpp",
-        "src/s3hs_core/3hs/3hs816/src/wavetables.cpp"
+        "main/audio/audio_dsp.c",
+        "main/audio/dsp_effects.c",
+        "main/board/hal_rev2.c",
+        "main/idf_component.yml",
+        "LICENSES/MIT.txt"
       ],
       "portability_value": "medium",
-      "portability_summary": "Separate the integer core from JUCE and asset loading; check table memory, 64-bit arithmetic and fixed 48-kHz timing before adapting sample rate.",
-      "reuse_idea": "Prototype one fixed-point envelope and wavetable voice and test note-off behavior against the host reference.",
-      "source_revision": "cb2a2c7a82b288803e028358d3d3a605dd94798e",
+      "portability_summary": "The math and effect registration pattern are reusable, while ESP32-S3 tasks, critical sections, codec routing and storage must be replaced for Daisy/Teensy.",
+      "reuse_idea": "Adapt the coherent per-block control snapshot and effect lifecycle to a Teensy callback; keep CLI/web work outside the audio path.",
+      "license_note": "Inspected firmware sources are MIT; hardware documents have separate CERN-OHL-P terms. The load meter explicitly permits losing a sample of statistics during a concurrent reset.",
+      "source_revision": "9b05daca2e3452329352d2d993b0563684348526",
       "content_evidence": [
         {
-          "path": "src/s3hs_core/3hs/3hs816/include/hs816/envelope.hpp",
-          "local": "source-src3453--3HSPlug--0.txt",
-          "url": "https://github.com/src3453/3HSPlug/blob/cb2a2c7a82b288803e028358d3d3a605dd94798e/src/s3hs_core/3hs/3hs816/include/hs816/envelope.hpp"
+          "path": "main/audio/audio_dsp.c",
+          "local": "source-sigprolabs--RadioSonic-Firmware-Core--0.txt",
+          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/9b05daca2e3452329352d2d993b0563684348526/main/audio/audio_dsp.c"
         },
         {
-          "path": "src/s3hs_core/3hs/3hs816/include/hs816/wavetables.hpp",
-          "local": "source-src3453--3HSPlug--1.txt",
-          "url": "https://github.com/src3453/3HSPlug/blob/cb2a2c7a82b288803e028358d3d3a605dd94798e/src/s3hs_core/3hs/3hs816/include/hs816/wavetables.hpp"
+          "path": "main/audio/dsp_effects.c",
+          "local": "source-sigprolabs--RadioSonic-Firmware-Core--1.txt",
+          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/9b05daca2e3452329352d2d993b0563684348526/main/audio/dsp_effects.c"
         },
         {
-          "path": "src/s3hs_core/3hs/3hs816/src/envelope.cpp",
-          "local": "source-src3453--3HSPlug--2.txt",
-          "url": "https://github.com/src3453/3HSPlug/blob/cb2a2c7a82b288803e028358d3d3a605dd94798e/src/s3hs_core/3hs/3hs816/src/envelope.cpp"
+          "path": "main/board/hal_rev2.c",
+          "local": "source-sigprolabs--RadioSonic-Firmware-Core--2.txt",
+          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/9b05daca2e3452329352d2d993b0563684348526/main/board/hal_rev2.c"
         },
         {
-          "path": "src/s3hs_core/3hs/3hs816/src/wavetables.cpp",
-          "local": "source-src3453--3HSPlug--3.txt",
-          "url": "https://github.com/src3453/3HSPlug/blob/cb2a2c7a82b288803e028358d3d3a605dd94798e/src/s3hs_core/3hs/3hs816/src/wavetables.cpp"
+          "path": "main/idf_component.yml",
+          "local": "source-sigprolabs--RadioSonic-Firmware-Core--3.txt",
+          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/9b05daca2e3452329352d2d993b0563684348526/main/idf_component.yml"
+        },
+        {
+          "path": "LICENSES/MIT.txt",
+          "local": "source-sigprolabs--RadioSonic-Firmware-Core--4.txt",
+          "url": "https://github.com/sigprolabs/RadioSonic-Firmware-Core/blob/9b05daca2e3452329352d2d993b0563684348526/LICENSES/MIT.txt"
         }
       ],
       "fork": false,
-      "source_file_count": 71,
+      "source_file_count": 54,
       "hardware_design_file_count": 0,
       "build_files": [
         "CMakeLists.txt",
-        "test/CMakeLists.txt",
-        "tools/genetic_patch/CMakeLists.txt",
-        "tools/genetic_patch/requirements.txt"
+        "components/rs_student_fx/CMakeLists.txt",
+        "main/CMakeLists.txt",
+        "main/idf_component.yml",
+        "templates/radiosonic-filters-template/CMakeLists.txt"
       ],
-      "build_file_count": 4,
+      "build_file_count": 5,
       "build_verification": "NOT_RUN",
       "hardware_verification": "NOT_RUN"
     },
     {
       "rank": 10,
-      "full_name": "mearxl/Korg-MS20-Synth",
-      "html_url": "https://github.com/mearxl/Korg-MS20-Synth",
-      "stars": 1,
+      "full_name": "sazuma0219-sudo/mix-vca",
+      "html_url": "https://github.com/sazuma0219-sudo/mix-vca",
+      "stars": 0,
       "forks": 0,
-      "pushed_at": "2026-11-03",
-      "topic": "Computer-first synth",
-      "description": "Circuit-modeled Korg MS-20 semi-modular software synthesizer (AUv3, AU, VST3, Standalone) built with JUCE 8 from the KLM-127/128C/129 & KORG-35 schematics",
-      "matched_ic_query": false,
-      "score": 72,
+      "pushed_at": "2026-11-14",
+      "topic": "Audio IC hardware",
+      "description": "4-channel mixer + VCA (linear and exponential outputs) for AE Modular, built around the SSI2164",
+      "matched_ic_query": true,
+      "score": 80,
       "status_tag": "NEW",
       "content_value": "strong",
-      "content_summary": "Standalone C++ headers implement a nonlinear Korg35 filter with iterative solve, oscillator/noise models, modulation and external-signal processing.",
+      "content_summary": "The circuit export and populated BOM identify SSI2164, three LMC6482 dual op amps and a TPS60403 supply; the design mixes four inputs and exposes separate linear and exponential VCA outputs.",
       "representative_files": [
-        "Source/DSP/Korg35Filter.h",
-        "Source/DSP/MS20Oscillators.h",
-        "Source/DSP/MS20ESP.h",
-        "Source/DSP/MS20Modulators.h"
+        "hardware/MIX_VCA_BOM.csv",
+        "hardware/MIX_VCA_schematic_p1.svg",
+        "hardware/LICENSE",
+        "spec/mix_vca_spec.md"
       ],
       "portability_value": "medium",
-      "portability_summary": "Extract one scalar block; bound nonlinear iterations and oversampling, inspect double-precision cost and replace host plumbing before claiming MCU viability.",
-      "reuse_idea": "Compare filter impulse and overload behavior on the host, then benchmark a reduced single-filter configuration on Daisy.",
-      "source_revision": "21cd2e64461291d54aa9b941eafbcaeaabef283e",
+      "portability_summary": "This is an analog signal-path reference, not MCU firmware: translate its 0-5 V AE Modular audio/control levels and connector conventions for a Daisy/Teensy carrier.",
+      "reuse_idea": "Compare linear and exponential envelope control for an external analog VCA, including bias, gain, noise and clipping measurements before connecting a codec.",
+      "license_note": "Hardware is CERN-OHL-P-2.0. The specification reports a November 7 board check; that is author evidence, not an independently repeated measurement.",
+      "source_revision": "e61914688f7535673f240aac805e1be1dc188926",
       "content_evidence": [
         {
-          "path": "Source/DSP/Korg35Filter.h",
-          "local": "source-mearxl--Korg-MS20-Synth--0.txt",
-          "url": "https://github.com/mearxl/Korg-MS20-Synth/blob/21cd2e64461291d54aa9b941eafbcaeaabef283e/Source/DSP/Korg35Filter.h"
+          "path": "hardware/MIX_VCA_BOM.csv",
+          "local": "source-sazuma0219-sudo--mix-vca--0.txt",
+          "url": "https://github.com/sazuma0219-sudo/mix-vca/blob/e61914688f7535673f240aac805e1be1dc188926/hardware/MIX_VCA_BOM.csv"
         },
         {
-          "path": "Source/DSP/MS20Oscillators.h",
-          "local": "source-mearxl--Korg-MS20-Synth--1.txt",
-          "url": "https://github.com/mearxl/Korg-MS20-Synth/blob/21cd2e64461291d54aa9b941eafbcaeaabef283e/Source/DSP/MS20Oscillators.h"
+          "path": "hardware/MIX_VCA_schematic_p1.svg",
+          "local": "source-sazuma0219-sudo--mix-vca--1.txt",
+          "url": "https://github.com/sazuma0219-sudo/mix-vca/blob/e61914688f7535673f240aac805e1be1dc188926/hardware/MIX_VCA_schematic_p1.svg"
         },
         {
-          "path": "Source/DSP/MS20ESP.h",
-          "local": "source-mearxl--Korg-MS20-Synth--2.txt",
-          "url": "https://github.com/mearxl/Korg-MS20-Synth/blob/21cd2e64461291d54aa9b941eafbcaeaabef283e/Source/DSP/MS20ESP.h"
+          "path": "hardware/LICENSE",
+          "local": "source-sazuma0219-sudo--mix-vca--2.txt",
+          "url": "https://github.com/sazuma0219-sudo/mix-vca/blob/e61914688f7535673f240aac805e1be1dc188926/hardware/LICENSE"
         },
         {
-          "path": "Source/DSP/MS20Modulators.h",
-          "local": "source-mearxl--Korg-MS20-Synth--3.txt",
-          "url": "https://github.com/mearxl/Korg-MS20-Synth/blob/21cd2e64461291d54aa9b941eafbcaeaabef283e/Source/DSP/MS20Modulators.h"
+          "path": "spec/mix_vca_spec.md",
+          "local": "source-sazuma0219-sudo--mix-vca--3.txt",
+          "url": "https://github.com/sazuma0219-sudo/mix-vca/blob/e61914688f7535673f240aac805e1be1dc188926/spec/mix_vca_spec.md"
         }
       ],
       "fork": false,
-      "source_file_count": 11,
-      "hardware_design_file_count": 0,
-      "build_files": [
-        "CMakeLists.txt"
-      ],
-      "build_file_count": 1,
+      "source_file_count": 0,
+      "hardware_design_file_count": 1,
+      "build_files": [],
+      "build_file_count": 0,
       "build_verification": "NOT_RUN",
-      "hardware_verification": "NOT_RUN",
-      "license_note": "Circuit-accuracy and identical-hardware-behavior statements in source comments are unverified claims, not validation performed here."
+      "hardware_verification": "NOT_RUN"
     }
   ],
   "supplementary_queries_successful": 6,
   "total_queries_successful": 27,
-  "discovery_nonfork_count_before_exclusions": 265,
-  "required_query_nonfork_count_before_exclusions": 252,
-  "supplementary_query_nonfork_count_before_exclusions": 18,
-  "supplementary_overlap_count": 5,
-  "scored_candidate_count": 142,
-  "source_review_completed_at_utc": "2026-11-04T12:57:22.087848+00:00",
+  "discovery_nonfork_count_before_exclusions": 271,
+  "required_query_nonfork_count_before_exclusions": 257,
+  "supplementary_query_nonfork_count_before_exclusions": 20,
+  "supplementary_overlap_count": 6,
+  "scored_candidate_count": 152,
+  "source_review_completed_at_utc": "2026-11-25T22:01:22.903479+00:00",
   "excluded_after_review": {
-    "animatek/Animatek-NME": "Pinned CMake and MIDI files implement a Nord editor/control bridge, without an audio-rendering kernel.",
-    "aesuf/SSI2130-Oscillator": "Inspected SubOscillator PCB is still a 52-byte empty file; unfinished integration held as reference.",
-    "palmerr23/Teensy8x8AudioBoard": "Only customs/tariff product information changed since October 28; no material audio/hardware/build delta inside 30 days.",
-    "WillyBilly06/BDK-AUDIO-APP": "Current root license is proprietary and inspected DSP files implement LED visuals rather than a reusable audio-rendering core."
+    "aesuf/SSI2130-Oscillator": "Pinned tree still has a 52-byte SubOscillator PCB and unfinished main-circuit integration; not a complete audio hardware implementation.",
+    "sophiapoirier/destroyfx": "Only change since October 28 is a macOS AudioUnit deprecated-API replacement; no new embedded DSP or materially improved MCU reuse inside 30 days."
   },
   "previously_featured": [
     {
       "full_name": "grame-cncm/faust",
-      "pushed_at": "2026-11-04",
+      "pushed_at": "2026-11-25",
       "status": "Updated"
-    },
-    {
-      "full_name": "sophiapoirier/destroyfx",
-      "pushed_at": "2026-10-24",
-      "status": "No change"
     },
     {
       "full_name": "reales/retromulator",
+      "pushed_at": "2026-11-18",
+      "status": "Updated"
+    },
+    {
+      "full_name": "benjamindehli/overtonium",
+      "pushed_at": "2026-11-24",
+      "status": "Updated"
+    },
+    {
+      "full_name": "juzzlin/Noteahead",
+      "pushed_at": "2026-11-25",
+      "status": "Updated"
+    },
+    {
+      "full_name": "jakubthedeveloper/Samplotron",
+      "pushed_at": "2026-10-26",
+      "status": "No change"
+    },
+    {
+      "full_name": "odoare/Camshaft",
+      "pushed_at": "2026-11-20",
+      "status": "Updated"
+    },
+    {
+      "full_name": "JordanAceto/micro-pico",
+      "pushed_at": "2023-01-21",
+      "status": "No change"
+    },
+    {
+      "full_name": "oikoaudio/oikoaudio",
+      "pushed_at": "2026-11-21",
+      "status": "Updated"
+    },
+    {
+      "full_name": "src3453/3HSPlug",
+      "pushed_at": "2026-11-07",
+      "status": "Updated"
+    },
+    {
+      "full_name": "mearxl/Korg-MS20-Synth",
       "pushed_at": "2026-11-04",
-      "status": "Updated"
-    },
-    {
-      "full_name": "MrDesjardins/audiorouter",
-      "pushed_at": "2026-11-04",
-      "status": "Updated"
-    },
-    {
-      "full_name": "palmerr23/Teensy8x8AudioBoard",
-      "pushed_at": "2026-10-29",
-      "status": "Updated"
-    },
-    {
-      "full_name": "JordanAceto/SSI2130_VCO",
-      "pushed_at": "2022-06-04",
-      "status": "No change"
-    },
-    {
-      "full_name": "mishan/thinksynth",
-      "pushed_at": "2026-10-22",
-      "status": "No change"
-    },
-    {
-      "full_name": "shakfu/cyfaust",
-      "pushed_at": "2026-10-21",
-      "status": "No change"
-    },
-    {
-      "full_name": "RaviKachhwaha/AuraForge-50X",
-      "pushed_at": "2026-10-28",
-      "status": "No change"
-    },
-    {
-      "full_name": "Snipet/FCompressor",
-      "pushed_at": "2026-10-28",
-      "status": "No change"
+      "status": "No fresh data",
+      "metadata_error": "GitHub HTTP 404",
+      "date_is_comparison_fallback": true
     }
+  ],
+  "coverage_notes": [
+    "Repository search returns at most 20 results per query; this is not an exhaustive census.",
+    "SSI2131 Len42/Synth is an additional web-discovered source reference, outside the repository-query discovery counts and ranking.",
+    "PAN and MIX-VCA share an author and 5 V AE Modular context but have distinct implementations: digital pan control versus analog mixer and linear/exponential VCA."
   ]
 }

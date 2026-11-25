@@ -61,8 +61,8 @@ daily:
   note: all candidates are research state only; none are publication evidence until canonical trackers/digests say so
 
 codex_weekly:
-  latest_digest_date: 2026-11-04
-  source_review_completed: 2026-11-04
+  latest_digest_date: 2026-11-25
+  source_review_completed: 2026-11-25
   explicit_questionnaire_answers: {}
   next_run_rule_change:
     date: 2026-10-20
@@ -111,6 +111,16 @@ codex_weekly:
     ssi_hardware_ranked: JordanAceto/micro-pico
     held_example: Teensy8x8AudioBoard only customs documents changed; aesuf empty PCB; BDK proprietary visuals
     repeat_review: Faust generated CMake build improvement and Retromulator new Matrix core inspected
+    build_and_hardware: not_run
+    feedback: no explicit answers; existing runner proposals remain unimplemented
+  last_run_review_2026_11_25:
+    queries_required: 21
+    queries_supplementary_ssi: 6
+    discoveries_nonfork: 271
+    ranked: 10
+    ssi_hardware_ranked: sazuma0219-sudo/pan and sazuma0219-sudo/mix-vca
+    held_example: Destroy FX macOS API-only delta; aesuf empty PCB; recent under-three-appearance entries
+    repeat_review: Faust sample-rate adapter filter resets and regression source inspected
     build_and_hardware: not_run
     feedback: no explicit answers; existing runner proposals remain unimplemented
 

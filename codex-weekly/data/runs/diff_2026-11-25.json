@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-25",
+  "added": [
+    "algomusic/M16",
+    "amsynth/amsynth",
+    "aquanodemusic/aquanode-modular",
+    "lucioaraujo/rasgo-modular",
+    "orth4x0r/ilanaSynth",
+    "sazuma0219-sudo/mix-vca",
+    "sazuma0219-sudo/pan",
+    "sigprolabs/RadioSonic-Firmware-Core",
+    "sourcebox/mi-plaits-dsp-rs"
+  ],
+  "removed": [
+    "JordanAceto/micro-pico",
+    "benjamindehli/overtonium",
+    "jakubthedeveloper/Samplotron",
+    "juzzlin/Noteahead",
+    "mearxl/Korg-MS20-Synth",
+    "odoare/Camshaft",
+    "oikoaudio/oikoaudio",
+    "reales/retromulator",
+    "src3453/3HSPlug"
+  ],
+  "changed": [
+    "grame-cncm/faust"
+  ]
+}

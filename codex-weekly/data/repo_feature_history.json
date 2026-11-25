@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-04T12:52:29.352276+00:00",
-  "source_digest_count": 33,
+  "generated_at_utc": "2026-11-25T21:55:39.599963+00:00",
+  "source_digest_count": 34,
   "repos": {
     "a3-audio/a3-system": {
       "feature_count": 1,
@@ -293,8 +293,8 @@
       }
     },
     "sourcebox/mi-plaits-dsp-rs": {
-      "feature_count": 7,
-      "last_featured": "2026-09-22",
+      "feature_count": 8,
+      "last_featured": "2026-11-25",
       "appearance_dates": [
         "2024-03-17",
         "2026-04-09",
@@ -302,7 +302,8 @@
         "2026-06-17",
         "2026-07-15",
         "2026-09-15",
-        "2026-09-22"
+        "2026-09-22",
+        "2026-11-25"
       ],
       "ranks": {
         "2024-03-17": 8,
@@ -311,7 +312,8 @@
         "2026-06-17": 3,
         "2026-07-15": 2,
         "2026-09-15": 4,
-        "2026-09-22": 5
+        "2026-09-22": 5,
+        "2026-11-25": 3
       }
     },
     "thi-ng/synstack": {
@@ -787,8 +789,8 @@
       }
     },
     "grame-cncm/faust": {
-      "feature_count": 15,
-      "last_featured": "2026-11-04",
+      "feature_count": 16,
+      "last_featured": "2026-11-25",
       "appearance_dates": [
         "2026-05-12",
         "2026-06-17",
@@ -804,7 +806,8 @@
         "2026-10-06",
         "2026-10-20",
         "2026-10-28",
-        "2026-11-04"
+        "2026-11-04",
+        "2026-11-25"
       ],
       "ranks": {
         "2026-05-12": 3,
@@ -821,25 +824,28 @@
         "2026-10-06": 1,
         "2026-10-20": 1,
         "2026-10-28": 1,
-        "2026-11-04": 1
+        "2026-11-04": 1,
+        "2026-11-25": 1
       }
     },
     "amsynth/amsynth": {
-      "feature_count": 5,
-      "last_featured": "2026-10-06",
+      "feature_count": 6,
+      "last_featured": "2026-11-25",
       "appearance_dates": [
         "2026-05-12",
         "2026-06-17",
         "2026-07-21",
         "2026-09-22",
-        "2026-10-06"
+        "2026-10-06",
+        "2026-11-25"
       ],
       "ranks": {
         "2026-05-12": 4,
         "2026-06-17": 2,
         "2026-07-21": 2,
         "2026-09-22": 2,
-        "2026-10-06": 2
+        "2026-10-06": 2,
+        "2026-11-25": 2
       }
     },
     "reales/retromulator": {
@@ -1709,13 +1715,15 @@
       }
     },
     "algomusic/M16": {
-      "feature_count": 1,
-      "last_featured": "2026-09-01",
+      "feature_count": 2,
+      "last_featured": "2026-11-25",
       "appearance_dates": [
-        "2026-09-01"
+        "2026-09-01",
+        "2026-11-25"
       ],
       "ranks": {
-        "2026-09-01": 3
+        "2026-09-01": 3,
+        "2026-11-25": 6
       }
     },
     "KarolKks/RealTime-Audio-DSP": {
@@ -1887,13 +1895,15 @@
       }
     },
     "sigprolabs/RadioSonic-Firmware-Core": {
-      "feature_count": 1,
-      "last_featured": "2026-10-20",
+      "feature_count": 2,
+      "last_featured": "2026-11-25",
       "appearance_dates": [
-        "2026-10-20"
+        "2026-10-20",
+        "2026-11-25"
       ],
       "ranks": {
-        "2026-10-20": 6
+        "2026-10-20": 6,
+        "2026-11-25": 9
       }
     },
     "r0main-f/G2fresh": {
@@ -1917,13 +1927,15 @@
       }
     },
     "orth4x0r/ilanaSynth": {
-      "feature_count": 1,
-      "last_featured": "2026-10-20",
+      "feature_count": 2,
+      "last_featured": "2026-11-25",
       "appearance_dates": [
-        "2026-10-20"
+        "2026-10-20",
+        "2026-11-25"
       ],
       "ranks": {
-        "2026-10-20": 9
+        "2026-10-20": 9,
+        "2026-11-25": 8
       }
     },
     "MrDesjardins/audiorouter": {
@@ -1994,6 +2006,46 @@
       ],
       "ranks": {
         "2026-11-04": 10
+      }
+    },
+    "aquanodemusic/aquanode-modular": {
+      "feature_count": 1,
+      "last_featured": "2026-11-25",
+      "appearance_dates": [
+        "2026-11-25"
+      ],
+      "ranks": {
+        "2026-11-25": 4
+      }
+    },
+    "sazuma0219-sudo/pan": {
+      "feature_count": 1,
+      "last_featured": "2026-11-25",
+      "appearance_dates": [
+        "2026-11-25"
+      ],
+      "ranks": {
+        "2026-11-25": 5
+      }
+    },
+    "lucioaraujo/rasgo-modular": {
+      "feature_count": 1,
+      "last_featured": "2026-11-25",
+      "appearance_dates": [
+        "2026-11-25"
+      ],
+      "ranks": {
+        "2026-11-25": 7
+      }
+    },
+    "sazuma0219-sudo/mix-vca": {
+      "feature_count": 1,
+      "last_featured": "2026-11-25",
+      "appearance_dates": [
+        "2026-11-25"
+      ],
+      "ranks": {
+        "2026-11-25": 10
       }
     }
   }
