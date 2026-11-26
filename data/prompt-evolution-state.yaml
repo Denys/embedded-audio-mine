@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-23
+last_updated: 2026-11-26
 
 shared:
   anti_repeat_window_days: 30
@@ -125,18 +125,18 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-25
-  source_review_completed: 2026-11-25
-  last_successful_scan: 2026-11-25
-  overlap_start: 2026-11-24
-  anti_repeat_cutoff: 2026-10-26
-  last_main_sha: 4a92184c69b76a661d7b813df3bac924109bfb03
+  latest_digest_date: 2026-11-26
+  source_review_completed: 2026-11-26
+  last_successful_scan: 2026-11-26
+  overlap_start: 2026-11-25
+  anti_repeat_cutoff: 2026-10-27
+  last_main_sha: fc11d8b31a19e319fc31d7edd943fb290dcfd877
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: tone-3000/t3k-diy-pedal
-      lane: STRONG_PASS
-      reason: public_launch_of_complete_mit_seed3_nam_pedal_firmware_webusb_and_fabrication_package
-      repeat_block_until: 2026-12-25
+    - project: smartin77/BroTracker
+      lane: PASS
+      reason: material_sample_instrument_tuning_persistence_and_physical_teensy_validation
+      repeat_block_until: 2026-12-26
   recheck_queue:
     - project: tone-3000/t3k-diy-pedal
       status: published_selected
@@ -203,7 +203,7 @@ daisy_teensy_watch:
       blocker: commits through a8c36e9 fix reamp no-WET and add CH-B gain plus crash diagnostics but publication still requires an explicit repository license
     - project: BIM4GIB/GhettoRack
       status: hold
-      blocker: commit c06ee1c4 now demonstrates zero skipped USB packets for 90 s at 76 percent CPU after SAI IRQ reprioritization but promotion still requires an explicit repository license a released binary and resolution of the full-overload lockup
+      blocker: v13.31 now ships an updated tested binary and rig measurements but promotion still requires an explicit repository license plus resolution of SD hot-insert main-loop-stop overwrite and overload risks
     - project: slabcloud/reverb
       status: hold
       blocker: require an explicit project license and documented rights or replacement for the embedded vocal sample before promotion
@@ -256,8 +256,8 @@ daisy_teensy_watch:
       status: published_material_repeat
       blocker: wait until 2026-11-22 unless an ARM CI path release asset Field target or new measured DSP architecture delta appears
     - project: smartin77/BroTracker
-      status: published
-      blocker: wait until 2026-11-22 unless a release binary new instrument backend or completed rapid-retrigger and physical-audio validation appears
+      status: published_material_repeat
+      blocker: wait until 2026-12-26 unless a release binary new DSP or instrument backend new hardware target measured CPU RAM or audio result or completed R36H ArkOS physical validation appears
     - project: deemonoise/D-TRK
       status: published_reference
       blocker: wait until 2026-11-22 unless hardware callback measurements a new target or a stronger atomic snapshot design appears
