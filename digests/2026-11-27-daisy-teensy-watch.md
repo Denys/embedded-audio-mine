@@ -29,3 +29,57 @@ La scoperta ha coperto separatamente forum Daisy Projects/Examples, forum PJRC/T
 - `data/hidden-gems-source-registry.csv`: provenienza e caveat Sonido verificati sul commit corrente.
 - `data/prompt-evolution-state.yaml`: stato della scansione, overlap, cutoff e blocker della prossima verifica aggiornati.
 - `data/selected-projects.csv`: invariato; il delta è importante per il monitor ma non aggiunge una nuova reference eccezionale.
+
+
+## Previous questionnaire feedback applied
+
+Nessuna risposta esplicita era disponibile; non è stata inferita alcuna preferenza dal silenzio. Restano quindi invariati soglia di novità, rigore sulle fonti primarie, separazione delle lane e profondità tecnica.
+
+## Prompt improvement for next run
+
+1. **Miglioramento:** la scansione ha separato data di indicizzazione, reply recente ed evento firmware, promuovendo solo un commit datato e verificato su sorgente, build, licenza e prova hardware.
+2. **Debolezza residua:** la validazione del recovery è lato autore e limitata a Hothouse; mancano replica indipendente, asset versionato e prova su interruzione di alimentazione.
+3. **Lane rumorose/sottoutilizzate:** i forum hanno prodotto soprattutto resurfacing e attività senza artefatto; Codeberg, GitLab, SourceHut e pagine personali restano da ampliare senza abbassare il gate primario.
+4. **Regole:** nessuna nuova regola permanente. Conservare la distinzione fra fix di aggiornamento/recovery e novità DSP; un fix critico può qualificare solo con percorso riproducibile e prova hardware esplicita.
+5. **Recheck:** Sonido bloccato fino al 2026-12-27 salvo release/asset, nuovo target o DSP, build Field, verifica indipendente o ulteriore delta materiale di recovery/memoria/realtime. GhettoRack resta HOLD per licenza e blocker runtime.
+6. **Delta compatto:** cercare eventi post-2026-11-26; verificare prima tag/commit e asset; per boot/update richiedere persistenza DFU, recovery e target esatto; mantenere Daisy Field come banco di porting dichiarato, mai come compatibilità inferita.
+
+## Tuning questionnaire
+
+Rispondere, se utile, nel formato `Q1=B Q2=A Q3=C Q4=A Q5=B Q6=D Q7=A`. Ogni scelta modifica concretamente la prossima scansione.
+
+1. **Direzione generale**
+   - A — continua con questo equilibrio;
+   - B — aumenta la verifica hardware/flash;
+   - C — alza ancora la soglia di novità;
+   - D — dai più spazio a DSP e meno a tooling/recovery.
+2. **Tipo di progetto da favorire**
+   - A — delay/looper e routing realtime;
+   - B — synth/sampler;
+   - C — audio I/O, USB e codec;
+   - D — updater, bootloader e infrastruttura firmware.
+3. **Gate per prove hardware dell'autore**
+   - A — sufficienti se riproducibili;
+   - B — richiedi sempre replica indipendente per STRONG_PASS;
+   - C — accettale solo con misure quantitative;
+   - D — declassa a REF_PASS senza release binaria.
+4. **Soglia per fix critici senza nuova funzione audio**
+   - A — PASS con bug, diff e prova fisica;
+   - B — HOLD finché non esiste un tag/release;
+   - C — pubblica solo se evita perdita dati o brick;
+   - D — escludi: solo DSP/audio feature.
+5. **Daisy Field come target di adattamento**
+   - A — mantieni piano di test senza compatibilità presunta;
+   - B — cita Field solo con build esistente;
+   - C — richiedi una prova Field prima di qualsiasi promozione;
+   - D — usa Seed/Hothouse come riferimento principale.
+6. **Profondità del digest**
+   - A — più compatto;
+   - B — invariato;
+   - C — più dettagli su memoria/cache/DMA;
+   - D — più dettagli su build, flashing e recovery.
+7. **Lane da espandere**
+   - A — Codeberg/GitLab/SourceHut;
+   - B — forum specialistici e thread storici;
+   - C — Hackaday e pagine personali;
+   - D — release/commit GitHub con meno forum.
