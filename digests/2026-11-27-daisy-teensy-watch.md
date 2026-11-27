@@ -22,6 +22,17 @@ Sonido era stato pubblicato l'ultima volta il 2026-10-23 ed era nuovamente elegg
 
 La scoperta ha coperto separatamente forum Daisy Projects/Examples, forum PJRC/Teensy Audio Projects, GitHub commit/release e host alternativi: 120 risultati Exa e 120 slot di ricerca commit GitHub, seguiti da verifica sulle pagine primarie. Sono stati esclusi, fra gli altri: GhettoRack (UI/installer aggiornati ma licenza assente e blocker runtime ancora aperti), hvcc (pulizia di tipi/nomi non materiale), LILLA v7.4.0 (fuori overlap e già bloccato dopo pubblicazione recente), attività forum senza nuovo artefatto firmware e manutenzione cosmetica o documentale.
 
+## Discovery audit
+
+- **Profilo:** `daily_broad`, con data locale 2026-11-27, overlap dal 2026-11-26 e cutoff anti-repeat 2026-10-28.
+- **Domini e classi:** `community.daisy.audio` e `forum.pjrc.com` (forum/community); `github.com` (repository, commit, release, sorgenti e licenze); `codeberg.org` (repository alternativi); `pjrc.com`, `tone3000.com` e pagine personali/progetto (documentazione e host primari).
+- **Famiglie di query:** Daisy Projects/Examples; Daisy Seed/Patch/Field/Pod indipendenti; PJRC Audio Projects e Teensy 4.x; release/commit GitHub; delay/looper; foundation/core; host alternativi e pagine personali. Sono state eseguite 12 query Exa da 10 risultati e 6 ricerche commit GitHub da 20 slot, più recheck diretti dei repository candidati.
+- **Pool candidati:** 15 lead unici dopo deduplica, fra cui Sonido, GhettoRack, LILLA, LoopSmith, hvcc, DaisyPodUsbAudio, TONE3000, BroTracker, PZD, SoundStudio, daisy-tone-trixter, slabcloud/reverb, M16 e il progetto PJRC Parametric Audio Equalizer.
+- **Registro fonti:** 0 nuove righe; 1 riga revalidata e aggiornata (Sonido, stato `active` invariato); GhettoRack riesaminato senza promozione e senza cambio di stato.
+- **Pagine bloccate/dead/moved:** nessun blocco Exa, reconnect o rate limit e nessuna pagina morta/mossa determinante. I risultati forum privi di artefatto primario sono rimasti discovery-only; repository senza licenza esplicita sono stati mantenuti in HOLD.
+- **Stop rule:** dopo la promozione di Sonido sono state completate sweep indipendenti su Daisy forum, PJRC/Teensy, GitHub e host alternativi. Nessun secondo candidato ha superato insieme novità, sorgente/build, licenza e delta materiale; gli ultimi sweep hanno prodotto solo repeat bloccati, manutenzione cosmetica o lead con gate irrisolti.
+- **Debito prossima scansione:** riesaminare Sonido solo oltre il 2026-12-27 salvo eccezioni materiali; mantenere GhettoRack in HOLD finché licenza e rischi runtime non sono risolti; ampliare Codeberg/GitLab/SourceHut e pagine personali continuando a verificare gli artefatti primari.
+
 ## Aggiornamenti tracker
 
 - `data/published-repo-log.csv`: Sonido aggiornato a PASS, ultima pubblicazione 2026-11-27, eleggibile dopo 2026-12-27.
