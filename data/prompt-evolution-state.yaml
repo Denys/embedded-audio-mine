@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: 2026-11-26
+last_updated: 2026-11-27
 
 shared:
   anti_repeat_window_days: 30
@@ -125,18 +125,18 @@ codex_weekly:
     feedback: no explicit answers; existing runner proposals remain unimplemented
 
 daisy_teensy_watch:
-  latest_digest_date: 2026-11-26
-  source_review_completed: 2026-11-26
-  last_successful_scan: 2026-11-26
-  overlap_start: 2026-11-25
-  anti_repeat_cutoff: 2026-10-27
-  last_main_sha: fc11d8b31a19e319fc31d7edd943fb290dcfd877
+  latest_digest_date: 2026-11-27
+  source_review_completed: 2026-11-27
+  last_successful_scan: 2026-11-27
+  overlap_start: 2026-11-26
+  anti_repeat_cutoff: 2026-10-28
+  last_main_sha: ac391b4c6627f8ac81abd50cf05a5ccd63fe150f
   explicit_questionnaire_answers: {}
   selected_this_run:
-    - project: smartin77/BroTracker
+    - project: ampactor-labs/sonido
       lane: PASS
-      reason: material_sample_instrument_tuning_persistence_and_physical_teensy_validation
-      repeat_block_until: 2026-12-26
+      reason: material_daisy_bootloader_recovery_mpu_fix_shared_firmware_path_and_physical_hothouse_validation
+      repeat_block_until: 2026-12-27
   recheck_queue:
     - project: tone-3000/t3k-diy-pedal
       status: published_selected
@@ -203,7 +203,7 @@ daisy_teensy_watch:
       blocker: commits through a8c36e9 fix reamp no-WET and add CH-B gain plus crash diagnostics but publication still requires an explicit repository license
     - project: BIM4GIB/GhettoRack
       status: hold
-      blocker: v13.31 now ships an updated tested binary and rig measurements but promotion still requires an explicit repository license plus resolution of SD hot-insert main-loop-stop overwrite and overload risks
+      blocker: 2026-11-27 UI naming and Pi installer safety updates remain below threshold; promotion still requires an explicit repository license plus resolution of SD hot-insert main-loop-stop overwrite and overload risks
     - project: slabcloud/reverb
       status: hold
       blocker: require an explicit project license and documented rights or replacement for the embedded vocal sample before promotion
@@ -254,7 +254,7 @@ daisy_teensy_watch:
       blocker: wait until 2026-11-30 unless a new hardware target release-level DSP feature critical realtime fix or independent measurement appears
     - project: ampactor-labs/sonido
       status: published_material_repeat
-      blocker: wait until 2026-11-22 unless an ARM CI path release asset Field target or new measured DSP architecture delta appears
+      blocker: wait until 2026-12-27 unless a tagged firmware asset new DSP or hardware target Daisy Field build independent boot or update validation or another major recovery memory or real-time architecture delta appears
     - project: smartin77/BroTracker
       status: published_material_repeat
       blocker: wait until 2026-12-26 unless a release binary new DSP or instrument backend new hardware target measured CPU RAM or audio result or completed R36H ArkOS physical validation appears
@@ -297,6 +297,7 @@ daisy_teensy_watch:
     acceptance_criteria: require deterministic failure exact audio comparison primary diff and clear target-adjacent labeling
     keep_or_remove_decision: retain temporarily and test against the next simulator-only candidate
   next_run_search_debt:
+    - recheck ampactor-labs/sonido only after 2026-12-27 unless a tagged firmware asset new DSP or hardware target Field build independent validation or major recovery memory or real-time architecture delta appears
     - recheck tone-3000/t3k-diy-pedal only after 2026-12-25 unless a Field target new release independent analyzer measurement hardware revision or major DSP convolution provisioning or audio-I/O delta appears
     - keep GhettoRack on HOLD until an explicit license and release binary include the IRQ priority fix and the full-overload lockup is resolved
     - recheck Nemesis only after 2026-12-21 unless a tagged release hardware revision independent measurement Field target or another major DSP architecture delta appears
